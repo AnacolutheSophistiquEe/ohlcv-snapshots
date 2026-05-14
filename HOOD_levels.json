@@ -2,47 +2,325 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "HOOD",
-    "generated_at": "2026-05-14T16:43:21Z",
-    "generated_by": "vps_precompute@1.2",
-    "trust_phase": 1,
-    "valid_from": "2026-05-15T08:00:00Z",
-    "valid_until": "2026-05-15T21:00:00Z",
-    "source_precomputed": "HOOD_precomputed.json"
+    "generated_at": "2026-05-14T18:48:00Z",
+    "generated_by": "claude_equity_ta@2.0",
+    "trust_phase": 2,
+    "valid_from": "2026-05-14T18:48:00Z",
+    "valid_until": "2026-05-16T18:48:00Z",
+    "source_precomputed": "https://anacoluthesophistiquee.github.io/ohlcv-snapshots/HOOD_precomputed.min.json",
+    "regime_context": "risk_on_modere_event_day"
   },
   "context": {
-    "last_price": 75.7801,
+    "last_price": 75.78,
+    "currency": "USD",
+    "snapshot_note": "Bougie daily 14/05 intra-session (volume 1.54M vs 20M+ habituel). Tous niveaux valides, prix peut bouger d'ici close US 22:00 CEST.",
     "ta_score": {
       "value": 2,
       "max": 10,
       "label": "very_bearish"
     },
+    "subscores": {
+      "T_trend": 0.0,
+      "T_momentum": 0.5,
+      "T_setup": 0.75,
+      "T_RR": 0.5,
+      "T_RS_bonus": 0.0,
+      "T_penalty": 0.0
+    },
     "alignment_flag": "triple_bearish",
+    "trend_per_tf": {
+      "daily": "down",
+      "h4": "down",
+      "h1": "down"
+    },
     "hmm_regime": {
       "state": "bear",
       "probability": 0.6339,
       "expected_duration_days": 2.73
     },
     "volatility_regime": "low",
+    "overextension": "normal",
+    "drawdown": {
+      "current_pct": -50.3,
+      "ath_price": 152.46,
+      "ath_date": "2025-10-09",
+      "time_in_drawdown_days": 217
+    },
+    "relative_strength_vs_iwm": {
+      "1M": -18.03,
+      "3M": -2.44,
+      "6M": -58.77,
+      "ratio_trend_60d": "falling"
+    },
     "signals_counter": {
       "buy": 1,
       "sell": 6,
       "neutral": 9,
       "total": 16,
-      "verdict": "neutral"
+      "verdict": "neutral_bearish_lean"
     },
     "mean_reversion_score": {
       "setup": "rsi_30-40_dist_ma20_-10_-5",
       "win_rate": 0.88,
       "sample_size": 17,
       "median_bounce_pct": 4.89,
+      "p25_bounce_pct": 1.15,
+      "horizon_bars": 10,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (very_bearish), alignment triple_bearish, HMM bear (0.63), vol low, signals neutral (1b/6s/9n)."
+    "divergences": [
+      {
+        "indicator": "obv",
+        "type": "hidden_bearish",
+        "confidence": 0.83,
+        "bars_ago": 3
+      }
+    ],
+    "candlestick_recent": [
+      { "name": "morning_star", "bars_ago": 3, "confidence": 0.68 },
+      { "name": "hammer", "bars_ago": 4, "confidence": 0.94 }
+    ],
+    "narrative_short": "Triple bearish multi-TF + HMM bear 63% + DD -50% depuis ATH oct 2025 + sous-perf -59% vs IWM 6M. MAIS setup mean-reversion historique 88% WR (n=17, médian +4.89%/10 bars) + hammer + morning_star + trendline r²=0.947 à 75.12 + RSI H1 oversold. Trade contrarian discipliné via Plan B swing 1-3w, stop sous 73, T2 retour MA20 daily à 80.32."
   },
-  "entry_plans": [],
-  "global_conditions": [],
+  "entry_plans": [
+    {
+      "id": "B",
+      "type": "mean_reversion_swing",
+      "priority": 1,
+      "side": "long",
+      "horizon": "swing_1_3_weeks",
+      "entry_zone": {
+        "min": 74.20,
+        "max": 75.30
+      },
+      "stop": {
+        "price": 73.00,
+        "basis": "sous swing low cluster 73.06-73.46",
+        "distance_pct": -3.59
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 77.80,
+          "basis": "Résistance DBSCAN weak",
+          "rr": 1.82,
+          "scale_out_pct": 30
+        },
+        {
+          "level": 2,
+          "price": 80.32,
+          "basis": "MA20 daily / BB middle (cible médiane mean-reversion historique)",
+          "rr": 3.31,
+          "scale_out_pct": 40
+        },
+        {
+          "level": 3,
+          "price": 84.75,
+          "basis": "Fib 0.236 swing 152→66 + DBSCAN",
+          "rr": 5.91,
+          "scale_out_pct": 30
+        }
+      ],
+      "preferred_target": 2,
+      "conditions": ["no_close_daily_below_73", "iwm_session_stable"],
+      "max_budget_pct": 100,
+      "entry_confluence": {
+        "stars": 4,
+        "signals": [
+          "Current price area",
+          "AVWAP swing low 29/04 (75.18)",
+          "Mean-reversion setup 88% WR (n=17)",
+          "Morning star + hammer récents (bars_ago 3 et 4)"
+        ]
+      },
+      "rationale": "Mean-reversion contrarian dans macro bearish. Setup statistique robuste, R/R T2 = 3.31, stop discipliné sous swing low."
+    },
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 2,
+      "side": "long",
+      "horizon": "intraday",
+      "entry_zone": {
+        "min": 75.10,
+        "max": 75.40
+      },
+      "stop": {
+        "price": 74.20,
+        "basis": "Sous HL zigzag 74.25 + ~1x ATR H1",
+        "distance_pct": -1.45
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 76.44,
+          "basis": "MA50 daily + POC 60d",
+          "rr": 0.84,
+          "scale_out_pct": 30
+        },
+        {
+          "level": 2,
+          "price": 77.80,
+          "basis": "Résistance DBSCAN weak",
+          "rr": 2.40,
+          "scale_out_pct": 40
+        },
+        {
+          "level": 3,
+          "price": 80.32,
+          "basis": "MA20 daily / BB middle",
+          "rr": 4.80,
+          "scale_out_pct": 30
+        }
+      ],
+      "preferred_target": 2,
+      "conditions": ["volume_ok", "no_event_2h", "rsi_h1_below_35_until_fill"],
+      "max_budget_pct": 50,
+      "entry_confluence": {
+        "stars": 4,
+        "signals": [
+          "Trendline r²=0.947 (75.12)",
+          "AVWAP swing low 29/04 (75.18)",
+          "Camarilla S3 (75.43)",
+          "Niveau rond 75"
+        ]
+      },
+      "rationale": "Plan A trop serré (entry -0.5% sous prix). Si rebond direct, opportunité manquée — discipline > FOMO."
+    },
+    {
+      "id": "C",
+      "type": "bounce_support",
+      "priority": 3,
+      "side": "long",
+      "horizon": "swing_4_12_weeks",
+      "condition_pending": true,
+      "condition_pending_reason": "Pullback >= 10% depuis prix courant requis avant activation",
+      "entry_zone": {
+        "min": 67.85,
+        "max": 68.60
+      },
+      "stop": {
+        "price": 65.50,
+        "basis": "Sous swing low majeur 27/03 (66.02) + 0.5x ATR",
+        "distance_pct": -3.39
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 73.00,
+          "basis": "Zone retour Keltner lower / cluster swing low récent",
+          "rr": 1.74,
+          "scale_out_pct": 30
+        },
+        {
+          "level": 2,
+          "price": 80.32,
+          "basis": "MA20 daily",
+          "rr": 4.34,
+          "scale_out_pct": 40
+        },
+        {
+          "level": 3,
+          "price": 84.75,
+          "basis": "Fib 0.236 + DBSCAN",
+          "rr": 5.91,
+          "scale_out_pct": 30
+        }
+      ],
+      "preferred_target": 2,
+      "conditions": ["price_touches_zone_67_85_68_60", "no_break_below_66_intermediate"],
+      "max_budget_pct": 100,
+      "entry_confluence": {
+        "stars": 5,
+        "signals": [
+          "VPVR VAL (67.84)",
+          "DBSCAN medium 3.3 touches (67.92)",
+          "BB lower (68.60)",
+          "D20 lower (69.93)",
+          "Confluence force 13.5 (3 concepts)"
+        ]
+      },
+      "rationale": "Seul vrai support DBSCAN entre prix courant et swing low majeur 66. Plan défensif activable si mean-reversion court terme échoue."
+    }
+  ],
+  "global_conditions": [
+    {
+      "id": "no_close_daily_below_73",
+      "type": "price_holds_above",
+      "params": {
+        "level": 73.00,
+        "timeframe": "daily",
+        "check_at": "session_close_us"
+      },
+      "verifiable_by": "bot R nightly close-checker"
+    },
+    {
+      "id": "iwm_session_stable",
+      "type": "indicator_threshold",
+      "params": {
+        "instrument": "IWM",
+        "metric": "session_return_pct",
+        "threshold": -2.0,
+        "operator": ">="
+      },
+      "verifiable_by": "bot R session monitor (IBKR live feed)"
+    },
+    {
+      "id": "volume_ok",
+      "type": "indicator_threshold",
+      "params": {
+        "metric": "volume_ratio_ma20_h1",
+        "threshold": 0.5,
+        "operator": ">="
+      },
+      "verifiable_by": "bot R intraday volume tracker"
+    },
+    {
+      "id": "no_event_2h",
+      "type": "macro_event_done",
+      "params": {
+        "window_minutes_before": 120,
+        "event_types": ["fomc", "cpi", "ppi", "nfp", "fed_speech", "earnings_calendar_us"]
+      },
+      "verifiable_by": "bot R economic calendar feed (manuel maintient agenda dans briefing du jour)"
+    },
+    {
+      "id": "rsi_h1_below_35_until_fill",
+      "type": "indicator_threshold",
+      "params": {
+        "metric": "rsi_14_h1",
+        "threshold": 35,
+        "operator": "<",
+        "evaluation": "continuous_until_fill"
+      },
+      "verifiable_by": "bot R intraday RSI monitor"
+    },
+    {
+      "id": "price_touches_zone_67_85_68_60",
+      "type": "price_holds_above",
+      "params": {
+        "level_low": 67.85,
+        "level_high": 68.60,
+        "type": "zone_touch"
+      },
+      "verifiable_by": "bot R daily close tracker"
+    },
+    {
+      "id": "no_break_below_66_intermediate",
+      "type": "price_holds_above",
+      "params": {
+        "level": 66.00,
+        "timeframe": "daily",
+        "check_at": "session_close_us",
+        "evaluation": "continuous_until_zone_touch"
+      },
+      "verifiable_by": "bot R nightly close-checker"
+    }
+  ],
   "invalidation": {
-    "price": 68.2021,
-    "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
+    "price": 73.00,
+    "rule": "if close_daily <= 73.00 -> cancel all pending long orders + flag invalidated. Cassure swing low cluster + Keltner lower ouvre vide technique jusqu'à 67.85 (-8%). Re-évaluer en Plan C uniquement, attendre touch zone $67.85-68.60.",
+    "timeframe": "daily",
+    "check_at": "session_close_us"
   }
 }
