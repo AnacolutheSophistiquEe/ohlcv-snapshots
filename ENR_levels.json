@@ -1,0 +1,140 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "ENR",
+    "generated_at": "2026-05-14T16:43:34Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-05-15T08:00:00Z",
+    "valid_until": "2026-05-15T21:00:00Z",
+    "source_precomputed": "ENR_precomputed.json"
+  },
+  "context": {
+    "last_price": 180.34,
+    "ta_score": {
+      "value": 4,
+      "max": 10,
+      "label": "neutral"
+    },
+    "alignment_flag": "mixed",
+    "hmm_regime": {
+      "state": "bear",
+      "probability": 0.9952,
+      "expected_duration_days": 209.14
+    },
+    "volatility_regime": "high",
+    "signals_counter": {
+      "buy": 6,
+      "sell": 0,
+      "neutral": 9,
+      "total": 15,
+      "verdict": "neutral"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_40-50_dist_ma20_-2_+2",
+      "win_rate": 0.91,
+      "sample_size": 11,
+      "median_bounce_pct": 8.49,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM bear (1.00), vol high, signals neutral (6b/0s/9n)."
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 176.972,
+        "max": 180.3045
+      },
+      "stop": {
+        "price": 167.8343,
+        "basis": "atr_below_confluence_support",
+        "distance_pct": -6.05
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 190.43,
+          "basis": "next_resistance",
+          "rr": 1.09
+        },
+        {
+          "level": 2,
+          "price": 213.1121,
+          "basis": "fib_extension_1272",
+          "rr": 3.19
+        },
+        {
+          "level": 3,
+          "price": 247.8037,
+          "basis": "fib_extension_1618",
+          "rr": 6.4
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support MA20 + VPVR_VAH (strength 5.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 190.6204,
+        "max": 191.3821
+      },
+      "stop": {
+        "price": 187.8862,
+        "basis": "below_broken_resistance",
+        "distance_pct": -1.63
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 194.1163,
+          "basis": "r_multiple_1",
+          "rr": 1.0
+        },
+        {
+          "level": 2,
+          "price": 197.2314,
+          "basis": "r_multiple_2",
+          "rr": 2.0
+        },
+        {
+          "level": 3,
+          "price": 200.3464,
+          "basis": "r_multiple_3",
+          "rr": 3.0
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance BB_UPPER + S/R_resistance (strength 6.0)."
+    }
+  ],
+  "global_conditions": [
+    {
+      "id": "session_eu_xetra_open",
+      "type": "session_window",
+      "params": {
+        "session": "eu_xetra_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 166.156,
+    "rule": "if last_price <= invalidation.price -> cancel pending orders + flag ticker invalidated (stop Plan A casse)"
+  }
+}

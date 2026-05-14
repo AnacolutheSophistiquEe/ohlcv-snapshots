@@ -1,0 +1,48 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "HOOD",
+    "generated_at": "2026-05-14T16:43:21Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-05-15T08:00:00Z",
+    "valid_until": "2026-05-15T21:00:00Z",
+    "source_precomputed": "HOOD_precomputed.json"
+  },
+  "context": {
+    "last_price": 75.7801,
+    "ta_score": {
+      "value": 2,
+      "max": 10,
+      "label": "very_bearish"
+    },
+    "alignment_flag": "triple_bearish",
+    "hmm_regime": {
+      "state": "bear",
+      "probability": 0.6339,
+      "expected_duration_days": 2.73
+    },
+    "volatility_regime": "low",
+    "signals_counter": {
+      "buy": 1,
+      "sell": 6,
+      "neutral": 9,
+      "total": 16,
+      "verdict": "neutral"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_30-40_dist_ma20_-10_-5",
+      "win_rate": 0.88,
+      "sample_size": 17,
+      "median_bounce_pct": 4.89,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 2/10 (very_bearish), alignment triple_bearish, HMM bear (0.63), vol low, signals neutral (1b/6s/9n)."
+  },
+  "entry_plans": [],
+  "global_conditions": [],
+  "invalidation": {
+    "price": 68.2021,
+    "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
+  }
+}
