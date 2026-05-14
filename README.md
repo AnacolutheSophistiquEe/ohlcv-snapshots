@@ -1,6 +1,6 @@
 # OHLCV Snapshots
 
-Last update: `2026-05-14T09:43:28.542490+00:00`
+Last update: `2026-05-14T09:45:33.685581+00:00`
 
 Daily snapshots of OHLCV data for the trading universe of [Manuel's IBKR Dip Scalper](https://github.com/AnacolutheSophistiquEe).
 Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the only reliable network path from the claude.ai sandbox.
@@ -13,11 +13,14 @@ Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the o
 
 ## Timeframes
 
-| TF | Period | Interval | Resample |
-|---|---|---|---|
-| `daily` | 5y | 1d | — |
-| `h4` | 3mo | 60m | 4h |
-| `h1` | 1mo | 60m | — |
+| TF | Period | Interval | Resample | Usage |
+|---|---|---|---|---|
+| `daily` | 1y | 1d | — | Skill TA — Phases 2-8 (default, ~16 KB) |
+| `daily_long` | 5y | 1d | — | Skill TA — Phase 9bis base rate uniquement (~80 KB) |
+| `h4` | 3mo | 60m | 4h | Skill TA — multi-TF alignment |
+| `h1` | 1mo | 60m | — | Skill TA — intraday confirmation |
+
+> **Note (2026-05-14)** : split `daily` (1y, default) / `daily_long` (5y, base rate) introduit pour réduire la consommation tokens du skill `equity-technical-analyst`. Cf. `deploy/SETUP_OHLCV_SNAPSHOTS.md`.
 
 ## Tickers
 
