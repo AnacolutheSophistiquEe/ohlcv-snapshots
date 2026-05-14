@@ -1,0 +1,128 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "IONQ",
+    "generated_at": "2026-05-14T21:29:46Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-05-15T08:00:00Z",
+    "valid_until": "2026-05-15T21:00:00Z",
+    "source_precomputed": "IONQ_precomputed.json"
+  },
+  "context": {
+    "last_price": 57.47,
+    "ta_score": {
+      "value": 4,
+      "max": 10,
+      "label": "bearish"
+    },
+    "alignment_flag": "mixed",
+    "hmm_regime": {
+      "state": "bull",
+      "probability": 0.6625,
+      "expected_duration_days": 2.96
+    },
+    "volatility_regime": "high",
+    "signals_counter": {
+      "buy": 7,
+      "sell": 3,
+      "neutral": 5,
+      "total": 15,
+      "verdict": "neutral_to_bullish"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_>=70_dist_ma20_>+10",
+      "win_rate": 0.92,
+      "sample_size": 25,
+      "median_bounce_pct": 14.11,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM bull (0.66), vol high, signals neutral_to_bullish (7b/3s/5n)."
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 53.25,
+        "max": 55.2697
+      },
+      "stop": {
+        "price": 50.7405,
+        "basis": "atr_below_confluence_support",
+        "distance_pct": -6.49
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 76.129,
+          "basis": "next_resistance",
+          "rr": 6.21
+        },
+        {
+          "level": 2,
+          "price": 84.64,
+          "basis": "resistance_2",
+          "rr": 8.63
+        },
+        {
+          "level": 3,
+          "price": 110.8046,
+          "basis": "fib_extension_1618",
+          "rr": 16.07
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support FIB_50 + VPVR_VAH (strength 6.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 59.3839,
+        "max": 59.6212
+      },
+      "stop": {
+        "price": 57.6431,
+        "basis": "below_broken_resistance",
+        "distance_pct": -3.12
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 67.9733,
+          "basis": "fib_786",
+          "rr": 4.56
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance BB_UPPER + FIB_618 (strength 5.0)."
+    }
+  ],
+  "global_conditions": [
+    {
+      "id": "session_us_open",
+      "type": "session_window",
+      "params": {
+        "session": "us_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 50.2331,
+    "rule": "if last_price <= invalidation.price -> cancel pending orders + flag ticker invalidated (stop Plan A casse)"
+  }
+}

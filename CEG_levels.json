@@ -1,0 +1,48 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "CEG",
+    "generated_at": "2026-05-14T21:29:46Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-05-15T08:00:00Z",
+    "valid_until": "2026-05-15T21:00:00Z",
+    "source_precomputed": "CEG_precomputed.json"
+  },
+  "context": {
+    "last_price": 275.26,
+    "ta_score": {
+      "value": 0,
+      "max": 10,
+      "label": "very_bearish"
+    },
+    "alignment_flag": "triple_bearish",
+    "hmm_regime": {
+      "state": "bear",
+      "probability": 0.9995,
+      "expected_duration_days": 2031.61
+    },
+    "volatility_regime": "normal",
+    "signals_counter": {
+      "buy": 2,
+      "sell": 10,
+      "neutral": 4,
+      "total": 16,
+      "verdict": "strong_sell"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_30-40_dist_ma20_-10_-5",
+      "win_rate": 1.0,
+      "sample_size": 15,
+      "median_bounce_pct": 7.04,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (1.00), vol normal, signals strong_sell (2b/10s/4n)."
+  },
+  "entry_plans": [],
+  "global_conditions": [],
+  "invalidation": {
+    "price": 247.734,
+    "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
+  }
+}
