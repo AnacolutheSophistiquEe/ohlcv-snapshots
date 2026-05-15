@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "EVT",
-    "generated_at": "2026-05-15T21:41:25Z",
+    "generated_at": "2026-05-15T22:37:53Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -10,25 +10,25 @@
     "source_precomputed": "EVT_precomputed.json"
   },
   "context": {
-    "last_price": 4.618,
+    "last_price": 4.7,
     "ta_score": {
       "value": 2,
       "max": 10,
-      "label": "very_bearish"
+      "label": "bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.5041,
-      "expected_duration_days": 2.02
+      "probability": 0.5182,
+      "expected_duration_days": 2.08
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 3,
+      "buy": 1,
       "sell": 6,
-      "neutral": 6,
+      "neutral": 8,
       "total": 15,
-      "verdict": "strong_sell"
+      "verdict": "neutral"
     },
     "mean_reversion_score": {
       "setup": "rsi_30-40_dist_ma20_<-10",
@@ -37,12 +37,12 @@
       "median_bounce_pct": 0.0,
       "confidence": "low"
     },
-    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM sideways (0.50), vol normal, signals strong_sell (3b/6s/6n)."
+    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (0.52), vol normal, signals neutral (1b/6s/8n)."
   },
   "entry_plans": [],
   "global_conditions": [],
   "invalidation": {
-    "price": 4.1562,
+    "price": 4.23,
     "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
   }
 }
