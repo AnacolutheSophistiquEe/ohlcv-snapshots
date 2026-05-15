@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-05-15T21:03:47Z",
+    "generated_at": "2026-05-15T21:41:25Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -50,7 +50,7 @@
         "max": 48.4655
       },
       "stop": {
-        "price": 44.8739,
+        "price": 44.8744,
         "basis": "atr_below_confluence_support",
         "distance_pct": -5.69
       },
@@ -65,7 +65,7 @@
           "level": 2,
           "price": 84.64,
           "basis": "resistance_2",
-          "rr": 13.68
+          "rr": 13.69
         },
         {
           "level": 3,
@@ -93,7 +93,7 @@
     }
   ],
   "invalidation": {
-    "price": 44.4252,
+    "price": 44.4257,
     "rule": "if last_price <= invalidation.price -> cancel pending orders + flag ticker invalidated (stop Plan A casse)"
   }
 }

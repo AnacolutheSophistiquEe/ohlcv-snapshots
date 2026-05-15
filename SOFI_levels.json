@@ -1,48 +1,48 @@
 {
   "schema_version": "2.0",
   "meta": {
-    "ticker": "EVT",
+    "ticker": "SOFI",
     "generated_at": "2026-05-15T21:41:25Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
     "valid_until": "2026-05-18T21:00:00Z",
-    "source_precomputed": "EVT_precomputed.json"
+    "source_precomputed": "SOFI_precomputed.json"
   },
   "context": {
-    "last_price": 4.618,
+    "last_price": 15.61,
     "ta_score": {
       "value": 2,
       "max": 10,
-      "label": "very_bearish"
+      "label": "bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.5041,
-      "expected_duration_days": 2.02
+      "probability": 0.5717,
+      "expected_duration_days": 2.33
     },
-    "volatility_regime": "normal",
+    "volatility_regime": "low",
     "signals_counter": {
-      "buy": 3,
-      "sell": 6,
-      "neutral": 6,
+      "buy": 1,
+      "sell": 7,
+      "neutral": 7,
       "total": 15,
       "verdict": "strong_sell"
     },
     "mean_reversion_score": {
-      "setup": "rsi_30-40_dist_ma20_<-10",
-      "win_rate": 0.4,
-      "sample_size": 5,
-      "median_bounce_pct": 0.0,
-      "confidence": "low"
+      "setup": "rsi_30-40_dist_ma20_-10_-5",
+      "win_rate": 0.6,
+      "sample_size": 10,
+      "median_bounce_pct": 2.46,
+      "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM sideways (0.50), vol normal, signals strong_sell (3b/6s/6n)."
+    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (0.57), vol low, signals strong_sell (1b/7s/7n)."
   },
   "entry_plans": [],
   "global_conditions": [],
   "invalidation": {
-    "price": 4.1562,
+    "price": 14.049,
     "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
   }
 }
