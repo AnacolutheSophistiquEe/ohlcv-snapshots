@@ -1,7 +1,7 @@
 {
   "meta": {
     "ticker": "SRT3",
-    "generated_at": "2026-05-14T21:35:57.878466+00:00",
+    "generated_at": "2026-05-15T00:17:17.266580+00:00",
     "schema_version": "1.3",
     "pipeline_version": "1.3",
     "source": "yfinance via fetch_local",
@@ -1439,7 +1439,13 @@
       "T_setup": 0.75,
       "T_RR": 0.5,
       "T_penalty": -1.0
-    }
+    },
+    "bonuses": {
+      "contrarian_bonus": 0.0,
+      "trend_macro_bonus": 0.0
+    },
+    "contrarian_setup_detected": false,
+    "rationale_notes": []
   },
   "confluence_zones": [
     {
@@ -1759,7 +1765,10 @@
       "bull",
       "sideways",
       "bear"
-    ]
+    ],
+    "sanity_capped_duration": false,
+    "sanity_reduced_probability": false,
+    "dist_ma200_pct_at_calc": -4.2532
   },
   "seasonality": {
     "best_day_of_week": "Tuesday",
@@ -9352,7 +9361,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-05-14T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -9396,7 +9405,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-05-14T12:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -9443,7 +9452,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-05-14T15:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
