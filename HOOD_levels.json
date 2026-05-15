@@ -2,98 +2,47 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "HOOD",
-    "generated_at": "2026-05-14T21:40:42Z",
+    "generated_at": "2026-05-15T20:03:47Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-15T08:00:00Z",
-    "valid_until": "2026-05-15T21:00:00Z",
+    "valid_from": "2026-05-18T08:00:00Z",
+    "valid_until": "2026-05-18T21:00:00Z",
     "source_precomputed": "HOOD_precomputed.json"
   },
   "context": {
-    "last_price": 80.7,
+    "last_price": 77.2,
     "ta_score": {
-      "value": 4,
+      "value": 3,
       "max": 10,
-      "label": "neutral"
+      "label": "bearish"
     },
-    "alignment_flag": "triple_bullish",
+    "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.8689,
-      "expected_duration_days": 7.63
+      "probability": 0.8634,
+      "expected_duration_days": 7.32
     },
     "volatility_regime": "low",
     "signals_counter": {
-      "buy": 7,
-      "sell": 1,
-      "neutral": 8,
-      "total": 16,
+      "buy": 1,
+      "sell": 3,
+      "neutral": 11,
+      "total": 15,
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_40-50_dist_ma20_-2_+2",
-      "win_rate": 0.8,
-      "sample_size": 15,
-      "median_bounce_pct": 6.69,
+      "setup": "rsi_40-50_dist_ma20_-5_-2",
+      "win_rate": 0.77,
+      "sample_size": 13,
+      "median_bounce_pct": 4.2,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 4/10 (neutral), alignment triple_bullish, HMM sideways (0.87), vol low, signals neutral (7b/1s/8n)."
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.86), vol low, signals neutral (1b/3s/11n)."
   },
-  "entry_plans": [
-    {
-      "id": "A",
-      "type": "bounce_support",
-      "priority": 1,
-      "side": "long",
-      "entry_zone": {
-        "min": 76.5427,
-        "max": 77.8
-      },
-      "stop": {
-        "price": 74.2152,
-        "basis": "atr_below_confluence_support",
-        "distance_pct": -3.83
-      },
-      "targets": [
-        {
-          "level": 1,
-          "price": 84.75,
-          "basis": "next_resistance",
-          "rr": 2.56
-        },
-        {
-          "level": 2,
-          "price": 110.292,
-          "basis": "resistance_2",
-          "rr": 11.2
-        },
-        {
-          "level": 3,
-          "price": 139.75,
-          "basis": "resistance_3",
-          "rr": 21.17
-        }
-      ],
-      "preferred_target": 1,
-      "conditions": [
-        "session_us_open"
-      ],
-      "max_budget_pct": 50,
-      "rationale": "Confluence support MA50 + VPVR_POC + S/R_support (strength 10.5). Bounce mecanique."
-    }
-  ],
-  "global_conditions": [
-    {
-      "id": "session_us_open",
-      "type": "session_window",
-      "params": {
-        "session": "us_regular"
-      },
-      "verifiable_by": "compare_clock_to_session_def"
-    }
-  ],
+  "entry_plans": [],
+  "global_conditions": [],
   "invalidation": {
-    "price": 73.473,
-    "rule": "if last_price <= invalidation.price -> cancel pending orders + flag ticker invalidated (stop Plan A casse)"
+    "price": 69.48,
+    "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
   }
 }

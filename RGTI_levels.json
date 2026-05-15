@@ -2,42 +2,42 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RGTI",
-    "generated_at": "2026-05-14T21:40:42Z",
+    "generated_at": "2026-05-15T20:03:47Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-15T08:00:00Z",
-    "valid_until": "2026-05-15T21:00:00Z",
+    "valid_from": "2026-05-18T08:00:00Z",
+    "valid_until": "2026-05-18T21:00:00Z",
     "source_precomputed": "RGTI_precomputed.json"
   },
   "context": {
-    "last_price": 19.27,
+    "last_price": 17.9099,
     "ta_score": {
-      "value": 6,
+      "value": 4,
       "max": 10,
-      "label": "neutral"
+      "label": "bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.7766,
-      "expected_duration_days": 4.48
+      "probability": 0.8543,
+      "expected_duration_days": 6.86
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 5,
-      "sell": 1,
-      "neutral": 9,
+      "buy": 3,
+      "sell": 4,
+      "neutral": 8,
       "total": 15,
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_60-70_dist_ma20_+5_+10",
-      "win_rate": 0.7,
+      "setup": "rsi_50-60_dist_ma20_-2_+2",
+      "win_rate": 0.8,
       "sample_size": 10,
-      "median_bounce_pct": 9.93,
+      "median_bounce_pct": 3.87,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 6/10 (neutral), alignment mixed, HMM sideways (0.78), vol normal, signals neutral (5b/1s/9n)."
+    "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM sideways (0.85), vol normal, signals neutral (3b/4s/8n)."
   },
   "entry_plans": [
     {
@@ -46,32 +46,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 18.2243,
-        "max": 18.6207
+        "min": 15.6762,
+        "max": 16.6519
       },
       "stop": {
-        "price": 16.9662,
+        "price": 15.5117,
         "basis": "atr_below_confluence_support",
-        "distance_pct": -7.91
+        "distance_pct": -4.04
       },
       "targets": [
         {
           "level": 1,
-          "price": 19.728,
+          "price": 19.2834,
           "basis": "vpvr_vah",
-          "rr": 0.9
+          "rr": 4.78
         },
         {
           "level": 2,
           "price": 30.205,
           "basis": "resistance_2",
-          "rr": 8.09
+          "rr": 21.52
         },
         {
           "level": 3,
           "price": 34.34,
           "basis": "resistance_3",
-          "rr": 10.93
+          "rr": 27.86
         }
       ],
       "preferred_target": 1,
@@ -79,7 +79,48 @@
         "session_us_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support MA20 + VPVR_POC (strength 5.0). Bounce mecanique."
+      "rationale": "Confluence support BB_LOWER + S/R_support + MA50 (strength 15.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 19.3027,
+        "max": 19.3798
+      },
+      "stop": {
+        "price": 18.0386,
+        "basis": "below_broken_resistance",
+        "distance_pct": -6.74
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 23.0095,
+          "basis": "next_confluence_resistance",
+          "rr": 2.82
+        },
+        {
+          "level": 2,
+          "price": 23.1518,
+          "basis": "fib_236",
+          "rr": 2.93
+        },
+        {
+          "level": 3,
+          "price": 29.4941,
+          "basis": "fib_382",
+          "rr": 7.79
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance MA20 + VPVR_POC + VPVR_VAH (strength 12.0)."
     }
   ],
   "global_conditions": [
@@ -93,7 +134,7 @@
     }
   ],
   "invalidation": {
-    "price": 16.7965,
+    "price": 15.3566,
     "rule": "if last_price <= invalidation.price -> cancel pending orders + flag ticker invalidated (stop Plan A casse)"
   }
 }

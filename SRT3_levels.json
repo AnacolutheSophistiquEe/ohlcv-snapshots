@@ -2,47 +2,47 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SRT3",
-    "generated_at": "2026-05-14T21:40:42Z",
+    "generated_at": "2026-05-15T20:03:47Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-15T08:00:00Z",
-    "valid_until": "2026-05-15T21:00:00Z",
+    "valid_from": "2026-05-18T08:00:00Z",
+    "valid_until": "2026-05-18T21:00:00Z",
     "source_precomputed": "SRT3_precomputed.json"
   },
   "context": {
-    "last_price": 213.5,
+    "last_price": 204.9,
     "ta_score": {
-      "value": 2,
+      "value": 3,
       "max": 10,
-      "label": "very_bearish"
+      "label": "bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.9454,
-      "expected_duration_days": 18.31
+      "probability": 0.9213,
+      "expected_duration_days": 12.7
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 1,
+      "buy": 2,
       "sell": 6,
-      "neutral": 8,
+      "neutral": 7,
       "total": 15,
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_40-50_dist_ma20_-5_-2",
-      "win_rate": 0.82,
-      "sample_size": 22,
-      "median_bounce_pct": 3.98,
+      "setup": "rsi_30-40_dist_ma20_-10_-5",
+      "win_rate": 0.93,
+      "sample_size": 14,
+      "median_bounce_pct": 4.91,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bull (0.95), vol normal, signals neutral (1b/6s/8n)."
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM bull (0.92), vol normal, signals neutral (2b/6s/7n)."
   },
   "entry_plans": [],
   "global_conditions": [],
   "invalidation": {
-    "price": 192.15,
+    "price": 184.41,
     "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
   }
 }

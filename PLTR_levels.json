@@ -2,31 +2,31 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PLTR",
-    "generated_at": "2026-05-14T21:40:42Z",
+    "generated_at": "2026-05-15T20:03:47Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-15T08:00:00Z",
-    "valid_until": "2026-05-15T21:00:00Z",
+    "valid_from": "2026-05-18T08:00:00Z",
+    "valid_until": "2026-05-18T21:00:00Z",
     "source_precomputed": "PLTR_precomputed.json"
   },
   "context": {
-    "last_price": 133.73,
+    "last_price": 134.07,
     "ta_score": {
-      "value": 4,
+      "value": 2,
       "max": 10,
-      "label": "neutral"
+      "label": "bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.7307,
-      "expected_duration_days": 3.71
+      "probability": 0.7775,
+      "expected_duration_days": 4.49
     },
     "volatility_regime": "low",
     "signals_counter": {
-      "buy": 2,
+      "buy": 1,
       "sell": 5,
-      "neutral": 8,
+      "neutral": 9,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,63 +37,12 @@
       "median_bounce_pct": -0.31,
       "confidence": "low"
     },
-    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM bull (0.73), vol low, signals neutral (2b/5s/8n)."
+    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM bull (0.78), vol low, signals neutral (1b/5s/9n)."
   },
-  "entry_plans": [
-    {
-      "id": "A",
-      "type": "bounce_support",
-      "priority": 1,
-      "side": "long",
-      "entry_zone": {
-        "min": 129.3534,
-        "max": 131.9007
-      },
-      "stop": {
-        "price": 128.0599,
-        "basis": "below_zone_1pct_below_confluence_support",
-        "distance_pct": -1.97
-      },
-      "targets": [
-        {
-          "level": 1,
-          "price": 149.0103,
-          "basis": "next_resistance",
-          "rr": 7.16
-        },
-        {
-          "level": 2,
-          "price": 192.5743,
-          "basis": "resistance_2",
-          "rr": 24.13
-        },
-        {
-          "level": 3,
-          "price": 235.6408,
-          "basis": "fib_extension_1618",
-          "rr": 40.91
-        }
-      ],
-      "preferred_target": 1,
-      "conditions": [
-        "session_us_open"
-      ],
-      "max_budget_pct": 50,
-      "rationale": "Confluence support BB_LOWER + VPVR_VAL (strength 5.0). Bounce mecanique."
-    }
-  ],
-  "global_conditions": [
-    {
-      "id": "session_us_open",
-      "type": "session_window",
-      "params": {
-        "session": "us_regular"
-      },
-      "verifiable_by": "compare_clock_to_session_def"
-    }
-  ],
+  "entry_plans": [],
+  "global_conditions": [],
   "invalidation": {
-    "price": 126.7793,
-    "rule": "if last_price <= invalidation.price -> cancel pending orders + flag ticker invalidated (stop Plan A casse)"
+    "price": 120.663,
+    "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
   }
 }
