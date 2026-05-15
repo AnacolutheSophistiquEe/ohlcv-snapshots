@@ -2,232 +2,47 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "ENR",
-    "generated_at": "2026-05-15T08:00:00Z",
-    "generated_by": "claude_equity_ta@2.0",
-    "trust_phase": 2,
-    "valid_from": "2026-05-15T08:00:00Z",
-    "valid_until": "2026-05-16T08:00:00Z",
-    "source_precomputed": "https://anacoluthesophistiquee.github.io/ohlcv-snapshots/ENR_precomputed.min.json"
+    "generated_at": "2026-05-15T21:03:47Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-05-18T08:00:00Z",
+    "valid_until": "2026-05-18T21:00:00Z",
+    "source_precomputed": "ENR_precomputed.json"
   },
   "context": {
-    "last_price": 177.0,
-    "currency": "EUR",
+    "last_price": 169.54,
     "ta_score": {
-      "value": 4,
+      "value": 0,
       "max": 10,
-      "label": "neutral-bullish"
+      "label": "very_bearish"
     },
-    "alignment_flag": "mixed",
+    "alignment_flag": "triple_bearish",
     "hmm_regime": {
       "state": "bear",
-      "probability": 0.9939,
-      "caveat": "verrouillage du modèle sur le drawdown -10% depuis ATH du 24/04, à pondérer"
+      "probability": 0.65,
+      "expected_duration_days": 30.0
     },
     "volatility_regime": "high",
     "signals_counter": {
-      "buy": 5,
-      "sell": 0,
-      "neutral": 10,
+      "buy": 3,
+      "sell": 6,
+      "neutral": 7,
+      "total": 16,
       "verdict": "neutral"
     },
-    "relative_strength": {
-      "benchmark": "EWG",
-      "perf_3m_relative_pct": 22.5,
-      "ratio_trend_60d": "rising",
-      "z_score": -0.27
+    "mean_reversion_score": {
+      "setup": "rsi_30-40_dist_ma20_-5_-2",
+      "win_rate": 0.71,
+      "sample_size": 7,
+      "median_bounce_pct": 0.99,
+      "confidence": "low"
     },
-    "overextension_classification": "normal",
-    "divergences_count": 2,
-    "narrative_short": "Pullback haussier dans uptrend ; bounce flag-bull en formation, divergence RSI cachée haussière. Plan A privilégié : entry sur EMA20+VWAP swing_low+S Camarilla, R/R 1.85 cohérent pour scalping intraday, alignement avec la divergence haussière cachée RSI. Plan B en limit dormant si pullback profon"
+    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (0.65), vol high, signals neutral (3b/6s/7n)."
   },
-  "entry_plans": [
-    {
-      "id": "A",
-      "type": "bounce_support",
-      "priority": 1,
-      "side": "long",
-      "entry_zone": {
-        "min": 174.5,
-        "max": 175.8
-      },
-      "entry_confluence": {
-        "stars": 4,
-        "stars_display": "★★★★☆",
-        "signals_count": 4,
-        "signals": [
-          "EMA20 daily (174.78)",
-          "MA20 daily (176.81)",
-          "VWAP ancrée swing-low 12/05 (175.39)",
-          "S Camarilla S2 (175.92)"
-        ]
-      },
-      "stop": {
-        "price": 172.5,
-        "basis": "swing+ATR",
-        "distance_pct": -1.51
-      },
-      "targets": [
-        {
-          "level": 1,
-          "price": 180.5,
-          "basis": "Cluster VAH (180.30) + R1 classique (180.92)",
-          "rr": 1.85,
-          "scale_out_pct": 50
-        },
-        {
-          "level": 2,
-          "price": 182.9,
-          "basis": "High du 14/05 + résistance intraday",
-          "rr": 2.66,
-          "scale_out_pct": 30
-        },
-        {
-          "level": 3,
-          "price": 189.5,
-          "basis": "Approche de la résistance medium 190.43 + BB upper",
-          "rr": 5.1,
-          "scale_out_pct": 20
-        }
-      ],
-      "preferred_target": 2,
-      "conditions": [
-        "volume_ok",
-        "no_event_2h"
-      ],
-      "max_budget_pct": 30,
-      "rationale": "Plan A privilégié : entry sur EMA20+VWAP swing_low+S Camarilla, R/R 1.85 cohérent pour scalping intraday, alignement avec la divergence haussière cachée RSI. Plan B en limit dormant si pullback profond inattendu"
-    },
-    {
-      "id": "B",
-      "type": "retracement",
-      "priority": 2,
-      "side": "long",
-      "entry_zone": {
-        "min": 163.5,
-        "max": 165.5
-      },
-      "entry_confluence": {
-        "stars": 5,
-        "stars_display": "★★★★★",
-        "signals_count": 4,
-        "signals": [
-          "MA50 (162.79)",
-          "Fib 0.786 swing 86-186 (164.38)",
-          "BB lower (165.05)",
-          "S/R medium (165.39, 2 touches)"
-        ]
-      },
-      "stop": {
-        "price": 160.0,
-        "basis": "swing+ATR",
-        "distance_pct": -2.74
-      },
-      "targets": [
-        {
-          "level": 1,
-          "price": 180.3,
-          "basis": "VPVR VAH",
-          "rr": 3.51,
-          "scale_out_pct": 30
-        },
-        {
-          "level": 2,
-          "price": 190.0,
-          "basis": "S/R medium R + zone BB upper",
-          "rr": 5.67,
-          "scale_out_pct": 40
-        },
-        {
-          "level": 3,
-          "price": 213.11,
-          "basis": "Fib extension 1.272 du swing 86-186",
-          "rr": 10.8,
-          "scale_out_pct": 30
-        }
-      ],
-      "preferred_target": 2,
-      "conditions": [
-        "pullback_to_zone",
-        "ma50_holds"
-      ],
-      "max_budget_pct": 50,
-      "rationale": "Plan B alternatif (horizon swing_1_3_weeks)"
-    },
-    {
-      "id": "C",
-      "type": "retracement",
-      "priority": 3,
-      "side": "long",
-      "entry_zone": {
-        "min": 143.5,
-        "max": 147.5
-      },
-      "entry_confluence": {
-        "stars": 4,
-        "stars_display": "★★★★☆",
-        "signals_count": 3,
-        "signals": [
-          "VPVR POC (145.21)",
-          "VAL (143.14)",
-          "Fib 0.618 swing majeur (147.54)"
-        ]
-      },
-      "stop": {
-        "price": 138.0,
-        "basis": "swing+ATR",
-        "distance_pct": -5.15
-      },
-      "targets": [
-        {
-          "level": 1,
-          "price": 165.39,
-          "basis": "S/R medium reconquise",
-          "rr": 2.65,
-          "scale_out_pct": 30
-        },
-        {
-          "level": 2,
-          "price": 180.3,
-          "basis": "VAH retour vers la zone d'auction",
-          "rr": 4.64,
-          "scale_out_pct": 40
-        },
-        {
-          "level": 3,
-          "price": 190.43,
-          "basis": "R/R medium",
-          "rr": 5.99,
-          "scale_out_pct": 30
-        }
-      ],
-      "preferred_target": 2,
-      "conditions": [
-        "deep_pullback_>=10pct"
-      ],
-      "max_budget_pct": 30,
-      "rationale": "Plan C alternatif (horizon swing_4_12_weeks)"
-    }
-  ],
-  "global_conditions": [
-    {
-      "id": "macro_briefing_not_provided",
-      "type": "manual_telegram_ack",
-      "params": {
-        "note": "Briefing macro absent au moment de l'analyse — vérifier régime jour J avant exécution"
-      },
-      "verifiable_by": "manuel_telegram_ack"
-    },
-    {
-      "id": "ibkr_price_check",
-      "type": "manual_telegram_ack",
-      "params": {
-        "note": "Vérifier prix IBKR vs €177.00 (clôture 2026-05-14 17:35 CEST)"
-      },
-      "verifiable_by": "manuel_ibkr_check"
-    }
-  ],
+  "entry_plans": [],
+  "global_conditions": [],
   "invalidation": {
-    "price": 142.0,
-    "rule": "Close daily < 142.00 (sous swing low 13/03 + casse VAL VPVR) → abandon thèse buy-the-dip ENR, signal de bear leg structurel"
+    "price": 152.586,
+    "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
   }
 }

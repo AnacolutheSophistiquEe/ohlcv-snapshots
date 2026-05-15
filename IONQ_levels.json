@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-05-15T20:03:47Z",
+    "generated_at": "2026-05-15T21:03:47Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "IONQ_precomputed.json"
   },
   "context": {
-    "last_price": 52.1235,
+    "last_price": 51.95,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "divergent_short_long",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.6242,
-      "expected_duration_days": 2.66
+      "probability": 0.6414,
+      "expected_duration_days": 2.79
     },
     "volatility_regime": "high",
     "signals_counter": {
@@ -37,7 +37,7 @@
       "median_bounce_pct": 30.12,
       "confidence": "very_low"
     },
-    "narrative_short": "TA score 4/10 (bearish), alignment divergent_short_long, HMM bull (0.62), vol high, signals neutral (7b/0s/8n)."
+    "narrative_short": "TA score 4/10 (bearish), alignment divergent_short_long, HMM bull (0.64), vol high, signals neutral (7b/0s/8n)."
   },
   "entry_plans": [
     {
@@ -47,31 +47,31 @@
       "side": "long",
       "entry_zone": {
         "min": 46.6985,
-        "max": 48.4742
+        "max": 48.4655
       },
       "stop": {
-        "price": 45.0479,
+        "price": 44.8739,
         "basis": "atr_below_confluence_support",
-        "distance_pct": -5.33
+        "distance_pct": -5.69
       },
       "targets": [
         {
           "level": 1,
           "price": 56.2828,
           "basis": "vpvr_vah",
-          "rr": 3.43
+          "rr": 3.21
         },
         {
           "level": 2,
           "price": 84.64,
           "basis": "resistance_2",
-          "rr": 14.6
+          "rr": 13.68
         },
         {
           "level": 3,
           "price": 111.7615,
           "basis": "fib_extension_1618",
-          "rr": 25.28
+          "rr": 23.7
         }
       ],
       "preferred_target": 1,
@@ -93,7 +93,7 @@
     }
   ],
   "invalidation": {
-    "price": 44.5974,
+    "price": 44.4252,
     "rule": "if last_price <= invalidation.price -> cancel pending orders + flag ticker invalidated (stop Plan A casse)"
   }
 }

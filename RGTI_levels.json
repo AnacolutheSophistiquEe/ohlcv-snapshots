@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RGTI",
-    "generated_at": "2026-05-15T20:03:47Z",
+    "generated_at": "2026-05-15T21:03:47Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "RGTI_precomputed.json"
   },
   "context": {
-    "last_price": 17.9099,
+    "last_price": 17.85,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.8543,
-      "expected_duration_days": 6.86
+      "probability": 0.8453,
+      "expected_duration_days": 6.46
     },
     "volatility_regime": "normal",
     "signals_counter": {
@@ -46,32 +46,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 15.6762,
-        "max": 16.6519
+        "min": 15.672,
+        "max": 16.6507
       },
       "stop": {
-        "price": 15.5117,
+        "price": 15.4518,
         "basis": "atr_below_confluence_support",
-        "distance_pct": -4.04
+        "distance_pct": -4.39
       },
       "targets": [
         {
           "level": 1,
           "price": 19.2834,
           "basis": "vpvr_vah",
-          "rr": 4.78
+          "rr": 4.4
         },
         {
           "level": 2,
           "price": 30.205,
           "basis": "resistance_2",
-          "rr": 21.52
+          "rr": 19.79
         },
         {
           "level": 3,
           "price": 34.34,
           "basis": "resistance_3",
-          "rr": 27.86
+          "rr": 25.62
         }
       ],
       "preferred_target": 1,
@@ -91,28 +91,28 @@
         "max": 19.3798
       },
       "stop": {
-        "price": 18.0386,
+        "price": 18.0357,
         "basis": "below_broken_resistance",
-        "distance_pct": -6.74
+        "distance_pct": -6.75
       },
       "targets": [
         {
           "level": 1,
-          "price": 23.0095,
+          "price": 23.0092,
           "basis": "next_confluence_resistance",
-          "rr": 2.82
+          "rr": 2.81
         },
         {
           "level": 2,
           "price": 23.1518,
           "basis": "fib_236",
-          "rr": 2.93
+          "rr": 2.92
         },
         {
           "level": 3,
           "price": 29.4941,
           "basis": "fib_382",
-          "rr": 7.79
+          "rr": 7.78
         }
       ],
       "preferred_target": 1,
@@ -134,7 +134,7 @@
     }
   ],
   "invalidation": {
-    "price": 15.3566,
+    "price": 15.2973,
     "rule": "if last_price <= invalidation.price -> cancel pending orders + flag ticker invalidated (stop Plan A casse)"
   }
 }
