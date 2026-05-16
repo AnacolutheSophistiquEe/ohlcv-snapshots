@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-05-16T08:40:51Z",
+    "generated_at": "2026-05-16T09:27:09Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -117,6 +117,47 @@
       ],
       "max_budget_pct": 50,
       "rationale": "Confluence support MA50 + FIB_236 (strength 5.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 34.4339,
+        "max": 34.5715
+      },
+      "stop": {
+        "price": 33.5557,
+        "basis": "below_broken_resistance",
+        "distance_pct": -2.74
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 35.8737,
+          "basis": "next_confluence_resistance",
+          "rr": 1.45
+        },
+        {
+          "level": 2,
+          "price": 37.8,
+          "basis": "fib_50",
+          "rr": 3.48
+        },
+        {
+          "level": 3,
+          "price": 37.8,
+          "basis": "next_confluence_resistance",
+          "rr": 3.48
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance FIB_382 + VPVR_VAH (strength 6.0)."
     }
   ],
   "global_conditions": [

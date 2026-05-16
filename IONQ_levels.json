@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-05-16T08:40:51Z",
+    "generated_at": "2026-05-16T09:27:09Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -102,6 +102,76 @@
       ],
       "max_budget_pct": 50,
       "rationale": "Confluence support FIB_382 + MA200 + VPVR_POC + MA20 (strength 20.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 59.1806,
+        "max": 59.4171
+      },
+      "stop": {
+        "price": 56.0014,
+        "basis": "below_broken_resistance",
+        "distance_pct": -5.56
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 67.965,
+          "basis": "fib_786",
+          "rr": 2.63
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance VPVR_VAH + BB_UPPER + FIB_618 (strength 12.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 38.617,
+        "max": 39.013
+      },
+      "stop": {
+        "price": 37.0723,
+        "basis": "deep_below_confluence_support_4pct",
+        "distance_pct": -4.49
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 56.2828,
+          "basis": "vpvr_vah",
+          "rr": 10.02
+        },
+        {
+          "level": 2,
+          "price": 84.64,
+          "basis": "resistance_2",
+          "rr": 26.3
+        },
+        {
+          "level": 3,
+          "price": 111.7615,
+          "basis": "fib_extension_1618",
+          "rr": 41.86
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Deep value mecanique : entree sur confluence support basse BB_LOWER + MA50 + FIB_236 (strength 10.5). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
     }
   ],
   "global_conditions": [
@@ -115,7 +185,7 @@
     }
   ],
   "invalidation": {
-    "price": 44.4252,
+    "price": 36.7016,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
