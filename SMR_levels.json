@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMR",
-    "generated_at": "2026-05-16T09:27:09Z",
+    "generated_at": "2026-05-16T12:32:55Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -61,10 +61,145 @@
       "median_recovery_days": null
     }
   },
-  "entry_plans": [],
-  "global_conditions": [],
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 11.1564,
+        "max": 11.2236
+      },
+      "stop": {
+        "price": 9.5501,
+        "basis": "fallback_pivot_camarilla_s1",
+        "distance_pct": -14.66
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 12.7655,
+          "basis": "next_resistance",
+          "rr": 0.96
+        },
+        {
+          "level": 2,
+          "price": 16.959,
+          "basis": "resistance_2",
+          "rr": 3.52
+        },
+        {
+          "level": 3,
+          "price": 22.2552,
+          "basis": "resistance_3",
+          "rr": 6.75
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_s1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 13.6379,
+        "max": 13.6924
+      },
+      "stop": {
+        "price": 12.1876,
+        "basis": "below_broken_resistance",
+        "distance_pct": -10.81
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 19.9286,
+          "basis": "fib_236",
+          "rr": 4.24
+        },
+        {
+          "level": 2,
+          "price": 26.3307,
+          "basis": "fib_382",
+          "rr": 8.57
+        },
+        {
+          "level": 3,
+          "price": 31.505,
+          "basis": "fib_50",
+          "rr": 12.07
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance VPVR_POC + MA20 + S/R_resistance + VPVR_VAH + BB_UPPER (strength 40.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 8.7172,
+        "max": 8.8942
+      },
+      "stop": {
+        "price": 7.1701,
+        "basis": "fallback_sr_support",
+        "distance_pct": -18.57
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 12.7655,
+          "basis": "next_resistance",
+          "rr": 2.42
+        },
+        {
+          "level": 2,
+          "price": 16.959,
+          "basis": "resistance_2",
+          "rr": 4.98
+        },
+        {
+          "level": 3,
+          "price": 22.2552,
+          "basis": "resistance_3",
+          "rr": 8.22
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel sr_support. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=3<4",
+  "global_conditions": [
+    {
+      "id": "session_us_open",
+      "type": "session_window",
+      "params": {
+        "session": "us_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
   "invalidation": {
-    "price": 10.107,
-    "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
+    "price": 7.0984,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

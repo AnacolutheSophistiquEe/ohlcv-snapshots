@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RHM",
-    "generated_at": "2026-05-16T09:27:09Z",
+    "generated_at": "2026-05-16T12:32:55Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -61,10 +61,145 @@
       "median_recovery_days": null
     }
   },
-  "entry_plans": [],
-  "global_conditions": [],
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 1111.2263,
+        "max": 1117.9137
+      },
+      "stop": {
+        "price": 1023.9787,
+        "basis": "fallback_pivot_camarilla_s1",
+        "distance_pct": -8.13
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 1653.1678,
+          "basis": "next_resistance",
+          "rr": 5.95
+        },
+        {
+          "level": 2,
+          "price": 2199.6994,
+          "basis": "fib_extension_1272",
+          "rr": 11.98
+        },
+        {
+          "level": 3,
+          "price": 2493.3913,
+          "basis": "fib_extension_1618",
+          "rr": 15.22
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_s1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 1126.5554,
+        "max": 1131.0571
+      },
+      "stop": {
+        "price": 1093.4229,
+        "basis": "fallback_pivot_camarilla_r1",
+        "distance_pct": -3.13
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 1653.1678,
+          "basis": "next_resistance",
+          "rr": 14.82
+        },
+        {
+          "level": 2,
+          "price": 2199.6994,
+          "basis": "fib_extension_1272",
+          "rr": 30.27
+        },
+        {
+          "level": 3,
+          "price": 2493.3913,
+          "basis": "fib_extension_1618",
+          "rr": 38.57
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 1025.4539,
+        "max": 1046.2753
+      },
+      "stop": {
+        "price": 945.0487,
+        "basis": "fallback_pivot_classical_s3",
+        "distance_pct": -8.77
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 1653.1678,
+          "basis": "next_resistance",
+          "rr": 6.8
+        },
+        {
+          "level": 2,
+          "price": 2199.6994,
+          "basis": "fib_extension_1272",
+          "rr": 12.82
+        },
+        {
+          "level": 3,
+          "price": 2493.3913,
+          "basis": "fib_extension_1618",
+          "rr": 16.05
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_classical_s3. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "triple_bearish (long-only anti-knife-catch)",
+  "global_conditions": [
+    {
+      "id": "session_eu_xetra_open",
+      "type": "session_window",
+      "params": {
+        "session": "eu_xetra_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
   "invalidation": {
-    "price": 1008.0,
-    "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
+    "price": 935.5982,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

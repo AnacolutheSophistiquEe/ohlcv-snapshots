@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "ENR",
-    "generated_at": "2026-05-16T09:27:09Z",
+    "generated_at": "2026-05-16T12:32:55Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -12,11 +12,11 @@
   "context": {
     "last_price": 169.54,
     "ta_score": {
-      "value": 0,
+      "value": 2,
       "max": 10,
       "label": "very_bearish"
     },
-    "alignment_flag": "triple_bearish",
+    "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bear",
       "probability": 0.65,
@@ -25,9 +25,9 @@
     "volatility_regime": "high",
     "signals_counter": {
       "buy": 3,
-      "sell": 6,
-      "neutral": 7,
-      "total": 16,
+      "sell": 4,
+      "neutral": 8,
+      "total": 15,
       "verdict": "neutral"
     },
     "mean_reversion_score": {
@@ -37,7 +37,7 @@
       "median_bounce_pct": 0.99,
       "confidence": "low"
     },
-    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (0.65), vol high, signals neutral (3b/6s/7n)."
+    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bear (0.65), vol high, signals neutral (3b/4s/8n)."
   },
   "notes": {
     "atr_daily": 8.3057,
@@ -76,10 +76,133 @@
       "median_recovery_days": null
     }
   },
-  "entry_plans": [],
-  "global_conditions": [],
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 162.6715,
+        "max": 165.5917
+      },
+      "stop": {
+        "price": 161.0448,
+        "basis": "below_zone_1pct_below_confluence_support",
+        "distance_pct": -1.88
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 180.3045,
+          "basis": "vpvr_vah",
+          "rr": 5.24
+        },
+        {
+          "level": 2,
+          "price": 208.3839,
+          "basis": "fib_extension_1272",
+          "rr": 14.34
+        },
+        {
+          "level": 3,
+          "price": 240.9281,
+          "basis": "fib_extension_1618",
+          "rr": 24.88
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support FIB_786 + MA50 + S/R_support + BB_LOWER (strength 22.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 180.4848,
+        "max": 181.206
+      },
+      "stop": {
+        "price": 176.0503,
+        "basis": "below_broken_resistance",
+        "distance_pct": -2.65
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 188.2783,
+          "basis": "next_confluence_resistance",
+          "rr": 1.55
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance MA20 + VPVR_VAH (strength 5.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 143.1409,
+        "max": 146.8697
+      },
+      "stop": {
+        "price": 137.4153,
+        "basis": "deep_below_confluence_support_4pct",
+        "distance_pct": -5.23
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 180.3045,
+          "basis": "vpvr_vah",
+          "rr": 4.65
+        },
+        {
+          "level": 2,
+          "price": 208.3839,
+          "basis": "fib_extension_1272",
+          "rr": 8.35
+        },
+        {
+          "level": 3,
+          "price": 240.9281,
+          "basis": "fib_extension_1618",
+          "rr": 12.64
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Deep value mecanique : entree sur confluence support basse VPVR_VAL + VPVR_POC + FIB_618 (strength 13.5). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=2<4",
+  "global_conditions": [
+    {
+      "id": "session_eu_xetra_open",
+      "type": "session_window",
+      "params": {
+        "session": "eu_xetra_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
   "invalidation": {
-    "price": 152.586,
-    "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
+    "price": 136.0411,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

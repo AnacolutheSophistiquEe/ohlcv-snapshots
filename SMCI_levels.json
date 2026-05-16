@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-05-16T09:27:09Z",
+    "generated_at": "2026-05-16T12:32:55Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -158,8 +158,51 @@
       ],
       "max_budget_pct": 25,
       "rationale": "Breakout au-dessus confluence resistance FIB_382 + VPVR_VAH (strength 6.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 27.517,
+        "max": 28.0757
+      },
+      "stop": {
+        "price": 24.5042,
+        "basis": "fallback_psych_-10pct",
+        "distance_pct": -11.84
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 34.3995,
+          "basis": "vpvr_vah",
+          "rr": 2.01
+        },
+        {
+          "level": 2,
+          "price": 56.5267,
+          "basis": "resistance_2",
+          "rr": 8.73
+        },
+        {
+          "level": 3,
+          "price": 62.36,
+          "basis": "resistance_3",
+          "rr": 10.5
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel psych_-10pct. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
     }
   ],
+  "bot_actionable": true,
+  "bot_actionable_reason": "ok",
   "global_conditions": [
     {
       "id": "session_us_open",
@@ -171,7 +214,7 @@
     }
   ],
   "invalidation": {
-    "price": 27.3321,
+    "price": 24.2592,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

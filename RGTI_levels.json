@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RGTI",
-    "generated_at": "2026-05-16T09:27:09Z",
+    "generated_at": "2026-05-16T12:32:55Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -151,8 +151,51 @@
       ],
       "max_budget_pct": 25,
       "rationale": "Breakout au-dessus confluence resistance MA20 + VPVR_POC + VPVR_VAH (strength 12.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 15.824,
+        "max": 16.1453
+      },
+      "stop": {
+        "price": 13.6668,
+        "basis": "fallback_psych_-10pct",
+        "distance_pct": -14.5
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 19.2834,
+          "basis": "vpvr_vah",
+          "rr": 1.42
+        },
+        {
+          "level": 2,
+          "price": 30.205,
+          "basis": "resistance_2",
+          "rr": 6.14
+        },
+        {
+          "level": 3,
+          "price": 34.34,
+          "basis": "resistance_3",
+          "rr": 7.92
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel psych_-10pct. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
     }
   ],
+  "bot_actionable": true,
+  "bot_actionable_reason": "ok",
   "global_conditions": [
     {
       "id": "session_us_open",
@@ -164,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 15.2973,
+    "price": 13.5301,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
