@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "EVT",
-    "generated_at": "2026-05-15T23:13:28Z",
+    "generated_at": "2026-05-16T08:40:51Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -10,25 +10,25 @@
     "source_precomputed": "EVT_precomputed.json"
   },
   "context": {
-    "last_price": 4.7,
+    "last_price": 4.618,
     "ta_score": {
       "value": 2,
       "max": 10,
-      "label": "bearish"
+      "label": "very_bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.5182,
-      "expected_duration_days": 2.08
+      "probability": 0.5041,
+      "expected_duration_days": 2.02
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 1,
+      "buy": 3,
       "sell": 6,
-      "neutral": 8,
+      "neutral": 6,
       "total": 15,
-      "verdict": "neutral"
+      "verdict": "strong_sell"
     },
     "mean_reversion_score": {
       "setup": "rsi_30-40_dist_ma20_<-10",
@@ -37,12 +37,34 @@
       "median_bounce_pct": 0.0,
       "confidence": "low"
     },
-    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (0.52), vol normal, signals neutral (1b/6s/8n)."
+    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM sideways (0.50), vol normal, signals strong_sell (3b/6s/6n)."
+  },
+  "notes": {
+    "atr_daily": 0.271,
+    "atr_pct_daily": null,
+    "beta_60d": 0.9262,
+    "beta_benchmark": "EWG",
+    "beta_corr_60d": 0.3714,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "shooting_star",
+      "date": "2026-05-15",
+      "confidence": 0.633
+    },
+    "divergences": [],
+    "drawdown": {
+      "current_dd_pct": -44.81,
+      "ath_price": 8.368,
+      "ath_date": "2025-05-26",
+      "max_dd_1y_pct": -50.78,
+      "days_in_dd": 354,
+      "median_recovery_days": null
+    }
   },
   "entry_plans": [],
   "global_conditions": [],
   "invalidation": {
-    "price": 4.23,
+    "price": 4.1562,
     "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
   }
 }

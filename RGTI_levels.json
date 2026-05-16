@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RGTI",
-    "generated_at": "2026-05-15T23:13:28Z",
+    "generated_at": "2026-05-16T08:40:51Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -38,6 +38,36 @@
       "confidence": "medium"
     },
     "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM sideways (0.85), vol normal, signals neutral (3b/4s/8n)."
+  },
+  "notes": {
+    "atr_daily": 1.5988,
+    "atr_pct_daily": null,
+    "beta_60d": 2.6011,
+    "beta_benchmark": "IWM",
+    "beta_corr_60d": 0.6842,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "bullish_engulfing",
+      "date": "2026-05-14",
+      "confidence": 0.705
+    },
+    "divergences": [
+      {
+        "indicator": "macd_hist",
+        "type": "bearish",
+        "confidence": 1.0,
+        "bars_ago": 4,
+        "at_price": null
+      }
+    ],
+    "drawdown": {
+      "current_dd_pct": -68.32,
+      "ath_price": 56.34,
+      "ath_date": "2025-10-15",
+      "max_dd_1y_pct": -77.1,
+      "days_in_dd": 212,
+      "median_recovery_days": null
+    }
   },
   "entry_plans": [
     {
@@ -135,6 +165,6 @@
   ],
   "invalidation": {
     "price": 15.2973,
-    "rule": "if last_price <= invalidation.price -> cancel pending orders + flag ticker invalidated (stop Plan A casse)"
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RHM",
-    "generated_at": "2026-05-15T23:13:28Z",
+    "generated_at": "2026-05-16T08:40:51Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "RHM_precomputed.json"
   },
   "context": {
-    "last_price": 1143.2,
+    "last_price": 1120.0,
     "ta_score": {
       "value": 0,
       "max": 10,
@@ -19,30 +19,52 @@
     "alignment_flag": "triple_bearish",
     "hmm_regime": {
       "state": "bear",
-      "probability": 0.9999,
+      "probability": 0.9998,
       "expected_duration_days": 30.0
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 4,
+      "buy": 3,
       "sell": 9,
-      "neutral": 3,
+      "neutral": 4,
       "total": 16,
-      "verdict": "sell"
+      "verdict": "strong_sell"
     },
     "mean_reversion_score": {
-      "setup": "rsi_<30_dist_ma20_<-10",
+      "setup": "rsi_30-40_dist_ma20_<-10",
       "win_rate": 1.0,
-      "sample_size": 11,
-      "median_bounce_pct": 9.28,
-      "confidence": "medium"
+      "sample_size": 2,
+      "median_bounce_pct": 9.64,
+      "confidence": "very_low"
     },
-    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (1.00), vol normal, signals sell (4b/9s/3n)."
+    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (1.00), vol normal, signals strong_sell (3b/9s/4n)."
+  },
+  "notes": {
+    "atr_daily": 64.0142,
+    "atr_pct_daily": null,
+    "beta_60d": 0.8137,
+    "beta_benchmark": "EWG",
+    "beta_corr_60d": 0.3988,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "",
+      "date": "",
+      "confidence": null
+    },
+    "divergences": [],
+    "drawdown": {
+      "current_dd_pct": -43.11,
+      "ath_price": 1968.8203,
+      "ath_date": "2025-09-29",
+      "max_dd_1y_pct": -43.11,
+      "days_in_dd": 227,
+      "median_recovery_days": null
+    }
   },
   "entry_plans": [],
   "global_conditions": [],
   "invalidation": {
-    "price": 1028.88,
+    "price": 1008.0,
     "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
   }
 }

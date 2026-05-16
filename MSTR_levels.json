@@ -2,240 +2,98 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-05-15T08:00:00Z",
-    "generated_by": "claude_equity_ta@2.0",
-    "trust_phase": 2,
-    "valid_from": "2026-05-15T08:00:00Z",
-    "valid_until": "2026-05-17T08:00:00Z",
-    "source_precomputed": "https://anacoluthesophistiquee.github.io/ohlcv-snapshots/MSTR_precomputed.min.json"
+    "generated_at": "2026-05-16T08:40:51Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-05-18T08:00:00Z",
+    "valid_until": "2026-05-18T21:00:00Z",
+    "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
-    "last_price": 186.97,
-    "currency": "USD",
+    "last_price": 177.42,
     "ta_score": {
-      "value": 4,
+      "value": 2,
       "max": 10,
-      "label": "neutral, signaux contrariés"
+      "label": "bearish"
     },
-    "alignment_flag": "triple_bullish",
+    "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
       "probability": 1.0,
-      "caveat": "verrouillage modèle (single-state collapse), à pondérer"
+      "expected_duration_days": 30.0
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 8,
-      "sell": 2,
-      "neutral": 6,
-      "verdict": "neutral_to_bullish"
+      "buy": 3,
+      "sell": 3,
+      "neutral": 9,
+      "total": 15,
+      "verdict": "neutral"
     },
-    "relative_strength": {
-      "benchmark": "IWM",
-      "perf_3m_relative_pct": 42.2,
-      "ratio_trend_60d": "rising",
-      "z_score": 1.21
+    "mean_reversion_score": {
+      "setup": "rsi_50-60_dist_ma20_-2_+2",
+      "win_rate": 0.64,
+      "sample_size": 14,
+      "median_bounce_pct": 0.66,
+      "confidence": "medium"
     },
-    "overextension_classification": "stretched_up",
-    "divergences_count": 3,
-    "narrative_short": "Bullish engulfing puissant 14/05 face à triple divergence baissière confirmée et overextension MA50 ; conviction modeste. Plan B (swing) privilégié plutôt que A : la triple divergence baissière confirmée (signal de force institutionnelle) + l'overextension MA50 percentile 95 rendent la cassure de 190.62 incertaine sans c"
+    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (1.00), vol normal, signals neutral (3b/3s/9n)."
   },
-  "entry_plans": [
-    {
-      "id": "A",
-      "type": "breakout",
-      "priority": 2,
-      "side": "long",
-      "entry_zone": {
-        "min": 185.0,
-        "max": 187.5
-      },
-      "entry_confluence": {
-        "stars": 3,
-        "stars_display": "★★★☆☆",
-        "signals_count": 3,
-        "signals": [
-          "VWAP ancrée swing-high 11/05 (185.60)",
-          "Camarilla S1 (185.29)",
-          "Bullish engulfing low (174.64) tenu"
-        ]
-      },
-      "stop": {
-        "price": 180.5,
-        "basis": "swing+ATR",
-        "distance_pct": -3.07
-      },
-      "targets": [
-        {
-          "level": 1,
-          "price": 190.5,
-          "basis": "R1 cluster medium (190.62) + Camarilla R2 (190.34)",
-          "rr": 0.83,
-          "scale_out_pct": 50
-        },
-        {
-          "level": 2,
-          "price": 195.0,
-          "basis": "R1 classique (195.10) approche swing high",
-          "rr": 1.52,
-          "scale_out_pct": 30
-        },
-        {
-          "level": 3,
-          "price": 197.0,
-          "basis": "Swing-high 11/05, cassure = breakout confirmé",
-          "rr": 1.87,
-          "scale_out_pct": 20
-        }
-      ],
-      "preferred_target": 2,
-      "conditions": [
-        "volume_ok",
-        "close_h1_above_186_5",
-        "no_btc_stress"
-      ],
-      "max_budget_pct": 20,
-      "rationale": "Plan A alternatif (horizon intraday)"
+  "notes": {
+    "atr_daily": 11.4429,
+    "atr_pct_daily": null,
+    "beta_60d": 2.1768,
+    "beta_benchmark": "IWM",
+    "beta_corr_60d": 0.6623,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "bullish_engulfing",
+      "date": "2026-05-14",
+      "confidence": 0.81
     },
-    {
-      "id": "B",
-      "type": "retracement",
-      "priority": 1,
-      "side": "long",
-      "entry_zone": {
-        "min": 176.5,
-        "max": 178.5
+    "divergences": [
+      {
+        "indicator": "rsi",
+        "type": "bearish",
+        "confidence": 1.0,
+        "bars_ago": 4,
+        "at_price": null
       },
-      "entry_confluence": {
-        "stars": 4,
-        "stars_display": "★★★★☆",
-        "signals_count": 3,
-        "signals": [
-          "MA20 daily (176.51)",
-          "Fib 0.236 swing majeur (178.69)",
-          "VPVR confluence support 176.51-178.69"
-        ]
+      {
+        "indicator": "rsi",
+        "type": "hidden_bullish",
+        "confidence": 1.0,
+        "bars_ago": 6,
+        "at_price": null
       },
-      "stop": {
-        "price": 173.5,
-        "basis": "swing+ATR",
-        "distance_pct": -2.25
+      {
+        "indicator": "macd_hist",
+        "type": "bearish",
+        "confidence": 1.0,
+        "bars_ago": 4,
+        "at_price": null
       },
-      "targets": [
-        {
-          "level": 1,
-          "price": 190.62,
-          "basis": "R1 cluster medium (3 touches)",
-          "rr": 3.28,
-          "scale_out_pct": 30
-        },
-        {
-          "level": 2,
-          "price": 197.0,
-          "basis": "Swing-high 11/05 + R1 classique zone",
-          "rr": 4.87,
-          "scale_out_pct": 40
-        },
-        {
-          "level": 3,
-          "price": 213.28,
-          "basis": "Fib 0.382 swing majeur 359→123",
-          "rr": 8.94,
-          "scale_out_pct": 30
-        }
-      ],
-      "preferred_target": 2,
-      "conditions": [
-        "pullback_to_zone",
-        "no_btc_breakdown"
-      ],
-      "max_budget_pct": 50,
-      "rationale": "Plan B (swing) privilégié plutôt que A : la triple divergence baissière confirmée (signal de force institutionnelle) + l'overextension MA50 percentile 95 rendent la cassure de 190.62 incertaine sans confirmation. Le retracement vers MA20+Fib_236 (176-179) offre un R/R 3.28 sur T1 — beaucoup plus favorable que Plan A R/R 1.02. Plan A reste actionnable si Manuel veut un scalp sur la dynamique du bullish engulfing, avec budget réduit"
-    },
-    {
-      "id": "C",
-      "type": "deep_retracement",
-      "priority": 3,
-      "side": "long",
-      "entry_zone": {
-        "min": 152.0,
-        "max": 156.0
-      },
-      "entry_confluence": {
-        "stars": 5,
-        "stars_display": "★★★★★",
-        "signals_count": 3,
-        "signals": [
-          "MA50 (151.39)",
-          "S/R strong 5.3 touches (153.70)",
-          "BB lower zone (156.37)"
-        ]
-      },
-      "stop": {
-        "price": 145.0,
-        "basis": "swing+ATR",
-        "distance_pct": -5.84
-      },
-      "targets": [
-        {
-          "level": 1,
-          "price": 178.69,
-          "basis": "Fib 0.236 swing majeur reconquis",
-          "rr": 2.74,
-          "scale_out_pct": 30
-        },
-        {
-          "level": 2,
-          "price": 197.0,
-          "basis": "Swing-high récent (11/05)",
-          "rr": 4.78,
-          "scale_out_pct": 40
-        },
-        {
-          "level": 3,
-          "price": 213.28,
-          "basis": "Fib 0.382 swing majeur",
-          "rr": 6.59,
-          "scale_out_pct": 30
-        }
-      ],
-      "preferred_target": 2,
-      "conditions": [
-        "deep_pullback_>=17pct"
-      ],
-      "max_budget_pct": 35,
-      "rationale": "Plan C alternatif (horizon swing_4_12_weeks)"
+      {
+        "indicator": "obv",
+        "type": "bearish",
+        "confidence": 0.89,
+        "bars_ago": 4,
+        "at_price": null
+      }
+    ],
+    "drawdown": {
+      "current_dd_pct": -61.08,
+      "ath_price": 455.9,
+      "ath_date": "2025-07-16",
+      "max_dd_1y_pct": -76.53,
+      "days_in_dd": 303,
+      "median_recovery_days": null
     }
-  ],
-  "global_conditions": [
-    {
-      "id": "macro_briefing_not_provided",
-      "type": "manual_telegram_ack",
-      "params": {
-        "note": "Briefing macro absent au moment de l'analyse — vérifier régime jour J avant exécution"
-      },
-      "verifiable_by": "manuel_telegram_ack"
-    },
-    {
-      "id": "ibkr_price_check",
-      "type": "manual_telegram_ack",
-      "params": {
-        "note": "Vérifier prix IBKR vs $186.97 (clôture 2026-05-14 22:00 CEST)"
-      },
-      "verifiable_by": "manuel_ibkr_check"
-    },
-    {
-      "id": "btc_no_breakdown",
-      "type": "price_holds_above",
-      "params": {
-        "symbol": "BTC-USD",
-        "threshold_note": "vérifier que BTC ne casse pas son support clé weekend"
-      },
-      "verifiable_by": "external_btc_quote"
-    }
-  ],
+  },
+  "entry_plans": [],
+  "global_conditions": [],
   "invalidation": {
-    "price": 145.0,
-    "rule": "Close daily < 145.00 (sous S/R strong 153.70 + niveau psycho 150) → abandon thèse, retour vers cluster 122-138 (zone d'origine du swing low 1/04)"
+    "price": 159.678,
+    "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
   }
 }

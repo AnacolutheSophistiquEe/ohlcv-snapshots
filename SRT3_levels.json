@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SRT3",
-    "generated_at": "2026-05-15T23:13:28Z",
+    "generated_at": "2026-05-16T08:40:51Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-18T08:00:00Z",
@@ -10,39 +10,61 @@
     "source_precomputed": "SRT3_precomputed.json"
   },
   "context": {
-    "last_price": 213.5,
+    "last_price": 204.9,
     "ta_score": {
-      "value": 2,
+      "value": 3,
       "max": 10,
-      "label": "very_bearish"
+      "label": "bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.9387,
-      "expected_duration_days": 16.32
+      "probability": 0.9213,
+      "expected_duration_days": 12.7
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 1,
+      "buy": 2,
       "sell": 6,
-      "neutral": 8,
+      "neutral": 7,
       "total": 15,
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_40-50_dist_ma20_-5_-2",
-      "win_rate": 0.82,
-      "sample_size": 22,
-      "median_bounce_pct": 3.98,
+      "setup": "rsi_30-40_dist_ma20_-10_-5",
+      "win_rate": 0.93,
+      "sample_size": 14,
+      "median_bounce_pct": 4.91,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bull (0.94), vol normal, signals neutral (1b/6s/8n)."
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM bull (0.92), vol normal, signals neutral (2b/6s/7n)."
+  },
+  "notes": {
+    "atr_daily": 8.55,
+    "atr_pct_daily": null,
+    "beta_60d": 1.024,
+    "beta_benchmark": "EWG",
+    "beta_corr_60d": 0.5572,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "hammer",
+      "date": "2026-05-14",
+      "confidence": 0.833
+    },
+    "divergences": [],
+    "drawdown": {
+      "current_dd_pct": -22.5,
+      "ath_price": 264.389,
+      "ath_date": "2026-01-08",
+      "max_dd_1y_pct": -22.86,
+      "days_in_dd": 127,
+      "median_recovery_days": null
+    }
   },
   "entry_plans": [],
   "global_conditions": [],
   "invalidation": {
-    "price": 192.15,
+    "price": 184.41,
     "rule": "no active plan ; invalidation defensive a -10 % du prix de reference (last_price au generated_at)"
   }
 }
