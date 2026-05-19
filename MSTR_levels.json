@@ -2,17 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-05-15T23:42:00Z",
-    "generated_by": "claude_equity_ta@2.0",
-    "trust_phase": 2,
-    "valid_from": "2026-05-15T23:42:00Z",
-    "valid_until": "2026-05-19T20:00:00Z",
-    "source_precomputed": "https://anacoluthesophistiquee.github.io/ohlcv-snapshots/MSTR_precomputed.min.json?cb=20260516",
-    "session_context": "weekend_market_closed_plans_for_session_2026-05-18",
-    "regime_macro_inherited": null
+    "generated_at": "2026-05-19T11:43:57Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-05-20T08:00:00Z",
+    "valid_until": "2026-05-20T21:00:00Z",
+    "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
-    "last_price": 177.42,
+    "last_price": 166.63,
     "ta_score": {
       "value": 2,
       "max": 10,
@@ -21,158 +19,216 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 1.00,
-      "expected_duration_days": 30
+      "probability": 0.9994,
+      "expected_duration_days": 30.0
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 3,
-      "sell": 3,
-      "neutral": 9,
+      "buy": 1,
+      "sell": 7,
+      "neutral": 7,
       "total": 15,
-      "verdict": "neutral"
+      "verdict": "strong_sell"
     },
     "mean_reversion_score": {
-      "setup": "rsi_50-60_dist_ma20_-2_+2",
-      "win_rate": 0.64,
-      "sample_size": 14,
-      "median_bounce_pct": 0.66,
-      "confidence": "medium"
+      "setup": "rsi_50-60_dist_ma20_-10_-5",
+      "win_rate": 0.0,
+      "sample_size": 0,
+      "median_bounce_pct": 0.0,
+      "confidence": "very_low"
     },
-    "narrative_short": "Setup mixed multi-TF avec bullish engulfing 14/05 + bounce sur MA20 ($177.05) défendant le swing low du 15/05 ($173.61). Mais divergences baissières multiples confirmées 4 bars ago (RSI/MACD/OBV confiance ~1.0 au sommet du 11/05 à $195.94) imposent prudence. HMM sideways probabilité 1.0 et alignement mixed (daily up / h4 down / h1 range) écartent un swing trade haute conviction. Plan B = bounce technique réaliste, Plan C = entrée premium si nouvelle vague de vente revient tester MA50 ($152.14) = zone de confluence 4 signaux. Risque dominant : weekend BTC (beta 60d vs IWM = 2.18, MSTR reste un proxy BTC leverage)."
-  },
-  "entry_plans": [
-    {
-      "id": "B",
-      "type": "bounce_support",
-      "priority": 1,
-      "side": "long",
-      "entry_zone": {
-        "min": 173.40,
-        "max": 175.50
-      },
-      "stop": {
-        "price": 168.50,
-        "basis": "sous swing low 15/05 (173.61) - 1× ATR daily buffer (11.44)",
-        "distance_pct": -3.65
-      },
-      "targets": [
-        {
-          "level": 1,
-          "price": 184.49,
-          "basis": "VPVR VAH 60d",
-          "rr": 1.5
-        },
-        {
-          "level": 2,
-          "price": 195.94,
-          "basis": "swing high 11/05 (LH zigzag)",
-          "rr": 3.3
-        },
-        {
-          "level": 3,
-          "price": 200.71,
-          "basis": "Fib 0.382 swing baissier majeur + BB upper daily proche (196.63)",
-          "rr": 4.1
-        }
-      ],
-      "preferred_target": 1,
-      "scale_out_pct": [50, 30, 20],
-      "conditions": ["mstr_open_monday_above_174", "btc_weekend_stable_no_gap_5pct"],
-      "max_budget_pct": 60,
-      "rationale": "Plan B privilégié. Bounce sur confluence MA20+swing low+Camarilla S2 (3 signaux). T1 atteignable si bullish engulfing prolonge avec volume mardi-mercredi."
-    },
-    {
-      "id": "C",
-      "type": "retracement",
-      "priority": 2,
-      "side": "long",
-      "entry_zone": {
-        "min": 152.50,
-        "max": 157.50
-      },
-      "stop": {
-        "price": 145.00,
-        "basis": "sous S-R strong 153.70 (5.3 touches) + 1.5× ATR ; cassure = changement régime",
-        "distance_pct": -6.45
-      },
-      "targets": [
-        {
-          "level": 1,
-          "price": 184.49,
-          "basis": "VPVR VAH 60d",
-          "rr": 2.6
-        },
-        {
-          "level": 2,
-          "price": 197.00,
-          "basis": "swing high 11/05 + zone BB upper daily",
-          "rr": 3.7
-        },
-        {
-          "level": 3,
-          "price": 218.00,
-          "basis": "MA200 daily ; retour à régime neutre",
-          "rr": 5.6
-        }
-      ],
-      "preferred_target": 2,
-      "scale_out_pct": [40, 35, 25],
-      "conditions": ["pullback_min_10pct_without_breaking_ma50"],
-      "max_budget_pct": 100,
-      "rationale": "Plan C deep value. Confluence 4 signaux (MA50, S-R strong 5.3 touches, BB lower, MA20 daily plus bas niveaux 60d). Ne s'active que sur correction supplémentaire."
-    }
-  ],
-  "global_conditions": [
-    {
-      "id": "mstr_open_monday_above_174",
-      "type": "price_holds_above",
-      "params": {
-        "threshold": 174.00,
-        "timeframe": "session_open_2026-05-18",
-        "window_minutes": 15
-      },
-      "verifiable_by": "session_open_quote_check_first_15min"
-    },
-    {
-      "id": "btc_weekend_stable_no_gap_5pct",
-      "type": "indicator_threshold",
-      "params": {
-        "instrument": "BTC-USD",
-        "max_drop_pct_from_friday_close": -5.0,
-        "check_at": "2026-05-18T13:00:00Z"
-      },
-      "verifiable_by": "btc_spot_price_check_pre_market"
-    },
-    {
-      "id": "pullback_min_10pct_without_breaking_ma50",
-      "type": "price_holds_above",
-      "params": {
-        "threshold": 152.14,
-        "comment": "Le pullback doit toucher entry_zone Plan C SANS clôturer sous MA50 daily"
-      },
-      "verifiable_by": "daily_close_vs_ma50_check"
-    }
-  ],
-  "invalidation": {
-    "price": 168.50,
-    "rule": "if daily_close <= 168.50 -> cancel all pending Plan B + flag invalidated. Plan C reste actif si MA50 (152.14) tient."
+    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (1.00), vol normal, signals strong_sell (1b/7s/7n)."
   },
   "notes": {
-    "atr_daily": 11.44,
-    "atr_pct_daily": 6.45,
-    "beta_60d_vs_iwm": 2.18,
-    "correlation_btc_high_implied": true,
-    "candlestick_pattern_recent": {
+    "atr_daily": 11.8629,
+    "atr_pct_daily": null,
+    "beta_60d": 2.2103,
+    "beta_benchmark": "IWM",
+    "beta_corr_60d": 0.6614,
+    "btc_corr_high": null,
+    "candlestick": {
       "name": "bullish_engulfing",
       "date": "2026-05-14",
       "confidence": 0.81
     },
-    "divergences_warning": [
-      "RSI bearish confiance 1.0 (4 bars ago au swing high $195.94)",
-      "MACD hist bearish confiance 1.0 (4 bars ago)",
-      "OBV bearish confiance 0.89 (4 bars ago)"
+    "divergences": [
+      {
+        "indicator": "rsi",
+        "type": "bearish",
+        "confidence": 1.0,
+        "bars_ago": 5,
+        "at_price": null
+      },
+      {
+        "indicator": "rsi",
+        "type": "hidden_bullish",
+        "confidence": 1.0,
+        "bars_ago": 7,
+        "at_price": null
+      },
+      {
+        "indicator": "macd_hist",
+        "type": "bearish",
+        "confidence": 1.0,
+        "bars_ago": 5,
+        "at_price": null
+      },
+      {
+        "indicator": "obv",
+        "type": "bearish",
+        "confidence": 0.88,
+        "bars_ago": 5,
+        "at_price": null
+      }
     ],
-    "drawdown_context": "DD courant -61.1% depuis ATH $455.90 (16/07/2025), 303 jours en drawdown. Recovery médian historique 31 jours = très court face au DD actuel."
+    "drawdown": {
+      "current_dd_pct": -63.45,
+      "ath_price": 455.9,
+      "ath_date": "2025-07-16",
+      "max_dd_1y_pct": -76.53,
+      "days_in_dd": 306,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 152.8018,
+        "max": 156.9001
+      },
+      "stop": {
+        "price": 152.5141,
+        "basis": "sr_below_confluence_support",
+        "distance_pct": -1.51
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 184.0464,
+          "basis": "vpvr_vah",
+          "rr": 12.49
+        },
+        {
+          "level": 2,
+          "price": 292.36,
+          "basis": "resistance_2",
+          "rr": 58.84
+        },
+        {
+          "level": 3,
+          "price": 321.2533,
+          "basis": "resistance_3",
+          "rr": 71.21
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support MA50 + S/R_support + BB_LOWER (strength 15.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 184.2304,
+        "max": 184.9666
+      },
+      "stop": {
+        "price": 175.9608,
+        "basis": "below_broken_resistance",
+        "distance_pct": -4.68
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 192.2125,
+          "basis": "next_confluence_resistance",
+          "rr": 0.88
+        },
+        {
+          "level": 2,
+          "price": 211.4491,
+          "basis": "fib_382",
+          "rr": 3.11
+        },
+        {
+          "level": 3,
+          "price": 211.4491,
+          "basis": "next_confluence_resistance",
+          "rr": 3.11
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance MA20 + FIB_236 + VPVR_VAH (strength 12.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 111.2951,
+        "max": 113.5549
+      },
+      "stop": {
+        "price": 95.1957,
+        "basis": "fallback_sr_support",
+        "distance_pct": -15.33
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 184.0464,
+          "basis": "vpvr_vah",
+          "rr": 4.16
+        },
+        {
+          "level": 2,
+          "price": 292.36,
+          "basis": "resistance_2",
+          "rr": 10.44
+        },
+        {
+          "level": 3,
+          "price": 321.2533,
+          "basis": "resistance_3",
+          "rr": 12.12
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel sr_support. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=2<4",
+  "global_conditions": [
+    {
+      "id": "session_us_open",
+      "type": "session_window",
+      "params": {
+        "session": "us_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 94.2437,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
