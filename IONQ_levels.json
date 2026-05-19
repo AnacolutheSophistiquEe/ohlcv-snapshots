@@ -2,12 +2,12 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-05-19T04:07:12Z",
-    "generated_by": "vps_precompute@1.2",
-    "trust_phase": 1,
-    "valid_from": "2026-05-20T08:00:00Z",
-    "valid_until": "2026-05-20T21:00:00Z",
-    "source_precomputed": "IONQ_precomputed.json"
+    "generated_at": "2026-05-19T08:00:00+00:00",
+    "generated_by": "claude_equity_ta@2.0",
+    "trust_phase": 2,
+    "valid_from": "2026-05-19T08:00:00+00:00",
+    "valid_until": "2026-05-20T08:00:00+00:00",
+    "source_precomputed": "https://anacoluthesophistiquee.github.io/ohlcv-snapshots/IONQ_precomputed.min.json"
   },
   "context": {
     "last_price": 49.31,
@@ -37,11 +37,11 @@
       "median_bounce_pct": 9.77,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 4/10 (neutral), alignment divergent_short_long, HMM bear (0.65), vol high, signals neutral_to_bullish (6b/3s/6n)."
+    "narrative_short": "Daily uptrend long terme intact (au-dessus MA20/50/200), MAIS h4/h1 baissiers court terme et RSI h1=20 oversold extrême. Confluence support 47-49 actuellement testée, niveau majeur 44 (5 concepts) en deuxième ligne. NVDA earnings demain AMC = wild card dominante pour le sentiment quantum (beta vs IWM = 2.7). HMM bear court (durée attendue 2.86j) — phase de fin baisse probable."
   },
   "notes": {
-    "atr_daily": 4.9103,
-    "atr_pct_daily": null,
+    "atr_daily": 4.91,
+    "atr_pct_daily": 9.96,
     "beta_60d": 2.6984,
     "beta_benchmark": "IWM",
     "beta_corr_60d": 0.553,
@@ -58,7 +58,7 @@
       "ath_date": "2025-10-13",
       "max_dd_1y_pct": -67.61,
       "days_in_dd": 217,
-      "median_recovery_days": null
+      "median_recovery_days": 5
     }
   },
   "entry_plans": [
@@ -68,132 +68,142 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 47.0248,
-        "max": 48.7118
+        "min": 49.1,
+        "max": 49.5
       },
       "stop": {
-        "price": 41.9446,
-        "basis": "atr_below_confluence_support",
-        "distance_pct": -12.37
+        "price": 47.2,
+        "basis": "Sous swing low 18/05 47.48 + 0.5×ATR daily",
+        "distance_pct": -4.26
       },
       "targets": [
         {
           "level": 1,
-          "price": 56.1804,
-          "basis": "vpvr_vah",
+          "price": 52.2,
+          "basis": "LVN VPVR (52.62) avant POC zone",
           "rr": 1.4
-        },
-        {
-          "level": 2,
-          "price": 84.64,
-          "basis": "resistance_2",
-          "rr": 6.21
-        },
-        {
-          "level": 3,
-          "price": 115.4682,
-          "basis": "fib_extension_1618",
-          "rr": 11.41
         }
       ],
       "preferred_target": 1,
       "conditions": [
-        "session_us_open"
+        "session_us_active",
+        "nvda_no_premarket_gap_gt_3pct"
       ],
-      "max_budget_pct": 50,
-      "rationale": "Confluence support MA200 + MA20 + FIB_382 (strength 10.5). Bounce mecanique."
+      "max_budget_pct": 60,
+      "rationale": "BB inférieure h1 + RSI h1 = 20 oversold extrême + MA20/MA200 zone (48.71)"
     },
     {
       "id": "B",
-      "type": "breakout",
+      "type": "retracement",
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 58.4288,
-        "max": 58.6623
+        "min": 44.5,
+        "max": 45.5
       },
       "stop": {
-        "price": 54.8096,
-        "basis": "below_broken_resistance",
-        "distance_pct": -6.38
+        "price": 41.5,
+        "basis": "Sous cluster S/R strong (43.57) + 1×ATR",
+        "distance_pct": -7.78
       },
       "targets": [
         {
           "level": 1,
-          "price": 61.4582,
-          "basis": "fib_618",
-          "rr": 0.78
-        },
-        {
-          "level": 2,
-          "price": 70.5319,
-          "basis": "fib_786",
-          "rr": 3.21
+          "price": 56.2,
+          "basis": "T1 VPVR VAH + FIB 50",
+          "rr": 2.6
         }
       ],
       "preferred_target": 1,
       "conditions": [
-        "session_us_open"
+        "nvda_earnings_done",
+        "no_quantum_bearish_news"
       ],
-      "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance FIB_50 + VPVR_VAH + BB_UPPER (strength 12.0)."
+      "max_budget_pct": 40,
+      "rationale": "Zone confluence 5 concepts (MA50+POC+S/R strong 27 touches+BB lower+FIB 236), strength 40"
     },
     {
       "id": "C",
-      "type": "deep_retracement",
+      "type": "deep_value",
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 38.6596,
-        "max": 44.0629
+        "min": 38.5,
+        "max": 40.0
       },
       "stop": {
-        "price": 37.1132,
-        "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -10.27
+        "price": 35.5,
+        "basis": "Sous double-bottom récent + 2×ATR",
+        "distance_pct": -9.55
       },
       "targets": [
         {
           "level": 1,
-          "price": 56.1804,
-          "basis": "vpvr_vah",
-          "rr": 3.49
-        },
-        {
-          "level": 2,
-          "price": 84.64,
-          "basis": "resistance_2",
-          "rr": 10.19
-        },
-        {
-          "level": 3,
-          "price": 115.4682,
-          "basis": "fib_extension_1618",
-          "rr": 17.44
+          "price": 60.0,
+          "basis": "FIB 0.618 retracement de la chute 82→28",
+          "rr": 3.2
         }
       ],
       "preferred_target": 1,
       "conditions": [
-        "session_us_open"
+        "post_nvda_correction_gt_minus20"
       ],
-      "max_budget_pct": 35,
-      "rationale": "Deep value mecanique : entree sur confluence support basse BB_LOWER + MA50 + FIB_236 + VPVR_POC + S/R_support (strength 40.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+      "max_budget_pct": 30,
+      "rationale": "BB_LOWER zone + double-bottom 30.08 (forming conf 0.53)"
     }
   ],
-  "bot_actionable": true,
-  "bot_actionable_reason": "ok",
   "global_conditions": [
     {
-      "id": "session_us_open",
+      "id": "session_us_active",
       "type": "session_window",
       "params": {
-        "session": "us_regular"
+        "market": "NASDAQ",
+        "start_cest": "15:30",
+        "end_cest": "22:00"
       },
-      "verifiable_by": "compare_clock_to_session_def"
+      "verifiable_by": "bot_R_clock"
+    },
+    {
+      "id": "nvda_no_premarket_gap_gt_3pct",
+      "type": "indicator_threshold",
+      "params": {
+        "ticker": "NVDA",
+        "metric": "premarket_gap_pct",
+        "threshold": 3.0,
+        "operator": "lt_abs"
+      },
+      "verifiable_by": "premarket_data_feed"
+    },
+    {
+      "id": "nvda_earnings_done",
+      "type": "macro_event_done",
+      "params": {
+        "event_name": "NVDA Q1 FY27 earnings",
+        "expected_at": "2026-05-20T22:20:00+00:00"
+      },
+      "verifiable_by": "macro_calendar"
+    },
+    {
+      "id": "no_quantum_bearish_news",
+      "type": "manual_telegram_ack",
+      "params": {
+        "ack_window_hours": 24,
+        "topic": "quantum_sector_news"
+      },
+      "verifiable_by": "manuel_telegram_ack"
+    },
+    {
+      "id": "post_nvda_correction_gt_minus20",
+      "type": "price_holds_above",
+      "params": {
+        "price_threshold": 40.0,
+        "operator": "below_for_entry_C"
+      },
+      "verifiable_by": "bot_R_price_history"
     }
   ],
   "invalidation": {
-    "price": 36.7421,
-    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+    "price": 35.0,
+    "rule": "if last_price <= 35.00 -> cancel all pending + flag invalidated (rupture double-bottom historique + sortie uptrend long terme)"
   }
 }

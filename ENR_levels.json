@@ -2,34 +2,20 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "ENR",
-    "generated_at": "2026-05-19T04:07:12Z",
-    "generated_by": "vps_precompute@1.2",
-    "trust_phase": 1,
-    "valid_from": "2026-05-20T08:00:00Z",
-    "valid_until": "2026-05-20T21:00:00Z",
-    "source_precomputed": "ENR_precomputed.json"
+    "generated_at": "2026-05-18T06:00:00Z",
+    "generated_by": "claude_equity_ta@2.0",
+    "trust_phase": 2,
+    "valid_from": "2026-05-18T06:00:00Z",
+    "valid_until": "2026-05-20T06:00:00Z",
+    "source_precomputed": "https://anacoluthesophistiquee.github.io/ohlcv-snapshots/ENR_precomputed.min.json"
   },
   "context": {
     "last_price": 169.54,
-    "ta_score": {
-      "value": 2,
-      "max": 10,
-      "label": "very_bearish"
-    },
+    "ta_score": { "value": 2, "max": 10, "label": "very_bearish" },
     "alignment_flag": "mixed",
-    "hmm_regime": {
-      "state": "bear",
-      "probability": 0.65,
-      "expected_duration_days": 30.0
-    },
+    "hmm_regime": { "state": "bear", "probability": 0.65, "expected_duration_days": 30.0 },
     "volatility_regime": "high",
-    "signals_counter": {
-      "buy": 3,
-      "sell": 4,
-      "neutral": 8,
-      "total": 15,
-      "verdict": "neutral"
-    },
+    "signals_counter": { "buy": 3, "sell": 4, "neutral": 8, "total": 15, "verdict": "neutral" },
     "mean_reversion_score": {
       "setup": "rsi_30-40_dist_ma20_-5_-2",
       "win_rate": 0.71,
@@ -37,35 +23,19 @@
       "median_bounce_pct": 0.99,
       "confidence": "low"
     },
-    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bear (0.65), vol high, signals neutral (3b/4s/8n)."
+    "narrative_short": "ENR €169.54 en correction modérée (-9.6% depuis ATH €187.62) avec HMM bear 65%. La zone €162.67-165.59 concentre 4 signaux convergents (FIB_786 + MA50 + S/R + BB_LOWER, strength 22) = support clé pour Plan B privilégié. Régime macro risk_off_modere et ATR percentile 89e justifient prudence: privilégier limit order patient sur retracement plutôt que chase. RS encore positif vs EWG (+10.4% 3M, ratio rising) — pas un rejet relatif."
   },
   "notes": {
-    "atr_daily": 8.3057,
-    "atr_pct_daily": null,
+    "atr_daily": 8.31,
+    "atr_pct_daily": 4.90,
     "beta_60d": 1.4739,
     "beta_benchmark": "EWG",
     "beta_corr_60d": 0.6646,
-    "btc_corr_high": null,
-    "candlestick": {
-      "name": "",
-      "date": "",
-      "confidence": null
-    },
+    "btc_corr_high": false,
+    "candlestick": { "name": "", "date": "", "confidence": null },
     "divergences": [
-      {
-        "indicator": "obv",
-        "type": "hidden_bearish",
-        "confidence": 0.21,
-        "bars_ago": 7,
-        "at_price": null
-      },
-      {
-        "indicator": "obv",
-        "type": "bullish",
-        "confidence": 0.58,
-        "bars_ago": 3,
-        "at_price": null
-      }
+      { "indicator": "obv", "type": "bullish", "confidence": 0.57, "bars_ago": 3, "at_price": 169.48 },
+      { "indicator": "obv", "type": "hidden_bearish", "confidence": 0.21, "bars_ago": 7, "at_price": 185.84 }
     ],
     "drawdown": {
       "current_dd_pct": -9.64,
@@ -73,136 +43,108 @@
       "ath_date": "2026-04-24",
       "max_dd_1y_pct": -17.25,
       "days_in_dd": 21,
-      "median_recovery_days": null
+      "median_recovery_days": 20
     }
   },
   "entry_plans": [
     {
-      "id": "A",
+      "id": "B",
       "type": "bounce_support",
       "priority": 1,
       "side": "long",
-      "entry_zone": {
-        "min": 162.6715,
-        "max": 165.5917
-      },
-      "stop": {
-        "price": 161.0448,
-        "basis": "below_zone_1pct_below_confluence_support",
-        "distance_pct": -1.88
-      },
+      "entry_zone": { "min": 162.67, "max": 165.59 },
+      "stop": { "price": 157.08, "basis": "1.5x ATR sous entry low, sous Fib 0.786 et MA50", "distance_pct": -7.35 },
       "targets": [
-        {
-          "level": 1,
-          "price": 180.3045,
-          "basis": "vpvr_vah",
-          "rr": 5.24
-        },
-        {
-          "level": 2,
-          "price": 208.3839,
-          "basis": "fib_extension_1272",
-          "rr": 14.34
-        },
-        {
-          "level": 3,
-          "price": 240.9281,
-          "basis": "fib_extension_1618",
-          "rr": 24.88
-        }
+        { "level": 1, "price": 176.94, "basis": "MA20 daily (retour BB middle)", "rr": 2.07 },
+        { "level": 2, "price": 180.30, "basis": "VPVR VAH", "rr": 2.65 },
+        { "level": 3, "price": 187.62, "basis": "ATH récent 24/04/2026", "rr": 3.94 }
       ],
-      "preferred_target": 1,
-      "conditions": [
-        "session_eu_xetra_open"
-      ],
-      "max_budget_pct": 50,
-      "rationale": "Confluence support FIB_786 + MA50 + S/R_support + BB_LOWER (strength 22.0). Bounce mecanique."
+      "preferred_target": 2,
+      "conditions": ["pullback_to_zone_162_165", "no_macro_event_24h"],
+      "max_budget_pct": 70,
+      "rationale": "Confluence strength 22 (4 concepts: FIB_786 + MA50 + S/R medium + BB_LOWER). Setup le plus solide identifié sur les 4 actifs analysés. Limit order patient."
     },
     {
-      "id": "B",
-      "type": "breakout",
+      "id": "A",
+      "type": "bounce_support",
       "priority": 2,
       "side": "long",
-      "entry_zone": {
-        "min": 180.4848,
-        "max": 181.206
-      },
-      "stop": {
-        "price": 176.0503,
-        "basis": "below_broken_resistance",
-        "distance_pct": -2.65
-      },
+      "entry_zone": { "min": 167.00, "max": 169.50 },
+      "stop": { "price": 164.50, "basis": "Sous S/R medium 165.39 + BB lower 165.59", "distance_pct": -2.97 },
       "targets": [
-        {
-          "level": 1,
-          "price": 188.2783,
-          "basis": "next_confluence_resistance",
-          "rr": 1.55
-        }
+        { "level": 1, "price": 174.30, "basis": "Pivot R1 + trendline résistance", "rr": 1.06 },
+        { "level": 2, "price": 177.00, "basis": "MA20 daily (176.94)", "rr": 2.00 },
+        { "level": 3, "price": 180.30, "basis": "VPVR VAH", "rr": 2.66 }
       ],
       "preferred_target": 1,
-      "conditions": [
-        "session_eu_xetra_open"
-      ],
-      "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance MA20 + VPVR_VAH (strength 5.0)."
+      "conditions": ["volume_ok", "no_event_2h"],
+      "max_budget_pct": 30,
+      "rationale": "Scalping intraday sur RSI h1 19.8 oversold extrême. R/R T1 modeste (1.06), justifie un budget réduit. Tradeoff exécutabilité immédiate."
     },
     {
       "id": "C",
-      "type": "deep_retracement",
+      "type": "retracement",
       "priority": 3,
       "side": "long",
-      "entry_zone": {
-        "min": 143.1409,
-        "max": 146.8697
-      },
-      "stop": {
-        "price": 137.4153,
-        "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -5.23
-      },
+      "entry_zone": { "min": 143.14, "max": 146.87 },
+      "stop": { "price": 134.55, "basis": "Sous swing low 23/03 (€133.85)", "distance_pct": -7.16 },
       "targets": [
-        {
-          "level": 1,
-          "price": 180.3045,
-          "basis": "vpvr_vah",
-          "rr": 4.65
-        },
-        {
-          "level": 2,
-          "price": 208.3839,
-          "basis": "fib_extension_1272",
-          "rr": 8.35
-        },
-        {
-          "level": 3,
-          "price": 240.9281,
-          "basis": "fib_extension_1618",
-          "rr": 12.64
-        }
+        { "level": 1, "price": 165.59, "basis": "Retour zone supports précédente", "rr": 2.21 },
+        { "level": 2, "price": 180.30, "basis": "VPVR VAH", "rr": 3.55 },
+        { "level": 3, "price": 208.38, "basis": "Fib ext 1.272", "rr": 6.85 }
       ],
-      "preferred_target": 1,
-      "conditions": [
-        "session_eu_xetra_open"
-      ],
-      "max_budget_pct": 35,
-      "rationale": "Deep value mecanique : entree sur confluence support basse VPVR_VAL + VPVR_POC + FIB_618 (strength 13.5). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+      "preferred_target": 2,
+      "conditions": ["correction_>15pct_from_current_price"],
+      "max_budget_pct": 50,
+      "rationale": "Confluence VPVR_VAL + POC + Fib 0.618 (strength 13.5). Activation seulement si correction profonde — limit order patient longue durée."
     }
   ],
-  "bot_actionable": false,
-  "bot_actionable_reason": "ta_score=2<4",
   "global_conditions": [
     {
-      "id": "session_eu_xetra_open",
-      "type": "session_window",
-      "params": {
-        "session": "eu_xetra_regular"
-      },
-      "verifiable_by": "compare_clock_to_session_def"
+      "id": "nvda_earnings_done",
+      "type": "macro_event_done",
+      "params": { "event": "NVDA earnings", "expected_at": "2026-05-20T20:00:00Z" },
+      "verifiable_by": "calendar_check"
+    },
+    {
+      "id": "us30y_below_5pct",
+      "type": "indicator_threshold",
+      "params": { "indicator": "US30Y_yield", "operator": "<", "threshold": 5.0 },
+      "verifiable_by": "market_data_check"
+    },
+    {
+      "id": "pullback_to_zone_162_165",
+      "type": "price_holds_above",
+      "params": { "min_price": 162.50, "max_price": 165.70 },
+      "verifiable_by": "tws_price_check"
+    },
+    {
+      "id": "no_macro_event_24h",
+      "type": "macro_event_done",
+      "params": { "lookahead_hours": 24, "min_severity": "high" },
+      "verifiable_by": "calendar_check"
+    },
+    {
+      "id": "volume_ok",
+      "type": "indicator_threshold",
+      "params": { "indicator": "volume_ratio_ma20_h1", "operator": ">", "threshold": 0.8 },
+      "verifiable_by": "tws_volume_check"
+    },
+    {
+      "id": "no_event_2h",
+      "type": "macro_event_done",
+      "params": { "lookahead_hours": 2, "min_severity": "medium" },
+      "verifiable_by": "calendar_check"
+    },
+    {
+      "id": "correction_>15pct_from_current_price",
+      "type": "price_holds_above",
+      "params": { "max_price": 144.10 },
+      "verifiable_by": "tws_price_check"
     }
   ],
   "invalidation": {
-    "price": 136.0411,
-    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+    "price": 134.55,
+    "rule": "if close_daily <= 134.55 -> cancel all pending limit orders + flag invalidated (= rupture swing low 23/03/2026, abandon thèse de bottom oversold)"
   }
 }
