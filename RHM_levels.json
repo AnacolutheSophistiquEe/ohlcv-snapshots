@@ -2,51 +2,204 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RHM",
-    "generated_at": "2026-05-18T06:00:00Z",
-    "generated_by": "claude_equity_ta@2.0",
-    "trust_phase": 2,
-    "valid_from": "2026-05-18T06:00:00Z",
-    "valid_until": "2026-05-20T06:00:00Z",
-    "source_precomputed": "https://anacoluthesophistiquee.github.io/ohlcv-snapshots/RHM_precomputed.min.json"
+    "generated_at": "2026-05-19T10:45:10Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-05-20T08:00:00Z",
+    "valid_until": "2026-05-20T21:00:00Z",
+    "source_precomputed": "RHM_precomputed.json"
   },
   "context": {
-    "last_price": 1120.00,
-    "ta_score": { "value": 0, "max": 10, "label": "very_bearish" },
-    "alignment_flag": "triple_bearish",
-    "hmm_regime": { "state": "bear", "probability": 0.9998, "expected_duration_days": 30.0 },
-    "volatility_regime": "normal",
-    "signals_counter": { "buy": 3, "sell": 9, "neutral": 4, "total": 16, "verdict": "strong_sell" },
-    "mean_reversion_score": {
-      "setup": "rsi_30-40_dist_ma20_<-10",
-      "win_rate": 1.0,
-      "sample_size": 2,
-      "median_bounce_pct": 9.64,
-      "confidence": "very_low"
+    "last_price": 1226.4,
+    "ta_score": {
+      "value": 2,
+      "max": 10,
+      "label": "bearish"
     },
-    "narrative_short": "RHM €1120 en capitulation extrême: drawdown -43.11% depuis ATH €1968.82 (29/09/2025). Alignement triple_bearish, HMM bear avec probabilité 99.98% durée 30j, ADX 48.9 baissier, distance MA200 -31.6% (percentile 4/100). Pipeline DBSCAN ne détecte AUCUN cluster support en dessous du prix — pas de niveau structurel pour poser un stop fiable. Knife-catching anti-pattern. Aucun plan jouable; attendre construction d'une base sur 5-10 sessions avec stabilisation > €1099 avant tout setup."
+    "alignment_flag": "divergent_short_long",
+    "hmm_regime": {
+      "state": "bear",
+      "probability": 0.9984,
+      "expected_duration_days": 30.0
+    },
+    "volatility_regime": "normal",
+    "signals_counter": {
+      "buy": 1,
+      "sell": 7,
+      "neutral": 7,
+      "total": 15,
+      "verdict": "strong_sell"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_40-50_dist_ma20_-5_-2",
+      "win_rate": 0.75,
+      "sample_size": 24,
+      "median_bounce_pct": 3.01,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 2/10 (bearish), alignment divergent_short_long, HMM bear (1.00), vol normal, signals strong_sell (1b/7s/7n)."
   },
   "notes": {
-    "atr_daily": 64.01,
-    "atr_pct_daily": 5.72,
-    "beta_60d": 0.8137,
+    "atr_daily": 66.7036,
+    "atr_pct_daily": null,
+    "beta_60d": 0.8541,
     "beta_benchmark": "EWG",
-    "beta_corr_60d": 0.3988,
-    "btc_corr_high": false,
-    "candlestick": { "name": "", "date": "", "confidence": null },
+    "beta_corr_60d": 0.4282,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "",
+      "date": "",
+      "confidence": null
+    },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -43.11,
-      "ath_price": 1968.82,
+      "current_dd_pct": -37.71,
+      "ath_price": 1968.8203,
       "ath_date": "2025-09-29",
       "max_dd_1y_pct": -43.11,
-      "days_in_dd": 227,
-      "median_recovery_days": 71
+      "days_in_dd": 231,
+      "median_recovery_days": null
     }
   },
-  "entry_plans": [],
-  "global_conditions": [],
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 1218.1545,
+        "max": 1225.4855
+      },
+      "stop": {
+        "price": 1126.3447,
+        "basis": "fallback_pivot_camarilla_s1",
+        "distance_pct": -7.81
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 1653.1678,
+          "basis": "next_resistance",
+          "rr": 4.52
+        },
+        {
+          "level": 2,
+          "price": 2193.3891,
+          "basis": "fib_extension_1272",
+          "rr": 10.18
+        },
+        {
+          "level": 3,
+          "price": 2479.0537,
+          "basis": "fib_extension_1618",
+          "rr": 13.17
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_s1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 1232.211,
+        "max": 1237.1349
+      },
+      "stop": {
+        "price": 1197.6282,
+        "basis": "fallback_pivot_camarilla_r1",
+        "distance_pct": -3.0
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 1653.1678,
+          "basis": "next_resistance",
+          "rr": 11.3
+        },
+        {
+          "level": 2,
+          "price": 2193.3891,
+          "basis": "fib_extension_1272",
+          "rr": 25.88
+        },
+        {
+          "level": 3,
+          "price": 2479.0537,
+          "basis": "fib_extension_1618",
+          "rr": 33.59
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 1128.7411,
+        "max": 1151.6596
+      },
+      "stop": {
+        "price": 1045.8746,
+        "basis": "fallback_pivot_classical_s3",
+        "distance_pct": -8.27
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 1653.1678,
+          "basis": "next_resistance",
+          "rr": 5.44
+        },
+        {
+          "level": 2,
+          "price": 2193.3891,
+          "basis": "fib_extension_1272",
+          "rr": 11.17
+        },
+        {
+          "level": 3,
+          "price": 2479.0537,
+          "basis": "fib_extension_1618",
+          "rr": 14.19
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_classical_s3. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=2<4",
+  "global_conditions": [
+    {
+      "id": "session_eu_xetra_open",
+      "type": "session_window",
+      "params": {
+        "session": "eu_xetra_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
   "invalidation": {
-    "price": 1099.20,
-    "rule": "if close_daily <= 1099.20 -> rupture swing low 13/05, poursuite cascade baissière. Pas de plan actif à invalider, ce niveau sert de référence pour décider si construction d'une base s'amorce (close > 1099 sur 5+ sessions) ou non."
+    "price": 1035.4159,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

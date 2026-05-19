@@ -2,176 +2,219 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-05-15T08:00:00Z",
-    "generated_by": "claude_equity_ta@2.0",
-    "trust_phase": 2,
-    "valid_from": "2026-05-15T08:00:00Z",
-    "valid_until": "2026-05-17T08:00:00Z",
-    "source_precomputed": "https://anacoluthesophistiquee.github.io/ohlcv-snapshots/SMCI_precomputed.min.json"
+    "generated_at": "2026-05-19T10:45:10Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-05-20T08:00:00Z",
+    "valid_until": "2026-05-20T21:00:00Z",
+    "source_precomputed": "SMCI_precomputed.json"
   },
   "context": {
-    "last_price": 33.03,
-    "currency": "USD",
+    "last_price": 30.85,
     "ta_score": {
-      "value": 4,
+      "value": 5,
       "max": 10,
-      "label": "neutral, momentum vs résistance"
+      "label": "neutral"
     },
-    "alignment_flag": "triple_bullish",
+    "alignment_flag": "divergent_short_long",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.7567,
-      "caveat": "expected duration 4 jours (très courte) — régime transitoire"
+      "probability": 0.6732,
+      "expected_duration_days": 3.06
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 8,
-      "sell": 1,
-      "neutral": 7,
-      "verdict": "neutral_to_bullish"
+      "buy": 5,
+      "sell": 2,
+      "neutral": 8,
+      "total": 15,
+      "verdict": "neutral"
     },
-    "relative_strength": {
-      "benchmark": "IWM",
-      "perf_3m_relative_pct": -1.25,
-      "ratio_trend_60d": "falling",
-      "z_score": 0.61
+    "mean_reversion_score": {
+      "setup": "rsi_50-60_dist_ma20_+2_+5",
+      "win_rate": 0.75,
+      "sample_size": 20,
+      "median_bounce_pct": 5.61,
+      "confidence": "medium"
     },
-    "overextension_classification": "stretched_up",
-    "divergences_count": 2,
-    "narrative_short": "Momentum positif vs résistance technique structurelle (38) ; double-top forming + divergence = setup ambigu. Plan B privilégié : LVN 33.27 juste au-dessus du prix actuel rend le Plan A risqué (entry 32.40 peut se faire emporter en gap ouverture lundi). Le double-top forming sur 33.57 + résistance strong 38.0"
+    "narrative_short": "TA score 5/10 (neutral), alignment divergent_short_long, HMM bull (0.67), vol normal, signals neutral (5b/2s/8n)."
+  },
+  "notes": {
+    "atr_daily": 2.3193,
+    "atr_pct_daily": null,
+    "beta_60d": 2.7728,
+    "beta_benchmark": "IWM",
+    "beta_corr_60d": 0.5512,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "hammer",
+      "date": "2026-05-18",
+      "confidence": 0.764
+    },
+    "divergences": [
+      {
+        "indicator": "rsi",
+        "type": "bearish",
+        "confidence": 1.0,
+        "bars_ago": 6,
+        "at_price": null
+      },
+      {
+        "indicator": "macd_hist",
+        "type": "bearish",
+        "confidence": 1.0,
+        "bars_ago": 6,
+        "at_price": null
+      }
+    ],
+    "drawdown": {
+      "current_dd_pct": -49.18,
+      "ath_price": 60.71,
+      "ath_date": "2025-07-30",
+      "max_dd_1y_pct": -66.18,
+      "days_in_dd": 292,
+      "median_recovery_days": null
+    }
   },
   "entry_plans": [
     {
       "id": "A",
       "type": "bounce_support",
-      "priority": 2,
-      "side": "long",
-      "entry_zone": {
-        "min": 32.4,
-        "max": 32.8
-      },
-      "entry_confluence": {
-        "stars": 3,
-        "stars_display": "★★★☆☆",
-        "signals_count": 3,
-        "signals": [
-          "Camarilla S2-S3 (32.40-32.61)",
-          "VPVR POC zone (32.15)",
-          "Bullish engulfing low (31.52) tenu"
-        ]
-      },
-      "stop": {
-        "price": 31.4,
-        "basis": "swing+ATR",
-        "distance_pct": -3.68
-      },
-      "targets": [
-        {
-          "level": 1,
-          "price": 33.5,
-          "basis": "R3 Camarilla (33.66) + LVN 33.27 traversée",
-          "rr": 0.75,
-          "scale_out_pct": 50
-        },
-        {
-          "level": 2,
-          "price": 34.4,
-          "basis": "VPVR VAH",
-          "rr": 1.5,
-          "scale_out_pct": 30
-        },
-        {
-          "level": 3,
-          "price": 35.5,
-          "basis": "Approche Fib_382 + MA200 (35.73)",
-          "rr": 2.42,
-          "scale_out_pct": 20
-        }
-      ],
-      "preferred_target": 2,
-      "conditions": [
-        "volume_ok",
-        "no_event_2h",
-        "no_double_top_print"
-      ],
-      "max_budget_pct": 20,
-      "rationale": "Plan A alternatif (horizon intraday)"
-    },
-    {
-      "id": "B",
-      "type": "retracement",
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 29.8,
-        "max": 30.5
-      },
-      "entry_confluence": {
-        "stars": 4,
-        "stars_display": "★★★★☆",
-        "signals_count": 3,
-        "signals": [
-          "MA20 (29.87)",
-          "EMA20 (30.31)",
-          "Fib 0.236 swing 22-58 (30.47)"
-        ]
+        "min": 30.099,
+        "max": 30.3356
       },
       "stop": {
-        "price": 28.5,
-        "basis": "swing+ATR",
-        "distance_pct": -5.47
+        "price": 27.3711,
+        "basis": "atr_below_confluence_support",
+        "distance_pct": -9.42
       },
       "targets": [
         {
           "level": 1,
-          "price": 33.5,
-          "basis": "Retour au prix actuel + LVN traversée",
-          "rr": 2.03,
-          "scale_out_pct": 30
+          "price": 34.3995,
+          "basis": "vpvr_vah",
+          "rr": 1.47
         },
         {
           "level": 2,
-          "price": 35.73,
-          "basis": "Confluence forte Fib_382 + BB_upper + MA200 (10.5 strength)",
-          "rr": 3.38,
-          "scale_out_pct": 40
+          "price": 56.5267,
+          "basis": "resistance_2",
+          "rr": 9.24
         },
         {
           "level": 3,
-          "price": 38.02,
-          "basis": "Résistance VERY STRONG (27.6 touches !) — verrou structurel",
-          "rr": 4.77,
-          "scale_out_pct": 30
+          "price": 62.36,
+          "basis": "resistance_3",
+          "rr": 11.29
         }
       ],
-      "preferred_target": 2,
+      "preferred_target": 1,
       "conditions": [
-        "pullback_to_zone"
+        "session_us_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Plan B privilégié : LVN 33.27 juste au-dessus du prix actuel rend le Plan A risqué (entry 32.40 peut se faire emporter en gap ouverture lundi). Le double-top forming sur 33.57 + résistance strong 38.02 limitent fortement le upside intraday. Le retracement vers MA20+Fib_236 (29.87-30.47) est crédible et offre R/R 3.38 sur T2 (Fib_382 35.73, qui est le verrou technique réel) — meilleur trade asymétrique"
-    }
-  ],
-  "global_conditions": [
-    {
-      "id": "macro_briefing_not_provided",
-      "type": "manual_telegram_ack",
-      "params": {
-        "note": "Briefing macro absent au moment de l'analyse — vérifier régime jour J avant exécution"
-      },
-      "verifiable_by": "manuel_telegram_ack"
+      "rationale": "Confluence support MA20 + FIB_236 (strength 5.0). Bounce mecanique."
     },
     {
-      "id": "ibkr_price_check",
-      "type": "manual_telegram_ack",
-      "params": {
-        "note": "Vérifier prix IBKR vs $33.03 (clôture 2026-05-14 22:00 CEST)"
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 31.041,
+        "max": 31.165
       },
-      "verifiable_by": "manuel_ibkr_check"
+      "stop": {
+        "price": 29.8504,
+        "basis": "fallback_pivot_camarilla_r1",
+        "distance_pct": -4.03
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 34.3995,
+          "basis": "vpvr_vah",
+          "rr": 2.63
+        },
+        {
+          "level": 2,
+          "price": 56.5267,
+          "basis": "resistance_2",
+          "rr": 20.3
+        },
+        {
+          "level": 3,
+          "price": 62.36,
+          "basis": "resistance_3",
+          "rr": 24.95
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 27.6096,
+        "max": 28.1701
+      },
+      "stop": {
+        "price": 24.5511,
+        "basis": "fallback_pivot_classical_s3",
+        "distance_pct": -11.97
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 34.3995,
+          "basis": "vpvr_vah",
+          "rr": 1.95
+        },
+        {
+          "level": 2,
+          "price": 56.5267,
+          "basis": "resistance_2",
+          "rr": 8.58
+        },
+        {
+          "level": 3,
+          "price": 62.36,
+          "basis": "resistance_3",
+          "rr": 10.32
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_classical_s3. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": true,
+  "bot_actionable_reason": "ok",
+  "global_conditions": [
+    {
+      "id": "session_us_open",
+      "type": "session_window",
+      "params": {
+        "session": "us_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
     }
   ],
   "invalidation": {
-    "price": 27.5,
-    "rule": "Close daily < 27.50 (sous MA50 27.81 + low récent) → rupture de la structure haussière, retour probable vers VPVR POC zone basse (22-25)"
+    "price": 24.3056,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
