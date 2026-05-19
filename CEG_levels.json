@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "CEG",
-    "generated_at": "2026-05-19T18:58:42Z",
+    "generated_at": "2026-05-19T19:58:27Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-20T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "CEG_precomputed.json"
   },
   "context": {
-    "last_price": 259.56,
+    "last_price": 261.1,
     "ta_score": {
       "value": 0,
       "max": 10,
@@ -19,14 +19,14 @@
     "alignment_flag": "triple_bearish",
     "hmm_regime": {
       "state": "bear",
-      "probability": 0.9982,
+      "probability": 0.9978,
       "expected_duration_days": 30.0
     },
     "volatility_regime": "normal",
     "signals_counter": {
       "buy": 4,
-      "sell": 9,
-      "neutral": 3,
+      "sell": 8,
+      "neutral": 4,
       "total": 16,
       "verdict": "sell"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": -3.18,
       "confidence": "very_low"
     },
-    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (1.00), vol normal, signals sell (4b/9s/3n)."
+    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (1.00), vol normal, signals sell (4b/8s/4n)."
   },
   "notes": {
     "atr_daily": 13.6667,
     "atr_pct_daily": null,
-    "beta_60d": 0.672,
+    "beta_60d": 0.6646,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.281,
+    "beta_corr_60d": 0.2786,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -68,7 +68,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -35.48,
+      "current_dd_pct": -35.1,
       "ath_price": 402.322,
       "ath_date": "2025-10-15",
       "max_dd_1y_pct": -38.77,
@@ -83,32 +83,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 258.3327,
-        "max": 259.8873
+        "min": 259.8481,
+        "max": 261.4119
       },
       "stop": {
-        "price": 239.06,
+        "price": 240.6,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -7.74
+        "distance_pct": -7.69
       },
       "targets": [
         {
           "level": 1,
           "price": 315.2086,
           "basis": "next_resistance",
-          "rr": 2.8
+          "rr": 2.72
         },
         {
           "level": 2,
           "price": 378.3975,
           "basis": "resistance_2",
-          "rr": 5.95
+          "rr": 5.88
         },
         {
           "level": 3,
           "price": 407.7216,
           "basis": "resistance_3",
-          "rr": 7.41
+          "rr": 7.34
         }
       ],
       "preferred_target": 1,
@@ -135,7 +135,7 @@
       "targets": [
         {
           "level": 1,
-          "price": 294.5816,
+          "price": 294.6124,
           "basis": "next_confluence_resistance",
           "rr": 1.53
         },
