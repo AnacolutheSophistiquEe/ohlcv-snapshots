@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SRT3",
-    "generated_at": "2026-05-19T11:43:57Z",
+    "generated_at": "2026-05-19T11:54:03Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-20T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "SRT3_precomputed.json"
   },
   "context": {
-    "last_price": 220.2,
+    "last_price": 220.0,
     "ta_score": {
       "value": 6,
       "max": 10,
@@ -19,7 +19,7 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.9845,
+      "probability": 0.9838,
       "expected_duration_days": 30.0
     },
     "volatility_regime": "normal",
@@ -53,7 +53,7 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -16.71,
+      "current_dd_pct": -16.79,
       "ath_price": 264.389,
       "ath_date": "2026-01-08",
       "max_dd_1y_pct": -22.5,
@@ -138,11 +138,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 195.2073,
-        "max": 199.1709
+        "min": 195.03,
+        "max": 198.99
       },
       "stop": {
-        "price": 184.7336,
+        "price": 184.5536,
         "basis": "fallback_psych_-10pct",
         "distance_pct": -6.32
       },
@@ -151,19 +151,19 @@
           "level": 1,
           "price": 235.7879,
           "basis": "vpvr_vah",
-          "rr": 3.1
+          "rr": 3.11
         },
         {
           "level": 2,
           "price": 283.9735,
           "basis": "fib_extension_1272",
-          "rr": 6.97
+          "rr": 6.98
         },
         {
           "level": 3,
           "price": 308.8861,
           "basis": "fib_extension_1618",
-          "rr": 8.97
+          "rr": 8.98
         }
       ],
       "preferred_target": 1,
@@ -187,7 +187,7 @@
     }
   ],
   "invalidation": {
-    "price": 182.8863,
+    "price": 182.7081,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
