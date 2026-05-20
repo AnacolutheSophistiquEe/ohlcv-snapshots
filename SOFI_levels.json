@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SOFI",
-    "generated_at": "2026-05-20T18:00:34Z",
+    "generated_at": "2026-05-20T21:42:37Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-21T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "SOFI_precomputed.json"
   },
   "context": {
-    "last_price": 15.68,
+    "last_price": 15.69,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -19,7 +19,7 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.9724,
+      "probability": 0.9725,
       "expected_duration_days": 30.0
     },
     "volatility_regime": "low",
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 0.6846,
     "atr_pct_daily": null,
-    "beta_60d": 1.2879,
+    "beta_60d": 1.2816,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.5185,
+    "beta_corr_60d": 0.5193,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bullish_engulfing",
@@ -53,7 +53,7 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -51.32,
+      "current_dd_pct": -51.29,
       "ath_price": 32.21,
       "ath_date": "2025-11-12",
       "max_dd_1y_pct": -52.96,
@@ -68,11 +68,11 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 15.5731,
-        "max": 15.6669
+        "min": 15.5831,
+        "max": 15.6769
       },
       "stop": {
-        "price": 14.653,
+        "price": 14.663,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -6.19
       },
@@ -81,19 +81,19 @@
           "level": 1,
           "price": 16.0182,
           "basis": "next_resistance",
-          "rr": 0.41
+          "rr": 0.4
         },
         {
           "level": 2,
           "price": 20.398,
           "basis": "resistance_2",
-          "rr": 4.94
+          "rr": 4.93
         },
         {
           "level": 3,
           "price": 23.32,
           "basis": "resistance_3",
-          "rr": 7.96
+          "rr": 7.95
         }
       ],
       "preferred_target": 1,
@@ -109,11 +109,11 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 15.7557,
-        "max": 15.8187
+        "min": 15.7657,
+        "max": 15.8287
       },
       "stop": {
-        "price": 15.3977,
+        "price": 15.4077,
         "basis": "fallback_pivot_camarilla_r1",
         "distance_pct": -2.47
       },
@@ -122,19 +122,19 @@
           "level": 1,
           "price": 16.0182,
           "basis": "next_resistance",
-          "rr": 0.59
+          "rr": 0.57
         },
         {
           "level": 2,
           "price": 20.398,
           "basis": "resistance_2",
-          "rr": 11.84
+          "rr": 11.81
         },
         {
           "level": 3,
           "price": 23.32,
           "basis": "resistance_3",
-          "rr": 19.34
+          "rr": 19.31
         }
       ],
       "preferred_target": 1,
@@ -150,32 +150,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 14.3219,
-        "max": 14.6127
+        "min": 14.3318,
+        "max": 14.6227
       },
       "stop": {
-        "price": 13.513,
+        "price": 13.523,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -6.6
+        "distance_pct": -6.59
       },
       "targets": [
         {
           "level": 1,
           "price": 16.0182,
           "basis": "next_resistance",
-          "rr": 1.63
+          "rr": 1.61
         },
         {
           "level": 2,
           "price": 20.398,
           "basis": "resistance_2",
-          "rr": 6.21
+          "rr": 6.2
         },
         {
           "level": 3,
           "price": 23.32,
           "basis": "resistance_3",
-          "rr": 9.28
+          "rr": 9.27
         }
       ],
       "preferred_target": 1,
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 13.3779,
+    "price": 13.3878,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMR",
-    "generated_at": "2026-05-20T18:00:34Z",
+    "generated_at": "2026-05-20T21:42:37Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-21T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "SMR_precomputed.json"
   },
   "context": {
-    "last_price": 10.515,
+    "last_price": 10.39,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -19,14 +19,14 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.771,
-      "expected_duration_days": 4.37
+      "probability": 0.8612,
+      "expected_duration_days": 7.2
     },
     "volatility_regime": "low",
     "signals_counter": {
-      "buy": 1,
+      "buy": 3,
       "sell": 5,
-      "neutral": 9,
+      "neutral": 7,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 3.0,
       "confidence": "high"
     },
-    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM sideways (0.77), vol low, signals neutral (1b/5s/9n)."
+    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM sideways (0.86), vol low, signals neutral (3b/5s/7n)."
   },
   "notes": {
     "atr_daily": 1.0525,
     "atr_pct_daily": null,
-    "beta_60d": 2.7347,
+    "beta_60d": 2.685,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.6328,
+    "beta_corr_60d": 0.6271,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bullish_engulfing",
@@ -53,7 +53,7 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -80.32,
+      "current_dd_pct": -80.55,
       "ath_price": 53.43,
       "ath_date": "2025-10-15",
       "max_dd_1y_pct": -82.86,
@@ -68,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 10.1801,
+        "min": 10.1517,
         "max": 10.5053
       },
       "stop": {
         "price": 8.7447,
         "basis": "sr_below_confluence_support",
-        "distance_pct": -15.45
+        "distance_pct": -15.33
       },
       "targets": [
         {
           "level": 1,
           "price": 12.7655,
           "basis": "next_resistance",
-          "rr": 1.52
+          "rr": 1.54
         },
         {
           "level": 2,
           "price": 16.959,
           "basis": "resistance_2",
-          "rr": 4.14
+          "rr": 4.19
         },
         {
           "level": 3,
           "price": 22.2552,
           "basis": "resistance_3",
-          "rr": 7.45
+          "rr": 7.53
         }
       ],
       "preferred_target": 1,
@@ -113,9 +113,9 @@
         "max": 12.0935
       },
       "stop": {
-        "price": 11.4249,
+        "price": 11.4224,
         "basis": "below_broken_resistance",
-        "distance_pct": -5.34
+        "distance_pct": -5.36
       },
       "targets": [
         {
@@ -128,13 +128,13 @@
           "level": 2,
           "price": 19.9286,
           "basis": "fib_236",
-          "rr": 12.19
+          "rr": 12.15
         },
         {
           "level": 3,
           "price": 26.3307,
           "basis": "fib_382",
-          "rr": 22.13
+          "rr": 22.04
         }
       ],
       "preferred_target": 1,
