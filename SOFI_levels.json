@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SOFI",
-    "generated_at": "2026-05-20T04:07:36Z",
+    "generated_at": "2026-05-20T18:00:34Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-21T08:00:00Z",
@@ -10,41 +10,41 @@
     "source_precomputed": "SOFI_precomputed.json"
   },
   "context": {
-    "last_price": 15.23,
+    "last_price": 15.68,
     "ta_score": {
-      "value": 2,
+      "value": 3,
       "max": 10,
-      "label": "very_bearish"
+      "label": "bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.9205,
-      "expected_duration_days": 12.58
+      "probability": 0.9724,
+      "expected_duration_days": 30.0
     },
     "volatility_regime": "low",
     "signals_counter": {
-      "buy": 2,
+      "buy": 0,
       "sell": 7,
-      "neutral": 6,
+      "neutral": 8,
       "total": 15,
-      "verdict": "strong_sell"
+      "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_40-50_dist_ma20_-10_-5",
-      "win_rate": 0.69,
-      "sample_size": 13,
-      "median_bounce_pct": 0.79,
+      "setup": "rsi_40-50_dist_ma20_-5_-2",
+      "win_rate": 0.6,
+      "sample_size": 20,
+      "median_bounce_pct": 2.57,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bull (0.92), vol low, signals strong_sell (2b/7s/6n)."
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM bull (0.97), vol low, signals neutral (0b/7s/8n)."
   },
   "notes": {
-    "atr_daily": 0.6957,
+    "atr_daily": 0.6846,
     "atr_pct_daily": null,
-    "beta_60d": 1.2909,
+    "beta_60d": 1.2879,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.5128,
+    "beta_corr_60d": 0.5185,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bullish_engulfing",
@@ -53,11 +53,11 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -52.72,
+      "current_dd_pct": -51.32,
       "ath_price": 32.21,
       "ath_date": "2025-11-12",
       "max_dd_1y_pct": -52.96,
-      "days_in_dd": 188,
+      "days_in_dd": 189,
       "median_recovery_days": null
     }
   },
@@ -68,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 15.1145,
-        "max": 15.2055
+        "min": 15.5731,
+        "max": 15.6669
       },
       "stop": {
-        "price": 14.1864,
+        "price": 14.653,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -6.42
+        "distance_pct": -6.19
       },
       "targets": [
         {
           "level": 1,
           "price": 16.0182,
           "basis": "next_resistance",
-          "rr": 0.88
+          "rr": 0.41
         },
         {
           "level": 2,
           "price": 20.398,
           "basis": "resistance_2",
-          "rr": 5.38
+          "rr": 4.94
         },
         {
           "level": 3,
           "price": 23.32,
           "basis": "resistance_3",
-          "rr": 8.38
+          "rr": 7.96
         }
       ],
       "preferred_target": 1,
@@ -109,32 +109,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 16.0342,
-        "max": 16.0983
+        "min": 15.7557,
+        "max": 15.8187
       },
       "stop": {
-        "price": 15.623,
-        "basis": "below_broken_resistance",
-        "distance_pct": -2.76
+        "price": 15.3977,
+        "basis": "fallback_pivot_camarilla_r1",
+        "distance_pct": -2.47
       },
       "targets": [
         {
           "level": 1,
-          "price": 19.0571,
-          "basis": "next_confluence_resistance",
-          "rr": 6.75
+          "price": 16.0182,
+          "basis": "next_resistance",
+          "rr": 0.59
         },
         {
           "level": 2,
-          "price": 19.2373,
-          "basis": "fib_236",
-          "rr": 7.15
+          "price": 20.398,
+          "basis": "resistance_2",
+          "rr": 11.84
         },
         {
           "level": 3,
-          "price": 21.7164,
-          "basis": "fib_382",
-          "rr": 12.75
+          "price": 23.32,
+          "basis": "resistance_3",
+          "rr": 19.34
         }
       ],
       "preferred_target": 1,
@@ -142,7 +142,7 @@
         "session_us_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance VPVR_VAL + S/R_resistance (strength 7.0)."
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
     },
     {
       "id": "C",
@@ -150,32 +150,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 13.9574,
-        "max": 14.2408
+        "min": 14.3219,
+        "max": 14.6127
       },
       "stop": {
-        "price": 13.1264,
+        "price": 13.513,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -6.9
+        "distance_pct": -6.6
       },
       "targets": [
         {
           "level": 1,
           "price": 16.0182,
           "basis": "next_resistance",
-          "rr": 1.97
+          "rr": 1.63
         },
         {
           "level": 2,
           "price": 20.398,
           "basis": "resistance_2",
-          "rr": 6.48
+          "rr": 6.21
         },
         {
           "level": 3,
           "price": 23.32,
           "basis": "resistance_3",
-          "rr": 9.48
+          "rr": 9.28
         }
       ],
       "preferred_target": 1,
@@ -187,7 +187,7 @@
     }
   ],
   "bot_actionable": false,
-  "bot_actionable_reason": "ta_score=2<4",
+  "bot_actionable_reason": "ta_score=3<4",
   "global_conditions": [
     {
       "id": "session_us_open",
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 12.9951,
+    "price": 13.3779,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
