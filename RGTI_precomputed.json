@@ -1,7 +1,7 @@
 {
   "meta": {
     "ticker": "RGTI",
-    "generated_at": "2026-05-21T04:06:52.656012+00:00",
+    "generated_at": "2026-05-21T06:28:23.148344+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1949,7 +1949,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-21T04:06:38.639829+00:00",
+    "generated_at": "2026-05-21T06:28:09.118000+00:00",
     "ticker": "RGTI",
     "horizons_days": {
       "intraday": 7,
@@ -2504,7 +2504,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-21T04:06:32.972146+00:00",
+    "generated_at": "2026-05-21T06:28:04.402624+00:00",
     "ticker": "RGTI",
     "window_sessions": 60,
     "n_observations_aligned": 60,
@@ -2658,7 +2658,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-05-21T04:06:35.113764+00:00",
+    "generated_at": "2026-05-21T06:28:05.848470+00:00",
     "ticker": "RGTI",
     "spot_price": 16.88,
     "expiries_available": [
@@ -2684,60 +2684,46 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.9448,
-      "iv_atm_90d": 0.9448,
+      "iv_atm_30d": null,
+      "iv_atm_90d": null,
       "rv_20d_annualized": 0.9343,
-      "iv_rv_ratio": 1.011,
+      "iv_rv_ratio": null,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -8.105,
-      "label": "low"
+      "skew_25_delta_vol_pts": null,
+      "label": null
     },
     "term_structure": {
       "m1_expiry": "2026-05-22",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 1.1348,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-06-18",
       "m3_days_to_exp": 28,
-      "m3_iv_atm": 0.9448,
-      "ratio_m1_m3": 1.201,
-      "label": "backwardation"
+      "m3_iv_atm": null,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
-    "open_interest_m1": {
-      "expiry": "2026-05-22",
-      "days_to_exp": 1,
-      "put_call_ratio": 0.45,
-      "total_oi_m1": 74041,
-      "largest_call_strike_oi": {
-        "strike": 21.5,
-        "oi": 5066
-      },
-      "largest_put_strike_oi": {
-        "strike": 15.5,
-        "oi": 3410
-      }
-    },
+    "open_interest_m1": null,
     "gex": {
-      "gex_total_usd_per_point": 86898058.0,
-      "gex_label": "positive_stabilizing",
+      "gex_total_usd_per_point": 0.0,
+      "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 17.0,
+      "strike": 5.0,
       "expiry": "2026-05-22",
-      "gap_vs_spot_pct": 0.71
+      "gap_vs_spot_pct": -70.38
     },
     "verdict": {
-      "label": "bullish",
-      "bullish_signals": 3,
+      "label": "neutral",
+      "bullish_signals": 0,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-8.1 pts) — peu de demande de protection",
-        "GEX positif (86.9M$/pt) = MM long gamma stabilisateur",
-        "P/C ratio bas (0.45) — biais call dominant"
+        "max pain 5.00 vs spot 16.88 (-70.4%)"
       ]
     },
     "liquidity_stats": {
@@ -2747,28 +2733,28 @@
       "per_expiry": {
         "2026-05-22": {
           "total_strikes": 110,
-          "liquid_strikes": 20,
-          "filter_ratio_pct": 18.2
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-05-29": {
           "total_strikes": 99,
-          "liquid_strikes": 24,
-          "filter_ratio_pct": 24.2
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-05": {
           "total_strikes": 79,
-          "liquid_strikes": 21,
-          "filter_ratio_pct": 26.6
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 64,
-          "liquid_strikes": 18,
-          "filter_ratio_pct": 28.1
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 68,
-          "liquid_strikes": 24,
-          "filter_ratio_pct": 35.3
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         }
       }
     },
@@ -2776,7 +2762,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-05-21T04:06:37.671991+00:00",
+    "generated_at": "2026-05-21T06:28:08.187570+00:00",
     "ticker": "RGTI",
     "short_interest": {
       "status": "ok",
@@ -2790,7 +2776,7 @@
       "float_shares": 327475981,
       "delta_shares_short_mom_pct": 2.4,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-05-21T04:06:36.237387+00:00"
+      "fetched_at": "2026-05-21T06:28:06.942673+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2846,7 +2832,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 2,
-      "fetched_at": "2026-05-21T04:06:37.670818+00:00"
+      "fetched_at": "2026-05-21T06:28:08.186443+00:00"
     },
     "data_quality": {
       "short_data_available": true,
