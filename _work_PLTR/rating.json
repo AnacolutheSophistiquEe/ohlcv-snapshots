@@ -1,0 +1,67 @@
+{
+  "available": true,
+  "thresholds": {
+    "strong_buy": {
+      "ev_pct_risk_min": 0.5,
+      "p_fill_min": 0.6,
+      "composite_min": 7
+    },
+    "buy": {
+      "ev_pct_risk_min": 0.3,
+      "p_fill_min": 0.5,
+      "composite_min": 5
+    },
+    "neutral": {
+      "ev_pct_risk_min": 0.1,
+      "composite_min": 4
+    },
+    "pass_zero": {
+      "ev_pct_risk_min": 0.0
+    },
+    "strong_pass_negative_ev": {
+      "ev_pct_risk_max": 0.0
+    }
+  },
+  "note": "p_fill non émis par le pipeline (zone d'entrée = skill). Rating tagué `(p_fill_unknown)` si non fourni — l'opérateur doit valider la qualité du fill avant exécution. Skill peut fournir des overrides via stdin/cli (à venir, Phase Skill).",
+  "by_horizon": {
+    "intraday": {
+      "plan_id": "A",
+      "rating": "Strong Pass (negative EV)",
+      "reason": "ev=-0.770 < 0",
+      "inputs": {
+        "ev_pct_risk": -0.7698,
+        "composite_score": 4.0,
+        "p_fill": null,
+        "p_fill_source": "absent"
+      }
+    },
+    "swing": {
+      "plan_id": "B",
+      "rating": "Strong Pass (negative EV)",
+      "reason": "ev=-0.137 < 0",
+      "inputs": {
+        "ev_pct_risk": -0.1371,
+        "composite_score": 4.0,
+        "p_fill": null,
+        "p_fill_source": "absent"
+      }
+    },
+    "deep": {
+      "plan_id": "C",
+      "rating": "Pass (p_fill_unknown)",
+      "reason": "ev=1.474 ≥ 0 mais ne satisfait pas conditions Neutral/Buy/Strong Buy",
+      "inputs": {
+        "ev_pct_risk": 1.4745,
+        "composite_score": 2.0,
+        "p_fill": null,
+        "p_fill_source": "absent"
+      }
+    }
+  },
+  "best_rating": {
+    "plan_id": "C",
+    "horizon": "deep",
+    "rating": "Pass (p_fill_unknown)",
+    "reason": "ev=1.474 ≥ 0 mais ne satisfait pas conditions Neutral/Buy/Strong Buy"
+  }
+}

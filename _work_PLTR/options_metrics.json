@@ -1,0 +1,118 @@
+{
+  "available": true,
+  "generated_at": "2026-05-21T21:39:14.142181+00:00",
+  "ticker": "PLTR",
+  "spot_price": 137.415,
+  "expiries_available": [
+    {
+      "date": "2026-05-22",
+      "days_to_exp": 1
+    },
+    {
+      "date": "2026-05-29",
+      "days_to_exp": 8
+    },
+    {
+      "date": "2026-06-05",
+      "days_to_exp": 15
+    },
+    {
+      "date": "2026-06-12",
+      "days_to_exp": 22
+    },
+    {
+      "date": "2026-06-18",
+      "days_to_exp": 28
+    }
+  ],
+  "iv_metrics": {
+    "iv_atm_30d": 0.458,
+    "iv_atm_90d": 0.458,
+    "rv_20d_annualized": 0.3891,
+    "iv_rv_ratio": 1.177,
+    "iv_rank_1y": null,
+    "iv_percentile_1y": null,
+    "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
+  },
+  "skew": {
+    "skew_25_delta_vol_pts": 0.842,
+    "label": "low"
+  },
+  "term_structure": {
+    "m1_expiry": "2026-05-22",
+    "m1_days_to_exp": 1,
+    "m1_iv_atm": 0.3369,
+    "m3_expiry": "2026-06-18",
+    "m3_days_to_exp": 28,
+    "m3_iv_atm": 0.458,
+    "ratio_m1_m3": 0.7357,
+    "label": "contango_fort"
+  },
+  "open_interest_m1": {
+    "expiry": "2026-05-22",
+    "days_to_exp": 1,
+    "put_call_ratio": 0.555,
+    "total_oi_m1": 343698,
+    "largest_call_strike_oi": {
+      "strike": 143.0,
+      "oi": 23976
+    },
+    "largest_put_strike_oi": {
+      "strike": 80.0,
+      "oi": 17311
+    }
+  },
+  "gex": {
+    "gex_total_usd_per_point": 18445644787.0,
+    "gex_label": "positive_stabilizing",
+    "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
+  },
+  "max_pain": {
+    "strike": 134.0,
+    "expiry": "2026-05-22",
+    "gap_vs_spot_pct": -2.49
+  },
+  "verdict": {
+    "label": "bullish",
+    "bullish_signals": 3,
+    "bearish_signals": 0,
+    "notes": [
+      "skew faible (0.8 pts) — peu de demande de protection",
+      "GEX positif (18445.6M$/pt) = MM long gamma stabilisateur",
+      "P/C ratio bas (0.56) — biais call dominant"
+    ]
+  },
+  "liquidity_stats": {
+    "min_oi_threshold": 50,
+    "max_iv_threshold": 5.0,
+    "max_bidask_spread_pct": 0.3,
+    "per_expiry": {
+      "2026-05-22": {
+        "total_strikes": 172,
+        "liquid_strikes": 61,
+        "filter_ratio_pct": 35.5
+      },
+      "2026-05-29": {
+        "total_strikes": 143,
+        "liquid_strikes": 73,
+        "filter_ratio_pct": 51.0
+      },
+      "2026-06-05": {
+        "total_strikes": 138,
+        "liquid_strikes": 72,
+        "filter_ratio_pct": 52.2
+      },
+      "2026-06-12": {
+        "total_strikes": 128,
+        "liquid_strikes": 80,
+        "filter_ratio_pct": 62.5
+      },
+      "2026-06-18": {
+        "total_strikes": 148,
+        "liquid_strikes": 80,
+        "filter_ratio_pct": 54.1
+      }
+    }
+  },
+  "filters_note": "IV metrics et skew utilisent UNIQUEMENT les options liquides (OI>=50, IV<=500%, spread bid-ask<=30% mid). OI/GEX/max_pain utilisent toutes les options (l'OI compte même si l'option est illiquide). Évite les artefacts d'IV de cotations déconnectées sur les expiries longues."
+}

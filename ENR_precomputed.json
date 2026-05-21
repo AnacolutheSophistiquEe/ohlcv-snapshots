@@ -1,7 +1,7 @@
 {
   "meta": {
     "ticker": "ENR",
-    "generated_at": "2026-05-21T16:39:23.539514+00:00",
+    "generated_at": "2026-05-21T21:37:28.660021+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1469,29 +1469,29 @@
   "relative_strength": {
     "ticker": "ENR",
     "benchmark": "EWG",
-    "n_common_dates": 247,
+    "n_common_dates": 246,
     "relative_perf_pct": {
-      "1M": 2.57,
-      "3M": 7.94,
-      "6M": 58.73,
+      "1M": 1.65,
+      "3M": 7.05,
+      "6M": 57.78,
       "1Y": null
     },
     "perf_breakdown": {
       "1M": {
         "asset": 4.0,
-        "benchmark": 1.43
+        "benchmark": 2.35
       },
       "3M": {
         "asset": 4.63,
-        "benchmark": -3.31
+        "benchmark": -2.43
       },
       "6M": {
         "asset": 62.2,
-        "benchmark": 3.47
+        "benchmark": 4.41
       },
       "1Y": null
     },
-    "z_score_1y_daily_relative": -0.09,
+    "z_score_1y_daily_relative": -0.42,
     "price_ratio_trend_60d": "rising",
     "interpretation": "ratio actif/benchmark en hausse 60d"
   },
@@ -1944,7 +1944,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-21T16:39:07.859010+00:00",
+    "generated_at": "2026-05-21T21:37:14.236035+00:00",
     "ticker": "ENR",
     "horizons_days": {
       "intraday": 7,
@@ -2543,7 +2543,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-21T16:39:04.387064+00:00",
+    "generated_at": "2026-05-21T21:37:10.975609+00:00",
     "ticker": "ENR",
     "window_sessions": 60,
     "n_observations_aligned": 57,
@@ -2705,9 +2705,9 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-05-21T16:39:06.746457+00:00",
+    "generated_at": "2026-05-21T21:37:13.174557+00:00",
     "ticker": "ENR",
-    "spot_price": 16.885,
+    "spot_price": 17.3,
     "expiries_available": [
       {
         "date": "2026-06-18",
@@ -2731,27 +2731,28 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.4837,
-      "iv_atm_90d": 0.55,
+      "iv_atm_30d": 0.522,
+      "iv_atm_90d": 0.522,
       "rv_20d_annualized": 0.4761,
-      "iv_rv_ratio": 1.016,
+      "iv_rv_ratio": 1.096,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": 5.859,
-      "label": "elevated"
+      "skew_25_delta_vol_pts": null,
+      "label": null
     },
     "term_structure": {
       "m1_expiry": "2026-06-18",
       "m1_days_to_exp": 28,
-      "m1_iv_atm": 0.4815,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-12-18",
       "m3_days_to_exp": 211,
-      "m3_iv_atm": 0.4995,
-      "ratio_m1_m3": 0.9638,
-      "label": "contango_leger"
+      "m3_iv_atm": 0.5378,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
     "open_interest_m1": {
       "expiry": "2026-06-18",
@@ -2768,21 +2769,20 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 4237210.0,
+      "gex_total_usd_per_point": 4803269.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
       "strike": 17.5,
       "expiry": "2026-06-18",
-      "gap_vs_spot_pct": 3.64
+      "gap_vs_spot_pct": 1.16
     },
     "verdict": {
-      "label": "neutral",
+      "label": "favorable",
       "bullish_signals": 1,
-      "bearish_signals": 1,
+      "bearish_signals": 0,
       "notes": [
-        "skew put-call élevé (5.9 pts)",
         "P/C ratio bas (0.57) — biais call dominant"
       ]
     },
@@ -2793,8 +2793,8 @@
       "per_expiry": {
         "2026-06-18": {
           "total_strikes": 11,
-          "liquid_strikes": 2,
-          "filter_ratio_pct": 18.2
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-07-17": {
           "total_strikes": 5,
@@ -2808,8 +2808,8 @@
         },
         "2026-11-20": {
           "total_strikes": 14,
-          "liquid_strikes": 0,
-          "filter_ratio_pct": 0.0
+          "liquid_strikes": 1,
+          "filter_ratio_pct": 7.1
         },
         "2026-12-18": {
           "total_strikes": 19,
@@ -2922,9 +2922,9 @@
   },
   "beta_dynamic": {
     "available": true,
-    "beta_60d": 1.4409,
+    "beta_60d": 1.4383,
     "beta_252d": null,
-    "correlation_60d": 0.6662,
+    "correlation_60d": 0.6649,
     "correlation_252d": null,
     "ratio_price_benchmark_trend_60d": "rising"
   },
@@ -10488,13 +10488,13 @@
   },
   "beta_tail": {
     "available": true,
-    "beta_up_days": 1.2154,
-    "beta_down_days": 0.9138,
-    "beta_asymmetry": 0.7519,
-    "n_up_days": 130,
-    "n_down_days": 112,
+    "beta_up_days": 1.2231,
+    "beta_down_days": 0.8707,
+    "beta_asymmetry": 0.7119,
+    "n_up_days": 131,
+    "n_down_days": 110,
     "interpretation": "intermediate",
-    "window_days": 246
+    "window_days": 245
   },
   "anomaly_detection": {
     "available": true,

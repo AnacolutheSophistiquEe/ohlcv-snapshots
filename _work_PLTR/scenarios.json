@@ -1,0 +1,68 @@
+{
+  "available": true,
+  "probabilities": {
+    "bull": 0.9012,
+    "bear": 0.0,
+    "sideways": 0.0988
+  },
+  "probabilities_source": "hmm_regime (déjà normalisées, somme≈1)",
+  "drift_source": "hmm_drift_by_state",
+  "sigma_daily_pct": 2.451,
+  "by_horizon": {
+    "intraday": {
+      "horizon_sessions": 5,
+      "move_band_95_pct": 9.02,
+      "scenarios": {
+        "bull": {
+          "probability": 0.9012,
+          "expected_return_pct": 2.89
+        },
+        "bear": {
+          "probability": 0.0,
+          "expected_return_pct": -6.88
+        },
+        "sideways": {
+          "probability": 0.0988,
+          "expected_return_pct": -0.5
+        }
+      }
+    },
+    "swing": {
+      "horizon_sessions": 21,
+      "move_band_95_pct": 18.48,
+      "scenarios": {
+        "bull": {
+          "probability": 0.9012,
+          "expected_return_pct": 12.69
+        },
+        "bear": {
+          "probability": 0.0,
+          "expected_return_pct": -25.88
+        },
+        "sideways": {
+          "probability": 0.0988,
+          "expected_return_pct": -2.07
+        }
+      }
+    },
+    "deep": {
+      "horizon_sessions": 60,
+      "move_band_95_pct": 31.23,
+      "scenarios": {
+        "bull": {
+          "probability": 0.9012,
+          "expected_return_pct": 40.68
+        },
+        "bear": {
+          "probability": 0.0,
+          "expected_return_pct": -57.5
+        },
+        "sideways": {
+          "probability": 0.0988,
+          "expected_return_pct": -5.79
+        }
+      }
+    }
+  },
+  "note": "squelette probabiliste observe-only : proba = HMM ; expected_return = drift_état composé sur H ; band95 = 1.645·σ·√H. trigger/path/assumption = narratif SKILL. sanity-check vs edge_metrics.p_hit = skill (§9.3)"
+}
