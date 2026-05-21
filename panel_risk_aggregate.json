@@ -1,0 +1,62 @@
+{
+  "available": true,
+  "generated_at": "2026-05-21T00:24:45.868038+00:00",
+  "window_sessions": 57,
+  "tickers_used": [
+    "HOOD",
+    "PLTR",
+    "RGTI",
+    "SMCI",
+    "SMR",
+    "SRT3"
+  ],
+  "tickers_skipped": [],
+  "weights_eur": {
+    "HOOD": 151.52,
+    "PLTR": 274.3,
+    "RGTI": 151.92,
+    "SMCI": 133.84,
+    "SMR": 155.85,
+    "SRT3": 219.6
+  },
+  "total_notional_eur": 1087.03,
+  "capital_total_eur": 2000.0,
+  "var_95": {
+    "method": "gaussian_1d",
+    "z_95": 1.6448536269514722,
+    "sigma_portfolio_daily_eur": 35.43,
+    "value_eur": 58.27,
+    "pct_total_notional": 5.36,
+    "pct_capital": 2.91
+  },
+  "panel_beta_weighted": {},
+  "concentration_flags": [],
+  "high_corr_pairs_in_panel": [
+    {
+      "pair": "RGTI_SMR",
+      "rho": 0.7565,
+      "share_pct": 28.3,
+      "flag": "red"
+    },
+    {
+      "pair": "HOOD_RGTI",
+      "rho": 0.7323,
+      "share_pct": 27.9,
+      "flag": "red"
+    },
+    {
+      "pair": "HOOD_SMR",
+      "rho": 0.6501,
+      "share_pct": 28.3,
+      "flag": "red"
+    }
+  ],
+  "scaling": {
+    "var_threshold_pct": 8.0,
+    "var_ref_metric": "var_95_pct_capital",
+    "scale_factor": 1.0,
+    "scaling_applied": false,
+    "note": "VaR sous le seuil, pas de scaling nécessaire."
+  },
+  "note": "Modèle Gaussien — ne capte pas les queues épaisses. Pour stress, utiliser compute_stress_test.py. Net beta = combinaison linéaire pondérée des betas par ticker × benchmark."
+}
