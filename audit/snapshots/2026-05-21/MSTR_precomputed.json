@@ -1,7 +1,7 @@
 {
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-05-21T04:04:18.492629+00:00",
+    "generated_at": "2026-05-21T06:25:45.955551+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1831,7 +1831,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-21T04:04:05.182723+00:00",
+    "generated_at": "2026-05-21T06:25:31.750015+00:00",
     "ticker": "MSTR",
     "horizons_days": {
       "intraday": 7,
@@ -2400,7 +2400,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-21T04:03:53.208728+00:00",
+    "generated_at": "2026-05-21T06:25:19.834302+00:00",
     "ticker": "MSTR",
     "window_sessions": 60,
     "n_observations_aligned": 60,
@@ -2554,7 +2554,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-05-21T04:03:55.995155+00:00",
+    "generated_at": "2026-05-21T06:25:22.226430+00:00",
     "ticker": "MSTR",
     "spot_price": 165.81,
     "expiries_available": [
@@ -2580,60 +2580,61 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.6589,
-      "iv_atm_90d": 0.6589,
+      "iv_atm_30d": 1.0989,
+      "iv_atm_90d": 1.0989,
       "rv_20d_annualized": 0.648,
-      "iv_rv_ratio": 1.017,
+      "iv_rv_ratio": 1.696,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -2.295,
+      "skew_25_delta_vol_pts": -100.0,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-05-22",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.7496,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-06-18",
       "m3_days_to_exp": 28,
-      "m3_iv_atm": 0.6589,
-      "ratio_m1_m3": 1.1377,
-      "label": "backwardation"
+      "m3_iv_atm": 1.0989,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
     "open_interest_m1": {
       "expiry": "2026-05-22",
       "days_to_exp": 1,
-      "put_call_ratio": 0.514,
-      "total_oi_m1": 380404,
+      "put_call_ratio": 0.0,
+      "total_oi_m1": 44,
       "largest_call_strike_oi": {
-        "strike": 190.0,
-        "oi": 37812
+        "strike": 111.0,
+        "oi": 44
       },
       "largest_put_strike_oi": {
-        "strike": 100.0,
-        "oi": 10471
+        "strike": 35.0,
+        "oi": 0
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 1015941153.0,
+      "gex_total_usd_per_point": 2274141.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 170.0,
+      "strike": 30.0,
       "expiry": "2026-05-22",
-      "gap_vs_spot_pct": 2.53
+      "gap_vs_spot_pct": -81.91
     },
     "verdict": {
       "label": "bullish",
-      "bullish_signals": 3,
+      "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-2.3 pts) — peu de demande de protection",
-        "GEX positif (1015.9M$/pt) = MM long gamma stabilisateur",
-        "P/C ratio bas (0.51) — biais call dominant"
+        "skew faible (-100.0 pts) — peu de demande de protection",
+        "max pain 30.00 vs spot 165.81 (-81.9%)",
+        "P/C ratio bas (0.00) — biais call dominant"
       ]
     },
     "liquidity_stats": {
@@ -2643,28 +2644,28 @@
       "per_expiry": {
         "2026-05-22": {
           "total_strikes": 195,
-          "liquid_strikes": 58,
-          "filter_ratio_pct": 29.7
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-05-29": {
           "total_strikes": 188,
-          "liquid_strikes": 62,
-          "filter_ratio_pct": 33.0
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-05": {
           "total_strikes": 170,
-          "liquid_strikes": 67,
-          "filter_ratio_pct": 39.4
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 133,
-          "liquid_strikes": 57,
-          "filter_ratio_pct": 42.9
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 714,
-          "liquid_strikes": 201,
-          "filter_ratio_pct": 28.2
+          "liquid_strikes": 25,
+          "filter_ratio_pct": 3.5
         }
       }
     },
@@ -2672,7 +2673,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-05-21T04:04:04.229898+00:00",
+    "generated_at": "2026-05-21T06:25:30.737354+00:00",
     "ticker": "MSTR",
     "short_interest": {
       "status": "ok",
@@ -2686,7 +2687,7 @@
       "float_shares": 329999239,
       "delta_shares_short_mom_pct": 13.64,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-05-21T04:03:57.206839+00:00"
+      "fetched_at": "2026-05-21T06:25:23.351044+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2769,7 +2770,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 72,
-      "fetched_at": "2026-05-21T04:04:04.228745+00:00"
+      "fetched_at": "2026-05-21T06:25:30.736311+00:00"
     },
     "data_quality": {
       "short_data_available": true,

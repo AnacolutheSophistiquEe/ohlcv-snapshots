@@ -1,7 +1,7 @@
 {
   "meta": {
     "ticker": "HOOD",
-    "generated_at": "2026-05-21T04:08:50.277644+00:00",
+    "generated_at": "2026-05-21T06:30:28.328152+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1949,7 +1949,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-21T04:08:37.143156+00:00",
+    "generated_at": "2026-05-21T06:30:14.410500+00:00",
     "ticker": "HOOD",
     "horizons_days": {
       "intraday": 7,
@@ -2518,7 +2518,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-21T04:08:25.996390+00:00",
+    "generated_at": "2026-05-21T06:30:02.976199+00:00",
     "ticker": "HOOD",
     "window_sessions": 60,
     "n_observations_aligned": 60,
@@ -2672,7 +2672,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-05-21T04:08:28.112393+00:00",
+    "generated_at": "2026-05-21T06:30:05.238420+00:00",
     "ticker": "HOOD",
     "spot_price": 75.76,
     "expiries_available": [
@@ -2698,60 +2698,46 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.6072,
-      "iv_atm_90d": 0.6072,
+      "iv_atm_30d": null,
+      "iv_atm_90d": null,
       "rv_20d_annualized": 0.7047,
-      "iv_rv_ratio": 0.862,
+      "iv_rv_ratio": null,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -1.489,
-      "label": "low"
+      "skew_25_delta_vol_pts": null,
+      "label": null
     },
     "term_structure": {
       "m1_expiry": "2026-05-22",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.6792,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-06-18",
       "m3_days_to_exp": 28,
-      "m3_iv_atm": 0.6072,
-      "ratio_m1_m3": 1.1186,
-      "label": "backwardation"
+      "m3_iv_atm": 0.0,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
-    "open_interest_m1": {
-      "expiry": "2026-05-22",
-      "days_to_exp": 1,
-      "put_call_ratio": 0.522,
-      "total_oi_m1": 192107,
-      "largest_call_strike_oi": {
-        "strike": 85.0,
-        "oi": 17844
-      },
-      "largest_put_strike_oi": {
-        "strike": 70.0,
-        "oi": 8418
-      }
-    },
+    "open_interest_m1": null,
     "gex": {
-      "gex_total_usd_per_point": 1070590942.0,
+      "gex_total_usd_per_point": 681487.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 77.0,
+      "strike": 25.0,
       "expiry": "2026-05-22",
-      "gap_vs_spot_pct": 1.64
+      "gap_vs_spot_pct": -67.0
     },
     "verdict": {
-      "label": "bullish",
-      "bullish_signals": 3,
+      "label": "neutral",
+      "bullish_signals": 0,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-1.5 pts) — peu de demande de protection",
-        "GEX positif (1070.6M$/pt) = MM long gamma stabilisateur",
-        "P/C ratio bas (0.52) — biais call dominant"
+        "max pain 25.00 vs spot 75.76 (-67.0%)"
       ]
     },
     "liquidity_stats": {
@@ -2761,28 +2747,28 @@
       "per_expiry": {
         "2026-05-22": {
           "total_strikes": 131,
-          "liquid_strikes": 45,
-          "filter_ratio_pct": 34.4
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-05-29": {
           "total_strikes": 114,
-          "liquid_strikes": 51,
-          "filter_ratio_pct": 44.7
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-05": {
           "total_strikes": 108,
-          "liquid_strikes": 42,
-          "filter_ratio_pct": 38.9
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 82,
-          "liquid_strikes": 37,
-          "filter_ratio_pct": 45.1
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 105,
-          "liquid_strikes": 41,
-          "filter_ratio_pct": 39.0
+          "liquid_strikes": 2,
+          "filter_ratio_pct": 1.9
         }
       }
     },
@@ -2790,7 +2776,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-05-21T04:08:36.156708+00:00",
+    "generated_at": "2026-05-21T06:30:13.470835+00:00",
     "ticker": "HOOD",
     "short_interest": {
       "status": "ok",
@@ -2804,7 +2790,7 @@
       "float_shares": 783619501,
       "delta_shares_short_mom_pct": -1.1,
       "squeeze_potential": "low",
-      "fetched_at": "2026-05-21T04:08:29.196761+00:00"
+      "fetched_at": "2026-05-21T06:30:06.365978+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2873,7 +2859,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 43,
-      "fetched_at": "2026-05-21T04:08:36.155631+00:00"
+      "fetched_at": "2026-05-21T06:30:13.469735+00:00"
     },
     "data_quality": {
       "short_data_available": true,
