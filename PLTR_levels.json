@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PLTR",
-    "generated_at": "2026-05-22T16:11:32Z",
+    "generated_at": "2026-05-22T21:43:54Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-25T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "PLTR_precomputed.json"
   },
   "context": {
-    "last_price": 136.555,
+    "last_price": 136.88,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -20,7 +20,7 @@
     "hmm_regime": {
       "state": "bull",
       "probability": 0.9,
-      "expected_duration_days": 17.79
+      "expected_duration_days": 19.2
     },
     "volatility_regime": "low",
     "signals_counter": {
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 5.3467,
     "atr_pct_daily": null,
-    "beta_60d": 0.5011,
+    "beta_60d": 0.5034,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.2201,
+    "beta_corr_60d": 0.221,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -53,7 +53,7 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -34.09,
+      "current_dd_pct": -33.93,
       "ath_price": 207.18,
       "ath_date": "2025-11-03",
       "max_dd_1y_pct": -38.19,
@@ -68,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 135.7116,
-        "max": 136.5284
+        "min": 136.0406,
+        "max": 136.8593
       },
       "stop": {
-        "price": 128.5349,
+        "price": 128.8599,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -5.57
+        "distance_pct": -5.56
       },
       "targets": [
         {
           "level": 1,
           "price": 148.2867,
           "basis": "next_resistance",
-          "rr": 1.6
+          "rr": 1.56
         },
         {
           "level": 2,
           "price": 188.324,
           "basis": "resistance_2",
-          "rr": 6.88
+          "rr": 6.83
         },
         {
           "level": 3,
           "price": 198.88,
           "basis": "resistance_3",
-          "rr": 8.27
+          "rr": 8.23
         }
       ],
       "preferred_target": 1,
@@ -109,11 +109,11 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 145.1817,
-        "max": 145.7619
+        "min": 145.1917,
+        "max": 145.7719
       },
       "stop": {
-        "price": 141.9242,
+        "price": 141.9307,
         "basis": "below_broken_resistance",
         "distance_pct": -2.44
       },
@@ -150,32 +150,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 127.5673,
-        "max": 130.1575
+        "min": 127.784,
+        "max": 130.3786
       },
       "stop": {
-        "price": 121.4899,
+        "price": 121.7099,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -5.72
+        "distance_pct": -5.71
       },
       "targets": [
         {
           "level": 1,
           "price": 148.2867,
           "basis": "next_resistance",
-          "rr": 2.63
+          "rr": 2.61
         },
         {
           "level": 2,
           "price": 188.324,
           "basis": "resistance_2",
-          "rr": 8.07
+          "rr": 8.04
         },
         {
           "level": 3,
           "price": 198.88,
           "basis": "resistance_3",
-          "rr": 9.5
+          "rr": 9.47
         }
       ],
       "preferred_target": 1,
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 120.275,
+    "price": 120.4928,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
