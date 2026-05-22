@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-05-21T21:48:27Z",
+    "generated_at": "2026-05-22T04:09:19Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-22T08:00:00Z",
-    "valid_until": "2026-05-22T21:00:00Z",
+    "valid_from": "2026-05-25T08:00:00Z",
+    "valid_until": "2026-05-25T21:00:00Z",
     "source_precomputed": "SMCI_precomputed.json"
   },
   "context": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 4/10 (neutral), alignment triple_bullish, HMM sideways (1.00), vol normal, signals neutral_to_bullish (7b/2s/7n)."
   },
   "notes": {
-    "atr_daily": 2.4907,
+    "atr_daily": 2.4914,
     "atr_pct_daily": null,
     "beta_60d": 2.7662,
     "beta_benchmark": "IWM",
@@ -87,7 +87,7 @@
         "max": 30.755
       },
       "stop": {
-        "price": 29.7239,
+        "price": 29.7229,
         "basis": "atr_below_confluence_support",
         "distance_pct": -2.69
       },
@@ -102,13 +102,13 @@
           "level": 2,
           "price": 68.7712,
           "basis": "fib_extension_1272",
-          "rr": 46.54
+          "rr": 46.48
         },
         {
           "level": 3,
           "price": 81.6078,
           "basis": "fib_extension_1618",
-          "rr": 62.17
+          "rr": 62.09
         }
       ],
       "preferred_target": 1,
@@ -169,7 +169,7 @@
         "max": 30.2646
       },
       "stop": {
-        "price": 26.3779,
+        "price": 26.3769,
         "basis": "fallback_psych_-10pct",
         "distance_pct": -11.97
       },
@@ -214,7 +214,7 @@
     }
   ],
   "invalidation": {
-    "price": 26.1141,
+    "price": 26.1131,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

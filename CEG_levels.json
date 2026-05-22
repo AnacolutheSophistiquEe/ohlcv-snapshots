@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "CEG",
-    "generated_at": "2026-05-21T21:48:27Z",
+    "generated_at": "2026-05-22T04:09:19Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-22T08:00:00Z",
-    "valid_until": "2026-05-22T21:00:00Z",
+    "valid_from": "2026-05-25T08:00:00Z",
+    "valid_until": "2026-05-25T21:00:00Z",
     "source_precomputed": "CEG_precomputed.json"
   },
   "context": {
@@ -69,7 +69,7 @@
     ],
     "drawdown": {
       "current_dd_pct": -28.95,
-      "ath_price": 402.3219,
+      "ath_price": 402.322,
       "ath_date": "2025-10-15",
       "max_dd_1y_pct": -38.77,
       "days_in_dd": 218,
@@ -169,7 +169,7 @@
         "max": 243.8105
       },
       "stop": {
-        "price": 221.927,
+        "price": 221.9271,
         "basis": "fallback_sr_support",
         "distance_pct": -8.06
       },
@@ -214,7 +214,7 @@
     }
   ],
   "invalidation": {
-    "price": 219.7077,
+    "price": 219.7078,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

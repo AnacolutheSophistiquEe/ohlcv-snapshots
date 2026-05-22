@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PLTR",
-    "generated_at": "2026-05-21T21:48:27Z",
+    "generated_at": "2026-05-22T04:09:19Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-22T08:00:00Z",
-    "valid_until": "2026-05-22T21:00:00Z",
+    "valid_from": "2026-05-25T08:00:00Z",
+    "valid_until": "2026-05-25T21:00:00Z",
     "source_precomputed": "PLTR_precomputed.json"
   },
   "context": {
@@ -19,8 +19,8 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.9012,
-      "expected_duration_days": 10.12
+      "probability": 0.9011,
+      "expected_duration_days": 10.11
     },
     "volatility_regime": "low",
     "signals_counter": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM bull (0.90), vol low, signals neutral (2b/2s/11n)."
   },
   "notes": {
-    "atr_daily": 5.4067,
+    "atr_daily": 5.4074,
     "atr_pct_daily": null,
     "beta_60d": 0.5135,
     "beta_benchmark": "IWM",
@@ -72,7 +72,7 @@
         "max": 137.5414
       },
       "stop": {
-        "price": 129.305,
+        "price": 129.3038,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -5.71
       },
@@ -150,13 +150,13 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 130.6011,
-        "max": 133.2529
+        "min": 130.5913,
+        "max": 133.2429
       },
       "stop": {
-        "price": 124.48,
+        "price": 124.4689,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -5.64
+        "distance_pct": -5.65
       },
       "targets": [
         {
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 123.2352,
+    "price": 123.2242,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
