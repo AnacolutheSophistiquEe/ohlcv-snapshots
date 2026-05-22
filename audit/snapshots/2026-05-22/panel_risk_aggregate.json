@@ -1,33 +1,42 @@
 {
   "available": true,
-  "generated_at": "2026-05-22T07:16:11.443067+00:00",
+  "generated_at": "2026-05-22T16:11:45.240630+00:00",
   "window_sessions": 58,
   "tickers_used": [
-    "EVT",
-    "HOOD",
+    "CEG",
+    "IONQ",
     "PLTR",
+    "RGTI",
     "SMCI"
   ],
   "tickers_skipped": [],
   "weights_eur": {
-    "EVT": 284.48,
-    "HOOD": 151.84,
-    "PLTR": 274.83,
-    "SMCI": 133.84
+    "CEG": 296.57,
+    "IONQ": 129.76,
+    "PLTR": 136.55,
+    "RGTI": 379.05,
+    "SMCI": 141.42
   },
-  "total_notional_eur": 844.99,
+  "total_notional_eur": 1083.35,
   "capital_total_eur": 2000.0,
   "var_95": {
     "method": "gaussian_1d",
     "z_95": 1.6448536269514722,
-    "sigma_portfolio_daily_eur": 26.37,
-    "value_eur": 43.38,
-    "pct_total_notional": 5.13,
-    "pct_capital": 2.17
+    "sigma_portfolio_daily_eur": 43.98,
+    "value_eur": 72.34,
+    "pct_total_notional": 6.68,
+    "pct_capital": 3.62
   },
   "panel_beta_weighted": {},
   "concentration_flags": [],
-  "high_corr_pairs_in_panel": [],
+  "high_corr_pairs_in_panel": [
+    {
+      "pair": "IONQ_RGTI",
+      "rho": 0.8631,
+      "share_pct": 47.0,
+      "flag": "red"
+    }
+  ],
   "scaling": {
     "var_threshold_pct": 8.0,
     "var_ref_metric": "var_95_pct_capital",
