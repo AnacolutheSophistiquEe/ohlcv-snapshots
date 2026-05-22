@@ -1,7 +1,7 @@
 {
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-05-22T04:04:13.308325+00:00",
+    "generated_at": "2026-05-22T06:21:27.602439+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1843,14 +1843,14 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-22T04:04:00.187081+00:00",
+    "generated_at": "2026-05-22T06:21:13.755831+00:00",
     "ticker": "MSTR",
     "horizons_days": {
       "intraday": 7,
       "swing": 30,
       "deep": 90
     },
-    "n_events": 29,
+    "n_events": 31,
     "events": [
       {
         "date": "2026-05-22",
@@ -1915,6 +1915,38 @@
         "impact": "macro_broad",
         "ticker_specific": false,
         "recommendation": null
+      },
+      {
+        "date": "2026-05-28",
+        "type": "macro",
+        "label": "US Initial Jobless Claims (weekly)",
+        "importance": "medium",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+      },
+      {
+        "date": "2026-05-28",
+        "type": "macro",
+        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
+        "importance": "low",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
       },
       {
         "date": "2026-05-28",
@@ -2362,7 +2394,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-22T04:03:48.676354+00:00",
+    "generated_at": "2026-05-22T06:21:02.336625+00:00",
     "ticker": "MSTR",
     "window_sessions": 60,
     "n_observations_aligned": 59,
@@ -2516,7 +2548,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-05-22T04:03:51.114770+00:00",
+    "generated_at": "2026-05-22T06:21:04.982650+00:00",
     "ticker": "MSTR",
     "spot_price": 164.85,
     "expiries_available": [
@@ -2542,60 +2574,61 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.6305,
-      "iv_atm_90d": 0.6305,
+      "iv_atm_30d": 1.1537,
+      "iv_atm_90d": 1.1537,
       "rv_20d_annualized": 0.6346,
-      "iv_rv_ratio": 0.994,
+      "iv_rv_ratio": 1.818,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -1.916,
+      "skew_25_delta_vol_pts": -100.0,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-05-22",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.6865,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-06-18",
       "m3_days_to_exp": 27,
-      "m3_iv_atm": 0.6305,
-      "ratio_m1_m3": 1.0889,
-      "label": "backwardation"
+      "m3_iv_atm": 1.1537,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
     "open_interest_m1": {
       "expiry": "2026-05-22",
       "days_to_exp": 1,
-      "put_call_ratio": 0.509,
-      "total_oi_m1": 382952,
+      "put_call_ratio": 0.0,
+      "total_oi_m1": 44,
       "largest_call_strike_oi": {
-        "strike": 180.0,
-        "oi": 36353
+        "strike": 111.0,
+        "oi": 44
       },
       "largest_put_strike_oi": {
-        "strike": 100.0,
-        "oi": 10465
+        "strike": 35.0,
+        "oi": 0
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 1503309227.0,
+      "gex_total_usd_per_point": 2127053.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 170.0,
+      "strike": 30.0,
       "expiry": "2026-05-22",
-      "gap_vs_spot_pct": 3.12
+      "gap_vs_spot_pct": -81.8
     },
     "verdict": {
       "label": "bullish",
-      "bullish_signals": 3,
+      "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-1.9 pts) — peu de demande de protection",
-        "GEX positif (1503.3M$/pt) = MM long gamma stabilisateur",
-        "P/C ratio bas (0.51) — biais call dominant"
+        "skew faible (-100.0 pts) — peu de demande de protection",
+        "max pain 30.00 vs spot 164.85 (-81.8%)",
+        "P/C ratio bas (0.00) — biais call dominant"
       ]
     },
     "liquidity_stats": {
@@ -2605,28 +2638,28 @@
       "per_expiry": {
         "2026-05-22": {
           "total_strikes": 195,
-          "liquid_strikes": 46,
-          "filter_ratio_pct": 23.6
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-05-29": {
           "total_strikes": 188,
-          "liquid_strikes": 58,
-          "filter_ratio_pct": 30.9
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-05": {
           "total_strikes": 170,
-          "liquid_strikes": 61,
-          "filter_ratio_pct": 35.9
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 133,
-          "liquid_strikes": 48,
-          "filter_ratio_pct": 36.1
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 714,
-          "liquid_strikes": 191,
-          "filter_ratio_pct": 26.8
+          "liquid_strikes": 25,
+          "filter_ratio_pct": 3.5
         }
       }
     },
@@ -2634,7 +2667,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-05-22T04:03:59.302820+00:00",
+    "generated_at": "2026-05-22T06:21:12.747697+00:00",
     "ticker": "MSTR",
     "short_interest": {
       "status": "ok",
@@ -2648,7 +2681,7 @@
       "float_shares": 329999239,
       "delta_shares_short_mom_pct": 13.64,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-05-22T04:03:52.318744+00:00"
+      "fetched_at": "2026-05-22T06:21:06.134067+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2731,7 +2764,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 84,
-      "fetched_at": "2026-05-22T04:03:59.301787+00:00"
+      "fetched_at": "2026-05-22T06:21:12.746623+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -10348,7 +10381,7 @@
   "beta_tail": {
     "available": true,
     "beta_up_days": 1.5475,
-    "beta_down_days": 1.9799,
+    "beta_down_days": 1.9798,
     "beta_asymmetry": 1.2794,
     "n_up_days": 143,
     "n_down_days": 107,

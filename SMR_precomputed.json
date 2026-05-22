@@ -1,7 +1,7 @@
 {
   "meta": {
     "ticker": "SMR",
-    "generated_at": "2026-05-22T04:07:55.600130+00:00",
+    "generated_at": "2026-05-22T06:25:23.333037+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1904,14 +1904,14 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-22T04:07:42.751852+00:00",
+    "generated_at": "2026-05-22T06:25:09.202864+00:00",
     "ticker": "SMR",
     "horizons_days": {
       "intraday": 7,
       "swing": 30,
       "deep": 90
     },
-    "n_events": 29,
+    "n_events": 31,
     "events": [
       {
         "date": "2026-05-22",
@@ -1976,6 +1976,38 @@
         "impact": "macro_broad",
         "ticker_specific": false,
         "recommendation": null
+      },
+      {
+        "date": "2026-05-28",
+        "type": "macro",
+        "label": "US Initial Jobless Claims (weekly)",
+        "importance": "medium",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+      },
+      {
+        "date": "2026-05-28",
+        "type": "macro",
+        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
+        "importance": "low",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
       },
       {
         "date": "2026-05-28",
@@ -2423,7 +2455,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-22T04:07:32.987073+00:00",
+    "generated_at": "2026-05-22T06:24:59.552076+00:00",
     "ticker": "SMR",
     "window_sessions": 60,
     "n_observations_aligned": 59,
@@ -2577,7 +2609,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-05-22T04:07:35.317780+00:00",
+    "generated_at": "2026-05-22T06:25:01.791262+00:00",
     "ticker": "SMR",
     "spot_price": 11.33,
     "expiries_available": [
@@ -2603,59 +2635,46 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.9468,
-      "iv_atm_90d": 0.9468,
+      "iv_atm_30d": null,
+      "iv_atm_90d": null,
       "rv_20d_annualized": 1.0256,
-      "iv_rv_ratio": 0.923,
+      "iv_rv_ratio": null,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -8.399,
-      "label": "low"
+      "skew_25_delta_vol_pts": null,
+      "label": null
     },
     "term_structure": {
       "m1_expiry": "2026-05-22",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 1.1094,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-06-18",
       "m3_days_to_exp": 27,
-      "m3_iv_atm": 0.9468,
-      "ratio_m1_m3": 1.1717,
-      "label": "backwardation"
+      "m3_iv_atm": 0.0,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
-    "open_interest_m1": {
-      "expiry": "2026-05-22",
-      "days_to_exp": 1,
-      "put_call_ratio": 0.676,
-      "total_oi_m1": 55791,
-      "largest_call_strike_oi": {
-        "strike": 10.5,
-        "oi": 6256
-      },
-      "largest_put_strike_oi": {
-        "strike": 10.0,
-        "oi": 4856
-      }
-    },
+    "open_interest_m1": null,
     "gex": {
-      "gex_total_usd_per_point": 66995190.0,
-      "gex_label": "positive_stabilizing",
+      "gex_total_usd_per_point": -20896.0,
+      "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 11.0,
+      "strike": 1.0,
       "expiry": "2026-05-22",
-      "gap_vs_spot_pct": -2.91
+      "gap_vs_spot_pct": -91.17
     },
     "verdict": {
-      "label": "bullish",
-      "bullish_signals": 2,
+      "label": "neutral",
+      "bullish_signals": 0,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-8.4 pts) — peu de demande de protection",
-        "GEX positif (67.0M$/pt) = MM long gamma stabilisateur"
+        "max pain 1.00 vs spot 11.33 (-91.2%)"
       ]
     },
     "liquidity_stats": {
@@ -2665,28 +2684,28 @@
       "per_expiry": {
         "2026-05-22": {
           "total_strikes": 78,
-          "liquid_strikes": 13,
-          "filter_ratio_pct": 16.7
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-05-29": {
           "total_strikes": 66,
-          "liquid_strikes": 17,
-          "filter_ratio_pct": 25.8
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-05": {
           "total_strikes": 68,
-          "liquid_strikes": 18,
-          "filter_ratio_pct": 26.5
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 51,
-          "liquid_strikes": 17,
-          "filter_ratio_pct": 33.3
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 110,
-          "liquid_strikes": 35,
-          "filter_ratio_pct": 31.8
+          "liquid_strikes": 3,
+          "filter_ratio_pct": 2.7
         }
       }
     },
@@ -2694,7 +2713,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-05-22T04:07:41.880479+00:00",
+    "generated_at": "2026-05-22T06:25:08.304106+00:00",
     "ticker": "SMR",
     "short_interest": {
       "status": "ok",
@@ -2708,7 +2727,7 @@
       "float_shares": 339325573,
       "delta_shares_short_mom_pct": 22.24,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-05-22T04:07:36.462768+00:00"
+      "fetched_at": "2026-05-22T06:25:02.949484+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2777,7 +2796,7 @@
         "vesting_exercises_dominant": true
       },
       "all_transactions_count": 26,
-      "fetched_at": "2026-05-22T04:07:41.879487+00:00"
+      "fetched_at": "2026-05-22T06:25:08.303126+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -10367,7 +10386,7 @@
   "beta_tail": {
     "available": true,
     "beta_up_days": 2.6092,
-    "beta_down_days": 3.2458,
+    "beta_down_days": 3.2459,
     "beta_asymmetry": 1.244,
     "n_up_days": 143,
     "n_down_days": 107,

@@ -1,7 +1,7 @@
 {
   "meta": {
     "ticker": "SOFI",
-    "generated_at": "2026-05-22T04:09:15.607716+00:00",
+    "generated_at": "2026-05-22T06:26:48.090935+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1921,14 +1921,14 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-22T04:09:02.696549+00:00",
+    "generated_at": "2026-05-22T06:26:33.439802+00:00",
     "ticker": "SOFI",
     "horizons_days": {
       "intraday": 7,
       "swing": 30,
       "deep": 90
     },
-    "n_events": 29,
+    "n_events": 31,
     "events": [
       {
         "date": "2026-05-22",
@@ -1991,6 +1991,38 @@
           "deep"
         ],
         "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-05-28",
+        "type": "macro",
+        "label": "US Initial Jobless Claims (weekly)",
+        "importance": "medium",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-05-28",
+        "type": "macro",
+        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
+        "importance": "low",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
         "ticker_specific": false,
         "recommendation": null
       },
@@ -2440,7 +2472,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-22T04:08:51.813520+00:00",
+    "generated_at": "2026-05-22T06:26:22.367900+00:00",
     "ticker": "SOFI",
     "window_sessions": 60,
     "n_observations_aligned": 59,
@@ -2594,7 +2626,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-05-22T04:08:54.034546+00:00",
+    "generated_at": "2026-05-22T06:26:24.561677+00:00",
     "ticker": "SOFI",
     "spot_price": 15.65,
     "expiries_available": [
@@ -2620,60 +2652,46 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.5161,
-      "iv_atm_90d": 0.5161,
+      "iv_atm_30d": null,
+      "iv_atm_90d": null,
       "rv_20d_annualized": 0.7119,
-      "iv_rv_ratio": 0.725,
+      "iv_rv_ratio": null,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -1.367,
-      "label": "low"
+      "skew_25_delta_vol_pts": null,
+      "label": null
     },
     "term_structure": {
       "m1_expiry": "2026-05-22",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.5781,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-06-18",
       "m3_days_to_exp": 27,
-      "m3_iv_atm": 0.5161,
-      "ratio_m1_m3": 1.1201,
-      "label": "backwardation"
+      "m3_iv_atm": 0.0,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
-    "open_interest_m1": {
-      "expiry": "2026-05-22",
-      "days_to_exp": 1,
-      "put_call_ratio": 0.532,
-      "total_oi_m1": 317333,
-      "largest_call_strike_oi": {
-        "strike": 16.5,
-        "oi": 43623
-      },
-      "largest_put_strike_oi": {
-        "strike": 15.0,
-        "oi": 38076
-      }
-    },
+    "open_interest_m1": null,
     "gex": {
-      "gex_total_usd_per_point": 482682168.0,
-      "gex_label": "positive_stabilizing",
+      "gex_total_usd_per_point": 0.0,
+      "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 15.5,
+      "strike": 1.0,
       "expiry": "2026-05-22",
-      "gap_vs_spot_pct": -0.96
+      "gap_vs_spot_pct": -93.61
     },
     "verdict": {
-      "label": "bullish",
-      "bullish_signals": 3,
+      "label": "neutral",
+      "bullish_signals": 0,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-1.4 pts) — peu de demande de protection",
-        "GEX positif (482.7M$/pt) = MM long gamma stabilisateur",
-        "P/C ratio bas (0.53) — biais call dominant"
+        "max pain 1.00 vs spot 15.65 (-93.6%)"
       ]
     },
     "liquidity_stats": {
@@ -2683,28 +2701,28 @@
       "per_expiry": {
         "2026-05-22": {
           "total_strikes": 84,
-          "liquid_strikes": 15,
-          "filter_ratio_pct": 17.9
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-05-29": {
           "total_strikes": 63,
-          "liquid_strikes": 23,
-          "filter_ratio_pct": 36.5
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-05": {
           "total_strikes": 61,
-          "liquid_strikes": 29,
-          "filter_ratio_pct": 47.5
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 56,
-          "liquid_strikes": 23,
-          "filter_ratio_pct": 41.1
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 93,
-          "liquid_strikes": 33,
-          "filter_ratio_pct": 35.5
+          "liquid_strikes": 1,
+          "filter_ratio_pct": 1.1
         }
       }
     },
@@ -2712,7 +2730,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-05-22T04:09:01.775009+00:00",
+    "generated_at": "2026-05-22T06:26:32.508074+00:00",
     "ticker": "SOFI",
     "short_interest": {
       "status": "ok",
@@ -2726,7 +2744,7 @@
       "float_shares": 1263128087,
       "delta_shares_short_mom_pct": -2.61,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-05-22T04:08:55.091399+00:00"
+      "fetched_at": "2026-05-22T06:26:25.680932+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2835,7 +2853,7 @@
         "vesting_exercises_dominant": true
       },
       "all_transactions_count": 19,
-      "fetched_at": "2026-05-22T04:09:01.773909+00:00"
+      "fetched_at": "2026-05-22T06:26:32.507013+00:00"
     },
     "data_quality": {
       "short_data_available": true,
