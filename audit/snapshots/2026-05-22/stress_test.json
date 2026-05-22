@@ -1,0 +1,370 @@
+{
+  "available": true,
+  "generated_at": "2026-05-22T04:09:25.381905+00:00",
+  "weights_eur": {
+    "EVT": 156.8,
+    "HOOD": 151.84,
+    "PLTR": 274.83,
+    "SMCI": 133.84,
+    "SRT3": 228.0
+  },
+  "total_notional_eur": 945.31,
+  "capital_total_eur": 2000.0,
+  "periods_tested": [
+    "Lehman_2008",
+    "COVID_Mar_2020",
+    "2022_selloff",
+    "Q4_2018_Powell_pivot",
+    "Aug_2024_flash_crash"
+  ],
+  "per_period": [
+    {
+      "status": "ok",
+      "label": "Lehman_2008",
+      "start_date": "2008-09-15",
+      "end_dd_date": "2009-03-09",
+      "end_recovery_date": "2009-09-30",
+      "context": "Lehman bankruptcy → S&P -57%, recovery ~12 mois",
+      "severity": "extreme",
+      "portfolio_initial_eur": 717.31,
+      "portfolio_min_eur": 371.82,
+      "portfolio_final_eur": 691.73,
+      "max_dd_panel_pct": -48.16,
+      "final_pnl_pct": -3.57,
+      "recovery_sessions": 2,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 98.1,
+      "best_ticker": "PLTR",
+      "worst_ticker": "SMCI",
+      "proxies_used": [
+        {
+          "original": "HOOD",
+          "proxy": "IAI"
+        },
+        {
+          "original": "PLTR",
+          "proxy": "IGV"
+        }
+      ],
+      "fetch_errors": [
+        {
+          "ticker": "SRT3",
+          "error": "empty data"
+        }
+      ],
+      "tickers_perf": {
+        "EVT": {
+          "proxy_used": null,
+          "initial_value_eur": 156.8,
+          "min_value_eur": 63.52,
+          "final_value_eur": 147.02,
+          "max_dd_pct": -59.49,
+          "final_pnl_pct": -6.24
+        },
+        "HOOD": {
+          "proxy_used": "IAI",
+          "initial_value_eur": 151.84,
+          "min_value_eur": 76.94,
+          "final_value_eur": 163.53,
+          "max_dd_pct": -49.33,
+          "final_pnl_pct": 7.7
+        },
+        "PLTR": {
+          "proxy_used": "IGV",
+          "initial_value_eur": 274.83,
+          "min_value_eur": 163.8,
+          "final_value_eur": 263.38,
+          "max_dd_pct": -40.4,
+          "final_pnl_pct": -4.17
+        },
+        "SMCI": {
+          "proxy_used": null,
+          "initial_value_eur": 133.84,
+          "min_value_eur": 51.89,
+          "final_value_eur": 117.8,
+          "max_dd_pct": -61.23,
+          "final_pnl_pct": -11.98
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "COVID_Mar_2020",
+      "start_date": "2020-02-19",
+      "end_dd_date": "2020-03-23",
+      "end_recovery_date": "2020-08-18",
+      "context": "COVID-19 shock → S&P -34% en 23 sessions, recovery 5 mois",
+      "severity": "severe_fast",
+      "portfolio_initial_eur": 717.31,
+      "portfolio_min_eur": 444.19,
+      "portfolio_final_eur": 694.73,
+      "max_dd_panel_pct": -38.08,
+      "final_pnl_pct": -3.15,
+      "recovery_sessions": 116,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 98.4,
+      "best_ticker": "PLTR",
+      "worst_ticker": "EVT",
+      "proxies_used": [
+        {
+          "original": "HOOD",
+          "proxy": "IAI"
+        },
+        {
+          "original": "PLTR",
+          "proxy": "IGV"
+        }
+      ],
+      "fetch_errors": [
+        {
+          "ticker": "SRT3",
+          "error": "empty data"
+        }
+      ],
+      "tickers_perf": {
+        "EVT": {
+          "proxy_used": null,
+          "initial_value_eur": 156.8,
+          "min_value_eur": 75.44,
+          "final_value_eur": 127.06,
+          "max_dd_pct": -51.89,
+          "final_pnl_pct": -18.97
+        },
+        "HOOD": {
+          "proxy_used": "IAI",
+          "initial_value_eur": 151.84,
+          "min_value_eur": 91.02,
+          "final_value_eur": 136.4,
+          "max_dd_pct": -40.06,
+          "final_pnl_pct": -10.17
+        },
+        "PLTR": {
+          "proxy_used": "IGV",
+          "initial_value_eur": 274.83,
+          "min_value_eur": 191.57,
+          "final_value_eur": 306.27,
+          "max_dd_pct": -30.3,
+          "final_pnl_pct": 11.44
+        },
+        "SMCI": {
+          "proxy_used": null,
+          "initial_value_eur": 133.84,
+          "min_value_eur": 77.6,
+          "final_value_eur": 125.0,
+          "max_dd_pct": -42.02,
+          "final_pnl_pct": -6.6
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "2022_selloff",
+      "start_date": "2022-01-03",
+      "end_dd_date": "2022-10-12",
+      "end_recovery_date": "2024-01-19",
+      "context": "Fed hikes + inflation → S&P -25% sur 10 mois, recovery 15 mois",
+      "severity": "long",
+      "portfolio_initial_eur": 717.31,
+      "portfolio_min_eur": 418.3,
+      "portfolio_final_eur": 1380.61,
+      "max_dd_panel_pct": -41.68,
+      "final_pnl_pct": 92.47,
+      "recovery_sessions": 336,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 65.5,
+      "best_ticker": "SMCI",
+      "worst_ticker": "PLTR",
+      "proxies_used": [],
+      "fetch_errors": [
+        {
+          "ticker": "SRT3",
+          "error": "empty data"
+        }
+      ],
+      "tickers_perf": {
+        "EVT": {
+          "proxy_used": null,
+          "initial_value_eur": 156.8,
+          "min_value_eur": 114.35,
+          "final_value_eur": 135.81,
+          "max_dd_pct": -27.08,
+          "final_pnl_pct": -13.38
+        },
+        "HOOD": {
+          "proxy_used": null,
+          "initial_value_eur": 151.84,
+          "min_value_eur": 56.73,
+          "final_value_eur": 87.86,
+          "max_dd_pct": -62.64,
+          "final_pnl_pct": -42.14
+        },
+        "PLTR": {
+          "proxy_used": null,
+          "initial_value_eur": 274.83,
+          "min_value_eur": 88.99,
+          "final_value_eur": 243.24,
+          "max_dd_pct": -67.62,
+          "final_pnl_pct": -11.49
+        },
+        "SMCI": {
+          "proxy_used": null,
+          "initial_value_eur": 133.84,
+          "min_value_eur": 102.18,
+          "final_value_eur": 913.7,
+          "max_dd_pct": -23.65,
+          "final_pnl_pct": 582.68
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "Q4_2018_Powell_pivot",
+      "start_date": "2018-10-03",
+      "end_dd_date": "2018-12-24",
+      "end_recovery_date": "2019-04-12",
+      "context": "Powell pivot tardif → S&P -20% en 12 semaines, recovery 4 mois",
+      "severity": "moderate",
+      "portfolio_initial_eur": 717.31,
+      "portfolio_min_eur": 545.89,
+      "portfolio_final_eur": 729.21,
+      "max_dd_panel_pct": -23.9,
+      "final_pnl_pct": 1.66,
+      "recovery_sessions": 121,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 92.4,
+      "best_ticker": "HOOD",
+      "worst_ticker": "SMCI",
+      "proxies_used": [
+        {
+          "original": "HOOD",
+          "proxy": "IAI"
+        },
+        {
+          "original": "PLTR",
+          "proxy": "IGV"
+        }
+      ],
+      "fetch_errors": [
+        {
+          "ticker": "SRT3",
+          "error": "empty data"
+        }
+      ],
+      "tickers_perf": {
+        "EVT": {
+          "proxy_used": null,
+          "initial_value_eur": 156.8,
+          "min_value_eur": 113.68,
+          "final_value_eur": 150.61,
+          "max_dd_pct": -27.5,
+          "final_pnl_pct": -3.95
+        },
+        "HOOD": {
+          "proxy_used": "IAI",
+          "initial_value_eur": 151.84,
+          "min_value_eur": 127.59,
+          "final_value_eur": 148.9,
+          "max_dd_pct": -15.97,
+          "final_pnl_pct": -1.93
+        },
+        "PLTR": {
+          "proxy_used": "IGV",
+          "initial_value_eur": 274.83,
+          "min_value_eur": 216.57,
+          "final_value_eur": 292.11,
+          "max_dd_pct": -21.2,
+          "final_pnl_pct": 6.29
+        },
+        "SMCI": {
+          "proxy_used": null,
+          "initial_value_eur": 133.84,
+          "min_value_eur": 72.86,
+          "final_value_eur": 137.59,
+          "max_dd_pct": -45.56,
+          "final_pnl_pct": 2.8
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "Aug_2024_flash_crash",
+      "start_date": "2024-07-31",
+      "end_dd_date": "2024-08-05",
+      "end_recovery_date": "2024-08-26",
+      "context": "Yen carry unwind → S&P -6% en 3 sessions, recovery 3 semaines",
+      "severity": "mild",
+      "portfolio_initial_eur": 717.31,
+      "portfolio_min_eur": 631.71,
+      "portfolio_final_eur": 755.04,
+      "max_dd_panel_pct": -11.93,
+      "final_pnl_pct": 5.26,
+      "recovery_sessions": 9,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 50.0,
+      "best_ticker": "EVT",
+      "worst_ticker": "SMCI",
+      "proxies_used": [],
+      "fetch_errors": [
+        {
+          "ticker": "SRT3",
+          "error": "empty data"
+        }
+      ],
+      "tickers_perf": {
+        "EVT": {
+          "proxy_used": null,
+          "initial_value_eur": 156.8,
+          "min_value_eur": 148.15,
+          "final_value_eur": 157.36,
+          "max_dd_pct": -5.51,
+          "final_pnl_pct": 0.35
+        },
+        "HOOD": {
+          "proxy_used": null,
+          "initial_value_eur": 151.84,
+          "min_value_eur": 121.21,
+          "final_value_eur": 155.9,
+          "max_dd_pct": -20.18,
+          "final_pnl_pct": 2.67
+        },
+        "PLTR": {
+          "proxy_used": null,
+          "initial_value_eur": 274.83,
+          "min_value_eur": 246.21,
+          "final_value_eur": 324.81,
+          "max_dd_pct": -10.41,
+          "final_pnl_pct": 18.19
+        },
+        "SMCI": {
+          "proxy_used": null,
+          "initial_value_eur": 133.84,
+          "min_value_eur": 93.98,
+          "final_value_eur": 116.98,
+          "max_dd_pct": -29.78,
+          "final_pnl_pct": -12.6
+        }
+      }
+    }
+  ],
+  "panel_summary": {
+    "n_periods_ok": 5,
+    "n_periods_total": 5,
+    "max_dd_avg_pct": -32.75,
+    "max_dd_median_pct": -38.08,
+    "max_dd_worst_pct": -48.16,
+    "recovery_sessions_avg": 117,
+    "recovery_sessions_median": 116,
+    "recovery_sessions_worst": 336,
+    "n_recovered_within_window": 5,
+    "prob_severe_event_5y_base_rate": 0.35,
+    "resilience_score": 4.2
+  },
+  "proxies_legend": {
+    "PLTR": "IGV (used for periods before 2020-09-30)",
+    "HOOD": "IAI (used for periods before 2021-07-29)",
+    "SMCI": "SOXX (used for periods before 2007-03-30)",
+    "SRT3": "^GDAXI (used for periods before 2007-01-01)",
+    "EVT": "^GDAXI (used for periods before 2007-01-01)"
+  },
+  "note": "Backtest avec ETF proxies pour tickers IPO post-période. yfinance pull live — si offline ou erreur, ce ticker est skippé (fetch_errors loggé). Ne tient pas compte du sizing dynamique (hold-and-suffer constant). Stop loss non simulé."
+}
