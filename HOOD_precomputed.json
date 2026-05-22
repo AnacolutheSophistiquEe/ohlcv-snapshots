@@ -1,7 +1,7 @@
 {
   "meta": {
     "ticker": "HOOD",
-    "generated_at": "2026-05-22T06:26:05.131810+00:00",
+    "generated_at": "2026-05-22T07:15:22.922775+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1656,7 +1656,7 @@
     {
       "indicator": "obv",
       "type": "hidden_bearish",
-      "confidence": 0.83,
+      "confidence": 0.34,
       "bars_ago": 8,
       "price_peaks": [
         91.28,
@@ -1947,7 +1947,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-22T06:25:51.350194+00:00",
+    "generated_at": "2026-05-22T07:15:09.149041+00:00",
     "ticker": "HOOD",
     "horizons_days": {
       "intraday": 7,
@@ -2498,7 +2498,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-22T06:25:40.099663+00:00",
+    "generated_at": "2026-05-22T07:14:57.780964+00:00",
     "ticker": "HOOD",
     "window_sessions": 60,
     "n_observations_aligned": 59,
@@ -2652,7 +2652,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-05-22T06:25:42.386021+00:00",
+    "generated_at": "2026-05-22T07:15:00.202437+00:00",
     "ticker": "HOOD",
     "spot_price": 75.92,
     "expiries_available": [
@@ -2756,7 +2756,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-05-22T06:25:50.131647+00:00",
+    "generated_at": "2026-05-22T07:15:08.239780+00:00",
     "ticker": "HOOD",
     "short_interest": {
       "status": "ok",
@@ -2767,10 +2767,10 @@
       "short_pct_outstanding": 0.0367,
       "days_to_cover": 0.95,
       "avg_daily_volume": 28524374,
-      "float_shares": 783619501,
+      "float_shares": 783628506,
       "delta_shares_short_mom_pct": -1.1,
       "squeeze_potential": "low",
-      "fetched_at": "2026-05-22T06:25:43.517916+00:00"
+      "fetched_at": "2026-05-22T07:15:01.436629+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2839,7 +2839,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 43,
-      "fetched_at": "2026-05-22T06:25:50.130135+00:00"
+      "fetched_at": "2026-05-22T07:15:08.238367+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -3118,6 +3118,9 @@
       "sideways": -0.0356
     },
     "mu_effective_pct_daily": -0.0324,
+    "current_state_drift_pct_daily": -0.0356,
+    "directional_bias": "flat",
+    "label_directional_mismatch": false,
     "cluster_means_return": [
       -0.0356,
       0.9573,
@@ -3135,6 +3138,7 @@
     ],
     "sanity_capped_duration": false,
     "sanity_reduced_probability": false,
+    "sanity_capped_probability": false,
     "dist_ma200_pct_at_calc": -27.4819,
     "fit_source": "long_csv",
     "fit_n_bars": 1209
