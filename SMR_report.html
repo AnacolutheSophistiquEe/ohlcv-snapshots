@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<!--
+============================================================================
+  TEMPLATE SQUELETTE V3 — Equity Technical Analyst
+  Schema cible : 2.2
+
+  ARCHITECTURE :
+  Ce fichier est un TEMPLATE A SQUELETTE FIGE. La structure (sections, CSS,
+  scaffolding HTML) vit ici et NE BOUGE PAS. Le skill equity-technical-analyst
+  produit un simple fichier de DONNEES JSON ; un moteur d'assemblage clone les
+  blocs repetables et remplit les placeholders. Le skill ne touche JAMAIS le
+  HTML directement.
+
+  REGLE NON NEGOCIABLE :
+  Ne JAMAIS editer la structure de ce template a la main hors process skill.
+  Toute evolution de structure passe par une revision versionnee du template,
+  pas par le skill ni par une edition ponctuelle.
+
+  CONVENTIONS DE TEMPLATING (interpretees par le moteur d'assemblage) :
+  Les marqueurs sont des commentaires HTML ; ils sont decrits ci-dessous SANS
+  leurs delimiteurs de commentaire pour ne pas refermer cet en-tete. Voir le
+  corps du fichier pour la forme reelle.
+  - ns.chemin entre doubles accolades   placeholder scalaire (minuscules,
+                             points) ; namespaces report.* panel.* calib.*
+                             rigor.* asset.* (dans bloc actif) row.* (ligne)
+  - SKILL:REPEAT asset / SKILL:ENDREPEAT asset      bloc actif clone par actif
+  - SKILL:REPEAT rows:NOM / SKILL:ENDREPEAT rows:NOM  ligne clonee N fois
+  - SKILL:IF drapeau / SKILL:ENDIF drapeau          section conditionnelle
+  - SKILL:BUILD:nom                                 bloc construit par le moteur
+  - Blocs machine du head (id frontmatter / source / ta-synthesis-telegram*) :
+    remplis par le moteur via leur id, contenu vide hors commentaire.
+============================================================================
+-->
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analyse Technique — 2026-05-22</title>
+
+<style>
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #1a1a1a;
+    --color-muted: #6b6b6b;
+    --color-faint: #9ca3af;
+    --color-border: #e5e7eb;
+    --color-border-strong: #d1d5db;
+    --color-th-bg: #f3f4f6;
+    --color-row-alt: #fafafa;
+    --color-strong: #15803d;
+    --color-medium: #b45309;
+    --color-weak: #6b7280;
+    --color-bearish: #b91c1c;
+    --color-bullish: #15803d;
+    --color-neutral: #4b5563;
+    --color-bullish-bg: #ecfdf5;
+    --color-bearish-bg: #fef2f2;
+    --color-warning-bg: #fff7ed;
+    --color-warning-border: #fb923c;
+    --color-info-bg: #eff6ff;
+    --color-info-border: #3b82f6;
+    --color-highlight-bg: #fefce8;
+    --color-highlight-border: #facc15;
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--font-stack); color: var(--color-text); background: var(--color-bg); max-width: 1180px; margin: 1.5em auto; padding: 0 1.5em; line-height: 1.55; font-size: 14.5px; }
+  h1 { font-size: 1.7em; margin: 0 0 0.2em 0; padding-bottom: 0.4em; border-bottom: 2px solid var(--color-text); }
+  h1 + .subtitle { color: var(--color-muted); font-size: 0.95em; margin-bottom: 1.5em; }
+  h2 { font-size: 1.35em; margin-top: 2.2em; padding: 0.4em 0.7em; background: var(--color-th-bg); border-left: 4px solid var(--color-neutral); border-radius: 0 4px 4px 0; }
+  h2.asset-header { background: linear-gradient(90deg, var(--color-th-bg) 0%, transparent 100%); }
+  h2.asset-header.bullish { border-left-color: var(--color-bullish); }
+  h2.asset-header.bearish { border-left-color: var(--color-bearish); }
+  h2.section-panel { border-left-color: var(--color-info-border); background: var(--color-info-bg); }
+  h2.section-calib { border-left-color: #8b5cf6; background: #faf5ff; }
+  h3 { font-size: 1.05em; margin-top: 1.4em; margin-bottom: 0.5em; padding-bottom: 0.2em; border-bottom: 1px solid var(--color-border); color: var(--color-text); }
+  h4 { font-size: 0.98em; margin-top: 1.1em; margin-bottom: 0.4em; color: var(--color-neutral); }
+  table { border-collapse: collapse; width: 100%; margin: 0.7em 0 1em 0; font-size: 0.91em; }
+  th, td { border: 1px solid var(--color-border); padding: 0.45em 0.7em; text-align: left; vertical-align: top; }
+  th { background: var(--color-th-bg); font-weight: 600; font-size: 0.92em; }
+  tbody tr:nth-child(even) { background: var(--color-row-alt); }
+  td.numeric, th.numeric { font-family: var(--font-mono); text-align: right; font-size: 0.95em; }
+  td.center, th.center { text-align: center; }
+  code { font-family: var(--font-mono); background: var(--color-th-bg); padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #0f172a; color: #e2e8f0; padding: 1em 1.2em; border-radius: 6px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; }
+  pre code { background: transparent; color: inherit; padding: 0; }
+  /* Badges & flags */
+  .badge { display: inline-block; padding: 0.15em 0.65em; border-radius: 999px; font-size: 0.82em; font-weight: 600; white-space: nowrap; }
+  .badge.score { background: var(--color-th-bg); color: var(--color-text); }
+  .badge.score-high { background: #dcfce7; color: #166534; }
+  .badge.score-mid { background: #fef3c7; color: #854d0e; }
+  .badge.score-low { background: #fee2e2; color: #991b1b; }
+  .rating { display: inline-block; padding: 0.2em 0.7em; border-radius: 4px; font-size: 0.85em; font-weight: 700; }
+  .rating-strong-buy { background: #15803d; color: white; }
+  .rating-buy { background: #16a34a; color: white; }
+  .rating-neutral { background: #6b7280; color: white; }
+  .rating-pass { background: #f97316; color: white; }
+  .rating-strong-pass { background: #b91c1c; color: white; }
+  .rating-hold { background: #3b82f6; color: white; }
+  .rating-watch { background: #a855f7; color: white; }
+  .strength-strong { color: var(--color-strong); font-weight: 600; }
+  .strength-medium { color: var(--color-medium); font-weight: 600; }
+  .strength-weak { color: var(--color-weak); }
+  .trend-up { color: var(--color-bullish); font-weight: 600; }
+  .trend-down { color: var(--color-bearish); font-weight: 600; }
+  .trend-range { color: var(--color-neutral); }
+  .flag-corr { display: inline-block; padding: 0.1em 0.5em; border-radius: 3px; font-size: 0.82em; font-family: var(--font-mono); }
+  .flag-corr.low { background: #ecfdf5; color: #166534; }
+  .flag-corr.mid { background: #fef3c7; color: #854d0e; }
+  .flag-corr.high { background: #fee2e2; color: #991b1b; font-weight: 700; }
+  .pos { color: var(--color-bullish); }
+  .neg { color: var(--color-bearish); }
+  .muted { color: var(--color-muted); }
+  .small { font-size: 0.86em; }
+  /* Boxes */
+  .box { padding: 0.9em 1.1em; margin: 1em 0; border-radius: 5px; border-left: 4px solid; }
+  .box.warn { background: var(--color-warning-bg); border-left-color: var(--color-warning-border); }
+  .box.info { background: var(--color-info-bg); border-left-color: var(--color-info-border); }
+  .box.success { background: var(--color-bullish-bg); border-left-color: var(--color-bullish); }
+  .box.danger { background: var(--color-bearish-bg); border-left-color: var(--color-bearish); }
+  .box.highlight { background: var(--color-highlight-bg); border-left-color: var(--color-highlight-border); }
+  /* Execution block */
+  .execution-block { background: var(--color-highlight-bg); border: 1px solid var(--color-highlight-border); border-radius: 5px; padding: 1em 1.2em; margin: 1em 0 1.5em 0; }
+  .execution-block.inapplicable { background: #f3f4f6; border-color: var(--color-border-strong); opacity: 0.7; }
+  .execution-block .plan-header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 0.5em; margin-bottom: 0.7em; border-bottom: 2px solid var(--color-highlight-border); }
+  .execution-block .plan-header h4 { margin: 0; font-size: 1.05em; }
+  .execution-block .plan-meta { font-size: 0.85em; color: var(--color-muted); }
+  .plan-grid { display: grid; grid-template-columns: 160px 1fr; gap: 0.3em 1em; margin: 0.6em 0; }
+  .plan-grid .label { font-weight: 600; color: var(--color-muted); font-size: 0.92em; }
+  .plan-grid .value { font-family: var(--font-mono); }
+  .plan-grid .rationale { color: var(--color-muted); font-size: 0.9em; margin-left: 0.5em; }
+  /* TL;DR table */
+  .tldr-table { font-size: 0.92em; }
+  .tldr-table th { background: var(--color-text); color: white; font-size: 0.85em; }
+  .tldr-table td { vertical-align: middle; }
+  .tldr-table .ticker-cell { font-weight: 700; font-size: 1.05em; }
+  /* Diff section */
+  .diff-item { padding: 0.3em 0; border-bottom: 1px dashed var(--color-border); }
+  .diff-item.added::before { content: "+ "; color: var(--color-bullish); font-weight: 700; font-family: var(--font-mono); }
+  .diff-item.removed::before { content: "\2212 "; color: var(--color-bearish); font-weight: 700; font-family: var(--font-mono); }
+  .diff-item.changed::before { content: "~ "; color: var(--color-medium); font-weight: 700; font-family: var(--font-mono); }
+  .diff-item.new::before { content: "\2605 "; color: #8b5cf6; font-weight: 700; }
+  /* Scenarios */
+  .scenarios { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.7em; margin: 0.8em 0; }
+  .scenario { padding: 0.7em 0.9em; border-radius: 5px; border-top: 4px solid; font-size: 0.9em; }
+  .scenario.bull { border-top-color: var(--color-bullish); background: var(--color-bullish-bg); }
+  .scenario.bear { border-top-color: var(--color-bearish); background: var(--color-bearish-bg); }
+  .scenario.side { border-top-color: var(--color-neutral); background: var(--color-th-bg); }
+  .scenario h5 { margin: 0 0 0.3em 0; font-size: 1em; display: flex; justify-content: space-between; }
+  .scenario .prob { font-family: var(--font-mono); font-weight: 700; }
+  /* Sizing block */
+  .sizing-block { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4em 1em; padding: 0.7em 1em; background: #f9fafb; border-radius: 4px; margin: 0.7em 0; font-size: 0.9em; }
+  .sizing-block .sk { color: var(--color-muted); font-weight: 600; }
+  .sizing-block .sv { font-family: var(--font-mono); font-weight: 700; }
+  /* Edge metrics */
+  .edge-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5em; margin: 0.6em 0; }
+  .edge-cell { padding: 0.5em 0.7em; background: #f9fafb; border-radius: 4px; font-size: 0.88em; }
+  .edge-cell .lbl { display: block; color: var(--color-muted); font-size: 0.85em; }
+  .edge-cell .val { display: block; font-family: var(--font-mono); font-weight: 700; font-size: 1.05em; margin-top: 0.15em; }
+  .edge-cell.good .val { color: var(--color-bullish); }
+  .edge-cell.bad .val { color: var(--color-bearish); }
+  .edge-cell.warn .val { color: var(--color-medium); }
+  /* Chart */
+  .chart { max-width: 100%; height: auto; margin: 1em 0 0.3em 0; border: 1px solid var(--color-border); border-radius: 4px; }
+  .chart-caption { text-align: center; color: var(--color-muted); font-size: 0.85em; margin-bottom: 1em; }
+  /* Collapse */
+  details { margin: 0.7em 0; }
+  summary { cursor: pointer; padding: 0.5em 0.8em; background: var(--color-th-bg); border-radius: 4px; font-weight: 600; user-select: none; }
+  summary:hover { background: var(--color-border); }
+  details[open] summary { border-radius: 4px 4px 0 0; }
+  details > *:not(summary) { padding: 0.7em 1em; border: 1px solid var(--color-border); border-top: none; border-radius: 0 0 4px 4px; }
+  /* Footer */
+  .meta-footer { margin-top: 3em; padding: 1em 0; border-top: 1px solid var(--color-border); color: var(--color-muted); font-size: 0.85em; text-align: center; }
+  /* Conviction summary box at the very top */
+  .top-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7em; margin: 1em 0 1.5em 0; }
+  .top-summary .card { padding: 0.8em; border-radius: 6px; background: var(--color-th-bg); }
+  .top-summary .card h5 { margin: 0 0 0.3em 0; font-size: 0.85em; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .top-summary .card .big { font-size: 1.4em; font-weight: 700; font-family: var(--font-mono); }
+  /* Factor decomposition stacked bar */
+  .factor-bar { display: flex; height: 28px; border-radius: 4px; overflow: hidden; margin: 0.6em 0; font-size: 0.75em; font-weight: 600; color: white; }
+  .factor-bar .seg { display: flex; align-items: center; justify-content: center; padding: 0 0.4em; min-width: 0; overflow: hidden; white-space: nowrap; }
+  .factor-bar .seg.market { background: #3b82f6; }
+  .factor-bar .seg.sector { background: #8b5cf6; }
+  .factor-bar .seg.momentum { background: #f59e0b; }
+  .factor-bar .seg.quality { background: #14b8a6; }
+  .factor-bar .seg.value { background: #ef4444; }
+  .factor-bar .seg.size { background: #ec4899; }
+  .factor-bar .seg.idio { background: #15803d; }
+  .factor-legend { display: flex; flex-wrap: wrap; gap: 0.6em; font-size: 0.82em; margin-top: 0.3em; }
+  .factor-legend .item { display: flex; align-items: center; gap: 0.3em; }
+  .factor-legend .swatch { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+  /* Options heatmap mini */
+  .iv-heatmap { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; max-width: 380px; margin: 0.5em 0; }
+  .iv-heatmap .cell { padding: 0.35em; text-align: center; font-family: var(--font-mono); font-size: 0.82em; border-radius: 3px; }
+  .iv-heatmap .cell.skew-high { background: #b91c1c; color: white; }
+  .iv-heatmap .cell.skew-mid { background: #fcd34d; }
+  .iv-heatmap .cell.skew-low { background: #86efac; }
+  .iv-heatmap .cell.skew-neutral { background: var(--color-th-bg); }
+  /* Stress test row colors */
+  tr.stress-severe td { background: #fef2f2; }
+  tr.stress-moderate td { background: #fff7ed; }
+  tr.stress-mild td { background: #fefce8; }
+  /* Insider flow mini-chart */
+  .insider-flow { display: flex; height: 22px; border-radius: 3px; overflow: hidden; margin: 0.4em 0; font-size: 0.75em; }
+  .insider-flow .buy { background: #15803d; color: white; padding: 0 0.4em; display: flex; align-items: center; }
+  .insider-flow .sell { background: #b91c1c; color: white; padding: 0 0.4em; display: flex; align-items: center; }
+  .insider-flow .none { background: var(--color-th-bg); flex: 1; }
+  /* Print-friendly */
+  @media print {
+    body { max-width: none; padding: 0; }
+    h2, h3 { page-break-after: avoid; }
+    .execution-block, .box { page-break-inside: avoid; }
+  }
+
+  /* === V3 additions === */
+  .telegram-block { margin-top: 2.4em; }
+  .telegram-preview { background: #f0f9ff; border: 1px solid var(--color-info-border); border-radius: 6px; padding: 1em 1.2em; white-space: pre-wrap; font-family: var(--font-mono); font-size: 0.86em; line-height: 1.5; margin: 0.6em 0; }
+  .telegram-extra { margin: 0.5em 0; }
+  .post-mortem-section { margin-top: 2.6em; border-top: 2px dashed var(--color-border-strong); padding-top: 0.8em; }
+  .post-mortem-empty { color: var(--color-faint); font-style: italic; }
+  .post-mortem-filled { color: var(--color-text); }
+  .claude-notes { margin-top: 2.4em; background: #faf5ff; border-left: 4px solid #8b5cf6; border-radius: 0 6px 6px 0; padding: 0.6em 1.3em 1em; }
+  .claude-notes h2 { background: none; border-left: none; padding-left: 0; }
+  .claude-notes ul { margin: 0.5em 0; padding-left: 1.3em; }
+  .claude-notes li { margin: 0.35em 0; }
+  .claude-notes .empty { color: var(--color-faint); font-style: italic; }
+  .advisory { color: var(--color-medium); }
+  .advisory-badge { display: inline-block; padding: 0.1em 0.55em; border-radius: 3px; background: var(--color-warning-bg); color: var(--color-medium); font-size: 0.76em; font-weight: 600; }
+  .bracket-degraded { background: var(--color-bearish-bg); border-left: 4px solid var(--color-bearish); padding: 0.7em 1em; border-radius: 0 4px 4px 0; font-size: 0.9em; }
+  .chart-missing { background: var(--color-th-bg); border: 1px dashed var(--color-border-strong); padding: 1.5em; text-align: center; color: var(--color-muted); border-radius: 4px; }
+  .degraded-note { color: var(--color-faint); font-style: italic; font-size: 0.9em; }
+  .banner { padding: 0.7em 1.1em; border-radius: 5px; font-weight: 600; margin: 1em 0; }
+  .banner.stale { background: var(--color-bearish-bg); border: 1px solid var(--color-bearish); color: var(--color-bearish); }
+  .banner.recovered { background: var(--color-info-bg); border: 1px solid var(--color-info-border); }
+</style>
+
+<!-- ===================================================================== -->
+<!-- BLOC MACHINE : Frontmatter YAML (schema 2.2)                            -->
+<!-- Rempli par le moteur d'assemblage via l'id. Ne pas mettre de {{}}.      -->
+<!-- ===================================================================== -->
+<script type="application/yaml" id="frontmatter">
+schema_version: 2.2
+generated_at: 2026-05-22T21:42:25.645990+00:00
+run:
+  ticker_count: 1
+  budget_strict: false
+  source: pipeline_build_report_data
+tickers: [SMR]
+
+</script>
+
+<!-- ===================================================================== -->
+<!-- BLOC MACHINE : Source markdown integrale du rendu chat                  -->
+<!-- Rempli par le moteur d'assemblage via l'id. Ne pas mettre de {{}}.      -->
+<!-- ===================================================================== -->
+<script type="text/markdown" id="source">
+# Analyse TA — SMR
+
+Baseline pipeline (champs mecaniques). Narrative a enrichir par le skill.
+
+- Plan privilegie : Plan A — intraday
+- Composite : 6/10 — conviction Strong Pass (negative EV)
+
+</script>
+
+<!-- ===================================================================== -->
+<!-- BLOC MACHINE : Synthese Telegram (bloc principal + 3 filtres)           -->
+<!-- Remplis par le moteur d'assemblage via les id. Ne pas mettre de {{}}.   -->
+<!-- ===================================================================== -->
+<script type="text/plain" id="ta-synthesis-telegram">
+
+</script>
+<script type="text/plain" id="ta-synthesis-telegram-intraday">
+
+</script>
+<script type="text/plain" id="ta-synthesis-telegram-swing">
+
+</script>
+<script type="text/plain" id="ta-synthesis-telegram-deep">
+
+</script>
+
+</head>
+
+<body>
+
+<!-- =============================================== -->
+<!-- 1. HEADER + TITRE                                -->
+<!-- =============================================== -->
+<h1>Analyse technique — SMR</h1>
+<p class="subtitle">
+  Tickers : SMR &nbsp;&middot;&nbsp; Schema 2.2 &nbsp;&middot;&nbsp; R&eacute;gime h&eacute;rit&eacute; : <code></code> &nbsp;&middot;&nbsp; Capital trading : 2000 € &nbsp;&middot;&nbsp; Tradable : 1600 €
+</p>
+
+<!-- Bandeau donnee perimee (conditionnel) -->
+
+
+
+<!-- =============================================== -->
+<!-- 2. TOP SUMMARY CARDS                             -->
+<!-- =============================================== -->
+<div class="top-summary">
+  <div class="card">
+    <h5>Plans valid&eacute;s</h5>
+    <div class="big">1</div>
+    <div class="small muted">Plan A — intraday</div>
+  </div>
+  <div class="card">
+    <h5>Notional engag&eacute;</h5>
+    <div class="big">0.0</div>
+    <div class="small muted">sizing advisory</div>
+  </div>
+  <div class="card">
+    <h5>VaR 95 % panel</h5>
+    <div class="big neg"></div>
+    <div class="small muted"></div>
+  </div>
+  <div class="card">
+    <h5>EV totale attendue</h5>
+    <div class="big pos">-0.867</div>
+    <div class="small muted">EV/risk du plan privilegie</div>
+  </div>
+</div>
+
+<!-- =============================================== -->
+<!-- 3. TL;DR — Plans privilegies                     -->
+<!-- =============================================== -->
+<h2>TL;DR — Plans privil&eacute;gi&eacute;s</h2>
+<table class="tldr-table">
+  <thead>
+    <tr>
+      <th>Ticker</th>
+      <th>Plan</th>
+      <th class="numeric">Prix</th>
+      <th class="numeric">Composite</th>
+      <th class="numeric">Entry</th>
+      <th class="numeric">Stop</th>
+      <th class="numeric">T1</th>
+      <th class="numeric">Shares</th>
+      <th class="numeric">Notional</th>
+      <th class="numeric">EV/risk</th>
+      <th class="numeric">P(fill)</th>
+      <th class="numeric">P(T1)</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td class="ticker-cell">SMR</td>
+      <td>Plan A — intraday</td>
+      <td class="numeric">11.399999618530272</td>
+      <td class="numeric"><span class="badge score-mid">6</span></td>
+      <td class="numeric">$11.40</td>
+      <td class="numeric">$9.75</td>
+      <td class="numeric">$12.77 · R/R 0.83</td>
+      <td class="numeric">0</td>
+      <td class="numeric">0.0</td>
+      <td class="numeric neg">-0.867</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td><span class="rating rating-strong-pass">Strong Pass (negative EV)</span></td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<div class="box info" style="margin-top: 0.6em;">
+  <strong>Conviction rating mapping appliqu&eacute;</strong> — Strong Buy : EV/risk &ge; 0.50 ET P(fill) &ge; 0.60 ET score &ge; 7. Buy : EV/risk &ge; 0.30. Neutral : &ge; 0.10. Pass : &lt; 0.10. Strong Pass : EV &lt; 0.
+</div>
+
+<!-- =============================================== -->
+<!-- 4. DIFF vs session precedente                    -->
+<!-- =============================================== -->
+<h2>Changements depuis </h2>
+<div>
+  
+</div>
+
+
+
+
+
+<!-- =============================================== -->
+<!-- 7. CALENDRIER EVENEMENTS                         -->
+<!-- =============================================== -->
+<h2>Calendrier d'&eacute;v&eacute;nements (60 sessions glissantes)</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Ticker / March&eacute;</th>
+      <th class="numeric">Sessions</th>
+      <th>Plans impact&eacute;s</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>2026-05-22</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">0</td>
+      <td>macro_broad</td>
+      <td class="small">US University of Michigan Consumer Sentiment (prelim + final)</td>
+    </tr>
+    
+    <tr>
+      <td>2026-05-22</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">0</td>
+      <td>macro_broad</td>
+      <td class="small">German Ifo Business Climate Index</td>
+    </tr>
+    
+    <tr>
+      <td>2026-05-26</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">3</td>
+      <td>macro_broad</td>
+      <td class="small">US Conference Board Consumer Confidence</td>
+    </tr>
+    
+    <tr>
+      <td>2026-05-26</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">3</td>
+      <td>macro_broad</td>
+      <td class="small">SMCI Lawsuit Court Date (idiosyncratique)</td>
+    </tr>
+    
+    <tr>
+      <td>2026-05-28</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">4</td>
+      <td>rates_sensitive</td>
+      <td class="small">US Initial Jobless Claims (weekly)</td>
+    </tr>
+    
+    <tr>
+      <td>2026-05-28</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">4</td>
+      <td>rates_sensitive</td>
+      <td class="small">US Continuing Jobless Claims (weekly, insured unemployment)</td>
+    </tr>
+    
+    <tr>
+      <td>2026-05-28</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">4</td>
+      <td>rates_sensitive</td>
+      <td class="small">US PCE Price Index (headline) — Personal Income & Outlays</td>
+    </tr>
+    
+    <tr>
+      <td>2026-05-28</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">4</td>
+      <td>rates_sensitive</td>
+      <td class="small">US Core PCE Price Index (ex food & energy)</td>
+    </tr>
+    
+    <tr>
+      <td>2026-05-28</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">4</td>
+      <td>macro_broad</td>
+      <td class="small">US Personal Income & Spending</td>
+    </tr>
+    
+    <tr>
+      <td>2026-05-28</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">4</td>
+      <td>macro_broad</td>
+      <td class="small">US GDP (advance / second / third estimate)</td>
+    </tr>
+    
+    <tr>
+      <td>2026-05-28</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">4</td>
+      <td>macro_broad</td>
+      <td class="small">US Durable Goods Orders</td>
+    </tr>
+    
+    <tr>
+      <td>2026-05-28</td>
+      <td>macro</td>
+      <td>macro</td>
+      <td class="numeric">4</td>
+      <td>macro_broad</td>
+      <td class="small">US New Home Sales</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<!-- ================================================================== -->
+<!-- 8. BLOC ACTIF REPETABLE — clone une fois par actif                  -->
+<!-- ================================================================== -->
+
+<section class="asset">
+
+  <h2 class="asset-header bearish">SMR &nbsp;<span class="badge score-mid">Composite 6</span> &nbsp;<span class="rating rating-strong-pass">Strong Pass (negative EV)</span></h2>
+  <p class="subtitle"><code>indeterminate · volatilite low · $11.40</code></p>
+
+  <!-- Chart multi-TF -->
+  
+  <img class="chart" src="https://anacoluthesophistiquee.github.io/ohlcv-snapshots/SMR_chart.png" alt="Chart SMR multi-TF Daily/4h/1h">
+  <div class="chart-caption">Multi-timeframe Daily / 4h / 1h</div>
+  
+  
+
+  <!-- Indicateurs daily -->
+  <h3>Indicateurs daily</h3>
+  <table>
+    <thead><tr><th>Indicateur</th><th class="numeric">Valeur</th><th>Interpr&eacute;tation</th></tr></thead>
+    <tbody>
+      <tr><td>RSI(14)</td><td class="numeric">45.4</td><td>neutre</td></tr>
+      <tr><td>MA20 / MA50 / MA200</td><td class="numeric">MA20 11.86 · MA50 11.45 · MA200 22.98</td><td>prix < MA20</td></tr>
+      <tr><td>EMA20</td><td class="numeric">11.56</td><td></td></tr>
+      <tr><td>ATR(14)</td><td class="numeric">1.1 (16.0e pct 1a)</td><td>volatilite normale</td></tr>
+      <tr><td>BB upper / mid / lower</td><td class="numeric">%B 0.37 · largeur 30.5%</td><td></td></tr>
+      <tr><td>MACD hist &middot; signal cross</td><td class="numeric">hist -0.155</td><td>pas de croisement recent</td></tr>
+      <tr><td>OBV trend &middot; CMF(20)</td><td class="numeric neg">OBV falling · CMF 0.204</td><td>accumulation</td></tr>
+      <tr><td>ADX(14) &middot; +DI &middot; &minus;DI</td><td class="numeric">11.8</td><td>pas de tendance nette</td></tr>
+      <tr><td>Choppiness Index (14)</td><td class="numeric">50.9</td><td>transition</td></tr>
+      <tr><td>Distance MA20 / MA50 / MA200</td><td class="numeric">MA20 -3.9% · MA50 -0.5% · MA200 -50.4%</td><td></td></tr>
+      <tr><td>Volume / MA20</td><td class="numeric">0.92</td><td>volume normal</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Niveaux cles -->
+  <h3>Niveaux cl&eacute;s (avec dispersion intra-cluster)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th class="numeric">Prix center</th>
+        <th class="numeric">&sigma; cluster</th>
+        <th class="numeric">Range</th>
+        <th class="numeric">Touches</th>
+        <th class="numeric">Distance</th>
+        <th>Classification</th>
+        <th>Confluence</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr class="">
+        <td>Support</td>
+        <td class="numeric">8.85</td>
+        <td class="numeric"></td>
+        <td class="numeric">8.85–8.85</td>
+        <td class="numeric">1.0</td>
+        <td class="numeric">-22.4%</td>
+        <td class="strength-weak">single</td>
+        <td class="small"></td>
+      </tr>
+      
+      <tr class="">
+        <td>Resistance</td>
+        <td class="numeric">12.77</td>
+        <td class="numeric">1.448</td>
+        <td class="numeric">10.83–14.2</td>
+        <td class="numeric">6.0</td>
+        <td class="numeric">+12.0%</td>
+        <td class="strength-strong">standard</td>
+        <td class="small"></td>
+      </tr>
+      
+      <tr class="">
+        <td>Resistance</td>
+        <td class="numeric">16.96</td>
+        <td class="numeric"></td>
+        <td class="numeric">16.96–16.96</td>
+        <td class="numeric">1.0</td>
+        <td class="numeric">+48.8%</td>
+        <td class="strength-weak">single</td>
+        <td class="small"></td>
+      </tr>
+      
+      <tr class="">
+        <td>Resistance</td>
+        <td class="numeric">22.26</td>
+        <td class="numeric">1.1</td>
+        <td class="numeric">21.15–23.35</td>
+        <td class="numeric">2.3</td>
+        <td class="numeric">+95.2%</td>
+        <td class="strength-medium">standard</td>
+        <td class="small"></td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <p class="small muted">
+    <strong>Classification</strong> : thin (&sigma; &lt; 1) = niveau pr&eacute;cis &middot; standard (1&ndash;3) &middot; wide (&ge; 3) = zone diffuse.
+    Le SL placement utilise <code>level_center &minus; k &times; &sigma; &minus; 0.3 &times; ATR</code> avec k &isin; {2.0, 1.5, 1.0}.
+  </p>
+
+  <!-- Fibonacci -->
+  <h3>Fibonacci &middot; swing down $9.16 → $45.79</h3>
+  <table>
+    <thead><tr><th>Niveau</th><th class="numeric">Prix</th><th class="numeric">Distance</th><th>Confluence</th></tr></thead>
+    <tbody>
+      
+      <tr><td>Fib 236</td><td class="numeric">17.8</td><td class="numeric">+56.2%</td><td class="small"></td></tr>
+      
+      <tr><td>Fib 382</td><td class="numeric">23.15</td><td class="numeric">+103.1%</td><td class="small"></td></tr>
+      
+      <tr><td>Fib 50</td><td class="numeric">27.48</td><td class="numeric">+141.0%</td><td class="small"></td></tr>
+      
+      <tr><td>Fib 618</td><td class="numeric">31.8</td><td class="numeric">+178.9%</td><td class="small"></td></tr>
+      
+      <tr><td>Fib 786</td><td class="numeric">37.95</td><td class="numeric">+232.9%</td><td class="small"></td></tr>
+      
+    </tbody>
+  </table>
+
+  <!-- Patterns & bougies -->
+  <h3>Patterns &amp; bougies</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Pattern</th>
+        <th>Stade</th>
+        <th class="numeric">Confidence fit</th>
+        <th class="numeric">P(complete) histo</th>
+        <th class="numeric">Avg return post</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>double_bottom</td>
+        <td>forming</td>
+        <td class="numeric">0.83</td>
+        <td class="numeric"></td>
+        <td class="numeric "></td>
+        <td class="small">confidence = qualite du fit, pas une probabilite</td>
+      </tr>
+      
+      <tr>
+        <td>head_and_shoulders</td>
+        <td>forming</td>
+        <td class="numeric">0.67</td>
+        <td class="numeric"></td>
+        <td class="numeric "></td>
+        <td class="small">confidence = qualite du fit, pas une probabilite</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <p class="small muted">
+    <strong>P(complete) historique</strong> calcul&eacute;e sur les 12 derniers mois du ticker (univers fallback &ge; 60 occurrences). Si n &lt; 30 sur le ticker, fallback sur la m&eacute;diane univers &mdash; marqu&eacute; <code>low_confidence</code> dans le YAML.
+  </p>
+
+  <!-- Divergences -->
+  <h3>Divergences d&eacute;tect&eacute;es</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Indicateur</th>
+        <th>Timeframe</th>
+        <th class="numeric">Force</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+
+  <!-- Bougies notables -->
+  <h3>Bougies notables (sessions r&eacute;centes)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Bougie</th>
+        <th class="numeric">Volume / MA20</th>
+        <th>Signal</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+
+  <!-- Setup contrarian & relative strength -->
+  <h3>Setup contrarian &amp; relative strength</h3>
+  
+  <table>
+    <thead><tr><th>M&eacute;trique</th><th class="numeric">Valeur</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>Benchmark</td><td>IWM</td><td>&mdash;</td></tr>
+      <tr><td>perf 1M relative</td><td class="numeric neg">-13.9%</td><td></td></tr>
+      <tr><td>perf 3M relative</td><td class="numeric neg">-19.2%</td><td></td></tr>
+      <tr><td>perf 6M relative</td><td class="numeric neg">-68.8%</td><td></td></tr>
+      <tr><td>z-score 1Y</td><td class="numeric">0.0</td><td></td></tr>
+      <tr><td>ratio trend 60d</td><td class="trend-down">falling</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <!-- Alignement multi-timeframe -->
+  <h3>Alignement multi-timeframe</h3>
+  <p>
+    Drapeau : <span class="rating ">mixed</span> &nbsp;&middot;&nbsp;
+    Daily <span class="trend-range">range</span> &middot; h4 <span class="trend-down">down</span> &middot; h1 <span class="trend-up">up</span> &nbsp;&middot;&nbsp;
+    Score alignement : 1
+  </p>
+
+  <!-- Options-implied data -->
+  <h3>Options-implied data</h3>
+  
+  <table>
+    <thead><tr><th>M&eacute;trique</th><th class="numeric">Valeur</th><th>Interpr&eacute;tation</th></tr></thead>
+    <tbody>
+      <tr><td>IV(30d) ATM</td><td class="numeric">0.954</td><td></td></tr>
+      <tr><td>RV(20d) annualis&eacute;e</td><td class="numeric">1.005</td><td></td></tr>
+      <tr><td>IV / RV ratio</td><td class="numeric">0.949</td><td>IV < RV</td></tr>
+      <tr><td>IV rank (1Y)</td><td class="numeric"></td><td></td></tr>
+      <tr><td>IV skew 25-delta (P &minus; C)</td><td class="numeric">-5.67</td><td>low</td></tr>
+      <tr><td>IV term structure (M1 / M3)</td><td class="numeric">3.556</td><td>backwardation</td></tr>
+      <tr><td>Put / Call OI ratio (M1)</td><td class="numeric">0.606</td><td></td></tr>
+      <tr><td>Gamma Exposure (GEX)</td><td class="numeric">179075775.0</td><td>positive_stabilizing</td></tr>
+      <tr><td>Max pain (2026-05-22)</td><td class="numeric">10.5</td><td>-7.9% vs spot</td></tr>
+    </tbody>
+  </table>
+  <div class="iv-heatmap">
+    <div class="cell ">&minus;20%<br><strong></strong></div>
+    <div class="cell ">&minus;10%<br><strong></strong></div>
+    <div class="cell ">ATM<br><strong>0.954</strong></div>
+    <div class="cell ">+10%<br><strong></strong></div>
+    <div class="cell ">+20%<br><strong></strong></div>
+  </div>
+  <p class="small muted">IV smile par strike relatif &agrave; ATM, expiry M1.</p>
+  <div class="box bull">
+    <strong>Verdict options</strong> — bullish
+  </div>
+  
+  
+
+  <!-- Short interest & insider transactions -->
+  <h3>Short interest &amp; insider transactions</h3>
+  
+  <table>
+    <thead><tr><th>M&eacute;trique</th><th class="numeric">Valeur</th><th>Comparable secteur</th><th>Interpr&eacute;tation</th></tr></thead>
+    <tbody>
+      <tr><td>Short interest (% float)</td><td class="numeric">21.5</td><td class="numeric"></td><td>moderate</td></tr>
+      <tr><td>Days to cover (DTC)</td><td class="numeric">1.81</td><td class="numeric"></td><td></td></tr>
+      <tr><td>&Delta; SI vs M-1</td><td class="numeric pos">+22.2%</td><td>&mdash;</td><td></td></tr>
+      <tr><td>&Delta; SI vs M-3</td><td class="numeric "></td><td>&mdash;</td><td></td></tr>
+      <tr><td>Insider achats (90j)</td><td class="numeric ">0</td><td>&mdash;</td><td></td></tr>
+      <tr><td>Insider ventes (90j)</td><td class="numeric">12</td><td>&mdash;</td><td></td></tr>
+      <tr><td>Net insider flow (90j)</td><td class="numeric neg">$-481610912</td><td>&mdash;</td><td>sell_bias_strong</td></tr>
+    </tbody>
+  </table>
+  <div class="insider-flow">
+    <div class="buy" style="flex: 0 0 %;">achats 90j</div>
+    <div class="sell" style="flex: 0 0 %;">ventes 90j</div>
+  </div>
+  <p class="small muted">&Eacute;chelle proportionnelle au montant. Net flow 90j visible imm&eacute;diatement.</p>
+  <div class="box ">
+    <strong>Verdict short / insider</strong> — sell_bias_strong
+  </div>
+  
+  
+
+  <!-- Microstructure intraday (conditionnel) -->
+  
+
+  <!-- Risk attribution multi-factor -->
+  <h3>Risk attribution multi-factor (60 sessions)</h3>
+  <p class="small muted">D&eacute;composition OLS des log-returns daily sur market / sector / momentum / quality / value / growth / low-vol. R&sup2; du mod&egrave;le indique la part de variance expliqu&eacute;e par les facteurs.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Facteur</th>
+        <th class="numeric">&beta; estim&eacute;</th>
+        <th class="numeric">t-stat</th>
+        <th class="numeric">Contribution return 30j</th>
+        <th>Significativit&eacute;</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr class="">
+        <td>sector</td>
+        <td class="numeric">-0.024</td>
+        <td class="numeric">-0.03</td>
+        <td class="numeric pos">+0.1%</td>
+        <td>ns</td>
+      </tr>
+      
+      <tr class="">
+        <td>value</td>
+        <td class="numeric">1.77</td>
+        <td class="numeric">1.31</td>
+        <td class="numeric pos">+9.2%</td>
+        <td>ns</td>
+      </tr>
+      
+      <tr class="">
+        <td>growth</td>
+        <td class="numeric">2.659</td>
+        <td class="numeric">3.09</td>
+        <td class="numeric pos">+31.4%</td>
+        <td>**</td>
+      </tr>
+      
+      <tr class="">
+        <td>low_vol</td>
+        <td class="numeric">-1.785</td>
+        <td class="numeric">-1.33</td>
+        <td class="numeric neg">-3.3%</td>
+        <td>ns</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <div class="factor-bar">
+    
+    <div class="seg sector" style="flex: 0 0 0.3%;">sector</div>
+    
+    <div class="seg value" style="flex: 0 0 20.0%;">value</div>
+    
+    <div class="seg growth" style="flex: 0 0 68.1%;">growth</div>
+    
+    <div class="seg low_vol" style="flex: 0 0 7.3%;">low_vol</div>
+    
+    <div class="seg idio" style="flex: 0 0 4.3%;">idiosyncratic</div>
+    
+  </div>
+  <div class="factor-legend">
+    
+    <div class="item"><span class="swatch" style="background:sector"></span>sector</div>
+    
+    <div class="item"><span class="swatch" style="background:value"></span>value</div>
+    
+    <div class="item"><span class="swatch" style="background:growth"></span>growth</div>
+    
+    <div class="item"><span class="swatch" style="background:low_vol"></span>low_vol</div>
+    
+    <div class="item"><span class="swatch" style="background:idio"></span>idiosyncratic</div>
+    
+  </div>
+  <div class="box info">
+    <strong>Verdict risk attribution</strong> — R² 0.43 · part idiosyncratique 0.38
+  </div>
+
+  <!-- Score TA decompose par horizon -->
+  <h3>Score TA d&eacute;compos&eacute; par horizon</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Composante</th>
+        <th class="numeric">Plan A intraday</th>
+        <th class="numeric">Plan B swing</th>
+        <th class="numeric">Plan C deep</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr class="">
+        <td>trend</td>
+        <td class="numeric">2.5</td>
+        <td class="numeric">1.5</td>
+        <td class="numeric">1.0</td>
+      </tr>
+      
+      <tr class="">
+        <td>momentum</td>
+        <td class="numeric">2.0</td>
+        <td class="numeric">0.0</td>
+        <td class="numeric">1.5</td>
+      </tr>
+      
+      <tr class="">
+        <td>setup</td>
+        <td class="numeric">0.5</td>
+        <td class="numeric">0.5</td>
+        <td class="numeric">0.5</td>
+      </tr>
+      
+      <tr class="">
+        <td>RR</td>
+        <td class="numeric">1.0</td>
+        <td class="numeric">1.0</td>
+        <td class="numeric">1.0</td>
+      </tr>
+      
+      <tr class="">
+        <td>penalty</td>
+        <td class="numeric">0.0</td>
+        <td class="numeric">0.0</td>
+        <td class="numeric">0.0</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <p>
+    <strong>composite 6/10 (A/intraday) — ta_score brut 3/10 (bearish)</strong> &nbsp;&middot;&nbsp;
+    <span class="small muted">Le rapport met en avant uniquement le plan composite max. Plans B et C restent visibles comme alternatives.</span>
+  </p>
+
+  <!-- Scenarios probabilises -->
+  <h3>Sc&eacute;narios probabilis&eacute;s (intraday)</h3>
+  <div class="scenarios">
+    <div class="scenario bull">
+      <h5>Bull <span class="prob">15.3</span></h5>
+      <p><strong>Trigger</strong> : </p>
+      <p><strong>Path</strong> : </p>
+      <p><strong>Expected return</strong> : <span class="pos"></span></p>
+      <p class="small muted"></p>
+    </div>
+    <div class="scenario bear">
+      <h5>Bear <span class="prob">0.4</span></h5>
+      <p><strong>Trigger</strong> : </p>
+      <p><strong>Path</strong> : </p>
+      <p><strong>Expected return</strong> : <span class="neg"></span></p>
+      <p class="small muted"></p>
+    </div>
+    <div class="scenario side">
+      <h5>Sideways <span class="prob">84.3</span></h5>
+      <p><strong>Trigger</strong> : </p>
+      <p><strong>Path</strong> : </p>
+      <p><strong>Expected return</strong> : <span class=""></span></p>
+      <p class="small muted"></p>
+    </div>
+  </div>
+
+  <!-- Narrative -->
+  <h3>Narrative</h3>
+  <p>[repli pipeline — a enrichir par le skill] SMR : alignement multi-TF 'mixed', RSI daily 45.0, ADX 12.0. Regime HMM 'sideways'.</p>
+  <p>Plan privilegie A (intraday), composite 6/10, conviction 'Strong Pass (negative EV)'.</p>
+  <p></p>
+
+  <!-- Execution block — Plan A privilegie -->
+  <div class="execution-block">
+    <div class="plan-header">
+      <h4>Plan A — intraday &nbsp;<span class="rating ">PRIVIL&Eacute;GI&Eacute;</span></h4>
+      <span class="plan-meta">horizon intraday · entree de reference = dernier close (a affiner par le skill selon le contexte macro)</span>
+    </div>
+
+    <h4>Sizing par conviction</h4>
+    <div class="sizing-block">
+      <span class="sk">Score composite utilis&eacute;</span><span class="sv">3</span>
+      <span class="sk">Allocation pct tradable</span><span class="sv">0.0</span>
+      <span class="sk">Notional target (pre-scaling)</span><span class="sv">0.0</span>
+      <span class="sk">VaR scaling factor</span><span class="sv">1.0</span>
+      <span class="sk">Notional target (post-scaling)</span><span class="sv">0.0</span>
+      <span class="sk">Shares (floor)</span><span class="sv">0</span>
+      <span class="sk">Notional effectif</span><span class="sv">0.0</span>
+      <span class="sk">Hold tolerance drawdown</span><span class="sv">25.0%</span>
+      <span class="sk">Hold tolerance loss</span><span class="sv"></span>
+      <span class="sk">Hold breach price</span><span class="sv"></span>
+      <span class="sk">Recovery estimate (m&eacute;diane histo)</span><span class="sv"></span>
+    </div>
+    <p class="small muted">ADVISORY observe-only : aucun ordre piloté. Grille = hypothèse jusqu'à recalibration M7. Capital 2000 € (réel). Le skill peut re-dériver avec un capital utilisateur.</p>
+
+    <h4>Edge metrics (Monte Carlo + GBM barrier hitting)</h4>
+    <div class="edge-grid">
+      <div class="edge-cell "><span class="lbl">P(fill)</span><span class="val"></span></div>
+      <div class="edge-cell "><span class="lbl">P(T1 vs SL)</span><span class="val"></span></div>
+      <div class="edge-cell "><span class="lbl">P(T2 vs SL)</span><span class="val"></span></div>
+      <div class="edge-cell "><span class="lbl">P(T3 vs SL)</span><span class="val"></span></div>
+      <div class="edge-cell neg"><span class="lbl">EV/share</span><span class="val">$-1.426</span></div>
+      <div class="edge-cell "><span class="lbl">EV total</span><span class="val"></span></div>
+      <div class="edge-cell neg"><span class="lbl">EV/risk</span><span class="val">-0.867</span></div>
+      <div class="edge-cell"><span class="lbl">Costs round-trip</span><span class="val">$0.009</span></div>
+    </div>
+    <p class="small muted">FIGÉ au prix de génération (S0=dernier close daily) — observe-only ; barrière MC horizon fini ; σ par pas = σ daily (pas de ×√h) ; p_fill non émis (zone d'entrée = skill)</p>
+
+    <h4>Plan d'ex&eacute;cution</h4>
+    <div class="plan-grid">
+      <span class="label">Order type</span><span class="value">LMT</span>
+      <span class="label">Entry range</span><span class="value">$11.34–$11.46</span>
+      <span class="label">Entry mid</span><span class="value">$11.40</span>
+      <span class="label">Stop mode</span><span class="value">fixed</span>
+      <span class="label">Stop loss</span><span class="value">$9.75</span>
+      <span class="label">SL rationale</span><span class="rationale">stop atr-based (-14.43%)</span>
+      <span class="label">T1 &middot; scale 50 %</span><span class="value">$12.77 · R/R 0.83</span>
+      <span class="label">T2 &middot; scale 30 %</span><span class="value">$16.96 · R/R 3.37</span>
+      <span class="label">T3 &middot; scale 20 %</span><span class="value">$22.26 · R/R 6.58</span>
+      <span class="label">Time-stop</span><span class="value"></span>
+      <span class="label">GTD limit order</span><span class="value"></span>
+      <span class="label">Activation</span><span class="rationale">entree LMT en attente de touche de zone</span>
+      <span class="label">Invalidation</span><span class="rationale">close sous $9.75</span>
+    </div>
+
+    <details>
+      <summary>Bracket order JSON IBKR (ready-to-paste pour bot R)</summary>
+<pre><code></code></pre>
+    </details>
+    
+    <div class="bracket-degraded">Bracket non &eacute;mis : bracket pipeline absent pour ce plan</div>
+    
+  </div>
+
+  <!-- Plan B alternative -->
+  <details>
+    <summary>Plan B swing 1&ndash;3 semaines (alternative — composite 3)</summary>
+    <div class="execution-block" style="margin: 0;">
+      <div class="plan-grid">
+        
+      </div>
+    </div>
+  </details>
+
+  <!-- Plan C alternative -->
+  <details>
+    <summary>Plan C deep 4&ndash;12 semaines (alternative — composite 4)</summary>
+    <div class="execution-block" style="margin: 0;">
+      <div class="plan-grid">
+        
+      </div>
+    </div>
+  </details>
+
+  <!-- Post-mortem par actif -->
+  <details>
+    <summary>Post-mortem SMR (auto-rempli apr&egrave;s cl&ocirc;ture via predictions_log + OHLCV t&eacute;l&eacute;charg&eacute;es)</summary>
+    <div>
+      <p class="muted">[Sera rempli automatiquement par le module de calibration r&eacute;trospective]</p>
+      <table>
+        <thead><tr><th>Champ</th><th>Valeur post-cl&ocirc;ture</th></tr></thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+</section>
+
+
+
+
+
+
+<!-- =============================================== -->
+<!-- 11. SYNTHESE TELEGRAM VISIBLE                    -->
+<!-- Contenu identique aux 4 blocs Telegram du head.  -->
+<!-- =============================================== -->
+<section class="telegram-block">
+  <h2>&#128241; Synth&egrave;se Telegram</h2>
+  <div class="telegram-preview"></div>
+
+  <details class="telegram-extra">
+    <summary>&#128241; Bloc intraday seul (commande <code>/at intraday</code>)</summary>
+    <div class="telegram-preview"></div>
+  </details>
+  <details class="telegram-extra">
+    <summary>&#128241; Bloc swing 1-3w seul (commande <code>/at swing</code>)</summary>
+    <div class="telegram-preview"></div>
+  </details>
+  <details class="telegram-extra">
+    <summary>&#128241; Bloc deep 4-12w seul (commande <code>/at deep</code>)</summary>
+    <div class="telegram-preview"></div>
+  </details>
+</section>
+
+<!-- =============================================== -->
+<!-- 12. POST-MORTEM SESSION (squelette, rempli en revue) -->
+<!-- =============================================== -->
+<section class="post-mortem-section" id="post-mortem">
+  <h2 style="margin-top:0; border-bottom:none;">Post-mortem</h2>
+  <p class="post-mortem-empty">Section &agrave; compl&eacute;ter apr&egrave;s la session de trading impliquant le(s) ticker(s) analys&eacute;(s). La revue ult&eacute;rieure met &agrave; jour le bloc YAML frontmatter (cl&eacute; <code>post_mortem</code>), le markdown source et ce body HTML &mdash; les 3 endroits doivent rester coh&eacute;rents.</p>
+
+  <h3>Appr&eacute;ciation globale de l'analyse</h3>
+  <p class="post-mortem-empty">[non rempli] &mdash; verdict sur la qualit&eacute; de l'analyse technique (signaux bien capt&eacute;s, biais &eacute;ventuel sur le score brut, force du setup contrarian sous-&eacute;valu&eacute;e, etc.)</p>
+
+  <h3>Verdicts par plan d'entr&eacute;e</h3>
+  <p class="post-mortem-empty">[non rempli] &mdash; pour chaque Plan A/B/C : entry_zone touch&eacute; (oui/non), targets T1/T2/T3 atteints, invalidation cass&eacute;e, plan ex&eacute;cut&eacute; ou pas, R/R r&eacute;alis&eacute;.</p>
+
+  <h3>Trades pris (si applicable)</h3>
+  <p class="post-mortem-empty">[non rempli] &mdash; liste des positions effectivement prises sur les tickers analys&eacute;s, entry/exit, PnL r&eacute;alis&eacute;, override de plan &eacute;ventuel.</p>
+
+  <h3>Patterns observ&eacute;s et suggestions</h3>
+  <p class="post-mortem-empty">[non rempli] &mdash; patterns N=1 &agrave; surveiller, suggestions d'am&eacute;lioration de calibration (bonus T_setup, tag visuel, score dual macro/contrarian, etc.) pour validation N&ge;3 cas similaires avant int&eacute;gration.</p>
+</section>
+
+<!-- =============================================== -->
+<!-- 13. COMPARTIMENT COMMENTAIRES LIBRES             -->
+<!-- =============================================== -->
+<section class="claude-notes">
+  <h2>Notes &amp; remarques de l'analyste</h2>
+  <p class="small muted">Soupape pour ce que les champs structur&eacute;s ne capturent pas : r&eacute;serves sur la qualit&eacute; des donn&eacute;es, conditions de march&eacute; inhabituelles, notes de m&eacute;thodologie, suggestions d'am&eacute;lioration du skill.</p>
+  
+  
+  <p class="empty">Aucune remarque libre pour cette session.</p>
+  
+</section>
+
+<!-- =============================================== -->
+<!-- 14. FOOTER META                                  -->
+<!-- =============================================== -->
+<div class="meta-footer">
+  <p>
+    <strong>Skill equity-technical-analyst pipeline-baseline</strong> &nbsp;&middot;&nbsp;
+    Schema 2.2 &nbsp;&middot;&nbsp;
+    Generated 2026-05-22T21:42:25.645990+00:00 &nbsp;&middot;&nbsp;
+    Sources : precomputed VPS + brackets pipeline &nbsp;&middot;&nbsp;
+    Trust phase :  &nbsp;&middot;&nbsp;
+    Generation duration : 
+  </p>
+  <p class="small">
+    Frontmatter YAML conforme au sch&eacute;ma <code>R&eacute;f&eacute;rences/ta_schema.yaml</code>. Source markdown int&eacute;grale disponible dans le bloc <code>&lt;script id="source"&gt;</code>.
+  </p>
+</div>
+
+</body>
+</html>
