@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-05-22T21:43:54Z",
+    "generated_at": "2026-05-23T05:59:10Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-25T08:00:00Z",
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (3b/4s/8n)."
   },
   "notes": {
-    "atr_daily": 10.6796,
+    "atr_daily": 10.6821,
     "atr_pct_daily": null,
     "beta_60d": 1.9969,
     "beta_benchmark": "IWM",
@@ -101,7 +101,7 @@
         "max": 154.8438
       },
       "stop": {
-        "price": 152.6324,
+        "price": 152.6322,
         "basis": "sr_below_confluence_support",
         "distance_pct": -0.9
       },
@@ -116,13 +116,13 @@
           "level": 2,
           "price": 292.36,
           "basis": "resistance_2",
-          "rr": 100.34
+          "rr": 100.33
         },
         {
           "level": 3,
           "price": 321.2533,
           "basis": "resistance_3",
-          "rr": 121.3
+          "rr": 121.28
         }
       ],
       "preferred_target": 1,
@@ -183,7 +183,7 @@
         "max": 113.5549
       },
       "stop": {
-        "price": 96.9705,
+        "price": 96.9668,
         "basis": "fallback_sr_support",
         "distance_pct": -13.75
       },
@@ -192,7 +192,7 @@
           "level": 1,
           "price": 185.3,
           "basis": "vpvr_vah",
-          "rr": 4.72
+          "rr": 4.71
         },
         {
           "level": 2,
@@ -228,7 +228,7 @@
     }
   ],
   "invalidation": {
-    "price": 96.0008,
+    "price": 95.9971,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

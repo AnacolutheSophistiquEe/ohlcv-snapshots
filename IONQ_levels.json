@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-05-22T21:43:54Z",
+    "generated_at": "2026-05-23T05:59:10Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-25T08:00:00Z",
@@ -20,7 +20,7 @@
     "hmm_regime": {
       "state": "bear",
       "probability": 0.65,
-      "expected_duration_days": 2.88
+      "expected_duration_days": 2.99
     },
     "volatility_regime": "high",
     "signals_counter": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM bear (0.65), vol high, signals neutral_to_bullish (7b/3s/5n)."
   },
   "notes": {
-    "atr_daily": 5.6929,
+    "atr_daily": 5.705,
     "atr_pct_daily": null,
     "beta_60d": 2.7352,
     "beta_benchmark": "IWM",
@@ -90,11 +90,11 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 62.7512,
-        "max": 63.1288
+        "min": 62.7312,
+        "max": 63.1088
       },
       "stop": {
-        "price": 55.1007,
+        "price": 55.0825,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -12.46
       },
@@ -109,7 +109,7 @@
           "level": 2,
           "price": 92.9926,
           "basis": "fib_extension_1272",
-          "rr": 3.83
+          "rr": 3.84
         },
         {
           "level": 3,
@@ -131,32 +131,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 64.4043,
-        "max": 64.6617
+        "min": 64.4143,
+        "max": 64.6717
       },
       "stop": {
-        "price": 61.4936,
+        "price": 61.4975,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -4.71
+        "distance_pct": -4.72
       },
       "targets": [
         {
           "level": 1,
           "price": 80.3845,
           "basis": "next_resistance",
-          "rr": 5.22
+          "rr": 5.2
         },
         {
           "level": 2,
           "price": 92.9926,
           "basis": "fib_extension_1272",
-          "rr": 9.36
+          "rr": 9.34
         },
         {
           "level": 3,
           "price": 110.8046,
           "basis": "fib_extension_1618",
-          "rr": 15.22
+          "rr": 15.19
         }
       ],
       "preferred_target": 1,
@@ -173,31 +173,31 @@
       "side": "long",
       "entry_zone": {
         "min": 44.4468,
-        "max": 47.3359
+        "max": 55.1098
       },
       "stop": {
         "price": 42.6689,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -7.02
+        "distance_pct": -14.28
       },
       "targets": [
         {
           "level": 1,
           "price": 80.3845,
           "basis": "next_resistance",
-          "rr": 10.7
+          "rr": 4.31
         },
         {
           "level": 2,
           "price": 92.9926,
           "basis": "fib_extension_1272",
-          "rr": 14.62
+          "rr": 6.08
         },
         {
           "level": 3,
           "price": 110.8046,
           "basis": "fib_extension_1618",
-          "rr": 20.14
+          "rr": 8.58
         }
       ],
       "preferred_target": 1,
@@ -205,7 +205,7 @@
         "session_us_open"
       ],
       "max_budget_pct": 35,
-      "rationale": "Deep value mecanique : entree sur confluence support basse S/R_support + FIB_382 + VPVR_POC + MA200 (strength 28.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+      "rationale": "Deep value mecanique : entree sur confluence support basse S/R_support + FIB_382 + MA200 + VPVR_POC + MA20 + FIB_50 + VPVR_VAH (strength 77.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
     }
   ],
   "bot_actionable": true,
