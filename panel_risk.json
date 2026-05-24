@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-05-23T15:57:22.747636+00:00",
+  "generated_at": "2026-05-24T12:27:18.073779+00:00",
   "window_sessions": 58,
   "tickers": [
     "CEG",
@@ -12,6 +12,7 @@
     "PLTR",
     "RGTI",
     "RHM",
+    "SAF",
     "SMCI",
     "SMR",
     "SOFI",
@@ -28,6 +29,7 @@
       "PLTR": 0.068,
       "RGTI": 0.2439,
       "RHM": 0.1706,
+      "SAF": 0.2358,
       "SMCI": 0.561,
       "SMR": 0.2696,
       "SOFI": 0.2102,
@@ -43,6 +45,7 @@
       "PLTR": -0.0654,
       "RGTI": 0.2348,
       "RHM": 0.3619,
+      "SAF": 0.6153,
       "SMCI": 0.3442,
       "SMR": 0.3683,
       "SOFI": 0.0501,
@@ -58,6 +61,7 @@
       "PLTR": 0.2702,
       "RGTI": 0.4512,
       "RHM": 0.3868,
+      "SAF": 0.2626,
       "SMCI": 0.2814,
       "SMR": 0.3491,
       "SOFI": 0.3304,
@@ -73,6 +77,7 @@
       "PLTR": 0.4797,
       "RGTI": 0.5285,
       "RHM": 0.2513,
+      "SAF": 0.3196,
       "SMCI": 0.4055,
       "SMR": 0.6515,
       "SOFI": 0.7814,
@@ -88,6 +93,7 @@
       "PLTR": 0.3217,
       "RGTI": 0.861,
       "RHM": 0.179,
+      "SAF": 0.2647,
       "SMCI": 0.3509,
       "SMR": 0.7312,
       "SOFI": 0.5769,
@@ -103,6 +109,7 @@
       "PLTR": 0.3898,
       "RGTI": 0.4649,
       "RHM": 0.2062,
+      "SAF": 0.2396,
       "SMCI": 0.3076,
       "SMR": 0.6915,
       "SOFI": 0.5005,
@@ -118,6 +125,7 @@
       "PLTR": 1.0,
       "RGTI": 0.2731,
       "RHM": 0.0546,
+      "SAF": -0.1761,
       "SMCI": 0.2843,
       "SMR": 0.3182,
       "SOFI": 0.4201,
@@ -133,6 +141,7 @@
       "PLTR": 0.2731,
       "RGTI": 1.0,
       "RHM": 0.1683,
+      "SAF": 0.3107,
       "SMCI": 0.3752,
       "SMR": 0.7013,
       "SOFI": 0.4816,
@@ -148,10 +157,27 @@
       "PLTR": 0.0546,
       "RGTI": 0.1683,
       "RHM": 1.0,
+      "SAF": 0.4558,
       "SMCI": 0.119,
       "SMR": 0.2025,
       "SOFI": 0.0935,
       "SRT3": 0.3122
+    },
+    "SAF": {
+      "CEG": 0.2358,
+      "ENR": 0.6153,
+      "EVT": 0.2626,
+      "HOOD": 0.3196,
+      "IONQ": 0.2647,
+      "MSTR": 0.2396,
+      "PLTR": -0.1761,
+      "RGTI": 0.3107,
+      "RHM": 0.4558,
+      "SAF": 1.0,
+      "SMCI": 0.3629,
+      "SMR": 0.3837,
+      "SOFI": 0.2098,
+      "SRT3": 0.3967
     },
     "SMCI": {
       "CEG": 0.561,
@@ -163,6 +189,7 @@
       "PLTR": 0.2843,
       "RGTI": 0.3752,
       "RHM": 0.119,
+      "SAF": 0.3629,
       "SMCI": 1.0,
       "SMR": 0.3642,
       "SOFI": 0.2668,
@@ -178,6 +205,7 @@
       "PLTR": 0.3182,
       "RGTI": 0.7013,
       "RHM": 0.2025,
+      "SAF": 0.3837,
       "SMCI": 0.3642,
       "SMR": 1.0,
       "SOFI": 0.5449,
@@ -193,6 +221,7 @@
       "PLTR": 0.4201,
       "RGTI": 0.4816,
       "RHM": 0.0935,
+      "SAF": 0.2098,
       "SMCI": 0.2668,
       "SMR": 0.5449,
       "SOFI": 1.0,
@@ -208,6 +237,7 @@
       "PLTR": 0.1413,
       "RGTI": 0.3802,
       "RHM": 0.3122,
+      "SAF": 0.3967,
       "SMCI": 0.2711,
       "SMR": 0.4038,
       "SOFI": 0.2945,
@@ -253,6 +283,11 @@
     {
       "pair": "HOOD_IONQ",
       "rho": 0.6465,
+      "flag": "red"
+    },
+    {
+      "pair": "ENR_SAF",
+      "rho": 0.6153,
       "flag": "red"
     },
     {
@@ -326,6 +361,11 @@
       "flag": "amber"
     },
     {
+      "pair": "RHM_SAF",
+      "rho": 0.4558,
+      "flag": "amber"
+    },
+    {
       "pair": "EVT_RGTI",
       "rho": 0.4512,
       "flag": "amber"
@@ -351,6 +391,11 @@
       "flag": "amber"
     },
     {
+      "pair": "SAF_SRT3",
+      "rho": 0.3967,
+      "flag": "amber"
+    },
+    {
       "pair": "ENR_MSTR",
       "rho": 0.391,
       "flag": "amber"
@@ -363,6 +408,11 @@
     {
       "pair": "EVT_RHM",
       "rho": 0.3868,
+      "flag": "amber"
+    },
+    {
+      "pair": "SAF_SMR",
+      "rho": 0.3837,
       "flag": "amber"
     },
     {
@@ -388,6 +438,11 @@
     {
       "pair": "SMCI_SMR",
       "rho": 0.3642,
+      "flag": "amber"
+    },
+    {
+      "pair": "SAF_SMCI",
+      "rho": 0.3629,
       "flag": "amber"
     },
     {
@@ -441,6 +496,11 @@
       "flag": "amber"
     },
     {
+      "pair": "HOOD_SAF",
+      "rho": 0.3196,
+      "flag": "amber"
+    },
+    {
       "pair": "PLTR_SMR",
       "rho": 0.3182,
       "flag": "amber"
@@ -448,6 +508,11 @@
     {
       "pair": "RHM_SRT3",
       "rho": 0.3122,
+      "flag": "amber"
+    },
+    {
+      "pair": "RGTI_SAF",
+      "rho": 0.3107,
       "flag": "amber"
     },
     {
@@ -501,6 +566,16 @@
       "flag": "green"
     },
     {
+      "pair": "IONQ_SAF",
+      "rho": 0.2647,
+      "flag": "green"
+    },
+    {
+      "pair": "EVT_SAF",
+      "rho": 0.2626,
+      "flag": "green"
+    },
+    {
       "pair": "HOOD_RHM",
       "rho": 0.2513,
       "flag": "green"
@@ -511,6 +586,11 @@
       "flag": "green"
     },
     {
+      "pair": "MSTR_SAF",
+      "rho": 0.2396,
+      "flag": "green"
+    },
+    {
       "pair": "CEG_HOOD",
       "rho": 0.2391,
       "flag": "green"
@@ -518,6 +598,11 @@
     {
       "pair": "ENR_IONQ",
       "rho": 0.2363,
+      "flag": "green"
+    },
+    {
+      "pair": "CEG_SAF",
+      "rho": 0.2358,
       "flag": "green"
     },
     {
@@ -533,6 +618,11 @@
     {
       "pair": "CEG_SOFI",
       "rho": 0.2102,
+      "flag": "green"
+    },
+    {
+      "pair": "SAF_SOFI",
+      "rho": 0.2098,
       "flag": "green"
     },
     {
@@ -553,6 +643,11 @@
     {
       "pair": "IONQ_RHM",
       "rho": 0.179,
+      "flag": "green"
+    },
+    {
+      "pair": "PLTR_SAF",
+      "rho": -0.1761,
       "flag": "green"
     },
     {
@@ -646,6 +741,11 @@
       "pair": "HOOD_IONQ",
       "rho": 0.6465,
       "flag": "red"
+    },
+    {
+      "pair": "ENR_SAF",
+      "rho": 0.6153,
+      "flag": "red"
     }
   ],
   "sigma_60d_pct": {
@@ -658,16 +758,17 @@
     "PLTR": 3.1616,
     "RGTI": 6.6431,
     "RHM": 3.3619,
+    "SAF": 3.0341,
     "SMCI": 7.3416,
     "SMR": 5.9477,
     "SOFI": 3.459,
     "SRT3": 3.0259
   },
   "panel_beta_equal_weight": {
-    "vs_SPY": 2.4277,
-    "vs_QQQ": 1.8103,
-    "vs_IWM": 1.7077,
-    "vs_EWG": 1.2358
+    "vs_SPY": 2.3877,
+    "vs_QQQ": 1.7705,
+    "vs_IWM": 1.675,
+    "vs_EWG": 1.2331
   },
   "recommended_actions": [
     "ρ(IONQ/RGTI)=0.861 ≥0.6 — exposition facteur commun ; ne valider que le meilleur ev_pct_risk des deux (skill).",
@@ -677,7 +778,8 @@
     "ρ(RGTI/SMR)=0.7013 ≥0.6 — exposition facteur commun ; ne valider que le meilleur ev_pct_risk des deux (skill).",
     "ρ(MSTR/SMR)=0.6915 ≥0.6 — exposition facteur commun ; ne valider que le meilleur ev_pct_risk des deux (skill).",
     "ρ(HOOD/SMR)=0.6515 ≥0.6 — exposition facteur commun ; ne valider que le meilleur ev_pct_risk des deux (skill).",
-    "ρ(HOOD/IONQ)=0.6465 ≥0.6 — exposition facteur commun ; ne valider que le meilleur ev_pct_risk des deux (skill)."
+    "ρ(HOOD/IONQ)=0.6465 ≥0.6 — exposition facteur commun ; ne valider que le meilleur ev_pct_risk des deux (skill).",
+    "ρ(ENR/SAF)=0.6153 ≥0.6 — exposition facteur commun ; ne valider que le meilleur ev_pct_risk des deux (skill)."
   ],
   "note": "PANEL observe-only. VaR agrégée NON émise (poids = sizing/positions, skill-side). Matrice + σ fournis ; agrégation sqrt(wᵀΣw) & VaR hist. panier = skill (§3.b). Beta = panier équipondéré (référence)."
 }
