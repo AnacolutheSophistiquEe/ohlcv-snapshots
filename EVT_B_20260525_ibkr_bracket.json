@@ -1,59 +1,68 @@
 {
   "available": true,
-  "generated_at": "2026-05-25T21:45:42.818311+00:00",
-  "prediction_id": "IONQ_A_20260525",
+  "generated_at": "2026-05-25T21:38:11.033597+00:00",
+  "prediction_id": "EVT_B_20260525",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "IONQ",
-  "exchange": "SMART",
-  "currency": "USD",
+  "symbol": "EVT",
+  "exchange": "IBIS",
+  "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 63.32,
-    "quantity": 2,
-    "tif": "DAY"
+    "limit_price": 5.03,
+    "quantity": 79,
+    "tif": "GTD",
+    "gtd": "2026-06-15T16:30:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 80.38,
-      "quantity": 1,
+      "limit_price": 5.44,
+      "quantity": 39,
       "tif": "GTC",
       "tag": "T1"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 92.99,
-      "quantity": 1,
+      "limit_price": 7.97,
+      "quantity": 24,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 9.0,
+      "quantity": 16,
+      "tif": "GTC",
+      "tag": "T3"
+    },
+    {
+      "action": "SELL",
       "order_type": "STP",
-      "stop_price": 55.08,
-      "quantity": 2,
+      "stop_price": 4.95,
+      "quantity": 79,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "IONQ_A_intraday_20260525",
+  "oca_group": "EVT_B_swing_20260525",
   "oca_type": 1,
   "execution_rules": {
-    "stop_mode": "fixed",
-    "stop_mode_description": "SL hard statique, pas de trailing",
+    "stop_mode": "breakeven_after_T1",
+    "stop_mode_description": "SL → prix d'entrée après hit T1",
     "trail_distance_atr": null,
     "time_stop": {
       "enabled": true,
-      "max_holding_sessions": 1,
-      "exit_mode": "market_close_unconditional"
+      "max_holding_sessions": 21,
+      "exit_mode": "market_close_at_breakeven"
     },
     "order_validity": {
-      "type": "DAY",
-      "offset_sessions": 0,
-      "good_till_date": "2026-05-25T22:00:00+00:00"
+      "type": "GTD",
+      "offset_sessions": 21,
+      "good_till_date": "2026-06-15T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -68,42 +77,42 @@
     "qty_split": [
       {
         "tag": "T1",
-        "qty": 1
+        "qty": 39
       },
       {
         "tag": "T2",
-        "qty": 1
+        "qty": 24
       },
       {
         "tag": "T3",
-        "qty": 0
+        "qty": 16
       }
     ]
   },
   "bracket_metadata": {
-    "plan_id": "A",
-    "horizon": "intraday",
-    "horizon_label_long": "intraday",
-    "composite_score": 4.0,
-    "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.8175,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
+    "plan_id": "B",
+    "horizon": "swing",
+    "horizon_label_long": "swing_1_3_weeks",
+    "composite_score": 6.0,
+    "composite_score_source": "horizon_ta_score.plan_b.score",
+    "ev_pct_risk": -0.3285,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.1169,
-      "T2": 0.0115,
+      "T1": 0.2426,
+      "T2": 0.002,
       "T3": 0.0003
     },
-    "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
+    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 127.28,
-    "hold_tolerance_breach_price": 47.73,
+    "notional_eur": 397.76,
+    "hold_tolerance_breach_price": 3.7762,
     "hold_fallback_active": true,
-    "prediction_id": "IONQ_A_20260525"
+    "prediction_id": "EVT_B_20260525"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
