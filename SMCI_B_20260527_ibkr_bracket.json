@@ -1,67 +1,68 @@
 {
   "available": true,
-  "generated_at": "2026-05-27T19:36:19.321015+00:00",
-  "prediction_id": "SMR_A_20260527",
+  "generated_at": "2026-05-27T19:29:17.911612+00:00",
+  "prediction_id": "SMCI_B_20260527",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "SMR",
+  "symbol": "SMCI",
   "exchange": "SMART",
   "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 11.96,
-    "quantity": 23,
-    "tif": "DAY"
+    "limit_price": 37.89,
+    "quantity": 4,
+    "tif": "GTD",
+    "gtd": "2026-06-17T22:00:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 13.05,
-      "quantity": 11,
+      "limit_price": 56.53,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "T1"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 22.26,
-      "quantity": 7,
+      "limit_price": 62.36,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 30.14,
-      "quantity": 5,
+      "limit_price": 81.61,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 11.78,
-      "quantity": 23,
+      "stop_price": 37.4,
+      "quantity": 4,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "SMR_A_intraday_20260527",
+  "oca_group": "SMCI_B_swing_20260527",
   "oca_type": 1,
   "execution_rules": {
-    "stop_mode": "fixed",
-    "stop_mode_description": "SL hard statique, pas de trailing",
+    "stop_mode": "breakeven_after_T1",
+    "stop_mode_description": "SL → prix d'entrée après hit T1",
     "trail_distance_atr": null,
     "time_stop": {
       "enabled": true,
-      "max_holding_sessions": 1,
-      "exit_mode": "market_close_unconditional"
+      "max_holding_sessions": 21,
+      "exit_mode": "market_close_at_breakeven"
     },
     "order_validity": {
-      "type": "DAY",
-      "offset_sessions": 0,
-      "good_till_date": "2026-05-27T22:00:00+00:00"
+      "type": "GTD",
+      "offset_sessions": 21,
+      "good_till_date": "2026-06-17T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -76,42 +77,42 @@
     "qty_split": [
       {
         "tag": "T1",
-        "qty": 11
+        "qty": 2
       },
       {
         "tag": "T2",
-        "qty": 7
+        "qty": 1
       },
       {
         "tag": "T3",
-        "qty": 5
+        "qty": 1
       }
     ]
   },
   "bracket_metadata": {
-    "plan_id": "A",
-    "horizon": "intraday",
-    "horizon_label_long": "intraday",
-    "composite_score": 6.0,
-    "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.1669,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
+    "plan_id": "B",
+    "horizon": "swing",
+    "horizon_label_long": "swing_1_3_weeks",
+    "composite_score": 4.0,
+    "composite_score_source": "horizon_ta_score.plan_b.score",
+    "ev_pct_risk": 1.0078,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "validated",
     "p_hit_upper": {
-      "T1": 0.3256,
-      "T2": 0.0,
-      "T3": 0.0
+      "T1": 0.0732,
+      "T2": 0.0386,
+      "T3": 0.0037
     },
-    "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
+    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 276.46,
-    "hold_tolerance_breach_price": 9.015,
+    "notional_eur": 151.56,
+    "hold_tolerance_breach_price": 28.4175,
     "hold_fallback_active": true,
-    "prediction_id": "SMR_A_20260527"
+    "prediction_id": "SMCI_B_20260527"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
