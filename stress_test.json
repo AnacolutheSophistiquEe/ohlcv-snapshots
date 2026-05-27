@@ -1,14 +1,15 @@
 {
   "available": true,
-  "generated_at": "2026-05-26T04:17:25.723398+00:00",
+  "generated_at": "2026-05-27T04:17:50.397123+00:00",
   "weights_eur": {
-    "EVT": 397.76,
-    "IONQ": 127.28,
-    "MSTR": 159.89,
-    "PLTR": 136.88,
-    "RGTI": 396.3
+    "EVT": 395.79,
+    "IONQ": 381.72,
+    "MSTR": 159.93,
+    "PLTR": 273.2,
+    "RGTI": 275.72,
+    "SMR": 158.86
   },
-  "total_notional_eur": 1218.11,
+  "total_notional_eur": 1645.22,
   "capital_total_eur": 2000.0,
   "periods_tested": [
     "Lehman_2008",
@@ -26,15 +27,15 @@
       "end_recovery_date": "2009-09-30",
       "context": "Lehman bankruptcy → S&P -57%, recovery ~12 mois",
       "severity": "extreme",
-      "portfolio_initial_eur": 694.53,
-      "portfolio_min_eur": 336.82,
-      "portfolio_final_eur": 659.92,
-      "max_dd_panel_pct": -51.5,
-      "final_pnl_pct": -4.98,
+      "portfolio_initial_eur": 987.78,
+      "portfolio_min_eur": 523.15,
+      "portfolio_final_eur": 929.28,
+      "max_dd_panel_pct": -47.04,
+      "final_pnl_pct": -5.92,
       "recovery_sessions": 3,
       "recovered_within_window": true,
       "pct_time_in_drawdown": 99.2,
-      "best_ticker": "PLTR",
+      "best_ticker": "SMR",
       "worst_ticker": "EVT",
       "proxies_used": [
         {
@@ -52,6 +53,10 @@
         {
           "original": "RGTI",
           "proxy": "ARKQ"
+        },
+        {
+          "original": "SMR",
+          "proxy": "XLU"
         }
       ],
       "fetch_errors": [
@@ -67,27 +72,35 @@
       "tickers_perf": {
         "EVT": {
           "proxy_used": null,
-          "initial_value_eur": 397.76,
-          "min_value_eur": 161.13,
-          "final_value_eur": 372.95,
+          "initial_value_eur": 395.79,
+          "min_value_eur": 160.34,
+          "final_value_eur": 371.1,
           "max_dd_pct": -59.49,
           "final_pnl_pct": -6.24
         },
         "MSTR": {
           "proxy_used": "^IXIC",
-          "initial_value_eur": 159.89,
-          "min_value_eur": 93.05,
-          "final_value_eur": 155.79,
+          "initial_value_eur": 159.93,
+          "min_value_eur": 93.07,
+          "final_value_eur": 155.83,
           "max_dd_pct": -41.8,
           "final_pnl_pct": -2.56
         },
         "PLTR": {
           "proxy_used": "IGV",
-          "initial_value_eur": 136.88,
-          "min_value_eur": 81.58,
-          "final_value_eur": 131.18,
+          "initial_value_eur": 273.2,
+          "min_value_eur": 162.82,
+          "final_value_eur": 261.82,
           "max_dd_pct": -40.4,
           "final_pnl_pct": -4.17
+        },
+        "SMR": {
+          "proxy_used": "XLU",
+          "initial_value_eur": 158.86,
+          "min_value_eur": 104.81,
+          "final_value_eur": 140.52,
+          "max_dd_pct": -34.02,
+          "final_pnl_pct": -11.54
         }
       }
     },
@@ -99,14 +112,14 @@
       "end_recovery_date": "2020-08-18",
       "context": "COVID-19 shock → S&P -34% en 23 sessions, recovery 5 mois",
       "severity": "severe_fast",
-      "portfolio_initial_eur": 1218.11,
-      "portfolio_min_eur": 737.38,
-      "portfolio_final_eur": 1317.19,
-      "max_dd_panel_pct": -39.47,
-      "final_pnl_pct": 8.13,
+      "portfolio_initial_eur": 1645.22,
+      "portfolio_min_eur": 1037.64,
+      "portfolio_final_eur": 1775.52,
+      "max_dd_panel_pct": -36.93,
+      "final_pnl_pct": 7.92,
       "recovery_sessions": 94,
       "recovered_within_window": true,
-      "pct_time_in_drawdown": 75.4,
+      "pct_time_in_drawdown": 74.6,
       "best_ticker": "MSTR",
       "worst_ticker": "EVT",
       "proxies_used": [
@@ -125,49 +138,61 @@
         {
           "original": "RGTI",
           "proxy": "ARKQ"
+        },
+        {
+          "original": "SMR",
+          "proxy": "XLU"
         }
       ],
       "fetch_errors": [],
       "tickers_perf": {
         "EVT": {
           "proxy_used": null,
-          "initial_value_eur": 397.76,
-          "min_value_eur": 191.37,
-          "final_value_eur": 322.32,
+          "initial_value_eur": 395.79,
+          "min_value_eur": 190.42,
+          "final_value_eur": 320.73,
           "max_dd_pct": -51.89,
           "final_pnl_pct": -18.97
         },
         "IONQ": {
           "proxy_used": "ARKQ",
-          "initial_value_eur": 127.28,
-          "min_value_eur": 80.51,
-          "final_value_eur": 160.7,
+          "initial_value_eur": 381.72,
+          "min_value_eur": 241.46,
+          "final_value_eur": 481.96,
           "max_dd_pct": -36.74,
           "final_pnl_pct": 26.26
         },
         "MSTR": {
           "proxy_used": "^IXIC",
-          "initial_value_eur": 159.89,
-          "min_value_eur": 111.74,
-          "final_value_eur": 181.27,
+          "initial_value_eur": 159.93,
+          "min_value_eur": 111.77,
+          "final_value_eur": 181.31,
           "max_dd_pct": -30.12,
           "final_pnl_pct": 13.37
         },
         "PLTR": {
           "proxy_used": "IGV",
-          "initial_value_eur": 136.88,
-          "min_value_eur": 95.41,
-          "final_value_eur": 152.54,
+          "initial_value_eur": 273.2,
+          "min_value_eur": 190.43,
+          "final_value_eur": 304.45,
           "max_dd_pct": -30.3,
           "final_pnl_pct": 11.44
         },
         "RGTI": {
           "proxy_used": "ARKQ",
-          "initial_value_eur": 396.3,
-          "min_value_eur": 250.68,
-          "final_value_eur": 500.36,
+          "initial_value_eur": 275.72,
+          "min_value_eur": 174.41,
+          "final_value_eur": 348.12,
           "max_dd_pct": -36.74,
           "final_pnl_pct": 26.26
+        },
+        "SMR": {
+          "proxy_used": "XLU",
+          "initial_value_eur": 158.86,
+          "min_value_eur": 102.68,
+          "final_value_eur": 138.95,
+          "max_dd_pct": -35.37,
+          "final_pnl_pct": -12.53
         }
       }
     },
@@ -179,63 +204,75 @@
       "end_recovery_date": "2024-01-19",
       "context": "Fed hikes + inflation → S&P -25% sur 10 mois, recovery 15 mois",
       "severity": "long",
-      "portfolio_initial_eur": 1218.11,
-      "portfolio_min_eur": 632.2,
-      "portfolio_final_eur": 952.5,
-      "max_dd_panel_pct": -48.1,
-      "final_pnl_pct": -21.8,
+      "portfolio_initial_eur": 1645.22,
+      "portfolio_min_eur": 823.39,
+      "portfolio_final_eur": 1291.33,
+      "max_dd_panel_pct": -49.95,
+      "final_pnl_pct": -21.51,
       "recovery_sessions": 512,
       "recovered_within_window": false,
       "pct_time_in_drawdown": 99.8,
-      "best_ticker": "EVT",
+      "best_ticker": "SMR",
       "worst_ticker": "IONQ",
       "proxies_used": [
         {
           "original": "RGTI",
           "proxy": "ARKQ"
+        },
+        {
+          "original": "SMR",
+          "proxy": "XLU"
         }
       ],
       "fetch_errors": [],
       "tickers_perf": {
         "EVT": {
           "proxy_used": null,
-          "initial_value_eur": 397.76,
-          "min_value_eur": 290.07,
-          "final_value_eur": 344.52,
+          "initial_value_eur": 395.79,
+          "min_value_eur": 288.63,
+          "final_value_eur": 342.82,
           "max_dd_pct": -27.08,
           "final_pnl_pct": -13.38
         },
         "IONQ": {
           "proxy_used": null,
-          "initial_value_eur": 127.28,
-          "min_value_eur": 22.59,
-          "final_value_eur": 78.1,
+          "initial_value_eur": 381.72,
+          "min_value_eur": 67.74,
+          "final_value_eur": 234.23,
           "max_dd_pct": -82.26,
           "final_pnl_pct": -38.64
         },
         "MSTR": {
           "proxy_used": null,
-          "initial_value_eur": 159.89,
-          "min_value_eur": 39.13,
-          "final_value_eur": 139.37,
+          "initial_value_eur": 159.93,
+          "min_value_eur": 39.14,
+          "final_value_eur": 139.4,
           "max_dd_pct": -75.53,
           "final_pnl_pct": -12.84
         },
         "PLTR": {
           "proxy_used": null,
-          "initial_value_eur": 136.88,
-          "min_value_eur": 44.32,
-          "final_value_eur": 121.15,
+          "initial_value_eur": 273.2,
+          "min_value_eur": 88.46,
+          "final_value_eur": 241.8,
           "max_dd_pct": -67.62,
           "final_pnl_pct": -11.49
         },
         "RGTI": {
           "proxy_used": "ARKQ",
-          "initial_value_eur": 396.3,
-          "min_value_eur": 198.7,
-          "final_value_eur": 269.37,
+          "initial_value_eur": 275.72,
+          "min_value_eur": 138.25,
+          "final_value_eur": 187.41,
           "max_dd_pct": -49.86,
           "final_pnl_pct": -32.03
+        },
+        "SMR": {
+          "proxy_used": "XLU",
+          "initial_value_eur": 158.86,
+          "min_value_eur": 132.8,
+          "final_value_eur": 145.67,
+          "max_dd_pct": -16.4,
+          "final_pnl_pct": -8.3
         }
       }
     },
@@ -247,15 +284,15 @@
       "end_recovery_date": "2019-04-12",
       "context": "Powell pivot tardif → S&P -20% en 12 semaines, recovery 4 mois",
       "severity": "moderate",
-      "portfolio_initial_eur": 1218.11,
-      "portfolio_min_eur": 938.17,
-      "portfolio_final_eur": 1213.2,
-      "max_dd_panel_pct": -22.98,
-      "final_pnl_pct": -0.4,
-      "recovery_sessions": 130,
-      "recovered_within_window": false,
-      "pct_time_in_drawdown": 99.2,
-      "best_ticker": "IONQ",
+      "portfolio_initial_eur": 1645.22,
+      "portfolio_min_eur": 1308.42,
+      "portfolio_final_eur": 1669.04,
+      "max_dd_panel_pct": -20.47,
+      "final_pnl_pct": 1.45,
+      "recovery_sessions": 114,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 91.6,
+      "best_ticker": "SMR",
       "worst_ticker": "EVT",
       "proxies_used": [
         {
@@ -273,49 +310,61 @@
         {
           "original": "RGTI",
           "proxy": "ARKQ"
+        },
+        {
+          "original": "SMR",
+          "proxy": "XLU"
         }
       ],
       "fetch_errors": [],
       "tickers_perf": {
         "EVT": {
           "proxy_used": null,
-          "initial_value_eur": 397.76,
-          "min_value_eur": 288.38,
-          "final_value_eur": 382.05,
+          "initial_value_eur": 395.79,
+          "min_value_eur": 286.95,
+          "final_value_eur": 380.16,
           "max_dd_pct": -27.5,
           "final_pnl_pct": -3.95
         },
         "IONQ": {
           "proxy_used": "ARKQ",
-          "initial_value_eur": 127.28,
-          "min_value_eur": 101.75,
-          "final_value_eur": 128.19,
+          "initial_value_eur": 381.72,
+          "min_value_eur": 305.14,
+          "final_value_eur": 384.45,
           "max_dd_pct": -20.06,
           "final_pnl_pct": 0.71
         },
         "MSTR": {
           "proxy_used": "^IXIC",
-          "initial_value_eur": 159.89,
-          "min_value_eur": 123.39,
-          "final_value_eur": 158.34,
+          "initial_value_eur": 159.93,
+          "min_value_eur": 123.42,
+          "final_value_eur": 158.38,
           "max_dd_pct": -22.83,
           "final_pnl_pct": -0.97
         },
         "PLTR": {
           "proxy_used": "IGV",
-          "initial_value_eur": 136.88,
-          "min_value_eur": 107.86,
-          "final_value_eur": 145.49,
+          "initial_value_eur": 273.2,
+          "min_value_eur": 215.28,
+          "final_value_eur": 290.38,
           "max_dd_pct": -21.2,
           "final_pnl_pct": 6.29
         },
         "RGTI": {
           "proxy_used": "ARKQ",
-          "initial_value_eur": 396.3,
-          "min_value_eur": 316.8,
-          "final_value_eur": 399.13,
+          "initial_value_eur": 275.72,
+          "min_value_eur": 220.41,
+          "final_value_eur": 277.69,
           "max_dd_pct": -20.06,
           "final_pnl_pct": 0.71
+        },
+        "SMR": {
+          "proxy_used": "XLU",
+          "initial_value_eur": 158.86,
+          "min_value_eur": 157.22,
+          "final_value_eur": 177.99,
+          "max_dd_pct": -1.03,
+          "final_pnl_pct": 12.04
         }
       }
     },
@@ -327,11 +376,11 @@
       "end_recovery_date": "2024-08-26",
       "context": "Yen carry unwind → S&P -6% en 3 sessions, recovery 3 semaines",
       "severity": "mild",
-      "portfolio_initial_eur": 1218.11,
-      "portfolio_min_eur": 1036.96,
-      "portfolio_final_eur": 1196.44,
-      "max_dd_panel_pct": -14.87,
-      "final_pnl_pct": -1.78,
+      "portfolio_initial_eur": 1645.22,
+      "portfolio_min_eur": 1405.35,
+      "portfolio_final_eur": 1607.69,
+      "max_dd_panel_pct": -14.58,
+      "final_pnl_pct": -2.28,
       "recovery_sessions": 17,
       "recovered_within_window": false,
       "pct_time_in_drawdown": 94.4,
@@ -342,43 +391,51 @@
       "tickers_perf": {
         "EVT": {
           "proxy_used": null,
-          "initial_value_eur": 397.76,
-          "min_value_eur": 375.83,
-          "final_value_eur": 399.17,
+          "initial_value_eur": 395.79,
+          "min_value_eur": 373.96,
+          "final_value_eur": 397.19,
           "max_dd_pct": -5.51,
           "final_pnl_pct": 0.35
         },
         "IONQ": {
           "proxy_used": null,
-          "initial_value_eur": 127.28,
-          "min_value_eur": 102.6,
-          "final_value_eur": 115.25,
+          "initial_value_eur": 381.72,
+          "min_value_eur": 307.72,
+          "final_value_eur": 345.66,
           "max_dd_pct": -19.39,
           "final_pnl_pct": -9.45
         },
         "MSTR": {
           "proxy_used": null,
-          "initial_value_eur": 159.89,
-          "min_value_eur": 123.48,
-          "final_value_eur": 148.57,
+          "initial_value_eur": 159.93,
+          "min_value_eur": 123.52,
+          "final_value_eur": 148.6,
           "max_dd_pct": -22.77,
           "final_pnl_pct": -7.08
         },
         "PLTR": {
           "proxy_used": null,
-          "initial_value_eur": 136.88,
-          "min_value_eur": 122.63,
-          "final_value_eur": 161.77,
+          "initial_value_eur": 273.2,
+          "min_value_eur": 244.75,
+          "final_value_eur": 322.88,
           "max_dd_pct": -10.41,
           "final_pnl_pct": 18.19
         },
         "RGTI": {
           "proxy_used": null,
-          "initial_value_eur": 396.3,
-          "min_value_eur": 299.34,
-          "final_value_eur": 371.68,
+          "initial_value_eur": 275.72,
+          "min_value_eur": 208.26,
+          "final_value_eur": 258.59,
           "max_dd_pct": -24.47,
           "final_pnl_pct": -6.21
+        },
+        "SMR": {
+          "proxy_used": null,
+          "initial_value_eur": 158.86,
+          "min_value_eur": 124.82,
+          "final_value_eur": 134.77,
+          "max_dd_pct": -21.43,
+          "final_pnl_pct": -15.17
         }
       }
     }
@@ -386,20 +443,21 @@
   "panel_summary": {
     "n_periods_ok": 5,
     "n_periods_total": 5,
-    "max_dd_avg_pct": -35.38,
-    "max_dd_median_pct": -39.47,
-    "max_dd_worst_pct": -51.5,
-    "recovery_sessions_avg": 48,
-    "recovery_sessions_median": 48,
-    "recovery_sessions_worst": 94,
-    "n_recovered_within_window": 2,
+    "max_dd_avg_pct": -33.79,
+    "max_dd_median_pct": -36.93,
+    "max_dd_worst_pct": -49.95,
+    "recovery_sessions_avg": 70,
+    "recovery_sessions_median": 94,
+    "recovery_sessions_worst": 114,
+    "n_recovered_within_window": 3,
     "prob_severe_event_5y_base_rate": 0.35,
-    "resilience_score": 4.98
+    "resilience_score": 4.82
   },
   "proxies_legend": {
     "IONQ": "ARKQ (used for periods before 2021-10-01)",
     "RGTI": "ARKQ (used for periods before 2022-03-01)",
     "PLTR": "IGV (used for periods before 2020-09-30)",
+    "SMR": "XLU (used for periods before 2022-05-09)",
     "MSTR": "^IXIC (used for periods before 2020-08-11)",
     "EVT": "^GDAXI (used for periods before 2007-01-01)"
   },
