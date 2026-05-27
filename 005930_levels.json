@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-05-27T20:11:18Z",
+    "generated_at": "2026-05-27T21:55:53Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-28T08:00:00Z",
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 19428.5714,
     "atr_pct_daily": null,
-    "beta_60d": 0.2759,
+    "beta_60d": 0.2761,
     "beta_benchmark": "EWY",
-    "beta_corr_60d": 0.2415,
+    "beta_corr_60d": 0.2417,
     "btc_corr_high": null,
     "candlestick": {
       "name": "shooting_star",
@@ -79,13 +79,13 @@
       "targets": [
         {
           "level": 2,
-          "price": 372324.6569,
+          "price": 372324.6547,
           "basis": "fib_extension_1272",
           "rr": 2.42
         },
         {
           "level": 3,
-          "price": 455421.463,
+          "price": 455421.4582,
           "basis": "fib_extension_1618",
           "rr": 5.44
         }
@@ -112,13 +112,13 @@
       "targets": [
         {
           "level": 2,
-          "price": 372324.6569,
+          "price": 372324.6547,
           "basis": "fib_extension_1272",
           "rr": 5.91
         },
         {
           "level": 3,
-          "price": 455421.463,
+          "price": 455421.4582,
           "basis": "fib_extension_1618",
           "rr": 13.72
         }
@@ -134,24 +134,24 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 255604.8655,
+        "min": 255604.8672,
         "max": 278077.7909
       },
       "stop": {
-        "price": 245380.6709,
+        "price": 245380.6725,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -8.04
       },
       "targets": [
         {
           "level": 2,
-          "price": 372324.6569,
+          "price": 372324.6547,
           "basis": "fib_extension_1272",
           "rr": 4.92
         },
         {
           "level": 3,
-          "price": 455421.463,
+          "price": 455421.4582,
           "basis": "fib_extension_1618",
           "rr": 8.79
         }
@@ -166,7 +166,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 242926.8642,
+    "price": 242926.8658,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

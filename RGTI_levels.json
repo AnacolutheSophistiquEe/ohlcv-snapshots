@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RGTI",
-    "generated_at": "2026-05-27T20:11:18Z",
+    "generated_at": "2026-05-27T21:55:53Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-28T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "RGTI_precomputed.json"
   },
   "context": {
-    "last_price": 24.45,
+    "last_price": 24.62,
     "ta_score": {
       "value": 2,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "divergent_short_long",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.5644,
-      "expected_duration_days": 2.3
+      "probability": 0.5715,
+      "expected_duration_days": 2.33
     },
     "volatility_regime": "high",
     "signals_counter": {
@@ -31,25 +31,25 @@
       "verdict": "buy"
     },
     "mean_reversion_score": {
-      "setup": "rsi_50-60_dist_ma20_>+10",
-      "win_rate": 1.0,
-      "sample_size": 5,
-      "median_bounce_pct": 27.58,
-      "confidence": "low"
+      "setup": "rsi_60-70_dist_ma20_>+10",
+      "win_rate": 0.67,
+      "sample_size": 12,
+      "median_bounce_pct": 2.65,
+      "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (bearish), alignment divergent_short_long, HMM bull (0.56), vol high, signals buy (8b/2s/5n)."
+    "narrative_short": "TA score 2/10 (bearish), alignment divergent_short_long, HMM bull (0.57), vol high, signals buy (8b/2s/5n)."
   },
   "notes": {
     "atr_daily": 2.4436,
     "atr_pct_daily": null,
-    "beta_60d": 2.8058,
+    "beta_60d": 2.8039,
     "beta_benchmark": "IWM",
     "beta_corr_60d": 0.5552,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "",
-      "date": "",
-      "confidence": null
+      "name": "doji",
+      "date": "2026-05-27",
+      "confidence": 0.978
     },
     "divergences": [
       {
@@ -68,7 +68,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -56.6,
+      "current_dd_pct": -56.3,
       "ath_price": 56.34,
       "ath_date": "2025-10-15",
       "max_dd_1y_pct": -77.1,
@@ -83,32 +83,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 23.2067,
+        "min": 23.2076,
         "max": 23.6853
       },
       "stop": {
-        "price": 20.7846,
+        "price": 20.9546,
         "basis": "atr_below_confluence_support",
-        "distance_pct": -11.35
+        "distance_pct": -10.63
       },
       "targets": [
         {
           "level": 1,
           "price": 25.6493,
           "basis": "vpvr_vah",
-          "rr": 0.83
+          "rr": 0.88
         },
         {
           "level": 2,
           "price": 34.34,
           "basis": "resistance_2",
-          "rr": 4.09
+          "rr": 4.37
         },
         {
           "level": 3,
           "price": 44.52,
           "basis": "resistance_3",
-          "rr": 7.92
+          "rr": 8.46
         }
       ],
       "preferred_target": 1,
@@ -128,28 +128,28 @@
         "max": 25.7775
       },
       "stop": {
-        "price": 25.1815,
+        "price": 25.2209,
         "basis": "below_broken_resistance",
-        "distance_pct": -2.12
+        "distance_pct": -1.96
       },
       "targets": [
         {
           "level": 1,
           "price": 29.6523,
           "basis": "fib_382",
-          "rr": 7.21
+          "rr": 7.77
         },
         {
           "level": 2,
           "price": 34.34,
           "basis": "next_confluence_resistance",
-          "rr": 15.81
+          "rr": 17.04
         },
         {
           "level": 3,
           "price": 34.475,
           "basis": "fib_50",
-          "rr": 16.06
+          "rr": 17.31
         }
       ],
       "preferred_target": 1,
@@ -166,31 +166,31 @@
       "side": "long",
       "entry_zone": {
         "min": 15.8861,
-        "max": 17.261
+        "max": 17.2644
       },
       "stop": {
         "price": 15.2507,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -7.98
+        "distance_pct": -7.99
       },
       "targets": [
         {
           "level": 1,
           "price": 25.6493,
           "basis": "vpvr_vah",
-          "rr": 6.86
+          "rr": 6.85
         },
         {
           "level": 2,
           "price": 34.34,
           "basis": "resistance_2",
-          "rr": 13.43
+          "rr": 13.41
         },
         {
           "level": 3,
           "price": 44.52,
           "basis": "resistance_3",
-          "rr": 21.13
+          "rr": 21.1
         }
       ],
       "preferred_target": 1,

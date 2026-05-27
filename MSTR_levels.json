@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-05-27T20:11:18Z",
+    "generated_at": "2026-05-27T21:55:53Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-28T08:00:00Z",
@@ -40,11 +40,11 @@
     "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (2b/4s/9n)."
   },
   "notes": {
-    "atr_daily": 10.5179,
+    "atr_daily": 10.5263,
     "atr_pct_daily": null,
-    "beta_60d": 1.9214,
+    "beta_60d": 1.9205,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.6184,
+    "beta_corr_60d": 0.6181,
     "btc_corr_high": null,
     "candlestick": {
       "name": "shooting_star",
@@ -138,11 +138,11 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 154.6845,
-        "max": 155.3026
+        "min": 154.6945,
+        "max": 155.3127
       },
       "stop": {
-        "price": 149.2711,
+        "price": 149.2769,
         "basis": "fallback_pivot_camarilla_r1",
         "distance_pct": -3.69
       },
@@ -151,19 +151,19 @@
           "level": 1,
           "price": 185.3,
           "basis": "vpvr_vah",
-          "rr": 5.3
+          "rr": 5.29
         },
         {
           "level": 2,
           "price": 292.36,
           "basis": "resistance_2",
-          "rr": 24.0
+          "rr": 23.99
         },
         {
           "level": 3,
           "price": 321.2533,
           "basis": "resistance_3",
-          "rr": 29.05
+          "rr": 29.03
         }
       ],
       "preferred_target": 1,
@@ -183,9 +183,9 @@
         "max": 113.5549
       },
       "stop": {
-        "price": 97.2132,
+        "price": 97.2006,
         "basis": "fallback_sr_support",
-        "distance_pct": -13.53
+        "distance_pct": -13.54
       },
       "targets": [
         {
@@ -198,13 +198,13 @@
           "level": 2,
           "price": 292.36,
           "basis": "resistance_2",
-          "rr": 11.83
+          "rr": 11.82
         },
         {
           "level": 3,
           "price": 321.2533,
           "basis": "resistance_3",
-          "rr": 13.73
+          "rr": 13.72
         }
       ],
       "preferred_target": 1,
@@ -228,7 +228,7 @@
     }
   ],
   "invalidation": {
-    "price": 96.2411,
+    "price": 96.2286,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

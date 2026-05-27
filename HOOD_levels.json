@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "HOOD",
-    "generated_at": "2026-05-27T20:11:18Z",
+    "generated_at": "2026-05-27T21:55:53Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-28T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "HOOD_precomputed.json"
   },
   "context": {
-    "last_price": 76.22,
+    "last_price": 76.23,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -19,7 +19,7 @@
     "alignment_flag": "divergent_short_long",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.529,
+      "probability": 0.5284,
       "expected_duration_days": 2.12
     },
     "volatility_regime": "low",
@@ -42,14 +42,14 @@
   "notes": {
     "atr_daily": 3.8581,
     "atr_pct_daily": null,
-    "beta_60d": 1.8966,
+    "beta_60d": 1.8977,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.6281,
+    "beta_corr_60d": 0.6284,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bullish_engulfing",
       "date": "2026-05-27",
-      "confidence": 0.909
+      "confidence": 0.91
     },
     "divergences": [
       {
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -50.01,
+      "current_dd_pct": -50.0,
       "ath_price": 152.46,
       "ath_date": "2025-10-09",
       "max_dd_1y_pct": -57.26,
@@ -77,7 +77,7 @@
       "side": "long",
       "entry_zone": {
         "min": 69.7644,
-        "max": 71.2915
+        "max": 71.292
       },
       "stop": {
         "price": 69.0668,
@@ -95,7 +95,7 @@
           "level": 2,
           "price": 118.4067,
           "basis": "resistance_2",
-          "rr": 32.77
+          "rr": 32.76
         },
         {
           "level": 3,
@@ -117,11 +117,11 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 76.5865,
-        "max": 76.8925
+        "min": 76.5965,
+        "max": 76.9026
       },
       "stop": {
-        "price": 74.5809,
+        "price": 74.5909,
         "basis": "fallback_pivot_camarilla_r1",
         "distance_pct": -2.81
       },
@@ -130,7 +130,7 @@
           "level": 1,
           "price": 90.9164,
           "basis": "vpvr_vah",
-          "rr": 6.57
+          "rr": 6.56
         },
         {
           "level": 2,
@@ -158,11 +158,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 67.569,
-        "max": 68.941
+        "min": 67.5779,
+        "max": 68.95
       },
       "stop": {
-        "price": 62.8108,
+        "price": 62.8198,
         "basis": "fallback_psych_-10pct",
         "distance_pct": -7.98
       },
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 62.1827,
+    "price": 62.1916,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

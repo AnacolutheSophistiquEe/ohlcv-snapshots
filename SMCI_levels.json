@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-05-27T20:11:18Z",
+    "generated_at": "2026-05-27T21:55:53Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-05-28T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "SMCI_precomputed.json"
   },
   "context": {
-    "last_price": 38.035,
+    "last_price": 38.19,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "triple_bullish",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.544,
-      "expected_duration_days": 2.19
+      "probability": 0.5264,
+      "expected_duration_days": 2.11
     },
     "volatility_regime": "normal",
     "signals_counter": {
@@ -31,25 +31,25 @@
       "verdict": "buy"
     },
     "mean_reversion_score": {
-      "setup": "rsi_50-60_dist_ma20_>+10",
-      "win_rate": 0.0,
-      "sample_size": 1,
-      "median_bounce_pct": -2.47,
-      "confidence": "very_low"
+      "setup": "rsi_60-70_dist_ma20_>+10",
+      "win_rate": 1.0,
+      "sample_size": 10,
+      "median_bounce_pct": 6.07,
+      "confidence": "medium"
     },
-    "narrative_short": "TA score 4/10 (neutral), alignment triple_bullish, HMM bull (0.54), vol normal, signals buy (10b/2s/4n)."
+    "narrative_short": "TA score 4/10 (neutral), alignment triple_bullish, HMM bull (0.53), vol normal, signals buy (10b/2s/4n)."
   },
   "notes": {
     "atr_daily": 2.3382,
     "atr_pct_daily": null,
-    "beta_60d": 2.9083,
+    "beta_60d": 2.9085,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.5845,
+    "beta_corr_60d": 0.5843,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "hammer",
-      "date": "2026-05-27",
-      "confidence": 0.661
+      "name": "",
+      "date": "",
+      "confidence": null
     },
     "divergences": [
       {
@@ -82,7 +82,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -37.35,
+      "current_dd_pct": -37.09,
       "ath_price": 60.71,
       "ath_date": "2025-07-30",
       "max_dd_1y_pct": -66.18,
@@ -98,7 +98,7 @@
       "side": "long",
       "entry_zone": {
         "min": 35.7522,
-        "max": 36.0028
+        "max": 36.0035
       },
       "stop": {
         "price": 35.3947,
@@ -110,19 +110,19 @@
           "level": 1,
           "price": 56.5267,
           "basis": "next_resistance",
-          "rr": 42.77
+          "rr": 42.74
         },
         {
           "level": 2,
           "price": 62.36,
           "basis": "resistance_2",
-          "rr": 54.85
+          "rr": 54.81
         },
         {
           "level": 3,
           "price": 81.6078,
           "basis": "fib_extension_1618",
-          "rr": 94.71
+          "rr": 94.65
         }
       ],
       "preferred_target": 1,
@@ -138,32 +138,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 38.2582,
-        "max": 38.4111
+        "min": 38.4184,
+        "max": 38.5719
       },
       "stop": {
-        "price": 37.0509,
+        "price": 37.2109,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -3.35
+        "distance_pct": -3.34
       },
       "targets": [
         {
           "level": 1,
           "price": 56.5267,
           "basis": "next_resistance",
-          "rr": 14.17
+          "rr": 14.04
         },
         {
           "level": 2,
           "price": 62.36,
           "basis": "resistance_2",
-          "rr": 18.71
+          "rr": 18.58
         },
         {
           "level": 3,
           "price": 81.6078,
           "basis": "fib_extension_1618",
-          "rr": 33.71
+          "rr": 33.57
         }
       ],
       "preferred_target": 1,
