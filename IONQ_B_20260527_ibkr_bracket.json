@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-05-27T20:03:55.279276+00:00",
+  "generated_at": "2026-05-27T21:49:07.131756+00:00",
   "prediction_id": "IONQ_B_20260527",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "IONQ",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 65.73,
+    "limit_price": 65.4,
     "quantity": 4,
     "tif": "GTD",
     "gtd": "2026-06-17T22:00:00+00:00"
@@ -42,7 +42,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 56.85,
+      "stop_price": 56.52,
       "quantity": 4,
       "tif": "GTC",
       "tag": "SL"
@@ -95,22 +95,22 @@
     "horizon_label_long": "swing_1_3_weeks",
     "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.6318,
+    "ev_pct_risk": 0.5722,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "validated",
     "p_hit_upper": {
-      "T1": 0.6484,
-      "T2": 0.3956,
-      "T3": 0.185
+      "T1": 0.6304,
+      "T2": 0.372,
+      "T3": 0.1691
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 262.92,
-    "hold_tolerance_breach_price": 49.2967,
+    "notional_eur": 261.6,
+    "hold_tolerance_breach_price": 49.05,
     "hold_fallback_active": true,
     "prediction_id": "IONQ_B_20260527"
   },
