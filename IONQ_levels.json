@@ -2,25 +2,25 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-05-26T21:52:50Z",
+    "generated_at": "2026-05-27T04:17:43Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-27T08:00:00Z",
-    "valid_until": "2026-05-27T21:00:00Z",
+    "valid_from": "2026-05-28T08:00:00Z",
+    "valid_until": "2026-05-28T21:00:00Z",
     "source_precomputed": "IONQ_precomputed.json"
   },
   "context": {
     "last_price": 63.62,
     "ta_score": {
-      "value": 5,
+      "value": 6,
       "max": 10,
       "label": "neutral"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.6676,
-      "expected_duration_days": 3.01
+      "probability": 0.6562,
+      "expected_duration_days": 2.91
     },
     "volatility_regime": "high",
     "signals_counter": {
@@ -37,10 +37,10 @@
       "median_bounce_pct": 3.61,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM bull (0.67), vol high, signals buy (8b/2s/5n)."
+    "narrative_short": "TA score 6/10 (neutral), alignment mixed, HMM bull (0.66), vol high, signals buy (8b/2s/5n)."
   },
   "notes": {
-    "atr_daily": 5.7714,
+    "atr_daily": 5.8021,
     "atr_pct_daily": null,
     "beta_60d": 2.6115,
     "beta_benchmark": "IWM",
@@ -97,20 +97,20 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 63.0204,
-        "max": 63.3996
+        "min": 62.9805,
+        "max": 63.3595
       },
       "stop": {
-        "price": 54.9629,
+        "price": 54.9168,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -13.05
+        "distance_pct": -13.07
       },
       "targets": [
         {
           "level": 1,
           "price": 80.3845,
           "basis": "next_resistance",
-          "rr": 2.08
+          "rr": 2.09
         },
         {
           "level": 2,
@@ -138,32 +138,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 64.094,
-        "max": 64.3501
+        "min": 64.1341,
+        "max": 64.3903
       },
       "stop": {
-        "price": 61.1443,
+        "price": 61.1689,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -4.79
+        "distance_pct": -4.81
       },
       "targets": [
         {
           "level": 1,
           "price": 80.3845,
           "basis": "next_resistance",
-          "rr": 5.25
+          "rr": 5.21
         },
         {
           "level": 2,
           "price": 93.5481,
           "basis": "fib_extension_1272",
-          "rr": 9.53
+          "rr": 9.47
         },
         {
           "level": 3,
           "price": 111.7615,
           "basis": "fib_extension_1618",
-          "rr": 15.45
+          "rr": 15.36
         }
       ],
       "preferred_target": 1,

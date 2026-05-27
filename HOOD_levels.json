@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "HOOD",
-    "generated_at": "2026-05-26T21:52:50Z",
+    "generated_at": "2026-05-27T04:17:43Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-27T08:00:00Z",
-    "valid_until": "2026-05-27T21:00:00Z",
+    "valid_from": "2026-05-28T08:00:00Z",
+    "valid_until": "2026-05-28T21:00:00Z",
     "source_precomputed": "HOOD_precomputed.json"
   },
   "context": {
@@ -19,8 +19,8 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bear",
-      "probability": 0.5448,
-      "expected_duration_days": 2.2
+      "probability": 0.5434,
+      "expected_duration_days": 2.19
     },
     "volatility_regime": "low",
     "signals_counter": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM bear (0.54), vol low, signals neutral (2b/5s/8n)."
   },
   "notes": {
-    "atr_daily": 3.8653,
+    "atr_daily": 3.8664,
     "atr_pct_daily": null,
     "beta_60d": 1.9208,
     "beta_benchmark": "IWM",
@@ -80,7 +80,7 @@
         "max": 70.9305
       },
       "stop": {
-        "price": 67.5359,
+        "price": 67.5358,
         "basis": "sr_below_confluence_support",
         "distance_pct": -2.72
       },
@@ -162,7 +162,7 @@
         "max": 67.0144
       },
       "stop": {
-        "price": 60.8831,
+        "price": 60.8815,
         "basis": "fallback_psych_-10pct",
         "distance_pct": -8.24
       },
@@ -183,7 +183,7 @@
           "level": 3,
           "price": 118.4067,
           "basis": "resistance_3",
-          "rr": 9.53
+          "rr": 9.52
         }
       ],
       "preferred_target": 1,
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 60.2743,
+    "price": 60.2727,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
