@@ -1,0 +1,228 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "SMCI",
+    "generated_at": "2026-05-27T04:17:43Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-05-28T08:00:00Z",
+    "valid_until": "2026-05-28T21:00:00Z",
+    "source_precomputed": "SMCI_precomputed.json"
+  },
+  "context": {
+    "last_price": 37.1,
+    "ta_score": {
+      "value": 2,
+      "max": 10,
+      "label": "bearish"
+    },
+    "alignment_flag": "mixed",
+    "hmm_regime": {
+      "state": "sideways",
+      "probability": 0.9,
+      "expected_duration_days": 30.0
+    },
+    "volatility_regime": "high",
+    "signals_counter": {
+      "buy": 7,
+      "sell": 3,
+      "neutral": 5,
+      "total": 15,
+      "verdict": "neutral_to_bullish"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_>=70_dist_ma20_>+10",
+      "win_rate": 0.78,
+      "sample_size": 18,
+      "median_bounce_pct": 3.15,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (0.90), vol high, signals neutral_to_bullish (7b/3s/5n)."
+  },
+  "notes": {
+    "atr_daily": 2.6829,
+    "atr_pct_daily": null,
+    "beta_60d": 2.8855,
+    "beta_benchmark": "IWM",
+    "beta_corr_60d": 0.5811,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "",
+      "date": "",
+      "confidence": null
+    },
+    "divergences": [
+      {
+        "indicator": "rsi",
+        "type": "bearish",
+        "confidence": 0.59,
+        "bars_ago": 11,
+        "at_price": null
+      },
+      {
+        "indicator": "macd_hist",
+        "type": "bearish",
+        "confidence": 0.45,
+        "bars_ago": 11,
+        "at_price": null
+      },
+      {
+        "indicator": "macd_hist",
+        "type": "hidden_bullish",
+        "confidence": 0.4,
+        "bars_ago": 4,
+        "at_price": null
+      },
+      {
+        "indicator": "obv",
+        "type": "hidden_bullish",
+        "confidence": 0.42,
+        "bars_ago": 4,
+        "at_price": null
+      }
+    ],
+    "drawdown": {
+      "current_dd_pct": -38.89,
+      "ath_price": 60.71,
+      "ath_date": "2025-07-30",
+      "max_dd_1y_pct": -66.18,
+      "days_in_dd": 300,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 33.7243,
+        "max": 34.2898
+      },
+      "stop": {
+        "price": 33.0757,
+        "basis": "atr_below_confluence_support",
+        "distance_pct": -2.74
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 40.4647,
+          "basis": "next_resistance",
+          "rr": 6.93
+        },
+        {
+          "level": 2,
+          "price": 64.4649,
+          "basis": "fib_extension_1272",
+          "rr": 32.7
+        },
+        {
+          "level": 3,
+          "price": 76.4157,
+          "basis": "fib_extension_1618",
+          "rr": 45.53
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support FIB_382 + VPVR_VAH (strength 6.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 38.1083,
+        "max": 38.2606
+      },
+      "stop": {
+        "price": 37.611,
+        "basis": "below_broken_resistance",
+        "distance_pct": -1.5
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 41.8757,
+          "basis": "fib_618",
+          "rr": 6.44
+        },
+        {
+          "level": 2,
+          "price": 47.6784,
+          "basis": "fib_786",
+          "rr": 16.56
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance FIB_50 + BB_UPPER (strength 5.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 28.0316,
+        "max": 28.6814
+      },
+      "stop": {
+        "price": 26.9103,
+        "basis": "deep_below_confluence_support_4pct",
+        "distance_pct": -5.1
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 40.4647,
+          "basis": "next_resistance",
+          "rr": 8.37
+        },
+        {
+          "level": 2,
+          "price": 64.4649,
+          "basis": "fib_extension_1272",
+          "rr": 24.97
+        },
+        {
+          "level": 3,
+          "price": 76.4157,
+          "basis": "fib_extension_1618",
+          "rr": 33.23
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Deep value mecanique : entree sur confluence support basse MA50 + FIB_236 (strength 5.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=2<4",
+  "global_conditions": [
+    {
+      "id": "session_us_open",
+      "type": "session_window",
+      "params": {
+        "session": "us_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 26.6412,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
