@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMR",
-    "generated_at": "2026-05-27T21:55:53Z",
+    "generated_at": "2026-05-28T04:21:14Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-28T08:00:00Z",
-    "valid_until": "2026-05-28T21:00:00Z",
+    "valid_from": "2026-05-29T08:00:00Z",
+    "valid_until": "2026-05-29T21:00:00Z",
     "source_precomputed": "SMR_precomputed.json"
   },
   "context": {
@@ -18,8 +18,8 @@
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
-      "state": "bull",
-      "probability": 0.5141,
+      "state": "sideways",
+      "probability": 0.5147,
       "expected_duration_days": 2.06
     },
     "volatility_regime": "low",
@@ -37,10 +37,10 @@
       "median_bounce_pct": -0.47,
       "confidence": "low"
     },
-    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM bull (0.51), vol low, signals neutral (5b/1s/9n)."
+    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM sideways (0.51), vol low, signals neutral (5b/1s/9n)."
   },
   "notes": {
-    "atr_daily": 1.0475,
+    "atr_daily": 1.0546,
     "atr_pct_daily": null,
     "beta_60d": 2.8044,
     "beta_benchmark": "IWM",
@@ -109,32 +109,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 12.1421,
-        "max": 12.1906
+        "min": 12.1521,
+        "max": 12.2007
       },
       "stop": {
-        "price": 11.6062,
+        "price": 11.6127,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -4.6
+        "distance_pct": -4.63
       },
       "targets": [
         {
           "level": 1,
           "price": 13.052,
           "basis": "vpvr_vah",
-          "rr": 1.58
+          "rr": 1.55
         },
         {
           "level": 2,
           "price": 22.2552,
           "basis": "resistance_2",
-          "rr": 18.01
+          "rr": 17.88
         },
         {
           "level": 3,
           "price": 30.14,
           "basis": "resistance_3",
-          "rr": 32.09
+          "rr": 31.86
         }
       ],
       "preferred_target": 1,

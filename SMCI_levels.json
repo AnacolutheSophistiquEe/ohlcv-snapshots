@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-05-27T21:55:53Z",
+    "generated_at": "2026-05-28T04:21:14Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-28T08:00:00Z",
-    "valid_until": "2026-05-28T21:00:00Z",
+    "valid_from": "2026-05-29T08:00:00Z",
+    "valid_until": "2026-05-29T21:00:00Z",
     "source_precomputed": "SMCI_precomputed.json"
   },
   "context": {
@@ -19,7 +19,7 @@
     "alignment_flag": "triple_bullish",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.5264,
+      "probability": 0.5255,
       "expected_duration_days": 2.11
     },
     "volatility_regime": "normal",
@@ -40,16 +40,16 @@
     "narrative_short": "TA score 4/10 (neutral), alignment triple_bullish, HMM bull (0.53), vol normal, signals buy (10b/2s/4n)."
   },
   "notes": {
-    "atr_daily": 2.3382,
+    "atr_daily": 2.3386,
     "atr_pct_daily": null,
     "beta_60d": 2.9085,
     "beta_benchmark": "IWM",
     "beta_corr_60d": 0.5843,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "",
-      "date": "",
-      "confidence": null
+      "name": "doji",
+      "date": "2026-05-27",
+      "confidence": 0.515
     },
     "divergences": [
       {
@@ -142,7 +142,7 @@
         "max": 38.5719
       },
       "stop": {
-        "price": 37.2109,
+        "price": 37.2107,
         "basis": "fallback_pivot_camarilla_r1",
         "distance_pct": -3.34
       },
@@ -183,7 +183,7 @@
         "max": 30.4873
       },
       "stop": {
-        "price": 26.8283,
+        "price": 26.8277,
         "basis": "fallback_fib_fib_236",
         "distance_pct": -11.12
       },
@@ -228,7 +228,7 @@
     }
   ],
   "invalidation": {
-    "price": 26.56,
+    "price": 26.5594,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

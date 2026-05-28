@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-05-27T21:55:53Z",
+    "generated_at": "2026-05-28T04:21:14Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-05-28T08:00:00Z",
-    "valid_until": "2026-05-28T21:00:00Z",
+    "valid_from": "2026-05-29T08:00:00Z",
+    "valid_until": "2026-05-29T21:00:00Z",
     "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (2b/4s/9n)."
   },
   "notes": {
-    "atr_daily": 10.5263,
+    "atr_daily": 10.5264,
     "atr_pct_daily": null,
     "beta_60d": 1.9205,
     "beta_benchmark": "IWM",
@@ -142,7 +142,7 @@
         "max": 155.3127
       },
       "stop": {
-        "price": 149.2769,
+        "price": 149.2768,
         "basis": "fallback_pivot_camarilla_r1",
         "distance_pct": -3.69
       },
@@ -157,7 +157,7 @@
           "level": 2,
           "price": 292.36,
           "basis": "resistance_2",
-          "rr": 23.99
+          "rr": 23.98
         },
         {
           "level": 3,
@@ -183,7 +183,7 @@
         "max": 113.5549
       },
       "stop": {
-        "price": 97.2006,
+        "price": 97.2004,
         "basis": "fallback_sr_support",
         "distance_pct": -13.54
       },
@@ -228,7 +228,7 @@
     }
   ],
   "invalidation": {
-    "price": 96.2286,
+    "price": 96.2284,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
