@@ -1,7 +1,12 @@
 {
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-05-28T04:14:30.562993+00:00",
+    "display_ticker": "IONQ",
+    "long_name": "IonQ Inc.",
+    "exchange": "NYSE",
+    "currency": "USD",
+    "isin": "US46222L1089",
+    "generated_at": "2026-05-28T04:49:27.733282+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1969,14 +1974,14 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-28T04:14:16.854238+00:00",
+    "generated_at": "2026-05-28T04:49:14.560984+00:00",
     "ticker": "IONQ",
     "horizons_days": {
       "intraday": 7,
       "swing": 30,
       "deep": 90
     },
-    "n_events": 33,
+    "n_events": 34,
     "events": [
       {
         "date": "2026-05-28",
@@ -2308,6 +2313,20 @@
         "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
       },
       {
+        "date": "2026-06-30",
+        "type": "macro",
+        "label": "US Conference Board Consumer Confidence",
+        "importance": "medium",
+        "sessions_to_event": 24,
+        "calendar_days": 33,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
         "date": "2026-07-08",
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
@@ -2552,7 +2571,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-28T04:14:07.400516+00:00",
+    "generated_at": "2026-05-28T04:49:05.136739+00:00",
     "ticker": "IONQ",
     "window_sessions": 60,
     "n_observations_aligned": 56,
@@ -2711,7 +2730,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-05-28T04:14:09.552065+00:00",
+    "generated_at": "2026-05-28T04:49:07.334337+00:00",
     "ticker": "IONQ",
     "spot_price": 65.4,
     "expiries_available": [
@@ -2737,61 +2756,46 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 1.0579,
-      "iv_atm_90d": 1.0579,
+      "iv_atm_30d": null,
+      "iv_atm_90d": null,
       "rv_20d_annualized": 1.0361,
-      "iv_rv_ratio": 1.021,
+      "iv_rv_ratio": null,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -10.4,
-      "label": "low"
+      "skew_25_delta_vol_pts": null,
+      "label": null
     },
     "term_structure": {
       "m1_expiry": "2026-05-29",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 1.1997,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-06-26",
       "m3_days_to_exp": 29,
-      "m3_iv_atm": 1.0579,
-      "ratio_m1_m3": 1.1341,
-      "label": "backwardation"
+      "m3_iv_atm": null,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
-    "open_interest_m1": {
-      "expiry": "2026-05-29",
-      "days_to_exp": 1,
-      "put_call_ratio": 1.757,
-      "total_oi_m1": 88197,
-      "largest_call_strike_oi": {
-        "strike": 70.0,
-        "oi": 5756
-      },
-      "largest_put_strike_oi": {
-        "strike": 34.0,
-        "oi": 17320
-      }
-    },
+    "open_interest_m1": null,
     "gex": {
-      "gex_total_usd_per_point": 680349634.0,
-      "gex_label": "positive_stabilizing",
+      "gex_total_usd_per_point": -39532.0,
+      "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 55.0,
+      "strike": 19.0,
       "expiry": "2026-05-29",
-      "gap_vs_spot_pct": -15.9
+      "gap_vs_spot_pct": -70.95
     },
     "verdict": {
-      "label": "favorable",
-      "bullish_signals": 2,
-      "bearish_signals": 1,
+      "label": "neutral",
+      "bullish_signals": 0,
+      "bearish_signals": 0,
       "notes": [
-        "skew faible (-10.4 pts) — peu de demande de protection",
-        "GEX positif (680.3M$/pt) = MM long gamma stabilisateur",
-        "max pain 55.00 vs spot 65.40 (-15.9%)",
-        "P/C ratio élevé (1.76) — hedge ou panique"
+        "max pain 19.00 vs spot 65.40 (-70.9%)"
       ]
     },
     "liquidity_stats": {
@@ -2801,28 +2805,28 @@
       "per_expiry": {
         "2026-05-29": {
           "total_strikes": 134,
-          "liquid_strikes": 57,
-          "filter_ratio_pct": 42.5
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-05": {
           "total_strikes": 110,
-          "liquid_strikes": 51,
-          "filter_ratio_pct": 46.4
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 96,
-          "liquid_strikes": 49,
-          "filter_ratio_pct": 51.0
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 94,
-          "liquid_strikes": 53,
-          "filter_ratio_pct": 56.4
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-26": {
           "total_strikes": 79,
-          "liquid_strikes": 31,
-          "filter_ratio_pct": 39.2
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         }
       }
     },
@@ -2830,7 +2834,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-05-28T04:14:15.899253+00:00",
+    "generated_at": "2026-05-28T04:49:13.686665+00:00",
     "ticker": "IONQ",
     "short_interest": {
       "status": "ok",
@@ -2844,7 +2848,7 @@
       "float_shares": 370548810,
       "delta_shares_short_mom_pct": 3.44,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-05-28T04:14:10.627862+00:00"
+      "fetched_at": "2026-05-28T04:49:08.375160+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2927,7 +2931,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 8,
-      "fetched_at": "2026-05-28T04:14:15.897836+00:00"
+      "fetched_at": "2026-05-28T04:49:13.685628+00:00"
     },
     "data_quality": {
       "short_data_available": true,

@@ -1,7 +1,12 @@
 {
   "meta": {
     "ticker": "SAF",
-    "generated_at": "2026-05-28T04:06:20.278349+00:00",
+    "display_ticker": "SAF",
+    "long_name": "Safran SA",
+    "exchange": "Euronext Paris",
+    "currency": "EUR",
+    "isin": "FR0000073272",
+    "generated_at": "2026-05-28T04:41:28.115346+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1921,14 +1926,14 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-28T04:06:06.939247+00:00",
+    "generated_at": "2026-05-28T04:41:15.049097+00:00",
     "ticker": "SAF",
     "horizons_days": {
       "intraday": 7,
       "swing": 30,
       "deep": 90
     },
-    "n_events": 32,
+    "n_events": 33,
     "events": [
       {
         "date": "2026-05-28",
@@ -2260,6 +2265,20 @@
         "recommendation": null
       },
       {
+        "date": "2026-06-30",
+        "type": "macro",
+        "label": "US Conference Board Consumer Confidence",
+        "importance": "medium",
+        "sessions_to_event": 24,
+        "calendar_days": 33,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
         "date": "2026-07-08",
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
@@ -2490,7 +2509,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-28T04:06:04.832337+00:00",
+    "generated_at": "2026-05-28T04:41:13.181261+00:00",
     "ticker": "SAF",
     "window_sessions": 60,
     "n_observations_aligned": 54,
@@ -10347,12 +10366,12 @@
     "parkinson_20d_annualized_pct": 35.91,
     "yang_zhang_20d_annualized_pct": 39.49,
     "volatility_cone": {
-      "current_rv_5d": 43.286138096302906,
-      "p10": 11.11461438887827,
-      "p25": 15.886378829215603,
+      "current_rv_5d": 43.28613809630289,
+      "p10": 11.114614388878286,
+      "p25": 15.886378829215616,
       "p50": 22.68096558846335,
-      "p75": 31.826998546038237,
-      "p90": 44.635850835994106,
+      "p75": 31.826998546038215,
+      "p90": 44.6358508359941,
       "current_percentile": 89.3
     },
     "fit_source": "long_csv",
