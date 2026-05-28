@@ -1,15 +1,15 @@
 {
   "available": true,
-  "generated_at": "2026-05-28T21:53:56.935073+00:00",
-  "prediction_id": "HOOD_A_20260528",
+  "generated_at": "2026-05-28T21:37:01.049267+00:00",
+  "prediction_id": "SRT3_A_20260528",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "HOOD",
-  "exchange": "SMART",
-  "currency": "USD",
+  "symbol": "SRT3",
+  "exchange": "IBIS",
+  "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 84.42,
+    "limit_price": 238.8,
     "quantity": 1,
     "tif": "DAY"
   },
@@ -17,21 +17,21 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 85.34,
+      "limit_price": 283.55,
       "quantity": 1,
       "tif": "GTC",
-      "tag": "T1"
+      "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 78.24,
+      "stop_price": 227.25,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "HOOD_A_intraday_20260528",
+  "oca_group": "SRT3_A_intraday_20260528",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -45,7 +45,7 @@
     "order_validity": {
       "type": "DAY",
       "offset_sessions": 0,
-      "good_till_date": "2026-05-28T22:00:00+00:00"
+      "good_till_date": "2026-05-28T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -53,18 +53,13 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.5,
-      0.3,
-      0.2
+      0.6,
+      0.4
     ],
     "qty_split": [
       {
-        "tag": "T1",
-        "qty": 1
-      },
-      {
         "tag": "T2",
-        "qty": 0
+        "qty": 1
       },
       {
         "tag": "T3",
@@ -76,15 +71,14 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 5.0,
+    "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.5865,
+    "ev_pct_risk": -0.5062,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.7883,
-      "T2": 0.0,
+      "T2": 0.001,
       "T3": 0.0
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
@@ -92,17 +86,17 @@
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 84.84,
-    "hold_tolerance_breach_price": null,
+    "notional_eur": 240.0,
+    "hold_tolerance_breach_price": 180.0,
     "hold_fallback_active": true,
-    "prediction_id": "HOOD_A_20260528"
+    "prediction_id": "SRT3_A_20260528"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.01,
+    "tick_size_used": 0.05,
     "qty_total_positive": true
   }
 }
