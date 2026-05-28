@@ -1,7 +1,12 @@
 {
   "meta": {
     "ticker": "SOFI",
-    "generated_at": "2026-05-28T04:20:33.198165+00:00",
+    "display_ticker": "SOFI",
+    "long_name": "SoFi Technologies Inc.",
+    "exchange": "NASDAQ",
+    "currency": "USD",
+    "isin": "US83406F1021",
+    "generated_at": "2026-05-28T04:55:16.880215+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1960,7 +1965,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-28T04:20:19.593792+00:00",
+    "generated_at": "2026-05-28T04:55:03.783997+00:00",
     "ticker": "SOFI",
     "horizons_days": {
       "intraday": 7,
@@ -2557,7 +2562,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-28T04:20:08.323101+00:00",
+    "generated_at": "2026-05-28T04:54:51.801574+00:00",
     "ticker": "SOFI",
     "window_sessions": 60,
     "n_observations_aligned": 56,
@@ -2716,7 +2721,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-05-28T04:20:10.605413+00:00",
+    "generated_at": "2026-05-28T04:54:54.321654+00:00",
     "ticker": "SOFI",
     "spot_price": 16.17,
     "expiries_available": [
@@ -2742,60 +2747,46 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.5498,
-      "iv_atm_90d": 0.5498,
+      "iv_atm_30d": null,
+      "iv_atm_90d": null,
       "rv_20d_annualized": 0.7147,
-      "iv_rv_ratio": 0.769,
+      "iv_rv_ratio": null,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -4.785,
-      "label": "low"
+      "skew_25_delta_vol_pts": null,
+      "label": null
     },
     "term_structure": {
       "m1_expiry": "2026-05-29",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.6152,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-06-26",
       "m3_days_to_exp": 29,
-      "m3_iv_atm": 0.5498,
-      "ratio_m1_m3": 1.119,
-      "label": "backwardation"
+      "m3_iv_atm": null,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
-    "open_interest_m1": {
-      "expiry": "2026-05-29",
-      "days_to_exp": 1,
-      "put_call_ratio": 0.597,
-      "total_oi_m1": 305010,
-      "largest_call_strike_oi": {
-        "strike": 17.0,
-        "oi": 32216
-      },
-      "largest_put_strike_oi": {
-        "strike": 15.0,
-        "oi": 27242
-      }
-    },
+    "open_interest_m1": null,
     "gex": {
-      "gex_total_usd_per_point": 997023421.0,
-      "gex_label": "positive_stabilizing",
+      "gex_total_usd_per_point": 0.0,
+      "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 16.0,
+      "strike": 5.0,
       "expiry": "2026-05-29",
-      "gap_vs_spot_pct": -1.05
+      "gap_vs_spot_pct": -69.08
     },
     "verdict": {
-      "label": "bullish",
-      "bullish_signals": 3,
+      "label": "neutral",
+      "bullish_signals": 0,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-4.8 pts) — peu de demande de protection",
-        "GEX positif (997.0M$/pt) = MM long gamma stabilisateur",
-        "P/C ratio bas (0.60) — biais call dominant"
+        "max pain 5.00 vs spot 16.17 (-69.1%)"
       ]
     },
     "liquidity_stats": {
@@ -2805,28 +2796,28 @@
       "per_expiry": {
         "2026-05-29": {
           "total_strikes": 66,
-          "liquid_strikes": 19,
-          "filter_ratio_pct": 28.8
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-05": {
           "total_strikes": 66,
-          "liquid_strikes": 29,
-          "filter_ratio_pct": 43.9
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 64,
-          "liquid_strikes": 26,
-          "filter_ratio_pct": 40.6
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 115,
-          "liquid_strikes": 47,
-          "filter_ratio_pct": 40.9
+          "liquid_strikes": 1,
+          "filter_ratio_pct": 0.9
         },
         "2026-06-26": {
           "total_strikes": 59,
-          "liquid_strikes": 26,
-          "filter_ratio_pct": 44.1
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         }
       }
     },
@@ -2834,7 +2825,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-05-28T04:20:18.655068+00:00",
+    "generated_at": "2026-05-28T04:55:02.869895+00:00",
     "ticker": "SOFI",
     "short_interest": {
       "status": "ok",
@@ -2848,7 +2839,7 @@
       "float_shares": 1263140914,
       "delta_shares_short_mom_pct": 9.33,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-05-28T04:20:11.731936+00:00"
+      "fetched_at": "2026-05-28T04:54:55.477828+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2957,7 +2948,7 @@
         "vesting_exercises_dominant": true
       },
       "all_transactions_count": 20,
-      "fetched_at": "2026-05-28T04:20:18.653862+00:00"
+      "fetched_at": "2026-05-28T04:55:02.869093+00:00"
     },
     "data_quality": {
       "short_data_available": true,

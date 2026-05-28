@@ -1,7 +1,12 @@
 {
   "meta": {
     "ticker": "SMR",
-    "generated_at": "2026-05-28T04:18:07.127783+00:00",
+    "display_ticker": "SMR",
+    "long_name": "NuScale Power Corp.",
+    "exchange": "NYSE",
+    "currency": "USD",
+    "isin": "US67079K1051",
+    "generated_at": "2026-05-28T04:52:53.321833+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1952,14 +1957,14 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-05-28T04:17:53.338160+00:00",
+    "generated_at": "2026-05-28T04:52:40.018723+00:00",
     "ticker": "SMR",
     "horizons_days": {
       "intraday": 7,
       "swing": 30,
       "deep": 90
     },
-    "n_events": 33,
+    "n_events": 34,
     "events": [
       {
         "date": "2026-05-28",
@@ -2291,6 +2296,20 @@
         "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
       },
       {
+        "date": "2026-06-30",
+        "type": "macro",
+        "label": "US Conference Board Consumer Confidence",
+        "importance": "medium",
+        "sessions_to_event": 24,
+        "calendar_days": 33,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
         "date": "2026-07-08",
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
@@ -2535,7 +2554,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-05-28T04:17:43.290389+00:00",
+    "generated_at": "2026-05-28T04:52:29.962094+00:00",
     "ticker": "SMR",
     "window_sessions": 60,
     "n_observations_aligned": 56,
@@ -2694,7 +2713,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-05-28T04:17:45.999162+00:00",
+    "generated_at": "2026-05-28T04:52:32.625659+00:00",
     "ticker": "SMR",
     "spot_price": 12.07,
     "expiries_available": [
@@ -2720,59 +2739,46 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 1.0107,
-      "iv_atm_90d": 1.0107,
+      "iv_atm_30d": null,
+      "iv_atm_90d": null,
       "rv_20d_annualized": 0.9868,
-      "iv_rv_ratio": 1.024,
+      "iv_rv_ratio": null,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -3.613,
-      "label": "low"
+      "skew_25_delta_vol_pts": null,
+      "label": null
     },
     "term_structure": {
       "m1_expiry": "2026-05-29",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 1.1582,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-06-26",
       "m3_days_to_exp": 29,
-      "m3_iv_atm": 1.0107,
-      "ratio_m1_m3": 1.1459,
-      "label": "backwardation"
+      "m3_iv_atm": null,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
-    "open_interest_m1": {
-      "expiry": "2026-05-29",
-      "days_to_exp": 1,
-      "put_call_ratio": 0.641,
-      "total_oi_m1": 47796,
-      "largest_call_strike_oi": {
-        "strike": 12.0,
-        "oi": 4933
-      },
-      "largest_put_strike_oi": {
-        "strike": 11.0,
-        "oi": 3896
-      }
-    },
+    "open_interest_m1": null,
     "gex": {
-      "gex_total_usd_per_point": 129039864.0,
-      "gex_label": "positive_stabilizing",
+      "gex_total_usd_per_point": -24741.0,
+      "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 11.5,
+      "strike": 1.0,
       "expiry": "2026-05-29",
-      "gap_vs_spot_pct": -4.72
+      "gap_vs_spot_pct": -91.71
     },
     "verdict": {
-      "label": "bullish",
-      "bullish_signals": 2,
+      "label": "neutral",
+      "bullish_signals": 0,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-3.6 pts) — peu de demande de protection",
-        "GEX positif (129.0M$/pt) = MM long gamma stabilisateur"
+        "max pain 1.00 vs spot 12.07 (-91.7%)"
       ]
     },
     "liquidity_stats": {
@@ -2782,28 +2788,28 @@
       "per_expiry": {
         "2026-05-29": {
           "total_strikes": 75,
-          "liquid_strikes": 18,
-          "filter_ratio_pct": 24.0
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-05": {
           "total_strikes": 68,
-          "liquid_strikes": 21,
-          "filter_ratio_pct": 30.9
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 62,
-          "liquid_strikes": 20,
-          "filter_ratio_pct": 32.3
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 131,
-          "liquid_strikes": 47,
-          "filter_ratio_pct": 35.9
+          "liquid_strikes": 3,
+          "filter_ratio_pct": 2.3
         },
         "2026-06-26": {
           "total_strikes": 56,
-          "liquid_strikes": 19,
-          "filter_ratio_pct": 33.9
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         }
       }
     },
@@ -2811,7 +2817,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-05-28T04:17:52.404647+00:00",
+    "generated_at": "2026-05-28T04:52:39.143468+00:00",
     "ticker": "SMR",
     "short_interest": {
       "status": "ok",
@@ -2825,7 +2831,7 @@
       "float_shares": 339325573,
       "delta_shares_short_mom_pct": -9.89,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-05-28T04:17:47.109616+00:00"
+      "fetched_at": "2026-05-28T04:52:33.886768+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2894,7 +2900,7 @@
         "vesting_exercises_dominant": true
       },
       "all_transactions_count": 26,
-      "fetched_at": "2026-05-28T04:17:52.403631+00:00"
+      "fetched_at": "2026-05-28T04:52:39.142523+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -10493,7 +10499,7 @@
   },
   "beta_tail": {
     "available": true,
-    "beta_up_days": 2.4353,
+    "beta_up_days": 2.4352,
     "beta_down_days": 2.9715,
     "beta_asymmetry": 1.2202,
     "n_up_days": 144,
