@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-05-29T04:17:40.348833+00:00",
+  "generated_at": "2026-05-29T21:54:04.347009+00:00",
   "prediction_id": "HOOD_A_20260529",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "HOOD",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 84.42,
+    "limit_price": 93.83,
     "quantity": 1,
     "tif": "DAY"
   },
@@ -17,7 +17,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 85.34,
+      "limit_price": 110.29,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
@@ -25,7 +25,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 78.24,
+      "stop_price": 86.91,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
@@ -76,15 +76,15 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 5.0,
+    "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.5865,
+    "ev_pct_risk": -0.8392,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.7883,
-      "T2": 0.0,
+      "T1": 0.108,
+      "T2": 0.0001,
       "T3": 0.0
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
@@ -92,7 +92,7 @@
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 84.84,
+    "notional_eur": 94.3,
     "hold_tolerance_breach_price": null,
     "hold_fallback_active": true,
     "prediction_id": "HOOD_A_20260529"
