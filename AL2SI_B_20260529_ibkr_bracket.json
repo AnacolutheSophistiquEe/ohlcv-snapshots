@@ -1,0 +1,111 @@
+{
+  "available": true,
+  "generated_at": "2026-05-29T04:06:20.074461+00:00",
+  "prediction_id": "AL2SI_B_20260529",
+  "account": "${IBKR_ACCOUNT_ID}",
+  "symbol": "AL2SI",
+  "exchange": "SBF",
+  "currency": "EUR",
+  "parent": {
+    "action": "BUY",
+    "order_type": "LMT",
+    "limit_price": 49.42,
+    "quantity": 8,
+    "tif": "GTD",
+    "gtd": "2026-06-19T16:30:00+00:00"
+  },
+  "children": [
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 60.69,
+      "quantity": 5,
+      "tif": "GTC",
+      "tag": "T2"
+    },
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 75.02,
+      "quantity": 3,
+      "tif": "GTC",
+      "tag": "T3"
+    },
+    {
+      "action": "SELL",
+      "order_type": "STP",
+      "stop_price": 44.91,
+      "quantity": 8,
+      "tif": "GTC",
+      "tag": "SL"
+    }
+  ],
+  "oca_group": "AL2SI_B_swing_20260529",
+  "oca_type": 1,
+  "execution_rules": {
+    "stop_mode": "breakeven_after_T1",
+    "stop_mode_description": "SL → prix d'entrée après hit T1",
+    "trail_distance_atr": null,
+    "time_stop": {
+      "enabled": true,
+      "max_holding_sessions": 21,
+      "exit_mode": "market_close_at_breakeven"
+    },
+    "order_validity": {
+      "type": "GTD",
+      "offset_sessions": 21,
+      "good_till_date": "2026-06-19T16:30:00+00:00"
+    },
+    "scale_out_weights": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "scale_out_weights_normalized": [
+      0.6,
+      0.4
+    ],
+    "qty_split": [
+      {
+        "tag": "T2",
+        "qty": 5
+      },
+      {
+        "tag": "T3",
+        "qty": 3
+      }
+    ]
+  },
+  "bracket_metadata": {
+    "plan_id": "B",
+    "horizon": "swing",
+    "horizon_label_long": "swing_1_3_weeks",
+    "composite_score": 5.0,
+    "composite_score_source": "horizon_ta_score.plan_b.score",
+    "ev_pct_risk": 0.9865,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
+    "ev_pct_risk_threshold": 0.3,
+    "ev_status": "validated",
+    "p_hit_upper": {
+      "T2": 0.8519,
+      "T3": 0.4468
+    },
+    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
+    "p_fill": null,
+    "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
+    "rating": null,
+    "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
+    "notional_eur": 395.36,
+    "hold_tolerance_breach_price": 37.065,
+    "hold_fallback_active": true,
+    "prediction_id": "AL2SI_B_20260529"
+  },
+  "sanity_checks": {
+    "all_targets_above_entry": true,
+    "stop_below_entry": true,
+    "stop_above_zero": true,
+    "qty_split_sum_equals_total": true,
+    "tick_size_used": 0.01,
+    "qty_total_positive": true
+  }
+}
