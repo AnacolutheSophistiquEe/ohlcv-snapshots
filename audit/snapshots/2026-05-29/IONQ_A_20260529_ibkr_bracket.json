@@ -1,0 +1,124 @@
+{
+  "available": true,
+  "generated_at": "2026-05-29T04:13:08.665564+00:00",
+  "prediction_id": "IONQ_A_20260529",
+  "account": "${IBKR_ACCOUNT_ID}",
+  "symbol": "IONQ",
+  "exchange": "SMART",
+  "currency": "USD",
+  "parent": {
+    "action": "BUY",
+    "order_type": "LMT",
+    "limit_price": 69.79,
+    "quantity": 7,
+    "tif": "DAY"
+  },
+  "children": [
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 80.38,
+      "quantity": 4,
+      "tif": "GTC",
+      "tag": "T1"
+    },
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 92.99,
+      "quantity": 2,
+      "tif": "GTC",
+      "tag": "T2"
+    },
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 110.8,
+      "quantity": 1,
+      "tif": "GTC",
+      "tag": "T3"
+    },
+    {
+      "action": "SELL",
+      "order_type": "STP",
+      "stop_price": 61.22,
+      "quantity": 7,
+      "tif": "GTC",
+      "tag": "SL"
+    }
+  ],
+  "oca_group": "IONQ_A_intraday_20260529",
+  "oca_type": 1,
+  "execution_rules": {
+    "stop_mode": "fixed",
+    "stop_mode_description": "SL hard statique, pas de trailing",
+    "trail_distance_atr": null,
+    "time_stop": {
+      "enabled": true,
+      "max_holding_sessions": 1,
+      "exit_mode": "market_close_unconditional"
+    },
+    "order_validity": {
+      "type": "DAY",
+      "offset_sessions": 0,
+      "good_till_date": "2026-05-29T22:00:00+00:00"
+    },
+    "scale_out_weights": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "scale_out_weights_normalized": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "qty_split": [
+      {
+        "tag": "T1",
+        "qty": 4
+      },
+      {
+        "tag": "T2",
+        "qty": 2
+      },
+      {
+        "tag": "T3",
+        "qty": 1
+      }
+    ]
+  },
+  "bracket_metadata": {
+    "plan_id": "A",
+    "horizon": "intraday",
+    "horizon_label_long": "intraday",
+    "composite_score": 6.0,
+    "composite_score_source": "horizon_ta_score.plan_a.score",
+    "ev_pct_risk": -0.4089,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
+    "ev_pct_risk_threshold": 0.3,
+    "ev_status": "negative_ev",
+    "p_hit_upper": {
+      "T1": 0.4419,
+      "T2": 0.1089,
+      "T3": 0.0058
+    },
+    "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
+    "p_fill": null,
+    "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
+    "rating": null,
+    "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
+    "notional_eur": 490.98,
+    "hold_tolerance_breach_price": 52.605,
+    "hold_fallback_active": true,
+    "prediction_id": "IONQ_A_20260529"
+  },
+  "sanity_checks": {
+    "all_targets_above_entry": true,
+    "stop_below_entry": true,
+    "stop_above_zero": true,
+    "qty_split_sum_equals_total": true,
+    "tick_size_used": 0.01,
+    "qty_total_positive": true
+  }
+}
