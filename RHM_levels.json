@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RHM",
-    "generated_at": "2026-06-01T16:10:09Z",
+    "generated_at": "2026-06-01T19:19:59Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-02T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "RHM_precomputed.json"
   },
   "context": {
-    "last_price": 1207.4,
+    "last_price": 1207.0,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "triple_bearish",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.7929,
-      "expected_duration_days": 4.83
+      "probability": 0.7918,
+      "expected_duration_days": 4.8
     },
     "volatility_regime": "low",
     "signals_counter": {
@@ -31,20 +31,20 @@
       "verdict": "strong_sell"
     },
     "mean_reversion_score": {
-      "setup": "rsi_50-60_dist_ma20_-2_+2",
-      "win_rate": 0.65,
-      "sample_size": 17,
-      "median_bounce_pct": 1.92,
-      "confidence": "medium"
+      "setup": "rsi_50-60_dist_ma20_-5_-2",
+      "win_rate": 1.0,
+      "sample_size": 5,
+      "median_bounce_pct": 1.68,
+      "confidence": "low"
     },
     "narrative_short": "TA score 4/10 (bearish), alignment triple_bearish, HMM bull (0.79), vol low, signals strong_sell (1b/8s/7n)."
   },
   "notes": {
     "atr_daily": 48.7714,
     "atr_pct_daily": null,
-    "beta_60d": 0.8794,
+    "beta_60d": 0.8612,
     "beta_benchmark": "EWG",
-    "beta_corr_60d": 0.4017,
+    "beta_corr_60d": 0.3933,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bearish_engulfing",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -38.67,
+      "current_dd_pct": -38.69,
       "ath_price": 1968.8203,
       "ath_date": "2025-09-29",
       "max_dd_1y_pct": -43.11,
@@ -76,11 +76,11 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 1195.393,
-        "max": 1202.587
+        "min": 1194.9843,
+        "max": 1202.1757
       },
       "stop": {
-        "price": 1134.2429,
+        "price": 1133.8428,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -5.4
       },
@@ -89,7 +89,7 @@
           "level": 1,
           "price": 1607.183,
           "basis": "vpvr_vah",
-          "rr": 6.3
+          "rr": 6.31
         },
         {
           "level": 2,
@@ -101,7 +101,7 @@
           "level": 3,
           "price": 2479.0537,
           "basis": "fib_extension_1618",
-          "rr": 19.77
+          "rr": 19.78
         }
       ],
       "preferred_target": 1,
@@ -121,7 +121,7 @@
         "max": 1242.8375
       },
       "stop": {
-        "price": 1225.8379,
+        "price": 1225.818,
         "basis": "below_broken_resistance",
         "distance_pct": -1.17
       },
@@ -142,7 +142,7 @@
           "level": 3,
           "price": 1458.5869,
           "basis": "fib_382",
-          "rr": 15.02
+          "rr": 15.0
         }
       ],
       "preferred_target": 1,
@@ -158,20 +158,20 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 1068.5969,
-        "max": 1090.2943
+        "min": 1068.331,
+        "max": 1090.023
       },
       "stop": {
-        "price": 1011.7128,
+        "price": 1011.4428,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -6.27
+        "distance_pct": -6.28
       },
       "targets": [
         {
           "level": 1,
           "price": 1607.183,
           "basis": "vpvr_vah",
-          "rr": 7.79
+          "rr": 7.8
         },
         {
           "level": 2,
@@ -183,7 +183,7 @@
           "level": 3,
           "price": 2479.0537,
           "basis": "fib_extension_1618",
-          "rr": 20.66
+          "rr": 20.67
         }
       ],
       "preferred_target": 1,
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 1001.5957,
+    "price": 1001.3284,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
