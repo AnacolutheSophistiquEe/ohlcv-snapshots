@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-01T04:13:14.630663+00:00",
+  "generated_at": "2026-06-01T16:02:24.395614+00:00",
   "prediction_id": "IONQ_A_20260601",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "IONQ",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 71.71,
+    "limit_price": 71.46,
     "quantity": 5,
     "tif": "DAY"
   },
@@ -25,7 +25,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 93.55,
+      "limit_price": 96.78,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -33,7 +33,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 111.76,
+      "limit_price": 115.47,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -41,7 +41,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 62.97,
+      "stop_price": 63.28,
       "quantity": 5,
       "tif": "GTC",
       "tag": "SL"
@@ -94,22 +94,22 @@
     "horizon_label_long": "intraday",
     "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -1.0084,
+    "ev_pct_risk": -0.7285,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.0003,
-      "T2": 0.0,
-      "T3": 0.0
+      "T1": 0.1361,
+      "T2": 0.0061,
+      "T3": 0.0001
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 360.35,
-    "hold_tolerance_breach_price": 54.0525,
+    "notional_eur": 359.1,
+    "hold_tolerance_breach_price": 53.865,
     "hold_fallback_active": true,
     "prediction_id": "IONQ_A_20260601"
   },

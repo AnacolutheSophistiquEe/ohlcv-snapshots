@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-01T04:14:23.060344+00:00",
+  "generated_at": "2026-06-01T16:03:47.250939+00:00",
   "prediction_id": "RGTI_B_20260601",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "RGTI",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 25.54,
+    "limit_price": 26.41,
     "quantity": 6,
     "tif": "GTD",
     "gtd": "2026-06-22T22:00:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 25.56,
+      "limit_price": 29.13,
       "quantity": 3,
       "tif": "GTC",
       "tag": "T1"
@@ -42,7 +42,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 21.58,
+      "stop_price": 22.46,
       "quantity": 6,
       "tif": "GTC",
       "tag": "SL"
@@ -93,24 +93,24 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_1_3_weeks",
-    "composite_score": 4.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0103,
+    "ev_pct_risk": 1.2108,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "below_threshold",
+    "ev_status": "validated",
     "p_hit_upper": {
-      "T1": 0.2192,
-      "T2": 0.0367,
-      "T3": 0.0067
+      "T1": 0.281,
+      "T2": 0.1108,
+      "T3": 0.0627
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 153.24,
-    "hold_tolerance_breach_price": 19.155,
+    "notional_eur": 158.43,
+    "hold_tolerance_breach_price": 19.8038,
     "hold_fallback_active": true,
     "prediction_id": "RGTI_B_20260601"
   },

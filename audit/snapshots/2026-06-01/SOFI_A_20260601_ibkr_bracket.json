@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-01T04:19:02.169168+00:00",
+  "generated_at": "2026-06-01T16:09:16.400187+00:00",
   "prediction_id": "SOFI_A_20260601",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SOFI",
@@ -9,16 +9,16 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 18.13,
-    "quantity": 8,
+    "limit_price": 18.49,
+    "quantity": 15,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 19.19,
-      "quantity": 4,
+      "limit_price": 19.15,
+      "quantity": 8,
       "tif": "GTC",
       "tag": "T1"
     },
@@ -26,7 +26,7 @@
       "action": "SELL",
       "order_type": "LMT",
       "limit_price": 25.14,
-      "quantity": 2,
+      "quantity": 4,
       "tif": "GTC",
       "tag": "T2"
     },
@@ -34,15 +34,15 @@
       "action": "SELL",
       "order_type": "LMT",
       "limit_price": 30.1,
-      "quantity": 2,
+      "quantity": 3,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 16.95,
-      "quantity": 8,
+      "stop_price": 17.27,
+      "quantity": 15,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -76,15 +76,15 @@
     "qty_split": [
       {
         "tag": "T1",
-        "qty": 4
+        "qty": 8
       },
       {
         "tag": "T2",
-        "qty": 2
+        "qty": 4
       },
       {
         "tag": "T3",
-        "qty": 2
+        "qty": 3
       }
     ]
   },
@@ -94,13 +94,13 @@
     "horizon_label_long": "intraday",
     "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.9972,
+    "ev_pct_risk": -0.5764,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.0066,
-      "T2": 0.0004,
+      "T1": 0.368,
+      "T2": 0.0834,
       "T3": 0.0
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
@@ -108,8 +108,8 @@
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 145.76,
-    "hold_tolerance_breach_price": 13.665,
+    "notional_eur": 278.77,
+    "hold_tolerance_breach_price": 13.9387,
     "hold_fallback_active": true,
     "prediction_id": "SOFI_A_20260601"
   },
