@@ -13,8 +13,8 @@
       "A",
       "B"
     ],
-    "generated_at": "2026-05-29T21:50:58.497143+00:00",
-    "source_precomputed_at": "2026-05-29T21:50:23.091836+00:00",
+    "generated_at": "2026-06-01T04:14:56.280263+00:00",
+    "source_precomputed_at": "2026-06-01T04:14:22.718682+00:00",
     "calibration_lookup": "v1.0_strict_2closes_0.5atr",
     "calibration_method": "rolling_daily_long_strict_break",
     "confluence_band_atr": 0.5,
@@ -30,7 +30,7 @@
       "price": 25.5223,
       "subtype": "AVWAP_swing_high",
       "distance_pct": -0.069,
-      "robustness": 99.9
+      "robustness": 99.8
     },
     "nearest_resistance": {
       "price": 25.5603,
@@ -169,7 +169,7 @@
       "side": "support",
       "source": "levels.supports",
       "source_weight": 0.95,
-      "touches": 21.3,
+      "touches": 21.0,
       "age_days": null,
       "raw_meta": {
         "distance_pct": -35.33,
@@ -607,14 +607,14 @@
       "type": "bracket_plan",
       "subtype": "PLAN_B_SL",
       "side": "support",
-      "source": "bracket_orders.RGTI_B_20260529_ibkr_bracket.json",
+      "source": "bracket_orders.RGTI_B_20260601_ibkr_bracket.json",
       "source_weight": 0.95,
       "touches": null,
       "age_days": 0,
       "raw_meta": {
         "plan_letter": "B",
         "role": "sl",
-        "prediction_id": "RGTI_B_20260529",
+        "prediction_id": "RGTI_B_20260601",
         "horizon_sessions": 21
       },
       "plan_roles": [
@@ -644,21 +644,21 @@
       }
     },
     {
-      "price": 21.854,
+      "price": 21.8544,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_low",
       "side": "support",
       "source": "anchored_vwap.anchors[2026-04-29]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 30,
+      "age_days": 33,
       "raw_meta": {
         "anchor_date": "2026-04-29",
         "anchor_event": "swing_low",
         "anchor_price": 15.3,
         "bars_since_anchor": 21
       },
-      "distance_pct_to_spot": -14.432,
+      "distance_pct_to_spot": -14.431,
       "distance_in_atr": -1.396,
       "confluence_count": 4,
       "confluence_concepts": [
@@ -672,7 +672,7 @@
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 20,
-        "age_decay": -0.5
+        "age_decay": -0.6
       },
       "probabilities": {
         "available": false,
@@ -971,21 +971,21 @@
       }
     },
     {
-      "price": 23.8923,
+      "price": 23.8926,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_low",
       "side": "support",
       "source": "anchored_vwap.anchors[2026-05-19]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 10,
+      "age_days": 13,
       "raw_meta": {
         "anchor_date": "2026-05-19",
         "anchor_event": "swing_low",
         "anchor_price": 15.46,
         "bars_since_anchor": 7
       },
-      "distance_pct_to_spot": -6.451,
+      "distance_pct_to_spot": -6.45,
       "distance_in_atr": -0.624,
       "confluence_count": 7,
       "confluence_concepts": [
@@ -1308,7 +1308,7 @@
       "source": "anchored_vwap.anchors[2026-05-22]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 7,
+      "age_days": 10,
       "raw_meta": {
         "anchor_date": "2026-05-22",
         "anchor_event": "swing_high",
@@ -1332,12 +1332,12 @@
         "CAM_R2",
         "CAM_R3"
       ],
-      "robustness_score": 99.9,
+      "robustness_score": 99.8,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 25,
-        "age_decay": -0.1
+        "age_decay": -0.2
       },
       "probabilities": {
         "available": false,
@@ -1896,7 +1896,7 @@
       "side": "resistance",
       "source": "levels.resistances",
       "source_weight": 0.92,
-      "touches": 5.3,
+      "touches": 5.0,
       "age_days": null,
       "raw_meta": {
         "distance_pct": 15.04,
@@ -1917,7 +1917,7 @@
       "robustness_score": 100,
       "robustness_components": {
         "base_from_source": 92.0,
-        "touches_boost": 14.7,
+        "touches_boost": 14.3,
         "confluence_boost": 10,
         "age_decay": 0
       },
@@ -2237,8 +2237,9 @@
       },
       "probabilities": {
         "available": false,
-        "reason": "no_matching_bucket",
-        "dim_key_attempted": "horizontal_sr|resistance|>4|med"
+        "reason": "distance_out_of_calibrated_range",
+        "distance_in_atr": 7.19,
+        "max_dist_atr": 6.0
       }
     },
     {
@@ -2265,43 +2266,10 @@
         "age_decay": 0
       },
       "probabilities": {
-        "available": true,
-        "bucket_match_quality": "exact",
-        "dim_key": "fibonacci|resistance|>4|med",
-        "n_samples_in_bucket": 882,
-        "p_touch_h1": 0.0,
-        "ci95_lo_p_touch_h1": 0.0,
-        "ci95_hi_p_touch_h1": 0.0,
-        "p_break_unconditional_h1": 0.0,
-        "ci95_lo_p_break_unconditional_h1": 0.0,
-        "ci95_hi_p_break_unconditional_h1": 0.0,
-        "p_touch_h3": 0.0045,
-        "ci95_lo_p_touch_h3": 0.0001,
-        "ci95_hi_p_touch_h3": 0.009,
-        "p_break_after_touch_h3": 0.0,
-        "ci95_lo_p_break_after_touch_h3": 0.0,
-        "ci95_hi_p_break_after_touch_h3": 0.0,
-        "p_break_unconditional_h3": 0.0,
-        "ci95_lo_p_break_unconditional_h3": 0.0,
-        "ci95_hi_p_break_unconditional_h3": 0.0,
-        "p_touch_h5": 0.0147,
-        "ci95_lo_p_touch_h5": 0.0068,
-        "ci95_hi_p_touch_h5": 0.0227,
-        "p_break_after_touch_h5": 0.3077,
-        "ci95_lo_p_break_after_touch_h5": 0.0568,
-        "ci95_hi_p_break_after_touch_h5": 0.5586,
-        "p_break_unconditional_h5": 0.0045,
-        "ci95_lo_p_break_unconditional_h5": 0.0001,
-        "ci95_hi_p_break_unconditional_h5": 0.009,
-        "p_touch_h10": 0.0431,
-        "ci95_lo_p_touch_h10": 0.0297,
-        "ci95_hi_p_touch_h10": 0.0565,
-        "p_break_after_touch_h10": 0.7895,
-        "ci95_lo_p_break_after_touch_h10": 0.6598,
-        "ci95_hi_p_break_after_touch_h10": 0.9191,
-        "p_break_unconditional_h10": 0.034,
-        "ci95_lo_p_break_unconditional_h10": 0.0221,
-        "ci95_hi_p_break_unconditional_h10": 0.046
+        "available": false,
+        "reason": "distance_out_of_calibrated_range",
+        "distance_in_atr": 8.14,
+        "max_dist_atr": 6.0
       }
     },
     {
@@ -2339,8 +2307,9 @@
       },
       "probabilities": {
         "available": false,
-        "reason": "no_matching_bucket",
-        "dim_key_attempted": "horizontal_sr|resistance|>4|med"
+        "reason": "distance_out_of_calibrated_range",
+        "distance_in_atr": 12.35,
+        "max_dist_atr": 6.0
       }
     }
   ]

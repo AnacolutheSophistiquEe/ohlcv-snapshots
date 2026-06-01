@@ -10,8 +10,8 @@
     "n_neutral": 0,
     "n_with_plan_role": 0,
     "plans_detected": [],
-    "generated_at": "2026-05-29T21:52:10.336208+00:00",
-    "source_precomputed_at": "2026-05-29T21:51:39.610513+00:00",
+    "generated_at": "2026-06-01T04:16:03.271021+00:00",
+    "source_precomputed_at": "2026-06-01T04:15:33.738934+00:00",
     "calibration_lookup": "v1.0_strict_2closes_0.5atr",
     "calibration_method": "rolling_daily_long_strict_break",
     "confluence_band_atr": 0.5,
@@ -493,22 +493,22 @@
       }
     },
     {
-      "price": 284.6936,
+      "price": 284.7029,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_low",
       "side": "support",
       "source": "anchored_vwap.anchors[2026-05-19]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 10,
+      "age_days": 13,
       "raw_meta": {
         "anchor_date": "2026-05-19",
         "anchor_event": "swing_low",
         "anchor_price": 256.1,
         "bars_since_anchor": 7
       },
-      "distance_pct_to_spot": -1.062,
-      "distance_in_atr": -0.237,
+      "distance_pct_to_spot": -1.059,
+      "distance_in_atr": -0.236,
       "confluence_count": 16,
       "confluence_concepts": [
         "FIB_236",
@@ -534,21 +534,21 @@
       }
     },
     {
-      "price": 286.0162,
+      "price": 286.0185,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_high",
       "side": "support",
       "source": "anchored_vwap.anchors[2026-05-07]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 22,
+      "age_days": 25,
       "raw_meta": {
         "anchor_date": "2026-05-07",
         "anchor_event": "swing_high",
         "anchor_price": 328.2899,
         "bars_since_anchor": 15
       },
-      "distance_pct_to_spot": -0.603,
+      "distance_pct_to_spot": -0.602,
       "distance_in_atr": -0.134,
       "confluence_count": 19,
       "confluence_concepts": [
@@ -937,21 +937,21 @@
       }
     },
     {
-      "price": 290.7736,
+      "price": 290.7717,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_low",
       "side": "resistance",
       "source": "anchored_vwap.anchors[2026-04-02]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 57,
+      "age_days": 60,
       "raw_meta": {
         "anchor_date": "2026-04-02",
         "anchor_event": "swing_low",
         "anchor_price": 264.3293,
         "bars_since_anchor": 39
       },
-      "distance_pct_to_spot": 1.051,
+      "distance_pct_to_spot": 1.05,
       "distance_in_atr": 0.234,
       "confluence_count": 19,
       "confluence_concepts": [
@@ -969,7 +969,7 @@
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 25,
-        "age_decay": -0.9
+        "age_decay": -1.0
       },
       "probabilities": {
         "available": false,
@@ -2124,40 +2124,10 @@
         "age_decay": 0
       },
       "probabilities": {
-        "available": true,
-        "bucket_match_quality": "exact",
-        "dim_key": "fibonacci|resistance|>4|med",
-        "n_samples_in_bucket": 178,
-        "p_touch_h1": 0.0,
-        "ci95_lo_p_touch_h1": 0.0,
-        "ci95_hi_p_touch_h1": 0.0,
-        "p_break_unconditional_h1": 0.0,
-        "ci95_lo_p_break_unconditional_h1": 0.0,
-        "ci95_hi_p_break_unconditional_h1": 0.0,
-        "p_touch_h3": 0.0,
-        "ci95_lo_p_touch_h3": 0.0,
-        "ci95_hi_p_touch_h3": 0.0,
-        "p_break_unconditional_h3": 0.0,
-        "ci95_lo_p_break_unconditional_h3": 0.0,
-        "ci95_hi_p_break_unconditional_h3": 0.0,
-        "p_touch_h5": 0.0056,
-        "ci95_lo_p_touch_h5": 0.0,
-        "ci95_hi_p_touch_h5": 0.0166,
-        "p_break_after_touch_h5": 0.0,
-        "ci95_lo_p_break_after_touch_h5": 0.0,
-        "ci95_hi_p_break_after_touch_h5": 0.0,
-        "p_break_unconditional_h5": 0.0,
-        "ci95_lo_p_break_unconditional_h5": 0.0,
-        "ci95_hi_p_break_unconditional_h5": 0.0,
-        "p_touch_h10": 0.073,
-        "ci95_lo_p_touch_h10": 0.0348,
-        "ci95_hi_p_touch_h10": 0.1113,
-        "p_break_after_touch_h10": 0.2308,
-        "ci95_lo_p_break_after_touch_h10": 0.0017,
-        "ci95_hi_p_break_after_touch_h10": 0.4598,
-        "p_break_unconditional_h10": 0.0169,
-        "ci95_lo_p_break_unconditional_h10": 0.0,
-        "ci95_hi_p_break_unconditional_h10": 0.0358
+        "available": false,
+        "reason": "distance_out_of_calibrated_range",
+        "distance_in_atr": 6.29,
+        "max_dist_atr": 6.0
       }
     },
     {
@@ -2190,37 +2160,10 @@
         "age_decay": 0
       },
       "probabilities": {
-        "available": true,
-        "bucket_match_quality": "exact",
-        "dim_key": "horizontal_sr|resistance|>4|high",
-        "n_samples_in_bucket": 149,
-        "p_touch_h1": 0.0,
-        "ci95_lo_p_touch_h1": 0.0,
-        "ci95_hi_p_touch_h1": 0.0,
-        "p_break_unconditional_h1": 0.0,
-        "ci95_lo_p_break_unconditional_h1": 0.0,
-        "ci95_hi_p_break_unconditional_h1": 0.0,
-        "p_touch_h3": 0.0,
-        "ci95_lo_p_touch_h3": 0.0,
-        "ci95_hi_p_touch_h3": 0.0,
-        "p_break_unconditional_h3": 0.0,
-        "ci95_lo_p_break_unconditional_h3": 0.0,
-        "ci95_hi_p_break_unconditional_h3": 0.0,
-        "p_touch_h5": 0.0,
-        "ci95_lo_p_touch_h5": 0.0,
-        "ci95_hi_p_touch_h5": 0.0,
-        "p_break_unconditional_h5": 0.0,
-        "ci95_lo_p_break_unconditional_h5": 0.0,
-        "ci95_hi_p_break_unconditional_h5": 0.0,
-        "p_touch_h10": 0.0268,
-        "ci95_lo_p_touch_h10": 0.0009,
-        "ci95_hi_p_touch_h10": 0.0528,
-        "p_break_after_touch_h10": 0.25,
-        "ci95_lo_p_break_after_touch_h10": 0.0,
-        "ci95_hi_p_break_after_touch_h10": 0.6744,
-        "p_break_unconditional_h10": 0.0067,
-        "ci95_lo_p_break_unconditional_h10": 0.0,
-        "ci95_hi_p_break_unconditional_h10": 0.0198
+        "available": false,
+        "reason": "distance_out_of_calibrated_range",
+        "distance_in_atr": 7.03,
+        "max_dist_atr": 6.0
       }
     },
     {
@@ -2235,7 +2178,7 @@
       "raw_meta": {
         "distance_pct": 41.69,
         "strength": "medium",
-        "cluster_sigma": 4.6882,
+        "cluster_sigma": 4.6883,
         "classification": "wide",
         "n_points": 2,
         "cluster_range_low": 404.4065,
@@ -2253,37 +2196,10 @@
         "age_decay": 0
       },
       "probabilities": {
-        "available": true,
-        "bucket_match_quality": "exact",
-        "dim_key": "horizontal_sr|resistance|>4|high",
-        "n_samples_in_bucket": 149,
-        "p_touch_h1": 0.0,
-        "ci95_lo_p_touch_h1": 0.0,
-        "ci95_hi_p_touch_h1": 0.0,
-        "p_break_unconditional_h1": 0.0,
-        "ci95_lo_p_break_unconditional_h1": 0.0,
-        "ci95_hi_p_break_unconditional_h1": 0.0,
-        "p_touch_h3": 0.0,
-        "ci95_lo_p_touch_h3": 0.0,
-        "ci95_hi_p_touch_h3": 0.0,
-        "p_break_unconditional_h3": 0.0,
-        "ci95_lo_p_break_unconditional_h3": 0.0,
-        "ci95_hi_p_break_unconditional_h3": 0.0,
-        "p_touch_h5": 0.0,
-        "ci95_lo_p_touch_h5": 0.0,
-        "ci95_hi_p_touch_h5": 0.0,
-        "p_break_unconditional_h5": 0.0,
-        "ci95_lo_p_break_unconditional_h5": 0.0,
-        "ci95_hi_p_break_unconditional_h5": 0.0,
-        "p_touch_h10": 0.0268,
-        "ci95_lo_p_touch_h10": 0.0009,
-        "ci95_hi_p_touch_h10": 0.0528,
-        "p_break_after_touch_h10": 0.25,
-        "ci95_lo_p_break_after_touch_h10": 0.0,
-        "ci95_hi_p_break_after_touch_h10": 0.6744,
-        "p_break_unconditional_h10": 0.0067,
-        "ci95_lo_p_break_unconditional_h10": 0.0,
-        "ci95_hi_p_break_unconditional_h10": 0.0198
+        "available": false,
+        "reason": "distance_out_of_calibrated_range",
+        "distance_in_atr": 9.3,
+        "max_dist_atr": 6.0
       }
     }
   ]

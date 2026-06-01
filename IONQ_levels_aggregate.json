@@ -13,8 +13,8 @@
       "A",
       "B"
     ],
-    "generated_at": "2026-05-29T21:49:43.620874+00:00",
-    "source_precomputed_at": "2026-05-29T21:49:09.045752+00:00",
+    "generated_at": "2026-06-01T04:13:46.461588+00:00",
+    "source_precomputed_at": "2026-06-01T04:13:14.291047+00:00",
     "calibration_lookup": "v1.0_strict_2closes_0.5atr",
     "calibration_method": "rolling_daily_long_strict_break",
     "confluence_band_atr": 0.5,
@@ -62,34 +62,10 @@
         "age_decay": 0
       },
       "probabilities": {
-        "available": true,
-        "bucket_match_quality": "exact",
-        "dim_key": "volume_profile|support|>4|high",
-        "n_samples_in_bucket": 145,
-        "p_touch_h1": 0.0,
-        "ci95_lo_p_touch_h1": 0.0,
-        "ci95_hi_p_touch_h1": 0.0,
-        "p_break_unconditional_h1": 0.0,
-        "ci95_lo_p_break_unconditional_h1": 0.0,
-        "ci95_hi_p_break_unconditional_h1": 0.0,
-        "p_touch_h3": 0.0,
-        "ci95_lo_p_touch_h3": 0.0,
-        "ci95_hi_p_touch_h3": 0.0,
-        "p_break_unconditional_h3": 0.0,
-        "ci95_lo_p_break_unconditional_h3": 0.0,
-        "ci95_hi_p_break_unconditional_h3": 0.0,
-        "p_touch_h5": 0.0,
-        "ci95_lo_p_touch_h5": 0.0,
-        "ci95_hi_p_touch_h5": 0.0,
-        "p_break_unconditional_h5": 0.0,
-        "ci95_lo_p_break_unconditional_h5": 0.0,
-        "ci95_hi_p_break_unconditional_h5": 0.0,
-        "p_touch_h10": 0.0,
-        "ci95_lo_p_touch_h10": 0.0,
-        "ci95_hi_p_touch_h10": 0.0,
-        "p_break_unconditional_h10": 0.0,
-        "ci95_lo_p_break_unconditional_h10": 0.0,
-        "ci95_hi_p_break_unconditional_h10": 0.0
+        "available": false,
+        "reason": "distance_out_of_calibrated_range",
+        "distance_in_atr": -7.24,
+        "max_dist_atr": 6.0
       }
     },
     {
@@ -115,8 +91,9 @@
       },
       "probabilities": {
         "available": false,
-        "reason": "no_matching_bucket",
-        "dim_key_attempted": "volume_profile|support|>4|med"
+        "reason": "distance_out_of_calibrated_range",
+        "distance_in_atr": -6.26,
+        "max_dist_atr": 6.0
       }
     },
     {
@@ -354,22 +331,22 @@
       }
     },
     {
-      "price": 43.8247,
+      "price": 43.8293,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_low",
       "side": "support",
       "source": "anchored_vwap.anchors[2026-02-23]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 95,
+      "age_days": 98,
       "raw_meta": {
         "anchor_date": "2026-02-23",
         "anchor_event": "swing_low",
         "anchor_price": 30.17,
         "bars_since_anchor": 67
       },
-      "distance_pct_to_spot": -39.191,
-      "distance_in_atr": -4.655,
+      "distance_pct_to_spot": -39.185,
+      "distance_in_atr": -4.654,
       "confluence_count": 5,
       "confluence_concepts": [
         "S/R_DBSCAN_STRONG",
@@ -392,22 +369,22 @@
       }
     },
     {
-      "price": 44.164,
+      "price": 44.1687,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_high",
       "side": "support",
       "source": "anchored_vwap.anchors[2026-02-26]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 92,
+      "age_days": 95,
       "raw_meta": {
         "anchor_date": "2026-02-26",
         "anchor_event": "swing_high",
         "anchor_price": 41.9,
         "bars_since_anchor": 64
       },
-      "distance_pct_to_spot": -38.721,
-      "distance_in_atr": -4.599,
+      "distance_pct_to_spot": -38.714,
+      "distance_in_atr": -4.598,
       "confluence_count": 5,
       "confluence_concepts": [
         "S/R_DBSCAN_STRONG",
@@ -416,12 +393,12 @@
         "AVWAP_swing_low",
         "MA50"
       ],
-      "robustness_score": 98.5,
+      "robustness_score": 98.4,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 25,
-        "age_decay": -1.5
+        "age_decay": -1.6
       },
       "probabilities": {
         "available": false,
@@ -436,7 +413,7 @@
       "side": "support",
       "source": "levels.supports",
       "source_weight": 0.95,
-      "touches": 26.6,
+      "touches": 27.0,
       "age_days": null,
       "raw_meta": {
         "distance_pct": -37.83,
@@ -571,22 +548,22 @@
       }
     },
     {
-      "price": 47.2712,
+      "price": 47.2768,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_low",
       "side": "support",
       "source": "anchored_vwap.anchors[2026-03-30]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 60,
+      "age_days": 63,
       "raw_meta": {
         "anchor_date": "2026-03-30",
         "anchor_event": "swing_low",
         "anchor_price": 25.89,
         "bars_since_anchor": 42
       },
-      "distance_pct_to_spot": -34.409,
-      "distance_in_atr": -4.087,
+      "distance_pct_to_spot": -34.402,
+      "distance_in_atr": -4.086,
       "confluence_count": 4,
       "confluence_concepts": [
         "S/R_DBSCAN_STRONG",
@@ -599,7 +576,7 @@
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 20,
-        "age_decay": -1.0
+        "age_decay": -1.1
       },
       "probabilities": {
         "available": false,
@@ -2120,14 +2097,14 @@
       "type": "bracket_plan",
       "subtype": "PLAN_A_T2",
       "side": "resistance",
-      "source": "bracket_orders.IONQ_A_20260529_ibkr_bracket.json",
+      "source": "bracket_orders.IONQ_A_20260601_ibkr_bracket.json",
       "source_weight": 0.95,
       "touches": null,
       "age_days": 0,
       "raw_meta": {
         "plan_letter": "A",
         "role": "t2",
-        "prediction_id": "IONQ_A_20260529",
+        "prediction_id": "IONQ_A_20260601",
         "horizon_sessions": 1
       },
       "plan_roles": [
@@ -2190,14 +2167,14 @@
       "type": "bracket_plan",
       "subtype": "PLAN_A_T3",
       "side": "resistance",
-      "source": "bracket_orders.IONQ_A_20260529_ibkr_bracket.json",
+      "source": "bracket_orders.IONQ_A_20260601_ibkr_bracket.json",
       "source_weight": 0.95,
       "touches": null,
       "age_days": 0,
       "raw_meta": {
         "plan_letter": "A",
         "role": "t3",
-        "prediction_id": "IONQ_A_20260529",
+        "prediction_id": "IONQ_A_20260601",
         "horizon_sessions": 1
       },
       "plan_roles": [
@@ -2216,8 +2193,9 @@
       },
       "probabilities": {
         "available": false,
-        "reason": "no_matching_bucket",
-        "dim_key_attempted": "bracket_plan|resistance|>4|high"
+        "reason": "distance_out_of_calibrated_range",
+        "distance_in_atr": 6.54,
+        "max_dist_atr": 6.0
       }
     },
     {
@@ -2251,8 +2229,9 @@
       },
       "probabilities": {
         "available": false,
-        "reason": "no_matching_bucket",
-        "dim_key_attempted": "bracket_plan|resistance|>4|high"
+        "reason": "distance_out_of_calibrated_range",
+        "distance_in_atr": 7.15,
+        "max_dist_atr": 6.0
       }
     }
   ]
