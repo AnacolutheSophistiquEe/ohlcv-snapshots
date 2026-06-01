@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-01T16:06:31.706443+00:00",
+  "generated_at": "2026-06-01T19:16:20.583984+00:00",
   "prediction_id": "SMR_A_20260601",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SMR",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 13.18,
+    "limit_price": 13.15,
     "quantity": 12,
     "tif": "DAY"
   },
@@ -41,7 +41,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 11.68,
+      "stop_price": 11.65,
       "quantity": 12,
       "tif": "GTC",
       "tag": "SL"
@@ -94,22 +94,22 @@
     "horizon_label_long": "intraday",
     "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.6959,
+    "ev_pct_risk": 0.3092,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "validated",
     "p_hit_upper": {
-      "T1": 0.127,
-      "T2": 0.0005,
-      "T3": 0.0
+      "T1": 0.7193,
+      "T2": 0.4965,
+      "T3": 0.3019
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 158.98,
-    "hold_tolerance_breach_price": 9.936,
+    "notional_eur": 158.63,
+    "hold_tolerance_breach_price": 9.9146,
     "hold_fallback_active": true,
     "prediction_id": "SMR_A_20260601"
   },
