@@ -1,67 +1,60 @@
 {
   "available": true,
-  "generated_at": "2026-05-24T16:29:44.713550+00:00",
-  "prediction_id": "RGTI_A_20260524",
+  "generated_at": "2026-06-01T19:12:01.136805+00:00",
+  "prediction_id": "IONQ_B_20260601",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "RGTI",
+  "symbol": "IONQ",
   "exchange": "SMART",
   "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 26.29,
-    "quantity": 15,
-    "tif": "DAY"
+    "limit_price": 71.14,
+    "quantity": 2,
+    "tif": "GTD",
+    "gtd": "2026-06-22T22:00:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 27.77,
-      "quantity": 8,
+      "limit_price": 80.38,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 34.34,
-      "quantity": 4,
+      "limit_price": 96.78,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 44.52,
-      "quantity": 3,
-      "tif": "GTC",
-      "tag": "T3"
-    },
-    {
-      "action": "SELL",
       "order_type": "STP",
-      "stop_price": 22.95,
-      "quantity": 15,
+      "stop_price": 62.6,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "RGTI_A_intraday_20260524",
+  "oca_group": "IONQ_B_swing_20260601",
   "oca_type": 1,
   "execution_rules": {
-    "stop_mode": "fixed",
-    "stop_mode_description": "SL hard statique, pas de trailing",
+    "stop_mode": "breakeven_after_T1",
+    "stop_mode_description": "SL → prix d'entrée après hit T1",
     "trail_distance_atr": null,
     "time_stop": {
       "enabled": true,
-      "max_holding_sessions": 1,
-      "exit_mode": "market_close_unconditional"
+      "max_holding_sessions": 21,
+      "exit_mode": "market_close_at_breakeven"
     },
     "order_validity": {
-      "type": "DAY",
-      "offset_sessions": 0,
-      "good_till_date": "2026-05-24T22:00:00+00:00"
+      "type": "GTD",
+      "offset_sessions": 21,
+      "good_till_date": "2026-06-22T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -76,42 +69,42 @@
     "qty_split": [
       {
         "tag": "T1",
-        "qty": 8
+        "qty": 1
       },
       {
         "tag": "T2",
-        "qty": 4
+        "qty": 1
       },
       {
         "tag": "T3",
-        "qty": 3
+        "qty": 0
       }
     ]
   },
   "bracket_metadata": {
-    "plan_id": "A",
-    "horizon": "intraday",
-    "horizon_label_long": "intraday",
-    "composite_score": 6.0,
-    "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0117,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
+    "plan_id": "B",
+    "horizon": "swing",
+    "horizon_label_long": "swing_1_3_weeks",
+    "composite_score": 4.0,
+    "composite_score_source": "horizon_ta_score.plan_b.score",
+    "ev_pct_risk": 0.2704,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.8282,
-      "T2": 0.3689,
-      "T3": 0.0449
+      "T1": 0.5506,
+      "T2": 0.3635,
+      "T3": 0.2175
     },
-    "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
+    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 396.3,
-    "hold_tolerance_breach_price": 19.815,
+    "notional_eur": 142.28,
+    "hold_tolerance_breach_price": 53.355,
     "hold_fallback_active": true,
-    "prediction_id": "RGTI_A_20260524"
+    "prediction_id": "IONQ_B_20260601"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
