@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PLTR",
-    "generated_at": "2026-05-29T21:56:05Z",
+    "generated_at": "2026-06-01T04:19:43Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-01T08:00:00Z",
-    "valid_until": "2026-06-01T21:00:00Z",
+    "valid_from": "2026-06-02T08:00:00Z",
+    "valid_until": "2026-06-02T21:00:00Z",
     "source_precomputed": "PLTR_precomputed.json"
   },
   "context": {
@@ -156,7 +156,7 @@
         "max": 137.6548
       },
       "stop": {
-        "price": 127.9653,
+        "price": 127.9654,
         "basis": "fallback_pivot_classical_s3",
         "distance_pct": -6.1
       },
@@ -201,7 +201,7 @@
     }
   ],
   "invalidation": {
-    "price": 126.6856,
+    "price": 126.6857,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

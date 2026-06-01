@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-05-29T21:56:05Z",
+    "generated_at": "2026-06-01T04:19:43Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-01T08:00:00Z",
-    "valid_until": "2026-06-01T21:00:00Z",
+    "valid_from": "2026-06-02T08:00:00Z",
+    "valid_until": "2026-06-02T21:00:00Z",
     "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (3b/4s/8n)."
   },
   "notes": {
-    "atr_daily": 10.701,
+    "atr_daily": 10.7043,
     "atr_pct_daily": null,
     "beta_60d": 1.8016,
     "beta_benchmark": "IWM",
@@ -94,7 +94,7 @@
         "max": 155.7804
       },
       "stop": {
-        "price": 152.6303,
+        "price": 152.63,
         "basis": "sr_below_confluence_support",
         "distance_pct": -1.36
       },
@@ -109,13 +109,13 @@
           "level": 2,
           "price": 292.36,
           "basis": "resistance_2",
-          "rr": 65.22
+          "rr": 65.21
         },
         {
           "level": 3,
           "price": 321.2533,
           "basis": "resistance_3",
-          "rr": 78.91
+          "rr": 78.9
         }
       ],
       "preferred_target": 1,
@@ -176,16 +176,16 @@
         "max": 113.5549
       },
       "stop": {
-        "price": 96.9385,
+        "price": 96.9336,
         "basis": "fallback_sr_support",
-        "distance_pct": -13.77
+        "distance_pct": -13.78
       },
       "targets": [
         {
           "level": 1,
           "price": 185.3,
           "basis": "vpvr_vah",
-          "rr": 4.71
+          "rr": 4.7
         },
         {
           "level": 2,
@@ -221,7 +221,7 @@
     }
   ],
   "invalidation": {
-    "price": 95.9691,
+    "price": 95.9643,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
