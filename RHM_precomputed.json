@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE0007030009",
-    "generated_at": "2026-06-01T18:57:10.553638+00:00",
+    "generated_at": "2026-06-01T21:35:40.288135+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1456,29 +1456,29 @@
     "benchmark": "EWG",
     "n_common_dates": 246,
     "relative_perf_pct": {
-      "1M": -14.25,
-      "3M": -24.92,
-      "6M": -33.86,
+      "1M": -14.07,
+      "3M": -24.75,
+      "6M": -33.67,
       "1Y": null
     },
     "perf_breakdown": {
       "1M": {
         "asset": -8.89,
-        "benchmark": 5.36
+        "benchmark": 5.18
       },
       "3M": {
         "asset": -27.18,
-        "benchmark": -2.26
+        "benchmark": -2.42
       },
       "6M": {
         "asset": -23.62,
-        "benchmark": 10.24
+        "benchmark": 10.05
       },
       "1Y": null
     },
-    "z_score_1y_daily_relative": -2.38,
+    "z_score_1y_daily_relative": -2.32,
     "price_ratio_trend_60d": "falling",
-    "interpretation": "underperform fort 1M (-14.2%); underperform fort 3M (-24.9%); mouvement relatif extrême (z=-2.4); ratio actif/benchmark en baisse 60d"
+    "interpretation": "underperform fort 1M (-14.1%); underperform fort 3M (-24.8%); mouvement relatif extrême (z=-2.3); ratio actif/benchmark en baisse 60d"
   },
   "ta_score": {
     "score": 4,
@@ -1705,7 +1705,7 @@
           "rr": 0.65,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7097,
+          "p_touch": 0.7096,
           "distance_pct": 4.71
         },
         "t2": {
@@ -1714,7 +1714,7 @@
           "rr": 1.3,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4251,
+          "p_touch": 0.4253,
           "distance_pct": 9.42
         },
         "t3": {
@@ -1746,7 +1746,7 @@
           "rr": 1.14,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5746,
+          "p_touch": 0.5747,
           "distance_pct": 9.65
         },
         "t2": {
@@ -1764,7 +1764,7 @@
           "rr": 3.41,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.0588,
+          "p_touch": 0.0589,
           "distance_pct": 28.95
         }
       }
@@ -1787,7 +1787,7 @@
           "rr": 1.49,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5746,
+          "p_touch": 0.5747,
           "distance_pct": 16.31
         },
         "t2": {
@@ -1796,7 +1796,7 @@
           "rr": 2.98,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.0588,
+          "p_touch": 0.0589,
           "distance_pct": 32.63
         },
         "t3": {
@@ -2109,7 +2109,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-06-01T18:56:54.897196+00:00",
+    "generated_at": "2026-06-01T21:35:25.648159+00:00",
     "ticker": "RHM",
     "horizons_days": {
       "intraday": 7,
@@ -2537,7 +2537,7 @@
         "ev_pct_risk_max": 0.0
       }
     },
-    "note": "p_fill non émis par le pipeline (zone d'entrée = skill). Rating tagué `(p_fill_unknown)` si non fourni — l'opérateur doit valider la qualité du fill avant exécution. Skill peut fournir des overrides via stdin/cli (à venir, Phase Skill).",
+    "note": "p_fill = proba que le prix atteigne la zone d'entrée (dip) dans l'horizon, CALCULÉE depuis entry_mid + σ (principe de réflexion, GBM sans dérive — audit AT v2.2). Override skill prioritaire. Tag `(p_fill_unknown)` seulement si ni calcul ni override disponibles.",
     "by_horizon": {
       "intraday": {
         "plan_id": "A",
@@ -2546,8 +2546,8 @@
         "inputs": {
           "ev_pct_risk": -0.4602,
           "composite_score": 2.0,
-          "p_fill": null,
-          "p_fill_source": "absent"
+          "p_fill": 0.7926,
+          "p_fill_source": "computed_entry_zone"
         }
       },
       "swing": {
@@ -2557,32 +2557,32 @@
         "inputs": {
           "ev_pct_risk": -0.1724,
           "composite_score": 4.0,
-          "p_fill": null,
-          "p_fill_source": "absent"
+          "p_fill": 0.7748,
+          "p_fill_source": "computed_entry_zone"
         }
       },
       "deep": {
         "plan_id": "C",
-        "rating": "Pass (p_fill_unknown)",
+        "rating": "Pass",
         "reason": "ev=0.001 ≥ 0 mais ne satisfait pas conditions Neutral/Buy/Strong Buy",
         "inputs": {
           "ev_pct_risk": 0.001,
           "composite_score": 3.0,
-          "p_fill": null,
-          "p_fill_source": "absent"
+          "p_fill": 0.7907,
+          "p_fill_source": "computed_entry_zone"
         }
       }
     },
     "best_rating": {
       "plan_id": "C",
       "horizon": "deep",
-      "rating": "Pass (p_fill_unknown)",
+      "rating": "Pass",
       "reason": "ev=0.001 ≥ 0 mais ne satisfait pas conditions Neutral/Buy/Strong Buy"
     }
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-06-01T18:56:52.969100+00:00",
+    "generated_at": "2026-06-01T21:35:23.625564+00:00",
     "ticker": "RHM",
     "window_sessions": 60,
     "n_observations_aligned": 51,
@@ -2888,9 +2888,9 @@
   },
   "beta_dynamic": {
     "available": true,
-    "beta_60d": 0.8612,
+    "beta_60d": 0.8691,
     "beta_252d": null,
-    "correlation_60d": 0.3933,
+    "correlation_60d": 0.3968,
     "correlation_252d": null,
     "ratio_price_benchmark_trend_60d": "falling"
   },
@@ -10412,12 +10412,12 @@
     "parkinson_20d_annualized_pct": 47.36,
     "yang_zhang_20d_annualized_pct": 47.97,
     "volatility_cone": {
-      "current_rv_5d": 63.248279137343765,
-      "p10": 21.3737434202002,
-      "p25": 27.832199705136173,
-      "p50": 38.98606657294649,
-      "p75": 54.59729688115319,
-      "p90": 70.02345746881855,
+      "current_rv_5d": 63.2482791373438,
+      "p10": 21.3737434202003,
+      "p25": 27.83219970513625,
+      "p50": 38.98606657294655,
+      "p75": 54.597296881153234,
+      "p90": 70.02345746881858,
       "current_percentile": 83.7
     },
     "fit_source": "long_csv",
@@ -10451,9 +10451,9 @@
   },
   "beta_tail": {
     "available": true,
-    "beta_up_days": 0.4251,
+    "beta_up_days": 0.4435,
     "beta_down_days": 0.3614,
-    "beta_asymmetry": 0.8501,
+    "beta_asymmetry": 0.8149,
     "n_up_days": 129,
     "n_down_days": 112,
     "interpretation": "balanced",

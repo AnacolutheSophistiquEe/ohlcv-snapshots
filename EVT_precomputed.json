@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE0005664809",
-    "generated_at": "2026-06-01T18:59:47.452661+00:00",
+    "generated_at": "2026-06-01T21:38:01.660811+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1482,27 +1482,27 @@
     "benchmark": "EWG",
     "n_common_dates": 246,
     "relative_perf_pct": {
-      "1M": 0.64,
-      "3M": -7.18,
-      "6M": -7.47,
+      "1M": 0.82,
+      "3M": -7.02,
+      "6M": -7.28,
       "1Y": null
     },
     "perf_breakdown": {
       "1M": {
         "asset": 5.99,
-        "benchmark": 5.36
+        "benchmark": 5.18
       },
       "3M": {
         "asset": -9.44,
-        "benchmark": -2.26
+        "benchmark": -2.42
       },
       "6M": {
         "asset": 2.77,
-        "benchmark": 10.24
+        "benchmark": 10.05
       },
       "1Y": null
     },
-    "z_score_1y_daily_relative": 0.08,
+    "z_score_1y_daily_relative": 0.13,
     "price_ratio_trend_60d": "rising",
     "interpretation": "ratio actif/benchmark en hausse 60d"
   },
@@ -1752,7 +1752,7 @@
           "rr": 1.55,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4251,
+          "p_touch": 0.4253,
           "distance_pct": 10.21
         },
         "t3": {
@@ -1784,7 +1784,7 @@
           "rr": 1.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9279,
+          "p_touch": 0.928,
           "distance_pct": 9.25
         },
         "t2": {
@@ -1793,7 +1793,7 @@
           "rr": 1.99,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5746,
+          "p_touch": 0.5748,
           "distance_pct": 18.51
         },
         "t3": {
@@ -1802,7 +1802,7 @@
           "rr": 2.99,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2766,
+          "p_touch": 0.2765,
           "distance_pct": 27.76
         }
       }
@@ -1825,7 +1825,7 @@
           "rr": 1.22,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9279,
+          "p_touch": 0.928,
           "distance_pct": 15.64
         },
         "t2": {
@@ -1834,7 +1834,7 @@
           "rr": 2.45,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2766,
+          "p_touch": 0.2765,
           "distance_pct": 31.28
         },
         "t3": {
@@ -2154,7 +2154,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-06-01T18:59:31.288520+00:00",
+    "generated_at": "2026-06-01T21:37:47.331382+00:00",
     "ticker": "EVT",
     "horizons_days": {
       "intraday": 7,
@@ -2582,7 +2582,7 @@
         "ev_pct_risk_max": 0.0
       }
     },
-    "note": "p_fill non émis par le pipeline (zone d'entrée = skill). Rating tagué `(p_fill_unknown)` si non fourni — l'opérateur doit valider la qualité du fill avant exécution. Skill peut fournir des overrides via stdin/cli (à venir, Phase Skill).",
+    "note": "p_fill = proba que le prix atteigne la zone d'entrée (dip) dans l'horizon, CALCULÉE depuis entry_mid + σ (principe de réflexion, GBM sans dérive — audit AT v2.2). Override skill prioritaire. Tag `(p_fill_unknown)` seulement si ni calcul ni override disponibles.",
     "by_horizon": {
       "intraday": {
         "plan_id": "A",
@@ -2591,8 +2591,8 @@
         "inputs": {
           "ev_pct_risk": -0.5309,
           "composite_score": 4.0,
-          "p_fill": null,
-          "p_fill_source": "absent"
+          "p_fill": 0.6098,
+          "p_fill_source": "computed_entry_zone"
         }
       },
       "swing": {
@@ -2602,8 +2602,8 @@
         "inputs": {
           "ev_pct_risk": -0.218,
           "composite_score": 4.0,
-          "p_fill": null,
-          "p_fill_source": "absent"
+          "p_fill": 0.5739,
+          "p_fill_source": "computed_entry_zone"
         }
       },
       "deep": {
@@ -2613,8 +2613,8 @@
         "inputs": {
           "ev_pct_risk": -0.0731,
           "composite_score": 3.0,
-          "p_fill": null,
-          "p_fill_source": "absent"
+          "p_fill": 0.5973,
+          "p_fill_source": "computed_entry_zone"
         }
       }
     },
@@ -2627,7 +2627,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-06-01T18:59:29.546756+00:00",
+    "generated_at": "2026-06-01T21:37:45.642790+00:00",
     "ticker": "EVT",
     "window_sessions": 60,
     "n_observations_aligned": 51,
@@ -2933,9 +2933,9 @@
   },
   "beta_dynamic": {
     "available": true,
-    "beta_60d": 0.7383,
+    "beta_60d": 0.7381,
     "beta_252d": null,
-    "correlation_60d": 0.288,
+    "correlation_60d": 0.2879,
     "correlation_252d": null,
     "ratio_price_benchmark_trend_60d": "flat"
   },
@@ -10518,9 +10518,9 @@
   },
   "beta_tail": {
     "available": true,
-    "beta_up_days": 0.334,
+    "beta_up_days": 0.3332,
     "beta_down_days": 0.8076,
-    "beta_asymmetry": 2.4178,
+    "beta_asymmetry": 2.4237,
     "n_up_days": 129,
     "n_down_days": 112,
     "interpretation": "defensive_weak",
