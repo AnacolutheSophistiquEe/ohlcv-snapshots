@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-06-01T19:19:59Z",
+    "generated_at": "2026-06-01T21:56:08Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-02T08:00:00Z",
@@ -10,17 +10,17 @@
     "source_precomputed": "IONQ_precomputed.json"
   },
   "context": {
-    "last_price": 71.14,
+    "last_price": 69.28,
     "ta_score": {
       "value": 4,
       "max": 10,
-      "label": "neutral"
+      "label": "bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.5688,
-      "expected_duration_days": 2.32
+      "probability": 0.5679,
+      "expected_duration_days": 2.31
     },
     "volatility_regime": "high",
     "signals_counter": {
@@ -37,14 +37,14 @@
       "median_bounce_pct": 4.35,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM sideways (0.57), vol high, signals neutral_to_bullish (7b/4s/4n)."
+    "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM sideways (0.57), vol high, signals neutral_to_bullish (7b/4s/4n)."
   },
   "notes": {
     "atr_daily": 5.6958,
     "atr_pct_daily": null,
-    "beta_60d": 2.6853,
+    "beta_60d": 2.7029,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.5716,
+    "beta_corr_60d": 0.574,
     "btc_corr_high": null,
     "candlestick": {
       "name": "three_white_soldiers",
@@ -68,7 +68,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -13.34,
+      "current_dd_pct": -15.6,
       "ath_price": 82.09,
       "ath_date": "2025-10-13",
       "max_dd_1y_pct": -67.61,
@@ -83,32 +83,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 70.4281,
-        "max": 70.8519
+        "min": 68.5737,
+        "max": 68.9863
       },
       "stop": {
-        "price": 62.5963,
+        "price": 60.7363,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -11.39
+        "distance_pct": -11.69
       },
       "targets": [
         {
           "level": 1,
           "price": 80.3845,
           "basis": "next_resistance",
-          "rr": 1.21
+          "rr": 1.44
         },
         {
           "level": 2,
           "price": 96.7807,
           "basis": "fib_extension_1272",
-          "rr": 3.25
+          "rr": 3.48
         },
         {
           "level": 3,
           "price": 115.4682,
           "basis": "fib_extension_1618",
-          "rr": 5.57
+          "rr": 5.8
         }
       ],
       "preferred_target": 1,
@@ -124,32 +124,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 71.7116,
-        "max": 71.9982
+        "min": 73.1086,
+        "max": 73.4008
       },
       "stop": {
-        "price": 68.7921,
-        "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -4.26
+        "price": 70.1792,
+        "basis": "below_broken_resistance",
+        "distance_pct": -4.2
       },
       "targets": [
         {
           "level": 1,
-          "price": 80.3845,
-          "basis": "next_resistance",
-          "rr": 2.78
+          "price": 76.3302,
+          "basis": "r_multiple_1",
+          "rr": 1.0
         },
         {
           "level": 2,
-          "price": 96.7807,
-          "basis": "fib_extension_1272",
-          "rr": 8.14
+          "price": 79.4056,
+          "basis": "r_multiple_2",
+          "rr": 2.0
         },
         {
           "level": 3,
-          "price": 115.4682,
-          "basis": "fib_extension_1618",
-          "rr": 14.24
+          "price": 82.4811,
+          "basis": "r_multiple_3",
+          "rr": 3.0
         }
       ],
       "preferred_target": 1,
@@ -157,7 +157,7 @@
         "session_us_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+      "rationale": "Breakout au-dessus confluence resistance FIB_786 + BB_UPPER (strength 5.0)."
     },
     {
       "id": "C",
