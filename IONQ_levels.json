@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-06-01T21:56:08Z",
+    "generated_at": "2026-06-02T04:19:24Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-02T08:00:00Z",
-    "valid_until": "2026-06-02T21:00:00Z",
+    "valid_from": "2026-06-03T08:00:00Z",
+    "valid_until": "2026-06-03T21:00:00Z",
     "source_precomputed": "IONQ_precomputed.json"
   },
   "context": {
@@ -19,7 +19,7 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.5679,
+      "probability": 0.5678,
       "expected_duration_days": 2.31
     },
     "volatility_regime": "high",
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM sideways (0.57), vol high, signals neutral_to_bullish (7b/4s/4n)."
   },
   "notes": {
-    "atr_daily": 5.6958,
+    "atr_daily": 5.6961,
     "atr_pct_daily": null,
     "beta_60d": 2.7029,
     "beta_benchmark": "IWM",
@@ -87,9 +87,9 @@
         "max": 68.9863
       },
       "stop": {
-        "price": 60.7363,
+        "price": 60.7359,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -11.69
+        "distance_pct": -11.7
       },
       "targets": [
         {
@@ -165,11 +165,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 47.743,
+        "min": 47.745,
         "max": 48.7118
       },
       "stop": {
-        "price": 45.8333,
+        "price": 45.8352,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -4.96
       },
@@ -178,19 +178,19 @@
           "level": 1,
           "price": 80.3845,
           "basis": "next_resistance",
-          "rr": 13.43
+          "rr": 13.44
         },
         {
           "level": 2,
           "price": 96.7807,
           "basis": "fib_extension_1272",
-          "rr": 20.28
+          "rr": 20.29
         },
         {
           "level": 3,
           "price": 115.4682,
           "basis": "fib_extension_1618",
-          "rr": 28.09
+          "rr": 28.1
         }
       ],
       "preferred_target": 1,
@@ -214,7 +214,7 @@
     }
   ],
   "invalidation": {
-    "price": 45.375,
+    "price": 45.3768,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
