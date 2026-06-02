@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-06-02T04:19:24Z",
+    "generated_at": "2026-06-02T06:11:32Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-03T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "005930_precomputed.json"
   },
   "context": {
-    "last_price": 350250.0,
+    "last_price": 357750.0,
     "ta_score": {
       "value": 6,
       "max": 10,
@@ -54,7 +54,7 @@
     "divergences": [],
     "drawdown": {
       "current_dd_pct": 0.0,
-      "ath_price": 350250.0,
+      "ath_price": 357750.0,
       "ath_date": "2026-06-02",
       "max_dd_1y_pct": -23.14,
       "days_in_dd": 0,
@@ -68,26 +68,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 346640.28,
-        "max": 348726.38
+        "min": 354117.78,
+        "max": 356248.88
       },
       "stop": {
-        "price": 317839.2857,
+        "price": 325339.2857,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -8.58
+        "distance_pct": -8.4
       },
       "targets": [
         {
           "level": 2,
-          "price": 426935.2681,
+          "price": 436475.2681,
           "basis": "fib_extension_1272",
-          "rr": 2.66
+          "rr": 2.72
         },
         {
           "level": 3,
-          "price": 524483.4401,
+          "price": 536618.4401,
           "basis": "fib_extension_1618",
-          "rr": 5.92
+          "rr": 6.08
         }
       ],
       "preferred_target": 1,
@@ -101,26 +101,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 353169.4867,
-        "max": 354580.7533
+        "min": 360676.9867,
+        "max": 362118.2533
       },
       "stop": {
-        "price": 342013.0986,
+        "price": 349513.0986,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -3.35
+        "distance_pct": -3.29
       },
       "targets": [
         {
           "level": 2,
-          "price": 426935.2681,
+          "price": 436475.2681,
           "basis": "fib_extension_1272",
-          "rr": 6.16
+          "rr": 6.32
         },
         {
           "level": 3,
-          "price": 524483.4401,
+          "price": 536618.4401,
           "basis": "fib_extension_1618",
-          "rr": 14.38
+          "rr": 14.74
         }
       ],
       "preferred_target": 1,
@@ -134,39 +134,39 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 289916.7376,
+        "min": 290362.5,
         "max": 299500.0
       },
       "stop": {
-        "price": 278320.0681,
+        "price": 278748.0,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -5.56
+        "distance_pct": -5.49
       },
       "targets": [
         {
           "level": 2,
-          "price": 426935.2681,
+          "price": 436475.2681,
           "basis": "fib_extension_1272",
-          "rr": 8.07
+          "rr": 8.75
         },
         {
           "level": 3,
-          "price": 524483.4401,
+          "price": 536618.4401,
           "basis": "fib_extension_1618",
-          "rr": 14.02
+          "rr": 14.93
         }
       ],
       "preferred_target": 1,
       "conditions": [],
       "max_budget_pct": 35,
-      "rationale": "Deep value mecanique : entree sur confluence support basse FIB_786 + MA20 + VPVR_VAH + S/R_support (strength 20.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+      "rationale": "Deep value mecanique : entree sur confluence support basse MA20 + FIB_786 + VPVR_VAH + S/R_support (strength 20.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
     }
   ],
   "bot_actionable": true,
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 275536.8674,
+    "price": 275960.52,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
