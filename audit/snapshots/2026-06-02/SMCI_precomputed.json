@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US86800U1043",
-    "generated_at": "2026-06-02T04:10:40.654389+00:00",
+    "generated_at": "2026-06-02T06:02:29.860403+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1769,7 +1769,7 @@
           "rr": 2.98,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1422,
+          "p_touch": 0.1421,
           "distance_pct": 23.8
         }
       }
@@ -1792,7 +1792,7 @@
           "rr": 1.35,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5746,
+          "p_touch": 0.5747,
           "distance_pct": 16.26
         },
         "t2": {
@@ -1833,7 +1833,7 @@
           "rr": 1.61,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5746,
+          "p_touch": 0.5747,
           "distance_pct": 27.48
         },
         "t2": {
@@ -2162,7 +2162,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-06-02T04:10:27.451729+00:00",
+    "generated_at": "2026-06-02T06:02:16.802917+00:00",
     "ticker": "SMCI",
     "horizons_days": {
       "intraday": 7,
@@ -2618,7 +2618,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-06-02T04:10:20.247550+00:00",
+    "generated_at": "2026-06-02T06:02:09.346408+00:00",
     "ticker": "SMCI",
     "window_sessions": 60,
     "n_observations_aligned": 53,
@@ -2801,7 +2801,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-06-02T04:10:22.456634+00:00",
+    "generated_at": "2026-06-02T06:02:11.699188+00:00",
     "ticker": "SMCI",
     "spot_price": 46.88,
     "expiries_available": [
@@ -2827,61 +2827,46 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.9063,
-      "iv_atm_90d": 0.9063,
+      "iv_atm_30d": null,
+      "iv_atm_90d": null,
       "rv_20d_annualized": 1.0272,
-      "iv_rv_ratio": 0.882,
+      "iv_rv_ratio": null,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -13.379,
-      "label": "low"
+      "skew_25_delta_vol_pts": null,
+      "label": null
     },
     "term_structure": {
       "m1_expiry": "2026-06-05",
       "m1_days_to_exp": 3,
-      "m1_iv_atm": 1.1035,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-07-02",
       "m3_days_to_exp": 30,
-      "m3_iv_atm": 0.9063,
-      "ratio_m1_m3": 1.2177,
-      "label": "backwardation"
+      "m3_iv_atm": null,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
-    "open_interest_m1": {
-      "expiry": "2026-06-05",
-      "days_to_exp": 3,
-      "put_call_ratio": 0.277,
-      "total_oi_m1": 250018,
-      "largest_call_strike_oi": {
-        "strike": 41.0,
-        "oi": 18136
-      },
-      "largest_put_strike_oi": {
-        "strike": 26.0,
-        "oi": 13909
-      }
-    },
+    "open_interest_m1": null,
     "gex": {
-      "gex_total_usd_per_point": 3077580731.0,
-      "gex_label": "positive_stabilizing",
+      "gex_total_usd_per_point": -1604.0,
+      "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 37.0,
+      "strike": 5.0,
       "expiry": "2026-06-05",
-      "gap_vs_spot_pct": -21.08
+      "gap_vs_spot_pct": -89.33
     },
     "verdict": {
-      "label": "bullish",
-      "bullish_signals": 3,
+      "label": "neutral",
+      "bullish_signals": 0,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-13.4 pts) — peu de demande de protection",
-        "GEX positif (3077.6M$/pt) = MM long gamma stabilisateur",
-        "max pain 37.00 vs spot 46.88 (-21.1%)",
-        "P/C ratio bas (0.28) — biais call dominant"
+        "max pain 5.00 vs spot 46.88 (-89.3%)"
       ]
     },
     "liquidity_stats": {
@@ -2891,28 +2876,28 @@
       "per_expiry": {
         "2026-06-05": {
           "total_strikes": 148,
-          "liquid_strikes": 75,
-          "filter_ratio_pct": 50.7
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 135,
-          "liquid_strikes": 64,
-          "filter_ratio_pct": 47.4
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 140,
-          "liquid_strikes": 64,
-          "filter_ratio_pct": 45.7
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-26": {
           "total_strikes": 87,
-          "liquid_strikes": 41,
-          "filter_ratio_pct": 47.1
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-07-02": {
           "total_strikes": 81,
-          "liquid_strikes": 17,
-          "filter_ratio_pct": 21.0
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         }
       }
     },
@@ -2920,7 +2905,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-06-02T04:10:26.600960+00:00",
+    "generated_at": "2026-06-02T06:02:15.950069+00:00",
     "ticker": "SMCI",
     "short_interest": {
       "status": "ok",
@@ -2934,7 +2919,7 @@
       "float_shares": 502425000,
       "delta_shares_short_mom_pct": -6.41,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-06-02T04:10:23.513862+00:00"
+      "fetched_at": "2026-06-02T06:02:12.764682+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2963,7 +2948,7 @@
         "vesting_exercises_dominant": true
       },
       "all_transactions_count": 13,
-      "fetched_at": "2026-06-02T04:10:26.600123+00:00"
+      "fetched_at": "2026-06-02T06:02:15.949242+00:00"
     },
     "data_quality": {
       "short_data_available": true,

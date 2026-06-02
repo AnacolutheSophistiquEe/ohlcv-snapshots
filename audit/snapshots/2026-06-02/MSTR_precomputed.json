@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US5949724083",
-    "generated_at": "2026-06-02T04:09:32.399487+00:00",
+    "generated_at": "2026-06-02T06:01:18.625774+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1705,7 +1705,7 @@
           "rr": 1.17,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.9005,
+          "p_touch": 0.9004,
           "distance_pct": 9.33
         },
         "t2": {
@@ -1764,7 +1764,7 @@
           "rr": 2.41,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5746,
+          "p_touch": 0.5747,
           "distance_pct": 28.97
         }
       }
@@ -1787,7 +1787,7 @@
           "rr": 0.91,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5746,
+          "p_touch": 0.5747,
           "distance_pct": 16.32
         },
         "t2": {
@@ -2105,7 +2105,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-06-02T04:09:19.750598+00:00",
+    "generated_at": "2026-06-02T06:01:04.837010+00:00",
     "ticker": "MSTR",
     "horizons_days": {
       "intraday": 7,
@@ -2561,7 +2561,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-06-02T04:09:08.259559+00:00",
+    "generated_at": "2026-06-02T06:00:53.747907+00:00",
     "ticker": "MSTR",
     "window_sessions": 60,
     "n_observations_aligned": 53,
@@ -2744,7 +2744,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-06-02T04:09:10.921288+00:00",
+    "generated_at": "2026-06-02T06:00:56.066583+00:00",
     "ticker": "MSTR",
     "spot_price": 149.78,
     "expiries_available": [
@@ -2770,60 +2770,46 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7077,
-      "iv_atm_90d": 0.7077,
+      "iv_atm_30d": 2.1366,
+      "iv_atm_90d": 2.1366,
       "rv_20d_annualized": 0.61,
-      "iv_rv_ratio": 1.16,
+      "iv_rv_ratio": 3.502,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -5.713,
-      "label": "low"
+      "skew_25_delta_vol_pts": null,
+      "label": null
     },
     "term_structure": {
       "m1_expiry": "2026-06-05",
       "m1_days_to_exp": 3,
-      "m1_iv_atm": 0.7927,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-07-02",
       "m3_days_to_exp": 30,
-      "m3_iv_atm": 0.7077,
-      "ratio_m1_m3": 1.1201,
-      "label": "backwardation"
+      "m3_iv_atm": null,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
-    "open_interest_m1": {
-      "expiry": "2026-06-05",
-      "days_to_exp": 3,
-      "put_call_ratio": 0.562,
-      "total_oi_m1": 363085,
-      "largest_call_strike_oi": {
-        "strike": 165.0,
-        "oi": 36738
-      },
-      "largest_put_strike_oi": {
-        "strike": 95.0,
-        "oi": 10620
-      }
-    },
+    "open_interest_m1": null,
     "gex": {
-      "gex_total_usd_per_point": 6036099803.0,
+      "gex_total_usd_per_point": 1585279.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 155.0,
+      "strike": 30.0,
       "expiry": "2026-06-05",
-      "gap_vs_spot_pct": 3.49
+      "gap_vs_spot_pct": -79.97
     },
     "verdict": {
-      "label": "bullish",
-      "bullish_signals": 3,
+      "label": "neutral",
+      "bullish_signals": 0,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-5.7 pts) — peu de demande de protection",
-        "GEX positif (6036.1M$/pt) = MM long gamma stabilisateur",
-        "P/C ratio bas (0.56) — biais call dominant"
+        "max pain 30.00 vs spot 149.78 (-80.0%)"
       ]
     },
     "liquidity_stats": {
@@ -2833,28 +2819,28 @@
       "per_expiry": {
         "2026-06-05": {
           "total_strikes": 188,
-          "liquid_strikes": 75,
-          "filter_ratio_pct": 39.9
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 189,
-          "liquid_strikes": 60,
-          "filter_ratio_pct": 31.7
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 733,
-          "liquid_strikes": 209,
-          "filter_ratio_pct": 28.5
+          "liquid_strikes": 25,
+          "filter_ratio_pct": 3.4
         },
         "2026-06-26": {
           "total_strikes": 144,
-          "liquid_strikes": 61,
-          "filter_ratio_pct": 42.4
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-07-02": {
           "total_strikes": 114,
-          "liquid_strikes": 37,
-          "filter_ratio_pct": 32.5
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         }
       }
     },
@@ -2862,7 +2848,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-06-02T04:09:18.905660+00:00",
+    "generated_at": "2026-06-02T06:01:03.911462+00:00",
     "ticker": "MSTR",
     "short_interest": {
       "status": "ok",
@@ -2876,7 +2862,7 @@
       "float_shares": 330030779,
       "delta_shares_short_mom_pct": 6.32,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-06-02T04:09:12.067314+00:00"
+      "fetched_at": "2026-06-02T06:00:57.179870+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2972,7 +2958,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 93,
-      "fetched_at": "2026-06-02T04:09:18.904690+00:00"
+      "fetched_at": "2026-06-02T06:01:03.910168+00:00"
     },
     "data_quality": {
       "short_data_available": true,
