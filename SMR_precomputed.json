@@ -6,7 +6,7 @@
     "exchange": "NYSE",
     "currency": "USD",
     "isin": "US67079K1051",
-    "generated_at": "2026-06-02T04:16:21.338298+00:00",
+    "generated_at": "2026-06-02T06:08:22.904576+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1720,7 +1720,7 @@
           "rr": 0.41,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.9005,
+          "p_touch": 0.9004,
           "distance_pct": 3.26
         },
         "t2": {
@@ -1738,7 +1738,7 @@
           "rr": 2.66,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1422,
+          "p_touch": 0.1421,
           "distance_pct": 21.25
         }
       }
@@ -2131,7 +2131,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-06-02T04:16:08.784676+00:00",
+    "generated_at": "2026-06-02T06:08:09.172179+00:00",
     "ticker": "SMR",
     "horizons_days": {
       "intraday": 7,
@@ -2587,7 +2587,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-06-02T04:16:01.976444+00:00",
+    "generated_at": "2026-06-02T06:08:02.118152+00:00",
     "ticker": "SMR",
     "window_sessions": 60,
     "n_observations_aligned": 53,
@@ -2770,7 +2770,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-06-02T04:16:04.221404+00:00",
+    "generated_at": "2026-06-02T06:08:04.639391+00:00",
     "ticker": "SMR",
     "spot_price": 12.89,
     "expiries_available": [
@@ -2796,10 +2796,10 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 1.1289,
-      "iv_atm_90d": 1.1289,
+      "iv_atm_30d": null,
+      "iv_atm_90d": null,
       "rv_20d_annualized": 0.917,
-      "iv_rv_ratio": 1.231,
+      "iv_rv_ratio": null,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -2811,45 +2811,31 @@
     "term_structure": {
       "m1_expiry": "2026-06-05",
       "m1_days_to_exp": 3,
-      "m1_iv_atm": 1.3301,
+      "m1_iv_atm": null,
       "m3_expiry": "2026-07-02",
       "m3_days_to_exp": 30,
-      "m3_iv_atm": 1.1846,
-      "ratio_m1_m3": 1.1228,
-      "label": "backwardation"
+      "m3_iv_atm": null,
+      "ratio_m1_m3": null,
+      "label": "insufficient_liquid_atm_options",
+      "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
     },
-    "open_interest_m1": {
-      "expiry": "2026-06-05",
-      "days_to_exp": 3,
-      "put_call_ratio": 0.597,
-      "total_oi_m1": 37650,
-      "largest_call_strike_oi": {
-        "strike": 14.0,
-        "oi": 4266
-      },
-      "largest_put_strike_oi": {
-        "strike": 12.0,
-        "oi": 2792
-      }
-    },
+    "open_interest_m1": null,
     "gex": {
-      "gex_total_usd_per_point": 132722141.0,
-      "gex_label": "positive_stabilizing",
+      "gex_total_usd_per_point": -28524.0,
+      "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 12.0,
+      "strike": 1.0,
       "expiry": "2026-06-05",
-      "gap_vs_spot_pct": -6.9
+      "gap_vs_spot_pct": -92.24
     },
     "verdict": {
-      "label": "bullish",
-      "bullish_signals": 2,
+      "label": "neutral",
+      "bullish_signals": 0,
       "bearish_signals": 0,
       "notes": [
-        "GEX positif (132.7M$/pt) = MM long gamma stabilisateur",
-        "max pain 12.00 vs spot 12.89 (-6.9%)",
-        "P/C ratio bas (0.60) — biais call dominant"
+        "max pain 1.00 vs spot 12.89 (-92.2%)"
       ]
     },
     "liquidity_stats": {
@@ -2859,28 +2845,28 @@
       "per_expiry": {
         "2026-06-05": {
           "total_strikes": 77,
-          "liquid_strikes": 25,
-          "filter_ratio_pct": 32.5
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-12": {
           "total_strikes": 66,
-          "liquid_strikes": 22,
-          "filter_ratio_pct": 33.3
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-06-18": {
           "total_strikes": 133,
-          "liquid_strikes": 43,
-          "filter_ratio_pct": 32.3
+          "liquid_strikes": 3,
+          "filter_ratio_pct": 2.3
         },
         "2026-06-26": {
           "total_strikes": 59,
-          "liquid_strikes": 18,
-          "filter_ratio_pct": 30.5
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         },
         "2026-07-02": {
           "total_strikes": 43,
-          "liquid_strikes": 6,
-          "filter_ratio_pct": 14.0
+          "liquid_strikes": 0,
+          "filter_ratio_pct": 0.0
         }
       }
     },
@@ -2888,7 +2874,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-06-02T04:16:07.928027+00:00",
+    "generated_at": "2026-06-02T06:08:08.231438+00:00",
     "ticker": "SMR",
     "short_interest": {
       "status": "ok",
@@ -2902,7 +2888,7 @@
       "float_shares": 339325573,
       "delta_shares_short_mom_pct": -9.89,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-06-02T04:16:05.384320+00:00"
+      "fetched_at": "2026-06-02T06:08:05.748037+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -2971,7 +2957,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 7,
-      "fetched_at": "2026-06-02T04:16:07.926940+00:00"
+      "fetched_at": "2026-06-02T06:08:08.230200+00:00"
     },
     "data_quality": {
       "short_data_available": true,
