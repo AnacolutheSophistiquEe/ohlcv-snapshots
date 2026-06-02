@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-02T05:57:56.622062+00:00",
+  "generated_at": "2026-06-02T21:42:00.169640+00:00",
   "prediction_id": "AL2SI_B_20260602",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "AL2SI",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 57.4,
+    "limit_price": 58.45,
     "quantity": 6,
     "tif": "GTD",
     "gtd": "2026-06-23T16:30:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 70.82,
+      "limit_price": 72.17,
       "quantity": 4,
       "tif": "GTC",
       "tag": "T2"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 87.88,
+      "limit_price": 89.63,
       "quantity": 2,
       "tif": "GTC",
       "tag": "T3"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 52.26,
+      "stop_price": 53.12,
       "quantity": 6,
       "tif": "GTC",
       "tag": "SL"
@@ -82,22 +82,22 @@
     "horizon_label_long": "swing_1_3_weeks",
     "composite_score": 5.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 1.5829,
+    "ev_pct_risk": 1.0765,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "validated",
     "p_hit_upper": {
-      "T1": 0.9987,
-      "T2": 0.9986,
-      "T3": 0.9977
+      "T1": 0.9097,
+      "T2": 0.8154,
+      "T3": 0.6696
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 344.4,
-    "hold_tolerance_breach_price": 43.05,
+    "notional_eur": 350.7,
+    "hold_tolerance_breach_price": 43.8375,
     "hold_fallback_active": true,
     "prediction_id": "AL2SI_B_20260602"
   },
