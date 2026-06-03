@@ -1,0 +1,64 @@
+{
+  "available": true,
+  "generated_at": "2026-06-03T04:20:05.713702+00:00",
+  "window_sessions": 56,
+  "tickers_used": [
+    "AL2SI",
+    "EVT",
+    "IONQ",
+    "RGTI",
+    "SMCI",
+    "SMR",
+    "SOFI"
+  ],
+  "tickers_skipped": [],
+  "weights_eur": {
+    "AL2SI": 350.7,
+    "EVT": 159.15,
+    "IONQ": 142.8,
+    "RGTI": 134.4,
+    "SMCI": 150.51,
+    "SMR": 153.45,
+    "SOFI": 159.66
+  },
+  "total_notional_eur": 1250.67,
+  "capital_total_eur": 2000.0,
+  "var_95": {
+    "method": "gaussian_1d",
+    "z_95": 1.6448536269514722,
+    "sigma_portfolio_daily_eur": 45.22,
+    "value_eur": 74.38,
+    "pct_total_notional": 5.95,
+    "pct_capital": 3.72
+  },
+  "panel_beta_weighted": {},
+  "concentration_flags": [],
+  "high_corr_pairs_in_panel": [
+    {
+      "pair": "IONQ_RGTI",
+      "rho": 0.8387,
+      "share_pct": 22.2,
+      "flag": "red"
+    },
+    {
+      "pair": "IONQ_SMR",
+      "rho": 0.7104,
+      "share_pct": 23.7,
+      "flag": "red"
+    },
+    {
+      "pair": "RGTI_SMR",
+      "rho": 0.6472,
+      "share_pct": 23.0,
+      "flag": "red"
+    }
+  ],
+  "scaling": {
+    "var_threshold_pct": 8.0,
+    "var_ref_metric": "var_95_pct_capital",
+    "scale_factor": 1.0,
+    "scaling_applied": false,
+    "note": "VaR sous le seuil, pas de scaling nécessaire."
+  },
+  "note": "Modèle Gaussien — ne capte pas les queues épaisses. Pour stress, utiliser compute_stress_test.py. Net beta = combinaison linéaire pondérée des betas par ticker × benchmark."
+}
