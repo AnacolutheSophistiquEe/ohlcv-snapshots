@@ -1,6 +1,6 @@
 # RGTI
 
-**Generated** : 2026-06-02T21:50:42.666465+00:00  
+**Generated** : 2026-06-03T04:14:40.495208+00:00  
 **Score** : 4/10 — **Rating** : Neutral  
 **Subtitle** : trending · volatilite high · $26.88  
 
@@ -20,16 +20,16 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Neutral'.
 
 **Plan A — intraday** (order_type LMT)
 - Entry : $26.62–$26.88 (mid $26.75)
-- Stop : $23.04 (stop atr-based (-14.3%))
-- Targets : T1 $27.77 · R/R 0.27 | T2 $34.34 · R/R 2.05 | T3 $44.52 · R/R 4.79
+- Stop : $23.03 (stop atr-based (-14.31%))
+- Targets : T1 $27.77 · R/R 0.27 | T2 $34.34 · R/R 2.04 | T3 $44.52 · R/R 4.78
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $23.04
+- Invalidation : close sous $23.03
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.431 | EV/share : $0.837 | p_fill : —
-- Scenarios Monte-Carlo intraday : bull 86.0 | bear 8.1 | side 5.9
+- EV/risk : 0.431 | EV/share : $0.838 | p_fill : —
+- Scenarios Monte-Carlo intraday : bull 86.0 | bear 8.2 | side 5.9
 - Sizing : notional 160.0 | shares 5
 
 

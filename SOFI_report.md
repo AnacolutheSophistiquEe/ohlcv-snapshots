@@ -1,6 +1,6 @@
 # SOFI
 
-**Generated** : 2026-06-02T21:55:44.065437+00:00  
+**Generated** : 2026-06-03T04:19:18.572198+00:00  
 **Score** : 4/10 — **Rating** : Pass  
 **Subtitle** : trending · volatilite low · $17.74  
 
@@ -47,8 +47,8 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass'.
 - **MACD** : hist 0.349  _(pas de croisement recent)_
 - **BB** : %B 0.91 · largeur 22.9%
 - **ATR** : 0.91 (25.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.056  _(accumulation)_
-- **Vol ratio** : 1.08  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.055  _(accumulation)_
+- **Vol ratio** : 1.13  _(volume normal)_
 - **Choppiness** : 45.2  _(transition)_
 - **MA** : MA20 16.24 · MA50 16.76 · MA200 23.16  _(prix > MA20)_
 - **Dist MA** : MA20 +9.3% · MA50 +5.9% · MA200 -23.4%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17283 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (17291 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

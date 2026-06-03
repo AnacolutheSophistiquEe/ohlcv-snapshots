@@ -1,6 +1,6 @@
 # CEG
 
-**Generated** : 2026-06-02T21:51:59.573191+00:00  
+**Generated** : 2026-06-03T04:15:50.734748+00:00  
 **Score** : 5/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : trending · volatilite normal · $272.65  
 
@@ -47,8 +47,8 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Strong Pass (negative 
 - **MACD** : hist -1.022  _(bearish_recent)_
 - **BB** : %B 0.3 · largeur 25.4%
 - **ATR** : 12.63 (30.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF -0.179  _(distribution)_
-- **Vol ratio** : 1.73  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV rising · CMF -0.172  _(distribution)_
+- **Vol ratio** : 1.88  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 44.7  _(transition)_
 - **MA** : MA20 287.58 · MA50 290.96 · MA200 321.73  _(prix < MA20)_
 - **Dist MA** : MA20 -5.2% · MA50 -6.3% · MA200 -15.3%
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Strong Pass (negative 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13707 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13713 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

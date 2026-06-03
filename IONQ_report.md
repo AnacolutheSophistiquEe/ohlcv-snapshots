@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-06-02T21:49:27.601618+00:00  
+**Generated** : 2026-06-03T04:13:31.285928+00:00  
 **Score** : 4/10 — **Rating** : Neutral  
 **Subtitle** : trending · volatilite high · $71.40  
 
@@ -48,7 +48,7 @@ Plan privilegie B (swing), composite 4/10, conviction 'Neutral'.
 - **BB** : %B 0.9 · largeur 57.8%
 - **ATR** : 5.45 (87.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV rising · CMF 0.383  _(accumulation)_
-- **Vol ratio** : 0.76  _(volume normal)_
+- **Vol ratio** : 0.77  _(volume normal)_
 - **Choppiness** : 39.2  _(transition)_
 - **MA** : MA20 57.98 · MA50 45.29 · MA200 48.13  _(prix > MA20)_
 - **Dist MA** : MA20 +23.1% · MA50 +57.6% · MA200 +48.3%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 4/10, conviction 'Neutral'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16438 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16436 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

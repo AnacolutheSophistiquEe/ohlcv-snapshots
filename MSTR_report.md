@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-06-02T21:45:38.942132+00:00  
+**Generated** : 2026-06-03T04:09:58.860985+00:00  
 **Score** : 2/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : indeterminate · volatilite normal · $136.08  
 
@@ -47,8 +47,8 @@ Plan privilegie C (deep), composite 2/10, conviction 'Strong Pass (negative EV)'
 - **MACD** : hist -4.584  _(pas de croisement recent)_
 - **BB** : %B -0.03 · largeur 37.5%
 - **ATR** : 10.68 (32.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF 0.03  _(neutre)_
-- **Vol ratio** : 1.95  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV falling · CMF 0.029  _(neutre)_
+- **Vol ratio** : 1.99  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 35.3  _(marche directionnel)_
 - **MA** : MA20 169.82 · MA50 156.02 · MA200 205.31  _(prix < MA20)_
 - **Dist MA** : MA20 -19.9% · MA50 -12.8% · MA200 -33.7%
@@ -56,5 +56,5 @@ Plan privilegie C (deep), composite 2/10, conviction 'Strong Pass (negative EV)'
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13694 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13691 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

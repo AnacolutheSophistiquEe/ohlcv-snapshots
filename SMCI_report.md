@@ -1,6 +1,6 @@
 # SMCI
 
-**Generated** : 2026-06-02T21:46:55.581855+00:00  
+**Generated** : 2026-06-03T04:11:10.597981+00:00  
 **Score** : 4/10 — **Rating** : Neutral  
 **Subtitle** : strong_trend · volatilite high · $50.17  
 
@@ -48,7 +48,7 @@ Plan privilegie B (swing), composite 4/10, conviction 'Neutral'.
 - **BB** : %B 1.1 · largeur 65.9%
 - **ATR** : 2.96 (86.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV rising · CMF 0.235  _(accumulation)_
-- **Vol ratio** : 1.13  _(volume normal)_
+- **Vol ratio** : 1.14  _(volume normal)_
 - **Choppiness** : 24.1  _(marche directionnel)_
 - **MA** : MA20 35.87 · MA50 29.58 · MA200 36.01  _(prix > MA20)_
 - **Dist MA** : MA20 +39.8% · MA50 +69.6% · MA200 +39.3%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 4/10, conviction 'Neutral'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16271 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16269 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

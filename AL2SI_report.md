@@ -1,6 +1,6 @@
 # AL2SI
 
-**Generated** : 2026-06-02T21:41:59.801768+00:00  
+**Generated** : 2026-06-03T04:06:33.027644+00:00  
 **Score** : 5/10 — **Rating** : Neutral  
 **Subtitle** : strong_trend · volatilite extreme · $58.45  
 
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 5/10, conviction 'Neutral'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (15594 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (15591 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

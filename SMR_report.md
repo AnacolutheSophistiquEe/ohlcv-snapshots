@@ -1,6 +1,6 @@
 # SMR
 
-**Generated** : 2026-06-02T21:53:13.693240+00:00  
+**Generated** : 2026-06-03T04:16:57.847980+00:00  
 **Score** : 6/10 — **Rating** : Buy  
 **Subtitle** : indeterminate · volatilite low · $13.95  
 
@@ -47,8 +47,8 @@ Plan privilegie C (deep), composite 6/10, conviction 'Buy'.
 - **MACD** : hist 0.231  _(bullish_recent)_
 - **BB** : %B 0.97 · largeur 33.9%
 - **ATR** : 1.04 (14.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.203  _(accumulation)_
-- **Vol ratio** : 1.72  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV rising · CMF 0.205  _(accumulation)_
+- **Vol ratio** : 1.83  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 43.5  _(transition)_
 - **MA** : MA20 12.04 · MA50 11.54 · MA200 22.19  _(prix > MA20)_
 - **Dist MA** : MA20 +15.9% · MA50 +20.9% · MA200 -37.1%
@@ -56,5 +56,5 @@ Plan privilegie C (deep), composite 6/10, conviction 'Buy'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17254 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (17251 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

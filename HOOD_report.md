@@ -1,6 +1,6 @@
 # HOOD
 
-**Generated** : 2026-06-02T21:54:26.681557+00:00  
+**Generated** : 2026-06-03T04:18:06.143338+00:00  
 **Score** : 4/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : trending · volatilite normal · $88.16  
 
@@ -48,7 +48,7 @@ Plan privilegie B (swing), composite 4/10, conviction 'Strong Pass (negative EV)
 - **BB** : %B 0.88 · largeur 28.9%
 - **ATR** : 5.12 (39.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV rising · CMF 0.34  _(accumulation)_
-- **Vol ratio** : 1.02  _(volume normal)_
+- **Vol ratio** : 1.03  _(volume normal)_
 - **Choppiness** : 46.1  _(transition)_
 - **MA** : MA20 79.4 · MA50 77.46 · MA200 103.71  _(prix > MA20)_
 - **Dist MA** : MA20 +11.0% · MA50 +13.8% · MA200 -15.0%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 4/10, conviction 'Strong Pass (negative EV)
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (14616 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14621 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
