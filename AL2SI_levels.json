@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "AL2SI",
-    "generated_at": "2026-06-03T04:20:03Z",
+    "generated_at": "2026-06-03T21:57:05Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-04T08:00:00Z",
@@ -10,25 +10,25 @@
     "source_precomputed": "AL2SI_precomputed.json"
   },
   "context": {
-    "last_price": 58.45,
+    "last_price": 55.45,
     "ta_score": {
-      "value": 6,
+      "value": 4,
       "max": 10,
       "label": "neutral"
     },
-    "alignment_flag": "triple_bullish",
+    "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bear",
-      "probability": 0.561,
-      "expected_duration_days": 2.28
+      "probability": 0.65,
+      "expected_duration_days": 4.14
     },
     "volatility_regime": "extreme",
     "signals_counter": {
-      "buy": 9,
-      "sell": 5,
-      "neutral": 2,
-      "total": 16,
-      "verdict": "buy"
+      "buy": 7,
+      "sell": 3,
+      "neutral": 5,
+      "total": 15,
+      "verdict": "neutral_to_bullish"
     },
     "mean_reversion_score": {
       "setup": "rsi_>=70_dist_ma20_>+10",
@@ -37,49 +37,49 @@
       "median_bounce_pct": 10.75,
       "confidence": "high"
     },
-    "narrative_short": "TA score 6/10 (neutral), alignment triple_bullish, HMM bear (0.56), vol extreme, signals buy (9b/5s/2n)."
+    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM bear (0.65), vol extreme, signals neutral_to_bullish (7b/3s/5n)."
   },
   "notes": {
-    "atr_daily": 3.5521,
+    "atr_daily": 3.6921,
     "atr_pct_daily": null,
-    "beta_60d": 0.8104,
+    "beta_60d": 0.761,
     "beta_benchmark": "EWQ",
-    "beta_corr_60d": 0.2541,
+    "beta_corr_60d": 0.2375,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "doji",
-      "date": "2026-05-27",
-      "confidence": 0.486
+      "name": "evening_star",
+      "date": "2026-06-03",
+      "confidence": 0.461
     },
     "divergences": [
       {
         "indicator": "macd_hist",
         "type": "bullish",
         "confidence": 0.09,
-        "bars_ago": 15,
+        "bars_ago": 16,
         "at_price": null
       },
       {
         "indicator": "obv",
         "type": "bearish",
         "confidence": 0.19,
-        "bars_ago": 13,
+        "bars_ago": 14,
         "at_price": null
       },
       {
         "indicator": "obv",
         "type": "bullish",
         "confidence": 0.27,
-        "bars_ago": 15,
+        "bars_ago": 16,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": 0.0,
+      "current_dd_pct": -5.13,
       "ath_price": 58.45,
       "ath_date": "2026-06-02",
       "max_dd_1y_pct": -33.04,
-      "days_in_dd": 0,
+      "days_in_dd": 1,
       "median_recovery_days": null
     }
   },
@@ -90,26 +90,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 57.8659,
-        "max": 58.2141
+        "min": 54.9447,
+        "max": 55.2753
       },
       "stop": {
-        "price": 53.1218,
+        "price": 49.9118,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -8.47
+        "distance_pct": -9.43
       },
       "targets": [
         {
           "level": 2,
-          "price": 72.1724,
+          "price": 68.3591,
           "basis": "fib_extension_1272",
-          "rr": 2.87
+          "rr": 2.55
         },
         {
           "level": 3,
-          "price": 89.6281,
+          "price": 84.7803,
           "basis": "fib_extension_1618",
-          "rr": 6.42
+          "rr": 5.71
         }
       ],
       "preferred_target": 1,
@@ -125,26 +125,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 58.9189,
-        "max": 59.1543
+        "min": 55.8458,
+        "max": 56.0689
       },
       "stop": {
-        "price": 57.0839,
+        "price": 53.9439,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -3.31
+        "distance_pct": -3.6
       },
       "targets": [
         {
           "level": 2,
-          "price": 72.1724,
+          "price": 68.3591,
           "basis": "fib_extension_1272",
-          "rr": 6.73
+          "rr": 6.16
         },
         {
           "level": 3,
-          "price": 89.6281,
+          "price": 84.7803,
           "basis": "fib_extension_1618",
-          "rr": 15.67
+          "rr": 14.32
         }
       ],
       "preferred_target": 1,
@@ -160,26 +160,26 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 37.527,
-        "max": 39.1781
+        "min": 37.3203,
+        "max": 38.201
       },
       "stop": {
-        "price": 36.0259,
+        "price": 35.8275,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -6.07
+        "distance_pct": -5.12
       },
       "targets": [
         {
           "level": 2,
-          "price": 72.1724,
+          "price": 68.3591,
           "basis": "fib_extension_1272",
-          "rr": 14.54
+          "rr": 15.83
         },
         {
           "level": 3,
-          "price": 89.6281,
+          "price": 84.7803,
           "basis": "fib_extension_1618",
-          "rr": 22.04
+          "rr": 24.32
         }
       ],
       "preferred_target": 1,
@@ -187,7 +187,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 35,
-      "rationale": "Deep value mecanique : entree sur confluence support basse MA50 + VPVR_POC + FIB_618 (strength 12.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+      "rationale": "Deep value mecanique : entree sur confluence support basse FIB_618 + VPVR_POC + MA50 (strength 12.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
     }
   ],
   "bot_actionable": true,
@@ -203,7 +203,7 @@
     }
   ],
   "invalidation": {
-    "price": 35.6656,
+    "price": 35.4692,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
