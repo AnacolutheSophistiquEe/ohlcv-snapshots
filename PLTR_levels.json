@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PLTR",
-    "generated_at": "2026-06-04T04:21:06Z",
+    "generated_at": "2026-06-04T21:56:16Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-05T08:00:00Z",
@@ -10,17 +10,17 @@
     "source_precomputed": "PLTR_precomputed.json"
   },
   "context": {
-    "last_price": 142.2,
+    "last_price": 141.7,
     "ta_score": {
-      "value": 6,
+      "value": 7,
       "max": 10,
       "label": "bullish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.9,
-      "expected_duration_days": 15.34
+      "probability": 0.7193,
+      "expected_duration_days": 3.56
     },
     "volatility_regime": "normal",
     "signals_counter": {
@@ -31,41 +31,33 @@
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_60-70_dist_ma20_+2_+5",
-      "win_rate": 0.67,
-      "sample_size": 6,
-      "median_bounce_pct": 5.65,
-      "confidence": "low"
+      "setup": "rsi_50-60_dist_ma20_-2_+2",
+      "win_rate": 0.87,
+      "sample_size": 15,
+      "median_bounce_pct": 7.16,
+      "confidence": "medium"
     },
-    "narrative_short": "TA score 6/10 (bullish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (3b/2s/10n)."
+    "narrative_short": "TA score 7/10 (bullish), alignment mixed, HMM sideways (0.72), vol normal, signals neutral (3b/2s/10n)."
   },
   "notes": {
-    "atr_daily": 6.8853,
+    "atr_daily": 6.9616,
     "atr_pct_daily": null,
-    "beta_60d": 0.6208,
+    "beta_60d": 0.5967,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.2246,
+    "beta_corr_60d": 0.2191,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "evening_star",
-      "date": "2026-06-02",
-      "confidence": 0.5
+      "name": "three_black_crows",
+      "date": "2026-06-04",
+      "confidence": 0.956
     },
-    "divergences": [
-      {
-        "indicator": "obv",
-        "type": "hidden_bearish",
-        "confidence": 0.24,
-        "bars_ago": 8,
-        "at_price": null
-      }
-    ],
+    "divergences": [],
     "drawdown": {
-      "current_dd_pct": -31.36,
+      "current_dd_pct": -31.61,
       "ath_price": 207.18,
       "ath_date": "2025-11-03",
       "max_dd_1y_pct": -38.19,
-      "days_in_dd": 212,
+      "days_in_dd": 213,
       "median_recovery_days": null
     }
   },
@@ -76,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 139.2577,
-        "max": 141.5497
+        "min": 139.6532,
+        "max": 141.2881
       },
       "stop": {
-        "price": 131.8721,
+        "price": 131.2576,
         "basis": "atr_below_confluence_support",
-        "distance_pct": -6.08
+        "distance_pct": -6.56
       },
       "targets": [
         {
           "level": 1,
           "price": 154.2996,
           "basis": "vpvr_vah",
-          "rr": 1.63
+          "rr": 1.5
         },
         {
           "level": 2,
-          "price": 219.9534,
+          "price": 228.1593,
           "basis": "fib_extension_1272",
-          "rr": 9.32
+          "rr": 9.52
         },
         {
           "level": 3,
-          "price": 244.7373,
+          "price": 254.8463,
           "basis": "fib_extension_1618",
-          "rr": 12.23
+          "rr": 12.41
         }
       ],
       "preferred_target": 1,
@@ -117,26 +109,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 164.8197,
-        "max": 165.4783
+        "min": 161.3459,
+        "max": 161.9906
       },
       "stop": {
         "price": 153.5281,
         "basis": "below_broken_resistance",
-        "distance_pct": -7.04
+        "distance_pct": -5.04
       },
       "targets": [
         {
           "level": 1,
-          "price": 173.1073,
-          "basis": "fib_618",
-          "rr": 0.68
+          "price": 168.615,
+          "basis": "fib_50",
+          "rr": 0.85
         },
         {
           "level": 2,
-          "price": 185.1412,
+          "price": 177.7163,
+          "basis": "fib_618",
+          "rr": 1.97
+        },
+        {
+          "level": 3,
+          "price": 190.6742,
           "basis": "fib_786",
-          "rr": 1.72
+          "rr": 3.56
         }
       ],
       "preferred_target": 1,
@@ -144,7 +142,7 @@
         "session_us_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance VPVR_VAH + BB_UPPER + FIB_382 + S/R_resistance + MA200 + FIB_50 (strength 57.0)."
+      "rationale": "Breakout au-dessus confluence resistance VPVR_VAH + BB_UPPER + S/R_resistance + FIB_382 + MA200 (strength 40.0)."
     },
     {
       "id": "C",
@@ -169,15 +167,15 @@
         },
         {
           "level": 2,
-          "price": 219.9534,
+          "price": 228.1593,
           "basis": "fib_extension_1272",
-          "rr": 12.32
+          "rr": 13.5
         },
         {
           "level": 3,
-          "price": 244.7373,
+          "price": 254.8463,
           "basis": "fib_extension_1618",
-          "rr": 15.87
+          "rr": 17.31
         }
       ],
       "preferred_target": 1,
