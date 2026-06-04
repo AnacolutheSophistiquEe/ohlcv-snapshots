@@ -1,6 +1,6 @@
 # EVT
 
-**Generated** : 2026-06-03T21:38:33.174624+00:00  
+**Generated** : 2026-06-04T04:04:08.797302+00:00  
 **Score** : 6/10 — **Rating** : Neutral  
 **Subtitle** : indeterminate · volatilite low · €5.03  
 
@@ -48,7 +48,7 @@ Plan privilegie B (swing), composite 6/10, conviction 'Neutral'.
 - **BB** : %B 0.52 · largeur 18.5%
 - **ATR** : 0.19 (14.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV rising · CMF -0.04  _(neutre)_
-- **Vol ratio** : 0.7  _(volume normal)_
+- **Vol ratio** : 0.72  _(volume normal)_
 - **Choppiness** : 49.0  _(transition)_
 - **MA** : MA20 5.0 · MA50 4.97 · MA200 5.67  _(prix > MA20)_
 - **Dist MA** : MA20 +0.4% · MA50 +1.2% · MA200 -11.4%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 6/10, conviction 'Neutral'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17043 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (17074 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # RHM
 
-**Generated** : 2026-06-03T21:36:06.652369+00:00  
+**Generated** : 2026-06-04T04:01:59.409609+00:00  
 **Score** : 5/10 — **Rating** : Pass  
 **Subtitle** : trending · volatilite low · €1200.40  
 
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Pass'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13625 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13643 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

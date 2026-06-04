@@ -1,6 +1,6 @@
 # RGTI
 
-**Generated** : 2026-06-03T21:51:07.092545+00:00  
+**Generated** : 2026-06-04T04:15:41.642740+00:00  
 **Score** : 6/10 — **Rating** : Buy  
 **Subtitle** : trending · volatilite high · $24.09  
 
@@ -47,8 +47,8 @@ Plan privilegie B (swing), composite 6/10, conviction 'Buy'.
 - **MACD** : hist 0.436  _(pas de croisement recent)_
 - **BB** : %B 0.67 · largeur 71.0%
 - **ATR** : 2.78 (82.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF 0.277  _(accumulation)_
-- **Vol ratio** : 1.27  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.276  _(accumulation)_
+- **Vol ratio** : 1.29  _(volume normal)_
 - **Choppiness** : 42.7  _(transition)_
 - **MA** : MA20 21.46 · MA50 18.29 · MA200 23.43  _(prix > MA20)_
 - **Dist MA** : MA20 +12.3% · MA50 +31.8% · MA200 +2.8%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 6/10, conviction 'Buy'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16560 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16578 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

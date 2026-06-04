@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-06-03T21:48:31.057208+00:00  
+**Generated** : 2026-06-04T04:13:16.092025+00:00  
 **Score** : 6/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : indeterminate · volatilite normal · $142.20  
 
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 6/10, conviction 'Strong Pass (negative EV)
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16565 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16583 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

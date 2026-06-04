@@ -1,6 +1,6 @@
 # SMR
 
-**Generated** : 2026-06-03T21:53:39.087808+00:00  
+**Generated** : 2026-06-04T04:18:02.263014+00:00  
 **Score** : 6/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : indeterminate · volatilite low · $12.27  
 
@@ -28,8 +28,8 @@ Plan privilegie B (swing), composite 6/10, conviction 'Strong Pass (negative EV)
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.707 | EV/share : $-1.021 | p_fill : —
-- Scenarios Monte-Carlo swing : bull 18.3 | bear 5.0 | side 76.7
+- EV/risk : -0.709 | EV/share : $-1.024 | p_fill : —
+- Scenarios Monte-Carlo swing : bull 18.2 | bear 5.0 | side 76.8
 - Sizing : notional 400.0 | shares 32
 
 
@@ -47,8 +47,8 @@ Plan privilegie B (swing), composite 6/10, conviction 'Strong Pass (negative EV)
 - **MACD** : hist 0.167  _(pas de croisement recent)_
 - **BB** : %B 0.55 · largeur 33.9%
 - **ATR** : 1.13 (20.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.16  _(accumulation)_
-- **Vol ratio** : 1.42  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.158  _(accumulation)_
+- **Vol ratio** : 1.44  _(volume normal)_
 - **Choppiness** : 46.7  _(transition)_
 - **MA** : MA20 12.06 · MA50 11.55 · MA200 22.08  _(prix > MA20)_
 - **Dist MA** : MA20 +1.8% · MA50 +6.2% · MA200 -44.4%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 6/10, conviction 'Strong Pass (negative EV)
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17276 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (17304 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

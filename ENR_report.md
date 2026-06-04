@@ -1,6 +1,6 @@
 # ENR
 
-**Generated** : 2026-06-03T21:39:47.542416+00:00  
+**Generated** : 2026-06-04T04:05:14.956869+00:00  
 **Score** : 5/10 — **Rating** : Pass  
 **Subtitle** : indeterminate · volatilite high · €160.16  
 
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Pass'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13273 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13291 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

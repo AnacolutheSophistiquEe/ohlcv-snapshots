@@ -1,6 +1,6 @@
 # CEG
 
-**Generated** : 2026-06-03T21:52:24.512548+00:00  
+**Generated** : 2026-06-04T04:16:53.425680+00:00  
 **Score** : 3/10 — **Rating** : Pass  
 **Subtitle** : trending · volatilite low · $267.24  
 
@@ -37,7 +37,7 @@ Plan privilegie A (intraday), composite 3/10, conviction 'Pass'.
 
 **Factor** : R² 0.46 · part idiosyncratique 10.97
 **Short/Insider** : SI —% | insider — | verdict neutral
-**Options** : neutral
+**Options** : neutral_cautious
 
 
 ## Indicateurs (résumé)
@@ -48,7 +48,7 @@ Plan privilegie A (intraday), composite 3/10, conviction 'Pass'.
 - **BB** : %B 0.24 · largeur 24.0%
 - **ATR** : 11.54 (17.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV falling · CMF -0.186  _(distribution)_
-- **Vol ratio** : 1.01  _(volume normal)_
+- **Vol ratio** : 1.02  _(volume normal)_
 - **Choppiness** : 41.3  _(transition)_
 - **MA** : MA20 284.94 · MA50 290.52 · MA200 321.46  _(prix < MA20)_
 - **Dist MA** : MA20 -6.2% · MA50 -8.0% · MA200 -16.9%
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 3/10, conviction 'Pass'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13591 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13628 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
