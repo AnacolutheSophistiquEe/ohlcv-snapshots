@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-06-05T04:20:59Z",
+    "generated_at": "2026-06-05T21:57:09Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-08T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "005930_precomputed.json"
   },
   "context": {
-    "last_price": 336500.0,
+    "last_price": 329000.0,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -31,29 +31,29 @@
       "verdict": "neutral_to_bullish"
     },
     "mean_reversion_score": {
-      "setup": "rsi_60-70_dist_ma20_>+10",
-      "win_rate": 1.0,
-      "sample_size": 12,
-      "median_bounce_pct": 19.0,
-      "confidence": "medium"
+      "setup": "rsi_50-60_dist_ma20_+5_+10",
+      "win_rate": 0.8,
+      "sample_size": 5,
+      "median_bounce_pct": 9.34,
+      "confidence": "low"
     },
     "narrative_short": "TA score 4/10 (neutral), alignment divergent_short_long, HMM bull (0.90), vol extreme, signals neutral_to_bullish (7b/2s/6n)."
   },
   "notes": {
     "atr_daily": 21857.1429,
     "atr_pct_daily": null,
-    "beta_60d": 0.2045,
+    "beta_60d": 0.3325,
     "beta_benchmark": "EWY",
-    "beta_corr_60d": 0.1802,
+    "beta_corr_60d": 0.3235,
     "btc_corr_high": null,
     "candlestick": {
       "name": "shooting_star",
-      "date": "2026-06-04",
-      "confidence": 0.933
+      "date": "2026-06-05",
+      "confidence": 0.753
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -6.66,
+      "current_dd_pct": -8.74,
       "ath_price": 360500.0,
       "ath_date": "2026-06-02",
       "max_dd_1y_pct": -23.14,
@@ -68,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 333845.45,
-        "max": 335854.55
+        "min": 326367.95,
+        "max": 328332.05
       },
       "stop": {
-        "price": 303714.2857,
+        "price": 296214.2857,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -9.3
+        "distance_pct": -9.51
       },
       "targets": [
         {
           "level": 1,
           "price": 356644.7368,
           "basis": "vpvr_vah",
-          "rr": 0.7
+          "rr": 0.94
         },
         {
           "level": 2,
           "price": 425076.343,
           "basis": "fib_extension_1272",
-          "rr": 2.9
+          "rr": 3.14
         },
         {
           "level": 3,
           "price": 521849.9264,
           "basis": "fib_extension_1618",
-          "rr": 6.01
+          "rr": 6.25
         }
       ],
       "preferred_target": 1,
@@ -107,30 +107,30 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 357597.5278,
-        "max": 359026.4889
+        "min": 357001.3815,
+        "max": 358427.9605
       },
       "stop": {
-        "price": 354861.5131,
+        "price": 354169.3543,
         "basis": "below_broken_resistance",
-        "distance_pct": -0.96
+        "distance_pct": -0.99
       },
       "targets": [
         {
           "level": 1,
-          "price": 361762.5036,
+          "price": 361259.9877,
           "basis": "r_multiple_1",
           "rr": 1.0
         },
         {
           "level": 2,
-          "price": 365212.9989,
+          "price": 364805.3044,
           "basis": "r_multiple_2",
           "rr": 2.0
         },
         {
           "level": 3,
-          "price": 368663.4941,
+          "price": 368350.6211,
           "basis": "r_multiple_3",
           "rr": 3.0
         }
@@ -138,7 +138,7 @@
       "preferred_target": 1,
       "conditions": [],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance VPVR_VAH + BB_UPPER (strength 5.0)."
+      "rationale": "Breakout au-dessus confluence resistance BB_UPPER + VPVR_VAH (strength 5.0)."
     },
     {
       "id": "C",
@@ -147,31 +147,31 @@
       "side": "long",
       "entry_zone": {
         "min": 242157.4889,
-        "max": 243664.4756
+        "max": 243514.4756
       },
       "stop": {
         "price": 232471.1893,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -4.3
+        "distance_pct": -4.27
       },
       "targets": [
         {
           "level": 1,
           "price": 356644.7368,
           "basis": "vpvr_vah",
-          "rr": 10.89
+          "rr": 10.98
         },
         {
           "level": 2,
           "price": 425076.343,
           "basis": "fib_extension_1272",
-          "rr": 17.45
+          "rr": 17.58
         },
         {
           "level": 3,
           "price": 521849.9264,
           "basis": "fib_extension_1618",
-          "rr": 26.72
+          "rr": 26.92
         }
       ],
       "preferred_target": 1,
