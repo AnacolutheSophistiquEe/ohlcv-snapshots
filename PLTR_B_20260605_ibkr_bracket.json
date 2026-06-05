@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-05T04:13:13.120369+00:00",
+  "generated_at": "2026-06-05T21:48:34.311366+00:00",
   "prediction_id": "PLTR_B_20260605",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "PLTR",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 142.2,
+    "limit_price": 135.53,
     "quantity": 2,
     "tif": "GTD",
     "gtd": "2026-06-26T22:00:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 154.3,
+      "limit_price": 153.89,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 219.95,
+      "limit_price": 212.64,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 131.87,
+      "stop_price": 130.17,
       "quantity": 2,
       "tif": "GTC",
       "tag": "SL"
@@ -85,24 +85,24 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_1_3_weeks",
-    "composite_score": 6.0,
+    "composite_score": 5.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.7257,
+    "ev_pct_risk": -0.5868,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.1017,
-      "T2": 0.077,
-      "T3": 0.0582
+      "T1": 0.3263,
+      "T2": 0.1218,
+      "T3": 0.0431
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 284.4,
-    "hold_tolerance_breach_price": 106.65,
+    "notional_eur": 271.06,
+    "hold_tolerance_breach_price": 101.6475,
     "hold_fallback_active": true,
     "prediction_id": "PLTR_B_20260605"
   },
