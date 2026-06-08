@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-06-05T21:57:09Z",
+    "generated_at": "2026-06-08T04:21:21Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-08T08:00:00Z",
-    "valid_until": "2026-06-08T21:00:00Z",
+    "valid_from": "2026-06-09T08:00:00Z",
+    "valid_until": "2026-06-09T21:00:00Z",
     "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
@@ -158,11 +158,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 102.1937,
-        "max": 104.2687
+        "min": 102.1839,
+        "max": 104.2587
       },
       "stop": {
-        "price": 88.4243,
+        "price": 88.4143,
         "basis": "fallback_pivot_classical_s3",
         "distance_pct": -14.34
       },
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 87.5401,
+    "price": 87.5302,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

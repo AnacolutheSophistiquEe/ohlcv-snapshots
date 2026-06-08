@@ -2,17 +2,17 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "000660",
-    "generated_at": "2026-06-05T21:57:09Z",
+    "generated_at": "2026-06-08T04:21:21Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-08T08:00:00Z",
-    "valid_until": "2026-06-08T21:00:00Z",
+    "valid_from": "2026-06-09T08:00:00Z",
+    "valid_until": "2026-06-09T21:00:00Z",
     "source_precomputed": "000660_precomputed.json"
   },
   "context": {
-    "last_price": 2070000.0,
+    "last_price": 2029000.0,
     "ta_score": {
-      "value": 4,
+      "value": 6,
       "max": 10,
       "label": "neutral"
     },
@@ -24,23 +24,23 @@
     },
     "volatility_regime": "extreme",
     "signals_counter": {
-      "buy": 6,
-      "sell": 2,
-      "neutral": 7,
+      "buy": 5,
+      "sell": 1,
+      "neutral": 9,
       "total": 15,
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_50-60_dist_ma20_+2_+5",
-      "win_rate": 0.83,
-      "sample_size": 12,
-      "median_bounce_pct": 9.5,
+      "setup": "rsi_50-60_dist_ma20_-2_+2",
+      "win_rate": 0.94,
+      "sample_size": 18,
+      "median_bounce_pct": 10.4,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 4/10 (neutral), alignment divergent_short_long, HMM bear (0.65), vol extreme, signals neutral (6b/2s/7n)."
+    "narrative_short": "TA score 6/10 (neutral), alignment divergent_short_long, HMM bear (0.65), vol extreme, signals neutral (5b/1s/9n)."
   },
   "notes": {
-    "atr_daily": 148627.7964,
+    "atr_daily": 149415.9708,
     "atr_pct_daily": null,
     "beta_60d": 0.4552,
     "beta_benchmark": "EWY",
@@ -56,23 +56,23 @@
         "indicator": "rsi",
         "type": "bearish",
         "confidence": 0.51,
-        "bars_ago": 3,
+        "bars_ago": 4,
         "at_price": null
       },
       {
         "indicator": "macd_hist",
         "type": "bearish",
-        "confidence": 0.5,
-        "bars_ago": 3,
+        "confidence": 0.46,
+        "bars_ago": 4,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": -12.4,
+      "current_dd_pct": -14.13,
       "ath_price": 2363000.0,
       "ath_date": "2026-06-01",
       "max_dd_1y_pct": -26.57,
-      "days_in_dd": 4,
+      "days_in_dd": 7,
       "median_recovery_days": null
     }
   },
@@ -84,31 +84,31 @@
       "side": "long",
       "entry_zone": {
         "min": 1994666.4489,
-        "max": 2001729.925
+        "max": 2020493.75
       },
       "stop": {
-        "price": 1847058.3055,
+        "price": 1804876.0438,
         "basis": "atr_below_confluence_support",
-        "distance_pct": -7.56
+        "distance_pct": -10.1
       },
       "targets": [
         {
           "level": 1,
-          "price": 2352415.8601,
+          "price": 2351146.4615,
           "basis": "vpvr_vah",
-          "rr": 2.34
+          "rr": 1.69
         },
         {
           "level": 2,
-          "price": 2933716.6305,
+          "price": 2927730.572,
           "basis": "fib_extension_1272",
-          "rr": 6.19
+          "rr": 4.54
         },
         {
           "level": 3,
-          "price": 3659701.7561,
+          "price": 3649917.2555,
           "basis": "fib_extension_1618",
-          "rr": 10.99
+          "rr": 8.1
         }
       ],
       "preferred_target": 1,
@@ -122,32 +122,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 2082897.4867,
-        "max": 2091220.7533
+        "min": 2050940.5617,
+        "max": 2059136.1283
       },
       "stop": {
-        "price": 2006502.7718,
+        "price": 1974183.6846,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -3.86
+        "distance_pct": -3.93
       },
       "targets": [
         {
           "level": 1,
-          "price": 2352415.8601,
+          "price": 2351146.4615,
           "basis": "vpvr_vah",
-          "rr": 3.29
+          "rr": 3.66
         },
         {
           "level": 2,
-          "price": 2933716.6305,
+          "price": 2927730.572,
           "basis": "fib_extension_1272",
-          "rr": 10.51
+          "rr": 10.79
         },
         {
           "level": 3,
-          "price": 3659701.7561,
+          "price": 3649917.2555,
           "basis": "fib_extension_1618",
-          "rr": 19.52
+          "rr": 19.73
         }
       ],
       "preferred_target": 1,
@@ -161,45 +161,45 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 1457202.1938,
-        "max": 1561478.8498
+        "min": 1562672.5055,
+        "max": 1575256.4613
       },
       "stop": {
-        "price": 1398914.106,
+        "price": 1500165.6053,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -7.32
+        "distance_pct": -4.38
       },
       "targets": [
         {
           "level": 1,
-          "price": 2352415.8601,
+          "price": 2351146.4615,
           "basis": "vpvr_vah",
-          "rr": 7.63
+          "rr": 11.37
         },
         {
           "level": 2,
-          "price": 2933716.6305,
+          "price": 2927730.572,
           "basis": "fib_extension_1272",
-          "rr": 12.9
+          "rr": 19.75
         },
         {
           "level": 3,
-          "price": 3659701.7561,
+          "price": 3649917.2555,
           "basis": "fib_extension_1618",
-          "rr": 19.47
+          "rr": 30.25
         }
       ],
       "preferred_target": 1,
       "conditions": [],
       "max_budget_pct": 35,
-      "rationale": "Deep value mecanique : entree sur confluence support basse MA50 + BB_LOWER + FIB_618 (strength 10.5). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+      "rationale": "Deep value mecanique : entree sur confluence support basse FIB_618 + BB_LOWER (strength 5.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
     }
   ],
   "bot_actionable": true,
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 1384924.9649,
+    "price": 1485163.9492,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
