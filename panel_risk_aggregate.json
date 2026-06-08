@@ -1,86 +1,58 @@
 {
   "available": true,
-  "generated_at": "2026-06-05T04:21:02.222713+00:00",
+  "generated_at": "2026-06-08T04:21:24.190817+00:00",
   "window_sessions": 56,
   "tickers_used": [
+    "AL2SI",
     "EVT",
     "HOOD",
-    "IONQ",
     "PLTR",
-    "RGTI",
-    "SAF",
+    "SMCI",
     "SMR",
-    "SOFI",
-    "SRT3"
+    "SOFI"
   ],
   "tickers_skipped": [],
   "weights_eur": {
-    "EVT": 507.53,
-    "HOOD": 331.4,
-    "IONQ": 272.92,
-    "PLTR": 284.4,
-    "RGTI": 385.52,
-    "SAF": 300.3,
-    "SMR": 392.64,
-    "SOFI": 383.64,
-    "SRT3": 244.0
+    "AL2SI": 149.22,
+    "EVT": 286.06,
+    "HOOD": 329.88,
+    "PLTR": 271.06,
+    "SMCI": 124.92,
+    "SMR": 157.5,
+    "SOFI": 144.27
   },
-  "total_notional_eur": 3102.35,
+  "total_notional_eur": 1462.91,
   "capital_total_eur": 2000.0,
   "var_95": {
     "method": "gaussian_1d",
     "z_95": 1.6448536269514722,
-    "sigma_portfolio_daily_eur": 104.65,
-    "value_eur": 172.14,
-    "pct_total_notional": 5.55,
-    "pct_capital": 8.61
+    "sigma_portfolio_daily_eur": 48.3,
+    "value_eur": 79.45,
+    "pct_total_notional": 5.43,
+    "pct_capital": 3.97
   },
   "panel_beta_weighted": {},
   "concentration_flags": [],
   "high_corr_pairs_in_panel": [
     {
-      "pair": "IONQ_RGTI",
-      "rho": 0.8408,
-      "share_pct": 21.2,
-      "flag": "red"
-    },
-    {
       "pair": "HOOD_SOFI",
-      "rho": 0.8285,
-      "share_pct": 23.0,
-      "flag": "red"
-    },
-    {
-      "pair": "IONQ_SMR",
-      "rho": 0.7107,
-      "share_pct": 21.5,
-      "flag": "red"
-    },
-    {
-      "pair": "RGTI_SMR",
-      "rho": 0.6482,
-      "share_pct": 25.1,
-      "flag": "red"
-    },
-    {
-      "pair": "HOOD_IONQ",
-      "rho": 0.647,
-      "share_pct": 19.5,
+      "rho": 0.8391,
+      "share_pct": 32.4,
       "flag": "red"
     },
     {
       "pair": "HOOD_PLTR",
-      "rho": 0.6009,
-      "share_pct": 19.8,
+      "rho": 0.6035,
+      "share_pct": 41.1,
       "flag": "red"
     }
   ],
   "scaling": {
     "var_threshold_pct": 8.0,
     "var_ref_metric": "var_95_pct_capital",
-    "scale_factor": 0.9295,
-    "scaling_applied": true,
-    "note": "Scale factor < 1 → réduire tous les sizings × scale_factor pour ramener la VaR sous le seuil."
+    "scale_factor": 1.0,
+    "scaling_applied": false,
+    "note": "VaR sous le seuil, pas de scaling nécessaire."
   },
   "note": "Modèle Gaussien — ne capte pas les queues épaisses. Pour stress, utiliser compute_stress_test.py. Net beta = combinaison linéaire pondérée des betas par ticker × benchmark."
 }
