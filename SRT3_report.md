@@ -1,6 +1,6 @@
 # SRT3
 
-**Generated** : 2026-06-05T21:37:06.753274+00:00  
+**Generated** : 2026-06-08T04:03:08.879286+00:00  
 **Score** : 6/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : trending · volatilite normal · €236.70  
 
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 6/10, conviction 'Strong Pass (negative EV)
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13206 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13200 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

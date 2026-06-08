@@ -1,6 +1,6 @@
 # HOOD
 
-**Generated** : 2026-06-05T21:55:00.293099+00:00  
+**Generated** : 2026-06-08T04:19:23.453961+00:00  
 **Score** : 7/10 — **Rating** : Buy  
 **Subtitle** : trending · volatilite normal · $82.47  
 
@@ -47,8 +47,8 @@ Plan privilegie B (swing), composite 7/10, conviction 'Buy'.
 - **MACD** : hist 0.718  _(pas de croisement recent)_
 - **BB** : %B 0.58 · largeur 29.9%
 - **ATR** : 5.58 (48.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.343  _(accumulation)_
-- **Vol ratio** : 1.32  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.342  _(accumulation)_
+- **Vol ratio** : 1.34  _(volume normal)_
 - **Choppiness** : 49.4  _(transition)_
 - **MA** : MA20 80.47 · MA50 78.25 · MA200 103.29  _(prix > MA20)_
 - **Dist MA** : MA20 +2.5% · MA50 +5.4% · MA200 -20.2%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 7/10, conviction 'Buy'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17048 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (17043 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

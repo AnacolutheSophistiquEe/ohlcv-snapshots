@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-06-05T21:48:33.951614+00:00  
+**Generated** : 2026-06-08T04:13:25.671051+00:00  
 **Score** : 5/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : indeterminate · volatilite normal · $135.53  
 
@@ -48,7 +48,7 @@ Plan privilegie B (swing), composite 5/10, conviction 'Strong Pass (negative EV)
 - **BB** : %B 0.37 · largeur 23.0%
 - **ATR** : 7.29 (58.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV rising · CMF 0.174  _(accumulation)_
-- **Vol ratio** : 0.92  _(volume normal)_
+- **Vol ratio** : 0.93  _(volume normal)_
 - **Choppiness** : 43.5  _(transition)_
 - **MA** : MA20 139.58 · MA50 140.9 · MA200 161.07  _(prix < MA20)_
 - **Dist MA** : MA20 -2.9% · MA50 -3.8% · MA200 -15.9%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 5/10, conviction 'Strong Pass (negative EV)
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16935 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16927 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

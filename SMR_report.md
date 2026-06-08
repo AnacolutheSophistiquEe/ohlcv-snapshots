@@ -1,6 +1,6 @@
 # SMR
 
-**Generated** : 2026-06-05T21:53:44.359385+00:00  
+**Generated** : 2026-06-08T04:18:11.886609+00:00  
 **Score** : 4/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : indeterminate · volatilite low · $10.50  
 
@@ -37,7 +37,7 @@ Plan privilegie B (swing), composite 4/10, conviction 'Strong Pass (negative EV)
 
 **Factor** : R² 0.42 · part idiosyncratique 0.41
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
-**Options** : neutral
+**Options** : favorable
 
 
 ## Indicateurs (résumé)
@@ -47,8 +47,8 @@ Plan privilegie B (swing), composite 4/10, conviction 'Strong Pass (negative EV)
 - **MACD** : hist -0.044  _(bearish_recent)_
 - **BB** : %B 0.16 · largeur 33.8%
 - **ATR** : 1.19 (22.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.068  _(accumulation)_
-- **Vol ratio** : 1.35  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.067  _(accumulation)_
+- **Vol ratio** : 1.36  _(volume normal)_
 - **Choppiness** : 48.4  _(transition)_
 - **MA** : MA20 11.88 · MA50 11.54 · MA200 21.85  _(prix < MA20)_
 - **Dist MA** : MA20 -11.6% · MA50 -9.0% · MA200 -52.0%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 4/10, conviction 'Strong Pass (negative EV)
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16973 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16966 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # ENR
 
-**Generated** : 2026-06-05T21:39:37.176615+00:00  
+**Generated** : 2026-06-08T04:05:20.814551+00:00  
 **Score** : 1/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : trending · volatilite normal · €158.02  
 
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 1/10, conviction 'Strong Pass (negative 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13302 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13296 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

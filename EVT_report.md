@@ -1,6 +1,6 @@
 # EVT
 
-**Generated** : 2026-06-05T21:38:22.041505+00:00  
+**Generated** : 2026-06-08T04:04:14.606462+00:00  
 **Score** : 5/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : indeterminate · volatilite low · €4.93  
 
@@ -47,8 +47,8 @@ Plan privilegie B (swing), composite 5/10, conviction 'Strong Pass (negative EV)
 - **MACD** : hist 0.002  _(pas de croisement recent)_
 - **BB** : %B 0.44 · largeur 17.7%
 - **ATR** : 0.2 (12.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.03  _(neutre)_
-- **Vol ratio** : 0.76  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.029  _(neutre)_
+- **Vol ratio** : 0.77  _(volume normal)_
 - **Choppiness** : 55.4  _(transition)_
 - **MA** : MA20 4.98 · MA50 5.0 · MA200 5.65  _(prix < MA20)_
 - **Dist MA** : MA20 -1.0% · MA50 -1.4% · MA200 -12.8%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 5/10, conviction 'Strong Pass (negative EV)
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17203 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (17209 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # SOFI
 
-**Generated** : 2026-06-05T21:56:20.689101+00:00  
+**Generated** : 2026-06-08T04:20:36.684296+00:00  
 **Score** : 5/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : trending · volatilite normal · $16.03  
 
@@ -47,8 +47,8 @@ Plan privilegie B (swing), composite 5/10, conviction 'Strong Pass (negative EV)
 - **MACD** : hist 0.108  _(pas de croisement recent)_
 - **BB** : %B 0.43 · largeur 23.3%
 - **ATR** : 0.99 (34.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.052  _(accumulation)_
-- **Vol ratio** : 1.13  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.051  _(accumulation)_
+- **Vol ratio** : 1.15  _(volume normal)_
 - **Choppiness** : 48.4  _(transition)_
 - **MA** : MA20 16.31 · MA50 16.75 · MA200 23.06  _(prix < MA20)_
 - **Dist MA** : MA20 -1.7% · MA50 -4.3% · MA200 -30.5%
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 5/10, conviction 'Strong Pass (negative EV)
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17093 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (17087 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

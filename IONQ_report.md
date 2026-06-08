@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-06-05T21:49:53.459306+00:00  
+**Generated** : 2026-06-08T04:14:37.366293+00:00  
 **Score** : 5/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : trending · volatilite high · $56.78  
 
@@ -37,7 +37,7 @@ Plan privilegie C (deep), composite 5/10, conviction 'Strong Pass (negative EV)'
 
 **Factor** : R² 0.38 · part idiosyncratique 0.3
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
-**Options** : neutral_cautious
+**Options** : favorable
 
 
 ## Indicateurs (résumé)
@@ -47,8 +47,8 @@ Plan privilegie C (deep), composite 5/10, conviction 'Strong Pass (negative EV)'
 - **MACD** : hist -0.586  _(bearish_recent)_
 - **BB** : %B 0.39 · largeur 52.3%
 - **ATR** : 5.99 (92.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF 0.249  _(accumulation)_
-- **Vol ratio** : 0.82  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF 0.243  _(accumulation)_
+- **Vol ratio** : 0.93  _(volume normal)_
 - **Choppiness** : 41.4  _(transition)_
 - **MA** : MA20 60.1 · MA50 47.15 · MA200 48.5  _(prix < MA20)_
 - **Dist MA** : MA20 -5.5% · MA50 +20.4% · MA200 +17.1%
@@ -56,5 +56,5 @@ Plan privilegie C (deep), composite 5/10, conviction 'Strong Pass (negative EV)'
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13428 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13406 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
