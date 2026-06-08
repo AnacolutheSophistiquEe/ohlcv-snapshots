@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-08T04:19:23.794007+00:00",
+  "generated_at": "2026-06-08T21:54:40.194655+00:00",
   "prediction_id": "HOOD_B_20260608",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "HOOD",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 82.47,
+    "limit_price": 85.04,
     "quantity": 4,
     "tif": "GTD",
     "gtd": "2026-06-29T22:00:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 83.34,
+      "limit_price": 91.04,
       "quantity": 2,
       "tif": "GTC",
       "tag": "T1"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 109.32,
+      "limit_price": 139.75,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 139.75,
+      "limit_price": 152.16,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -42,7 +42,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 74.11,
+      "stop_price": 82.79,
       "quantity": 4,
       "tif": "GTC",
       "tag": "SL"
@@ -93,24 +93,24 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_1_3_weeks",
-    "composite_score": 7.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0632,
+    "ev_pct_risk": 0.111,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.4278,
-      "T2": 0.2978,
-      "T3": 0.1993
+      "T1": 0.5792,
+      "T2": 0.365,
+      "T3": 0.2034
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 329.88,
-    "hold_tolerance_breach_price": 61.8525,
+    "notional_eur": 340.16,
+    "hold_tolerance_breach_price": 63.78,
     "hold_fallback_active": true,
     "prediction_id": "HOOD_B_20260608"
   },
