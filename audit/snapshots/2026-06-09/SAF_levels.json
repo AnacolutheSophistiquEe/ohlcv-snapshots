@@ -1,0 +1,193 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "SAF",
+    "generated_at": "2026-06-09T04:21:08Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-06-10T08:00:00Z",
+    "valid_until": "2026-06-10T21:00:00Z",
+    "source_precomputed": "SAF_precomputed.json"
+  },
+  "context": {
+    "last_price": 294.5,
+    "ta_score": {
+      "value": 6,
+      "max": 10,
+      "label": "bullish"
+    },
+    "alignment_flag": "mixed",
+    "hmm_regime": {
+      "state": "sideways",
+      "probability": 0.9,
+      "expected_duration_days": 30.0
+    },
+    "volatility_regime": "high",
+    "signals_counter": {
+      "buy": 3,
+      "sell": 1,
+      "neutral": 11,
+      "total": 15,
+      "verdict": "neutral"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_60-70_dist_ma20_+2_+5",
+      "win_rate": 0.81,
+      "sample_size": 36,
+      "median_bounce_pct": 1.85,
+      "confidence": "high"
+    },
+    "narrative_short": "TA score 6/10 (bullish), alignment mixed, HMM sideways (0.90), vol high, signals neutral (3b/1s/11n)."
+  },
+  "notes": {
+    "atr_daily": 9.6768,
+    "atr_pct_daily": null,
+    "beta_60d": 1.4612,
+    "beta_benchmark": "EWQ",
+    "beta_corr_60d": 0.7297,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "bullish_engulfing",
+      "date": "2026-06-04",
+      "confidence": 0.798
+    },
+    "divergences": [],
+    "drawdown": {
+      "current_dd_pct": -14.23,
+      "ath_price": 343.3422,
+      "ath_date": "2026-02-18",
+      "max_dd_1y_pct": -23.62,
+      "days_in_dd": 110,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 264.0906,
+        "max": 268.061
+      },
+      "stop": {
+        "price": 261.4497,
+        "basis": "below_zone_1pct_below_confluence_support",
+        "distance_pct": -1.74
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 306.3639,
+          "basis": "vpvr_vah",
+          "rr": 8.71
+        },
+        {
+          "level": 2,
+          "price": 358.015,
+          "basis": "fib_extension_1272",
+          "rr": 19.87
+        },
+        {
+          "level": 3,
+          "price": 383.095,
+          "basis": "fib_extension_1618",
+          "rr": 25.3
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support BB_LOWER + VPVR_VAL (strength 5.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 312.9458,
+        "max": 314.1964
+      },
+      "stop": {
+        "price": 300.5458,
+        "basis": "below_broken_resistance",
+        "distance_pct": -4.15
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 322.787,
+          "basis": "fib_786",
+          "rr": 0.71
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance FIB_50 + VPVR_VAH + FIB_618 + BB_UPPER (strength 22.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 261.0743,
+        "max": 266.3752
+      },
+      "stop": {
+        "price": 250.5348,
+        "basis": "fallback_psych_-10pct",
+        "distance_pct": -5.0
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 306.3639,
+          "basis": "vpvr_vah",
+          "rr": 3.23
+        },
+        {
+          "level": 2,
+          "price": 358.015,
+          "basis": "fib_extension_1272",
+          "rr": 7.15
+        },
+        {
+          "level": 3,
+          "price": 383.095,
+          "basis": "fib_extension_1618",
+          "rr": 9.05
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel psych_-10pct. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": true,
+  "bot_actionable_reason": "ok",
+  "global_conditions": [
+    {
+      "id": "session_eu_paris_open",
+      "type": "session_window",
+      "params": {
+        "session": "eu_paris_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 248.0295,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
