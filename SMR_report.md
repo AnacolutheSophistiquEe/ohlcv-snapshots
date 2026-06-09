@@ -1,6 +1,6 @@
 # SMR
 
-**Generated** : 2026-06-08T21:53:23.893117+00:00  
+**Generated** : 2026-06-09T04:17:57.423916+00:00  
 **Score** : 4/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : indeterminate · volatilite low · $10.76  
 
@@ -47,7 +47,7 @@ Plan privilegie B (swing), composite 4/10, conviction 'Strong Pass (negative EV)
 - **MACD** : hist -0.116  _(bearish_recent)_
 - **BB** : %B 0.25 · largeur 34.7%
 - **ATR** : 1.15 (21.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.015  _(neutre)_
+- **OBV/CMF** : OBV rising · CMF 0.014  _(neutre)_
 - **Vol ratio** : 0.65  _(volume normal)_
 - **Choppiness** : 47.1  _(transition)_
 - **MA** : MA20 11.79 · MA50 11.53 · MA200 21.74  _(prix < MA20)_
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 4/10, conviction 'Strong Pass (negative EV)
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16979 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16932 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

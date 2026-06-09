@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-06-08T21:49:34.729455+00:00  
+**Generated** : 2026-06-09T04:14:25.865437+00:00  
 **Score** : 6/10 — **Rating** : Neutral  
 **Subtitle** : trending · volatilite high · $62.80  
 
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Neutral'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16241 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16194 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

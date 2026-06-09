@@ -1,6 +1,6 @@
 # SMCI
 
-**Generated** : 2026-06-08T21:46:57.364133+00:00  
+**Generated** : 2026-06-09T04:12:00.078632+00:00  
 **Score** : 4/10 — **Rating** : Neutral  
 **Subtitle** : strong_trend · volatilite extreme · $43.99  
 
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 4/10, conviction 'Neutral'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13239 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13192 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

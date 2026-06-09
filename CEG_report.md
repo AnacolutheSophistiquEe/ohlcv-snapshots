@@ -1,6 +1,6 @@
 # CEG
 
-**Generated** : 2026-06-08T21:52:09.954068+00:00  
+**Generated** : 2026-06-09T04:16:48.943877+00:00  
 **Score** : 2/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : indeterminate · volatilite low · $250.67  
 
@@ -28,8 +28,8 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.515 | EV/share : $-9.046 | p_fill : —
-- Scenarios Monte-Carlo intraday : bull 55.8 | bear 39.2 | side 5.0
+- EV/risk : -0.516 | EV/share : $-9.054 | p_fill : —
+- Scenarios Monte-Carlo intraday : bull 55.7 | bear 39.3 | side 5.0
 - Sizing : notional 0.0 | shares 0
 
 
@@ -47,8 +47,8 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative 
 - **MACD** : hist -3.064  _(pas de croisement recent)_
 - **BB** : %B 0.07 · largeur 21.7%
 - **ATR** : 11.7 (18.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.216  _(distribution)_
-- **Vol ratio** : 0.81  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.217  _(distribution)_
+- **Vol ratio** : 0.83  _(volume normal)_
 - **Choppiness** : 37.9  _(marche directionnel)_
 - **MA** : MA20 276.63 · MA50 288.09 · MA200 320.56  _(prix < MA20)_
 - **Dist MA** : MA20 -9.4% · MA50 -13.0% · MA200 -21.8%
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13806 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13769 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

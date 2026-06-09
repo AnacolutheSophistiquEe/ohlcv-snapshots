@@ -1,6 +1,6 @@
 # HOOD
 
-**Generated** : 2026-06-08T21:54:39.813901+00:00  
+**Generated** : 2026-06-09T04:19:07.390695+00:00  
 **Score** : 6/10 — **Rating** : Buy  
 **Subtitle** : trending · volatilite normal · $85.04  
 
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 6/10, conviction 'Buy'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17289 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (17240 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

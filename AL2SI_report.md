@@ -1,6 +1,6 @@
 # AL2SI
 
-**Generated** : 2026-06-08T21:41:53.294490+00:00  
+**Generated** : 2026-06-09T04:07:26.274542+00:00  
 **Score** : 6/10 — **Rating** : Neutral  
 **Subtitle** : trending · volatilite extreme · $54.40  
 
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Neutral'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (15537 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (15490 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

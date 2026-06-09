@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-06-08T21:48:15.587131+00:00  
+**Generated** : 2026-06-09T04:13:15.747869+00:00  
 **Score** : 4/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : indeterminate · volatilite normal · $136.47  
 
@@ -46,9 +46,9 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Strong Pass (negative 
 - **ADX** : 22.0  _(pas de tendance nette)_
 - **MACD** : hist -0.212  _(bearish_recent)_
 - **BB** : %B 0.41 · largeur 23.1%
-- **ATR** : 7.14 (54.0e pct 1a)  _(volatilite normale)_
+- **ATR** : 7.14 (55.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV rising · CMF 0.125  _(accumulation)_
-- **Vol ratio** : 0.66  _(volume normal)_
+- **Vol ratio** : 0.67  _(volume normal)_
 - **Choppiness** : 43.1  _(transition)_
 - **MA** : MA20 139.51 · MA50 140.68 · MA200 160.98  _(prix < MA20)_
 - **Dist MA** : MA20 -2.2% · MA50 -3.0% · MA200 -15.2%
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Strong Pass (negative 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16696 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16658 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,45 +1,45 @@
 {
   "available": true,
-  "generated_at": "2026-05-29T21:46:36.123528+00:00",
-  "prediction_id": "SMCI_A_20260529",
+  "generated_at": "2026-06-09T04:07:26.638223+00:00",
+  "prediction_id": "AL2SI_A_20260609",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "SMCI",
-  "exchange": "SMART",
-  "currency": "USD",
+  "symbol": "AL2SI",
+  "exchange": "SBF",
+  "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 45.86,
-    "quantity": 3,
+    "limit_price": 54.13,
+    "quantity": 5,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 64.46,
-      "quantity": 2,
+      "limit_price": 68.17,
+      "quantity": 3,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 76.42,
-      "quantity": 1,
+      "limit_price": 84.36,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 41.83,
-      "quantity": 3,
+      "stop_price": 47.1,
+      "quantity": 5,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "SMCI_A_intraday_20260529",
+  "oca_group": "AL2SI_A_intraday_20260609",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -53,7 +53,7 @@
     "order_validity": {
       "type": "DAY",
       "offset_sessions": 0,
-      "good_till_date": "2026-05-29T22:00:00+00:00"
+      "good_till_date": "2026-06-09T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -67,11 +67,11 @@
     "qty_split": [
       {
         "tag": "T2",
-        "qty": 2
+        "qty": 3
       },
       {
         "tag": "T3",
-        "qty": 1
+        "qty": 2
       }
     ]
   },
@@ -79,25 +79,26 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 4.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.482,
+    "ev_pct_risk": 0.1029,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T2": 0.0135,
-      "T3": 0.0005
+      "T1": 0.6604,
+      "T2": 0.4207,
+      "T3": 0.2374
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 138.27,
-    "hold_tolerance_breach_price": 34.5675,
+    "notional_eur": 272.0,
+    "hold_tolerance_breach_price": 40.8,
     "hold_fallback_active": true,
-    "prediction_id": "SMCI_A_20260529"
+    "prediction_id": "AL2SI_A_20260609"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,

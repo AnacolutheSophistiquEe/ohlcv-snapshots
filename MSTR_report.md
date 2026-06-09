@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-06-08T21:45:38.665269+00:00  
+**Generated** : 2026-06-09T04:10:50.108172+00:00  
 **Score** : 5/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : strong_trend · volatilite low · $127.20  
 
@@ -48,7 +48,7 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Strong Pass (negative 
 - **BB** : %B 0.14 · largeur 54.4%
 - **ATR** : 9.73 (20.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV falling · CMF -0.032  _(neutre)_
-- **Vol ratio** : 1.15  _(volume normal)_
+- **Vol ratio** : 1.17  _(volume normal)_
 - **Choppiness** : 34.4  _(marche directionnel)_
 - **MA** : MA20 157.94 · MA50 155.16 · MA200 200.78  _(prix < MA20)_
 - **Dist MA** : MA20 -19.5% · MA50 -18.0% · MA200 -36.6%
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Strong Pass (negative 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13805 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13758 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # SAF
 
-**Generated** : 2026-06-08T21:40:40.259032+00:00  
+**Generated** : 2026-06-09T04:06:19.925357+00:00  
 **Score** : 6/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : indeterminate · volatilite high · $294.50  
 
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 6/10, conviction 'Strong Pass (negative EV)
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16047 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16000 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
