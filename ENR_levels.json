@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "ENR",
-    "generated_at": "2026-06-09T04:21:08Z",
+    "generated_at": "2026-06-09T21:56:46Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-10T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "ENR_precomputed.json"
   },
   "context": {
-    "last_price": 158.02,
+    "last_price": 148.3,
     "ta_score": {
       "value": 0,
       "max": 10,
@@ -20,44 +20,44 @@
     "hmm_regime": {
       "state": "bear",
       "probability": 0.9,
-      "expected_duration_days": 30.0
+      "expected_duration_days": 22.05
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 3,
+      "buy": 4,
       "sell": 7,
-      "neutral": 6,
+      "neutral": 5,
       "total": 16,
-      "verdict": "strong_sell"
+      "verdict": "sell"
     },
     "mean_reversion_score": {
-      "setup": "rsi_30-40_dist_ma20_-10_-5",
+      "setup": "rsi_<30_dist_ma20_<-10",
       "win_rate": 1.0,
-      "sample_size": 11,
-      "median_bounce_pct": 7.87,
-      "confidence": "medium"
+      "sample_size": 1,
+      "median_bounce_pct": 13.44,
+      "confidence": "very_low"
     },
-    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (0.90), vol normal, signals strong_sell (3b/7s/6n)."
+    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (0.90), vol normal, signals sell (4b/7s/5n)."
   },
   "notes": {
-    "atr_daily": 7.2257,
+    "atr_daily": 7.3286,
     "atr_pct_daily": null,
-    "beta_60d": 1.3642,
+    "beta_60d": 1.3718,
     "beta_benchmark": "EWG",
-    "beta_corr_60d": 0.6163,
+    "beta_corr_60d": 0.62,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "hammer",
-      "date": "2026-06-04",
-      "confidence": 0.88
+      "name": "bearish_engulfing",
+      "date": "2026-06-09",
+      "confidence": 0.867
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -15.78,
+      "current_dd_pct": -20.96,
       "ath_price": 187.62,
       "ath_date": "2026-04-24",
-      "max_dd_1y_pct": -18.61,
-      "days_in_dd": 42,
+      "max_dd_1y_pct": -20.96,
+      "days_in_dd": 46,
       "median_recovery_days": null
     }
   },
@@ -68,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 141.7332,
-        "max": 147.9652
+        "min": 140.3378,
+        "max": 141.9795
       },
       "stop": {
-        "price": 106.051,
+        "price": 106.0407,
         "basis": "sr_below_confluence_support",
-        "distance_pct": -26.79
+        "distance_pct": -24.88
       },
       "targets": [
         {
           "level": 1,
           "price": 164.877,
           "basis": "next_resistance",
-          "rr": 0.52
+          "rr": 0.68
         },
         {
           "level": 2,
           "price": 189.28,
           "basis": "resistance_2",
-          "rr": 1.15
+          "rr": 1.37
         },
         {
           "level": 3,
-          "price": 239.1558,
+          "price": 242.0807,
           "basis": "fib_extension_1618",
-          "rr": 2.43
+          "rr": 2.87
         }
       ],
       "preferred_target": 1,
@@ -101,7 +101,7 @@
         "session_eu_xetra_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support VPVR_VAL + VPVR_POC + FIB_618 (strength 13.5). Bounce mecanique."
+      "rationale": "Confluence support FIB_50 + VPVR_VAL (strength 6.0). Bounce mecanique."
     },
     {
       "id": "B",
@@ -109,32 +109,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 169.9618,
-        "max": 170.641
+        "min": 151.2274,
+        "max": 151.8317
       },
       "stop": {
-        "price": 162.4688,
+        "price": 148.6018,
         "basis": "below_broken_resistance",
-        "distance_pct": -4.6
+        "distance_pct": -1.93
       },
       "targets": [
         {
           "level": 1,
-          "price": 178.134,
-          "basis": "r_multiple_1",
-          "rr": 1.0
+          "price": 164.877,
+          "basis": "next_confluence_resistance",
+          "rr": 4.56
         },
         {
           "level": 2,
-          "price": 185.9666,
-          "basis": "r_multiple_2",
-          "rr": 2.0
+          "price": 166.3651,
+          "basis": "fib_786",
+          "rr": 5.07
         },
         {
           "level": 3,
-          "price": 193.7992,
-          "basis": "r_multiple_3",
-          "rr": 3.0
+          "price": 186.0315,
+          "basis": "next_confluence_resistance",
+          "rr": 11.78
         }
       ],
       "preferred_target": 1,
@@ -142,7 +142,7 @@
         "session_eu_xetra_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance FIB_786 + S/R_resistance + MA50 + MA20 (strength 22.0)."
+      "rationale": "Breakout au-dessus confluence resistance BB_LOWER + FIB_618 (strength 5.0)."
     },
     {
       "id": "C",
@@ -154,28 +154,28 @@
         "max": 107.3075
       },
       "stop": {
-        "price": 95.935,
+        "price": 95.7807,
         "basis": "fallback_sr_support",
-        "distance_pct": -9.7
+        "distance_pct": -9.84
       },
       "targets": [
         {
           "level": 1,
           "price": 164.877,
           "basis": "next_resistance",
-          "rr": 5.69
+          "rr": 5.61
         },
         {
           "level": 2,
           "price": 189.28,
           "basis": "resistance_2",
-          "rr": 8.06
+          "rr": 7.94
         },
         {
           "level": 3,
-          "price": 239.1558,
+          "price": 242.0807,
           "basis": "fib_extension_1618",
-          "rr": 12.9
+          "rr": 12.99
         }
       ],
       "preferred_target": 1,
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 94.9757,
+    "price": 94.8229,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
