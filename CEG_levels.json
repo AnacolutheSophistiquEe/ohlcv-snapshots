@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "CEG",
-    "generated_at": "2026-06-08T21:56:50Z",
+    "generated_at": "2026-06-09T04:21:08Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-09T08:00:00Z",
-    "valid_until": "2026-06-09T21:00:00Z",
+    "valid_from": "2026-06-10T08:00:00Z",
+    "valid_until": "2026-06-10T21:00:00Z",
     "source_precomputed": "CEG_precomputed.json"
   },
   "context": {
@@ -19,8 +19,8 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.5878,
-      "expected_duration_days": 2.43
+      "probability": 0.5859,
+      "expected_duration_days": 2.41
     },
     "volatility_regime": "low",
     "signals_counter": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bull (0.59), vol low, signals neutral (2b/6s/7n)."
   },
   "notes": {
-    "atr_daily": 11.6974,
+    "atr_daily": 11.6999,
     "atr_pct_daily": null,
     "beta_60d": 1.0084,
     "beta_benchmark": "IWM",
@@ -68,11 +68,11 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 249.3796,
-        "max": 250.8804
+        "min": 249.3696,
+        "max": 250.8704
       },
       "stop": {
-        "price": 233.124,
+        "price": 233.1202,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -6.8
       },
@@ -87,7 +87,7 @@
           "level": 2,
           "price": 378.3975,
           "basis": "resistance_2",
-          "rr": 7.54
+          "rr": 7.55
         },
         {
           "level": 3,
@@ -150,11 +150,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 238.961,
-        "max": 243.813
+        "min": 238.9118,
+        "max": 243.7627
       },
       "stop": {
-        "price": 225.054,
+        "price": 225.0002,
         "basis": "fallback_pivot_classical_s3",
         "distance_pct": -6.77
       },
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 222.8035,
+    "price": 222.7502,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
