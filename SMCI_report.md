@@ -1,60 +1,60 @@
 # SMCI
 
-**Generated** : 2026-06-09T04:12:00.078632+00:00  
-**Score** : 4/10 — **Rating** : Neutral  
-**Subtitle** : strong_trend · volatilite extreme · $43.99  
+**Generated** : 2026-06-09T21:46:52.510861+00:00  
+**Score** : 7/10 — **Rating** : Neutral  
+**Subtitle** : strong_trend · volatilite extreme · $40.64  
 
 ## Régime & alignement multi-TF
 
 - **Daily** : up (trend-up)  
-- **H4** : up | **H1** : down  
-- **Flag multi-TF** : divergent_short_long (score 2)
+- **H4** : down | **H1** : down  
+- **Flag multi-TF** : divergent_short_long (score 1)
 
 
 ## Lecture chartiste
 
-Plan privilegie B (swing), composite 4/10, conviction 'Neutral'.
+Plan privilegie B (swing), composite 7/10, conviction 'Neutral'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry : $43.77–$44.21 (mid $43.99)
-- Stop : $38.65 (stop atr-based (-12.14%))
-- Targets : T1 $46.52 · R/R 0.47 | T2 $64.46 · R/R 3.83 | T3 $76.42 · R/R 6.07
+- Entry : $40.44–$40.84 (mid $40.64)
+- Stop : $39.93 (stop sr-based (-1.75%))
+- Targets : T1 $46.08 · R/R 7.66 | T2 $68.77 · R/R 39.62 | T3 $81.61 · R/R 57.7
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $38.65
+- Invalidation : close sous $39.93
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.041 | EV/share : $0.207 | p_fill : —
-- Scenarios Monte-Carlo swing : bull 85.0 | bear 5.0 | side 10.0
-- Sizing : notional 0.0 | shares 0
+- EV/risk : -0.071 | EV/share : $-0.340 | p_fill : —
+- Scenarios Monte-Carlo swing : bull 6.9 | bear 6.5 | side 86.7
+- Sizing : notional 400.0 | shares 9
 
 
 ## Positioning & factor
 
-**Factor** : R² 0.34 · part idiosyncratique 0.52
+**Factor** : R² 0.35 · part idiosyncratique 0.58
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : bullish
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 71.3  _(surachat)_
-- **ADX** : 51.2  _(tendance tres forte)_
-- **MACD** : hist 0.431  _(pas de croisement recent)_
-- **BB** : %B 0.72 · largeur 69.0%
-- **ATR** : 3.56 (97.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF 0.083  _(accumulation)_
-- **Vol ratio** : 0.76  _(volume normal)_
-- **Choppiness** : 31.1  _(marche directionnel)_
-- **MA** : MA20 38.3 · MA50 31.38 · MA200 36.02  _(prix > MA20)_
-- **Dist MA** : MA20 +14.9% · MA50 +40.2% · MA200 +22.1%
+- **RSI** : 64.9  _(momentum haussier)_
+- **ADX** : 50.6  _(tendance tres forte)_
+- **MACD** : hist -0.016  _(bearish_recent)_
+- **BB** : %B 0.58 · largeur 67.5%
+- **ATR** : 3.92 (100.0e pct 1a)  _(volatilite elevee)_
+- **OBV/CMF** : OBV rising · CMF 0.113  _(accumulation)_
+- **Vol ratio** : 1.12  _(volume normal)_
+- **Choppiness** : 37.2  _(marche directionnel)_
+- **MA** : MA20 38.65 · MA50 31.75 · MA200 36.02  _(prix > MA20)_
+- **Dist MA** : MA20 +5.1% · MA50 +28.0% · MA200 +12.8%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13192 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16502 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
