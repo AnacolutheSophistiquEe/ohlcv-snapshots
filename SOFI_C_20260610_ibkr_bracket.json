@@ -1,68 +1,68 @@
 {
   "available": true,
-  "generated_at": "2026-06-10T21:42:07.614603+00:00",
-  "prediction_id": "AL2SI_B_20260610",
+  "generated_at": "2026-06-10T21:56:17.705152+00:00",
+  "prediction_id": "SOFI_C_20260610",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "AL2SI",
-  "exchange": "SBF",
-  "currency": "EUR",
+  "symbol": "SOFI",
+  "exchange": "SMART",
+  "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 49.0,
-    "quantity": 5,
+    "limit_price": 15.87,
+    "quantity": 10,
     "tif": "GTD",
-    "gtd": "2026-07-01T16:30:00+00:00"
+    "gtd": "2026-08-09T22:00:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 50.31,
-      "quantity": 3,
+      "limit_price": 18.27,
+      "quantity": 5,
       "tif": "GTC",
       "tag": "T1"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 71.94,
-      "quantity": 1,
+      "limit_price": 30.1,
+      "quantity": 3,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 89.1,
-      "quantity": 1,
+      "limit_price": 32.65,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 41.18,
-      "quantity": 5,
+      "stop_price": 15.66,
+      "quantity": 10,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "AL2SI_B_swing_20260610",
+  "oca_group": "SOFI_C_deep_20260610",
   "oca_type": 1,
   "execution_rules": {
-    "stop_mode": "breakeven_after_T1",
-    "stop_mode_description": "SL → prix d'entrée après hit T1",
-    "trail_distance_atr": null,
+    "stop_mode": "trailing_after_T1",
+    "stop_mode_description": "SL → max(SL, close - 2×ATR) après hit T1",
+    "trail_distance_atr": 2.0,
     "time_stop": {
       "enabled": true,
-      "max_holding_sessions": 21,
-      "exit_mode": "market_close_at_breakeven"
+      "max_holding_sessions": 60,
+      "exit_mode": "keep_as_buyandhold"
     },
     "order_validity": {
       "type": "GTD",
-      "offset_sessions": 21,
-      "good_till_date": "2026-07-01T16:30:00+00:00"
+      "offset_sessions": 60,
+      "good_till_date": "2026-08-09T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -77,42 +77,45 @@
     "qty_split": [
       {
         "tag": "T1",
-        "qty": 3
+        "qty": 5
       },
       {
         "tag": "T2",
-        "qty": 1
+        "qty": 3
       },
       {
         "tag": "T3",
-        "qty": 1
+        "qty": 2
       }
     ]
   },
   "bracket_metadata": {
-    "plan_id": "B",
-    "horizon": "swing",
-    "horizon_label_long": "swing_1_3_weeks",
-    "composite_score": 6.0,
-    "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.569,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
+    "plan_id": "C",
+    "horizon": "deep",
+    "horizon_label_long": "swing_4_12_weeks",
+    "composite_score": 4.0,
+    "composite_score_source": "horizon_ta_score.plan_c.score",
+    "ev_pct_risk": -0.6319,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.deep.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.0986,
-      "T2": 0.0968,
-      "T3": 0.0943
+      "T1": 0.2656,
+      "T2": 0.0942,
+      "T3": 0.0326
     },
-    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
+    "p_hit_source": "edge_metrics.by_horizon.deep.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 245.0,
-    "hold_tolerance_breach_price": 36.75,
+    "notional_eur": 158.7,
+    "hold_tolerance_breach_price": 11.9025,
     "hold_fallback_active": true,
-    "prediction_id": "AL2SI_B_20260610"
+    "prediction_id": "SOFI_C_20260610",
+    "trail_distance_atr": 2.0,
+    "trail_distance_price": 2.067,
+    "atr_14_daily": 1.0335
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
