@@ -1,63 +1,75 @@
 {
   "available": true,
-  "generated_at": "2026-06-09T04:21:20.737668+00:00",
-  "window_sessions": 55,
+  "generated_at": "2026-06-10T04:21:44.608542+00:00",
+  "window_sessions": 56,
   "tickers_used": [
     "AL2SI",
     "EVT",
     "HOOD",
     "IONQ",
     "PLTR",
-    "SAF",
+    "RGTI",
     "SMR",
     "SOFI"
   ],
   "tickers_skipped": [],
   "weights_eur": {
-    "AL2SI": 272.0,
+    "AL2SI": 251.75,
     "EVT": 286.06,
     "HOOD": 340.16,
     "IONQ": 125.6,
     "PLTR": 136.47,
-    "SAF": 294.5,
+    "RGTI": 152.35,
     "SMR": 150.64,
     "SOFI": 396.0
   },
-  "total_notional_eur": 2001.43,
+  "total_notional_eur": 1839.03,
   "capital_total_eur": 2000.0,
   "var_95": {
     "method": "gaussian_1d",
     "z_95": 1.6448536269514722,
-    "sigma_portfolio_daily_eur": 59.76,
-    "value_eur": 98.3,
-    "pct_total_notional": 4.91,
-    "pct_capital": 4.92
+    "sigma_portfolio_daily_eur": 63.58,
+    "value_eur": 104.59,
+    "pct_total_notional": 5.69,
+    "pct_capital": 5.23
   },
   "panel_beta_weighted": {},
   "concentration_flags": [],
   "high_corr_pairs_in_panel": [
     {
+      "pair": "IONQ_RGTI",
+      "rho": 0.8495,
+      "share_pct": 15.1,
+      "flag": "red"
+    },
+    {
       "pair": "HOOD_SOFI",
-      "rho": 0.8381,
-      "share_pct": 36.8,
+      "rho": 0.8392,
+      "share_pct": 40.0,
       "flag": "red"
     },
     {
       "pair": "IONQ_SMR",
-      "rho": 0.7418,
-      "share_pct": 13.8,
+      "rho": 0.7371,
+      "share_pct": 15.0,
+      "flag": "red"
+    },
+    {
+      "pair": "RGTI_SMR",
+      "rho": 0.6775,
+      "share_pct": 16.5,
       "flag": "red"
     },
     {
       "pair": "HOOD_IONQ",
-      "rho": 0.6312,
-      "share_pct": 23.3,
+      "rho": 0.6332,
+      "share_pct": 25.3,
       "flag": "red"
     },
     {
       "pair": "HOOD_PLTR",
-      "rho": 0.6122,
-      "share_pct": 23.8,
+      "rho": 0.6123,
+      "share_pct": 25.9,
       "flag": "red"
     }
   ],
