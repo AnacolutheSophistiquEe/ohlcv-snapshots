@@ -1,6 +1,6 @@
 # AL2SI
 
-**Generated** : 2026-06-10T21:42:07.248640+00:00  
+**Generated** : 2026-06-11T04:07:22.764047+00:00  
 **Score** : 6/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : trending · volatilite extreme · $49.00  
 
@@ -35,7 +35,7 @@ Plan privilegie B (swing), composite 6/10, conviction 'Strong Pass (negative EV)
 
 ## Positioning & factor
 
-**Factor** : R² 0.13 · part idiosyncratique 0.15
+**Factor** : R² 0.13 · part idiosyncratique 0.11
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -56,5 +56,5 @@ Plan privilegie B (swing), composite 6/10, conviction 'Strong Pass (negative EV)
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (15971 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16000 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
