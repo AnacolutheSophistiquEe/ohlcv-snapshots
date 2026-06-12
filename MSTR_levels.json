@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-06-11T22:00:37Z",
+    "generated_at": "2026-06-12T04:24:52Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-12T08:00:00Z",
-    "valid_until": "2026-06-12T21:00:00Z",
+    "valid_from": "2026-06-15T08:00:00Z",
+    "valid_until": "2026-06-15T21:00:00Z",
     "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
@@ -20,7 +20,7 @@
     "hmm_regime": {
       "state": "bear",
       "probability": 0.9,
-      "expected_duration_days": 22.64
+      "expected_duration_days": 22.62
     },
     "volatility_regime": "low",
     "signals_counter": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 1/10 (very_bearish), alignment divergent_short_long, HMM bear (0.90), vol low, signals sell (4b/6s/5n)."
   },
   "notes": {
-    "atr_daily": 10.2759,
+    "atr_daily": 10.2757,
     "atr_pct_daily": null,
     "beta_60d": 1.8443,
     "beta_benchmark": "IWM",
@@ -49,7 +49,7 @@
     "candlestick": {
       "name": "morning_star",
       "date": "2026-06-11",
-      "confidence": 0.412
+      "confidence": 0.411
     },
     "divergences": [],
     "drawdown": {
@@ -72,7 +72,7 @@
         "max": 119.7883
       },
       "stop": {
-        "price": 104.7362,
+        "price": 104.7364,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -12.3
       },
@@ -150,11 +150,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 105.7989,
-        "max": 107.947
+        "min": 105.8087,
+        "max": 107.9571
       },
       "stop": {
-        "price": 91.9962,
+        "price": 92.0064,
         "basis": "fallback_pivot_classical_s3",
         "distance_pct": -13.92
       },
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 91.0762,
+    "price": 91.0863,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
