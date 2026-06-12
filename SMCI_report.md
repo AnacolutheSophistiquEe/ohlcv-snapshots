@@ -1,8 +1,8 @@
 # SMCI
 
-**Generated** : 2026-06-12T04:14:05.742928+00:00  
-**Score** : 4/10 — **Rating** : Strong Pass (negative EV)  
-**Subtitle** : trending · volatilite extreme · $31.97  
+**Generated** : 2026-06-12T21:48:56.385663+00:00  
+**Score** : 3/10 — **Rating** : Strong Pass (negative EV)  
+**Subtitle** : trending · volatilite extreme · $30.46  
 
 ## Régime & alignement multi-TF
 
@@ -13,48 +13,48 @@
 
 ## Lecture chartiste
 
-Plan privilegie C (deep), composite 4/10, conviction 'Strong Pass (negative EV)'.
+Plan privilegie A (intraday), composite 3/10, conviction 'Strong Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
-**Plan C — deep** (order_type LMT)
-- Entry : $31.81–$32.13 (mid $31.97)
-- Stop : $28.54 (stop swing-based (-10.72%))
-- Targets : T1 $39.68 · R/R 2.25 | T2 $64.46 · R/R 9.47 | T3 $76.42 · R/R 12.96
+**Plan A — intraday** (order_type LMT)
+- Entry : $30.31–$30.61 (mid $30.46)
+- Stop : $28.54 (stop swing-based (-6.3%))
+- Targets : T1 $39.68 · R/R 4.8 | T2 $68.77 · R/R 19.95 | T3 $81.61 · R/R 26.64
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous $28.54
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.52 | EV/share : $-1.690 | p_fill : —
-- Scenarios Monte-Carlo deep : bull 6.6 | bear 86.8 | side 6.6
+- EV/risk : -0.418 | EV/share : $-0.864 | p_fill : —
+- Scenarios Monte-Carlo intraday : bull 6.6 | bear 86.8 | side 6.6
 - Sizing : notional 0.0 | shares 0
 
 
 ## Positioning & factor
 
-**Factor** : R² 0.35 · part idiosyncratique 0.56
+**Factor** : R² 0.34 · part idiosyncratique 0.58
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : bullish
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 48.3  _(neutre)_
-- **ADX** : 45.6  _(tendance tres forte)_
-- **MACD** : hist -1.511  _(bearish_recent)_
-- **BB** : %B 0.26 · largeur 70.1%
+- **RSI** : 44.2  _(momentum baissier)_
+- **ADX** : 43.3  _(tendance tres forte)_
+- **MACD** : hist -1.843  _(bearish_recent)_
+- **BB** : %B 0.21 · largeur 71.7%
 - **ATR** : 4.64 (100.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF 0.123  _(accumulation)_
-- **Vol ratio** : 4.09  _(volume au-dessus de la moyenne)_
-- **Choppiness** : 39.6  _(transition)_
-- **MA** : MA20 38.48 · MA50 32.1 · MA200 35.88  _(prix < MA20)_
-- **Dist MA** : MA20 -16.9% · MA50 -0.4% · MA200 -10.9%
+- **OBV/CMF** : OBV falling · CMF 0.101  _(accumulation)_
+- **Vol ratio** : 1.32  _(volume normal)_
+- **Choppiness** : 39.7  _(transition)_
+- **MA** : MA20 38.35 · MA50 32.26 · MA200 35.81  _(prix < MA20)_
+- **Dist MA** : MA20 -20.6% · MA50 -5.6% · MA200 -14.9%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13554 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13645 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

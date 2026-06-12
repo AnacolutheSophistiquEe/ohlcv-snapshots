@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-12T04:08:36.430478+00:00",
+  "generated_at": "2026-06-12T21:43:02.129801+00:00",
   "prediction_id": "AL2SI_C_20260612",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "AL2SI",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 48.22,
+    "limit_price": 49.92,
     "quantity": 3,
     "tif": "GTD",
     "gtd": "2026-08-11T16:30:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 50.31,
+      "limit_price": 51.86,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 68.17,
+      "limit_price": 70.53,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 84.34,
+      "limit_price": 87.23,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -42,7 +42,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 42.66,
+      "stop_price": 42.68,
       "quantity": 3,
       "tif": "GTC",
       "tag": "SL"
@@ -93,29 +93,29 @@
     "plan_id": "C",
     "horizon": "deep",
     "horizon_label_long": "swing_4_12_weeks",
-    "composite_score": 5.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_c.score",
-    "ev_pct_risk": -0.2805,
+    "ev_pct_risk": 0.1547,
     "ev_pct_risk_source": "edge_metrics.by_horizon.deep.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.3687,
-      "T2": 0.1877,
-      "T3": 0.093
+      "T1": 0.5141,
+      "T2": 0.3344,
+      "T3": 0.2054
     },
     "p_hit_source": "edge_metrics.by_horizon.deep.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 144.66,
-    "hold_tolerance_breach_price": 36.165,
+    "notional_eur": 149.76,
+    "hold_tolerance_breach_price": 37.44,
     "hold_fallback_active": true,
     "prediction_id": "AL2SI_C_20260612",
     "trail_distance_atr": 2.0,
-    "trail_distance_price": 10.3986,
-    "atr_14_daily": 5.1993
+    "trail_distance_price": 10.2386,
+    "atr_14_daily": 5.1193
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
