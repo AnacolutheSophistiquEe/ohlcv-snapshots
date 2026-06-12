@@ -1,6 +1,6 @@
 # HOOD
 
-**Generated** : 2026-06-11T21:57:57.951623+00:00  
+**Generated** : 2026-06-12T04:22:29.473454+00:00  
 **Score** : 4/10 — **Rating** : Neutral  
 **Subtitle** : trending · volatilite normal · $92.23  
 
@@ -48,7 +48,7 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Neutral'.
 - **BB** : %B 0.89 · largeur 31.6%
 - **ATR** : 6.63 (74.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV falling · CMF 0.273  _(accumulation)_
-- **Vol ratio** : 1.31  _(volume normal)_
+- **Vol ratio** : 1.32  _(volume normal)_
 - **Choppiness** : 56.1  _(transition)_
 - **MA** : MA20 82.19 · MA50 79.78 · MA200 102.89  _(prix > MA20)_
 - **Dist MA** : MA20 +12.2% · MA50 +15.6% · MA200 -10.4%
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Neutral'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13977 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14006 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

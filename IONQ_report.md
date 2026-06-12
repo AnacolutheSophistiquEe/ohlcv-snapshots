@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-06-11T21:52:05.534537+00:00  
+**Generated** : 2026-06-12T04:16:55.726868+00:00  
 **Score** : 5/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : trending · volatilite high · $57.99  
 
@@ -47,8 +47,8 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Strong Pass (negative 
 - **MACD** : hist -1.768  _(pas de croisement recent)_
 - **BB** : %B 0.4 · largeur 48.2%
 - **ATR** : 6.42 (93.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF 0.115  _(accumulation)_
-- **Vol ratio** : 0.71  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF 0.116  _(accumulation)_
+- **Vol ratio** : 0.79  _(volume normal)_
 - **Choppiness** : 56.2  _(transition)_
 - **MA** : MA20 60.94 · MA50 49.58 · MA200 48.91  _(prix < MA20)_
 - **Dist MA** : MA20 -4.8% · MA50 +17.0% · MA200 +18.6%
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Strong Pass (negative 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13469 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13499 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

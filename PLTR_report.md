@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-06-11T21:50:33.346710+00:00  
+**Generated** : 2026-06-12T04:15:32.270437+00:00  
 **Score** : 4/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : indeterminate · volatilite normal · $131.08  
 
@@ -29,7 +29,7 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Strong Pass (negative 
 ## Edge, scénarios & sizing
 
 - EV/risk : -0.664 | EV/share : $-6.561 | p_fill : —
-- Scenarios Monte-Carlo intraday : bull 5.0 | bear 10.7 | side 84.4
+- Scenarios Monte-Carlo intraday : bull 5.0 | bear 10.7 | side 84.3
 - Sizing : notional 0.0 | shares 0
 
 
@@ -47,8 +47,8 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Strong Pass (negative 
 - **MACD** : hist -1.432  _(bearish_recent)_
 - **BB** : %B 0.26 · largeur 24.1%
 - **ATR** : 7.61 (66.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF 0.131  _(accumulation)_
-- **Vol ratio** : 0.69  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF 0.132  _(accumulation)_
+- **Vol ratio** : 0.71  _(volume normal)_
 - **Choppiness** : 40.5  _(transition)_
 - **MA** : MA20 139.03 · MA50 140.01 · MA200 160.58  _(prix < MA20)_
 - **Dist MA** : MA20 -5.7% · MA50 -6.4% · MA200 -18.4%
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Strong Pass (negative 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13839 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13868 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

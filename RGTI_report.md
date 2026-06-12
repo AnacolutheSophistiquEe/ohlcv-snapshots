@@ -1,6 +1,6 @@
 # RGTI
 
-**Generated** : 2026-06-11T21:53:35.193905+00:00  
+**Generated** : 2026-06-12T04:18:20.204917+00:00  
 **Score** : 6/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : trending · volatilite high · $20.63  
 
@@ -48,7 +48,7 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Strong Pass (negative 
 - **BB** : %B 0.4 · largeur 66.1%
 - **ATR** : 2.95 (82.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV falling · CMF 0.187  _(accumulation)_
-- **Vol ratio** : 0.7  _(volume normal)_
+- **Vol ratio** : 0.73  _(volume normal)_
 - **Choppiness** : 55.3  _(transition)_
 - **MA** : MA20 22.01 · MA50 19.11 · MA200 23.61  _(prix < MA20)_
 - **Dist MA** : MA20 -6.3% · MA50 +8.0% · MA200 -12.6%
@@ -56,5 +56,5 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Strong Pass (negative 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13972 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14003 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

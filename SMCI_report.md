@@ -1,6 +1,6 @@
 # SMCI
 
-**Generated** : 2026-06-11T21:49:00.645757+00:00  
+**Generated** : 2026-06-12T04:14:05.742928+00:00  
 **Score** : 4/10 — **Rating** : Strong Pass (negative EV)  
 **Subtitle** : trending · volatilite extreme · $31.97  
 
@@ -47,8 +47,8 @@ Plan privilegie C (deep), composite 4/10, conviction 'Strong Pass (negative EV)'
 - **MACD** : hist -1.511  _(bearish_recent)_
 - **BB** : %B 0.26 · largeur 70.1%
 - **ATR** : 4.64 (100.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF 0.118  _(accumulation)_
-- **Vol ratio** : 3.99  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV falling · CMF 0.123  _(accumulation)_
+- **Vol ratio** : 4.09  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 39.6  _(transition)_
 - **MA** : MA20 38.48 · MA50 32.1 · MA200 35.88  _(prix < MA20)_
 - **Dist MA** : MA20 -16.9% · MA50 -0.4% · MA200 -10.9%
@@ -56,5 +56,5 @@ Plan privilegie C (deep), composite 4/10, conviction 'Strong Pass (negative EV)'
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13525 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13554 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
