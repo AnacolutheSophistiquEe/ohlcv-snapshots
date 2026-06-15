@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "000660",
-    "generated_at": "2026-06-15T04:24:30Z",
+    "generated_at": "2026-06-15T22:01:09Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-16T08:00:00Z",
@@ -10,13 +10,13 @@
     "source_precomputed": "000660_precomputed.json"
   },
   "context": {
-    "last_price": 2286500.0,
+    "last_price": 2288000.0,
     "ta_score": {
-      "value": 8,
+      "value": 9,
       "max": 10,
-      "label": "bullish"
+      "label": "very_bullish"
     },
-    "alignment_flag": "mixed",
+    "alignment_flag": "triple_bullish",
     "hmm_regime": {
       "state": "sideways",
       "probability": 0.9,
@@ -24,11 +24,11 @@
     },
     "volatility_regime": "extreme",
     "signals_counter": {
-      "buy": 5,
-      "sell": 1,
-      "neutral": 9,
-      "total": 15,
-      "verdict": "neutral"
+      "buy": 8,
+      "sell": 0,
+      "neutral": 8,
+      "total": 16,
+      "verdict": "neutral_to_bullish"
     },
     "mean_reversion_score": {
       "setup": "rsi_60-70_dist_ma20_+5_+10",
@@ -37,14 +37,14 @@
       "median_bounce_pct": 24.55,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 8/10 (bullish), alignment mixed, HMM sideways (0.90), vol extreme, signals neutral (5b/1s/9n)."
+    "narrative_short": "TA score 9/10 (very_bullish), alignment triple_bullish, HMM sideways (0.90), vol extreme, signals neutral_to_bullish (8b/0s/8n)."
   },
   "notes": {
     "atr_daily": 186066.0301,
     "atr_pct_daily": null,
-    "beta_60d": 0.4563,
+    "beta_60d": 0.4535,
     "beta_benchmark": "EWY",
-    "beta_corr_60d": 0.369,
+    "beta_corr_60d": 0.3671,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -75,7 +75,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -3.24,
+      "current_dd_pct": -3.17,
       "ath_price": 2363000.0,
       "ath_date": "2026-06-01",
       "max_dd_1y_pct": -26.57,
@@ -90,26 +90,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 2274431.175,
-        "max": 2288118.825
+        "min": 2275926.675,
+        "max": 2289623.325
       },
       "stop": {
-        "price": 2007400.9549,
+        "price": 2008900.9549,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -12.01
+        "distance_pct": -12.0
       },
       "targets": [
         {
           "level": 1,
           "price": 2338379.9384,
           "basis": "vpvr_vah",
-          "rr": 0.21
+          "rr": 0.2
         },
         {
           "level": 2,
           "price": 2916627.304,
           "basis": "fib_extension_1272",
-          "rr": 2.32
+          "rr": 2.31
         },
         {
           "level": 3,
@@ -169,7 +169,7 @@
       "side": "long",
       "entry_zone": {
         "min": 1585479.301,
-        "max": 1670406.1747
+        "max": 1670329.8247
       },
       "stop": {
         "price": 1522060.129,
@@ -187,13 +187,13 @@
           "level": 2,
           "price": 2916627.304,
           "basis": "fib_extension_1272",
-          "rr": 12.17
+          "rr": 12.18
         },
         {
           "level": 3,
           "price": 3620873.801,
           "basis": "fib_extension_1618",
-          "rr": 18.82
+          "rr": 18.83
         }
       ],
       "preferred_target": 1,
