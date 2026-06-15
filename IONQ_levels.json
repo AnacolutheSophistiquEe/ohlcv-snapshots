@@ -2,19 +2,19 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-06-12T22:00:28Z",
+    "generated_at": "2026-06-15T04:24:30Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-15T08:00:00Z",
-    "valid_until": "2026-06-15T21:00:00Z",
+    "valid_from": "2026-06-16T08:00:00Z",
+    "valid_until": "2026-06-16T21:00:00Z",
     "source_precomputed": "IONQ_precomputed.json"
   },
   "context": {
     "last_price": 57.85,
     "ta_score": {
-      "value": 2,
+      "value": 5,
       "max": 10,
-      "label": "bearish"
+      "label": "neutral"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
@@ -37,7 +37,7 @@
       "median_bounce_pct": 11.74,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM bear (0.90), vol high, signals neutral (2b/4s/9n)."
+    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM bear (0.90), vol high, signals neutral (2b/4s/9n)."
   },
   "notes": {
     "atr_daily": 6.1573,
@@ -180,8 +180,8 @@
       "rationale": "Deep value mecanique : entree sur confluence support basse BB_LOWER + VPVR_POC + FIB_382 + S/R_support + MA200 + MA50 (strength 54.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
     }
   ],
-  "bot_actionable": false,
-  "bot_actionable_reason": "ta_score=2<4",
+  "bot_actionable": true,
+  "bot_actionable_reason": "ok",
   "global_conditions": [
     {
       "id": "session_us_open",

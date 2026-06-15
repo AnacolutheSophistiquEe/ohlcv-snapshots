@@ -2,19 +2,19 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "ENR",
-    "generated_at": "2026-06-12T22:00:28Z",
+    "generated_at": "2026-06-15T04:24:30Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-15T08:00:00Z",
-    "valid_until": "2026-06-15T21:00:00Z",
+    "valid_from": "2026-06-16T08:00:00Z",
+    "valid_until": "2026-06-16T21:00:00Z",
     "source_precomputed": "ENR_precomputed.json"
   },
   "context": {
     "last_price": 153.58,
     "ta_score": {
-      "value": 0,
+      "value": 2,
       "max": 10,
-      "label": "very_bearish"
+      "label": "bearish"
     },
     "alignment_flag": "divergent_short_long",
     "hmm_regime": {
@@ -37,7 +37,7 @@
       "median_bounce_pct": 11.4,
       "confidence": "very_low"
     },
-    "narrative_short": "TA score 0/10 (very_bearish), alignment divergent_short_long, HMM sideways (0.90), vol high, signals neutral (2b/5s/8n)."
+    "narrative_short": "TA score 2/10 (bearish), alignment divergent_short_long, HMM sideways (0.90), vol high, signals neutral (2b/5s/8n)."
   },
   "notes": {
     "atr_daily": 8.1643,
@@ -175,7 +175,7 @@
     }
   ],
   "bot_actionable": false,
-  "bot_actionable_reason": "ta_score=0<4",
+  "bot_actionable_reason": "ta_score=2<4",
   "global_conditions": [
     {
       "id": "session_eu_xetra_open",

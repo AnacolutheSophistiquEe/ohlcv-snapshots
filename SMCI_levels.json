@@ -2,17 +2,17 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-06-12T22:00:28Z",
+    "generated_at": "2026-06-15T04:24:30Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-15T08:00:00Z",
-    "valid_until": "2026-06-15T21:00:00Z",
+    "valid_from": "2026-06-16T08:00:00Z",
+    "valid_until": "2026-06-16T21:00:00Z",
     "source_precomputed": "SMCI_precomputed.json"
   },
   "context": {
     "last_price": 30.46,
     "ta_score": {
-      "value": 0,
+      "value": 2,
       "max": 10,
       "label": "very_bearish"
     },
@@ -37,7 +37,7 @@
       "median_bounce_pct": -0.36,
       "confidence": "low"
     },
-    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (0.90), vol extreme, signals strong_sell (3b/9s/4n)."
+    "narrative_short": "TA score 2/10 (very_bearish), alignment triple_bearish, HMM bear (0.90), vol extreme, signals strong_sell (3b/9s/4n)."
   },
   "notes": {
     "atr_daily": 4.6379,
@@ -150,13 +150,13 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 26.5851,
-        "max": 27.1249
+        "min": 26.5753,
+        "max": 27.1149
       },
       "stop": {
-        "price": 20.0332,
+        "price": 20.0232,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -25.4
+        "distance_pct": -25.41
       },
       "targets": [
         {
@@ -169,7 +169,7 @@
           "level": 2,
           "price": 68.7712,
           "basis": "fib_extension_1272",
-          "rr": 6.14
+          "rr": 6.15
         },
         {
           "level": 3,
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 19.8329,
+    "price": 19.823,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

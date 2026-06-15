@@ -2,25 +2,25 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "CEG",
-    "generated_at": "2026-06-12T22:00:28Z",
+    "generated_at": "2026-06-15T04:24:30Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-15T08:00:00Z",
-    "valid_until": "2026-06-15T21:00:00Z",
+    "valid_from": "2026-06-16T08:00:00Z",
+    "valid_until": "2026-06-16T21:00:00Z",
     "source_precomputed": "CEG_precomputed.json"
   },
   "context": {
     "last_price": 253.76,
     "ta_score": {
-      "value": 2,
+      "value": 0,
       "max": 10,
-      "label": "bearish"
+      "label": "very_bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
       "probability": 0.9,
-      "expected_duration_days": 10.22
+      "expected_duration_days": 10.19
     },
     "volatility_regime": "low",
     "signals_counter": {
@@ -37,10 +37,10 @@
       "median_bounce_pct": 7.59,
       "confidence": "low"
     },
-    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM bull (0.90), vol low, signals neutral (2b/6s/7n)."
+    "narrative_short": "TA score 0/10 (very_bearish), alignment mixed, HMM bull (0.90), vol low, signals neutral (2b/6s/7n)."
   },
   "notes": {
-    "atr_daily": 11.0464,
+    "atr_daily": 11.0479,
     "atr_pct_daily": null,
     "beta_60d": 1.1176,
     "beta_benchmark": "IWM",
@@ -72,7 +72,7 @@
         "max": 253.8392
       },
       "stop": {
-        "price": 237.1904,
+        "price": 237.1882,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -6.28
       },
@@ -150,13 +150,13 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 238.1632,
-        "max": 242.9989
+        "min": 238.1336,
+        "max": 242.9688
       },
       "stop": {
-        "price": 225.2204,
+        "price": 225.1882,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -6.38
+        "distance_pct": -6.39
       },
       "targets": [
         {
@@ -187,7 +187,7 @@
     }
   ],
   "bot_actionable": false,
-  "bot_actionable_reason": "ta_score=2<4",
+  "bot_actionable_reason": "ta_score=0<4",
   "global_conditions": [
     {
       "id": "session_us_open",
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 222.9682,
+    "price": 222.9363,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

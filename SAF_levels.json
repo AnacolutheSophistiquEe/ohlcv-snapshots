@@ -2,19 +2,19 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SAF",
-    "generated_at": "2026-06-12T22:00:28Z",
+    "generated_at": "2026-06-15T04:24:30Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-15T08:00:00Z",
-    "valid_until": "2026-06-15T21:00:00Z",
+    "valid_from": "2026-06-16T08:00:00Z",
+    "valid_until": "2026-06-16T21:00:00Z",
     "source_precomputed": "SAF_precomputed.json"
   },
   "context": {
     "last_price": 306.1,
     "ta_score": {
-      "value": 3,
+      "value": 6,
       "max": 10,
-      "label": "bearish"
+      "label": "neutral"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
@@ -37,7 +37,7 @@
       "median_bounce_pct": 1.21,
       "confidence": "low"
     },
-    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.86), vol normal, signals neutral (4b/4s/7n)."
+    "narrative_short": "TA score 6/10 (neutral), alignment mixed, HMM sideways (0.86), vol normal, signals neutral (4b/4s/7n)."
   },
   "notes": {
     "atr_daily": 9.3643,
@@ -182,8 +182,8 @@
       "rationale": "Deep value mecanique : entree sur confluence support basse VPVR_VAL + BB_LOWER (strength 5.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
     }
   ],
-  "bot_actionable": false,
-  "bot_actionable_reason": "ta_score=3<4",
+  "bot_actionable": true,
+  "bot_actionable_reason": "ok",
   "global_conditions": [
     {
       "id": "session_eu_paris_open",
