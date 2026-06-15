@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-15T04:02:39.322244+00:00",
+  "generated_at": "2026-06-15T21:37:36.487111+00:00",
   "prediction_id": "SRT3_C_20260615",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SRT3",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 231.2,
+    "limit_price": 229.0,
     "quantity": 1,
     "tif": "GTD",
     "gtd": "2026-08-14T16:30:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 244.45,
+      "limit_price": 244.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 218.1,
+      "stop_price": 218.65,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
@@ -79,27 +79,27 @@
     "horizon_label_long": "swing_4_12_weeks",
     "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_c.score",
-    "ev_pct_risk": 0.2765,
+    "ev_pct_risk": 0.2848,
     "ev_pct_risk_source": "edge_metrics.by_horizon.deep.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.5584,
-      "T2": 0.3352,
-      "T3": 0.1736
+      "T1": 0.6011,
+      "T2": 0.3591,
+      "T3": 0.1842
     },
     "p_hit_source": "edge_metrics.by_horizon.deep.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 231.2,
-    "hold_tolerance_breach_price": 173.4,
+    "notional_eur": 229.0,
+    "hold_tolerance_breach_price": 171.75,
     "hold_fallback_active": true,
     "prediction_id": "SRT3_C_20260615",
     "trail_distance_atr": 2.0,
-    "trail_distance_price": 17.4714,
-    "atr_14_daily": 8.7357
+    "trail_distance_price": 18.6286,
+    "atr_14_daily": 9.3143
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
