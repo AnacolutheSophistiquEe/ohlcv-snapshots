@@ -4,17 +4,18 @@
     "spot": 231.2,
     "atr_14": 8.7357,
     "atr_pct": 3.778,
-    "n_levels": 40,
-    "n_supports": 21,
+    "n_levels": 42,
+    "n_supports": 23,
     "n_resistances": 19,
     "n_neutral": 0,
-    "n_with_plan_role": 6,
+    "n_with_plan_role": 9,
     "plans_detected": [
       "A",
-      "B"
+      "B",
+      "C"
     ],
-    "generated_at": "2026-06-12T21:38:05.977976+00:00",
-    "source_precomputed_at": "2026-06-12T21:37:12.747738+00:00",
+    "generated_at": "2026-06-15T04:03:26.570597+00:00",
+    "source_precomputed_at": "2026-06-15T04:02:38.888694+00:00",
     "calibration_lookup": "v1.0_strict_2closes_0.5atr",
     "calibration_method": "rolling_daily_long_strict_break",
     "confluence_band_atr": 0.5,
@@ -255,17 +256,18 @@
       "raw_meta": {},
       "distance_pct_to_spot": -6.76,
       "distance_in_atr": -1.789,
-      "confluence_count": 3,
+      "confluence_count": 4,
       "confluence_concepts": [
         "S/R_DBSCAN_STRONG",
         "FIB_382",
-        "BB_LOWER"
+        "BB_LOWER",
+        "PLAN_C_SL"
       ],
-      "robustness_score": 65.0,
+      "robustness_score": 70.0,
       "robustness_components": {
         "base_from_source": 50.0,
         "touches_boost": 0,
-        "confluence_boost": 15,
+        "confluence_boost": 20,
         "age_decay": 0
       },
       "probabilities": {
@@ -312,6 +314,48 @@
       }
     },
     {
+      "price": 218.1,
+      "type": "bracket_plan",
+      "subtype": "PLAN_C_SL",
+      "side": "support",
+      "source": "bracket_orders.SRT3_C_20260615_ibkr_bracket.json",
+      "source_weight": 0.95,
+      "touches": null,
+      "age_days": 0,
+      "raw_meta": {
+        "plan_letter": "C",
+        "role": "sl",
+        "prediction_id": "SRT3_C_20260615",
+        "horizon_sessions": 60
+      },
+      "plan_roles": [
+        "C_sl"
+      ],
+      "distance_pct_to_spot": -5.666,
+      "distance_in_atr": -1.5,
+      "confluence_count": 6,
+      "confluence_concepts": [
+        "S/R_DBSCAN_STRONG",
+        "FIB_382",
+        "POC",
+        "S2",
+        "S3",
+        "BB_LOWER"
+      ],
+      "robustness_score": 100,
+      "robustness_components": {
+        "base_from_source": 95.0,
+        "touches_boost": 0,
+        "confluence_boost": 25,
+        "age_decay": 0
+      },
+      "probabilities": {
+        "available": false,
+        "reason": "no_matching_bucket",
+        "dim_key_attempted": "bracket_plan|support|1-2|high"
+      }
+    },
+    {
       "price": 219.0661,
       "type": "bollinger",
       "subtype": "BB_LOWER",
@@ -323,14 +367,15 @@
       "raw_meta": {},
       "distance_pct_to_spot": -5.248,
       "distance_in_atr": -1.389,
-      "confluence_count": 6,
+      "confluence_count": 7,
       "confluence_concepts": [
         "S/R_DBSCAN_STRONG",
         "FIB_382",
         "POC",
         "S2",
         "S3",
-        "PLAN_B_SL"
+        "PLAN_B_SL",
+        "PLAN_C_SL"
       ],
       "robustness_score": 90.0,
       "robustness_components": {
@@ -365,14 +410,15 @@
       },
       "distance_pct_to_spot": -5.025,
       "distance_in_atr": -1.33,
-      "confluence_count": 6,
+      "confluence_count": 7,
       "confluence_concepts": [
         "FIB_382",
         "POC",
         "S2",
         "S3",
         "BB_LOWER",
-        "PLAN_B_SL"
+        "PLAN_B_SL",
+        "PLAN_C_SL"
       ],
       "robustness_score": 100,
       "robustness_components": {
@@ -438,14 +484,15 @@
       },
       "distance_pct_to_spot": -4.891,
       "distance_in_atr": -1.294,
-      "confluence_count": 6,
+      "confluence_count": 7,
       "confluence_concepts": [
         "S/R_DBSCAN_STRONG",
         "POC",
         "S2",
         "S3",
         "BB_LOWER",
-        "PLAN_B_SL"
+        "PLAN_B_SL",
+        "PLAN_C_SL"
       ],
       "robustness_score": 95.0,
       "robustness_components": {
@@ -509,13 +556,14 @@
       "raw_meta": {},
       "distance_pct_to_spot": -4.585,
       "distance_in_atr": -1.213,
-      "confluence_count": 5,
+      "confluence_count": 6,
       "confluence_concepts": [
         "S/R_DBSCAN_STRONG",
         "FIB_382",
         "S2",
         "BB_LOWER",
-        "PLAN_B_SL"
+        "PLAN_B_SL",
+        "PLAN_C_SL"
       ],
       "robustness_score": 100,
       "robustness_components": {
@@ -579,7 +627,7 @@
       "raw_meta": {},
       "distance_pct_to_spot": -3.923,
       "distance_in_atr": -1.038,
-      "confluence_count": 7,
+      "confluence_count": 8,
       "confluence_concepts": [
         "S/R_DBSCAN_STRONG",
         "FIB_382",
@@ -587,7 +635,8 @@
         "CAM_S4",
         "MA50",
         "BB_LOWER",
-        "PLAN_B_SL"
+        "PLAN_B_SL",
+        "PLAN_C_SL"
       ],
       "robustness_score": 80.0,
       "robustness_components": {
@@ -910,7 +959,7 @@
       "source": "anchored_vwap.anchors[2026-04-21]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 52,
+      "age_days": 55,
       "raw_meta": {
         "anchor_date": "2026-04-21",
         "anchor_event": "swing_high",
@@ -919,7 +968,7 @@
       },
       "distance_pct_to_spot": -1.788,
       "distance_in_atr": -0.473,
-      "confluence_count": 10,
+      "confluence_count": 11,
       "confluence_concepts": [
         "FIB_50",
         "S1",
@@ -992,7 +1041,7 @@
       "raw_meta": {},
       "distance_pct_to_spot": -1.589,
       "distance_in_atr": -0.42,
-      "confluence_count": 10,
+      "confluence_count": 11,
       "confluence_concepts": [
         "FIB_50",
         "S1",
@@ -1065,7 +1114,7 @@
       "raw_meta": {},
       "distance_pct_to_spot": -1.319,
       "distance_in_atr": -0.349,
-      "confluence_count": 10,
+      "confluence_count": 11,
       "confluence_concepts": [
         "FIB_50",
         "S1",
@@ -1140,7 +1189,7 @@
       },
       "distance_pct_to_spot": -1.216,
       "distance_in_atr": -0.322,
-      "confluence_count": 10,
+      "confluence_count": 11,
       "confluence_concepts": [
         "S1",
         "CAM_R1",
@@ -1213,7 +1262,7 @@
       "raw_meta": {},
       "distance_pct_to_spot": -0.882,
       "distance_in_atr": -0.234,
-      "confluence_count": 12,
+      "confluence_count": 13,
       "confluence_concepts": [
         "FIB_50",
         "PP",
@@ -1286,7 +1335,7 @@
       "raw_meta": {},
       "distance_pct_to_spot": -0.441,
       "distance_in_atr": -0.117,
-      "confluence_count": 14,
+      "confluence_count": 15,
       "confluence_concepts": [
         "FIB_50",
         "PP",
@@ -1367,7 +1416,51 @@
       ],
       "distance_pct_to_spot": 0.0,
       "distance_in_atr": 0.0,
-      "confluence_count": 14,
+      "confluence_count": 15,
+      "confluence_concepts": [
+        "FIB_50",
+        "PP",
+        "CAM_R1",
+        "CAM_R2",
+        "CAM_R3",
+        "CAM_S1",
+        "CAM_S2",
+        "CAM_S3"
+      ],
+      "robustness_score": 100,
+      "robustness_components": {
+        "base_from_source": 95.0,
+        "touches_boost": 0,
+        "confluence_boost": 25,
+        "age_decay": 0
+      },
+      "probabilities": {
+        "available": false,
+        "reason": "no_matching_bucket",
+        "dim_key_attempted": "bracket_plan|support|0-0.5|high"
+      }
+    },
+    {
+      "price": 231.2,
+      "type": "bracket_plan",
+      "subtype": "PLAN_C_ENTRY",
+      "side": "support",
+      "source": "bracket_orders.SRT3_C_20260615_ibkr_bracket.json",
+      "source_weight": 0.95,
+      "touches": null,
+      "age_days": 0,
+      "raw_meta": {
+        "plan_letter": "C",
+        "role": "entry",
+        "prediction_id": "SRT3_C_20260615",
+        "horizon_sessions": 60
+      },
+      "plan_roles": [
+        "C_entry"
+      ],
+      "distance_pct_to_spot": 0.0,
+      "distance_in_atr": 0.0,
+      "confluence_count": 15,
       "confluence_concepts": [
         "FIB_50",
         "PP",
@@ -1403,7 +1496,7 @@
       "raw_meta": {},
       "distance_pct_to_spot": 0.441,
       "distance_in_atr": 0.117,
-      "confluence_count": 12,
+      "confluence_count": 13,
       "confluence_concepts": [
         "FIB_50",
         "PP",
@@ -1476,7 +1569,7 @@
       "raw_meta": {},
       "distance_pct_to_spot": 0.878,
       "distance_in_atr": 0.232,
-      "confluence_count": 12,
+      "confluence_count": 13,
       "confluence_concepts": [
         "FIB_618",
         "CAM_R1",
@@ -1549,7 +1642,7 @@
       "raw_meta": {},
       "distance_pct_to_spot": 0.878,
       "distance_in_atr": 0.232,
-      "confluence_count": 12,
+      "confluence_count": 13,
       "confluence_concepts": [
         "FIB_618",
         "PP",
@@ -1618,7 +1711,7 @@
       "source": "anchored_vwap.anchors[2026-05-15]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 28,
+      "age_days": 31,
       "raw_meta": {
         "anchor_date": "2026-05-15",
         "anchor_event": "swing_low",
@@ -1627,7 +1720,7 @@
       },
       "distance_pct_to_spot": 1.065,
       "distance_in_atr": 0.282,
-      "confluence_count": 13,
+      "confluence_count": 14,
       "confluence_concepts": [
         "FIB_618",
         "HVN",
@@ -1700,7 +1793,7 @@
       "raw_meta": {},
       "distance_pct_to_spot": 1.223,
       "distance_in_atr": 0.324,
-      "confluence_count": 13,
+      "confluence_count": 14,
       "confluence_concepts": [
         "FIB_618",
         "HVN",
@@ -1773,7 +1866,7 @@
       "raw_meta": {},
       "distance_pct_to_spot": 1.319,
       "distance_in_atr": 0.349,
-      "confluence_count": 13,
+      "confluence_count": 14,
       "confluence_concepts": [
         "FIB_618",
         "HVN",
@@ -1850,7 +1943,7 @@
       "source_weight_boosted_by_plan": true,
       "distance_pct_to_spot": 1.869,
       "distance_in_atr": 0.495,
-      "confluence_count": 12,
+      "confluence_count": 13,
       "confluence_concepts": [
         "FIB_618",
         "HVN",
@@ -1923,7 +2016,7 @@
       "raw_meta": {},
       "distance_pct_to_spot": 1.869,
       "distance_in_atr": 0.495,
-      "confluence_count": 12,
+      "confluence_count": 13,
       "confluence_concepts": [
         "FIB_618",
         "HVN",
@@ -2253,7 +2346,7 @@
       "source": "anchored_vwap.anchors[2026-06-02]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 10,
+      "age_days": 13,
       "raw_meta": {
         "anchor_date": "2026-06-02",
         "anchor_event": "swing_high",
@@ -2438,6 +2531,10 @@
       "touches": null,
       "age_days": null,
       "raw_meta": {},
+      "plan_roles": [
+        "C_t1"
+      ],
+      "source_weight_boosted_by_plan": true,
       "distance_pct_to_spot": 5.738,
       "distance_in_atr": 1.519,
       "confluence_count": 2,

@@ -1,7 +1,8 @@
 # SRT3
 
-**Generated** : 2026-06-12T21:37:12.747738+00:00  
-**Score** : 5/10 — **Rating** : Neutral  
+**Generated** : 2026-06-15T04:02:38.888694+00:00  
+**Santé technique** : 7/10 — **Rating** : Neutral  
+_(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · €231.20  
 
 ## Régime & alignement multi-TF
@@ -13,7 +14,7 @@
 
 ## Lecture chartiste
 
-Plan privilegie C (deep), composite 5/10, conviction 'Neutral'.
+Plan privilegie C (deep), composite 7/10, conviction 'Neutral'.
 
 
 ## Niveaux clés & plan principal
@@ -21,16 +22,23 @@ Plan privilegie C (deep), composite 5/10, conviction 'Neutral'.
 **Plan C — deep** (order_type LMT)
 - Entry : €230.04–€232.36 (mid €231.20)
 - Stop : €218.10 (stop atr-based (-5.67%))
-- Targets : T1 €244.47 · R/R 1.01 | T2 €283.97 · R/R 4.03 | T3 €308.89 · R/R 5.93
+- Targets : T1 €244.45 · R/R 1.01 | T2 €283.97 · R/R 4.03 | T3 €308.89 · R/R 5.93
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous €218.10
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.191 | EV/share : €4.160 | p_fill : —
-- Scenarios Monte-Carlo deep : bull 44.8 | bear 5.0 | side 50.2
-- Sizing : notional 160.0 | shares 0
+- EV/risk : 0.277 | EV/share : €6.039 | p_fill : —
+- Régime probabiliste (posterior HMM, deep) : bull 31.7 | bear 6.1 | side 62.2  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Sizing : notional 400.0 | shares 1
+
+
+## Timing d'entrée (observe-only)
+
+- **Verdict timing** : entrée acceptable (proche d'une zone support/confluence)
+- Proximité zone : 1.0/2 | R/R T1 : 0.5 | extension : normal
+_Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
 ## Positioning & factor
@@ -56,5 +64,5 @@ Plan privilegie C (deep), composite 5/10, conviction 'Neutral'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13165 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16442 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

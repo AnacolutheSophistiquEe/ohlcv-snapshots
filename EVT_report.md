@@ -1,7 +1,8 @@
 # EVT
 
-**Generated** : 2026-06-12T21:38:39.510582+00:00  
-**Score** : 6/10 — **Rating** : Neutral  
+**Generated** : 2026-06-15T04:04:00.582739+00:00  
+**Santé technique** : 8/10 — **Rating** : Neutral  
+_(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €4.77  
 
 ## Régime & alignement multi-TF
@@ -13,7 +14,7 @@
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 6/10, conviction 'Neutral'.
+Plan privilegie A (intraday), composite 8/10, conviction 'Neutral'.
 
 
 ## Niveaux clés & plan principal
@@ -28,9 +29,16 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Neutral'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.545 | EV/share : €-0.145 | p_fill : —
-- Scenarios Monte-Carlo intraday : bull 84.2 | bear 10.8 | side 5.0
-- Sizing : notional 160.0 | shares 33
+- EV/risk : 0.093 | EV/share : €0.025 | p_fill : —
+- Régime probabiliste (posterior HMM, intraday) : bull 60.2 | bear 26.6 | side 13.2  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Sizing : notional 0.0 | shares 0
+
+
+## Timing d'entrée (observe-only)
+
+- **Verdict timing** : loin du support — entrée non optimale (chasing)
+- Proximité zone : 0.0/2 | R/R T1 : 1.0 | extension : normal
+_Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
 ## Positioning & factor
@@ -56,5 +64,5 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Neutral'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13968 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14313 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

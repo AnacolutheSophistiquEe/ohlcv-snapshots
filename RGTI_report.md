@@ -1,7 +1,10 @@
 # RGTI
 
-**Generated** : 2026-06-12T21:53:29.712713+00:00  
-**Score** : 6/10 — **Rating** : Strong Pass (negative EV)  
+**Generated** : 2026-06-15T04:17:53.723760+00:00  
+> ⚠️ **Données suspectes** : volatilité réalisée 10.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
+
+**Santé technique** : 8/10 — **Rating** : Neutral  
+_(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · $20.98  
 
 ## Régime & alignement multi-TF
@@ -13,12 +16,12 @@
 
 ## Lecture chartiste
 
-Plan privilegie C (deep), composite 6/10, conviction 'Strong Pass (negative EV)'.
+Plan privilegie A (intraday), composite 8/10, conviction 'Neutral'.
 
 
 ## Niveaux clés & plan principal
 
-**Plan C — deep** (order_type LMT)
+**Plan A — intraday** (order_type LMT)
 - Entry : $20.88–$21.08 (mid $20.98)
 - Stop : $17.94 (stop swing-based (-14.5%))
 - Targets : T1 $26.44 · R/R 1.8 | T2 $44.52 · R/R 7.74 | T3 $58.15 · R/R 12.23
@@ -28,9 +31,16 @@ Plan privilegie C (deep), composite 6/10, conviction 'Strong Pass (negative EV)'
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.786 | EV/share : $-2.437 | p_fill : —
-- Scenarios Monte-Carlo deep : bull 7.0 | bear 86.6 | side 6.4
+- EV/risk : 0.263 | EV/share : $0.418 | p_fill : —
+- Régime probabiliste (posterior HMM, intraday) : bull 15.9 | bear 74.3 | side 9.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional 0.0 | shares 0
+
+
+## Timing d'entrée (observe-only)
+
+- **Verdict timing** : loin du support — entrée non optimale (chasing)
+- Proximité zone : 0.0/2 | R/R T1 : 1.0 | extension : normal
+_Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
 ## Positioning & factor
@@ -48,7 +58,7 @@ Plan privilegie C (deep), composite 6/10, conviction 'Strong Pass (negative EV)'
 - **BB** : %B 0.42 · largeur 65.0%
 - **ATR** : 2.66 (78.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV falling · CMF 0.171  _(accumulation)_
-- **Vol ratio** : 0.54  _(volume atone)_
+- **Vol ratio** : 0.55  _(volume atone)_
 - **Choppiness** : 51.4  _(transition)_
 - **MA** : MA20 22.1 · MA50 19.26 · MA200 23.64  _(prix < MA20)_
 - **Dist MA** : MA20 -5.1% · MA50 +9.0% · MA200 -11.3%
@@ -56,5 +66,5 @@ Plan privilegie C (deep), composite 6/10, conviction 'Strong Pass (negative EV)'
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (14241 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14688 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

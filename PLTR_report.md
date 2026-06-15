@@ -1,7 +1,8 @@
 # PLTR
 
-**Generated** : 2026-06-12T21:50:28.831184+00:00  
-**Score** : 2/10 — **Rating** : Strong Pass (negative EV)  
+**Generated** : 2026-06-15T04:14:58.849683+00:00  
+**Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
+_(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $127.99  
 
 ## Régime & alignement multi-TF
@@ -13,7 +14,7 @@
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative EV)'.
+Plan privilegie A (intraday), composite 3/10, conviction 'Strong Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
@@ -28,16 +29,23 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.723 | EV/share : $-6.964 | p_fill : —
-- Scenarios Monte-Carlo intraday : bull 5.0 | bear 27.6 | side 67.5
+- EV/risk : -0.07 | EV/share : $-0.671 | p_fill : —
+- Régime probabiliste (posterior HMM, intraday) : bull 36.1 | bear 26.3 | side 37.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional 0.0 | shares 0
+
+
+## Timing d'entrée (observe-only)
+
+- **Verdict timing** : étendu — attendre un repli vers une zone
+- Proximité zone : 0.0/2 | R/R T1 : 1.0 | extension : stretched_down
+_Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
 ## Positioning & factor
 
 **Factor** : R² 0.61 · part idiosyncratique 2.38
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
-**Options** : favorable
+**Options** : neutral
 
 
 ## Indicateurs (résumé)
@@ -56,5 +64,5 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13835 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14176 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

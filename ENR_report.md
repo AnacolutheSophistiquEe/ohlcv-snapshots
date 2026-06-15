@@ -1,7 +1,8 @@
 # ENR
 
-**Generated** : 2026-06-12T21:40:05.746054+00:00  
-**Score** : 4/10 — **Rating** : Pass  
+**Generated** : 2026-06-15T04:05:18.833571+00:00  
+**Santé technique** : 6/10 — **Rating** : Pass  
+_(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : strong_trend · volatilite high · €153.58  
 
 ## Régime & alignement multi-TF
@@ -13,7 +14,7 @@
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 4/10, conviction 'Pass'.
+Plan privilegie A (intraday), composite 6/10, conviction 'Pass'.
 
 
 ## Niveaux clés & plan principal
@@ -28,9 +29,16 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Pass'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.372 | EV/share : €-4.223 | p_fill : —
-- Scenarios Monte-Carlo intraday : bull 5.0 | bear 10.0 | side 85.0
+- EV/risk : 0.005 | EV/share : €0.056 | p_fill : —
+- Régime probabiliste (posterior HMM, intraday) : bull 7.3 | bear 19.7 | side 73.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional 0.0 | shares 0
+
+
+## Timing d'entrée (observe-only)
+
+- **Verdict timing** : étendu — attendre un repli vers une zone
+- Proximité zone : 0.0/2 | R/R T1 : 0.5 | extension : stretched_down
+_Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
 ## Positioning & factor
@@ -56,5 +64,5 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Pass'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13420 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13748 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

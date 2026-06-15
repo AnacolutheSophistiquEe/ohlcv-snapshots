@@ -1,7 +1,8 @@
 # RHM
 
-**Generated** : 2026-06-12T21:35:46.012072+00:00  
-**Score** : 4/10 — **Rating** : Pass  
+**Generated** : 2026-06-15T04:01:17.910410+00:00  
+**Santé technique** : 4/10 — **Rating** : Neutral  
+_(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €1205.60  
 
 ## Régime & alignement multi-TF
@@ -13,7 +14,7 @@
 
 ## Lecture chartiste
 
-Plan privilegie B (swing), composite 4/10, conviction 'Pass'.
+Plan privilegie B (swing), composite 4/10, conviction 'Neutral'.
 
 
 ## Niveaux clés & plan principal
@@ -28,9 +29,16 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.223 | EV/share : €-20.703 | p_fill : —
-- Scenarios Monte-Carlo swing : bull 20.5 | bear 5.0 | side 74.5
+- EV/risk : 0.135 | EV/share : €12.556 | p_fill : —
+- Régime probabiliste (posterior HMM, swing) : bull 38.8 | bear 25.9 | side 35.3  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional 160.0 | shares 0
+
+
+## Timing d'entrée (observe-only)
+
+- **Verdict timing** : loin du support — entrée non optimale (chasing)
+- Proximité zone : 0.0/2 | R/R T1 : 1.0 | extension : normal
+_Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
 ## Positioning & factor
@@ -56,5 +64,5 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass'.
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13518 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13880 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
