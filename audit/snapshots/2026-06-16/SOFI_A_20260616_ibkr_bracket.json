@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-16T00:21:59.375277+00:00",
+  "generated_at": "2026-06-16T16:37:17.166073+00:00",
   "prediction_id": "SOFI_A_20260616",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SOFI",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 17.04,
+    "limit_price": 17.45,
     "quantity": 16,
     "tif": "DAY"
   },
@@ -41,7 +41,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 15.56,
+      "stop_price": 15.97,
       "quantity": 16,
       "tif": "GTC",
       "tag": "SL"
@@ -94,22 +94,22 @@
     "horizon_label_long": "intraday",
     "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0313,
+    "ev_pct_risk": -0.0432,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.1638,
-      "T2": 0.107,
-      "T3": 0.068
+      "T1": 0.2323,
+      "T2": 0.1338,
+      "T3": 0.0683
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 274.08,
-    "hold_tolerance_breach_price": 12.8475,
+    "notional_eur": 280.56,
+    "hold_tolerance_breach_price": 13.1512,
     "hold_fallback_active": true,
     "prediction_id": "SOFI_A_20260616"
   },
