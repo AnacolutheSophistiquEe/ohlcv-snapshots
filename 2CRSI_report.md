@@ -1,6 +1,6 @@
 # AL2SI
 
-**Generated** : 2026-06-16T16:19:50.829027+00:00  
+**Generated** : 2026-06-16T21:42:42.920492+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.9 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 8/10 — **Rating** : Pass  

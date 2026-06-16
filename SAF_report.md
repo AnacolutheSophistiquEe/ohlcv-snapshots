@@ -1,6 +1,6 @@
 # SAF
 
-**Generated** : 2026-06-16T16:18:20.636774+00:00  
+**Generated** : 2026-06-16T21:41:19.139352+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · €324.00  

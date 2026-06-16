@@ -1,15 +1,15 @@
 # MSTR
 
-**Generated** : 2026-06-16T16:24:24.764957+00:00  
+**Generated** : 2026-06-16T21:46:59.160009+00:00  
 **Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : trending · volatilite normal · $125.43  
+**Subtitle** : trending · volatilite normal · $122.81  
 
 ## Régime & alignement multi-TF
 
 - **Daily** : down (trend-down)  
-- **H4** : up | **H1** : down  
-- **Flag multi-TF** : mixed (score 2)
+- **H4** : down | **H1** : down  
+- **Flag multi-TF** : triple_bearish (score 3)
 
 
 ## Lecture chartiste
@@ -20,17 +20,17 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Pass (negative EV)'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry : $124.80–$126.06 (mid $125.43)
-- Stop : $109.49 (stop atr-based (-12.71%))
-- Targets : T1 $153.70 · R/R 1.77 | T2 $192.21 · R/R 4.19 | T3 $292.36 · R/R 10.47
+- Entry : $122.20–$123.42 (mid $122.81)
+- Stop : $111.04 (stop swing-based (-9.59%))
+- Targets : T1 $153.70 · R/R 2.62 | T2 $192.21 · R/R 5.9 | T3 $292.36 · R/R 14.41
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $109.49
+- Invalidation : close sous $111.04
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.05 | EV/share : $-0.487 | p_fill : —
-- Régime probabiliste (posterior HMM, intraday) : bull 5.0 | bear 67.4 | side 27.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- EV/risk : -0.042 | EV/share : $-0.401 | p_fill : —
+- Régime probabiliste (posterior HMM, intraday) : bull 21.3 | bear 72.8 | side 5.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional 0.0 | shares 0
 
 
@@ -43,26 +43,26 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.61 · part idiosyncratique 0.13
+**Factor** : R² 0.61 · part idiosyncratique 0.12
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
 **Options** : bullish
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 30.6  _(momentum baissier)_
-- **ADX** : 46.2  _(tendance tres forte)_
-- **MACD** : hist -2.074  _(pas de croisement recent)_
-- **BB** : %B 0.29 · largeur 54.0%
-- **ATR** : 10.63 (34.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.098  _(distribution)_
-- **Vol ratio** : 0.33  _(volume atone)_
-- **Choppiness** : 42.2  _(transition)_
-- **MA** : MA20 141.9 · MA50 154.9 · MA200 195.12  _(prix < MA20)_
-- **Dist MA** : MA20 -11.6% · MA50 -19.0% · MA200 -35.7%
+- **RSI** : 33.8  _(momentum baissier)_
+- **ADX** : 47.6  _(tendance tres forte)_
+- **MACD** : hist -1.218  _(pas de croisement recent)_
+- **BB** : %B 0.27 · largeur 52.8%
+- **ATR** : 11.17 (40.0e pct 1a)  _(volatilite normale)_
+- **OBV/CMF** : OBV falling · CMF -0.185  _(distribution)_
+- **Vol ratio** : 0.96  _(volume normal)_
+- **Choppiness** : 44.1  _(transition)_
+- **MA** : MA20 139.99 · MA50 154.92 · MA200 194.07  _(prix < MA20)_
+- **Dist MA** : MA20 -12.3% · MA50 -20.7% · MA200 -36.7%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13980 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14012 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

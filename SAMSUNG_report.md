@@ -1,11 +1,11 @@
 # 005930
 
-**Generated** : 2026-06-16T16:22:47.683023+00:00  
+**Generated** : 2026-06-16T21:45:27.062496+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 8/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite extreme · ₩337000.00  
+**Subtitle** : indeterminate · volatilite extreme · ₩343000.00  
 
 ## Régime & alignement multi-TF
 
@@ -22,16 +22,16 @@ Plan privilegie A (intraday), composite 8/10, conviction 'Neutral'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry : ₩335315.00–₩338685.00 (mid ₩337000.00)
-- Stop : ₩298937.50 (stop atr-based (-11.29%))
-- Targets : T1 ₩341453.12 · R/R 0.12 | T2 ₩423651.04 · R/R 2.28 | T3 ₩518611.55 · R/R 4.77
+- Entry : ₩341285.00–₩344715.00 (mid ₩343000.00)
+- Stop : ₩304562.50 (stop atr-based (-11.21%))
+- Targets : T1 ₩370000.00 · R/R 0.7 | T2 ₩437983.22 · R/R 2.47 | T3 ₩536546.44 · R/R 5.04
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩298937.50
+- Invalidation : close sous ₩304562.50
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.032 | EV/share : ₩833.539 | p_fill : —
+- EV/risk : 0.106 | EV/share : ₩2775.324 | p_fill : —
 - Régime probabiliste (posterior HMM, intraday) : bull 19.9 | bear 9.0 | side 71.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional 512.0 | shares 0
 
@@ -53,18 +53,18 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Indicateurs (résumé)
 
 - **RSI** : 59.4  _(momentum haussier)_
-- **ADX** : 24.8  _(pas de tendance nette)_
-- **MACD** : hist -2850.005  _(pas de croisement recent)_
-- **BB** : %B 0.76 · largeur 33.8%
-- **ATR** : 25375.0 (100.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.002  _(neutre)_
-- **Vol ratio** : 0.68  _(volume normal)_
-- **Choppiness** : 55.3  _(transition)_
-- **MA** : MA20 309300.0 · MA50 259467.0 · MA200 157027.91  _(prix > MA20)_
-- **Dist MA** : MA20 +9.0% · MA50 +29.9% · MA200 +114.6%
+- **ADX** : 23.3  _(pas de tendance nette)_
+- **MACD** : hist -1665.067  _(pas de croisement recent)_
+- **BB** : %B 0.79 · largeur 32.6%
+- **ATR** : 25625.0 (100.0e pct 1a)  _(volatilite elevee)_
+- **OBV/CMF** : OBV falling · CMF 0.059  _(accumulation)_
+- **Vol ratio** : 0.58  _(volume atone)_
+- **Choppiness** : 55.7  _(transition)_
+- **MA** : MA20 312925.0 · MA50 262534.0 · MA200 158388.96  _(prix > MA20)_
+- **Dist MA** : MA20 +9.6% · MA50 +30.6% · MA200 +116.6%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (14487 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14609 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # RHM
 
-**Generated** : 2026-06-16T16:12:22.066732+00:00  
+**Generated** : 2026-06-16T21:35:44.110666+00:00  
 **Santé technique** : 2/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €1145.60  

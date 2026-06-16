@@ -1,6 +1,6 @@
 # EVT
 
-**Generated** : 2026-06-16T16:15:22.071772+00:00  
+**Generated** : 2026-06-16T21:38:32.782963+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €4.70  

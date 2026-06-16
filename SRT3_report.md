@@ -1,6 +1,6 @@
 # SRT3
 
-**Generated** : 2026-06-16T16:13:52.562406+00:00  
+**Generated** : 2026-06-16T21:37:08.020849+00:00  
 **Santé technique** : 7/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · €230.70  

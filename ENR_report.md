@@ -1,6 +1,6 @@
 # ENR
 
-**Generated** : 2026-06-16T16:16:50.852031+00:00  
+**Generated** : 2026-06-16T21:39:56.037085+00:00  
 **Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · €156.12  
