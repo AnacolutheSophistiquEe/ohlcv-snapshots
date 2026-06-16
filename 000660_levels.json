@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "000660",
-    "generated_at": "2026-06-16T00:22:55Z",
+    "generated_at": "2026-06-16T16:38:27Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-17T08:00:00Z",
@@ -16,7 +16,7 @@
       "max": 10,
       "label": "very_bullish"
     },
-    "alignment_flag": "triple_bullish",
+    "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
       "probability": 0.9,
@@ -24,11 +24,11 @@
     },
     "volatility_regime": "extreme",
     "signals_counter": {
-      "buy": 8,
+      "buy": 6,
       "sell": 0,
-      "neutral": 8,
-      "total": 16,
-      "verdict": "neutral_to_bullish"
+      "neutral": 9,
+      "total": 15,
+      "verdict": "neutral"
     },
     "mean_reversion_score": {
       "setup": "rsi_60-70_dist_ma20_+5_+10",
@@ -37,7 +37,7 @@
       "median_bounce_pct": 24.55,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 9/10 (very_bullish), alignment triple_bullish, HMM sideways (0.90), vol extreme, signals neutral_to_bullish (8b/0s/8n)."
+    "narrative_short": "TA score 9/10 (very_bullish), alignment mixed, HMM sideways (0.90), vol extreme, signals neutral (6b/0s/9n)."
   },
   "notes": {
     "atr_daily": 186066.0301,
@@ -107,13 +107,13 @@
         },
         {
           "level": 2,
-          "price": 2916627.304,
+          "price": 2916627.2955,
           "basis": "fib_extension_1272",
           "rr": 2.31
         },
         {
           "level": 3,
-          "price": 3620873.801,
+          "price": 3620873.7817,
           "basis": "fib_extension_1618",
           "rr": 4.89
         }
@@ -168,11 +168,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 1585479.301,
+        "min": 1585479.3129,
         "max": 1670329.8247
       },
       "stop": {
-        "price": 1522060.129,
+        "price": 1522060.1404,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -6.5
       },
@@ -185,13 +185,13 @@
         },
         {
           "level": 2,
-          "price": 2916627.304,
+          "price": 2916627.2955,
           "basis": "fib_extension_1272",
           "rr": 12.18
         },
         {
           "level": 3,
-          "price": 3620873.801,
+          "price": 3620873.7817,
           "basis": "fib_extension_1618",
           "rr": 18.83
         }
@@ -206,7 +206,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 1506839.5277,
+    "price": 1506839.539,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
