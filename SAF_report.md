@@ -1,9 +1,9 @@
 # SAF
 
-**Generated** : 2026-06-15T21:41:58.082094+00:00  
+**Generated** : 2026-06-16T00:06:05.202935+00:00  
 **Santé technique** : 8/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite high · €316.40  
+**Subtitle** : range · volatilite normal · €306.10  
 
 ## Régime & alignement multi-TF
 
@@ -20,24 +20,24 @@ Plan privilegie A (intraday), composite 8/10, conviction 'Pass'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry : €313.23–€316.37 (mid €314.80)
-- Stop : €301.50 (stop atr-based (-4.71%))
-- Targets : T1 €345.50 · R/R 2.31 | T2 €365.40 · R/R 3.8 | T3 €393.46 · R/R 5.91
+- Entry : €303.08–€306.12 (mid €304.60)
+- Stop : €292.10 (stop atr-based (-4.59%))
+- Targets : T1 €311.40 · R/R 0.54 | T2 €362.43 · R/R 4.63 | T3 €387.71 · R/R 6.65
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €301.50
+- Invalidation : close sous €292.10
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.018 | EV/share : €-0.270 | p_fill : —
-- Régime probabiliste (posterior HMM, intraday) : bull 9.3 | bear 15.9 | side 74.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional 512.0 | shares 1
+- EV/risk : -0.027 | EV/share : €-0.375 | p_fill : —
+- Régime probabiliste (posterior HMM, intraday) : bull 7.9 | bear 15.6 | side 76.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Sizing : notional 400.0 | shares 1
 
 
 ## Timing d'entrée (observe-only)
 
 - **Verdict timing** : étendu — attendre un repli vers une zone
-- Proximité zone : 0.5/2 | R/R T1 : 1.0 | extension : stretched_up
+- Proximité zone : 0.5/2 | R/R T1 : 0.5 | extension : stretched_up
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -50,19 +50,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 65.9  _(momentum haussier)_
-- **ADX** : 21.4  _(pas de tendance nette)_
-- **MACD** : hist 1.432  _(pas de croisement recent)_
-- **BB** : %B 1.0 · largeur 14.5%
-- **ATR** : 9.93 (79.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF -0.196  _(distribution)_
-- **Vol ratio** : 1.61  _(volume au-dessus de la moyenne)_
-- **Choppiness** : 52.0  _(transition)_
-- **MA** : MA20 294.84 · MA50 288.95 · MA200 297.24  _(prix > MA20)_
-- **Dist MA** : MA20 +7.3% · MA50 +9.5% · MA200 +6.4%
+- **RSI** : 56.7  _(momentum haussier)_
+- **ADX** : 20.0  _(pas de tendance nette)_
+- **MACD** : hist 0.466  _(pas de croisement recent)_
+- **BB** : %B 0.82 · largeur 14.7%
+- **ATR** : 9.36 (73.0e pct 1a)  _(volatilite normale)_
+- **OBV/CMF** : OBV falling · CMF -0.125  _(distribution)_
+- **Vol ratio** : 1.34  _(volume normal)_
+- **Choppiness** : 62.5  _(marche en range (choppy))_
+- **MA** : MA20 292.57 · MA50 288.37 · MA200 297.06  _(prix > MA20)_
+- **Dist MA** : MA20 +4.6% · MA50 +6.1% · MA200 +3.0%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16514 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16456 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
