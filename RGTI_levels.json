@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RGTI",
-    "generated_at": "2026-06-16T16:38:27Z",
+    "generated_at": "2026-06-16T22:00:01Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-17T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "RGTI_precomputed.json"
   },
   "context": {
-    "last_price": 21.33,
+    "last_price": 20.64,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "triple_bearish",
     "hmm_regime": {
       "state": "bear",
-      "probability": 0.8491,
-      "expected_duration_days": 6.63
+      "probability": 0.9,
+      "expected_duration_days": 20.28
     },
     "volatility_regime": "high",
     "signals_counter": {
@@ -37,14 +37,14 @@
       "median_bounce_pct": 13.11,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 4/10 (bearish), alignment triple_bearish, HMM bear (0.85), vol high, signals neutral (3b/6s/7n)."
+    "narrative_short": "TA score 4/10 (bearish), alignment triple_bearish, HMM bear (0.90), vol high, signals neutral (3b/6s/7n)."
   },
   "notes": {
-    "atr_daily": 2.6179,
+    "atr_daily": 2.6433,
     "atr_pct_daily": null,
-    "beta_60d": 3.3506,
+    "beta_60d": 3.3904,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.5975,
+    "beta_corr_60d": 0.6033,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bullish_engulfing",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -62.14,
+      "current_dd_pct": -63.37,
       "ath_price": 56.34,
       "ath_date": "2025-10-15",
       "max_dd_1y_pct": -77.1,
@@ -76,32 +76,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 21.1165,
-        "max": 21.2435
+        "min": 20.3986,
+        "max": 20.5214
       },
       "stop": {
-        "price": 17.4031,
+        "price": 16.6751,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -17.83
+        "distance_pct": -18.5
       },
       "targets": [
         {
           "level": 1,
           "price": 26.4423,
           "basis": "vpvr_vah",
-          "rr": 1.39
+          "rr": 1.58
         },
         {
           "level": 2,
-          "price": 34.34,
+          "price": 44.52,
           "basis": "resistance_2",
-          "rr": 3.48
+          "rr": 6.36
         },
         {
           "level": 3,
-          "price": 44.52,
+          "price": 58.15,
           "basis": "resistance_3",
-          "rr": 6.18
+          "rr": 9.96
         }
       ],
       "preferred_target": 1,
@@ -117,32 +117,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 23.7269,
-        "max": 23.8217
+        "min": 23.7234,
+        "max": 23.8182
       },
       "stop": {
-        "price": 22.4641,
+        "price": 22.4298,
         "basis": "below_broken_resistance",
-        "distance_pct": -5.51
+        "distance_pct": -5.64
       },
       "targets": [
         {
           "level": 1,
           "price": 25.7952,
           "basis": "next_confluence_resistance",
-          "rr": 1.54
+          "rr": 1.51
         },
         {
           "level": 2,
-          "price": 27.82,
+          "price": 28.9564,
           "basis": "next_confluence_resistance",
-          "rr": 3.09
+          "rr": 3.87
         },
         {
           "level": 3,
           "price": 29.4941,
           "basis": "fib_382",
-          "rr": 4.37
+          "rr": 4.27
         }
       ],
       "preferred_target": 1,
@@ -158,32 +158,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 16.1989,
+        "min": 16.1286,
         "max": 16.9482
       },
       "stop": {
-        "price": 15.5509,
+        "price": 15.4835,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -6.17
+        "distance_pct": -6.38
       },
       "targets": [
         {
           "level": 1,
           "price": 26.4423,
           "basis": "vpvr_vah",
-          "rr": 9.65
+          "rr": 9.39
         },
         {
           "level": 2,
-          "price": 34.34,
+          "price": 44.52,
           "basis": "resistance_2",
-          "rr": 17.37
+          "rr": 26.52
         },
         {
           "level": 3,
-          "price": 44.52,
+          "price": 58.15,
           "basis": "resistance_3",
-          "rr": 27.33
+          "rr": 39.44
         }
       ],
       "preferred_target": 1,
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 15.3954,
+    "price": 15.3287,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
