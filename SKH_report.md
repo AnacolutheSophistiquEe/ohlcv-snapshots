@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-06-16T00:08:38.295701+00:00  
+**Generated** : 2026-06-16T16:21:19.740470+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 9/10 — **Rating** : Neutral  
@@ -10,8 +10,8 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 ## Régime & alignement multi-TF
 
 - **Daily** : up (trend-up)  
-- **H4** : up | **H1** : up  
-- **Flag multi-TF** : triple_bullish (score 3)
+- **H4** : up | **H1** : range  
+- **Flag multi-TF** : mixed (score 2)
 
 
 ## Lecture chartiste
@@ -24,7 +24,7 @@ Plan privilegie B (swing), composite 9/10, conviction 'Neutral'.
 **Plan B — swing** (order_type LMT)
 - Entry : ₩2276560.00–₩2299440.00 (mid ₩2288000.00)
 - Stop : ₩2008900.95 (stop atr-based (-12.2%))
-- Targets : T1 ₩2338379.94 · R/R 0.18 | T2 ₩2916627.30 · R/R 2.25 | T3 ₩3620873.80 · R/R 4.78
+- Targets : T1 ₩2338379.94 · R/R 0.18 | T2 ₩2916627.30 · R/R 2.25 | T3 ₩3620873.78 · R/R 4.78
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩2008900.95
 
@@ -66,5 +66,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13928 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13945 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

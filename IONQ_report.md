@@ -1,70 +1,70 @@
 # IONQ
 
-**Generated** : 2026-06-16T00:15:24.346443+00:00  
+**Generated** : 2026-06-16T16:29:17.749633+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.7 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
-**Santé technique** : 8/10 — **Rating** : Neutral  
+**Santé technique** : 8/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : trending · volatilite high · $61.18  
+**Subtitle** : trending · volatilite high · $58.27  
 
 ## Régime & alignement multi-TF
 
-- **Daily** : up (trend-up)  
-- **H4** : range | **H1** : up  
+- **Daily** : range (trend-range)  
+- **H4** : range | **H1** : down  
 - **Flag multi-TF** : mixed (score 2)
 
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 8/10, conviction 'Neutral'.
+Plan privilegie C (deep), composite 8/10, conviction 'Pass'.
 
 
 ## Niveaux clés & plan principal
 
-**Plan A — intraday** (order_type LMT)
-- Entry : $60.57–$61.17 (mid $60.87)
-- Stop : $52.02 (stop swing-based (-14.97%))
-- Targets : T1 $69.80 · R/R 1.01 | T2 $92.99 · R/R 3.63 | T3 $110.80 · R/R 5.64
+**Plan C — deep** (order_type LMT)
+- Entry : $57.98–$58.56 (mid $58.27)
+- Stop : $52.06 (stop swing-based (-10.66%))
+- Targets : T1 $69.92 · R/R 1.88 | T2 $93.55 · R/R 5.68 | T3 $111.76 · R/R 8.61
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $52.02
+- Invalidation : close sous $52.06
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.176 | EV/share : $0.820 | p_fill : —
-- Régime probabiliste (posterior HMM, intraday) : bull 24.8 | bear 50.0 | side 25.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- EV/risk : -0.087 | EV/share : $-0.789 | p_fill : —
+- Régime probabiliste (posterior HMM, deep) : bull 24.0 | bear 32.6 | side 43.5  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional 288.0 | shares 4
 
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : neutre
-- Proximité zone : 0.5/2 | R/R T1 : 2.0 | extension : normal
+- **Verdict timing** : loin du support — entrée non optimale (chasing)
+- Proximité zone : 0.0/2 | R/R T1 : 0.5 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
 ## Positioning & factor
 
-**Factor** : R² 0.38 · part idiosyncratique 0.31
+**Factor** : R² 0.39 · part idiosyncratique 0.36
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
 **Options** : favorable
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 47.3  _(neutre)_
-- **ADX** : 34.2  _(tendance etablie)_
-- **MACD** : hist -1.505  _(pas de croisement recent)_
-- **BB** : %B 0.49 · largeur 45.7%
-- **ATR** : 6.21 (92.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF 0.085  _(accumulation)_
-- **Vol ratio** : 0.79  _(volume normal)_
-- **Choppiness** : 55.0  _(transition)_
-- **MA** : MA20 61.42 · MA50 50.82 · MA200 49.09  _(prix < MA20)_
-- **Dist MA** : MA20 -0.4% · MA50 +20.4% · MA200 +24.6%
+- **RSI** : 42.3  _(momentum baissier)_
+- **ADX** : 33.6  _(tendance etablie)_
+- **MACD** : hist -1.479  _(pas de croisement recent)_
+- **BB** : %B 0.36 · largeur 41.8%
+- **ATR** : 6.03 (91.0e pct 1a)  _(volatilite elevee)_
+- **OBV/CMF** : OBV falling · CMF 0.094  _(accumulation)_
+- **Vol ratio** : 0.38  _(volume atone)_
+- **Choppiness** : 53.8  _(transition)_
+- **MA** : MA20 61.87 · MA50 51.4 · MA200 49.17  _(prix < MA20)_
+- **Dist MA** : MA20 -5.8% · MA50 +13.4% · MA200 +18.5%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17014 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16948 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

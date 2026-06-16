@@ -1,24 +1,24 @@
 {
   "available": true,
-  "generated_at": "2026-06-16T16:13:52.942648+00:00",
-  "prediction_id": "SRT3_C_20260616",
+  "generated_at": "2026-06-16T16:18:21.000063+00:00",
+  "prediction_id": "SAF_B_20260616",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "SRT3",
-  "exchange": "IBIS",
+  "symbol": "SAF",
+  "exchange": "SBF",
   "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 230.7,
+    "limit_price": 324.0,
     "quantity": 1,
     "tif": "GTD",
-    "gtd": "2026-08-15T16:30:00+00:00"
+    "gtd": "2026-07-07T16:30:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 244.0,
+      "limit_price": 345.5,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
@@ -26,27 +26,27 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 217.05,
+      "stop_price": 309.1,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "SRT3_C_deep_20260616",
+  "oca_group": "SAF_B_swing_20260616",
   "oca_type": 1,
   "execution_rules": {
-    "stop_mode": "trailing_after_T1",
-    "stop_mode_description": "SL → max(SL, close - 2×ATR) après hit T1",
-    "trail_distance_atr": 2.0,
+    "stop_mode": "breakeven_after_T1",
+    "stop_mode_description": "SL → prix d'entrée après hit T1",
+    "trail_distance_atr": null,
     "time_stop": {
       "enabled": true,
-      "max_holding_sessions": 60,
-      "exit_mode": "keep_as_buyandhold"
+      "max_holding_sessions": 21,
+      "exit_mode": "market_close_at_breakeven"
     },
     "order_validity": {
       "type": "GTD",
-      "offset_sessions": 60,
-      "good_till_date": "2026-08-15T16:30:00+00:00"
+      "offset_sessions": 21,
+      "good_till_date": "2026-07-07T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -74,39 +74,36 @@
     ]
   },
   "bracket_metadata": {
-    "plan_id": "C",
-    "horizon": "deep",
-    "horizon_label_long": "swing_4_12_weeks",
+    "plan_id": "B",
+    "horizon": "swing",
+    "horizon_label_long": "swing_1_3_weeks",
     "composite_score": 7.0,
-    "composite_score_source": "horizon_ta_score.plan_c.score",
-    "ev_pct_risk": 0.2907,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.deep.blended_scale_out.ev_pct_risk",
+    "composite_score_source": "horizon_ta_score.plan_b.score",
+    "ev_pct_risk": -0.0952,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "below_threshold",
+    "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.6004,
-      "T2": 0.3599,
-      "T3": 0.1845
+      "T1": 0.4391,
+      "T2": 0.1958,
+      "T3": 0.0745
     },
-    "p_hit_source": "edge_metrics.by_horizon.deep.targets.{t1,t2,t3}.p_hit_upper",
+    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 230.7,
-    "hold_tolerance_breach_price": 173.025,
+    "notional_eur": 324.0,
+    "hold_tolerance_breach_price": 243.0,
     "hold_fallback_active": true,
-    "prediction_id": "SRT3_C_20260616",
-    "trail_distance_atr": 2.0,
-    "trail_distance_price": 18.2143,
-    "atr_14_daily": 9.1071
+    "prediction_id": "SAF_B_20260616"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.05,
+    "tick_size_used": 0.1,
     "qty_total_positive": true
   }
 }
