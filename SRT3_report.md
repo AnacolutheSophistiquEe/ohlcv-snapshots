@@ -1,6 +1,6 @@
 # SRT3
 
-**Generated** : 2026-06-16T21:37:08.020849+00:00  
+**Generated** : 2026-06-17T00:03:19.594579+00:00  
 **Santé technique** : 7/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · €230.70  
@@ -55,8 +55,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -1.818  _(pas de croisement recent)_
 - **BB** : %B 0.25 · largeur 10.2%
 - **ATR** : 9.11 (76.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.057  _(distribution)_
-- **Vol ratio** : 0.62  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.05  _(neutre)_
+- **Vol ratio** : 0.19  _(volume atone)_
 - **Choppiness** : 64.1  _(marche en range (choppy))_
 - **MA** : MA20 236.72 · MA50 226.78 · MA200 227.88  _(prix < MA20)_
 - **Dist MA** : MA20 -2.5% · MA50 +1.7% · MA200 +1.2%
@@ -64,5 +64,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16391 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16482 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

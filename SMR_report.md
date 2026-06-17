@@ -1,6 +1,6 @@
 # SMR
 
-**Generated** : 2026-06-16T21:55:56.275672+00:00  
+**Generated** : 2026-06-17T00:20:39.030718+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.6 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Pass  
@@ -66,5 +66,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (14137 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14244 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

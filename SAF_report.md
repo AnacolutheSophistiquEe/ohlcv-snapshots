@@ -1,6 +1,6 @@
 # SAF
 
-**Generated** : 2026-06-16T21:41:19.139352+00:00  
+**Generated** : 2026-06-17T00:07:09.129860+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · €324.00  
@@ -55,8 +55,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 2.413  _(pas de croisement recent)_
 - **BB** : %B 1.1 · largeur 14.9%
 - **ATR** : 9.93 (79.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF -0.139  _(distribution)_
-- **Vol ratio** : 1.0  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF -0.157  _(distribution)_
+- **Vol ratio** : 0.49  _(volume atone)_
 - **Choppiness** : 48.5  _(transition)_
 - **MA** : MA20 297.49 · MA50 289.75 · MA200 297.44  _(prix > MA20)_
 - **Dist MA** : MA20 +8.9% · MA50 +11.8% · MA200 +8.9%
@@ -64,5 +64,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16464 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16563 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

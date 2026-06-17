@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-06-16T21:51:29.811992+00:00  
+**Generated** : 2026-06-17T00:16:36.815438+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.9 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 8/10 — **Rating** : Pass  
@@ -66,5 +66,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16946 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (17041 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-06-16T21:44:06.564957+00:00  
+**Generated** : 2026-06-17T00:09:44.526015+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 9/10 — **Rating** : Neutral  
@@ -24,14 +24,14 @@ Plan privilegie B (swing), composite 9/10, conviction 'Neutral'.
 **Plan B — swing** (order_type LMT)
 - Entry : ₩2370090.00–₩2393910.00 (mid ₩2382000.00)
 - Stop : ₩2106326.90 (stop atr-based (-11.57%))
-- Targets : T1 ₩2407000.00 · R/R 0.09 | T2 ₩2940117.16 · R/R 2.02 | T3 ₩3650075.01 · R/R 4.6
+- Targets : T1 ₩2407000.00 · R/R 0.09 | T2 ₩2940117.15 · R/R 2.02 | T3 ₩3650074.99 · R/R 4.6
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩2106326.90
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.179 | EV/share : ₩44811.673 | p_fill : —
+- EV/risk : 0.179 | EV/share : ₩44811.672 | p_fill : —
 - Régime probabiliste (posterior HMM, swing) : bull 28.9 | bear 31.0 | side 40.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional 640.0 | shares 0
 
@@ -60,11 +60,11 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **OBV/CMF** : OBV rising · CMF 0.062  _(accumulation)_
 - **Vol ratio** : 0.69  _(volume normal)_
 - **Choppiness** : 58.3  _(transition)_
-- **MA** : MA20 2115587.09 · MA50 1630643.68 · MA200 874151.4  _(prix > MA20)_
+- **MA** : MA20 2115587.09 · MA50 1630643.68 · MA200 874151.39  _(prix > MA20)_
 - **Dist MA** : MA20 +12.6% · MA50 +46.1% · MA200 +172.5%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (14014 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14116 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
