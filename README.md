@@ -1,6 +1,6 @@
 # OHLCV Snapshots
 
-Last update: `2026-06-17T00:01:18.513887+00:00`
+Last update: `2026-06-17T21:30:22.083753+00:00`
 
 Daily snapshots of OHLCV data for the trading universe of [Manuel's IBKR Dip Scalper](https://github.com/AnacolutheSophistiquEe).
 Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the only reliable network path from the claude.ai sandbox.
