@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RHM",
-    "generated_at": "2026-06-17T00:24:17Z",
+    "generated_at": "2026-06-17T21:59:47Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-18T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "RHM_precomputed.json"
   },
   "context": {
-    "last_price": 1145.8,
+    "last_price": 1170.2,
     "ta_score": {
       "value": 2,
       "max": 10,
@@ -18,46 +18,46 @@
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
-      "state": "bear",
-      "probability": 0.63,
-      "expected_duration_days": 2.7
+      "state": "sideways",
+      "probability": 0.6088,
+      "expected_duration_days": 2.56
     },
     "volatility_regime": "low",
     "signals_counter": {
-      "buy": 2,
+      "buy": 1,
       "sell": 5,
-      "neutral": 8,
+      "neutral": 9,
       "total": 15,
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_30-40_dist_ma20_-10_-5",
-      "win_rate": 0.93,
-      "sample_size": 27,
-      "median_bounce_pct": 5.45,
+      "setup": "rsi_30-40_dist_ma20_-5_-2",
+      "win_rate": 0.75,
+      "sample_size": 16,
+      "median_bounce_pct": 2.87,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM bear (0.63), vol low, signals neutral (2b/5s/8n)."
+    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (0.61), vol low, signals neutral (1b/5s/9n)."
   },
   "notes": {
-    "atr_daily": 52.1714,
+    "atr_daily": 49.1571,
     "atr_pct_daily": null,
-    "beta_60d": 0.6903,
+    "beta_60d": 0.6585,
     "beta_benchmark": "EWG",
-    "beta_corr_60d": 0.344,
+    "beta_corr_60d": 0.3301,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "bearish_engulfing",
-      "date": "2026-06-12",
-      "confidence": 0.79
+      "name": "bullish_engulfing",
+      "date": "2026-06-17",
+      "confidence": 0.864
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -41.8,
+      "current_dd_pct": -40.56,
       "ath_price": 1968.8203,
       "ath_date": "2025-09-29",
       "max_dd_1y_pct": -43.11,
-      "days_in_dd": 260,
+      "days_in_dd": 261,
       "median_recovery_days": null
     }
   },
@@ -69,31 +69,31 @@
       "side": "long",
       "entry_zone": {
         "min": 1128.9,
-        "max": 1144.4663
+        "max": 1142.1449
       },
       "stop": {
-        "price": 1123.6829,
+        "price": 1123.9843,
         "basis": "sr_below_confluence_support",
-        "distance_pct": -1.14
+        "distance_pct": -1.02
       },
       "targets": [
         {
           "level": 1,
-          "price": 1532.4632,
+          "price": 1534.7845,
           "basis": "vpvr_vah",
-          "rr": 30.44
+          "rr": 34.6
         },
         {
           "level": 2,
-          "price": 2164.0007,
-          "basis": "fib_extension_1272",
-          "rr": 79.02
+          "price": 1966.015,
+          "basis": "resistance_2",
+          "rr": 71.98
         },
         {
           "level": 3,
-          "price": 2447.5468,
+          "price": 2479.0537,
           "basis": "fib_extension_1618",
-          "rr": 100.83
+          "rr": 116.44
         }
       ],
       "preferred_target": 1,
@@ -109,32 +109,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 1236.2339,
-        "max": 1241.1739
+        "min": 1292.8466,
+        "max": 1298.0128
       },
       "stop": {
-        "price": 1208.1489,
+        "price": 1278.1598,
         "basis": "below_broken_resistance",
-        "distance_pct": -2.47
+        "distance_pct": -1.33
       },
       "targets": [
         {
           "level": 1,
-          "price": 1285.7494,
-          "basis": "next_confluence_resistance",
-          "rr": 1.54
+          "price": 1338.0464,
+          "basis": "fib_236",
+          "rr": 2.47
         },
         {
           "level": 2,
-          "price": 1315.0014,
-          "basis": "fib_236",
-          "rr": 2.5
+          "price": 1458.5869,
+          "basis": "fib_382",
+          "rr": 9.45
         },
         {
           "level": 3,
-          "price": 1434.648,
-          "basis": "fib_382",
-          "rr": 6.41
+          "price": 1534.7845,
+          "basis": "next_confluence_resistance",
+          "rr": 13.86
         }
       ],
       "preferred_target": 1,
@@ -142,7 +142,7 @@
         "session_eu_xetra_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance MA20 + VPVR_POC (strength 5.0)."
+      "rationale": "Breakout au-dessus confluence resistance BB_UPPER + MA50 (strength 4.0)."
     },
     {
       "id": "C",
@@ -150,32 +150,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 1045.6071,
-        "max": 1066.8376
+        "min": 1093.35,
+        "max": 1115.55
       },
       "stop": {
-        "price": 983.2729,
+        "price": 1036.2643,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -6.91
+        "distance_pct": -6.17
       },
       "targets": [
         {
           "level": 1,
-          "price": 1532.4632,
+          "price": 1534.7845,
           "basis": "vpvr_vah",
-          "rr": 6.53
+          "rr": 6.31
         },
         {
           "level": 2,
-          "price": 2164.0007,
-          "basis": "fib_extension_1272",
-          "rr": 15.19
+          "price": 1966.015,
+          "basis": "resistance_2",
+          "rr": 12.64
         },
         {
           "level": 3,
-          "price": 2447.5468,
+          "price": 2479.0537,
           "basis": "fib_extension_1618",
-          "rr": 19.07
+          "rr": 20.16
         }
       ],
       "preferred_target": 1,
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 973.4402,
+    "price": 1025.9017,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
