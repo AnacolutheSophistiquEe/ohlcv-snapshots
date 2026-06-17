@@ -1,9 +1,9 @@
 # EVT
 
-**Generated** : 2026-06-17T00:04:34.914103+00:00  
-**Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
+**Generated** : 2026-06-17T21:38:33.150378+00:00  
+**Santé technique** : 6/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite low · €4.68  
+**Subtitle** : indeterminate · volatilite low · €4.73  
 
 ## Régime & alignement multi-TF
 
@@ -14,55 +14,55 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie C (deep), composite 5/10, conviction 'Pass (negative EV)'.
+Plan privilegie C (deep), composite 6/10, conviction 'Neutral'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan C — deep** (order_type LMT)
-- Entry : €4.66–€4.70 (mid €4.68)
-- Stop : €4.53 (stop swing-based (-3.19%))
-- Targets : T1 €5.07 · R/R 2.6 | T2 €6.17 · R/R 9.93 | T3 €7.56 · R/R 19.2
+- Entry : €4.71–€4.75 (mid €4.73)
+- Stop : €4.53 (stop swing-based (-4.14%))
+- Targets : T1 €5.07 · R/R 1.7 | T2 €6.16 · R/R 7.15 | T3 €7.56 · R/R 14.15
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous €4.53
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.208 | EV/share : €-0.098 | p_fill : —
-- Régime probabiliste (posterior HMM, deep) : bull 34.9 | bear 40.0 | side 25.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- EV/risk : 0.239 | EV/share : €0.118 | p_fill : —
+- Régime probabiliste (posterior HMM, deep) : bull 37.4 | bear 21.7 | side 40.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional 0.0 | shares 0
 
 
 ## Timing d'entrée (observe-only)
 
 - **Verdict timing** : loin du support — entrée non optimale (chasing)
-- Proximité zone : 0.0/2 | R/R T1 : 1.0 | extension : normal
+- Proximité zone : 0.0/2 | R/R T1 : 0.5 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
 ## Positioning & factor
 
-**Factor** : R² 0.13 · part idiosyncratique 0.32
+**Factor** : R² 0.16 · part idiosyncratique 0.71
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 41.8  _(momentum baissier)_
-- **ADX** : 23.5  _(pas de tendance nette)_
-- **MACD** : hist -0.031  _(pas de croisement recent)_
-- **BB** : %B 0.15 · largeur 16.3%
-- **ATR** : 0.19 (3.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.256  _(accumulation)_
-- **Vol ratio** : 0.55  _(volume atone)_
-- **Choppiness** : 47.0  _(transition)_
-- **MA** : MA20 4.97 · MA50 5.06 · MA200 5.61  _(prix < MA20)_
-- **Dist MA** : MA20 -5.7% · MA50 -7.4% · MA200 -16.5%
+- **RSI** : 38.1  _(momentum baissier)_
+- **ADX** : 12.1  _(pas de tendance nette)_
+- **MACD** : hist -0.026  _(pas de croisement recent)_
+- **BB** : %B 0.22 · largeur 16.8%
+- **ATR** : 0.18 (1.0e pct 1a)  _(volatilite normale)_
+- **OBV/CMF** : OBV rising · CMF 0.227  _(accumulation)_
+- **Vol ratio** : 1.09  _(volume normal)_
+- **Choppiness** : 42.7  _(transition)_
+- **MA** : MA20 4.96 · MA50 5.06 · MA200 5.6  _(prix < MA20)_
+- **Dist MA** : MA20 -4.6% · MA50 -6.6% · MA200 -15.6%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (14330 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14309 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
