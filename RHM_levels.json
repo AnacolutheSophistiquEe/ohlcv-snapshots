@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RHM",
-    "generated_at": "2026-06-16T22:00:01Z",
+    "generated_at": "2026-06-17T00:24:17Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-17T08:00:00Z",
-    "valid_until": "2026-06-17T21:00:00Z",
+    "valid_from": "2026-06-18T08:00:00Z",
+    "valid_until": "2026-06-18T21:00:00Z",
     "source_precomputed": "RHM_precomputed.json"
   },
   "context": {
-    "last_price": 1145.6,
+    "last_price": 1145.8,
     "ta_score": {
       "value": 2,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bear",
-      "probability": 0.6312,
-      "expected_duration_days": 2.71
+      "probability": 0.63,
+      "expected_duration_days": 2.7
     },
     "volatility_regime": "low",
     "signals_counter": {
@@ -47,13 +47,13 @@
     "beta_corr_60d": 0.344,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "shooting_star",
-      "date": "2026-06-16",
-      "confidence": 0.639
+      "name": "bearish_engulfing",
+      "date": "2026-06-12",
+      "confidence": 0.79
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -41.81,
+      "current_dd_pct": -41.8,
       "ath_price": 1968.8203,
       "ath_date": "2025-09-29",
       "max_dd_1y_pct": -43.11,
@@ -113,14 +113,14 @@
         "max": 1241.1739
       },
       "stop": {
-        "price": 1208.139,
+        "price": 1208.1489,
         "basis": "below_broken_resistance",
         "distance_pct": -2.47
       },
       "targets": [
         {
           "level": 1,
-          "price": 1285.7798,
+          "price": 1285.7494,
           "basis": "next_confluence_resistance",
           "rr": 1.54
         },
@@ -150,11 +150,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 1045.479,
-        "max": 1066.707
+        "min": 1045.6071,
+        "max": 1066.8376
       },
       "stop": {
-        "price": 983.1429,
+        "price": 983.2729,
         "basis": "fallback_pivot_classical_s3",
         "distance_pct": -6.91
       },
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 973.3115,
+    "price": 973.4402,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

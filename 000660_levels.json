@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "000660",
-    "generated_at": "2026-06-16T22:00:01Z",
+    "generated_at": "2026-06-17T00:24:17Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-17T08:00:00Z",
-    "valid_until": "2026-06-17T21:00:00Z",
+    "valid_from": "2026-06-18T08:00:00Z",
+    "valid_until": "2026-06-18T21:00:00Z",
     "source_precomputed": "000660_precomputed.json"
   },
   "context": {
@@ -114,13 +114,13 @@
         },
         {
           "level": 2,
-          "price": 2940117.157,
+          "price": 2940117.1485,
           "basis": "fib_extension_1272",
           "rr": 2.14
         },
         {
           "level": 3,
-          "price": 3650075.0111,
+          "price": 3650074.9918,
           "basis": "fib_extension_1618",
           "rr": 4.82
         }
@@ -153,13 +153,13 @@
         },
         {
           "level": 2,
-          "price": 2940117.157,
+          "price": 2940117.1485,
           "basis": "fib_extension_1272",
           "rr": 5.46
         },
         {
           "level": 3,
-          "price": 3650075.0111,
+          "price": 3650074.9918,
           "basis": "fib_extension_1618",
           "rr": 12.62
         }
@@ -175,11 +175,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 1598173.6986,
+        "min": 1598173.7106,
         "max": 1698823.9994
       },
       "stop": {
-        "price": 1534246.7507,
+        "price": 1534246.7622,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -6.93
       },
@@ -192,13 +192,13 @@
         },
         {
           "level": 2,
-          "price": 2940117.157,
+          "price": 2940117.1485,
           "basis": "fib_extension_1272",
           "rr": 11.3
         },
         {
           "level": 3,
-          "price": 3650075.0111,
+          "price": 3650074.9918,
           "basis": "fib_extension_1618",
           "rr": 17.52
         }
@@ -213,7 +213,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 1518904.2832,
+    "price": 1518904.2946,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
