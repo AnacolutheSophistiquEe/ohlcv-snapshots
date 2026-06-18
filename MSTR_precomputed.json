@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US5949724083",
-    "generated_at": "2026-06-17T21:47:00.192625+00:00",
+    "generated_at": "2026-06-18T00:11:05.564139+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1719,7 +1719,7 @@
           "rr": 0.75,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7172,
+          "p_touch": 0.7171,
           "distance_pct": 6.01
         },
         "t2": {
@@ -1728,7 +1728,7 @@
           "rr": 1.5,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4362,
+          "p_touch": 0.436,
           "distance_pct": 12.02
         },
         "t3": {
@@ -1737,7 +1737,7 @@
           "rr": 2.25,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4362,
+          "p_touch": 0.436,
           "distance_pct": 18.03
         }
       }
@@ -1760,7 +1760,7 @@
           "rr": 1.03,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5844,
+          "p_touch": 0.5842,
           "distance_pct": 12.32
         },
         "t2": {
@@ -1801,7 +1801,7 @@
           "rr": 1.16,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5844,
+          "p_touch": 0.5842,
           "distance_pct": 20.82
         },
         "t2": {
@@ -2140,54 +2140,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-06-17T21:46:46.336318+00:00",
+    "generated_at": "2026-06-18T00:10:52.455757+00:00",
     "ticker": "MSTR",
     "horizons_days": {
       "intraday": 7,
       "swing": 30,
       "deep": 90
     },
-    "n_events": 40,
+    "n_events": 39,
     "events": [
-      {
-        "date": "2026-06-17",
-        "type": "macro",
-        "label": "US Retail Sales (headline + control group)",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-06-17",
-        "type": "macro",
-        "label": "US FOMC Rate Decision",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
-      },
       {
         "date": "2026-06-18",
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2202,8 +2170,8 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2218,8 +2186,8 @@
         "type": "macro",
         "label": "European Council Summit 18-19 juin 2026 (Ukraine / défense EU)",
         "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2235,7 +2203,7 @@
         "label": "Signature accord Iran-US — 19/06/2026, Suisse",
         "importance": "high",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2250,8 +2218,8 @@
         "type": "macro",
         "label": "Triple witching options expiry — 20/06/2026 (3e vendredi juin US)",
         "importance": "medium",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2266,8 +2234,8 @@
         "type": "macro",
         "label": "PMI Flash juin 2026 — S&P Global US + EU (20/06/2026)",
         "importance": "medium",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2282,8 +2250,8 @@
         "type": "macro",
         "label": "German Ifo Business Climate Index",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2298,8 +2266,8 @@
         "type": "macro",
         "label": "Micron Technology (MU) earnings Q2 FY2026 — 24/06/2026",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2314,9 +2282,10 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -2329,9 +2298,10 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -2344,9 +2314,10 @@
         "type": "macro",
         "label": "US PCE Price Index (headline) — Personal Income & Outlays",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -2359,9 +2330,10 @@
         "type": "macro",
         "label": "US Core PCE Price Index (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -2374,9 +2346,10 @@
         "type": "macro",
         "label": "US Personal Income & Spending",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -2389,9 +2362,10 @@
         "type": "macro",
         "label": "US GDP (advance / second / third estimate)",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -2404,9 +2378,10 @@
         "type": "macro",
         "label": "US Durable Goods Orders",
         "importance": "low",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -2419,9 +2394,10 @@
         "type": "macro",
         "label": "US New Home Sales",
         "importance": "low",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -2435,7 +2411,7 @@
         "label": "US University of Michigan Consumer Sentiment (prelim + final)",
         "importance": "medium",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2450,7 +2426,7 @@
         "label": "German HICP Flash (inflation estimate)",
         "importance": "high",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2465,7 +2441,7 @@
         "label": "US Conference Board Consumer Confidence",
         "importance": "medium",
         "sessions_to_event": 9,
-        "calendar_days": 13,
+        "calendar_days": 12,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2480,7 +2456,7 @@
         "label": "US JOLTS (Job Openings and Labor Turnover)",
         "importance": "medium",
         "sessions_to_event": 14,
-        "calendar_days": 20,
+        "calendar_days": 19,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2494,8 +2470,8 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
-        "sessions_to_event": 15,
-        "calendar_days": 21,
+        "sessions_to_event": 14,
+        "calendar_days": 20,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2510,7 +2486,7 @@
         "label": "US Employment Situation (NFP / unemployment / earnings)",
         "importance": "high",
         "sessions_to_event": 16,
-        "calendar_days": 23,
+        "calendar_days": 22,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2525,7 +2501,7 @@
         "label": "US CPI (headline)",
         "importance": "high",
         "sessions_to_event": 19,
-        "calendar_days": 27,
+        "calendar_days": 26,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2540,7 +2516,7 @@
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
         "sessions_to_event": 19,
-        "calendar_days": 27,
+        "calendar_days": 26,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2554,8 +2530,8 @@
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
         "importance": "high",
-        "sessions_to_event": 26,
-        "calendar_days": 36,
+        "sessions_to_event": 25,
+        "calendar_days": 35,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2568,8 +2544,8 @@
         "type": "macro",
         "label": "Sartorius (SRT3/SRT) Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 26,
-        "calendar_days": 36,
+        "sessions_to_event": 25,
+        "calendar_days": 35,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2582,8 +2558,8 @@
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 30,
-        "calendar_days": 42,
+        "sessions_to_event": 29,
+        "calendar_days": 41,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2596,8 +2572,8 @@
         "type": "earnings",
         "label": "MSTR earnings",
         "importance": "high",
-        "sessions_to_event": 31,
-        "calendar_days": 43,
+        "sessions_to_event": 30,
+        "calendar_days": 42,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2611,7 +2587,7 @@
         "label": "SoFi Technologies (SOFI) Q2 2026 Earnings",
         "importance": "medium",
         "sessions_to_event": 34,
-        "calendar_days": 48,
+        "calendar_days": 47,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2624,8 +2600,8 @@
         "type": "macro",
         "label": "Siemens Energy Q2 FY2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 35,
-        "calendar_days": 49,
+        "sessions_to_event": 34,
+        "calendar_days": 48,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2638,8 +2614,8 @@
         "type": "macro",
         "label": "Rheinmetall Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 36,
-        "calendar_days": 50,
+        "sessions_to_event": 35,
+        "calendar_days": 49,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2653,7 +2629,7 @@
         "label": "Rigetti Computing Q2 2026 Earnings",
         "importance": "high",
         "sessions_to_event": 39,
-        "calendar_days": 55,
+        "calendar_days": 54,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2666,8 +2642,8 @@
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 40,
-        "calendar_days": 56,
+        "sessions_to_event": 39,
+        "calendar_days": 55,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2680,8 +2656,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 40,
-        "calendar_days": 56,
+        "sessions_to_event": 39,
+        "calendar_days": 55,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2694,8 +2670,8 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
-        "sessions_to_event": 45,
-        "calendar_days": 63,
+        "sessions_to_event": 44,
+        "calendar_days": 62,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2707,6 +2683,20 @@
         "date": "2026-09-10",
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
+        "importance": "high",
+        "sessions_to_event": 60,
+        "calendar_days": 84,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+      },
+      {
+        "date": "2026-09-11",
+        "type": "macro",
+        "label": "US CPI (headline)",
         "importance": "high",
         "sessions_to_event": 61,
         "calendar_days": 85,
@@ -2720,10 +2710,10 @@
       {
         "date": "2026-09-11",
         "type": "macro",
-        "label": "US CPI (headline)",
+        "label": "US Core CPI (ex food & energy)",
         "importance": "high",
         "sessions_to_event": 61,
-        "calendar_days": 86,
+        "calendar_days": 85,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2732,12 +2722,12 @@
         "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
       },
       {
-        "date": "2026-09-11",
+        "date": "2026-09-16",
         "type": "macro",
-        "label": "US Core CPI (ex food & energy)",
+        "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 61,
-        "calendar_days": 86,
+        "sessions_to_event": 64,
+        "calendar_days": 90,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2827,7 +2817,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-06-17T21:46:33.769200+00:00",
+    "generated_at": "2026-06-18T00:10:40.803172+00:00",
     "ticker": "MSTR",
     "window_sessions": 60,
     "n_observations_aligned": 41,
@@ -3010,7 +3000,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-06-17T21:46:37.066622+00:00",
+    "generated_at": "2026-06-18T00:10:43.790619+00:00",
     "ticker": "MSTR",
     "spot_price": 116.56,
     "expiries_available": [
@@ -3020,43 +3010,43 @@
       },
       {
         "date": "2026-06-26",
-        "days_to_exp": 9
+        "days_to_exp": 8
       },
       {
         "date": "2026-07-02",
-        "days_to_exp": 15
+        "days_to_exp": 14
       },
       {
         "date": "2026-07-10",
-        "days_to_exp": 23
+        "days_to_exp": 22
       },
       {
         "date": "2026-07-17",
-        "days_to_exp": 30
+        "days_to_exp": 29
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7476,
-      "iv_atm_90d": 0.7476,
+      "iv_atm_30d": 0.76,
+      "iv_atm_90d": 0.76,
       "rv_20d_annualized": 0.7782,
-      "iv_rv_ratio": 0.961,
+      "iv_rv_ratio": 0.977,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -0.244,
+      "skew_25_delta_vol_pts": -0.232,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-06-18",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.7087,
+      "m1_iv_atm": 1.0024,
       "m3_expiry": "2026-07-17",
-      "m3_days_to_exp": 30,
-      "m3_iv_atm": 0.7476,
-      "ratio_m1_m3": 0.9481,
-      "label": "contango_fort"
+      "m3_days_to_exp": 29,
+      "m3_iv_atm": 0.76,
+      "ratio_m1_m3": 1.3191,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-06-18",
@@ -3073,7 +3063,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": -3006166343.0,
+      "gex_total_usd_per_point": -1548296284.0,
       "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -3088,7 +3078,7 @@
       "bearish_signals": 1,
       "notes": [
         "skew faible (-0.2 pts) — peu de demande de protection",
-        "GEX négatif (-3006.2M$/pt) = MM short gamma déstabilisateur",
+        "GEX négatif (-1548.3M$/pt) = MM short gamma déstabilisateur",
         "max pain 127.00 vs spot 116.56 (+9.0%)"
       ]
     },
@@ -3099,8 +3089,8 @@
       "per_expiry": {
         "2026-06-18": {
           "total_strikes": 735,
-          "liquid_strikes": 142,
-          "filter_ratio_pct": 19.3
+          "liquid_strikes": 136,
+          "filter_ratio_pct": 18.5
         },
         "2026-06-26": {
           "total_strikes": 224,
@@ -3128,7 +3118,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-06-17T21:46:45.431497+00:00",
+    "generated_at": "2026-06-18T00:10:51.600009+00:00",
     "ticker": "MSTR",
     "short_interest": {
       "status": "ok",
@@ -3142,7 +3132,7 @@
       "float_shares": 329887095,
       "delta_shares_short_mom_pct": -7.59,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-06-17T21:46:38.176367+00:00"
+      "fetched_at": "2026-06-18T00:10:44.864162+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -3251,7 +3241,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 80,
-      "fetched_at": "2026-06-17T21:46:45.430208+00:00"
+      "fetched_at": "2026-06-18T00:10:51.598820+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -11116,7 +11106,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-17T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -11161,7 +11151,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-17T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -11212,7 +11202,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-17T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

@@ -1,6 +1,6 @@
 # HOOD
 
-**Generated** : 2026-06-17T21:57:13.977651+00:00  
+**Generated** : 2026-06-18T00:20:21.303788+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.1 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 9/10 — **Rating** : Neutral  
@@ -66,5 +66,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17337 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (17382 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
