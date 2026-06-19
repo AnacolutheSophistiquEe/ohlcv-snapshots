@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SRT3",
-    "generated_at": "2026-06-18T21:59:55Z",
+    "generated_at": "2026-06-19T00:24:29Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-19T08:00:00Z",
-    "valid_until": "2026-06-19T21:00:00Z",
+    "valid_from": "2026-06-22T08:00:00Z",
+    "valid_until": "2026-06-22T21:00:00Z",
     "source_precomputed": "SRT3_precomputed.json"
   },
   "context": {
-    "last_price": 217.1,
+    "last_price": 216.4,
     "ta_score": {
       "value": 2,
       "max": 10,
@@ -19,16 +19,16 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.7785,
-      "expected_duration_days": 4.52
+      "probability": 0.7783,
+      "expected_duration_days": 4.51
     },
     "volatility_regime": "high",
     "signals_counter": {
-      "buy": 4,
+      "buy": 3,
       "sell": 6,
-      "neutral": 5,
+      "neutral": 6,
       "total": 15,
-      "verdict": "sell"
+      "verdict": "strong_sell"
     },
     "mean_reversion_score": {
       "setup": "rsi_<30_dist_ma20_-10_-5",
@@ -37,14 +37,14 @@
       "median_bounce_pct": 5.12,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM bull (0.78), vol high, signals sell (4b/6s/5n)."
+    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM bull (0.78), vol high, signals strong_sell (3b/6s/6n)."
   },
   "notes": {
     "atr_daily": 9.6786,
     "atr_pct_daily": null,
-    "beta_60d": 0.8743,
+    "beta_60d": 0.8738,
     "beta_benchmark": "EWG",
-    "beta_corr_60d": 0.4782,
+    "beta_corr_60d": 0.4762,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -17.89,
+      "current_dd_pct": -18.15,
       "ath_price": 264.389,
       "ath_date": "2026-01-08",
       "max_dd_1y_pct": -22.5,
@@ -80,28 +80,28 @@
         "max": 212.9781
       },
       "stop": {
-        "price": 202.5821,
+        "price": 201.8821,
         "basis": "atr_below_confluence_support",
-        "distance_pct": -4.2
+        "distance_pct": -4.53
       },
       "targets": [
         {
           "level": 1,
           "price": 219.5823,
           "basis": "next_resistance",
-          "rr": 0.91
+          "rr": 0.85
         },
         {
           "level": 2,
           "price": 282.1518,
           "basis": "fib_extension_1272",
-          "rr": 7.96
+          "rr": 7.38
         },
         {
           "level": 3,
           "price": 305.2542,
           "basis": "fib_extension_1618",
-          "rr": 10.56
+          "rr": 9.79
         }
       ],
       "preferred_target": 1,
@@ -128,7 +128,7 @@
       "targets": [
         {
           "level": 1,
-          "price": 235.825,
+          "price": 235.79,
           "basis": "next_confluence_resistance",
           "rr": 0.35
         },
@@ -158,32 +158,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 186.884,
-        "max": 190.6786
+        "min": 186.4309,
+        "max": 190.2163
       },
       "stop": {
-        "price": 175.2121,
+        "price": 174.7521,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -7.19
+        "distance_pct": -7.21
       },
       "targets": [
         {
           "level": 1,
           "price": 219.5823,
           "basis": "next_resistance",
-          "rr": 2.27
+          "rr": 2.3
         },
         {
           "level": 2,
           "price": 282.1518,
           "basis": "fib_extension_1272",
-          "rr": 6.88
+          "rr": 6.91
         },
         {
           "level": 3,
           "price": 305.2542,
           "basis": "fib_extension_1618",
-          "rr": 8.58
+          "rr": 8.62
         }
       ],
       "preferred_target": 1,
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 173.46,
+    "price": 173.0046,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
