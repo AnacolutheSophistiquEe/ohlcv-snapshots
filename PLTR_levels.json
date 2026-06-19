@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PLTR",
-    "generated_at": "2026-06-19T00:24:29Z",
+    "generated_at": "2026-06-19T22:02:01Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-06-22T08:00:00Z",
@@ -19,8 +19,8 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.8958,
-      "expected_duration_days": 9.6
+      "probability": 0.896,
+      "expected_duration_days": 9.61
     },
     "volatility_regime": "normal",
     "signals_counter": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 1/10 (very_bearish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (3b/5s/7n)."
   },
   "notes": {
-    "atr_daily": 6.6849,
+    "atr_daily": 6.6863,
     "atr_pct_daily": null,
     "beta_60d": 0.5508,
     "beta_benchmark": "IWM",
@@ -72,7 +72,7 @@
         "max": 128.2636
       },
       "stop": {
-        "price": 118.4427,
+        "price": 118.4406,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -7.38
       },
@@ -150,13 +150,13 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 116.9983,
-        "max": 119.3739
+        "min": 116.9786,
+        "max": 119.3538
       },
       "stop": {
-        "price": 108.7527,
+        "price": 108.7306,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -7.98
+        "distance_pct": -7.99
       },
       "targets": [
         {
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 107.6652,
+    "price": 107.6433,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
