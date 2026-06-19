@@ -1,6 +1,6 @@
 # CEG
 
-**Generated** : 2026-06-19T00:19:19.649107+00:00  
+**Generated** : 2026-06-19T21:56:16.286067+00:00  
 **Santé technique** : 5/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $274.06  
@@ -56,7 +56,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.57 · largeur 25.1%
 - **ATR** : 10.94 (11.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV rising · CMF -0.148  _(distribution)_
-- **Vol ratio** : 1.5  _(volume au-dessus de la moyenne)_
+- **Vol ratio** : 1.62  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 48.8  _(transition)_
 - **MA** : MA20 269.29 · MA50 284.2 · MA200 318.44  _(prix > MA20)_
 - **Dist MA** : MA20 +1.8% · MA50 -3.6% · MA200 -13.9%
@@ -64,5 +64,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (14251 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14252 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

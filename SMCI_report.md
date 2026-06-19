@@ -1,6 +1,6 @@
 # SMCI
 
-**Generated** : 2026-06-19T00:13:26.951636+00:00  
+**Generated** : 2026-06-19T21:49:50.067754+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 10.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Neutral  
@@ -57,8 +57,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -1.856  _(pas de croisement recent)_
 - **BB** : %B 0.25 · largeur 76.8%
 - **ATR** : 4.0 (97.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF 0.003  _(neutre)_
-- **Vol ratio** : 0.97  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF 0.004  _(neutre)_
+- **Vol ratio** : 0.98  _(volume normal)_
 - **Choppiness** : 32.6  _(marche directionnel)_
 - **MA** : MA20 37.98 · MA50 32.81 · MA200 35.55  _(prix < MA20)_
 - **Dist MA** : MA20 -19.3% · MA50 -6.5% · MA200 -13.8%

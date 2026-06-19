@@ -1,6 +1,6 @@
 # RGTI
 
-**Generated** : 2026-06-19T00:17:52.992057+00:00  
+**Generated** : 2026-06-19T21:54:40.553906+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 10.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Neutral  
@@ -57,8 +57,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.424  _(pas de croisement recent)_
 - **BB** : %B 0.34 · largeur 44.3%
 - **ATR** : 2.44 (73.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.154  _(accumulation)_
-- **Vol ratio** : 0.52  _(volume atone)_
+- **OBV/CMF** : OBV rising · CMF 0.155  _(accumulation)_
+- **Vol ratio** : 0.55  _(volume atone)_
 - **Choppiness** : 48.2  _(transition)_
 - **MA** : MA20 22.98 · MA50 19.82 · MA200 23.75  _(prix < MA20)_
 - **Dist MA** : MA20 -7.1% · MA50 +7.8% · MA200 -10.1%

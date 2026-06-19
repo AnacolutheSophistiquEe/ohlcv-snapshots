@@ -1,6 +1,6 @@
 # HOOD
 
-**Generated** : 2026-06-19T00:22:04.392977+00:00  
+**Generated** : 2026-06-19T21:59:16.822878+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.1 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 9/10 — **Rating** : Neutral  
@@ -58,7 +58,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 1.02 · largeur 43.7%
 - **ATR** : 7.37 (79.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV rising · CMF 0.234  _(accumulation)_
-- **Vol ratio** : 1.12  _(volume normal)_
+- **Vol ratio** : 1.14  _(volume normal)_
 - **Choppiness** : 44.6  _(transition)_
 - **MA** : MA20 88.02 · MA50 82.8 · MA200 102.79  _(prix > MA20)_
 - **Dist MA** : MA20 +22.9% · MA50 +30.6% · MA200 +5.2%

@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-06-19T00:11:59.061441+00:00  
+**Generated** : 2026-06-19T21:48:11.930674+00:00  
 **Santé technique** : 4/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · $112.53  
@@ -56,7 +56,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.19 · largeur 52.7%
 - **ATR** : 10.83 (37.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV falling · CMF -0.2  _(distribution)_
-- **Vol ratio** : 1.74  _(volume au-dessus de la moyenne)_
+- **Vol ratio** : 1.76  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 45.2  _(transition)_
 - **MA** : MA20 134.93 · MA50 154.46 · MA200 191.84  _(prix < MA20)_
 - **Dist MA** : MA20 -16.6% · MA50 -27.1% · MA200 -41.3%

@@ -1,6 +1,6 @@
 # SOFI
 
-**Generated** : 2026-06-19T00:23:31.813611+00:00  
+**Generated** : 2026-06-19T22:00:53.474985+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $17.91  
@@ -55,8 +55,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.139  _(bullish_recent)_
 - **BB** : %B 0.81 · largeur 20.5%
 - **ATR** : 1.01 (34.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF -0.016  _(neutre)_
-- **Vol ratio** : 0.98  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF -0.015  _(neutre)_
+- **Vol ratio** : 1.0  _(volume normal)_
 - **Choppiness** : 57.0  _(transition)_
 - **MA** : MA20 16.85 · MA50 16.94 · MA200 22.7  _(prix > MA20)_
 - **Dist MA** : MA20 +6.3% · MA50 +5.7% · MA200 -21.1%
@@ -64,5 +64,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (18174 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (18173 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

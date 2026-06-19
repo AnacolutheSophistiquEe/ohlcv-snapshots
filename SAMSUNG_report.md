@@ -1,11 +1,11 @@
 # 005930
 
-**Generated** : 2026-06-19T00:10:29.024131+00:00  
+**Generated** : 2026-06-19T21:46:34.655801+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 10/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : trending · volatilite extreme · ₩362500.00  
+**Subtitle** : trending · volatilite extreme · ₩354000.00  
 
 ## Régime & alignement multi-TF
 
@@ -22,24 +22,24 @@ Plan privilegie B (swing), composite 10/10, conviction 'Neutral'.
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry : ₩360687.50–₩364312.50 (mid ₩362500.00)
-- Stop : ₩324973.21 (stop atr-based (-10.35%))
-- Targets : T1 ₩370000.00 · R/R 0.2 | T2 ₩440070.05 · R/R 2.07 | T3 ₩538743.72 · R/R 4.7
+- Entry : ₩352230.00–₩355770.00 (mid ₩354000.00)
+- Stop : ₩315535.71 (stop atr-based (-10.87%))
+- Targets : T1 ₩358780.30 · R/R 0.12 | T2 ₩436961.31 · R/R 2.16 | T3 ₩534224.58 · R/R 4.69
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩324973.21
+- Invalidation : close sous ₩315535.71
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.171 | EV/share : ₩6532.762 | p_fill : —
-- Régime probabiliste (posterior HMM, swing) : bull 47.6 | bear 35.4 | side 17.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- EV/risk : 0.118 | EV/share : ₩4455.260 | p_fill : —
+- Régime probabiliste (posterior HMM, swing) : bull 48.0 | bear 36.0 | side 16.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional 640.0 | shares 0
 
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : étendu — attendre un repli vers une zone
-- Proximité zone : 0.75/2 | R/R T1 : 0.5 | extension : stretched_up
+- **Verdict timing** : loin du support — entrée non optimale (chasing)
+- Proximité zone : 0.0/2 | R/R T1 : 0.5 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -52,19 +52,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 63.2  _(momentum haussier)_
-- **ADX** : 28.1  _(tendance etablie)_
-- **MACD** : hist 626.478  _(bullish_recent)_
-- **BB** : %B 0.91 · largeur 31.9%
-- **ATR** : 25017.86 (99.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF 0.102  _(accumulation)_
-- **Vol ratio** : 1.1  _(volume normal)_
-- **Choppiness** : 54.8  _(transition)_
-- **MA** : MA20 320550.0 · MA50 269422.0 · MA200 161241.87  _(prix > MA20)_
-- **Dist MA** : MA20 +13.1% · MA50 +34.5% · MA200 +124.8%
+- **RSI** : 58.0  _(momentum haussier)_
+- **ADX** : 28.7  _(tendance etablie)_
+- **MACD** : hist 758.506  _(bullish_recent)_
+- **BB** : %B 0.8 · largeur 30.0%
+- **ATR** : 25642.86 (100.0e pct 1a)  _(volatilite elevee)_
+- **OBV/CMF** : OBV rising · CMF 0.049  _(neutre)_
+- **Vol ratio** : 1.44  _(volume normal)_
+- **Choppiness** : 53.7  _(transition)_
+- **MA** : MA20 324450.0 · MA50 272640.0 · MA200 162663.36  _(prix > MA20)_
+- **Dist MA** : MA20 +9.1% · MA50 +29.8% · MA200 +117.6%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (14681 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14529 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

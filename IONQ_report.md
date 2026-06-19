@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-06-19T00:16:22.558388+00:00  
+**Generated** : 2026-06-19T21:53:05.198347+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.7 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 8/10 — **Rating** : Pass  
@@ -58,7 +58,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.25 · largeur 36.8%
 - **ATR** : 5.72 (86.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV falling · CMF 0.019  _(neutre)_
-- **Vol ratio** : 0.65  _(volume normal)_
+- **Vol ratio** : 0.66  _(volume normal)_
 - **Choppiness** : 51.2  _(transition)_
 - **MA** : MA20 62.28 · MA50 52.43 · MA200 49.28  _(prix < MA20)_
 - **Dist MA** : MA20 -9.2% · MA50 +7.9% · MA200 +14.7%
