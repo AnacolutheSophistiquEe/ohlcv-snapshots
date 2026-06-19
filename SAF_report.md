@@ -1,9 +1,9 @@
 # SAF
 
-**Generated** : 2026-06-18T21:41:38.086160+00:00  
+**Generated** : 2026-06-19T00:06:28.815200+00:00  
 **Santé technique** : 8/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite high · €333.50  
+**Subtitle** : indeterminate · volatilite high · €333.10  
 
 ## Régime & alignement multi-TF
 
@@ -20,17 +20,17 @@ Plan privilegie A (intraday), composite 8/10, conviction 'Pass (negative EV)'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry : €330.14–€333.46 (mid €331.80)
-- Stop : €319.00 (stop atr-based (-4.34%))
-- Targets : T1 €345.50 · R/R 1.07 | T2 €365.40 · R/R 2.62 | T3 €393.46 · R/R 4.82
+- Entry : €329.74–€333.06 (mid €331.40)
+- Stop : €318.70 (stop atr-based (-4.34%))
+- Targets : T1 €345.50 · R/R 1.11 | T2 €365.40 · R/R 2.68 | T3 €393.46 · R/R 4.89
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €319.00
+- Invalidation : close sous €318.70
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.011 | EV/share : €-0.155 | p_fill : —
-- Régime probabiliste (posterior HMM, intraday) : bull 17.5 | bear 50.7 | side 31.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- EV/risk : -0.013 | EV/share : €-0.183 | p_fill : —
+- Régime probabiliste (posterior HMM, intraday) : bull 17.6 | bear 50.8 | side 31.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional 608.0 | shares 1
 
 
@@ -50,19 +50,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 68.9  _(momentum haussier)_
+- **RSI** : 68.8  _(momentum haussier)_
 - **ADX** : 18.0  _(pas de tendance nette)_
-- **MACD** : hist 3.553  _(pas de croisement recent)_
+- **MACD** : hist 3.527  _(pas de croisement recent)_
 - **BB** : %B 1.11 · largeur 16.7%
-- **ATR** : 9.64 (75.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF -0.058  _(distribution)_
-- **Vol ratio** : 1.82  _(volume au-dessus de la moyenne)_
-- **Choppiness** : 40.5  _(transition)_
-- **MA** : MA20 302.56 · MA50 291.11 · MA200 297.96  _(prix > MA20)_
-- **Dist MA** : MA20 +10.2% · MA50 +14.6% · MA200 +11.9%
+- **ATR** : 9.63 (75.0e pct 1a)  _(volatilite elevee)_
+- **OBV/CMF** : OBV rising · CMF -0.134  _(distribution)_
+- **Vol ratio** : 0.54  _(volume atone)_
+- **Choppiness** : 40.6  _(transition)_
+- **MA** : MA20 302.54 · MA50 291.1 · MA200 297.96  _(prix > MA20)_
+- **Dist MA** : MA20 +10.1% · MA50 +14.4% · MA200 +11.8%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16470 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16383 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

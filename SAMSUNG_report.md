@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-06-18T21:45:45.884438+00:00  
+**Generated** : 2026-06-19T00:10:29.024131+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 10/10 — **Rating** : Neutral  
@@ -24,7 +24,7 @@ Plan privilegie B (swing), composite 10/10, conviction 'Neutral'.
 **Plan B — swing** (order_type LMT)
 - Entry : ₩360687.50–₩364312.50 (mid ₩362500.00)
 - Stop : ₩324973.21 (stop atr-based (-10.35%))
-- Targets : T1 ₩370000.00 · R/R 0.2 | T2 ₩440070.05 · R/R 2.07 | T3 ₩538743.71 · R/R 4.7
+- Targets : T1 ₩370000.00 · R/R 0.2 | T2 ₩440070.05 · R/R 2.07 | T3 ₩538743.72 · R/R 4.7
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩324973.21
 
@@ -66,5 +66,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (14758 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14681 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

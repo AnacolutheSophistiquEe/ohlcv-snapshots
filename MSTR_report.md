@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-06-18T21:47:16.534416+00:00  
+**Generated** : 2026-06-19T00:11:59.061441+00:00  
 **Santé technique** : 4/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · $112.53  
@@ -45,7 +45,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Factor** : R² 0.62 · part idiosyncratique 0.15
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
-**Options** : neutral_cautious
+**Options** : bearish
 
 
 ## Indicateurs (résumé)
@@ -64,5 +64,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13899 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (13817 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
