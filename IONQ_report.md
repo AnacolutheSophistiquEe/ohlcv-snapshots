@@ -1,9 +1,9 @@
 # IONQ
 
-**Generated** : 2026-06-19T21:53:05.198347+00:00  
+**Generated** : 2026-06-22T00:15:11.293472+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.7 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
-**Santé technique** : 8/10 — **Rating** : Pass  
+**Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · $56.55  
 
@@ -16,24 +16,25 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie C (deep), composite 8/10, conviction 'Pass'.
+Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
-**Plan C — deep** (order_type LMT)
-- Entry : $56.27–$56.83 (mid $56.55)
-- Stop : $52.12 (stop swing-based (-7.83%))
-- Targets : T1 $70.14 · R/R 3.07 | T2 $92.99 · R/R 8.23 | T3 $110.80 · R/R 12.25
+**Plan A — intraday** (order_type LMT)
+- Entry (zone de repli) : $53.83–$55.47 (mid $54.65)
+- Spot actuel : $56.55 (+3.5% au-dessus de la zone — repli à attendre)
+- Stop : $50.27 (stop swing-based (-7.83%))
+- Targets : T1 $56.66 · R/R 0.46 | T2 $58.68 · R/R 0.92 | T3 $60.70 · R/R 1.38
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $52.12
+- Invalidation : close sous $50.27
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.087 | EV/share : $-0.780 | p_fill : —
-- Régime probabiliste (posterior HMM, deep) : bull 17.6 | bear 41.3 | side 41.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional 288.0 | shares 5
+- EV/risk : -0.075 | EV/share : $-0.327 | p_fill : —
+- Régime probabiliste (posterior HMM, intraday) : bull 13.6 | bear 72.1 | side 14.2  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Sizing : notional réel 283.0 (= 5 part(s) × prix) · cible 288.0
 
 
 ## Timing d'entrée (observe-only)
@@ -66,5 +67,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16920 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16974 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

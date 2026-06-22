@@ -1,7 +1,7 @@
 # EVT
 
-**Generated** : 2026-06-19T21:38:52.655009+00:00  
-**Santé technique** : 4/10 — **Rating** : Neutral  
+**Generated** : 2026-06-22T00:03:45.200343+00:00  
+**Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €4.63  
 
@@ -14,24 +14,25 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 4/10, conviction 'Neutral'.
+Plan privilegie A (intraday), composite 4/10, conviction 'Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry : €4.61–€4.65 (mid €4.63)
-- Stop : €4.53 (stop swing-based (-2.09%))
-- Targets : T1 €5.07 · R/R 4.4 | T2 €6.16 · R/R 15.3 | T3 €7.56 · R/R 29.3
+- Entry (zone de repli) : €4.53–€4.63 (mid €4.58)
+- Spot actuel : €4.63 (+1.1% au-dessus de la zone — repli à attendre)
+- Stop : €4.30 (stop swing-based (-2.09%))
+- Targets : T1 €4.65 · R/R 0.25 | T2 €4.71 · R/R 0.46 | T3 €4.78 · R/R 0.71
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €4.53
+- Invalidation : close sous €4.30
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.018 | EV/share : €0.005 | p_fill : —
+- EV/risk : -0.05 | EV/share : €-0.014 | p_fill : —
 - Régime probabiliste (posterior HMM, intraday) : bull 44.4 | bear 15.6 | side 40.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional 0.0 | shares 0
+- Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
 ## Timing d'entrée (observe-only)
@@ -54,7 +55,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 11.6  _(pas de tendance nette)_
 - **MACD** : hist -0.031  _(pas de croisement recent)_
 - **BB** : %B 0.2 · largeur 18.3%
-- **ATR** : 0.18 (3.0e pct 1a)  _(volatilite normale)_
+- **ATR** : 0.18 (3.0e pct 1a)  _(volatilite basse)_
 - **OBV/CMF** : OBV rising · CMF 0.105  _(accumulation)_
 - **Vol ratio** : 1.09  _(volume normal)_
 - **Choppiness** : 43.7  _(transition)_
@@ -64,5 +65,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13886 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14077 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

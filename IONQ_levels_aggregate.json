@@ -8,13 +8,13 @@
     "n_supports": 20,
     "n_resistances": 20,
     "n_neutral": 0,
-    "n_with_plan_role": 9,
+    "n_with_plan_role": 7,
     "plans_detected": [
       "A",
       "C"
     ],
-    "generated_at": "2026-06-19T21:53:56.422385+00:00",
-    "source_precomputed_at": "2026-06-19T21:53:05.198347+00:00",
+    "generated_at": "2026-06-22T00:15:54.053991+00:00",
+    "source_precomputed_at": "2026-06-22T00:15:11.293472+00:00",
     "calibration_lookup": "v1.0_strict_2closes_0.5atr",
     "calibration_method": "rolling_daily_long_strict_break",
     "confluence_band_atr": 0.5,
@@ -193,7 +193,7 @@
       "source": "anchored_vwap.anchors[2026-02-26]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 113,
+      "age_days": 116,
       "raw_meta": {
         "anchor_date": "2026-02-26",
         "anchor_event": "swing_high",
@@ -563,7 +563,7 @@
       "source": "anchored_vwap.anchors[2026-03-30]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 81,
+      "age_days": 84,
       "raw_meta": {
         "anchor_date": "2026-03-30",
         "anchor_event": "swing_low",
@@ -582,7 +582,7 @@
         "MA200",
         "BB_LOWER"
       ],
-      "robustness_score": 98.7,
+      "robustness_score": 98.6,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
@@ -749,10 +749,6 @@
       "touches": null,
       "age_days": null,
       "raw_meta": {},
-      "plan_roles": [
-        "A_sl"
-      ],
-      "source_weight_boosted_by_plan": true,
       "distance_pct_to_spot": -8.683,
       "distance_in_atr": -0.859,
       "confluence_count": 9,
@@ -827,6 +823,7 @@
       "age_days": null,
       "raw_meta": {},
       "plan_roles": [
+        "A_sl",
         "C_sl"
       ],
       "source_weight_boosted_by_plan": true,
@@ -1343,6 +1340,7 @@
       "age_days": null,
       "raw_meta": {},
       "plan_roles": [
+        "A_entry",
         "C_entry"
       ],
       "source_weight_boosted_by_plan": true,
@@ -2076,17 +2074,13 @@
       "source": "anchored_vwap.anchors[2026-06-03]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 16,
+      "age_days": 19,
       "raw_meta": {
         "anchor_date": "2026-06-03",
         "anchor_event": "swing_high",
         "anchor_price": 73.65,
         "bars_since_anchor": 11
       },
-      "plan_roles": [
-        "A_entry"
-      ],
-      "source_weight_boosted_by_plan": true,
       "distance_pct_to_spot": 6.946,
       "distance_in_atr": 0.687,
       "confluence_count": 8,
@@ -2564,14 +2558,14 @@
       "type": "bracket_plan",
       "subtype": "PLAN_A_T2",
       "side": "resistance",
-      "source": "bracket_orders.IONQ_A_20260616_ibkr_bracket.json",
+      "source": "bracket_orders.IONQ_A_20260622_ibkr_bracket.json",
       "source_weight": 0.95,
       "touches": null,
       "age_days": 0,
       "raw_meta": {
         "plan_letter": "A",
         "role": "t2",
-        "prediction_id": "IONQ_A_20260616",
+        "prediction_id": "IONQ_A_20260622",
         "horizon_sessions": 1
       },
       "plan_roles": [
@@ -2640,14 +2634,14 @@
       "type": "bracket_plan",
       "subtype": "PLAN_A_T3",
       "side": "resistance",
-      "source": "bracket_orders.IONQ_A_20260616_ibkr_bracket.json",
+      "source": "bracket_orders.IONQ_A_20260622_ibkr_bracket.json",
       "source_weight": 0.95,
       "touches": null,
       "age_days": 0,
       "raw_meta": {
         "plan_letter": "A",
         "role": "t3",
-        "prediction_id": "IONQ_A_20260616",
+        "prediction_id": "IONQ_A_20260622",
         "horizon_sessions": 1
       },
       "plan_roles": [

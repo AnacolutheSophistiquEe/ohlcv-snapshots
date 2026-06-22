@@ -1,7 +1,7 @@
 # SOFI
 
-**Generated** : 2026-06-19T22:00:53.474985+00:00  
-**Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
+**Generated** : 2026-06-22T00:21:42.460366+00:00  
+**Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $17.91  
 
@@ -12,32 +12,42 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 - **Flag multi-TF** : mixed (score 3)
 
 
+## ⚠ Contradictions techniques
+
+- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.010 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
+  - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
+  - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
+  - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
+  - _Vraie incohérence (rare) : volume corrompu/dégradé (flux délayé, volume nul certains jours) fausserait l'un des deux — vérifier la qualité du volume si les valeurs semblent aberrantes._
+
+
 ## Lecture chartiste
 
-Plan privilegie C (deep), composite 6/10, conviction 'Pass (negative EV)'.
+Plan privilegie A (intraday), composite 5/10, conviction 'Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
-**Plan C — deep** (order_type LMT)
-- Entry : $17.82–$18.00 (mid $17.91)
-- Stop : $16.40 (stop atr-based (-8.46%))
-- Targets : T1 $18.27 · R/R 0.24 | T2 $25.14 · R/R 4.79 | T3 $30.10 · R/R 8.07
+**Plan A — intraday** (order_type LMT)
+- Entry (zone de repli) : $17.11–$17.63 (mid $17.37)
+- Spot actuel : $17.91 (+3.1% au-dessus de la zone — repli à attendre)
+- Stop : $15.98 (stop atr-based (-8.46%))
+- Targets : T1 $18.27 · R/R 0.65 | T2 $18.35 · R/R 0.71 | T3 $18.44 · R/R 0.77
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $16.40
+- Invalidation : close sous $15.98
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.168 | EV/share : $-0.424 | p_fill : —
-- Régime probabiliste (posterior HMM, deep) : bull 36.5 | bear 21.9 | side 41.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional 288.0 | shares 16
+- EV/risk : -0.033 | EV/share : $-0.046 | p_fill : —
+- Régime probabiliste (posterior HMM, intraday) : bull 22.1 | bear 17.1 | side 60.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Sizing : notional réel 287.0 (= 16 part(s) × prix) · cible 288.0
 
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : étendu — attendre un repli vers une zone
-- Proximité zone : 0.5/2 | R/R T1 : 0.5 | extension : stretched_up
+- **Verdict timing** : neutre
+- Proximité zone : 0.5/2 | R/R T1 : 0.5 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -64,5 +74,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (18173 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (19346 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

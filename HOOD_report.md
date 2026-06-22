@@ -1,9 +1,9 @@
 # HOOD
 
-**Generated** : 2026-06-19T21:59:16.822878+00:00  
+**Generated** : 2026-06-22T00:20:21.321524+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.1 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
-**Santé technique** : 9/10 — **Rating** : Neutral  
+**Santé technique** : 9/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · $108.15  
 
@@ -14,32 +14,41 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 - **Flag multi-TF** : triple_bullish (score 3)
 
 
+## ⚠ Contradictions techniques
+
+- 🔴 **Santé haussière vs sur-extension** — Santé technique 9/10 élevée alors que : %B 1.02 (collé à la bande haute) ; extension étirée (≥2×ATR au-dessus de la MA20) — le score mesure la santé durable, PAS le timing ; entrée au prix actuel défavorable.
+  - _Par DESIGN (le plus courant) : le score mesure la santé technique DURABLE (structure de tendance), pas le timing. Un uptrend sain mais étiré score haut ET flag surachat — c'est attendu ; le flag empêche de lire « score élevé = acheter maintenant »._
+  - _Momentum parabolique : RSI > 70 + %B > 0,95 + extension extrême = phase d'accélération qui peut soit continuer (trend-following) soit se retourner brutalement → forte asymétrie de risque à l'entrée._
+  - _Point de calcul à vérifier (≠ ce que disait l'audit §3.4) : le malus d'over-extension (ex-T_penalty, −2 si « extreme ») a été SORTI du score lors de la refonte §A3 — le score = santé pure, le malus vit dans le bloc TIMING (d'où le « étendu »). Donc le « score plafond + surachat » est normal, pas un poids mal calibré. Le seul vrai risque de calcul ici est la CLASSIFICATION d'over-extension elle-même (compute_overextension) : qu'« extreme » se déclenche au bon seuil._
+
+
 ## Lecture chartiste
 
-Plan privilegie B (swing), composite 9/10, conviction 'Neutral'.
+Plan privilegie B (swing), composite 9/10, conviction 'Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry : $107.61–$108.69 (mid $108.15)
-- Stop : $97.10 (stop atr-based (-10.22%))
-- Targets : T1 $148.03 · R/R 3.61 | T2 $175.97 · R/R 6.14 | T3 $205.88 · R/R 8.84
+- Entry (zone de repli) : $100.53–$105.16 (mid $102.85)
+- Spot actuel : $108.15 (+5.2% au-dessus de la zone — repli à attendre)
+- Stop : $90.51 (stop atr-based (-10.22%))
+- Targets : T1 $109.34 · R/R 0.53 | T2 $115.82 · R/R 1.05 | T3 $122.31 · R/R 1.58
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $97.10
+- Invalidation : close sous $90.51
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.086 | EV/share : $1.067 | p_fill : —
+- EV/risk : -0.01 | EV/share : $-0.122 | p_fill : —
 - Régime probabiliste (posterior HMM, swing) : bull 42.0 | bear 27.1 | side 30.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional 640.0 | shares 5
+- Sizing : notional réel 541.0 (= 5 part(s) × prix) · cible 640.0
 
 
 ## Timing d'entrée (observe-only)
 
 - **Verdict timing** : étendu — attendre un repli vers une zone
-- Proximité zone : 0.5/2 | R/R T1 : 0.5 | extension : extreme
+- Proximité zone : 0.5/2 | R/R T1 : 0.5 | extension : stretched_up
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -66,5 +75,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17479 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (19194 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

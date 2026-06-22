@@ -10,8 +10,8 @@
     "n_neutral": 0,
     "n_with_plan_role": 0,
     "plans_detected": [],
-    "generated_at": "2026-06-19T21:57:01.773913+00:00",
-    "source_precomputed_at": "2026-06-19T21:56:16.286067+00:00",
+    "generated_at": "2026-06-22T00:18:28.268150+00:00",
+    "source_precomputed_at": "2026-06-22T00:17:50.066823+00:00",
     "calibration_lookup": "v1.0_strict_2closes_0.5atr",
     "calibration_method": "rolling_daily_long_strict_break",
     "confluence_band_atr": 0.5,
@@ -27,7 +27,7 @@
       "price": 273.235,
       "subtype": "AVWAP_swing_high",
       "distance_pct": -0.301,
-      "robustness": 99.3
+      "robustness": 99.2
     },
     "nearest_resistance": {
       "price": 274.94,
@@ -241,7 +241,7 @@
       "source": "anchored_vwap.anchors[2026-06-10]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 9,
+      "age_days": 12,
       "raw_meta": {
         "anchor_date": "2026-06-10",
         "anchor_event": "swing_low",
@@ -259,7 +259,7 @@
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 5,
-        "age_decay": -0.1
+        "age_decay": -0.2
       },
       "probabilities": {
         "available": true,
@@ -597,7 +597,7 @@
       "source": "anchored_vwap.anchors[2026-05-19]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 31,
+      "age_days": 34,
       "raw_meta": {
         "anchor_date": "2026-05-19",
         "anchor_event": "swing_low",
@@ -617,12 +617,12 @@
         "AVWAP_swing_high",
         "MA20"
       ],
-      "robustness_score": 99.5,
+      "robustness_score": 99.4,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 25,
-        "age_decay": -0.5
+        "age_decay": -0.6
       },
       "probabilities": {
         "available": true,
@@ -701,43 +701,43 @@
         "available": true,
         "bucket_match_quality": "exact",
         "dim_key": "volume_profile|support|0.5-1|high",
-        "n_samples_in_bucket": 274,
-        "p_touch_h1": 0.3285,
-        "ci95_lo_p_touch_h1": 0.2729,
-        "ci95_hi_p_touch_h1": 0.3841,
+        "n_samples_in_bucket": 271,
+        "p_touch_h1": 0.3284,
+        "ci95_lo_p_touch_h1": 0.2725,
+        "ci95_hi_p_touch_h1": 0.3843,
         "p_break_after_touch_h1": 0.0,
         "ci95_lo_p_break_after_touch_h1": 0.0,
         "ci95_hi_p_break_after_touch_h1": 0.0,
         "p_break_unconditional_h1": 0.0,
         "ci95_lo_p_break_unconditional_h1": 0.0,
         "ci95_hi_p_break_unconditional_h1": 0.0,
-        "p_touch_h3": 0.5511,
-        "ci95_lo_p_touch_h3": 0.4922,
-        "ci95_hi_p_touch_h3": 0.61,
-        "p_break_after_touch_h3": 0.3974,
-        "ci95_lo_p_break_after_touch_h3": 0.3193,
-        "ci95_hi_p_break_after_touch_h3": 0.4754,
-        "p_break_unconditional_h3": 0.219,
-        "ci95_lo_p_break_unconditional_h3": 0.17,
-        "ci95_hi_p_break_unconditional_h3": 0.2679,
-        "p_touch_h5": 0.646,
-        "ci95_lo_p_touch_h5": 0.5894,
-        "ci95_hi_p_touch_h5": 0.7026,
-        "p_break_after_touch_h5": 0.6271,
-        "ci95_lo_p_break_after_touch_h5": 0.5559,
-        "ci95_hi_p_break_after_touch_h5": 0.6984,
-        "p_break_unconditional_h5": 0.4051,
-        "ci95_lo_p_break_unconditional_h5": 0.347,
-        "ci95_hi_p_break_unconditional_h5": 0.4632,
-        "p_touch_h10": 0.7737,
-        "ci95_lo_p_touch_h10": 0.7242,
-        "ci95_hi_p_touch_h10": 0.8233,
-        "p_break_after_touch_h10": 0.8679,
-        "ci95_lo_p_break_after_touch_h10": 0.8223,
-        "ci95_hi_p_break_after_touch_h10": 0.9135,
-        "p_break_unconditional_h10": 0.6715,
-        "ci95_lo_p_break_unconditional_h10": 0.6159,
-        "ci95_hi_p_break_unconditional_h10": 0.7271
+        "p_touch_h3": 0.5535,
+        "ci95_lo_p_touch_h3": 0.4943,
+        "ci95_hi_p_touch_h3": 0.6127,
+        "p_break_after_touch_h3": 0.4,
+        "ci95_lo_p_break_after_touch_h3": 0.3216,
+        "ci95_hi_p_break_after_touch_h3": 0.4784,
+        "p_break_unconditional_h3": 0.2214,
+        "ci95_lo_p_break_unconditional_h3": 0.172,
+        "ci95_hi_p_break_unconditional_h3": 0.2708,
+        "p_touch_h5": 0.6494,
+        "ci95_lo_p_touch_h5": 0.5926,
+        "ci95_hi_p_touch_h5": 0.7063,
+        "p_break_after_touch_h5": 0.6307,
+        "ci95_lo_p_break_after_touch_h5": 0.5594,
+        "ci95_hi_p_break_after_touch_h5": 0.702,
+        "p_break_unconditional_h5": 0.4096,
+        "ci95_lo_p_break_unconditional_h5": 0.351,
+        "ci95_hi_p_break_unconditional_h5": 0.4681,
+        "p_touch_h10": 0.7749,
+        "ci95_lo_p_touch_h10": 0.7252,
+        "ci95_hi_p_touch_h10": 0.8246,
+        "p_break_after_touch_h10": 0.8667,
+        "ci95_lo_p_break_after_touch_h10": 0.8207,
+        "ci95_hi_p_break_after_touch_h10": 0.9126,
+        "p_break_unconditional_h10": 0.6716,
+        "ci95_lo_p_break_unconditional_h10": 0.6157,
+        "ci95_hi_p_break_unconditional_h10": 0.7275
       }
     },
     {
@@ -1076,7 +1076,7 @@
       "source": "anchored_vwap.anchors[2026-05-07]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 43,
+      "age_days": 46,
       "raw_meta": {
         "anchor_date": "2026-05-07",
         "anchor_event": "swing_high",
@@ -1096,12 +1096,12 @@
         "CAM_S1",
         "CAM_S2"
       ],
-      "robustness_score": 99.3,
+      "robustness_score": 99.2,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 25,
-        "age_decay": -0.7
+        "age_decay": -0.8
       },
       "probabilities": {
         "available": true,
@@ -1548,9 +1548,9 @@
         "bucket_match_quality": "exact",
         "dim_key": "volume_profile|resistance|0-0.5|high",
         "n_samples_in_bucket": 212,
-        "p_touch_h1": 0.816,
-        "ci95_lo_p_touch_h1": 0.7639,
-        "ci95_hi_p_touch_h1": 0.8682,
+        "p_touch_h1": 0.8208,
+        "ci95_lo_p_touch_h1": 0.7691,
+        "ci95_hi_p_touch_h1": 0.8724,
         "p_break_after_touch_h1": 0.0,
         "ci95_lo_p_break_after_touch_h1": 0.0,
         "ci95_hi_p_break_after_touch_h1": 0.0,
@@ -2180,7 +2180,7 @@
         "classification": "wide",
         "n_points": 28,
         "cluster_range_low": 240.51,
-        "cluster_range_high": 355.1331
+        "cluster_range_high": 355.133
       },
       "distance_pct_to_spot": 12.565,
       "distance_in_atr": 3.147,
@@ -2365,7 +2365,7 @@
       }
     },
     {
-      "price": 333.315,
+      "price": 333.3151,
       "type": "fibonacci",
       "subtype": "FIB_618",
       "side": "resistance",

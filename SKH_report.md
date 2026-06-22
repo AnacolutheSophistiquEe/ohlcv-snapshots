@@ -1,9 +1,9 @@
 # 000660
 
-**Generated** : 2026-06-19T21:45:06.388637+00:00  
+**Generated** : 2026-06-22T00:08:38.268126+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
-**Santé technique** : 10/10 — **Rating** : Neutral  
+**Santé technique** : 10/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : strong_trend · volatilite extreme · ₩2764000.00  
 
@@ -14,26 +14,35 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 - **Flag multi-TF** : triple_bullish (score 3)
 
 
+## ⚠ Contradictions techniques
+
+- 🔴 **Santé haussière vs sur-extension** — Santé technique 10/10 élevée alors que : %B 1.05 (collé à la bande haute) ; extension étirée (≥2×ATR au-dessus de la MA20) — le score mesure la santé durable, PAS le timing ; entrée au prix actuel défavorable.
+  - _Par DESIGN (le plus courant) : le score mesure la santé technique DURABLE (structure de tendance), pas le timing. Un uptrend sain mais étiré score haut ET flag surachat — c'est attendu ; le flag empêche de lire « score élevé = acheter maintenant »._
+  - _Momentum parabolique : RSI > 70 + %B > 0,95 + extension extrême = phase d'accélération qui peut soit continuer (trend-following) soit se retourner brutalement → forte asymétrie de risque à l'entrée._
+  - _Point de calcul à vérifier (≠ ce que disait l'audit §3.4) : le malus d'over-extension (ex-T_penalty, −2 si « extreme ») a été SORTI du score lors de la refonte §A3 — le score = santé pure, le malus vit dans le bloc TIMING (d'où le « étendu »). Donc le « score plafond + surachat » est normal, pas un poids mal calibré. Le seul vrai risque de calcul ici est la CLASSIFICATION d'over-extension elle-même (compute_overextension) : qu'« extreme » se déclenche au bon seuil._
+
+
 ## Lecture chartiste
 
-Plan privilegie B (swing), composite 10/10, conviction 'Neutral'.
+Plan privilegie B (swing), composite 10/10, conviction 'Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry : ₩2750180.00–₩2777820.00 (mid ₩2764000.00)
-- Stop : ₩2481678.57 (stop atr-based (-10.21%))
-- Targets : T1 ₩2775159.18 · R/R 0.04 | T2 ₩3421138.48 · R/R 2.33 | T3 ₩4257057.29 · R/R 5.29
+- Entry (zone de repli) : ₩2509877.88–₩2625422.12 (mid ₩2567650.00)
+- Spot actuel : ₩2764000.00 (+7.6% au-dessus de la zone — repli à attendre)
+- Stop : ₩2259532.00 (stop atr-based (-10.21%))
+- Targets : T1 ₩2763133.08 · R/R 0.63 | T2 ₩2958616.16 · R/R 1.27 | T3 ₩3154099.24 · R/R 1.9
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩2481678.57
+- Invalidation : close sous ₩2259532.00
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.161 | EV/share : ₩49680.211 | p_fill : —
+- EV/risk : -0.003 | EV/share : ₩-945.740 | p_fill : —
 - Régime probabiliste (posterior HMM, swing) : bull 20.2 | bear 32.2 | side 47.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional 640.0 | shares 0
+- Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 640.0
 
 
 ## Timing d'entrée (observe-only)
@@ -66,5 +75,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (14202 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (15912 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

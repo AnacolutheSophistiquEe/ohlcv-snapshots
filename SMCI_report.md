@@ -1,9 +1,9 @@
 # SMCI
 
-**Generated** : 2026-06-19T21:49:50.067754+00:00  
+**Generated** : 2026-06-22T00:12:30.007941+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 10.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
-**Santé technique** : 7/10 — **Rating** : Neutral  
+**Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : strong_trend · volatilite extreme · $30.66  
 
@@ -16,30 +16,31 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 7/10, conviction 'Neutral'.
+Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry : $30.51–$30.81 (mid $30.66)
-- Stop : $27.81 (stop swing-based (-9.3%))
-- Targets : T1 $39.68 · R/R 3.16 | T2 $67.77 · R/R 13.02 | T3 $80.23 · R/R 17.39
+- Entry (zone de repli) : $26.26–$27.06 (mid $26.66)
+- Spot actuel : $30.66 (+15.0% au-dessus de la zone — repli à attendre)
+- Stop : $24.53 (stop swing-based (-9.3%))
+- Targets : T1 $28.12 · R/R 0.69 | T2 $29.58 · R/R 1.37 | T3 $31.03 · R/R 2.05
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $27.81
+- Invalidation : close sous $24.53
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.123 | EV/share : $0.262 | p_fill : —
+- EV/risk : -0.033 | EV/share : $-0.071 | p_fill : —
 - Régime probabiliste (posterior HMM, intraday) : bull 32.6 | bear 53.9 | side 13.5  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional 0.0 | shares 0
+- Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : étendu — attendre un repli vers une zone
-- Proximité zone : 0.0/2 | R/R T1 : 0.5 | extension : stretched_down
+- **Verdict timing** : loin du support — entrée non optimale (chasing)
+- Proximité zone : 0.0/2 | R/R T1 : 0.5 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -66,5 +67,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13966 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14150 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

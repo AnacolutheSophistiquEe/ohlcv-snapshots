@@ -1,7 +1,7 @@
 # PLTR
 
-**Generated** : 2026-06-19T21:51:27.236064+00:00  
-**Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
+**Generated** : 2026-06-22T00:13:51.938888+00:00  
+**Santé technique** : 2/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $128.47  
 
@@ -12,32 +12,41 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 - **Flag multi-TF** : mixed (score 2)
 
 
+## ⚠ Contradictions techniques
+
+- 🟠 **Tendance en transition (ADX / Choppiness)** — ADX 15.5 < 20 (tendance pas encore confirmée) alors que Choppiness 33.5 < 38 (marché déjà directionnel) — les deux jauges ne pointent pas au même stade.
+  - _Le plus probable — DÉBUT de tendance : la Choppiness réagit plus vite que l'ADX (lissé Wilder, qui retarde) ; le prix progresse déjà en ligne mais l'ADX n'a pas franchi 20 → tendance jeune qui accélère, surveiller le passage ADX > 20/25 pour confirmation._
+  - _Tendance lente / peu volatile : mouvement net mais de faible amplitude par barre → ADX bas (DI spread modeste) bien que la direction soit claire (Choppiness basse)._
+  - _Vraie incohérence (rare) : ADX et Choppiness calculés sur des fenêtres ou des données décalées rendraient la comparaison invalide — ici les deux sont en daily 14 périodes, donc comparables._
+
+
 ## Lecture chartiste
 
-Plan privilegie C (deep), composite 3/10, conviction 'Strong Pass (negative EV)'.
+Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
-**Plan C — deep** (order_type LMT)
-- Entry : $127.83–$129.11 (mid $128.47)
-- Stop : $125.31 (stop swing-based (-2.46%))
-- Targets : T1 $146.47 · R/R 5.7 | T2 $212.64 · R/R 26.64 | T3 $235.64 · R/R 33.91
+**Plan A — intraday** (order_type LMT)
+- Entry (zone de repli) : $119.96–$123.61 (mid $121.78)
+- Spot actuel : $128.47 (+5.5% au-dessus de la zone — repli à attendre)
+- Stop : $112.04 (stop swing-based (-2.46%))
+- Targets : T1 $124.45 · R/R 0.27 | T2 $127.11 · R/R 0.55 | T3 $129.77 · R/R 0.82
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $125.31
+- Invalidation : close sous $112.04
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.158 | EV/share : $-2.634 | p_fill : —
-- Régime probabiliste (posterior HMM, deep) : bull 40.9 | bear 23.7 | side 35.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional 0.0 | shares 0
+- EV/risk : -0.074 | EV/share : $-0.718 | p_fill : —
+- Régime probabiliste (posterior HMM, intraday) : bull 27.9 | bear 20.9 | side 51.2  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : étendu — attendre un repli vers une zone
-- Proximité zone : 0.0/2 | R/R T1 : 1.0 | extension : stretched_down
+- **Verdict timing** : loin du support — entrée non optimale (chasing)
+- Proximité zone : 0.0/2 | R/R T1 : 1.0 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -64,5 +73,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (14302 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (15503 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

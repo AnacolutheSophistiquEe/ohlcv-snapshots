@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE0007165631",
-    "generated_at": "2026-06-19T21:37:18.500216+00:00",
+    "generated_at": "2026-06-22T00:02:30.923335+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1492,9 +1492,9 @@
     "entry_timing": {
       "setup_proximity": 0.5,
       "rr_t1": 1.0,
-      "overextension": "extreme",
-      "penalty": -2.0,
-      "verdict": "étendu — attendre un repli vers une zone",
+      "overextension": "stretched_down",
+      "penalty": 0.0,
+      "verdict": "survente — dip présent, entrée sur faiblesse (favorable au dip-buy)",
       "note": "observe-only — n'entre PAS dans le score santé (§A3)",
       "contrarian_setup": "WR 1.00 (n=11), confluence max 42.5"
     },
@@ -1507,6 +1507,7 @@
       "horizon": "intraday",
       "tf": "h1",
       "tf_fallback": false,
+      "selectable": true,
       "score": 3,
       "score_raw": 2.85,
       "score_type": "technical_health",
@@ -1522,6 +1523,7 @@
       "horizon": "swing",
       "tf": "daily",
       "tf_fallback": false,
+      "selectable": true,
       "score": 2,
       "score_raw": 2.45,
       "score_type": "technical_health",
@@ -1538,6 +1540,8 @@
       "tf": "weekly",
       "tf_fallback": false,
       "weekly_available": true,
+      "selectable": false,
+      "context_only": true,
       "score": 4,
       "score_raw": 4.45,
       "score_type": "technical_health",
@@ -1549,18 +1553,22 @@
       },
       "label": "neutral"
     },
-    "composite_score_max": 4,
-    "composite_plan": "C",
+    "composite_score_max": 3,
+    "composite_plan": "A",
+    "selectable_plans": [
+      "A",
+      "B"
+    ],
     "score_type": "technical_health",
     "entry_timing": {
       "setup_proximity": 0.5,
       "rr_t1": 1.0,
-      "overextension": "extreme",
-      "penalty": -2.0,
-      "verdict": "étendu — attendre un repli vers une zone",
+      "overextension": "stretched_down",
+      "penalty": 0.0,
+      "verdict": "survente — dip présent, entrée sur faiblesse (favorable au dip-buy)",
       "note": "observe-only — n'entre PAS dans le score santé (§A3)"
     },
-    "note": "score SANTÉ par TF (trend_structure/momentum/trend_quality/relative_strength, barème 3/3/2/2). Timing d'entrée séparé dans `entry_timing` (hors score). plan_c weekly si daily_long fourni, sinon proxy daily flaggé. Observe-only — audit §A3."
+    "note": "score SANTÉ par TF (trend_structure/momentum/trend_quality/relative_strength, barème 3/3/2/2). Timing d'entrée séparé dans `entry_timing` (hors score). plan_c weekly si daily_long fourni, sinon proxy daily flaggé. composite_plan = SOURCE UNIQUE du plan retenu, CONTRAINT aux horizons actionnables {A,B} (§6 — C deep exclu de la sélection, gardé en contexte). Observe-only — §A3/§6."
   },
   "confluence_zones": [
     {
@@ -1643,10 +1651,19 @@
     }
   },
   "overextension": {
+    "classification": "stretched_down",
+    "direction": "down",
+    "ma20_distance_atr": -2.22,
+    "ma50_distance_atr": -1.43,
+    "atr_14": 9.8286,
+    "thresholds_atr": {
+      "extreme": 3.0,
+      "stretched": 2.0,
+      "confluence_ma50": 2.0
+    },
     "ma20_distance_percentile_1y": 4,
     "ma50_distance_percentile_1y": 15,
     "ma200_distance_percentile_1y": 4,
-    "classification": "extreme",
     "current_distances_pct": {
       "ma20": -9.3,
       "ma50": -6.2,
@@ -1711,7 +1728,7 @@
   },
   "stops_targets_by_horizon": {
     "intraday": {
-      "horizon_sessions": 5,
+      "horizon_sessions": 1,
       "entry_low": 200.2229,
       "entry_high": 206.12,
       "entry_mid": 203.1714,
@@ -1720,39 +1737,39 @@
       "stop_capped": false,
       "stop_distance_pct": -7.26,
       "stop_distance_pct_from_spot": -11.54,
-      "target_ceiling_band95_pct": 7.81,
+      "target_ceiling_band95_pct": 3.49,
       "targets": {
         "t1": {
-          "price": 208.4585,
-          "basis": "band 95% (atteignable) · p≈91%",
-          "rr": 0.36,
+          "price": 205.5359,
+          "basis": "band 95% (atteignable) · p≈42%",
+          "rr": 0.16,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9068,
-          "distance_pct": 2.6
+          "p_touch": 0.4209,
+          "distance_pct": 1.16
         },
         "t2": {
-          "price": 213.7455,
-          "basis": "band 95% (atteignable) · p≈91%",
-          "rr": 0.72,
+          "price": 207.9003,
+          "basis": "band 95% (atteignable) · p≈42%",
+          "rr": 0.32,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9068,
-          "distance_pct": 5.2
+          "p_touch": 0.4209,
+          "distance_pct": 2.33
         },
         "t3": {
-          "price": 219.0326,
-          "basis": "plafond band 95% · p≈72%",
-          "rr": 1.08,
+          "price": 210.2648,
+          "basis": "plafond band 95% · p≈80%",
+          "rr": 0.48,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7171,
-          "distance_pct": 7.81
+          "p_touch": 0.7998,
+          "distance_pct": 3.49
         }
       }
     },
     "swing": {
-      "horizon_sessions": 21,
+      "horizon_sessions": 5,
       "entry_low": 189.4114,
       "entry_high": 197.2743,
       "entry_mid": 193.3429,
@@ -1761,34 +1778,34 @@
       "stop_capped": false,
       "stop_distance_pct": -10.17,
       "stop_distance_pct_from_spot": -18.46,
-      "target_ceiling_band95_pct": 16.0,
+      "target_ceiling_band95_pct": 7.81,
       "targets": {
         "t1": {
-          "price": 203.6539,
-          "basis": "band 95% (atteignable) · p≈80%",
-          "rr": 0.52,
+          "price": 198.3741,
+          "basis": "band 95% (atteignable) · p≈44%",
+          "rr": 0.26,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8015,
-          "distance_pct": 5.33
+          "p_touch": 0.4356,
+          "distance_pct": 2.6
         },
         "t2": {
-          "price": 213.965,
-          "basis": "band 95% (atteignable) · p≈93%",
-          "rr": 1.05,
+          "price": 203.4054,
+          "basis": "band 95% (atteignable) · p≈72%",
+          "rr": 0.51,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9326,
-          "distance_pct": 10.67
+          "p_touch": 0.7169,
+          "distance_pct": 5.2
         },
         "t3": {
-          "price": 224.2761,
-          "basis": "plafond band 95% · p≈58%",
-          "rr": 1.57,
+          "price": 208.4367,
+          "basis": "plafond band 95% · p≈91%",
+          "rr": 0.77,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.584,
-          "distance_pct": 16.0
+          "p_touch": 0.9067,
+          "distance_pct": 7.81
         }
       }
     },
@@ -1819,7 +1836,7 @@
           "rr": 1.35,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9326,
+          "p_touch": 0.9325,
           "distance_pct": 18.03
         },
         "t3": {
@@ -1857,43 +1874,43 @@
     "note": "drift HMM borné à ±0.1 %/j (§A1, cohérent compute_scenarios) — cf. mu_daily_pct_raw pour la valeur HMM brute ; barrière MC horizon fini ; σ par pas = σ daily (pas de ×√h) ; stops & cibles différenciés par horizon ; base = spot (dernier close) faute de zone d'entrée — R/R/EV indicatifs, à recalculer depuis l'entrée côté skill",
     "by_horizon": {
       "intraday": {
-        "horizon_sessions": 5,
+        "horizon_sessions": 1,
         "basis_used": 203.1714,
         "stop_used": 188.4286,
         "risk_per_share": 14.7428,
         "targets": {
           "t1": {
-            "price": 208.4585,
-            "ev_per_share_gross": -0.239348,
-            "terminal_mean_no_touch": 199.3665,
-            "p_hit_upper": 0.4614,
-            "p_hit_lower_first": 0.0575,
-            "p_no_touch": 0.481,
-            "ev_per_share": -0.4019,
-            "ev_pct_risk": -0.0273,
+            "price": 205.5359,
+            "ev_per_share_gross": -0.631362,
+            "terminal_mean_no_touch": 201.2094,
+            "p_hit_upper": 0.308,
+            "p_hit_lower_first": 0.0001,
+            "p_no_touch": 0.6918,
+            "ev_per_share": -0.7939,
+            "ev_pct_risk": -0.0538,
             "status": "negative_ev"
           },
           "t2": {
-            "price": 213.7455,
-            "ev_per_share_gross": 0.578534,
-            "terminal_mean_no_touch": 201.9519,
-            "p_hit_upper": 0.2193,
-            "p_hit_lower_first": 0.0583,
-            "p_no_touch": 0.7225,
-            "ev_per_share": 0.416,
-            "ev_pct_risk": 0.0282,
-            "status": "below_threshold"
+            "price": 207.9003,
+            "ev_per_share_gross": -0.109317,
+            "terminal_mean_no_touch": 202.2374,
+            "p_hit_upper": 0.146,
+            "p_hit_lower_first": 0.0001,
+            "p_no_touch": 0.8538,
+            "ev_per_share": -0.2719,
+            "ev_pct_risk": -0.0184,
+            "status": "negative_ev"
           },
           "t3": {
-            "price": 219.0326,
-            "ev_per_share_gross": 1.019775,
-            "terminal_mean_no_touch": 203.7476,
-            "p_hit_upper": 0.0874,
-            "p_hit_lower_first": 0.0583,
-            "p_no_touch": 0.8542,
-            "ev_per_share": 0.8572,
-            "ev_pct_risk": 0.0581,
-            "status": "below_threshold"
+            "price": 210.2648,
+            "ev_per_share_gross": 0.116771,
+            "terminal_mean_no_touch": 202.8852,
+            "p_hit_upper": 0.0549,
+            "p_hit_lower_first": 0.0001,
+            "p_no_touch": 0.9449,
+            "ev_per_share": -0.0458,
+            "ev_pct_risk": -0.0031,
+            "status": "negative_ev"
           }
         },
         "blended_scale_out": {
@@ -1902,47 +1919,47 @@
             "t2": 0.3,
             "t3": 0.2
           },
-          "ev_per_share": 0.0953,
-          "ev_pct_risk": 0.0065
+          "ev_per_share": -0.4877,
+          "ev_pct_risk": -0.0331
         }
       },
       "swing": {
-        "horizon_sessions": 21,
+        "horizon_sessions": 5,
         "basis_used": 193.3429,
         "stop_used": 173.6857,
         "risk_per_share": 19.6572,
         "targets": {
           "t1": {
-            "price": 203.6539,
-            "ev_per_share_gross": 1.342422,
-            "terminal_mean_no_touch": 188.859,
-            "p_hit_upper": 0.568,
-            "p_hit_lower_first": 0.1699,
-            "p_no_touch": 0.2621,
-            "ev_per_share": 1.1877,
-            "ev_pct_risk": 0.0604,
-            "status": "below_threshold"
+            "price": 198.3741,
+            "ev_per_share_gross": -0.327085,
+            "terminal_mean_no_touch": 188.7557,
+            "p_hit_upper": 0.4614,
+            "p_hit_lower_first": 0.0118,
+            "p_no_touch": 0.5268,
+            "ev_per_share": -0.4818,
+            "ev_pct_risk": -0.0245,
+            "status": "negative_ev"
           },
           "t2": {
-            "price": 213.965,
-            "ev_per_share_gross": 2.862946,
-            "terminal_mean_no_touch": 193.9229,
-            "p_hit_upper": 0.2948,
-            "p_hit_lower_first": 0.1791,
-            "p_no_touch": 0.5262,
-            "ev_per_share": 2.7083,
-            "ev_pct_risk": 0.1378,
+            "price": 203.4054,
+            "ev_per_share_gross": 0.449895,
+            "terminal_mean_no_touch": 191.3617,
+            "p_hit_upper": 0.2193,
+            "p_hit_lower_first": 0.0118,
+            "p_no_touch": 0.7689,
+            "ev_per_share": 0.2952,
+            "ev_pct_risk": 0.015,
             "status": "below_threshold"
           },
           "t3": {
-            "price": 224.2761,
-            "ev_per_share_gross": 3.604769,
-            "terminal_mean_no_touch": 197.8993,
-            "p_hit_upper": 0.1287,
-            "p_hit_lower_first": 0.1795,
-            "p_no_touch": 0.6918,
-            "ev_per_share": 3.4501,
-            "ev_pct_risk": 0.1755,
+            "price": 208.4367,
+            "ev_per_share_gross": 0.869744,
+            "terminal_mean_no_touch": 193.1017,
+            "p_hit_upper": 0.0874,
+            "p_hit_lower_first": 0.0118,
+            "p_no_touch": 0.9007,
+            "ev_per_share": 0.7151,
+            "ev_pct_risk": 0.0364,
             "status": "below_threshold"
           }
         },
@@ -1952,8 +1969,8 @@
             "t2": 0.3,
             "t3": 0.2
           },
-          "ev_per_share": 2.0964,
-          "ev_pct_risk": 0.1066
+          "ev_per_share": -0.0093,
+          "ev_pct_risk": -0.0005
         }
       },
       "deep": {
@@ -2149,54 +2166,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-06-19T21:37:02.406299+00:00",
+    "generated_at": "2026-06-22T00:02:18.758331+00:00",
     "ticker": "SRT3",
     "horizons_days": {
       "intraday": 7,
       "swing": 30,
       "deep": 90
     },
-    "n_events": 36,
+    "n_events": 33,
     "events": [
       {
-        "date": "2026-06-19",
+        "date": "2026-06-24",
         "type": "macro",
-        "label": "Signature accord Iran-US — 19/06/2026, Suisse",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-06-20",
-        "type": "macro",
-        "label": "Triple witching options expiry — 20/06/2026 (3e vendredi juin US)",
-        "importance": "medium",
+        "label": "US New Home Sales",
+        "importance": "low",
         "sessions_to_event": 1,
-        "calendar_days": 1,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-06-20",
-        "type": "macro",
-        "label": "PMI Flash juin 2026 — S&P Global US + EU (20/06/2026)",
-        "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2211,8 +2196,8 @@
         "type": "macro",
         "label": "German Ifo Business Climate Index",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2227,8 +2212,8 @@
         "type": "macro",
         "label": "Micron Technology (MU) earnings Q2 FY2026 — 24/06/2026",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2243,8 +2228,8 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2259,8 +2244,8 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2275,8 +2260,8 @@
         "type": "macro",
         "label": "US PCE Price Index (headline) — Personal Income & Outlays",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2291,8 +2276,8 @@
         "type": "macro",
         "label": "US Core PCE Price Index (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2307,8 +2292,8 @@
         "type": "macro",
         "label": "US Personal Income & Spending",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2323,8 +2308,8 @@
         "type": "macro",
         "label": "US GDP (advance / second / third estimate)",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2339,24 +2324,8 @@
         "type": "macro",
         "label": "US Durable Goods Orders",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-06-25",
-        "type": "macro",
-        "label": "US New Home Sales",
-        "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2371,24 +2340,8 @@
         "type": "macro",
         "label": "US University of Michigan Consumer Sentiment (prelim + final)",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-06-26",
-        "type": "macro",
-        "label": "German HICP Flash (inflation estimate)",
-        "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2403,8 +2356,23 @@
         "type": "macro",
         "label": "US Conference Board Consumer Confidence",
         "importance": "medium",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-06-30",
+        "type": "macro",
+        "label": "German HICP Flash (inflation estimate)",
+        "importance": "high",
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2418,8 +2386,8 @@
         "type": "macro",
         "label": "US JOLTS (Job Openings and Labor Turnover)",
         "importance": "medium",
-        "sessions_to_event": 13,
-        "calendar_days": 18,
+        "sessions_to_event": 11,
+        "calendar_days": 15,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2433,8 +2401,8 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
-        "sessions_to_event": 14,
-        "calendar_days": 19,
+        "sessions_to_event": 11,
+        "calendar_days": 16,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2448,8 +2416,8 @@
         "type": "macro",
         "label": "US Employment Situation (NFP / unemployment / earnings)",
         "importance": "high",
-        "sessions_to_event": 15,
-        "calendar_days": 21,
+        "sessions_to_event": 13,
+        "calendar_days": 18,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2463,8 +2431,8 @@
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 18,
-        "calendar_days": 25,
+        "sessions_to_event": 16,
+        "calendar_days": 22,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2478,8 +2446,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 18,
-        "calendar_days": 25,
+        "sessions_to_event": 16,
+        "calendar_days": 22,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2493,8 +2461,8 @@
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
         "importance": "high",
-        "sessions_to_event": 24,
-        "calendar_days": 34,
+        "sessions_to_event": 22,
+        "calendar_days": 31,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2507,8 +2475,8 @@
         "type": "macro",
         "label": "Sartorius (SRT3/SRT) Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 24,
-        "calendar_days": 34,
+        "sessions_to_event": 22,
+        "calendar_days": 31,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2521,8 +2489,8 @@
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 29,
-        "calendar_days": 40,
+        "sessions_to_event": 26,
+        "calendar_days": 37,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2535,8 +2503,8 @@
         "type": "macro",
         "label": "SoFi Technologies (SOFI) Q2 2026 Earnings",
         "importance": "medium",
-        "sessions_to_event": 33,
-        "calendar_days": 46,
+        "sessions_to_event": 31,
+        "calendar_days": 43,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2549,8 +2517,8 @@
         "type": "macro",
         "label": "Siemens Energy Q2 FY2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 34,
-        "calendar_days": 47,
+        "sessions_to_event": 31,
+        "calendar_days": 44,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2563,8 +2531,8 @@
         "type": "macro",
         "label": "IonQ (IONQ) Q2 2026 Earnings — 2026-08-05 (estimé)",
         "importance": "high",
-        "sessions_to_event": 34,
-        "calendar_days": 47,
+        "sessions_to_event": 31,
+        "calendar_days": 44,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2577,8 +2545,8 @@
         "type": "macro",
         "label": "Rheinmetall Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 34,
-        "calendar_days": 48,
+        "sessions_to_event": 32,
+        "calendar_days": 45,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2591,8 +2559,8 @@
         "type": "macro",
         "label": "Rigetti Computing Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 38,
-        "calendar_days": 53,
+        "sessions_to_event": 36,
+        "calendar_days": 50,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2605,8 +2573,8 @@
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 39,
-        "calendar_days": 54,
+        "sessions_to_event": 36,
+        "calendar_days": 51,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2619,8 +2587,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 39,
-        "calendar_days": 54,
+        "sessions_to_event": 36,
+        "calendar_days": 51,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2633,8 +2601,8 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
-        "sessions_to_event": 44,
-        "calendar_days": 61,
+        "sessions_to_event": 41,
+        "calendar_days": 58,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2647,8 +2615,8 @@
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
         "importance": "high",
-        "sessions_to_event": 59,
-        "calendar_days": 83,
+        "sessions_to_event": 57,
+        "calendar_days": 80,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2661,8 +2629,8 @@
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 60,
-        "calendar_days": 84,
+        "sessions_to_event": 58,
+        "calendar_days": 81,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2675,8 +2643,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 60,
-        "calendar_days": 84,
+        "sessions_to_event": 58,
+        "calendar_days": 81,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2689,8 +2657,8 @@
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 64,
-        "calendar_days": 89,
+        "sessions_to_event": 61,
+        "calendar_days": 86,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2739,23 +2707,23 @@
     "by_horizon": {
       "intraday": {
         "plan_id": "A",
-        "rating": "Pass",
-        "reason": "ev=0.006 ≥ 0 mais ne satisfait pas conditions Neutral/Buy/Strong Buy",
+        "rating": "Strong Pass (negative EV)",
+        "reason": "ev=-0.033 < 0 ET santé 3.0 < 4 (faible + EV négative)",
         "inputs": {
-          "ev_pct_risk": 0.0065,
+          "ev_pct_risk": -0.0331,
           "composite_score": 3.0,
-          "p_fill": 0.3195,
+          "p_fill": 0.026,
           "p_fill_source": "computed_entry_zone"
         }
       },
       "swing": {
         "plan_id": "B",
-        "rating": "Pass",
-        "reason": "ev=0.107 ≥ 0 mais ne satisfait pas conditions Neutral/Buy/Strong Buy",
+        "rating": "Strong Pass (negative EV)",
+        "reason": "ev=-0.001 < 0 ET santé 2.0 < 4 (faible + EV négative)",
         "inputs": {
-          "ev_pct_risk": 0.1066,
+          "ev_pct_risk": -0.0005,
           "composite_score": 2.0,
-          "p_fill": 0.3195,
+          "p_fill": 0.0413,
           "p_fill_source": "computed_entry_zone"
         }
       },
@@ -2772,15 +2740,16 @@
       }
     },
     "best_rating": {
-      "plan_id": "C",
-      "horizon": "deep",
-      "rating": "Neutral",
-      "reason": "ev=0.241 ≥ 0.10, composite=4.0 ≥ 4"
+      "plan_id": "A",
+      "horizon": "intraday",
+      "rating": "Strong Pass (negative EV)",
+      "reason": "ev=-0.033 < 0 ET santé 3.0 < 4 (faible + EV négative)",
+      "selected_by": "composite_plan (source unique §6)"
     }
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-06-19T21:37:00.315333+00:00",
+    "generated_at": "2026-06-22T00:02:16.716584+00:00",
     "ticker": "SRT3",
     "window_sessions": 60,
     "n_observations_aligned": 38,
@@ -10913,11 +10882,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-19T00:00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 81.23482418550485,
+        "overall_quality_score": 77.23482418550485,
         "overall_label": "good",
         "warnings": []
       }
@@ -10958,11 +10927,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-19T12:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 74.72453000112574,
+        "overall_quality_score": 70.72453000112574,
         "overall_label": "good",
         "warnings": [
           "55 bar(s) à volume zéro (h4)",
@@ -11012,12 +10981,12 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-19T15:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 72.13526570048309,
-        "overall_label": "good",
+        "overall_quality_score": 68.13526570048309,
+        "overall_label": "acceptable",
         "warnings": [
           "22 bar(s) à volume zéro (h1)",
           "liquidité faible (low, h1)"
@@ -11025,9 +10994,9 @@
       }
     },
     "summary": {
-      "worst_tf_quality_score": 72.13526570048309,
+      "worst_tf_quality_score": 68.13526570048309,
       "worst_tf": "h1",
-      "recommendation": "review_outliers"
+      "recommendation": "fetch_again"
     }
   }
 }

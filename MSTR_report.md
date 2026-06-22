@@ -1,7 +1,7 @@
 # MSTR
 
-**Generated** : 2026-06-19T21:48:11.930674+00:00  
-**Santé technique** : 4/10 — **Rating** : Pass  
+**Generated** : 2026-06-22T00:11:09.553593+00:00  
+**Santé technique** : 1/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · $112.53  
 
@@ -14,29 +14,30 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie C (deep), composite 4/10, conviction 'Pass'.
+Plan privilegie A (intraday), composite 1/10, conviction 'Strong Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
-**Plan C — deep** (order_type LMT)
-- Entry : $111.97–$113.09 (mid $112.53)
-- Stop : $111.10 (stop swing-based (-1.27%))
-- Targets : T1 $112.99 · R/R 0.32 | T2 $153.70 · R/R 28.79 | T3 $192.21 · R/R 55.72
+**Plan A — intraday** (order_type LMT)
+- Entry (zone de repli) : $100.17–$103.23 (mid $101.70)
+- Spot actuel : $112.53 (+10.6% au-dessus de la zone — repli à attendre)
+- Stop : $93.56 (stop swing-based (-1.27%))
+- Targets : T1 $104.42 · R/R 0.33 | T2 $107.15 · R/R 0.67 | T3 $109.87 · R/R 1.0
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $111.10
+- Invalidation : close sous $93.56
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.134 | EV/share : $-1.925 | p_fill : —
-- Régime probabiliste (posterior HMM, deep) : bull 45.9 | bear 44.0 | side 10.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional 0.0 | shares 0
+- EV/risk : -0.079 | EV/share : $-0.645 | p_fill : —
+- Régime probabiliste (posterior HMM, intraday) : bull 25.7 | bear 68.9 | side 5.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : étendu — attendre un repli vers une zone
+- **Verdict timing** : survente — dip présent, entrée sur faiblesse (favorable au dip-buy)
 - Proximité zone : 0.75/2 | R/R T1 : 2.0 | extension : stretched_down
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
@@ -64,5 +65,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (13817 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (14120 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
