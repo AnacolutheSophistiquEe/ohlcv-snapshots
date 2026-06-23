@@ -1,11 +1,15 @@
 # SMR
 
-**Generated** : 2026-06-22T21:56:06.421284+00:00  
+**Generated** : 2026-06-23T00:20:49.428211+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 7.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
-**Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
+**Santé technique** : 5/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $11.24  
+
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)  
+> ↳ spot $11.24 (+11.5% vs entrée) · entrée $10.08 · stop $9.74 · T1 $10.47 · R/R 1.15  
+> ↳ P(T1 av. stop) 43 % · EV/risk 0.009 · ¼-Kelly 0.0 · _probas brutes (Monte-Carlo), non calibrées · n=0_  
 
 ## Régime & alignement multi-TF
 
@@ -25,25 +29,39 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 5/10, conviction 'Pass (negative EV)'.
+Plan privilegie A (intraday), composite 5/10, conviction 'Pass'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : $9.93–$10.23 (mid $10.08)
+- Entry (zone de repli) : $10.01–$10.16 (mid $10.08)
 - Spot actuel : $11.24 (+11.5% au-dessus de la zone — repli à attendre)
-- Stop : $9.28 (stop atr-based (-15.45%))
-- Targets : T1 $10.47 · R/R 0.49 | T2 $10.85 · R/R 0.96 | T3 $11.24 · R/R 1.45
+- Stop : $9.74 (stop atr-based (-15.45%))
+- Targets : T1 $10.47 · R/R 1.15 | T2 $10.85 · R/R 2.26 | T3 $11.24 · R/R 3.41
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $9.28
+- Invalidation : close sous $9.74
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.073 | EV/share : $-0.059 | p_fill : —
+- EV/risk : 0.009 | EV/share : $0.003 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 43 % | T2 20 % | T3 8 %
+- Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ EV négatif ⇒ Pass)_
+- Calibration des probas : _probas brutes (Monte-Carlo), non calibrées · n=0_
 - Régime probabiliste (posterior HMM, intraday) : bull 30.2 | bear 15.2 | side 54.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 157.0 (= 14 part(s) × prix) · cible 160.0
+
+
+## Microstructure intraday (5 s réel · 160 séances)
+
+- **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s ; entrée au DIP du plan + p_fill ; à comparer à l'EV GBM du bloc Edge — le GBM tend à sur-estimer)_ :
+  - **intraday** (entrée dip −10.301% → cible +3.814% / stop −3.444%, p_fill 9%, 15 remplis) : P(cible|rempli) **33%** · **EV/risk +0.006** (×p_fill ; si rempli +0.21% du capital)
+  - **swing** : indisponible (trop peu de remplissages (1))
+  - **deep** : indisponible (trop peu de remplissages (0))
+- Courbe de touche réelle (high atteint, en séance) : +0.5%→82% · +1.0%→73% · +2.0%→62% · +3.0%→50% · +5.0%→29% · +8.0%→13%
+- Range intraday médian 7.71% (p90 12.61%) · excursion haute méd. +2.99% / basse méd. −3.53%
+- Profil de vol intra : ouverture 4.681% vs midi 1.576% vs clôture 1.788% _(ouverture ~3.0× plus volatile → privilégier/éviter selon le setup)_
 
 
 ## Timing d'entrée (observe-only)
@@ -58,6 +76,14 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 **Factor** : R² 0.43 · part idiosyncratique 2.52
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
 **Options** : bullish
+
+
+## Event risk & invalidation
+
+**Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
+- **intraday** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -76,5 +102,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (18504 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (26465 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

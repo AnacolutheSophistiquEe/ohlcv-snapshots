@@ -1,11 +1,15 @@
 # 000660
 
-**Generated** : 2026-06-22T21:44:14.469667+00:00  
+**Generated** : 2026-06-23T00:09:52.826455+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
-**Santé technique** : 10/10 — **Rating** : Pass (negative EV)  
+**Santé technique** : 10/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : strong_trend · volatilite extreme · ₩2919000.00  
+
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)  
+> ↳ spot ₩2919000.00 (+10.7% vs entrée) · entrée ₩2637400.00 · stop ₩2541212.12 · T1 ₩2829775.77 · R/R 2.0  
+> ↳ P(T1 av. stop) 36 % · EV/risk 0.112 · ¼-Kelly 0.006 · _probas brutes (Monte-Carlo), non calibrées · n=0_  
 
 ## Régime & alignement multi-TF
 
@@ -24,23 +28,26 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie B (swing), composite 10/10, conviction 'Pass (negative EV)'.
+Plan privilegie B (swing), composite 10/10, conviction 'Neutral'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : ₩2578058.50–₩2696741.50 (mid ₩2637400.00)
+- Entry (zone de repli) : ₩2598924.85–₩2675875.15 (mid ₩2637400.00)
 - Spot actuel : ₩2919000.00 (+10.7% au-dessus de la zone — repli à attendre)
-- Stop : ₩2320912.00 (stop atr-based (-10.09%))
-- Targets : T1 ₩2829775.77 · R/R 0.61 | T2 ₩3022151.53 · R/R 1.22 | T3 ₩3214527.30 · R/R 1.82
+- Stop : ₩2541212.12 (stop atr-based (-10.09%))
+- Targets : T1 ₩2829775.77 · R/R 2.0 | T2 ₩3022151.53 · R/R 4.0 | T3 ₩3214527.30 · R/R 6.0
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩2320912.00
+- Invalidation : close sous ₩2541212.12
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.006 | EV/share : ₩-1798.942 | p_fill : —
+- EV/risk : 0.112 | EV/share : ₩10815.236 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 36 % | T2 20 % | T3 9 %
+- Kelly (position) : f* 0.024 | ¼-Kelly 0.006 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ EV négatif ⇒ Pass)_
+- Calibration des probas : _probas brutes (Monte-Carlo), non calibrées · n=0_
 - Régime probabiliste (posterior HMM, swing) : bull 19.8 | bear 31.8 | side 48.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 640.0
 
@@ -59,6 +66,14 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 **Options** : indisponible
 
 
+## Event risk & invalidation
+
+**Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
+- **intraday** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+
+
 ## Indicateurs (résumé)
 
 - **RSI** : 65.5  _(momentum haussier)_
@@ -75,5 +90,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16043 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (19847 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

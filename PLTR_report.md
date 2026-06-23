@@ -1,9 +1,13 @@
 # PLTR
 
-**Generated** : 2026-06-22T21:50:14.084521+00:00  
-**Santé technique** : 1/10 — **Rating** : Strong Pass (negative EV)  
+**Generated** : 2026-06-23T00:15:20.715029+00:00  
+**Santé technique** : 1/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $119.50  
+
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)  
+> ↳ spot $119.50 (+6.1% vs entrée) · entrée $112.68 · stop $110.64 · T1 $115.32 · R/R 1.29  
+> ↳ P(T1 av. stop) 41 % · EV/risk 0.01 · ¼-Kelly 0.0 · _probas brutes (Monte-Carlo), non calibrées · n=0_  
 
 ## Régime & alignement multi-TF
 
@@ -22,25 +26,39 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 1/10, conviction 'Strong Pass (negative EV)'.
+Plan privilegie A (intraday), composite 1/10, conviction 'Pass'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : $110.99–$114.37 (mid $112.68)
+- Entry (zone de repli) : $112.15–$113.21 (mid $112.68)
 - Spot actuel : $119.50 (+6.1% au-dessus de la zone — repli à attendre)
-- Stop : $103.67 (stop swing-based (4.84%))
-- Targets : T1 $115.32 · R/R 0.29 | T2 $117.96 · R/R 0.59 | T3 $120.60 · R/R 0.88
+- Stop : $110.64 (stop swing-based (4.84%))
+- Targets : T1 $115.32 · R/R 1.29 | T2 $117.96 · R/R 2.59 | T3 $120.60 · R/R 3.88
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $103.67
+- Invalidation : close sous $110.64
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.076 | EV/share : $-0.686 | p_fill : —
+- EV/risk : 0.01 | EV/share : $0.020 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 41 % | T2 19 % | T3 7 %
+- Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ EV négatif ⇒ Pass)_
+- Calibration des probas : _probas brutes (Monte-Carlo), non calibrées · n=0_
 - Régime probabiliste (posterior HMM, intraday) : bull 22.4 | bear 44.8 | side 32.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
+
+
+## Microstructure intraday (5 s réel · 160 séances)
+
+- **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s ; entrée au DIP du plan + p_fill ; à comparer à l'EV GBM du bloc Edge — le GBM tend à sur-estimer)_ :
+  - **intraday** : indisponible (trop peu de remplissages (13))
+  - **swing** : indisponible (trop peu de remplissages (4))
+  - **deep** : indisponible (trop peu de remplissages (2))
+- Courbe de touche réelle (high atteint, en séance) : +0.5%→81% · +1.0%→67% · +2.0%→38% · +3.0%→21% · +5.0%→5% · +8.0%→1%
+- Range intraday médian 3.91% (p90 6.93%) · excursion haute méd. +1.55% / basse méd. −1.68%
+- Profil de vol intra : ouverture 2.684% vs midi 0.757% vs clôture 0.873% _(ouverture ~3.5× plus volatile → privilégier/éviter selon le setup)_
 
 
 ## Timing d'entrée (observe-only)
@@ -55,6 +73,14 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 **Factor** : R² 0.62 · part idiosyncratique 0.45
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
 **Options** : favorable
+
+
+## Event risk & invalidation
+
+**Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
+- **intraday** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -73,5 +99,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (15508 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (22877 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

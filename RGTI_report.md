@@ -1,11 +1,15 @@
 # RGTI
 
-**Generated** : 2026-06-22T21:53:11.703022+00:00  
+**Generated** : 2026-06-23T00:18:08.902192+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 8.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
-**Santé technique** : 8/10 — **Rating** : Pass (negative EV)  
+**Santé technique** : 8/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $21.38  
+
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)  
+> ↳ spot $21.38 (+5.5% vs entrée) · entrée $20.27 · stop $19.55 · T1 $21.16 · R/R 1.24  
+> ↳ P(T1 av. stop) 42 % · EV/risk 0.027 · ¼-Kelly 0.0 · _probas brutes (Monte-Carlo), non calibrées · n=0_  
 
 ## Régime & alignement multi-TF
 
@@ -16,25 +20,39 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 8/10, conviction 'Pass (negative EV)'.
+Plan privilegie A (intraday), composite 8/10, conviction 'Pass'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : $19.97–$20.58 (mid $20.27)
+- Entry (zone de repli) : $20.09–$20.45 (mid $20.27)
 - Spot actuel : $21.38 (+5.5% au-dessus de la zone — repli à attendre)
-- Stop : $18.65 (stop swing-based (-15.87%))
-- Targets : T1 $21.16 · R/R 0.55 | T2 $22.05 · R/R 1.1 | T3 $22.94 · R/R 1.65
+- Stop : $19.55 (stop swing-based (-15.87%))
+- Targets : T1 $21.16 · R/R 1.24 | T2 $22.05 · R/R 2.47 | T3 $22.94 · R/R 3.71
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $18.65
+- Invalidation : close sous $19.55
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.063 | EV/share : $-0.102 | p_fill : —
+- EV/risk : 0.027 | EV/share : $0.019 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 42 % | T2 20 % | T3 8 %
+- Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ EV négatif ⇒ Pass)_
+- Calibration des probas : _probas brutes (Monte-Carlo), non calibrées · n=0_
 - Régime probabiliste (posterior HMM, intraday) : bull 28.5 | bear 58.6 | side 12.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 150.0 (= 7 part(s) × prix) · cible 160.0
+
+
+## Microstructure intraday (5 s réel · 160 séances)
+
+- **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s ; entrée au DIP du plan + p_fill ; à comparer à l'EV GBM du bloc Edge — le GBM tend à sur-estimer)_ :
+  - **intraday** (entrée dip −5.18% → cible +4.383% / stop −3.575%, p_fill 32%, 52 remplis) : P(cible|rempli) **21%** · **EV/risk -0.025** (×p_fill ; si rempli -0.27% du capital)
+  - **swing** (entrée dip −11.398% → cible +9.8% / stop −4.9%, p_fill 15%, 23 remplis) : P(cible|rempli) **35%** · **EV/risk +0.029** (×p_fill ; si rempli +0.95% du capital)
+  - **deep** (entrée dip −17.622% → cible +13.859% / stop −6.93%, p_fill 11%, 17 remplis) : P(cible|rempli) **41%** · **EV/risk +0.022** (×p_fill ; si rempli +1.35% du capital)
+- Courbe de touche réelle (high atteint, en séance) : +0.5%→86% · +1.0%→79% · +2.0%→63% · +3.0%→52% · +5.0%→32% · +8.0%→12%
+- Range intraday médian 7.72% (p90 13.03%) · excursion haute méd. +3.15% / basse méd. −3.39%
+- Profil de vol intra : ouverture 4.606% vs midi 1.646% vs clôture 1.92% _(ouverture ~2.8× plus volatile → privilégier/éviter selon le setup)_
 
 
 ## Timing d'entrée (observe-only)
@@ -49,6 +67,14 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 **Factor** : R² 0.51 · part idiosyncratique 0.44
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
 **Options** : favorable
+
+
+## Event risk & invalidation
+
+**Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
+- **intraday** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -67,5 +93,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (17543 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (25964 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
