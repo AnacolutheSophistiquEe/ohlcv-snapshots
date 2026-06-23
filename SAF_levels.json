@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SAF",
-    "generated_at": "2026-06-22T22:00:02Z",
+    "generated_at": "2026-06-23T00:24:27Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-23T08:00:00Z",
-    "valid_until": "2026-06-23T21:00:00Z",
+    "valid_from": "2026-06-24T08:00:00Z",
+    "valid_until": "2026-06-24T21:00:00Z",
     "source_precomputed": "SAF_precomputed.json"
   },
   "context": {
-    "last_price": 331.2,
+    "last_price": 331.4,
     "ta_score": {
       "value": 9,
       "max": 10,
@@ -18,8 +18,8 @@
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
-      "state": "bear",
-      "probability": 0.8679,
+      "state": "bull",
+      "probability": 0.5025,
       "expected_duration_days": 7.57
     },
     "volatility_regime": "normal",
@@ -37,14 +37,14 @@
       "median_bounce_pct": 1.15,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 9/10 (very_bullish), alignment mixed, HMM bear (0.87), vol normal, signals neutral (5b/4s/6n)."
+    "narrative_short": "TA score 9/10 (very_bullish), alignment mixed, HMM bull (0.50), vol normal, signals neutral (5b/4s/6n)."
   },
   "notes": {
     "atr_daily": 9.1429,
     "atr_pct_daily": null,
-    "beta_60d": 1.5074,
+    "beta_60d": 1.5067,
     "beta_benchmark": "EWQ",
-    "beta_corr_60d": 0.7237,
+    "beta_corr_60d": 0.7234,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -3.54,
+      "current_dd_pct": -3.48,
       "ath_price": 343.3422,
       "ath_date": "2026-02-18",
       "max_dd_1y_pct": -23.62,
@@ -77,31 +77,31 @@
       "side": "long",
       "entry_zone": {
         "min": 306.0117,
-        "max": 306.595
+        "max": 308.2217
       },
       "stop": {
         "price": 289.4083,
         "basis": "sr_below_confluence_support",
-        "distance_pct": -5.52
+        "distance_pct": -5.77
       },
       "targets": [
         {
           "level": 1,
           "price": 345.4683,
           "basis": "next_resistance",
-          "rr": 2.32
+          "rr": 2.17
         },
         {
           "level": 2,
           "price": 362.4285,
           "basis": "fib_extension_1272",
-          "rr": 3.32
+          "rr": 3.12
         },
         {
           "level": 3,
           "price": 387.7138,
           "basis": "fib_extension_1618",
-          "rr": 4.82
+          "rr": 4.55
         }
       ],
       "preferred_target": 1,
@@ -109,7 +109,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support FIB_50 + MA20 (strength 5.0). Bounce mecanique."
+      "rationale": "Confluence support FIB_50 + MA20 + VPVR_VAH (strength 12.0). Bounce mecanique."
     },
     {
       "id": "B",
@@ -117,11 +117,11 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 331.8515,
-        "max": 333.1776
+        "min": 332.0517,
+        "max": 333.3786
       },
       "stop": {
-        "price": 326.9486,
+        "price": 327.1486,
         "basis": "fallback_pivot_camarilla_r1",
         "distance_pct": -1.67
       },
@@ -130,19 +130,19 @@
           "level": 1,
           "price": 345.4683,
           "basis": "next_resistance",
-          "rr": 2.33
+          "rr": 2.29
         },
         {
           "level": 2,
           "price": 362.4285,
           "basis": "fib_extension_1272",
-          "rr": 5.37
+          "rr": 5.34
         },
         {
           "level": 3,
           "price": 387.7138,
           "basis": "fib_extension_1618",
-          "rr": 9.92
+          "rr": 9.88
         }
       ],
       "preferred_target": 1,
@@ -159,7 +159,7 @@
       "side": "long",
       "entry_zone": {
         "min": 286.7188,
-        "max": 298.4966
+        "max": 298.4976
       },
       "stop": {
         "price": 275.25,
