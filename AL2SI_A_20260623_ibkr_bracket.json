@@ -1,45 +1,37 @@
 {
   "available": true,
-  "generated_at": "2026-06-23T21:52:04.287284+00:00",
-  "prediction_id": "IONQ_A_20260623",
+  "generated_at": "2026-06-23T21:43:06.298866+00:00",
+  "prediction_id": "AL2SI_A_20260623",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "IONQ",
-  "exchange": "SMART",
-  "currency": "USD",
+  "symbol": "AL2SI",
+  "exchange": "SBF",
+  "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 57.56,
-    "quantity": 2,
+    "limit_price": 27.48,
+    "quantity": 5,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 60.7,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T2"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 64.58,
-      "quantity": 1,
+      "limit_price": 30.33,
+      "quantity": 5,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 51.01,
-      "quantity": 2,
+      "stop_price": 17.64,
+      "quantity": 5,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "IONQ_A_intraday_20260623",
+  "oca_group": "AL2SI_A_intraday_20260623",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -53,7 +45,7 @@
     "order_validity": {
       "type": "DAY",
       "offset_sessions": 0,
-      "good_till_date": "2026-06-23T22:00:00+00:00"
+      "good_till_date": "2026-06-23T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -61,17 +53,12 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.6,
-      0.4
+      1.0
     ],
     "qty_split": [
       {
-        "tag": "T2",
-        "qty": 1
-      },
-      {
         "tag": "T3",
-        "qty": 1
+        "qty": 5
       }
     ]
   },
@@ -79,26 +66,26 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 5.0,
+    "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0107,
+    "ev_pct_risk": -0.014,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.4088,
-      "T2": 0.1664,
-      "T3": 0.0508
+      "T1": 0.2113,
+      "T2": 0.0272,
+      "T3": 0.0019
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 115.7,
-    "hold_tolerance_breach_price": null,
+    "notional_eur": 138.1,
+    "hold_tolerance_breach_price": 20.715,
     "hold_fallback_active": true,
-    "prediction_id": "IONQ_A_20260623"
+    "prediction_id": "AL2SI_A_20260623"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
