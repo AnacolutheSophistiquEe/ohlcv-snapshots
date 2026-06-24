@@ -1,0 +1,152 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "MSTR",
+    "generated_at": "2026-06-24T00:24:18Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-06-25T08:00:00Z",
+    "valid_until": "2026-06-25T21:00:00Z",
+    "source_precomputed": "MSTR_precomputed.json"
+  },
+  "context": {
+    "last_price": 103.84,
+    "ta_score": {
+      "value": 0,
+      "max": 10,
+      "label": "very_bearish"
+    },
+    "alignment_flag": "triple_bearish",
+    "hmm_regime": {
+      "state": "bear",
+      "probability": 0.9,
+      "expected_duration_days": 0.0
+    },
+    "volatility_regime": "low",
+    "signals_counter": {
+      "buy": 3,
+      "sell": 9,
+      "neutral": 4,
+      "total": 16,
+      "verdict": "strong_sell"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_30-40_dist_ma20_<-10",
+      "win_rate": 0.77,
+      "sample_size": 22,
+      "median_bounce_pct": 3.67,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (0.90), vol low, signals strong_sell (3b/9s/4n)."
+  },
+  "notes": {
+    "atr_daily": 9.9843,
+    "atr_pct_daily": null,
+    "beta_60d": 1.9054,
+    "beta_benchmark": "IWM",
+    "beta_corr_60d": 0.5481,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "",
+      "date": "",
+      "confidence": null
+    },
+    "divergences": [],
+    "drawdown": {
+      "current_dd_pct": -77.22,
+      "ath_price": 455.9,
+      "ath_date": "2025-07-16",
+      "max_dd_1y_pct": -77.22,
+      "days_in_dd": 342,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 113.103,
+        "max": 113.5549
+      },
+      "stop": {
+        "price": 111.5694,
+        "basis": "below_broken_resistance",
+        "distance_pct": -1.55
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 150.9305,
+          "basis": "next_confluence_resistance",
+          "rr": 21.37
+        },
+        {
+          "level": 2,
+          "price": 162.3184,
+          "basis": "fib_236",
+          "rr": 27.84
+        },
+        {
+          "level": 3,
+          "price": 162.3184,
+          "basis": "next_confluence_resistance",
+          "rr": 27.84
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance VPVR_VAL + S/R_resistance (strength 7.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 96.6187,
+        "max": 98.5804
+      },
+      "stop": {
+        "price": 83.1136,
+        "basis": "fallback_pivot_classical_s3",
+        "distance_pct": -14.84
+      },
+      "targets": [
+        {
+          "level": 3,
+          "price": 99.0634,
+          "basis": "plafond band 95% · touche hist. 91% (sans stop)",
+          "rr": 0.1
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_classical_s3. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "triple_bearish (long-only anti-knife-catch)",
+  "global_conditions": [
+    {
+      "id": "session_us_open",
+      "type": "session_window",
+      "params": {
+        "session": "us_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 82.2825,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
