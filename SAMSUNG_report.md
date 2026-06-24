@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-06-23T21:45:53.222043+00:00  
+**Generated** : 2026-06-24T00:11:01.933479+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 7/10 — **Rating** : Neutral  

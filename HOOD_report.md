@@ -1,6 +1,6 @@
 # HOOD
 
-**Generated** : 2026-06-23T23:52:17.348836+00:00  
+**Generated** : 2026-06-24T00:21:58.762859+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 9/10 — **Rating** : Neutral  

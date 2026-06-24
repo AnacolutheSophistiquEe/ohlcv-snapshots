@@ -6,7 +6,7 @@
     "exchange": "NYSE",
     "currency": "USD",
     "isin": "US67079K1051",
-    "generated_at": "2026-06-23T21:56:33.359065+00:00",
+    "generated_at": "2026-06-24T00:20:39.828873+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1786,7 +1786,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4354,
+          "p_touch": 0.4355,
           "distance_pct": 8.58
         },
         "t2": {
@@ -1829,7 +1829,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2785,
+          "p_touch": 0.2784,
           "distance_pct": 12.13
         },
         "t2": {
@@ -1838,7 +1838,7 @@
           "rr": 4.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5843,
+          "p_touch": 0.5844,
           "distance_pct": 24.26
         },
         "t3": {
@@ -1847,7 +1847,7 @@
           "rr": 6.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8015,
+          "p_touch": 0.8014,
           "distance_pct": 36.39
         }
       }
@@ -2063,7 +2063,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-06-23T21:56:07.545060+00:00",
+    "generated_at": "2026-06-24T00:20:16.401600+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -2405,6 +2405,19 @@
         }
       ]
     },
+    "asset_fingerprint": {
+      "computed_in": "pipeline_AT_5s",
+      "n_sessions": 160,
+      "character": "choppy-dominant (trend-following risqué)",
+      "day_type_distribution": {
+        "trend_up": 0.0,
+        "trend_down": 0.005,
+        "choppy": 0.824,
+        "range": 0.171
+      },
+      "spike_down_rate": 0.726,
+      "v_recovery_rate": 0.363
+    },
     "opening_range": {
       "or_window_min": 30,
       "break_up_rate": 0.603,
@@ -2416,6 +2429,918 @@
       "val": 11.4013,
       "vah": 11.6743,
       "last_close": 11.22
+    },
+    "opening_session": {
+      "note": "vérité terrain 5 s, pondérée récence. Excursions DEPUIS l'open ; gaps = open vs close veille ; fishing = ordre d'achat posé la veille à −L % sous le close veille (seule réf. connue pré-open), P(touche)+délai+rebond post-fill. Sert à poser des limit/trailing buy avant l'ouverture ; un fill réveille Claude pour gérer.",
+      "prior_close_ref": 11.22,
+      "n_sessions": 160,
+      "halflife_sessions": 40.0,
+      "overnight_gaps": {
+        "n": 159,
+        "pct": {
+          "median": -0.76,
+          "p25": -2.15,
+          "p75": 1.7,
+          "p90": 3.97
+        },
+        "abs_pct": {
+          "median": 1.84,
+          "p25": 0.96,
+          "p75": 3.18,
+          "p90": 5.12
+        },
+        "p_gap_down": 0.618,
+        "p_gap_up": 0.382,
+        "p_gap_down_gt_1pct": 0.43,
+        "p_gap_down_gt_2pct": 0.287,
+        "p_gap_up_gt_1pct": 0.308
+      },
+      "opening_excursion_from_open": [
+        {
+          "window": "5min",
+          "window_min": 5,
+          "n": 160,
+          "mfe_up_pct": {
+            "median": 1.11,
+            "p25": 0.37,
+            "p75": 2.24,
+            "p90": 3.3
+          },
+          "mae_down_pct": {
+            "median": 1.37,
+            "p25": 0.48,
+            "p75": 2.35,
+            "p90": 3.65
+          },
+          "range_pct": {
+            "median": 2.87,
+            "p25": 2.27,
+            "p75": 3.83,
+            "p90": 5.17
+          }
+        },
+        {
+          "window": "15min",
+          "window_min": 15,
+          "n": 160,
+          "mfe_up_pct": {
+            "median": 1.38,
+            "p25": 0.38,
+            "p75": 3.12,
+            "p90": 5.35
+          },
+          "mae_down_pct": {
+            "median": 1.75,
+            "p25": 0.76,
+            "p75": 3.04,
+            "p90": 4.01
+          },
+          "range_pct": {
+            "median": 3.77,
+            "p25": 2.87,
+            "p75": 4.91,
+            "p90": 6.43
+          }
+        },
+        {
+          "window": "30min",
+          "window_min": 30,
+          "n": 160,
+          "mfe_up_pct": {
+            "median": 1.94,
+            "p25": 0.71,
+            "p75": 3.14,
+            "p90": 5.92
+          },
+          "mae_down_pct": {
+            "median": 2.07,
+            "p25": 0.89,
+            "p75": 3.44,
+            "p90": 5.3
+          },
+          "range_pct": {
+            "median": 4.3,
+            "p25": 3.56,
+            "p75": 5.94,
+            "p90": 7.76
+          }
+        },
+        {
+          "window": "60min",
+          "window_min": 60,
+          "n": 160,
+          "mfe_up_pct": {
+            "median": 2.59,
+            "p25": 0.75,
+            "p75": 4.21,
+            "p90": 6.17
+          },
+          "mae_down_pct": {
+            "median": 2.19,
+            "p25": 1.0,
+            "p75": 3.99,
+            "p90": 5.9
+          },
+          "range_pct": {
+            "median": 5.43,
+            "p25": 4.14,
+            "p75": 6.73,
+            "p90": 8.72
+          }
+        }
+      ],
+      "preopen_fishing": [
+        {
+          "level_pct_below_prior_close": 0.5,
+          "n": 55,
+          "n_sessions": 159,
+          "n_filled": 132,
+          "n_fill_post": 132,
+          "n_bounced": 79,
+          "p_touch_session": 0.809,
+          "p_touch_30min": 0.759,
+          "p_gap_through_open": 0.54,
+          "median_time_to_touch_min": 0.0,
+          "post_fill_mfe_pct": {
+            "median": 1.62,
+            "p25": 0.54,
+            "p75": 4.42,
+            "p90": 7.72
+          },
+          "post_fill_mae_depth_pct": {
+            "median": 4.67,
+            "p25": 2.58,
+            "p75": 7.2,
+            "p90": 10.3
+          },
+          "suggested_stop_beyond_pct": 8.54,
+          "p_bounce_after_fill": 0.626,
+          "median_time_to_bounce_min": 7.9,
+          "bounce_target_pct": 1.0
+        },
+        {
+          "level_pct_below_prior_close": 1.0,
+          "n": 55,
+          "n_sessions": 159,
+          "n_filled": 126,
+          "n_fill_post": 126,
+          "n_bounced": 82,
+          "p_touch_session": 0.77,
+          "p_touch_30min": 0.699,
+          "p_gap_through_open": 0.43,
+          "median_time_to_touch_min": 0.0,
+          "post_fill_mfe_pct": {
+            "median": 1.81,
+            "p25": 0.63,
+            "p75": 4.36,
+            "p90": 6.89
+          },
+          "post_fill_mae_depth_pct": {
+            "median": 4.49,
+            "p25": 2.63,
+            "p75": 7.01,
+            "p90": 9.91
+          },
+          "suggested_stop_beyond_pct": 8.34,
+          "p_bounce_after_fill": 0.654,
+          "median_time_to_bounce_min": 17.0,
+          "bounce_target_pct": 1.0
+        },
+        {
+          "level_pct_below_prior_close": 1.5,
+          "n": 55,
+          "n_sessions": 159,
+          "n_filled": 120,
+          "n_fill_post": 120,
+          "n_bounced": 85,
+          "p_touch_session": 0.731,
+          "p_touch_30min": 0.671,
+          "p_gap_through_open": 0.383,
+          "median_time_to_touch_min": 0.0,
+          "post_fill_mfe_pct": {
+            "median": 2.02,
+            "p25": 0.9,
+            "p75": 4.73,
+            "p90": 7.36
+          },
+          "post_fill_mae_depth_pct": {
+            "median": 4.22,
+            "p25": 2.55,
+            "p75": 6.96,
+            "p90": 9.47
+          },
+          "suggested_stop_beyond_pct": 7.91,
+          "p_bounce_after_fill": 0.724,
+          "median_time_to_bounce_min": 6.2,
+          "bounce_target_pct": 1.0
+        },
+        {
+          "level_pct_below_prior_close": 2.0,
+          "n": 55,
+          "n_sessions": 159,
+          "n_filled": 114,
+          "n_fill_post": 114,
+          "n_bounced": 83,
+          "p_touch_session": 0.678,
+          "p_touch_30min": 0.617,
+          "p_gap_through_open": 0.287,
+          "median_time_to_touch_min": 0.0,
+          "post_fill_mfe_pct": {
+            "median": 2.47,
+            "p25": 0.63,
+            "p75": 4.5,
+            "p90": 7.92
+          },
+          "post_fill_mae_depth_pct": {
+            "median": 3.89,
+            "p25": 2.45,
+            "p75": 6.76,
+            "p90": 9.03
+          },
+          "suggested_stop_beyond_pct": 7.72,
+          "p_bounce_after_fill": 0.688,
+          "median_time_to_bounce_min": 9.1,
+          "bounce_target_pct": 1.0
+        },
+        {
+          "level_pct_below_prior_close": 3.0,
+          "n": 55,
+          "n_sessions": 159,
+          "n_filled": 103,
+          "n_fill_post": 103,
+          "n_bounced": 83,
+          "p_touch_session": 0.61,
+          "p_touch_30min": 0.501,
+          "p_gap_through_open": 0.118,
+          "median_time_to_touch_min": 2.4,
+          "post_fill_mfe_pct": {
+            "median": 2.85,
+            "p25": 0.95,
+            "p75": 4.3,
+            "p90": 7.91
+          },
+          "post_fill_mae_depth_pct": {
+            "median": 3.44,
+            "p25": 1.76,
+            "p75": 6.46,
+            "p90": 8.21
+          },
+          "suggested_stop_beyond_pct": 6.97,
+          "p_bounce_after_fill": 0.743,
+          "median_time_to_bounce_min": 12.4,
+          "bounce_target_pct": 1.0
+        },
+        {
+          "level_pct_below_prior_close": 4.0,
+          "n": 55,
+          "n_sessions": 159,
+          "n_filled": 88,
+          "n_fill_post": 88,
+          "n_bounced": 68,
+          "p_touch_session": 0.555,
+          "p_touch_30min": 0.4,
+          "p_gap_through_open": 0.059,
+          "median_time_to_touch_min": 7.9,
+          "post_fill_mfe_pct": {
+            "median": 2.96,
+            "p25": 0.94,
+            "p75": 5.33,
+            "p90": 8.99
+          },
+          "post_fill_mae_depth_pct": {
+            "median": 2.88,
+            "p25": 1.06,
+            "p75": 5.66,
+            "p90": 7.5
+          },
+          "suggested_stop_beyond_pct": 6.25,
+          "p_bounce_after_fill": 0.724,
+          "median_time_to_bounce_min": 5.3,
+          "bounce_target_pct": 1.0
+        },
+        {
+          "level_pct_below_prior_close": 5.0,
+          "n": 55,
+          "n_sessions": 159,
+          "n_filled": 65,
+          "n_fill_post": 65,
+          "n_bounced": 47,
+          "p_touch_session": 0.416,
+          "p_touch_30min": 0.251,
+          "p_gap_through_open": 0.029,
+          "median_time_to_touch_min": 17.7,
+          "post_fill_mfe_pct": {
+            "median": 1.55,
+            "p25": 0.71,
+            "p75": 5.51,
+            "p90": 6.64
+          },
+          "post_fill_mae_depth_pct": {
+            "median": 2.74,
+            "p25": 1.33,
+            "p75": 5.3,
+            "p90": 9.11
+          },
+          "suggested_stop_beyond_pct": 5.93,
+          "p_bounce_after_fill": 0.683,
+          "median_time_to_bounce_min": 7.8,
+          "bounce_target_pct": 1.0
+        }
+      ],
+      "recommended_fishing": {
+        "level_pct_below_prior_close": 4.0,
+        "p_touch_session": 0.555,
+        "p_bounce_after_fill": 0.724,
+        "stop_beyond_fill_pct": 6.25,
+        "target_pct": 2.96,
+        "rr": 0.47,
+        "ev_score": 0.232,
+        "rationale": "niveau au meilleur compromis fill × rebond ; stop sous le bruit (p80 des creux post-fill), cible = rebond médian post-fill"
+      },
+      "noise_stop_band": [
+        {
+          "target_pct": 1.0,
+          "n_winners": 118,
+          "mae_to_capture_pct": {
+            "median": 0.79,
+            "p25": 0.21,
+            "p75": 2.0,
+            "p90": 3.17
+          },
+          "suggested_stop_beyond_pct": 2.18,
+          "stop_survival_quantile": 80
+        },
+        {
+          "target_pct": 2.0,
+          "n_winners": 100,
+          "mae_to_capture_pct": {
+            "median": 1.03,
+            "p25": 0.3,
+            "p75": 2.13,
+            "p90": 3.83
+          },
+          "suggested_stop_beyond_pct": 2.36,
+          "stop_survival_quantile": 80
+        },
+        {
+          "target_pct": 3.0,
+          "n_winners": 81,
+          "mae_to_capture_pct": {
+            "median": 1.34,
+            "p25": 0.33,
+            "p75": 2.25,
+            "p90": 3.9
+          },
+          "suggested_stop_beyond_pct": 2.53,
+          "stop_survival_quantile": 80
+        }
+      ],
+      "zigzag_legs": {
+        "threshold_pct": 0.5,
+        "down_leg_pct": {
+          "median": 1.39,
+          "p25": 0.86,
+          "p75": 2.09,
+          "p90": 3.15
+        },
+        "up_leg_pct": {
+          "median": 1.32,
+          "p25": 0.85,
+          "p75": 2.2,
+          "p90": 3.68
+        },
+        "legs_per_session_median": 15.0,
+        "n_down_legs": 1200
+      },
+      "fishing_by_gap_type": {
+        "gap_down": {
+          "n": 83,
+          "weight_share": 0.539,
+          "fishing": [
+            {
+              "level_pct_below_prior_close": 1.0,
+              "n": 29,
+              "n_sessions": 83,
+              "n_filled": 83,
+              "n_fill_post": 83,
+              "n_bounced": 54,
+              "p_touch_session": 1.0,
+              "p_touch_30min": 0.987,
+              "p_gap_through_open": 0.797,
+              "median_time_to_touch_min": 0.0,
+              "post_fill_mfe_pct": {
+                "median": 2.13,
+                "p25": 0.54,
+                "p75": 4.67,
+                "p90": 7.32
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 4.52,
+                "p25": 3.05,
+                "p75": 6.61,
+                "p90": 9.37
+              },
+              "suggested_stop_beyond_pct": 7.09,
+              "p_bounce_after_fill": 0.713,
+              "median_time_to_bounce_min": 17.0,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 2.0,
+              "n": 29,
+              "n_sessions": 83,
+              "n_filled": 79,
+              "n_fill_post": 79,
+              "n_bounced": 59,
+              "p_touch_session": 0.91,
+              "p_touch_30min": 0.907,
+              "p_gap_through_open": 0.531,
+              "median_time_to_touch_min": 0.0,
+              "post_fill_mfe_pct": {
+                "median": 2.81,
+                "p25": 1.3,
+                "p75": 5.17,
+                "p90": 7.92
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 3.88,
+                "p25": 2.65,
+                "p75": 5.75,
+                "p90": 8.71
+              },
+              "suggested_stop_beyond_pct": 6.85,
+              "p_bounce_after_fill": 0.761,
+              "median_time_to_bounce_min": 10.7,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 3.0,
+              "n": 29,
+              "n_sessions": 83,
+              "n_filled": 76,
+              "n_fill_post": 76,
+              "n_bounced": 62,
+              "p_touch_session": 0.842,
+              "p_touch_30min": 0.756,
+              "p_gap_through_open": 0.218,
+              "median_time_to_touch_min": 0.9,
+              "post_fill_mfe_pct": {
+                "median": 3.34,
+                "p25": 1.09,
+                "p75": 5.01,
+                "p90": 7.9
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 2.9,
+                "p25": 1.74,
+                "p75": 5.01,
+                "p90": 7.96
+              },
+              "suggested_stop_beyond_pct": 6.19,
+              "p_bounce_after_fill": 0.781,
+              "median_time_to_bounce_min": 7.4,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 4.0,
+              "n": 29,
+              "n_sessions": 83,
+              "n_filled": 66,
+              "n_fill_post": 66,
+              "n_bounced": 54,
+              "p_touch_session": 0.766,
+              "p_touch_30min": 0.623,
+              "p_gap_through_open": 0.109,
+              "median_time_to_touch_min": 2.6,
+              "post_fill_mfe_pct": {
+                "median": 4.0,
+                "p25": 1.1,
+                "p75": 6.05,
+                "p90": 8.99
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 2.49,
+                "p25": 0.96,
+                "p75": 4.55,
+                "p90": 7.27
+              },
+              "suggested_stop_beyond_pct": 5.61,
+              "p_bounce_after_fill": 0.767,
+              "median_time_to_bounce_min": 3.9,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 5.0,
+              "n": 29,
+              "n_sessions": 83,
+              "n_filled": 47,
+              "n_fill_post": 47,
+              "n_bounced": 36,
+              "p_touch_session": 0.559,
+              "p_touch_30min": 0.391,
+              "p_gap_through_open": 0.053,
+              "median_time_to_touch_min": 6.8,
+              "post_fill_mfe_pct": {
+                "median": 2.34,
+                "p25": 1.07,
+                "p75": 6.23,
+                "p90": 8.36
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 2.52,
+                "p25": 0.86,
+                "p75": 4.93,
+                "p90": 8.84
+              },
+              "suggested_stop_beyond_pct": 5.34,
+              "p_bounce_after_fill": 0.767,
+              "median_time_to_bounce_min": 7.9,
+              "bounce_target_pct": 1.0
+            }
+          ]
+        },
+        "flat": {
+          "n": 13,
+          "weight_share": 0.094,
+          "fishing": [
+            {
+              "level_pct_below_prior_close": 1.0,
+              "n": 5,
+              "n_sessions": 13,
+              "n_filled": 10,
+              "n_fill_post": 10,
+              "n_bounced": 7,
+              "p_touch_session": 0.709,
+              "p_touch_30min": 0.542,
+              "p_gap_through_open": 0.0,
+              "median_time_to_touch_min": 0.8,
+              "post_fill_mfe_pct": {
+                "median": 1.66,
+                "p25": 0.65,
+                "p75": 4.12,
+                "p90": 8.68
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 3.54,
+                "p25": 1.49,
+                "p75": 8.94,
+                "p90": 9.97
+              },
+              "suggested_stop_beyond_pct": 9.33,
+              "p_bounce_after_fill": 0.553,
+              "median_time_to_bounce_min": 3.5,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 2.0,
+              "n": 5,
+              "n_sessions": 13,
+              "n_filled": 8,
+              "n_fill_post": 8,
+              "n_bounced": 5,
+              "p_touch_session": 0.549,
+              "p_touch_30min": 0.358,
+              "p_gap_through_open": 0.0,
+              "median_time_to_touch_min": 11.4,
+              "post_fill_mfe_pct": {
+                "median": 0.71,
+                "p25": 0.52,
+                "p75": 4.29,
+                "p90": 9.79
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 6.85,
+                "p25": 2.47,
+                "p75": 8.46,
+                "p90": 9.05
+              },
+              "suggested_stop_beyond_pct": 8.76,
+              "p_bounce_after_fill": 0.429,
+              "median_time_to_bounce_min": 11.1,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 3.0,
+              "n": 5,
+              "n_sessions": 13,
+              "n_filled": 6,
+              "n_fill_post": 6,
+              "n_bounced": 4,
+              "p_touch_session": 0.504,
+              "p_touch_30min": 0.189,
+              "p_gap_through_open": 0.0,
+              "median_time_to_touch_min": 41.9,
+              "post_fill_mfe_pct": {
+                "median": 1.01,
+                "p25": 0.7,
+                "p75": 6.34,
+                "p90": 10.93
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 6.18,
+                "p25": 1.51,
+                "p75": 7.64,
+                "p90": 8.12
+              },
+              "suggested_stop_beyond_pct": 7.92,
+              "p_bounce_after_fill": 0.418,
+              "median_time_to_bounce_min": 38.5,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 4.0,
+              "n": 5,
+              "n_sessions": 13,
+              "n_filled": 6,
+              "n_fill_post": 6,
+              "n_bounced": 3,
+              "p_touch_session": 0.504,
+              "p_touch_30min": 0.142,
+              "p_gap_through_open": 0.0,
+              "median_time_to_touch_min": 59.4,
+              "post_fill_mfe_pct": {
+                "median": 1.1,
+                "p25": 0.35,
+                "p75": 7.45,
+                "p90": 12.08
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 5.2,
+                "p25": 0.49,
+                "p75": 6.68,
+                "p90": 7.16
+              },
+              "suggested_stop_beyond_pct": 6.96,
+              "p_bounce_after_fill": 0.575,
+              "median_time_to_bounce_min": 12.2,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 5.0,
+              "n": 5,
+              "n_sessions": 13,
+              "n_filled": 4,
+              "n_fill_post": 4,
+              "n_bounced": 3,
+              "p_touch_session": 0.341,
+              "p_touch_30min": 0.127,
+              "p_gap_through_open": 0.0,
+              "median_time_to_touch_min": 59.4,
+              "post_fill_mfe_pct": {
+                "median": 1.08,
+                "p25": 0.67,
+                "p75": 2.02,
+                "p90": 2.35
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 5.18,
+                "p25": 4.16,
+                "p75": 6.16,
+                "p90": 6.18
+              },
+              "suggested_stop_beyond_pct": 6.18,
+              "p_bounce_after_fill": 0.51,
+              "median_time_to_bounce_min": 7.9,
+              "bounce_target_pct": 1.0
+            }
+          ]
+        },
+        "gap_up": {
+          "n": 63,
+          "weight_share": 0.365,
+          "fishing": [
+            {
+              "level_pct_below_prior_close": 1.0,
+              "n": 20,
+              "n_sessions": 63,
+              "n_filled": 33,
+              "n_fill_post": 33,
+              "n_bounced": 21,
+              "p_touch_session": 0.445,
+              "p_touch_30min": 0.314,
+              "p_gap_through_open": 0.0,
+              "median_time_to_touch_min": 12.4,
+              "post_fill_mfe_pct": {
+                "median": 0.97,
+                "p25": 0.66,
+                "p75": 1.99,
+                "p90": 5.85
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 4.08,
+                "p25": 1.32,
+                "p75": 8.47,
+                "p90": 11.03
+              },
+              "suggested_stop_beyond_pct": 8.98,
+              "p_bounce_after_fill": 0.499,
+              "median_time_to_bounce_min": 20.1,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 2.0,
+              "n": 20,
+              "n_sessions": 63,
+              "n_filled": 27,
+              "n_fill_post": 27,
+              "n_bounced": 19,
+              "p_touch_session": 0.369,
+              "p_touch_30min": 0.257,
+              "p_gap_through_open": 0.0,
+              "median_time_to_touch_min": 21.3,
+              "post_fill_mfe_pct": {
+                "median": 1.24,
+                "p25": 0.31,
+                "p75": 2.43,
+                "p90": 6.09
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 4.32,
+                "p25": 1.18,
+                "p75": 8.02,
+                "p90": 11.22
+              },
+              "suggested_stop_beyond_pct": 8.22,
+              "p_bounce_after_fill": 0.523,
+              "median_time_to_bounce_min": 15.1,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 3.0,
+              "n": 20,
+              "n_sessions": 63,
+              "n_filled": 21,
+              "n_fill_post": 21,
+              "n_bounced": 17,
+              "p_touch_session": 0.294,
+              "p_touch_30min": 0.204,
+              "p_gap_through_open": 0.0,
+              "median_time_to_touch_min": 19.7,
+              "post_fill_mfe_pct": {
+                "median": 1.5,
+                "p25": 0.76,
+                "p75": 2.59,
+                "p90": 3.56
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 4.15,
+                "p25": 2.19,
+                "p75": 7.28,
+                "p90": 11.44
+              },
+              "suggested_stop_beyond_pct": 7.6,
+              "p_bounce_after_fill": 0.724,
+              "median_time_to_bounce_min": 26.7,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 4.0,
+              "n": 20,
+              "n_sessions": 63,
+              "n_filled": 16,
+              "n_fill_post": 16,
+              "n_bounced": 11,
+              "p_touch_session": 0.255,
+              "p_touch_30min": 0.137,
+              "p_gap_through_open": 0.0,
+              "median_time_to_touch_min": 25.5,
+              "post_fill_mfe_pct": {
+                "median": 2.33,
+                "p25": 0.87,
+                "p75": 3.26,
+                "p90": 4.18
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 4.68,
+                "p25": 2.16,
+                "p75": 6.45,
+                "p90": 11.12
+              },
+              "suggested_stop_beyond_pct": 7.48,
+              "p_bounce_after_fill": 0.61,
+              "median_time_to_bounce_min": 14.5,
+              "bounce_target_pct": 1.0
+            },
+            {
+              "level_pct_below_prior_close": 5.0,
+              "n": 20,
+              "n_sessions": 63,
+              "n_filled": 14,
+              "n_fill_post": 14,
+              "n_bounced": 8,
+              "p_touch_session": 0.224,
+              "p_touch_30min": 0.077,
+              "p_gap_through_open": 0.0,
+              "median_time_to_touch_min": 56.8,
+              "post_fill_mfe_pct": {
+                "median": 0.81,
+                "p25": 0.54,
+                "p75": 2.14,
+                "p90": 5.23
+              },
+              "post_fill_mae_depth_pct": {
+                "median": 4.59,
+                "p25": 1.68,
+                "p75": 5.97,
+                "p90": 10.67
+              },
+              "suggested_stop_beyond_pct": 7.25,
+              "p_bounce_after_fill": 0.442,
+              "median_time_to_bounce_min": 12.4,
+              "bounce_target_pct": 1.0
+            }
+          ]
+        }
+      },
+      "early_drive_predictiveness": {
+        "first_min": 15,
+        "n_sessions": 160,
+        "base_rate_session_green": 0.495,
+        "p_session_green_if_early_green": 0.631,
+        "n_early_green": 62,
+        "p_session_green_if_early_red": 0.393,
+        "n_early_red": 98
+      },
+      "forward_excursion_bands": [
+        {
+          "window": "30min",
+          "window_min": 30,
+          "n": 160,
+          "net_return_pct": {
+            "q05": -6.09,
+            "q25": -2.06,
+            "q50": -0.12,
+            "q75": 1.98,
+            "q95": 4.37
+          },
+          "high_excursion_pct": {
+            "q05": 0.0,
+            "q25": 0.71,
+            "q50": 1.94,
+            "q75": 3.14,
+            "q95": 6.61
+          },
+          "low_excursion_pct": {
+            "q05": -6.94,
+            "q25": -3.44,
+            "q50": -2.07,
+            "q75": -0.89,
+            "q95": 0.0
+          }
+        },
+        {
+          "window": "60min",
+          "window_min": 60,
+          "n": 160,
+          "net_return_pct": {
+            "q05": -6.69,
+            "q25": -2.6,
+            "q50": 0.3,
+            "q75": 2.89,
+            "q95": 5.64
+          },
+          "high_excursion_pct": {
+            "q05": 0.0,
+            "q25": 0.75,
+            "q50": 2.59,
+            "q75": 4.21,
+            "q95": 7.91
+          },
+          "low_excursion_pct": {
+            "q05": -8.18,
+            "q25": -3.99,
+            "q50": -2.19,
+            "q75": -1.0,
+            "q95": -0.0
+          }
+        },
+        {
+          "window": "session",
+          "window_min": null,
+          "n": 160,
+          "net_return_pct": {
+            "q05": -9.08,
+            "q25": -3.5,
+            "q50": 0.02,
+            "q75": 3.41,
+            "q95": 10.98
+          },
+          "high_excursion_pct": {
+            "q05": 0.08,
+            "q25": 1.47,
+            "q50": 3.42,
+            "q75": 6.66,
+            "q95": 11.74
+          },
+          "low_excursion_pct": {
+            "q05": -11.27,
+            "q25": -5.78,
+            "q50": -3.09,
+            "q75": -1.36,
+            "q95": -0.1
+          }
+        }
+      ]
     },
     "halflife_sessions": 15.0,
     "ticker": "SMR"
@@ -2561,22 +3486,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-06-23T21:56:19.255898+00:00",
+    "generated_at": "2026-06-24T00:20:27.469499+00:00",
     "ticker": "SMR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 16,
+    "n_events": 17,
     "events": [
       {
         "date": "2026-06-24",
         "type": "macro",
         "label": "US New Home Sales",
         "importance": "low",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2591,8 +3516,8 @@
         "type": "macro",
         "label": "German Ifo Business Climate Index",
         "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2607,8 +3532,8 @@
         "type": "macro",
         "label": "Micron Technology (MU) earnings Q2 FY2026 — 24/06/2026",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2624,7 +3549,7 @@
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2640,7 +3565,7 @@
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2656,7 +3581,7 @@
         "label": "US PCE Price Index (headline) — Personal Income & Outlays",
         "importance": "high",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2672,7 +3597,7 @@
         "label": "US Core PCE Price Index (ex food & energy)",
         "importance": "high",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2688,7 +3613,7 @@
         "label": "US Personal Income & Spending",
         "importance": "medium",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2704,7 +3629,7 @@
         "label": "US GDP (advance / second / third estimate)",
         "importance": "high",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2720,7 +3645,7 @@
         "label": "US Durable Goods Orders",
         "importance": "low",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -2735,9 +3660,10 @@
         "type": "macro",
         "label": "US University of Michigan Consumer Sentiment (prelim + final)",
         "importance": "medium",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -2750,8 +3676,8 @@
         "type": "macro",
         "label": "US Conference Board Consumer Confidence",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2765,8 +3691,8 @@
         "type": "macro",
         "label": "German HICP Flash (inflation estimate)",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -2780,9 +3706,10 @@
         "type": "macro",
         "label": "US ISM Manufacturing PMI",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -2795,7 +3722,7 @@
         "label": "US Employment Situation (NFP / unemployment / earnings)",
         "importance": "high",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -2808,14 +3735,28 @@
         "type": "macro",
         "label": "US JOLTS (Job Openings and Labor Turnover)",
         "importance": "medium",
-        "sessions_to_event": 10,
-        "calendar_days": 14,
+        "sessions_to_event": 9,
+        "calendar_days": 13,
         "in_plan_horizon": [
           "deep"
         ],
         "impact": "macro_broad",
         "ticker_specific": false,
         "recommendation": null
+      },
+      {
+        "date": "2026-07-08",
+        "type": "macro",
+        "label": "US FOMC Meeting Minutes",
+        "importance": "medium",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
       }
     ],
     "earnings_in_swing": false,
@@ -2912,7 +3853,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-06-23T21:56:09.806852+00:00",
+    "generated_at": "2026-06-24T00:20:18.582113+00:00",
     "ticker": "SMR",
     "window_sessions": 60,
     "n_observations_aligned": 38,
@@ -3095,57 +4036,57 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-06-23T21:56:11.947089+00:00",
+    "generated_at": "2026-06-24T00:20:20.473907+00:00",
     "ticker": "SMR",
     "spot_price": 10.86,
     "expiries_available": [
       {
         "date": "2026-06-26",
-        "days_to_exp": 3
+        "days_to_exp": 2
       },
       {
         "date": "2026-07-02",
-        "days_to_exp": 9
+        "days_to_exp": 8
       },
       {
         "date": "2026-07-10",
-        "days_to_exp": 17
+        "days_to_exp": 16
       },
       {
         "date": "2026-07-17",
-        "days_to_exp": 24
+        "days_to_exp": 23
       },
       {
         "date": "2026-07-24",
-        "days_to_exp": 31
+        "days_to_exp": 30
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.9832,
-      "iv_atm_90d": 0.9844,
+      "iv_atm_30d": 1.0,
+      "iv_atm_90d": 1.0,
       "rv_20d_annualized": 1.1106,
-      "iv_rv_ratio": 0.885,
+      "iv_rv_ratio": 0.9,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -9.668,
+      "skew_25_delta_vol_pts": -9.766,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-06-26",
-      "m1_days_to_exp": 3,
-      "m1_iv_atm": 1.041,
+      "m1_days_to_exp": 2,
+      "m1_iv_atm": 1.2012,
       "m3_expiry": "2026-07-24",
-      "m3_days_to_exp": 31,
-      "m3_iv_atm": 0.9844,
-      "ratio_m1_m3": 1.0575,
+      "m3_days_to_exp": 30,
+      "m3_iv_atm": 1.0,
+      "ratio_m1_m3": 1.2012,
       "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-06-26",
-      "days_to_exp": 3,
+      "days_to_exp": 2,
       "put_call_ratio": 0.585,
       "total_oi_m1": 56135,
       "largest_call_strike_oi": {
@@ -3158,7 +4099,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 53754829.0,
+      "gex_total_usd_per_point": 51991793.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -3172,8 +4113,8 @@
       "bullish_signals": 3,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-9.7 pts) — peu de demande de protection",
-        "GEX positif (53.8M$/pt) = MM long gamma stabilisateur",
+        "skew faible (-9.8 pts) — peu de demande de protection",
+        "GEX positif (52.0M$/pt) = MM long gamma stabilisateur",
         "P/C ratio bas (0.58) — biais call dominant"
       ]
     },
@@ -3213,7 +4154,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-06-23T21:56:18.328654+00:00",
+    "generated_at": "2026-06-24T00:20:26.605816+00:00",
     "ticker": "SMR",
     "short_interest": {
       "status": "ok",
@@ -3227,7 +4168,7 @@
       "float_shares": 339315189,
       "delta_shares_short_mom_pct": -7.11,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-06-23T21:56:13.163774+00:00"
+      "fetched_at": "2026-06-24T00:20:21.531861+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -3296,7 +4237,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 5,
-      "fetched_at": "2026-06-23T21:56:18.327617+00:00"
+      "fetched_at": "2026-06-24T00:20:26.605008+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -11170,7 +12111,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-23T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -11215,7 +12156,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-23T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -11260,7 +12201,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-23T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
