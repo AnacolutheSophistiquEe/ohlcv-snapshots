@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-25T00:16:50.707631+00:00",
+  "generated_at": "2026-06-25T21:52:44.898880+00:00",
   "prediction_id": "IONQ_B_20260625",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "IONQ",
@@ -9,8 +9,8 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 53.6,
-    "quantity": 2,
+    "limit_price": 50.56,
+    "quantity": 3,
     "tif": "GTD",
     "gtd": "2026-06-30T22:00:00+00:00"
   },
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 54.9,
+      "limit_price": 53.45,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
@@ -26,16 +26,24 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 58.77,
+      "limit_price": 57.23,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 61.02,
+      "quantity": 1,
+      "tif": "GTC",
+      "tag": "T3"
+    },
+    {
+      "action": "SELL",
       "order_type": "STP",
-      "stop_price": 49.1,
-      "quantity": 2,
+      "stop_price": 47.77,
+      "quantity": 3,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -77,7 +85,7 @@
       },
       {
         "tag": "T3",
-        "qty": 0
+        "qty": 1
       }
     ]
   },
@@ -94,15 +102,15 @@
     "p_hit_upper": {
       "T1": 0.3404,
       "T2": 0.1793,
-      "T3": 0.0814
+      "T3": 0.0815
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 107.2,
-    "hold_tolerance_breach_price": null,
+    "notional_eur": 151.68,
+    "hold_tolerance_breach_price": 37.92,
     "hold_fallback_active": true,
     "prediction_id": "IONQ_B_20260625"
   },

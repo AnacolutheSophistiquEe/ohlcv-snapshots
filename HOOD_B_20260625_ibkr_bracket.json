@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-25T00:22:12.078177+00:00",
+  "generated_at": "2026-06-25T21:58:46.270980+00:00",
   "prediction_id": "HOOD_B_20260625",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "HOOD",
@@ -9,8 +9,8 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 97.19,
-    "quantity": 6,
+    "limit_price": 93.47,
+    "quantity": 5,
     "tif": "GTD",
     "gtd": "2026-06-30T22:00:00+00:00"
   },
@@ -18,16 +18,16 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 98.85,
-      "quantity": 6,
+      "limit_price": 94.6,
+      "quantity": 5,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 79.55,
-      "quantity": 6,
+      "stop_price": 75.82,
+      "quantity": 5,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -59,7 +59,7 @@
     "qty_split": [
       {
         "tag": "T3",
-        "qty": 6
+        "qty": 5
       }
     ]
   },
@@ -67,24 +67,24 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 8.0,
+    "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.1152,
+    "ev_pct_risk": 0.0746,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.3585,
-      "T2": 0.1964,
-      "T3": 0.0901
+      "T1": 0.3496,
+      "T2": 0.1869,
+      "T3": 0.0854
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 583.14,
-    "hold_tolerance_breach_price": 72.8925,
+    "notional_eur": 467.35,
+    "hold_tolerance_breach_price": 70.1025,
     "hold_fallback_active": true,
     "prediction_id": "HOOD_B_20260625"
   },
