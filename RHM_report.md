@@ -1,18 +1,18 @@
 # RHM
 
-**Generated** : 2026-06-24T21:35:38.473843+00:00  
+**Generated** : 2026-06-25T00:02:01.791139+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 0/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : trending · volatilite normal · €949.00  
+**Subtitle** : trending · volatilite normal · €945.40  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)  
-> ↳ spot €949.00 (+7.4% vs entrée) · entrée €883.27 · stop €863.55 · T1 €908.27 · R/R 1.27  
-> ↳ P(T1 av. stop) 21 % · EV/risk -0.04 · ¼-Kelly 0.0 · _probas brutes (Monte-Carlo), non calibrées · n=0_  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-06-25 — US Core PCE Price Index (ex food & energy) (J-0 sess · macro taux)  
+> ↳ spot €945.40 (+7.5% vs entrée) · entrée €879.67 · stop €859.95 · T1 €904.93 · R/R 1.28  
+> ↳ P(T1 av. stop) 21 % · EV/risk -0.039 · ¼-Kelly 0.0 · _probas brutes (Monte-Carlo), non calibrées · n=0_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -71 % hors [0,100] (R² max 0.99). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
+>   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -74 % hors [0,100] (R² max 0.99). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
 ## Régime & alignement multi-TF
@@ -30,17 +30,17 @@ Plan privilegie A (intraday), composite 0/10, conviction 'Strong Pass (negative 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : €878.27–€888.27 (mid €883.27)
-- Spot actuel : €949.00 (+7.4% au-dessus de la zone — repli à attendre)
-- Stop : €863.55 (stop swing_plan-based (-16.58%))
-- Targets : T1 €908.27 · R/R 1.27 | T2 €933.26 · R/R 2.53 | T3 €958.26 · R/R 3.8
+- Entry (zone de repli) : €874.62–€884.72 (mid €879.67)
+- Spot actuel : €945.40 (+7.5% au-dessus de la zone — repli à attendre)
+- Stop : €859.95 (stop swing_plan-based (-16.67%))
+- Targets : T1 €904.93 · R/R 1.28 | T2 €930.18 · R/R 2.56 | T3 €955.44 · R/R 3.84
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €863.55
+- Invalidation : close sous €859.95
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.04 | EV/share : €-0.784 | p_fill : —
+- EV/risk : -0.039 | EV/share : €-0.776 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 21 % | T2 2 % | T3 0 %
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ EV négatif ⇒ Pass)_
 - Calibration des probas : _probas brutes (Monte-Carlo), non calibrées · n=0_
@@ -129,26 +129,26 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-06-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-06-25 — US Core PCE Price Index (ex food & energy) (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 23.5  _(survente)_
+- **RSI** : 23.3  _(survente)_
 - **ADX** : 25.4  _(tendance etablie)_
-- **MACD** : hist -10.808  _(bearish_recent)_
-- **BB** : %B -0.39 · largeur 22.5%
+- **MACD** : hist -11.038  _(bearish_recent)_
+- **BB** : %B -0.4 · largeur 22.7%
 - **ATR** : 65.73 (65.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV falling · CMF -0.227  _(distribution)_
-- **Vol ratio** : 5.09  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV falling · CMF -0.203  _(distribution)_
+- **Vol ratio** : 4.11  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 41.1  _(transition)_
-- **MA** : MA20 1187.84 · MA50 1255.3 · MA200 1574.83  _(prix < MA20)_
-- **Dist MA** : MA20 -20.1% · MA50 -24.4% · MA200 -39.7%
+- **MA** : MA20 1187.66 · MA50 1255.23 · MA200 1574.81  _(prix < MA20)_
+- **Dist MA** : MA20 -20.4% · MA50 -24.7% · MA200 -40.0%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (39772 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (39594 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
