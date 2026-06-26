@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-26T00:08:17.131375+00:00",
+  "generated_at": "2026-06-26T21:42:45.404264+00:00",
   "prediction_id": "AL2SI_A_20260626",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "AL2SI",
@@ -9,24 +9,24 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 25.47,
-    "quantity": 6,
+    "limit_price": 27.38,
+    "quantity": 5,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 28.88,
-      "quantity": 6,
+      "limit_price": 30.3,
+      "quantity": 5,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 16.67,
-      "quantity": 6,
+      "stop_price": 17.67,
+      "quantity": 5,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -58,7 +58,7 @@
     "qty_split": [
       {
         "tag": "T3",
-        "qty": 6
+        "qty": 5
       }
     ]
   },
@@ -66,24 +66,24 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 4.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0124,
+    "ev_pct_risk": -0.0094,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.2477,
-      "T2": 0.0399,
-      "T3": 0.0039
+      "T1": 0.2586,
+      "T2": 0.045,
+      "T3": 0.0056
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 153.6,
-    "hold_tolerance_breach_price": 19.2,
+    "notional_eur": 137.6,
+    "hold_tolerance_breach_price": 20.64,
     "hold_fallback_active": true,
     "prediction_id": "AL2SI_A_20260626"
   },
