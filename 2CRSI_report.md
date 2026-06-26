@@ -1,19 +1,15 @@
 # AL2SI
 
-**Generated** : 2026-06-25T21:43:37.647670+00:00  
+**Generated** : 2026-06-26T00:08:16.800987+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 14.9 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : strong_trend · volatilite extreme · €25.48  
+**Subtitle** : strong_trend · volatilite extreme · €25.60  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-06-25 — US Core PCE Price Index (ex food & energy) (J-0 sess · macro taux)  
-> ↳ spot €25.48 (+14.0% vs entrée) · entrée €22.36 · stop €20.57 · T1 €24.18 · R/R 1.02  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (Kelly ≤ 0)  
+> ↳ spot €25.60 (+14.0% vs entrée) · entrée €22.45 · stop €20.65 · T1 €24.28 · R/R 1.02  
 > ↳ P(T1 av. stop) 25 % · EV/risk -0.012 · ¼-Kelly 0.0 · _probas brutes (Monte-Carlo), non calibrées · n=0_  
-
-> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -20 % hors [0,100] (R² max 0.95). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
-
 
 ## Régime & alignement multi-TF
 
@@ -30,12 +26,12 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Pass (negative EV)'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : €22.08–€22.64 (mid €22.36)
-- Spot actuel : €25.48 (+14.0% au-dessus de la zone — repli à attendre)
-- Stop : €20.57 (stop swing_plan-based (-34.78%))
-- Targets : T1 €24.18 · R/R 1.02 | T2 €26.01 · R/R 2.04 | T3 €27.83 · R/R 3.06
+- Entry (zone de repli) : €22.17–€22.73 (mid €22.45)
+- Spot actuel : €25.60 (+14.0% au-dessus de la zone — repli à attendre)
+- Stop : €20.65 (stop swing_plan-based (-34.88%))
+- Targets : T1 €24.28 · R/R 1.02 | T2 €26.11 · R/R 2.03 | T3 €27.94 · R/R 3.05
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €20.57
+- Invalidation : close sous €20.65
 
 
 ## Edge, scénarios & sizing
@@ -45,7 +41,7 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Pass (negative EV)'.
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ EV négatif ⇒ Pass)_
 - Calibration des probas : _probas brutes (Monte-Carlo), non calibrées · n=0_
 - Régime probabiliste (posterior HMM, intraday) : bull 10.2 | bear 62.0 | side 27.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional réel 153.0 (= 6 part(s) × prix) · cible 160.0
+- Sizing : notional réel 154.0 (= 6 part(s) × prix) · cible 160.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
@@ -129,26 +125,26 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-06-25 — US Core PCE Price Index (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-5 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-5 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
 - **RSI** : 25.1  _(survente)_
 - **ADX** : 31.0  _(tendance etablie)_
-- **MACD** : hist -3.059  _(pas de croisement recent)_
-- **BB** : %B 0.14 · largeur 116.7%
+- **MACD** : hist -3.052  _(pas de croisement recent)_
+- **BB** : %B 0.15 · largeur 116.6%
 - **ATR** : 6.64 (100.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.075  _(distribution)_
-- **Vol ratio** : 1.48  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.066  _(distribution)_
+- **Vol ratio** : 1.09  _(volume normal)_
 - **Choppiness** : 32.0  _(marche directionnel)_
-- **MA** : MA20 43.6 · MA50 41.74 · MA200 22.29  _(prix < MA20)_
-- **Dist MA** : MA20 -41.6% · MA50 -39.0% · MA200 +14.3%
+- **MA** : MA20 43.61 · MA50 41.74 · MA200 22.29  _(prix < MA20)_
+- **Dist MA** : MA20 -41.3% · MA50 -38.7% · MA200 +14.9%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (42676 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (40907 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,16 +1,16 @@
 # SAF
 
-**Generated** : 2026-06-25T21:42:08.345498+00:00  
+**Generated** : 2026-06-26T00:07:01.565284+00:00  
 **Santé technique** : 10/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : strong_trend · volatilite normal · €343.70  
+**Subtitle** : strong_trend · volatilite normal · €343.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-5 sess · macro taux)  
-> ↳ spot €343.70 (+9.2% vs entrée) · entrée €314.68 · stop €311.22 · T1 €321.58 · R/R 1.99  
-> ↳ P(T1 av. stop) 32 % · EV/risk -0.087 · ¼-Kelly 0.0 · _probas brutes (Monte-Carlo), non calibrées · n=0_  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-4 sess · macro taux)  
+> ↳ spot €343.00 (+9.1% vs entrée) · entrée €314.36 · stop €310.92 · T1 €321.24 · R/R 2.0  
+> ↳ P(T1 av. stop) 32 % · EV/risk -0.088 · ¼-Kelly 0.0 · _probas brutes (Monte-Carlo), non calibrées · n=0_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 617 % hors [0,100] (R² max 0.87). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
+>   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 610 % hors [0,100] (R² max 0.87). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
 ## Régime & alignement multi-TF
@@ -22,12 +22,12 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## ⚠ Contradictions techniques
 
-- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.050 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
+- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.070 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
   - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
   - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
   - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
   - _Vraie incohérence (rare) : volume corrompu/dégradé (flux délayé, volume nul certains jours) fausserait l'un des deux — vérifier la qualité du volume si les valeurs semblent aberrantes._
-- 🔴 **Santé haussière vs sur-extension** — Santé technique 10/10 élevée alors que : RSI 82.4 > 70 (surachat) ; extension extrême (≥3×ATR, confluence MA20/50) — le score mesure la santé durable, PAS le timing ; entrée au prix actuel défavorable.
+- 🔴 **Santé haussière vs sur-extension** — Santé technique 10/10 élevée alors que : RSI 82.2 > 70 (surachat) ; extension extrême (≥3×ATR, confluence MA20/50) — le score mesure la santé durable, PAS le timing ; entrée au prix actuel défavorable.
   - _Par DESIGN (le plus courant) : le score mesure la santé technique DURABLE (structure de tendance), pas le timing. Un uptrend sain mais étiré score haut ET flag surachat — c'est attendu ; le flag empêche de lire « score élevé = acheter maintenant »._
   - _Momentum parabolique : RSI > 70 + %B > 0,95 + extension extrême = phase d'accélération qui peut soit continuer (trend-following) soit se retourner brutalement → forte asymétrie de risque à l'entrée._
   - _Point de calcul à vérifier (≠ ce que disait l'audit §3.4) : le malus d'over-extension (ex-T_penalty, −2 si « extreme ») a été SORTI du score lors de la refonte §A3 — le score = santé pure, le malus vit dans le bloc TIMING (d'où le « étendu »). Donc le « score plafond + surachat » est normal, pas un poids mal calibré. Le seul vrai risque de calcul ici est la CLASSIFICATION d'over-extension elle-même (compute_overextension) : qu'« extreme » se déclenche au bon seuil._
@@ -41,22 +41,22 @@ Plan privilegie B (swing), composite 10/10, conviction 'Pass (negative EV)'.
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : €313.30–€316.06 (mid €314.68)
-- Spot actuel : €343.70 (+9.2% au-dessus de la zone — repli à attendre)
-- Stop : €311.22 (stop swing_plan-based (-9.45%))
-- Targets : T1 €321.58 · R/R 1.99 | T2 €328.49 · R/R 3.99 | T3 €335.40 · R/R 5.99
+- Entry (zone de repli) : €312.99–€315.74 (mid €314.36)
+- Spot actuel : €343.00 (+9.1% au-dessus de la zone — repli à attendre)
+- Stop : €310.92 (stop swing_plan-based (-9.35%))
+- Targets : T1 €321.24 · R/R 2.0 | T2 €328.12 · R/R 4.0 | T3 €335.00 · R/R 6.0
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €311.22
+- Invalidation : close sous €310.92
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.087 | EV/share : €-0.301 | p_fill : —
+- EV/risk : -0.088 | EV/share : €-0.301 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 32 % | T2 16 % | T3 6 %
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ EV négatif ⇒ Pass)_
 - Calibration des probas : _probas brutes (Monte-Carlo), non calibrées · n=0_
-- Régime probabiliste (posterior HMM, swing) : bull 5.6 | bear 31.5 | side 62.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional réel 344.0 (= 1 part(s) × prix) · cible 640.0
+- Régime probabiliste (posterior HMM, swing) : bull 5.6 | bear 31.0 | side 63.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Sizing : notional réel 343.0 (= 1 part(s) × prix) · cible 640.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
@@ -140,26 +140,26 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-06-25 — US Core PCE Price Index (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-5 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-5 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 82.4  _(surachat)_
+- **RSI** : 82.2  _(surachat)_
 - **ADX** : 26.6  _(tendance etablie)_
-- **MACD** : hist 3.07  _(pas de croisement recent)_
-- **BB** : %B 0.94 · largeur 22.6%
+- **MACD** : hist 3.025  _(pas de croisement recent)_
+- **BB** : %B 0.94 · largeur 22.5%
 - **ATR** : 9.5 (74.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF -0.05  _(neutre)_
-- **Vol ratio** : 1.01  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF -0.073  _(distribution)_
+- **Vol ratio** : 0.36  _(volume atone)_
 - **Choppiness** : 31.1  _(marche directionnel)_
-- **MA** : MA20 312.4 · MA50 293.62 · MA200 299.41  _(prix > MA20)_
-- **Dist MA** : MA20 +10.0% · MA50 +17.1% · MA200 +14.8%
+- **MA** : MA20 312.36 · MA50 293.61 · MA200 299.4  _(prix > MA20)_
+- **Dist MA** : MA20 +9.8% · MA50 +16.8% · MA200 +14.6%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (42186 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (41196 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
