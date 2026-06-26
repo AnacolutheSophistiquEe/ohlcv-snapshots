@@ -1,0 +1,54 @@
+{
+  "available": true,
+  "generated_at": "2026-06-26T00:23:33.897693+00:00",
+  "window_sessions": 56,
+  "tickers_used": [
+    "AL2SI",
+    "ENR",
+    "EVT",
+    "HOOD",
+    "IONQ",
+    "SAF",
+    "SOFI",
+    "SRT3"
+  ],
+  "tickers_skipped": [],
+  "weights_eur": {
+    "AL2SI": 153.6,
+    "ENR": 327.64,
+    "EVT": 284.08,
+    "HOOD": 467.35,
+    "IONQ": 151.68,
+    "SAF": 343.0,
+    "SOFI": 397.9,
+    "SRT3": 230.7
+  },
+  "total_notional_eur": 2355.95,
+  "capital_total_eur": 2000.0,
+  "var_95": {
+    "method": "gaussian_1d",
+    "z_95": 1.6448536269514722,
+    "sigma_portfolio_daily_eur": 63.21,
+    "value_eur": 103.97,
+    "pct_total_notional": 4.41,
+    "pct_capital": 5.2
+  },
+  "panel_beta_weighted": {},
+  "concentration_flags": [],
+  "high_corr_pairs_in_panel": [
+    {
+      "pair": "HOOD_SOFI",
+      "rho": 0.774,
+      "share_pct": 36.7,
+      "flag": "red"
+    }
+  ],
+  "scaling": {
+    "var_threshold_pct": 8.0,
+    "var_ref_metric": "var_95_pct_capital",
+    "scale_factor": 1.0,
+    "scaling_applied": false,
+    "note": "VaR sous le seuil, pas de scaling nécessaire."
+  },
+  "note": "Modèle Gaussien — ne capte pas les queues épaisses. Pour stress, utiliser compute_stress_test.py. Net beta = combinaison linéaire pondérée des betas par ticker × benchmark."
+}
