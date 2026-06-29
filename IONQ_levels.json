@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-06-26T21:59:42Z",
+    "generated_at": "2026-06-29T00:23:23Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-29T08:00:00Z",
-    "valid_until": "2026-06-29T21:00:00Z",
+    "valid_from": "2026-06-30T08:00:00Z",
+    "valid_until": "2026-06-30T21:00:00Z",
     "source_precomputed": "IONQ_precomputed.json"
   },
   "context": {
@@ -24,9 +24,9 @@
     },
     "volatility_regime": "high",
     "signals_counter": {
-      "buy": 2,
+      "buy": 3,
       "sell": 5,
-      "neutral": 8,
+      "neutral": 7,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,10 +37,10 @@
       "median_bounce_pct": 7.78,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.90), vol high, signals neutral (2b/5s/8n)."
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.90), vol high, signals neutral (3b/5s/7n)."
   },
   "notes": {
-    "atr_daily": 5.4196,
+    "atr_daily": 5.4396,
     "atr_pct_daily": null,
     "beta_60d": 2.9404,
     "beta_benchmark": "IWM",
@@ -62,7 +62,7 @@
       {
         "indicator": "obv",
         "type": "hidden_bearish",
-        "confidence": 0.38,
+        "confidence": 0.37,
         "bars_ago": 4,
         "at_price": null
       }
@@ -83,26 +83,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 48.8231,
-        "max": 49.1169
+        "min": 48.7932,
+        "max": 49.0868
       },
       "stop": {
-        "price": 41.1806,
+        "price": 41.1506,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -15.91
+        "distance_pct": -15.92
       },
       "targets": [
         {
           "level": 1,
           "price": 49.6036,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 0.08
+          "rr": 0.09
         },
         {
           "level": 2,
           "price": 52.9519,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 0.51
+          "rr": 0.52
         },
         {
           "level": 3,
@@ -169,9 +169,9 @@
         "max": 34.6474
       },
       "stop": {
-        "price": 26.3456,
+        "price": 26.3156,
         "basis": "fallback_sr_support",
-        "distance_pct": -23.2
+        "distance_pct": -23.28
       },
       "targets": [
         {
@@ -184,13 +184,13 @@
           "level": 2,
           "price": 52.9519,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 2.34
+          "rr": 2.33
         },
         {
           "level": 3,
           "price": 56.3002,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 2.76
+          "rr": 2.75
         }
       ],
       "preferred_target": 1,
@@ -214,7 +214,7 @@
     }
   ],
   "invalidation": {
-    "price": 26.0821,
+    "price": 26.0524,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

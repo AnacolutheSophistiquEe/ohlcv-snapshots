@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-06-26T21:59:42Z",
+    "generated_at": "2026-06-29T00:23:23Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-29T08:00:00Z",
-    "valid_until": "2026-06-29T21:00:00Z",
+    "valid_from": "2026-06-30T08:00:00Z",
+    "valid_until": "2026-06-30T21:00:00Z",
     "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (0.90), vol low, signals sell (4b/9s/3n)."
   },
   "notes": {
-    "atr_daily": 9.4871,
+    "atr_daily": 9.49,
     "atr_pct_daily": null,
     "beta_60d": 1.9301,
     "beta_benchmark": "IWM",
@@ -68,18 +68,18 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 73.2643,
-        "max": 74.7519
+        "min": 73.215,
+        "max": 74.7016
       },
       "stop": {
-        "price": 60.1493,
+        "price": 60.095,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -18.73
+        "distance_pct": -18.74
       },
       "targets": [
         {
           "level": 3,
-          "price": 75.9475,
+          "price": 75.9406,
           "basis": "plafond band 95% · touche hist. 72% (sans stop)",
           "rr": 0.14
         }
@@ -105,7 +105,7 @@
     }
   ],
   "invalidation": {
-    "price": 59.5478,
+    "price": 59.4941,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

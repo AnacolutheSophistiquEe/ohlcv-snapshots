@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMR",
-    "generated_at": "2026-06-26T21:59:42Z",
+    "generated_at": "2026-06-29T00:23:23Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-06-29T08:00:00Z",
-    "valid_until": "2026-06-29T21:00:00Z",
+    "valid_from": "2026-06-30T08:00:00Z",
+    "valid_until": "2026-06-30T21:00:00Z",
     "source_precomputed": "SMR_precomputed.json"
   },
   "context": {
@@ -14,7 +14,7 @@
     "ta_score": {
       "value": 2,
       "max": 10,
-      "label": "very_bearish"
+      "label": "bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
@@ -24,11 +24,11 @@
     },
     "volatility_regime": "low",
     "signals_counter": {
-      "buy": 1,
-      "sell": 7,
-      "neutral": 7,
+      "buy": 2,
+      "sell": 5,
+      "neutral": 8,
       "total": 15,
-      "verdict": "strong_sell"
+      "verdict": "neutral"
     },
     "mean_reversion_score": {
       "setup": "rsi_40-50_dist_ma20_-10_-5",
@@ -37,7 +37,7 @@
       "median_bounce_pct": 3.14,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bear (0.84), vol low, signals strong_sell (1b/7s/7n)."
+    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM bear (0.84), vol low, signals neutral (2b/5s/8n)."
   },
   "notes": {
     "atr_daily": 0.9474,
