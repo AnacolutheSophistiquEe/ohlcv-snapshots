@@ -1,15 +1,15 @@
 # 000660
 
-**Generated** : 2026-06-26T21:44:08.289559+00:00  
+**Generated** : 2026-06-29T00:09:07.096459+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
-**Santé technique** : 10/10 — **Rating** : Neutral  
+**Santé technique** : 10/10 — **Rating** : Strong Buy  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite extreme · ₩2673000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-4 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-2 sess · macro taux)  
 > ↳ spot ₩2673000.00 (+5.8% vs entrée) · entrée ₩2526700.00 · stop ₩2414082.39 · T1 ₩2751935.21 · R/R 2.0  
-> ↳ P(T1 av. stop) 36 % · EV/risk 0.106 · ¼-Kelly 0.005 · _probas brutes (Monte-Carlo), non calibrées · n=0_  
+> ↳ P(T1 av. stop) 48 % · EV/risk 0.897 · ¼-Kelly 0.046 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -20,7 +20,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie B (swing), composite 10/10, conviction 'Neutral'.
+Plan privilegie B (swing), composite 10/10, conviction 'Strong Buy'.
 
 
 ## Niveaux clés & plan principal
@@ -36,10 +36,10 @@ Plan privilegie B (swing), composite 10/10, conviction 'Neutral'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.106 | EV/share : ₩11906.140 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 36 % | T2 20 % | T3 9 %
-- Kelly (position) : f* 0.022 | ¼-Kelly 0.005 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ EV négatif ⇒ Pass)_
-- Calibration des probas : _probas brutes (Monte-Carlo), non calibrées · n=0_
+- EV/risk : 0.897 | EV/share : ₩101030.146 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 48 % | T2 22 % | T3 7 %
+- Kelly (position) : f* 0.186 | ¼-Kelly 0.046 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 50.1 | bear 16.3 | side 33.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 640.0
 
@@ -62,8 +62,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-4 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-2 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-2 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -82,5 +82,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (18058 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (18194 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
