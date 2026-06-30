@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-06-30T00:04:48.228278+00:00",
+  "generated_at": "2026-06-30T21:38:59.803801+00:00",
   "prediction_id": "EVT_A_20260630",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "EVT",
@@ -9,15 +9,15 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 4.91,
-    "quantity": 58,
+    "limit_price": 4.97,
+    "quantity": 57,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 5.06,
+      "limit_price": 5.1,
       "quantity": 29,
       "tif": "GTC",
       "tag": "T1"
@@ -25,7 +25,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 5.21,
+      "limit_price": 5.24,
       "quantity": 17,
       "tif": "GTC",
       "tag": "T2"
@@ -33,16 +33,16 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 5.36,
-      "quantity": 12,
+      "limit_price": 5.39,
+      "quantity": 11,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 4.84,
-      "quantity": 58,
+      "stop_price": 4.89,
+      "quantity": 57,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -84,7 +84,7 @@
       },
       {
         "tag": "T3",
-        "qty": 12
+        "qty": 11
       }
     ]
   },
@@ -94,22 +94,22 @@
     "horizon_label_long": "intraday",
     "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.0137,
+    "ev_pct_risk": 0.01,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.6163,
-      "T2": 0.3251,
-      "T3": 0.193
+      "T1": 0.638,
+      "T2": 0.351,
+      "T3": 0.2151
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 286.17,
-    "hold_tolerance_breach_price": 3.7005,
+    "notional_eur": 284.89,
+    "hold_tolerance_breach_price": 3.7485,
     "hold_fallback_active": true,
     "prediction_id": "EVT_A_20260630"
   },
