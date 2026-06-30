@@ -6,7 +6,7 @@
     "exchange": "NYSE",
     "currency": "USD",
     "isin": "US46222L1089",
-    "generated_at": "2026-06-29T21:52:43.258943+00:00",
+    "generated_at": "2026-06-30T00:17:01.237808+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -2221,7 +2221,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-06-29T21:52:16.142340+00:00",
+    "generated_at": "2026-06-30T00:16:37.466988+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7234,22 +7234,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-06-29T21:52:28.528413+00:00",
+    "generated_at": "2026-06-30T00:16:48.522103+00:00",
     "ticker": "IONQ",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 12,
+    "n_events": 14,
     "events": [
       {
         "date": "2026-06-30",
         "type": "macro",
         "label": "US Conference Board Consumer Confidence",
         "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7264,8 +7264,8 @@
         "type": "macro",
         "label": "US JOLTS (Job Openings and Labor Turnover)",
         "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7280,8 +7280,8 @@
         "type": "macro",
         "label": "German HICP Flash (inflation estimate)",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7297,7 +7297,7 @@
         "label": "US ISM Manufacturing PMI",
         "importance": "medium",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7313,7 +7313,7 @@
         "label": "US ADP National Employment Report",
         "importance": "medium",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7329,7 +7329,7 @@
         "label": "Eurozone HICP Flash juin 2026 — 01/07/2026 (Eurostat)",
         "importance": "high",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7344,9 +7344,10 @@
         "type": "macro",
         "label": "US Employment Situation (NFP / unemployment / earnings)",
         "importance": "high",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -7359,9 +7360,10 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -7374,9 +7376,10 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -7389,8 +7392,8 @@
         "type": "macro",
         "label": "US ISM Services PMI",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7405,7 +7408,7 @@
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7418,14 +7421,42 @@
         "type": "macro",
         "label": "SK Hynix (SKH) ADR IPO Nasdaq — 10/07/2026 ($29.4 Md)",
         "importance": "high",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
         "impact": "macro_broad",
         "ticker_specific": false,
         "recommendation": null
+      },
+      {
+        "date": "2026-07-14",
+        "type": "macro",
+        "label": "US CPI (headline)",
+        "importance": "high",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+      },
+      {
+        "date": "2026-07-14",
+        "type": "macro",
+        "label": "US Core CPI (ex food & energy)",
+        "importance": "high",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
       }
     ],
     "earnings_in_swing": false,
@@ -7522,7 +7553,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-06-29T21:52:18.729804+00:00",
+    "generated_at": "2026-06-30T00:16:39.828498+00:00",
     "ticker": "IONQ",
     "window_sessions": 60,
     "n_observations_aligned": 34,
@@ -7705,57 +7736,57 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-06-29T21:52:21.332193+00:00",
+    "generated_at": "2026-06-30T00:16:41.832563+00:00",
     "ticker": "IONQ",
     "spot_price": 53.88,
     "expiries_available": [
       {
         "date": "2026-07-02",
-        "days_to_exp": 3
+        "days_to_exp": 2
       },
       {
         "date": "2026-07-10",
-        "days_to_exp": 11
+        "days_to_exp": 10
       },
       {
         "date": "2026-07-17",
-        "days_to_exp": 18
+        "days_to_exp": 17
       },
       {
         "date": "2026-07-24",
-        "days_to_exp": 25
+        "days_to_exp": 24
       },
       {
         "date": "2026-07-31",
-        "days_to_exp": 32
+        "days_to_exp": 31
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.9112,
-      "iv_atm_90d": 0.8937,
+      "iv_atm_30d": 0.9169,
+      "iv_atm_90d": 0.9075,
       "rv_20d_annualized": 0.9995,
-      "iv_rv_ratio": 0.912,
+      "iv_rv_ratio": 0.917,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": 1.807,
+      "skew_25_delta_vol_pts": 1.831,
       "label": "normal"
     },
     "term_structure": {
       "m1_expiry": "2026-07-02",
-      "m1_days_to_exp": 3,
-      "m1_iv_atm": 0.9502,
+      "m1_days_to_exp": 2,
+      "m1_iv_atm": 1.0972,
       "m3_expiry": "2026-07-31",
-      "m3_days_to_exp": 32,
-      "m3_iv_atm": 0.8937,
-      "ratio_m1_m3": 1.0632,
+      "m3_days_to_exp": 31,
+      "m3_iv_atm": 0.9075,
+      "ratio_m1_m3": 1.209,
       "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-07-02",
-      "days_to_exp": 3,
+      "days_to_exp": 2,
       "put_call_ratio": 1.601,
       "total_oi_m1": 44825,
       "largest_call_strike_oi": {
@@ -7768,7 +7799,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 21394723.0,
+      "gex_total_usd_per_point": 18022744.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7821,7 +7852,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-06-29T21:52:27.561548+00:00",
+    "generated_at": "2026-06-30T00:16:47.637738+00:00",
     "ticker": "IONQ",
     "short_interest": {
       "status": "ok",
@@ -7835,7 +7866,7 @@
       "float_shares": 370489087,
       "delta_shares_short_mom_pct": -31.11,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-06-29T21:52:22.483271+00:00"
+      "fetched_at": "2026-06-30T00:16:42.885247+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7844,8 +7875,8 @@
       "cik": "0001824920",
       "lookback_days": 90,
       "n_filings_total": 20,
-      "n_filings_in_window": 16,
-      "n_fetch_errors": 3,
+      "n_filings_in_window": 15,
+      "n_fetch_errors": 2,
       "summary": {
         "total_buy_count": 0,
         "total_buy_value_usd": 0,
@@ -7904,7 +7935,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 7,
-      "fetched_at": "2026-06-29T21:52:27.560496+00:00"
+      "fetched_at": "2026-06-30T00:16:47.636705+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -16312,7 +16343,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-29T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16357,7 +16388,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-29T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16402,7 +16433,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-06-29T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
