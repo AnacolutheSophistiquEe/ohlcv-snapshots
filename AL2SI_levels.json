@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "AL2SI",
-    "generated_at": "2026-06-30T22:01:31Z",
+    "generated_at": "2026-07-01T00:24:01Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-07-01T08:00:00Z",
-    "valid_until": "2026-07-01T21:00:00Z",
+    "valid_from": "2026-07-02T08:00:00Z",
+    "valid_until": "2026-07-02T21:00:00Z",
     "source_precomputed": "AL2SI_precomputed.json"
   },
   "context": {
-    "last_price": 30.68,
+    "last_price": 30.34,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -42,18 +42,18 @@
   "notes": {
     "atr_daily": 5.7043,
     "atr_pct_daily": null,
-    "beta_60d": 0.299,
+    "beta_60d": 0.2944,
     "beta_benchmark": "EWQ",
-    "beta_corr_60d": 0.0475,
+    "beta_corr_60d": 0.0467,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "doji",
-      "date": "2026-06-30",
-      "confidence": 0.45
+      "name": "",
+      "date": "",
+      "confidence": null
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -47.51,
+      "current_dd_pct": -48.09,
       "ath_price": 58.45,
       "ath_date": "2026-06-02",
       "max_dd_1y_pct": -62.36,
@@ -68,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 30.3886,
-        "max": 30.5714
+        "min": 30.0496,
+        "max": 30.2304
       },
       "stop": {
-        "price": 22.1236,
+        "price": 21.7836,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -27.42
+        "distance_pct": -27.73
       },
       "targets": [
         {
           "level": 1,
           "price": 33.02,
           "basis": "résistance (weak) · touche hist. 91% (sans stop)",
-          "rr": 0.3
+          "rr": 0.34
         },
         {
           "level": 2,
           "price": 35.02,
           "basis": "résistance (weak) · touche hist. 72% (sans stop)",
-          "rr": 0.54
+          "rr": 0.58
         },
         {
           "level": 3,
-          "price": 38.9907,
+          "price": 38.7468,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 1.02
+          "rr": 1.03
         }
       ],
       "preferred_target": 1,
@@ -109,32 +109,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 30.8308,
-        "max": 30.954
+        "min": 30.5705,
+        "max": 30.6927
       },
       "stop": {
-        "price": 27.9479,
-        "basis": "fallback_sr_resist",
-        "distance_pct": -9.53
+        "price": 27.6879,
+        "basis": "fallback_pivot_camarilla_r1",
+        "distance_pct": -9.61
       },
       "targets": [
         {
           "level": 1,
           "price": 33.02,
           "basis": "résistance (weak) · touche hist. 91% (sans stop)",
-          "rr": 0.72
+          "rr": 0.81
         },
         {
           "level": 2,
           "price": 35.02,
           "basis": "résistance (weak) · touche hist. 72% (sans stop)",
-          "rr": 1.4
+          "rr": 1.49
         },
         {
           "level": 3,
-          "price": 38.9907,
+          "price": 38.7468,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 2.75
+          "rr": 2.76
         }
       ],
       "preferred_target": 1,
@@ -142,7 +142,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel sr_resist. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
     },
     {
       "id": "C",
@@ -151,7 +151,7 @@
       "side": "long",
       "entry_zone": {
         "min": 20.5667,
-        "max": 22.6083
+        "max": 22.6066
       },
       "stop": {
         "price": 19.744,
@@ -173,9 +173,9 @@
         },
         {
           "level": 3,
-          "price": 38.9907,
+          "price": 38.7468,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 9.44
+          "rr": 9.31
         }
       ],
       "preferred_target": 1,
