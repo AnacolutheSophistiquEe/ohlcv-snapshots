@@ -1,6 +1,6 @@
 # SOFI
 
-**Generated** : 2026-06-30T22:00:27.062561+00:00  
+**Generated** : 2026-07-01T00:23:08.919494+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $17.93  
@@ -168,5 +168,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (89533 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (89349 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

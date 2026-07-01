@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-06-30T21:51:12.418439+00:00  
+**Generated** : 2026-07-01T00:15:06.100991+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $116.67  
@@ -165,5 +165,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (89712 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (89526 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

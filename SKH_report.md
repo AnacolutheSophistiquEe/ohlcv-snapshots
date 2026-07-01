@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-06-30T21:44:52.498507+00:00  
+**Generated** : 2026-07-01T00:09:40.636290+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 9/10 — **Rating** : Strong Buy  
@@ -9,7 +9,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 > ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)  
 > ↳ spot ₩2650000.00 (+5.3% vs entrée) · entrée ₩2516350.00 · stop ₩2403983.05 · T1 ₩2741083.90 · R/R 2.0  
-> ↳ P(T1 av. stop) 48 % · EV/risk 0.886 · ¼-Kelly 0.046 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 48 % · EV/risk 0.89 · ¼-Kelly 0.046 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -36,9 +36,9 @@ Plan privilegie B (swing), composite 9/10, conviction 'Strong Buy'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.886 | EV/share : ₩99529.057 | p_fill : —
+- EV/risk : 0.89 | EV/share : ₩99963.127 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 48 % | T2 22 % | T3 7 %
-- Kelly (position) : f* 0.184 | ¼-Kelly 0.046 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Kelly (position) : f* 0.185 | ¼-Kelly 0.046 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 55.4 | bear 16.7 | side 27.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 640.0
@@ -82,5 +82,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (18835 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (18643 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # CEG
 
-**Generated** : 2026-06-30T21:55:54.411922+00:00  
+**Generated** : 2026-07-01T00:19:12.475853+00:00  
 **Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $248.37  
@@ -165,5 +165,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (90448 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (90254 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

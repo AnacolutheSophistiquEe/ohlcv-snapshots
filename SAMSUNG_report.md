@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-06-30T21:46:18.626146+00:00  
+**Generated** : 2026-07-01T00:10:52.019200+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 7/10 — **Rating** : Neutral  
@@ -9,7 +9,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 > ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-02 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)  
 > ↳ spot ₩334000.00 (+2.4% vs entrée) · entrée ₩326125.00 · stop ₩309730.47 · T1 ₩358914.06 · R/R 2.0  
-> ↳ P(T1 av. stop) 4 % · EV/risk 0.162 · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 4 % · EV/risk 0.162 · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈211) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -36,10 +36,10 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Neutral'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.162 | EV/share : ₩2660.065 | p_fill : —
+- EV/risk : 0.162 | EV/share : ₩2661.522 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 4 % | T2 4 % | T3 4 %
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈211) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, intraday) : bull 5.9 | bear 11.6 | side 82.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 512.0
 
@@ -82,5 +82,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (18981 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (18796 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
