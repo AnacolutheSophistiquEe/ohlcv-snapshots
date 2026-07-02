@@ -6,7 +6,7 @@
     "exchange": "NYSE",
     "currency": "USD",
     "isin": "US46222L1089",
-    "generated_at": "2026-07-01T21:53:52.355227+00:00",
+    "generated_at": "2026-07-02T00:18:09.083277+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1838,7 +1838,7 @@
           "rr": 1.13,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7993,
+          "p_touch": 0.7994,
           "distance_pct": 3.4
         },
         "t2": {
@@ -1847,7 +1847,7 @@
           "rr": 2.27,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7993,
+          "p_touch": 0.7994,
           "distance_pct": 6.8
         },
         "t3": {
@@ -2239,7 +2239,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-01T21:53:21.587964+00:00",
+    "generated_at": "2026-07-02T00:17:43.372176+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7259,70 +7259,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-01T21:53:36.835840+00:00",
+    "generated_at": "2026-07-02T00:17:55.368862+00:00",
     "ticker": "IONQ",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 12,
+    "n_events": 9,
     "events": [
-      {
-        "date": "2026-07-01",
-        "type": "macro",
-        "label": "US ISM Manufacturing PMI",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-07-01",
-        "type": "macro",
-        "label": "US ADP National Employment Report",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-07-01",
-        "type": "macro",
-        "label": "Eurozone HICP Flash juin 2026 — 01/07/2026 (Eurostat)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-07-02",
         "type": "macro",
         "label": "US Employment Situation (NFP / unemployment / earnings)",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7337,8 +7289,8 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7353,8 +7305,8 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7369,9 +7321,10 @@
         "type": "macro",
         "label": "NuScale Power (SMR) — milestone 3 réacteurs expérimentaux (04/07/2026)",
         "importance": "medium",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -7384,8 +7337,8 @@
         "type": "macro",
         "label": "US ISM Services PMI",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7399,8 +7352,8 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7415,7 +7368,7 @@
         "label": "SK Hynix (SKH) ADR IPO Nasdaq — 10/07/2026 ($29.4 Md)",
         "importance": "high",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7429,7 +7382,7 @@
         "label": "US CPI (headline)",
         "importance": "high",
         "sessions_to_event": 9,
-        "calendar_days": 13,
+        "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7443,7 +7396,7 @@
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
         "sessions_to_event": 9,
-        "calendar_days": 13,
+        "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7546,7 +7499,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-07-01T21:53:24.229669+00:00",
+    "generated_at": "2026-07-02T00:17:45.828614+00:00",
     "ticker": "IONQ",
     "window_sessions": 60,
     "n_observations_aligned": 32,
@@ -7729,7 +7682,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-07-01T21:53:26.565682+00:00",
+    "generated_at": "2026-07-02T00:17:48.284874+00:00",
     "ticker": "IONQ",
     "spot_price": 51.4,
     "expiries_available": [
@@ -7739,43 +7692,43 @@
       },
       {
         "date": "2026-07-10",
-        "days_to_exp": 9
+        "days_to_exp": 8
       },
       {
         "date": "2026-07-17",
-        "days_to_exp": 16
+        "days_to_exp": 15
       },
       {
         "date": "2026-07-24",
-        "days_to_exp": 23
+        "days_to_exp": 22
       },
       {
         "date": "2026-07-31",
-        "days_to_exp": 30
+        "days_to_exp": 29
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.9131,
-      "iv_atm_90d": 0.9131,
+      "iv_atm_30d": 0.9282,
+      "iv_atm_90d": 0.9282,
       "rv_20d_annualized": 0.9845,
-      "iv_rv_ratio": 0.927,
+      "iv_rv_ratio": 0.943,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -6.641,
+      "skew_25_delta_vol_pts": -6.763,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-07-02",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.7148,
+      "m1_iv_atm": 1.0107,
       "m3_expiry": "2026-07-31",
-      "m3_days_to_exp": 30,
-      "m3_iv_atm": 0.9131,
-      "ratio_m1_m3": 0.7829,
-      "label": "contango_fort"
+      "m3_days_to_exp": 29,
+      "m3_iv_atm": 0.9282,
+      "ratio_m1_m3": 1.0889,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-07-02",
@@ -7792,8 +7745,8 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": -37539804.0,
-      "gex_label": "negative_destabilizing",
+      "gex_total_usd_per_point": 1264711.0,
+      "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
@@ -7806,7 +7759,7 @@
       "bullish_signals": 1,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-6.6 pts) — peu de demande de protection"
+        "skew faible (-6.8 pts) — peu de demande de protection"
       ]
     },
     "liquidity_stats": {
@@ -7816,8 +7769,8 @@
       "per_expiry": {
         "2026-07-02": {
           "total_strikes": 125,
-          "liquid_strikes": 30,
-          "filter_ratio_pct": 24.0
+          "liquid_strikes": 28,
+          "filter_ratio_pct": 22.4
         },
         "2026-07-10": {
           "total_strikes": 110,
@@ -7845,7 +7798,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-07-01T21:53:35.851228+00:00",
+    "generated_at": "2026-07-02T00:17:54.455250+00:00",
     "ticker": "IONQ",
     "short_interest": {
       "status": "ok",
@@ -7859,7 +7812,7 @@
       "float_shares": 370489087,
       "delta_shares_short_mom_pct": -31.11,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-07-01T21:53:27.778846+00:00"
+      "fetched_at": "2026-07-02T00:17:49.499317+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7928,7 +7881,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 7,
-      "fetched_at": "2026-07-01T21:53:35.849513+00:00"
+      "fetched_at": "2026-07-02T00:17:54.454355+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -16342,7 +16295,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-01T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16387,7 +16340,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-01T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16432,7 +16385,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-01T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

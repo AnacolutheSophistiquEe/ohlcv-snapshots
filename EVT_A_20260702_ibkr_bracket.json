@@ -1,53 +1,53 @@
 {
   "available": true,
-  "generated_at": "2026-06-23T21:53:35.333977+00:00",
-  "prediction_id": "RGTI_A_20260623",
+  "generated_at": "2026-07-02T00:05:00.008535+00:00",
+  "prediction_id": "EVT_A_20260702",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "RGTI",
-  "exchange": "SMART",
-  "currency": "USD",
+  "symbol": "EVT",
+  "exchange": "IBIS",
+  "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 21.17,
-    "quantity": 7,
+    "limit_price": 5.08,
+    "quantity": 56,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 21.99,
-      "quantity": 4,
+      "limit_price": 5.16,
+      "quantity": 28,
       "tif": "GTC",
       "tag": "T1"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 23.66,
-      "quantity": 2,
+      "limit_price": 5.3,
+      "quantity": 17,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 25.34,
-      "quantity": 1,
+      "limit_price": 5.45,
+      "quantity": 11,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 19.47,
-      "quantity": 7,
+      "stop_price": 4.94,
+      "quantity": 56,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "RGTI_A_intraday_20260623",
+  "oca_group": "EVT_A_intraday_20260702",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -61,7 +61,7 @@
     "order_validity": {
       "type": "DAY",
       "offset_sessions": 0,
-      "good_till_date": "2026-06-23T22:00:00+00:00"
+      "good_till_date": "2026-07-02T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -76,15 +76,15 @@
     "qty_split": [
       {
         "tag": "T1",
-        "qty": 4
+        "qty": 28
       },
       {
         "tag": "T2",
-        "qty": 2
+        "qty": 17
       },
       {
         "tag": "T3",
-        "qty": 1
+        "qty": 11
       }
     ]
   },
@@ -94,24 +94,24 @@
     "horizon_label_long": "intraday",
     "composite_score": 5.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0059,
+    "ev_pct_risk": 0.0134,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.395,
-      "T2": 0.1505,
-      "T3": 0.0421
+      "T1": 0.6348,
+      "T2": 0.3347,
+      "T3": 0.2095
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 148.96,
-    "hold_tolerance_breach_price": 15.96,
+    "notional_eur": 286.16,
+    "hold_tolerance_breach_price": 3.8325,
     "hold_fallback_active": true,
-    "prediction_id": "RGTI_A_20260623"
+    "prediction_id": "EVT_A_20260702"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,

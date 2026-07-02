@@ -1,46 +1,46 @@
 {
   "available": true,
-  "generated_at": "2026-06-23T21:59:32.792275+00:00",
-  "prediction_id": "SOFI_B_20260623",
+  "generated_at": "2026-07-02T00:18:09.470350+00:00",
+  "prediction_id": "IONQ_B_20260702",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "SOFI",
+  "symbol": "IONQ",
   "exchange": "SMART",
   "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 17.29,
-    "quantity": 16,
+    "limit_price": 51.4,
+    "quantity": 5,
     "tif": "GTD",
-    "gtd": "2026-06-28T22:00:00+00:00"
+    "gtd": "2026-07-07T22:00:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 18.02,
-      "quantity": 10,
+      "limit_price": 53.29,
+      "quantity": 3,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 18.81,
-      "quantity": 6,
+      "limit_price": 56.81,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 16.04,
-      "quantity": 16,
+      "stop_price": 44.5,
+      "quantity": 5,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "SOFI_B_swing_20260623",
+  "oca_group": "IONQ_B_swing_20260702",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "breakeven_after_T1",
@@ -54,7 +54,7 @@
     "order_validity": {
       "type": "GTD",
       "offset_sessions": 5,
-      "good_till_date": "2026-06-28T22:00:00+00:00"
+      "good_till_date": "2026-07-07T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -68,11 +68,11 @@
     "qty_split": [
       {
         "tag": "T2",
-        "qty": 10
+        "qty": 3
       },
       {
         "tag": "T3",
-        "qty": 6
+        "qty": 2
       }
     ]
   },
@@ -82,24 +82,24 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 5.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0085,
+    "ev_pct_risk": -0.0026,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "below_threshold",
+    "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.3363,
-      "T2": 0.1732,
-      "T3": 0.073
+      "T1": 0.3292,
+      "T2": 0.1669,
+      "T3": 0.09
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 276.64,
-    "hold_tolerance_breach_price": 12.9675,
+    "notional_eur": 257.0,
+    "hold_tolerance_breach_price": 38.55,
     "hold_fallback_active": true,
-    "prediction_id": "SOFI_B_20260623"
+    "prediction_id": "IONQ_B_20260702"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
