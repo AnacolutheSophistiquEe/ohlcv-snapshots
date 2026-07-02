@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "000660",
-    "generated_at": "2026-07-01T22:03:17Z",
+    "generated_at": "2026-07-02T00:26:23Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-07-02T08:00:00Z",
-    "valid_until": "2026-07-02T21:00:00Z",
+    "valid_from": "2026-07-03T08:00:00Z",
+    "valid_until": "2026-07-03T21:00:00Z",
     "source_precomputed": "000660_precomputed.json"
   },
   "context": {
@@ -154,11 +154,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 1796475.5445,
+        "min": 1796475.5326,
         "max": 1855000.0
       },
       "stop": {
-        "price": 1724616.5227,
+        "price": 1724616.5113,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -5.54
       },
@@ -192,7 +192,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 1707370.3575,
+    "price": 1707370.3462,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
