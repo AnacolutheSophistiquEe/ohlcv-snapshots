@@ -1,0 +1,132 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "MSTR",
+    "generated_at": "2026-07-02T00:26:23Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-07-03T08:00:00Z",
+    "valid_until": "2026-07-03T21:00:00Z",
+    "source_precomputed": "MSTR_precomputed.json"
+  },
+  "context": {
+    "last_price": 93.39,
+    "ta_score": {
+      "value": 0,
+      "max": 10,
+      "label": "very_bearish"
+    },
+    "alignment_flag": "divergent_short_long",
+    "hmm_regime": {
+      "state": "bear",
+      "probability": 0.5888,
+      "expected_duration_days": 2.43
+    },
+    "volatility_regime": "low",
+    "signals_counter": {
+      "buy": 1,
+      "sell": 7,
+      "neutral": 7,
+      "total": 15,
+      "verdict": "strong_sell"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_30-40_dist_ma20_<-10",
+      "win_rate": 0.77,
+      "sample_size": 22,
+      "median_bounce_pct": 3.67,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 0/10 (very_bearish), alignment divergent_short_long, HMM bear (0.59), vol low, signals strong_sell (1b/7s/7n)."
+  },
+  "notes": {
+    "atr_daily": 9.9296,
+    "atr_pct_daily": null,
+    "beta_60d": 1.76,
+    "beta_benchmark": "IWM",
+    "beta_corr_60d": 0.4135,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "morning_star",
+      "date": "2026-06-29",
+      "confidence": 0.683
+    },
+    "divergences": [
+      {
+        "indicator": "rsi",
+        "type": "bullish",
+        "confidence": 0.46,
+        "bars_ago": 3,
+        "at_price": null
+      },
+      {
+        "indicator": "macd_hist",
+        "type": "bullish",
+        "confidence": 0.54,
+        "bars_ago": 3,
+        "at_price": null
+      }
+    ],
+    "drawdown": {
+      "current_dd_pct": -79.52,
+      "ath_price": 455.9,
+      "ath_date": "2025-07-16",
+      "max_dd_1y_pct": -81.95,
+      "days_in_dd": 350,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 78.5785,
+        "max": 83.0354
+      },
+      "stop": {
+        "price": 75.4354,
+        "basis": "deep_below_confluence_support_4pct",
+        "distance_pct": -6.65
+      },
+      "targets": [
+        {
+          "level": 2,
+          "price": 84.893,
+          "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
+          "rr": 0.76
+        },
+        {
+          "level": 3,
+          "price": 90.5741,
+          "basis": "plafond band 95% · touche hist. 91% (sans stop)",
+          "rr": 1.82
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Deep value mecanique : entree sur confluence support basse BB_LOWER + VPVR_VAL (strength 5.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=0<4",
+  "global_conditions": [
+    {
+      "id": "session_us_open",
+      "type": "session_window",
+      "params": {
+        "session": "us_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 74.681,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
