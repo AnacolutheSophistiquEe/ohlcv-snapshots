@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US7707001027",
-    "generated_at": "2026-07-02T21:59:08.043111+00:00",
+    "generated_at": "2026-07-03T00:23:25.683798+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1887,7 +1887,7 @@
           "rr": 2.5,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4212,
+          "p_touch": 0.4211,
           "distance_pct": 7.5
         }
       }
@@ -1931,7 +1931,7 @@
           "rr": 6.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4373,
+          "p_touch": 0.4371,
           "distance_pct": 16.78
         }
       }
@@ -1957,7 +1957,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8012,
+          "p_touch": 0.8011,
           "distance_pct": 7.91
         },
         "t2": {
@@ -1975,7 +1975,7 @@
           "rr": 6.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5856,
+          "p_touch": 0.5855,
           "distance_pct": 23.73
         }
       }
@@ -2270,7 +2270,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-02T21:58:38.252762+00:00",
+    "generated_at": "2026-07-03T00:22:59.019846+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7290,70 +7290,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-02T21:58:53.639956+00:00",
+    "generated_at": "2026-07-03T00:23:12.736633+00:00",
     "ticker": "HOOD",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 9,
+    "n_events": 6,
     "events": [
-      {
-        "date": "2026-07-02",
-        "type": "macro",
-        "label": "US Employment Situation (NFP / unemployment / earnings)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-07-02",
-        "type": "macro",
-        "label": "US Initial Jobless Claims (weekly)",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-07-02",
-        "type": "macro",
-        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
-        "importance": "low",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-07-04",
         "type": "macro",
         "label": "NuScale Power (SMR) — milestone 3 réacteurs expérimentaux (04/07/2026)",
         "importance": "medium",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7368,8 +7320,8 @@
         "type": "macro",
         "label": "US ISM Services PMI",
         "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7384,7 +7336,7 @@
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7398,9 +7350,10 @@
         "type": "macro",
         "label": "SK Hynix (SKH) ADR IPO Nasdaq — 10/07/2026 ($29.4 Md)",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -7412,8 +7365,8 @@
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 8,
+        "calendar_days": 11,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7426,8 +7379,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 8,
+        "calendar_days": 11,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7530,7 +7483,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-07-02T21:58:40.674425+00:00",
+    "generated_at": "2026-07-03T00:23:01.309154+00:00",
     "ticker": "HOOD",
     "window_sessions": 60,
     "n_observations_aligned": 31,
@@ -7713,86 +7666,87 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-07-02T21:58:43.354385+00:00",
+    "generated_at": "2026-07-03T00:23:03.792890+00:00",
     "ticker": "HOOD",
     "spot_price": 112.73,
     "expiries_available": [
       {
-        "date": "2026-07-02",
-        "days_to_exp": 1
-      },
-      {
         "date": "2026-07-10",
-        "days_to_exp": 8
+        "days_to_exp": 7
       },
       {
         "date": "2026-07-17",
-        "days_to_exp": 15
+        "days_to_exp": 14
       },
       {
         "date": "2026-07-24",
-        "days_to_exp": 22
+        "days_to_exp": 21
       },
       {
         "date": "2026-07-31",
-        "days_to_exp": 29
+        "days_to_exp": 28
+      },
+      {
+        "date": "2026-08-07",
+        "days_to_exp": 35
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7121,
-      "iv_atm_90d": 0.7121,
+      "iv_atm_30d": 0.7243,
+      "iv_atm_90d": 0.7243,
       "rv_20d_annualized": 0.724,
-      "iv_rv_ratio": 0.984,
+      "iv_rv_ratio": 1.0,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -0.891,
+      "skew_25_delta_vol_pts": -0.903,
       "label": "low"
     },
     "term_structure": {
-      "m1_expiry": "2026-07-02",
-      "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.3457,
-      "m3_expiry": "2026-07-31",
-      "m3_days_to_exp": 29,
-      "m3_iv_atm": 0.7121,
-      "ratio_m1_m3": 0.4855,
+      "m1_expiry": "2026-07-10",
+      "m1_days_to_exp": 7,
+      "m1_iv_atm": 0.6692,
+      "m3_expiry": "2026-08-07",
+      "m3_days_to_exp": 35,
+      "m3_iv_atm": 0.741,
+      "ratio_m1_m3": 0.9031,
       "label": "contango_fort"
     },
     "open_interest_m1": {
-      "expiry": "2026-07-02",
-      "days_to_exp": 1,
-      "put_call_ratio": 0.679,
-      "total_oi_m1": 154463,
+      "expiry": "2026-07-10",
+      "days_to_exp": 7,
+      "put_call_ratio": 0.563,
+      "total_oi_m1": 107202,
       "largest_call_strike_oi": {
-        "strike": 110.0,
-        "oi": 7777
+        "strike": 111.0,
+        "oi": 7872
       },
       "largest_put_strike_oi": {
-        "strike": 90.0,
-        "oi": 5209
+        "strike": 64.0,
+        "oi": 5714
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 9661448088.0,
+      "gex_total_usd_per_point": 5691075619.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 99.0,
-      "expiry": "2026-07-02",
-      "gap_vs_spot_pct": -12.18
+      "strike": 100.0,
+      "expiry": "2026-07-10",
+      "gap_vs_spot_pct": -11.29
     },
     "verdict": {
       "label": "bullish",
-      "bullish_signals": 2,
+      "bullish_signals": 3,
       "bearish_signals": 0,
       "notes": [
         "skew faible (-0.9 pts) — peu de demande de protection",
-        "GEX positif (9661.4M$/pt) = MM long gamma stabilisateur",
-        "max pain 99.00 vs spot 112.73 (-12.2%)"
+        "GEX positif (5691.1M$/pt) = MM long gamma stabilisateur",
+        "max pain 100.00 vs spot 112.73 (-11.3%)",
+        "P/C ratio bas (0.56) — biais call dominant"
       ]
     },
     "liquidity_stats": {
@@ -7800,11 +7754,6 @@
       "max_iv_threshold": 5.0,
       "max_bidask_spread_pct": 0.3,
       "per_expiry": {
-        "2026-07-02": {
-          "total_strikes": 159,
-          "liquid_strikes": 40,
-          "filter_ratio_pct": 25.2
-        },
         "2026-07-10": {
           "total_strikes": 149,
           "liquid_strikes": 77,
@@ -7824,6 +7773,11 @@
           "total_strikes": 122,
           "liquid_strikes": 45,
           "filter_ratio_pct": 36.9
+        },
+        "2026-08-07": {
+          "total_strikes": 58,
+          "liquid_strikes": 13,
+          "filter_ratio_pct": 22.4
         }
       }
     },
@@ -7831,7 +7785,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-07-02T21:58:52.706236+00:00",
+    "generated_at": "2026-07-03T00:23:11.872300+00:00",
     "ticker": "HOOD",
     "short_interest": {
       "status": "ok",
@@ -7845,7 +7799,7 @@
       "float_shares": 784177814,
       "delta_shares_short_mom_pct": -1.16,
       "squeeze_potential": "low",
-      "fetched_at": "2026-07-02T21:58:44.550815+00:00"
+      "fetched_at": "2026-07-03T00:23:04.877879+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7941,7 +7895,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 39,
-      "fetched_at": "2026-07-02T21:58:52.705236+00:00"
+      "fetched_at": "2026-07-03T00:23:11.871355+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -16355,7 +16309,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-02T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16406,7 +16360,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-02T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16457,7 +16411,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-02T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
