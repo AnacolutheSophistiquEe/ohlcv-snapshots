@@ -1,9 +1,9 @@
 # 000660
 
-**Generated** : 2026-07-06T00:08:56.537924+00:00  
+**Generated** : 2026-07-06T21:44:22.068721+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
-**Santé technique** : 5/10 — **Rating** : Neutral  
+**Santé technique** : 7/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite extreme · ₩2425000.00  
 
@@ -14,13 +14,13 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 ## Régime & alignement multi-TF
 
 - **Daily** : up (trend-up)  
-- **H4** : range | **H1** : down  
-- **Flag multi-TF** : divergent_short_long (score 1)
+- **H4** : range | **H1** : range  
+- **Flag multi-TF** : mixed (score 1)
 
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 5/10, conviction 'Neutral'.
+Plan privilegie A (intraday), composite 7/10, conviction 'Neutral'.
 
 
 ## Niveaux clés & plan principal
@@ -82,5 +82,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16514 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16487 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
