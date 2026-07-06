@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-07-03T21:47:29.205748+00:00  
+**Generated** : 2026-07-06T00:11:34.406447+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.5 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
@@ -143,7 +143,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Factor** : R² 0.61 · part idiosyncratique 0.39
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
-**Options** : favorable
+**Options** : neutral
 
 
 ## Event risk & invalidation
@@ -162,7 +162,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.36 · largeur 57.4%
 - **ATR** : 10.14 (26.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV falling · CMF -0.225  _(distribution)_
-- **Vol ratio** : 1.2  _(volume normal)_
+- **Vol ratio** : 1.19  _(volume normal)_
 - **Choppiness** : 36.3  _(marche directionnel)_
 - **MA** : MA20 109.27 · MA50 145.02 · MA200 181.26  _(prix < MA20)_
 - **Dist MA** : MA20 -7.8% · MA50 -30.5% · MA200 -44.4%
@@ -170,5 +170,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (87996 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (87791 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

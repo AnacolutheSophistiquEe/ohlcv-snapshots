@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-07-03T21:45:49.446407+00:00  
+**Generated** : 2026-07-06T00:10:07.737124+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 5/10 — **Rating** : Neutral  
@@ -9,7 +9,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 > 🟡 **WAIT-FOR-DIP** — spot +0.7 % au-dessus de la zone d'entrée — attendre le repli  
 > ↳ spot ₩309500.00 (+0.7% vs entrée) · entrée ₩307475.79 · stop ₩299627.58 · T1 ₩318922.85 · R/R 1.46  
-> ↳ P(T1 av. stop) 29 % · EV/risk 0.272 · ¼-Kelly 0.01 · _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 29 % · EV/risk 0.275 · ¼-Kelly 0.01 · _first-passage empirique daily (historique réel, n≈211) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -36,10 +36,10 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Neutral'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.272 | EV/share : ₩2131.328 | p_fill : —
+- EV/risk : 0.275 | EV/share : ₩2160.909 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 29 % | T2 10 % | T3 3 %
 - Kelly (position) : f* 0.04 | ¼-Kelly 0.01 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈211) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, intraday) : bull 5.8 | bear 13.1 | side 81.2  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 288.0
 
@@ -82,5 +82,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16360 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16154 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

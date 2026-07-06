@@ -1,52 +1,51 @@
 {
   "available": true,
-  "generated_at": "2026-06-25T21:58:46.270980+00:00",
-  "prediction_id": "HOOD_B_20260625",
+  "generated_at": "2026-07-06T00:14:24.273255+00:00",
+  "prediction_id": "PLTR_A_20260706",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "HOOD",
+  "symbol": "PLTR",
   "exchange": "SMART",
   "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 93.47,
-    "quantity": 5,
-    "tif": "GTD",
-    "gtd": "2026-06-30T22:00:00+00:00"
+    "limit_price": 128.65,
+    "quantity": 1,
+    "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 94.6,
-      "quantity": 5,
+      "limit_price": 132.67,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 75.82,
-      "quantity": 5,
+      "stop_price": 114.03,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "HOOD_B_swing_20260625",
+  "oca_group": "PLTR_A_intraday_20260706",
   "oca_type": 1,
   "execution_rules": {
-    "stop_mode": "breakeven_after_T1",
-    "stop_mode_description": "SL → prix d'entrée après hit T1",
+    "stop_mode": "fixed",
+    "stop_mode_description": "SL hard statique, pas de trailing",
     "trail_distance_atr": null,
     "time_stop": {
       "enabled": true,
-      "max_holding_sessions": 5,
-      "exit_mode": "market_close_at_breakeven"
+      "max_holding_sessions": 1,
+      "exit_mode": "market_close_unconditional"
     },
     "order_validity": {
-      "type": "GTD",
-      "offset_sessions": 5,
-      "good_till_date": "2026-06-30T22:00:00+00:00"
+      "type": "DAY",
+      "offset_sessions": 0,
+      "good_till_date": "2026-07-06T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -59,34 +58,34 @@
     "qty_split": [
       {
         "tag": "T3",
-        "qty": 5
+        "qty": 1
       }
     ]
   },
   "bracket_metadata": {
-    "plan_id": "B",
-    "horizon": "swing",
-    "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 7.0,
-    "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0746,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
+    "plan_id": "A",
+    "horizon": "intraday",
+    "horizon_label_long": "intraday",
+    "composite_score": 6.0,
+    "composite_score_source": "horizon_ta_score.plan_a.score",
+    "ev_pct_risk": -0.0302,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "below_threshold",
+    "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.3496,
-      "T2": 0.1869,
-      "T3": 0.0854
+      "T1": 0.4022,
+      "T2": 0.0959,
+      "T3": 0.0625
     },
-    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
+    "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 467.35,
-    "hold_tolerance_breach_price": 70.1025,
+    "notional_eur": 129.3,
+    "hold_tolerance_breach_price": 96.975,
     "hold_fallback_active": true,
-    "prediction_id": "HOOD_B_20260625"
+    "prediction_id": "PLTR_A_20260706"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,

@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US69608A1088",
-    "generated_at": "2026-07-03T21:50:45.058116+00:00",
+    "generated_at": "2026-07-06T00:14:23.946191+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -427,7 +427,7 @@
           132.88,
           127.95,
           129.3,
-          60789400
+          60641000
         ]
       ],
       "h4": [
@@ -1254,8 +1254,8 @@
       "macd_hist": 0.5025327655207086,
       "macd_signal_cross": "bullish_recent",
       "obv_trend": "rising",
-      "mfi_14": 45.745372067216124,
-      "cmf_20": -0.19074601090822307,
+      "mfi_14": 45.73252719247926,
+      "cmf_20": -0.19070147841225155,
       "adl_trend": "falling",
       "adx_14": 20.54227524725682,
       "plus_di_14": 29.958046744876288,
@@ -1263,7 +1263,7 @@
       "di_spread_14": 2.8359109768106734,
       "choppiness_14": 42.907200347374264,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 1.394485933939161,
+      "volume_ratio_ma20": 1.391318512961086,
       "distance_ma20_pct": 2.643080785349077,
       "distance_ma50_pct": -3.926384338942778,
       "distance_ma200_pct": -18.120376301611056
@@ -1881,7 +1881,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4372,
+          "p_touch": 0.4373,
           "distance_pct": 4.56
         },
         "t2": {
@@ -1899,7 +1899,7 @@
           "rr": 6.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7165,
+          "p_touch": 0.7166,
           "distance_pct": 13.69
         }
       }
@@ -1934,7 +1934,7 @@
           "rr": 4.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8012,
+          "p_touch": 0.8013,
           "distance_pct": 12.91
         },
         "t3": {
@@ -2238,7 +2238,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-03T21:50:16.589640+00:00",
+    "generated_at": "2026-07-06T00:13:58.948406+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7225,39 +7225,24 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-03T21:50:30.483008+00:00",
+    "generated_at": "2026-07-06T00:14:11.348871+00:00",
     "ticker": "PLTR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 9,
+    "n_events": 8,
     "events": [
-      {
-        "date": "2026-07-04",
-        "type": "macro",
-        "label": "NuScale Power (SMR) — milestone 3 réacteurs expérimentaux (04/07/2026)",
-        "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-07-06",
         "type": "macro",
         "label": "US ISM Services PMI",
         "importance": "medium",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -7270,9 +7255,10 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -7285,8 +7271,8 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7300,8 +7286,8 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7315,8 +7301,8 @@
         "type": "macro",
         "label": "SK Hynix (SKH) ADR IPO Nasdaq — 10/07/2026 ($29.4 Md)",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7330,8 +7316,8 @@
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7344,8 +7330,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7358,8 +7344,8 @@
         "type": "macro",
         "label": "German ZEW Economic Sentiment",
         "importance": "medium",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7462,7 +7448,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-07-03T21:50:19.033919+00:00",
+    "generated_at": "2026-07-06T00:14:01.217962+00:00",
     "ticker": "PLTR",
     "window_sessions": 60,
     "n_observations_aligned": 31,
@@ -7645,59 +7631,59 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-07-03T21:50:21.525143+00:00",
+    "generated_at": "2026-07-06T00:14:03.757288+00:00",
     "ticker": "PLTR",
     "spot_price": 129.3,
     "expiries_available": [
       {
         "date": "2026-07-10",
-        "days_to_exp": 7
+        "days_to_exp": 4
       },
       {
         "date": "2026-07-17",
-        "days_to_exp": 14
+        "days_to_exp": 11
       },
       {
         "date": "2026-07-24",
-        "days_to_exp": 21
+        "days_to_exp": 18
       },
       {
         "date": "2026-07-31",
-        "days_to_exp": 28
+        "days_to_exp": 25
       },
       {
         "date": "2026-08-07",
-        "days_to_exp": 35
+        "days_to_exp": 32
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.5498,
-      "iv_atm_90d": 0.6264,
+      "iv_atm_30d": 0.6239,
+      "iv_atm_90d": 0.6542,
       "rv_20d_annualized": 0.5909,
-      "iv_rv_ratio": 0.93,
+      "iv_rv_ratio": 1.056,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -0.659,
+      "skew_25_delta_vol_pts": -1.257,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-07-10",
-      "m1_days_to_exp": 7,
-      "m1_iv_atm": 0.5029,
+      "m1_days_to_exp": 4,
+      "m1_iv_atm": 0.6278,
       "m3_expiry": "2026-08-07",
-      "m3_days_to_exp": 35,
-      "m3_iv_atm": 0.6264,
-      "ratio_m1_m3": 0.8029,
-      "label": "contango_fort"
+      "m3_days_to_exp": 32,
+      "m3_iv_atm": 0.6542,
+      "ratio_m1_m3": 0.9596,
+      "label": "contango_leger"
     },
     "open_interest_m1": {
       "expiry": "2026-07-10",
-      "days_to_exp": 7,
+      "days_to_exp": 4,
       "put_call_ratio": 0.627,
-      "total_oi_m1": 177084,
+      "total_oi_m1": 177200,
       "largest_call_strike_oi": {
         "strike": 132.0,
         "oi": 12585
@@ -7708,7 +7694,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 5595055871.0,
+      "gex_total_usd_per_point": 5766114274.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7722,8 +7708,8 @@
       "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-0.7 pts) — peu de demande de protection",
-        "GEX positif (5595.1M$/pt) = MM long gamma stabilisateur",
+        "skew faible (-1.3 pts) — peu de demande de protection",
+        "GEX positif (5766.1M$/pt) = MM long gamma stabilisateur",
         "max pain 122.00 vs spot 129.30 (-5.6%)"
       ]
     },
@@ -7733,9 +7719,9 @@
       "max_bidask_spread_pct": 0.3,
       "per_expiry": {
         "2026-07-10": {
-          "total_strikes": 174,
-          "liquid_strikes": 93,
-          "filter_ratio_pct": 53.4
+          "total_strikes": 182,
+          "liquid_strikes": 94,
+          "filter_ratio_pct": 51.6
         },
         "2026-07-17": {
           "total_strikes": 140,
@@ -7743,19 +7729,19 @@
           "filter_ratio_pct": 62.9
         },
         "2026-07-24": {
-          "total_strikes": 161,
+          "total_strikes": 162,
           "liquid_strikes": 95,
-          "filter_ratio_pct": 59.0
+          "filter_ratio_pct": 58.6
         },
         "2026-07-31": {
-          "total_strikes": 149,
+          "total_strikes": 150,
           "liquid_strikes": 87,
-          "filter_ratio_pct": 58.4
+          "filter_ratio_pct": 58.0
         },
         "2026-08-07": {
-          "total_strikes": 80,
-          "liquid_strikes": 44,
-          "filter_ratio_pct": 55.0
+          "total_strikes": 121,
+          "liquid_strikes": 48,
+          "filter_ratio_pct": 39.7
         }
       }
     },
@@ -7763,7 +7749,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-07-03T21:50:29.318389+00:00",
+    "generated_at": "2026-07-06T00:14:10.496235+00:00",
     "ticker": "PLTR",
     "short_interest": {
       "status": "ok",
@@ -7773,11 +7759,11 @@
       "short_pct_float": 0.0357,
       "short_pct_outstanding": 0.0319,
       "days_to_cover": 1.98,
-      "avg_daily_volume": 45887859,
+      "avg_daily_volume": 45890253,
       "float_shares": 2104120722,
       "delta_shares_short_mom_pct": 7.94,
       "squeeze_potential": "low",
-      "fetched_at": "2026-07-03T21:50:22.683472+00:00"
+      "fetched_at": "2026-07-06T00:14:04.800972+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7846,7 +7832,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 54,
-      "fetched_at": "2026-07-03T21:50:29.317257+00:00"
+      "fetched_at": "2026-07-06T00:14:10.495125+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -8008,15 +7994,15 @@
         "anchor_date": "2026-06-25",
         "anchor_event": "swing_low",
         "anchor_price": 106.37,
-        "vwap_today": 118.0915,
-        "distance_from_close_pct": 9.49,
+        "vwap_today": 118.086,
+        "distance_from_close_pct": 9.5,
         "bars_since_anchor": 5
       },
       {
         "anchor_date": "2026-06-01",
         "anchor_event": "swing_high",
         "anchor_price": 163.7,
-        "vwap_today": 129.0433,
+        "vwap_today": 129.0432,
         "distance_from_close_pct": 0.2,
         "bars_since_anchor": 22
       },
@@ -8024,7 +8010,7 @@
         "anchor_date": "2026-05-13",
         "anchor_event": "swing_low",
         "anchor_price": 128.75,
-        "vwap_today": 132.1405,
+        "vwap_today": 132.1408,
         "distance_from_close_pct": -2.15,
         "bars_since_anchor": 34
       }
@@ -12867,8 +12853,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": -23007940.244711876,
-        "signal_line": -199298431.31746587,
+        "value": -23232981.92792815,
+        "signal_line": -199330580.1293539,
         "signal": "buy"
       }
     },
@@ -14389,7 +14375,7 @@
         -285905057.2369746,
         -206528296.93588495,
         -133726089.99830484,
-        -23007940.244711876
+        -23232981.92792815
       ],
       "klinger_signal": [
         0.0,
@@ -14642,7 +14628,7 @@
         -250835455.5568483,
         -244505861.46813926,
         -228680179.8295915,
-        -199298431.31746587
+        -199330580.1293539
       ]
     }
   },
@@ -14650,22 +14636,22 @@
     "available": true,
     "latest": {
       "close": 129.3000030517578,
-      "vwap": 125.00981034400678,
+      "vwap": 125.008953431835,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": 3.431884822435228,
+        "distance_from_close_pct": 3.432593827979405,
         "position": "above_vwap"
       },
-      "force_index": 71058866.6606815,
+      "force_index": 70983182.66715123,
       "force_index_meta": {
         "signal": "buy"
       },
-      "chaikin_oscillator": -28045586.596076727,
+      "chaikin_oscillator": -28024228.34572208,
       "chaikin_oscillator_meta": {
         "cross_recent": null,
         "signal": "neutral"
       },
-      "vroc_14": 120.61514453174618,
+      "vroc_14": 120.07657551398138,
       "vroc_14_meta": {
         "signal": "high_activity"
       }
@@ -15175,7 +15161,7 @@
         129.83806114515332,
         127.15434553779549,
         125.6163346347897,
-        125.00981034400678
+        125.008953431835
       ],
       "force_index": [
         null,
@@ -15428,7 +15414,7 @@
         -45712276.85923193,
         -33906572.24051283,
         46732321.19603719,
-        71058866.6606815
+        70983182.66715123
       ],
       "chaikin_oscillator": [
         0.0,
@@ -15681,7 +15667,7 @@
         -45860546.39944792,
         -41158699.21473026,
         -27412160.716548324,
-        -28045586.596076727
+        -28024228.34572208
       ],
       "vroc_14": [
         null,
@@ -15934,7 +15920,7 @@
         66.86151029137585,
         -1.577817993795243,
         91.2980276095464,
-        120.61514453174618
+        120.07657551398138
       ]
     }
   },
@@ -15966,7 +15952,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": 0.3777,
+      "value": 0.3713,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -15998,9 +15984,9 @@
   },
   "anomaly_detection": {
     "available": true,
-    "anomaly_score": -0.0624,
+    "anomaly_score": -0.0627,
     "is_anomaly": false,
-    "anomaly_percentile": 65.5,
+    "anomaly_percentile": 65.1,
     "recent_anomalies": [
       {
         "date": "2026-05-29T00:00:00",
@@ -16211,21 +16197,21 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 46523040.0,
+        "mean_volume_60d": 46520566.666666664,
         "median_volume_60d": 41746800.0,
-        "volume_consistency_score": 0.6092177000699464
+        "volume_consistency_score": 0.6092391363198804
       },
       "liquidity": {
-        "liquidity_score": 5748792777.549057,
+        "liquidity_score": 5748153173.533961,
         "liquidity_classification": "very_high"
       },
       "freshness": {
         "last_bar_date": "2026-07-02T00:00:00",
-        "days_since_last_bar": 1,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 4,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 91.0120729532328,
+        "overall_quality_score": 87.01239449698181,
         "overall_label": "excellent",
         "warnings": []
       }
@@ -16272,11 +16258,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-02T16:00:00+00:00",
-        "days_since_last_bar": 1,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 4,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 90.16083903369645,
+        "overall_quality_score": 86.16083903369645,
         "overall_label": "excellent",
         "warnings": []
       }
@@ -16328,11 +16314,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-02T19:30:00+00:00",
-        "days_since_last_bar": 1,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 4,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 78.75591662075072,
+        "overall_quality_score": 74.75591662075072,
         "overall_label": "good",
         "warnings": [
           "outlier de 5.3σ le 2026-07-01 non expliqué (h1)"
@@ -16340,7 +16326,7 @@
       }
     },
     "summary": {
-      "worst_tf_quality_score": 78.75591662075072,
+      "worst_tf_quality_score": 74.75591662075072,
       "worst_tf": "h1",
       "recommendation": "review_outliers"
     }

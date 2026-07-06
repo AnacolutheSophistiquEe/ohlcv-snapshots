@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-07-03T21:52:22.744153+00:00  
+**Generated** : 2026-07-06T00:15:45.784029+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
@@ -146,7 +146,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Factor** : R² 0.36 · part idiosyncratique 0.64
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
-**Options** : neutral_cautious
+**Options** : bearish
 
 
 ## Event risk & invalidation
@@ -165,7 +165,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.1 · largeur 30.5%
 - **ATR** : 4.66 (68.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
 - **OBV/CMF** : OBV falling · CMF -0.352  _(distribution)_
-- **Vol ratio** : 0.64  _(volume normal)_
+- **Vol ratio** : 0.63  _(volume normal)_
 - **Choppiness** : 54.8  _(transition)_
 - **MA** : MA20 56.01 · MA50 54.96 · MA200 49.59  _(prix < MA20)_
 - **Dist MA** : MA20 -12.3% · MA50 -10.6% · MA200 -1.0%
@@ -173,5 +173,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (92891 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (92674 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
