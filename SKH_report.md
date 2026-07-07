@@ -1,46 +1,46 @@
 # 000660
 
-**Generated** : 2026-07-07T00:09:47.393218+00:00  
+**Generated** : 2026-07-07T21:44:30.651482+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
-**Santé technique** : 7/10 — **Rating** : Neutral  
+**Santé technique** : 5/10 — **Rating** : Buy  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite extreme · ₩2343000.00  
 
-> 🟡 **WAIT-FOR-DIP** — spot +3.9 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot ₩2343000.00 (+3.9% vs entrée) · entrée ₩2255916.61 · stop ₩2175580.90 · T1 ₩2407000.00 · R/R 1.88  
-> ↳ P(T1 av. stop) 19 % · EV/risk 0.276 · ¼-Kelly 0.005 · _first-passage empirique daily (historique réel, n≈211) · non recalibrée track-record (n=0)_  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US CPI (headline) (J-5 sess · macro taux)  
+> ↳ spot ₩2343000.00 (+8.9% vs entrée) · entrée ₩2151416.55 · stop ₩1893246.56 · T1 ₩2687425.17 · R/R 2.08  
+> ↳ P(T1 av. stop) 8 % · EV/risk 0.425 · ¼-Kelly 0.001 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
 - **Daily** : range (trend-range)  
-- **H4** : range | **H1** : range  
-- **Flag multi-TF** : mixed (score 3)
+- **H4** : range | **H1** : down  
+- **Flag multi-TF** : mixed (score 2)
 
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 7/10, conviction 'Neutral'.
+Plan privilegie B (swing), composite 5/10, conviction 'Buy'.
 
 
 ## Niveaux clés & plan principal
 
-**Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : ₩2236259.97–₩2275573.26 (mid ₩2255916.61)
-- Spot actuel : ₩2343000.00 (+3.9% au-dessus de la zone — repli à attendre)
-- Stop : ₩2175580.90 (stop swing_plan-based (-19.2%))
-- Targets : T1 ₩2407000.00 · R/R 1.88 | T2 ₩2478436.40 · R/R 2.77 | T3 ₩2549872.81 · R/R 3.66
+**Plan B — swing** (order_type LMT)
+- Entry (zone de repli) : ₩2109499.00–₩2193334.09 (mid ₩2151416.55)
+- Spot actuel : ₩2343000.00 (+8.9% au-dessus de la zone — repli à attendre)
+- Stop : ₩1893246.56 (stop swing_plan-based (-19.2%))
+- Targets : T1 ₩2687425.17 · R/R 2.08 | T2 ₩2732849.79 · R/R 2.25 | T3 ₩2778274.42 · R/R 2.43
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩2175580.90
+- Invalidation : close sous ₩1893246.56
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.276 | EV/share : ₩22131.690 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 19 % | T2 7 % | T3 4 %
-- Kelly (position) : f* 0.02 | ¼-Kelly 0.005 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈211) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 24.6 | bear 25.7 | side 49.7  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- EV/risk : 0.425 | EV/share : ₩109770.563 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 8 % | T2 7 % | T3 5 %
+- Kelly (position) : f* 0.003 | ¼-Kelly 0.001 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
+- Régime probabiliste (posterior HMM, swing) : bull 30.6 | bear 26.9 | side 42.5  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 288.0
 
 
@@ -82,5 +82,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16442 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16553 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-07T00:22:01.314536+00:00",
+  "generated_at": "2026-07-07T21:58:10.256752+00:00",
   "prediction_id": "HOOD_B_20260707",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "HOOD",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 117.55,
+    "limit_price": 112.9,
     "quantity": 5,
     "tif": "GTD",
     "gtd": "2026-07-12T22:00:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 117.88,
+      "limit_price": 114.95,
       "quantity": 3,
       "tif": "GTC",
       "tag": "T2"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 123.69,
+      "limit_price": 120.34,
       "quantity": 2,
       "tif": "GTC",
       "tag": "T3"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 103.34,
+      "stop_price": 101.46,
       "quantity": 5,
       "tif": "GTC",
       "tag": "SL"
@@ -82,22 +82,22 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 9.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.068,
+    "ev_pct_risk": -0.0404,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.2964,
-      "T2": 0.1443,
-      "T3": 0.0907
+      "T1": 0.3134,
+      "T2": 0.1556,
+      "T3": 0.108
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 587.75,
-    "hold_tolerance_breach_price": 88.1625,
+    "notional_eur": 564.5,
+    "hold_tolerance_breach_price": 84.675,
     "hold_fallback_active": true,
     "prediction_id": "HOOD_B_20260707"
   },

@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-07T00:05:57.210480+00:00",
+  "generated_at": "2026-07-07T21:40:14.885595+00:00",
   "prediction_id": "ENR_B_20260707",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "ENR",
@@ -9,8 +9,8 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 170.06,
-    "quantity": 3,
+    "limit_price": 155.3,
+    "quantity": 1,
     "tif": "GTD",
     "gtd": "2026-07-12T16:30:00+00:00"
   },
@@ -18,32 +18,16 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 189.28,
+      "limit_price": 161.08,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
     },
     {
       "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 189.6,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T2"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 189.91,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T3"
-    },
-    {
-      "action": "SELL",
       "order_type": "STP",
-      "stop_price": 155.54,
-      "quantity": 3,
+      "stop_price": 149.47,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -81,11 +65,11 @@
       },
       {
         "tag": "T2",
-        "qty": 1
+        "qty": 0
       },
       {
         "tag": "T3",
-        "qty": 1
+        "qty": 0
       }
     ]
   },
@@ -93,24 +77,24 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 8.0,
+    "composite_score": 5.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.069,
+    "ev_pct_risk": 0.1277,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.0646,
-      "T2": 0.047,
-      "T3": 0.0417
+      "T1": 0.3604,
+      "T2": 0.1081,
+      "T3": 0.0306
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 510.18,
-    "hold_tolerance_breach_price": 127.545,
+    "notional_eur": 155.3,
+    "hold_tolerance_breach_price": 116.475,
     "hold_fallback_active": true,
     "prediction_id": "ENR_B_20260707"
   },

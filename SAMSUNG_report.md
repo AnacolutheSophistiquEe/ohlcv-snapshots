@@ -1,15 +1,15 @@
 # 005930
 
-**Generated** : 2026-07-07T00:10:59.883892+00:00  
+**Generated** : 2026-07-07T21:45:48.905566+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
-**Santé technique** : 6/10 — **Rating** : Neutral  
+**Santé technique** : 5/10 — **Rating** : Buy  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite extreme · ₩318000.00  
 
-> 🟡 **WAIT-FOR-DIP** — spot +1.2 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot ₩318000.00 (+1.2% vs entrée) · entrée ₩314125.00 · stop ₩306083.93 · T1 ₩325069.10 · R/R 1.36  
-> ↳ P(T1 av. stop) 32 % · EV/risk 0.269 · ¼-Kelly 0.012 · _first-passage empirique daily (historique réel, n≈211) · non recalibrée track-record (n=0)_  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US CPI (headline) (J-5 sess · macro taux)  
+> ↳ spot ₩318000.00 (+2.8% vs entrée) · entrée ₩309475.00 · stop ₩278087.50 · T1 ₩372250.00 · R/R 2.0  
+> ↳ P(T1 av. stop) 8 % · EV/risk 0.324 · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -20,27 +20,27 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 6/10, conviction 'Neutral'.
+Plan privilegie B (swing), composite 5/10, conviction 'Buy'.
 
 
 ## Niveaux clés & plan principal
 
-**Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : ₩311936.18–₩316313.82 (mid ₩314125.00)
-- Spot actuel : ₩318000.00 (+1.2% au-dessus de la zone — repli à attendre)
-- Stop : ₩306083.93 (stop swing_plan-based (-12.55%))
-- Targets : T1 ₩325069.10 · R/R 1.36 | T2 ₩336013.20 · R/R 2.72 | T3 ₩346957.31 · R/R 4.08
+**Plan B — swing** (order_type LMT)
+- Entry (zone de repli) : ₩304638.44–₩314311.56 (mid ₩309475.00)
+- Spot actuel : ₩318000.00 (+2.8% au-dessus de la zone — repli à attendre)
+- Stop : ₩278087.50 (stop swing_plan-based (-12.55%))
+- Targets : T1 ₩372250.00 · R/R 2.0 | T2 ₩377026.75 · R/R 2.15 | T3 ₩381803.50 · R/R 2.3
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩306083.93
+- Invalidation : close sous ₩278087.50
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.269 | EV/share : ₩2161.893 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 32 % | T2 11 % | T3 3 %
-- Kelly (position) : f* 0.049 | ¼-Kelly 0.012 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈211) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 5.7 | bear 13.0 | side 81.3  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- EV/risk : 0.324 | EV/share : ₩10174.454 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 8 % | T2 4 % | T3 4 %
+- Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
+- Régime probabiliste (posterior HMM, swing) : bull 5.1 | bear 23.2 | side 71.7  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 288.0
 
 
@@ -82,5 +82,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16294 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16386 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
