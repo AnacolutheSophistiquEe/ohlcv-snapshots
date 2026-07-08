@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US21037T1097",
-    "generated_at": "2026-07-07T21:55:11.300528+00:00",
+    "generated_at": "2026-07-08T00:19:48.028632+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1792,7 +1792,7 @@
           "rr": 1.82,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7995,
+          "p_touch": 0.7996,
           "distance_pct": 2.73
         },
         "t3": {
@@ -1801,7 +1801,7 @@
           "rr": 2.73,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7995,
+          "p_touch": 0.7996,
           "distance_pct": 4.09
         }
       }
@@ -1871,7 +1871,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2794,
+          "p_touch": 0.2795,
           "distance_pct": 4.31
         },
         "t2": {
@@ -2184,7 +2184,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-07T21:54:45.698078+00:00",
+    "generated_at": "2026-07-08T00:19:24.739850+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7160,7 +7160,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-07T21:54:56.373214+00:00",
+    "generated_at": "2026-07-08T00:19:34.900243+00:00",
     "ticker": "CEG",
     "horizons_days": {
       "intraday": 2,
@@ -7174,8 +7174,8 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7191,7 +7191,7 @@
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7207,7 +7207,7 @@
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7222,9 +7222,10 @@
         "type": "macro",
         "label": "SK Hynix (SKH) ADR IPO Nasdaq — 10/07/2026 ($29.4 Md)",
         "importance": "high",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -7237,8 +7238,8 @@
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7252,8 +7253,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7267,8 +7268,8 @@
         "type": "macro",
         "label": "German ZEW Economic Sentiment",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7386,36 +7387,36 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-07-07T21:54:49.906043+00:00",
+    "generated_at": "2026-07-08T00:19:28.765909+00:00",
     "ticker": "CEG",
     "spot_price": 239.71,
     "expiries_available": [
       {
         "date": "2026-07-10",
-        "days_to_exp": 3
+        "days_to_exp": 2
       },
       {
         "date": "2026-07-17",
-        "days_to_exp": 10
+        "days_to_exp": 9
       },
       {
         "date": "2026-07-24",
-        "days_to_exp": 17
+        "days_to_exp": 16
       },
       {
         "date": "2026-07-31",
-        "days_to_exp": 24
+        "days_to_exp": 23
       },
       {
         "date": "2026-08-07",
-        "days_to_exp": 31
+        "days_to_exp": 30
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.5014,
-      "iv_atm_90d": 0.5014,
+      "iv_atm_30d": 0.5118,
+      "iv_atm_90d": 0.5118,
       "rv_20d_annualized": 0.395,
-      "iv_rv_ratio": 1.269,
+      "iv_rv_ratio": 1.296,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -7426,17 +7427,17 @@
     },
     "term_structure": {
       "m1_expiry": "2026-07-10",
-      "m1_days_to_exp": 3,
-      "m1_iv_atm": 0.509,
+      "m1_days_to_exp": 2,
+      "m1_iv_atm": 0.5295,
       "m3_expiry": "2026-08-07",
-      "m3_days_to_exp": 31,
-      "m3_iv_atm": 0.5001,
-      "ratio_m1_m3": 1.0178,
+      "m3_days_to_exp": 30,
+      "m3_iv_atm": 0.5081,
+      "ratio_m1_m3": 1.0423,
       "label": "flat"
     },
     "open_interest_m1": {
       "expiry": "2026-07-10",
-      "days_to_exp": 3,
+      "days_to_exp": 2,
       "put_call_ratio": 0.84,
       "total_oi_m1": 9144,
       "largest_call_strike_oi": {
@@ -7449,7 +7450,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": -756208578.0,
+      "gex_total_usd_per_point": -799107096.0,
       "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7463,7 +7464,7 @@
       "bullish_signals": 0,
       "bearish_signals": 1,
       "notes": [
-        "GEX négatif (-756.2M$/pt) = MM short gamma déstabilisateur",
+        "GEX négatif (-799.1M$/pt) = MM short gamma déstabilisateur",
         "max pain 255.00 vs spot 239.71 (+6.4%)"
       ]
     },
@@ -7503,7 +7504,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-07-07T21:54:55.384735+00:00",
+    "generated_at": "2026-07-08T00:19:33.987288+00:00",
     "ticker": "CEG",
     "short_interest": {
       "status": "ok",
@@ -7517,7 +7518,7 @@
       "float_shares": 337748828,
       "delta_shares_short_mom_pct": 8.05,
       "squeeze_potential": "low",
-      "fetched_at": "2026-07-07T21:54:51.107409+00:00"
+      "fetched_at": "2026-07-08T00:19:29.929804+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7546,7 +7547,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 0,
-      "fetched_at": "2026-07-07T21:54:55.383681+00:00"
+      "fetched_at": "2026-07-08T00:19:33.986032+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -15649,11 +15650,11 @@
     "parkinson_20d_annualized_pct": 37.15,
     "yang_zhang_20d_annualized_pct": 43.22,
     "volatility_cone": {
-      "current_rv_5d": 53.51209227406548,
-      "p10": 21.56600269860677,
-      "p25": 30.105486791855096,
-      "p50": 42.31400791193465,
-      "p75": 53.57306335381281,
+      "current_rv_5d": 53.512092274065495,
+      "p10": 21.5660128039755,
+      "p25": 30.10557491299898,
+      "p50": 42.314007911934624,
+      "p75": 53.57306537361374,
       "p90": 69.14498281711768,
       "current_percentile": 74.6
     },
@@ -15921,7 +15922,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-07T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -15966,7 +15967,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-07T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16017,7 +16018,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-07T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

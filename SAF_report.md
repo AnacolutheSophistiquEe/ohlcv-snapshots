@@ -1,11 +1,11 @@
 # SAF
 
-**Generated** : 2026-07-07T21:41:38.744327+00:00  
+**Generated** : 2026-07-08T00:07:24.427552+00:00  
 **Santé technique** : 10/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · €347.20  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US CPI (headline) (J-5 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US CPI (headline) (J-4 sess · macro taux)  
 > ↳ spot €347.20 (+0.4% vs entrée) · entrée €345.88 · stop €341.88 · T1 €353.86 · R/R 2.0  
 > ↳ P(T1 av. stop) 42 % _(réel 5 s)_ · EV/risk 0.153 _(réel 5 s)_ (GBM 0.168) · ¼-Kelly 0.01 · _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_  
 
@@ -49,7 +49,7 @@ Plan privilegie B (swing), composite 10/10, conviction 'Neutral'.
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −0.305% → cible +1.016% / stop −1.5%, p_fill 71%, n_eff≈30.6) : P(cible|rempli) **41%** · **EV/risk +0.061** (×p_fill ; si rempli +0.13% du capital)
+  - **intraday** (entrée dip −0.305% → cible +1.033% / stop −1.5%, p_fill 71%, n_eff≈30.6) : P(cible|rempli) **41%** · **EV/risk +0.064** (×p_fill ; si rempli +0.14% du capital)
   - **swing** (entrée dip −0.38% → cible +2.309% / stop −1.154%, p_fill 74%, n_eff≈31.4) : P(cible|rempli) **42%** · **EV/risk +0.153** (×p_fill ; si rempli +0.24% du capital)
   - **deep** (entrée dip −0.536% → cible +3.265% / stop −1.633%, p_fill 76%, n_eff≈33.1) : P(cible|rempli) **56%** · **EV/risk +0.508** (×p_fill ; si rempli +1.09% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→75% · +1.0%→61% · +2.0%→39% · +3.0%→16% · +5.0%→5% · +8.0%→2%
@@ -139,8 +139,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-5 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-5 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -150,8 +150,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.902  _(pas de croisement recent)_
 - **BB** : %B 0.7 · largeur 22.5%
 - **ATR** : 8.24 (60.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF 0.078  _(accumulation)_
-- **Vol ratio** : 0.83  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.099  _(accumulation)_
+- **Vol ratio** : 0.36  _(volume atone)_
 - **Choppiness** : 45.4  _(transition)_
 - **MA** : MA20 332.15 · MA50 303.81 · MA200 301.96  _(prix > MA20)_
 - **Dist MA** : MA20 +4.5% · MA50 +14.3% · MA200 +15.0%
@@ -159,5 +159,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (92384 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (92383 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

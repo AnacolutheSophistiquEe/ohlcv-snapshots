@@ -1,15 +1,15 @@
 # 005930
 
-**Generated** : 2026-07-07T21:45:48.905566+00:00  
+**Generated** : 2026-07-08T00:11:16.267134+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 5/10 — **Rating** : Buy  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite extreme · ₩318000.00  
+**Subtitle** : indeterminate · volatilite extreme · ₩296000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US CPI (headline) (J-5 sess · macro taux)  
-> ↳ spot ₩318000.00 (+2.8% vs entrée) · entrée ₩309475.00 · stop ₩278087.50 · T1 ₩372250.00 · R/R 2.0  
-> ↳ P(T1 av. stop) 8 % · EV/risk 0.324 · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US CPI (headline) (J-4 sess · macro taux)  
+> ↳ spot ₩296000.00 (+6.7% vs entrée) · entrée ₩277300.00 · stop ₩266663.23 · T1 ₩298573.53 · R/R 2.0  
+> ↳ P(T1 av. stop) 41 % · EV/risk 0.662 · ¼-Kelly 0.032 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -26,28 +26,28 @@ Plan privilegie B (swing), composite 5/10, conviction 'Buy'.
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : ₩304638.44–₩314311.56 (mid ₩309475.00)
-- Spot actuel : ₩318000.00 (+2.8% au-dessus de la zone — repli à attendre)
-- Stop : ₩278087.50 (stop swing_plan-based (-12.55%))
-- Targets : T1 ₩372250.00 · R/R 2.0 | T2 ₩377026.75 · R/R 2.15 | T3 ₩381803.50 · R/R 2.3
+- Entry (zone de repli) : ₩273045.29–₩281554.71 (mid ₩277300.00)
+- Spot actuel : ₩296000.00 (+6.7% au-dessus de la zone — repli à attendre)
+- Stop : ₩266663.23 (stop swing_plan-based (-9.91%))
+- Targets : T1 ₩298573.53 · R/R 2.0 | T2 ₩319847.06 · R/R 4.0 | T3 ₩341120.59 · R/R 6.0
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩278087.50
+- Invalidation : close sous ₩266663.23
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.324 | EV/share : ₩10174.454 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 8 % | T2 4 % | T3 4 %
-- Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- EV/risk : 0.662 | EV/share : ₩7045.402 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 41 % | T2 14 % | T3 3 %
+- Kelly (position) : f* 0.127 | ¼-Kelly 0.032 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 5.1 | bear 23.2 | side 71.7  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, swing) : bull 5.4 | bear 26.7 | side 68.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 288.0
 
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : loin du support — entrée non optimale (chasing)
-- Proximité zone : 0.0/2 | R/R T1 : 1.0 | extension : normal
+- **Verdict timing** : neutre
+- Proximité zone : 0.75/2 | R/R T1 : 0.5 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -62,25 +62,25 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-5 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-5 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 44.9  _(momentum baissier)_
-- **ADX** : 18.2  _(pas de tendance nette)_
-- **MACD** : hist -6529.636  _(pas de croisement recent)_
-- **BB** : %B 0.37 · largeur 26.0%
-- **ATR** : 26803.57 (100.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF 0.065  _(accumulation)_
-- **Vol ratio** : 0.8  _(volume normal)_
-- **Choppiness** : 52.9  _(transition)_
-- **MA** : MA20 328800.0 · MA50 298330.0 · MA200 176790.4  _(prix < MA20)_
-- **Dist MA** : MA20 -3.3% · MA50 +6.6% · MA200 +79.9%
+- **RSI** : 40.5  _(momentum baissier)_
+- **ADX** : 17.9  _(pas de tendance nette)_
+- **MACD** : hist -7081.104  _(pas de croisement recent)_
+- **BB** : %B 0.15 · largeur 27.6%
+- **ATR** : 27910.71 (100.0e pct 1a)  _(volatilite elevee)_
+- **OBV/CMF** : OBV falling · CMF 0.014  _(neutre)_
+- **Vol ratio** : 1.08  _(volume normal)_
+- **Choppiness** : 54.4  _(transition)_
+- **MA** : MA20 327500.0 · MA50 299900.0 · MA200 177926.82  _(prix < MA20)_
+- **Dist MA** : MA20 -9.6% · MA50 -1.3% · MA200 +66.4%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16386 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16588 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
