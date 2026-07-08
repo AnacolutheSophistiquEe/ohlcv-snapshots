@@ -1,6 +1,6 @@
 # OHLCV Snapshots
 
-Last update: `2026-07-08T00:01:18.572334+00:00`
+Last update: `2026-07-08T21:30:59.349719+00:00`
 
 Daily snapshots of OHLCV data for the trading universe of [Manuel's IBKR Dip Scalper](https://github.com/AnacolutheSophistiquEe).
 Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the only reliable network path from the claude.ai sandbox.
@@ -24,7 +24,7 @@ Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the o
 
 ## Tickers
 
-(23 assets covered)
+(26 assets covered)
 
 | Display | yfinance symbol |
 |---|---|
@@ -33,7 +33,10 @@ Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the o
 | `EVT` | `EVT.DE` |
 | `ENR` | `ENR.DE` |
 | `SAF` | `SAF.PA` |
+| `NEX` | `NEX.PA` |
+| `SOI` | `SOI.PA` |
 | `AL2SI` | `AL2SI.PA` |
+| `PRY` | `PRY.MI` |
 | `000660` | `000660.KS` |
 | `005930` | `005930.KS` |
 | `MSTR` | `MSTR` |
