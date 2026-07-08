@@ -1,0 +1,92 @@
+{
+  "ath_price": 1968.8203,
+  "ath_date": "2025-09-29",
+  "current_dd_pct": -46.22,
+  "max_dd_1y_pct": -51.92,
+  "drawdown_start_date": "2025-09-29",
+  "time_in_drawdown_days": 282,
+  "time_to_recovery_days_historical_median": 10,
+  "recovery_source_bars": 1275,
+  "recovery_source": "daily_long",
+  "recovery_by_magnitude": [
+    {
+      "min_dd_pct": 5,
+      "n_samples": 23,
+      "median_recovery_days": 10,
+      "p25_recovery_days": 6,
+      "p75_recovery_days": 34,
+      "confidence": "high",
+      "inherited_from_bucket_pct": null
+    },
+    {
+      "min_dd_pct": 10,
+      "n_samples": 9,
+      "median_recovery_days": 59,
+      "p25_recovery_days": 33,
+      "p75_recovery_days": 90,
+      "confidence": "medium",
+      "inherited_from_bucket_pct": null
+    },
+    {
+      "min_dd_pct": 15,
+      "n_samples": 4,
+      "median_recovery_days": 65,
+      "p25_recovery_days": 52,
+      "p75_recovery_days": 91,
+      "confidence": "low",
+      "inherited_from_bucket_pct": null
+    },
+    {
+      "min_dd_pct": 25,
+      "n_samples": 1,
+      "median_recovery_days": 150,
+      "p25_recovery_days": 150,
+      "p75_recovery_days": 150,
+      "confidence": "low",
+      "inherited_from_bucket_pct": null
+    },
+    {
+      "min_dd_pct": 35,
+      "n_samples": 1,
+      "median_recovery_days": 150,
+      "p25_recovery_days": 150,
+      "p75_recovery_days": 150,
+      "confidence": "low",
+      "inherited_from_bucket_pct": 25
+    },
+    {
+      "min_dd_pct": 50,
+      "n_samples": 0,
+      "median_recovery_days": null,
+      "p25_recovery_days": null,
+      "p75_recovery_days": null,
+      "confidence": "low",
+      "inherited_from_bucket_pct": null
+    }
+  ],
+  "current_dd_recovery_estimate": {
+    "matched_bucket_min_dd_pct": 35,
+    "estimate_days": 150,
+    "n_samples": 1,
+    "confidence": "low"
+  },
+  "recovery_matrix": {
+    "recovery_estimates_median_sessions": {
+      "drawdown_5pct": 10,
+      "drawdown_10pct": 59,
+      "drawdown_15pct": 65,
+      "drawdown_25pct": 150,
+      "drawdown_35pct": 150,
+      "drawdown_50pct": null
+    },
+    "n_episodes_per_bucket": {
+      "drawdown_5pct": 23,
+      "drawdown_10pct": 9,
+      "drawdown_15pct": 4,
+      "drawdown_25pct": 1,
+      "drawdown_35pct": 1,
+      "drawdown_50pct": 0
+    },
+    "methodology": "Pour chaque pic local de close, mesurer N sessions jusqu'à retour breakeven post-drawdown >= X%. Seuils alignés notice v2.1 §C.1.4."
+  }
+}
