@@ -1,39 +1,23 @@
 {
   "available": true,
-  "generated_at": "2026-06-30T21:58:50.939752+00:00",
-  "prediction_id": "HOOD_A_20260630",
+  "generated_at": "2026-07-09T00:09:46.468867+00:00",
+  "prediction_id": "SOI_A_20260709",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "HOOD",
+  "symbol": "SOI",
   "exchange": "SMART",
   "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 99.78,
-    "quantity": 3,
+    "limit_price": 97.73,
+    "quantity": 1,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 104.45,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T1"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 110.06,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T2"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 115.67,
+      "limit_price": 99.45,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -41,13 +25,13 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 96.04,
-      "quantity": 3,
+      "stop_price": 76.78,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "HOOD_A_intraday_20260630",
+  "oca_group": "SOI_A_intraday_20260709",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -61,7 +45,7 @@
     "order_validity": {
       "type": "DAY",
       "offset_sessions": 0,
-      "good_till_date": "2026-06-30T22:00:00+00:00"
+      "good_till_date": "2026-07-09T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -69,19 +53,9 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.5,
-      0.3,
-      0.2
+      1.0
     ],
     "qty_split": [
-      {
-        "tag": "T1",
-        "qty": 1
-      },
-      {
-        "tag": "T2",
-        "qty": 1
-      },
       {
         "tag": "T3",
         "qty": 1
@@ -92,26 +66,26 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 8.0,
+    "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.0258,
+    "ev_pct_risk": 0.0218,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.3066,
-      "T2": 0.1625,
-      "T3": 0.1625
+      "T1": 0.3489,
+      "T2": 0.188,
+      "T3": 0.1099
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 300.84,
-    "hold_tolerance_breach_price": 75.21,
+    "notional_eur": 98.22,
+    "hold_tolerance_breach_price": null,
     "hold_fallback_active": true,
-    "prediction_id": "HOOD_A_20260630"
+    "prediction_id": "SOI_A_20260709"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
