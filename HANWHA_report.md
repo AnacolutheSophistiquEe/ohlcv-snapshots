@@ -1,6 +1,6 @@
 # 012450
 
-**Generated** : 2026-07-09T16:31:59.055510+00:00  
+**Generated** : 2026-07-09T16:43:33.581458+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.1 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 2/10 — **Rating** : Pass  

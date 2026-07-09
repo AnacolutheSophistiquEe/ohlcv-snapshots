@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-07-09T16:25:59.036744+00:00  
+**Generated** : 2026-07-09T16:37:33.257085+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 5/10 — **Rating** : Neutral  
@@ -36,7 +36,7 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Neutral'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.181 | EV/share : ₩14948.507 | p_fill : —
+- EV/risk : 0.181 | EV/share : ₩14948.506 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 36 % | T2 13 % | T3 5 %
 - Kelly (position) : f* 0.045 | ¼-Kelly 0.011 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_

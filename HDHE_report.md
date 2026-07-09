@@ -1,6 +1,6 @@
 # 267260
 
-**Generated** : 2026-07-09T16:28:57.865979+00:00  
+**Generated** : 2026-07-09T16:40:33.269020+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.1 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 3/10 — **Rating** : Pass  
@@ -8,7 +8,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 **Subtitle** : indeterminate · volatilite high · ₩822000.00  
 
 > 🟡 **WAIT-FOR-DIP** — spot +2.5 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot ₩822000.00 (+2.5% vs entrée) · entrée ₩801663.71 · stop ₩775113.71 · T1 ₩832775.15 · R/R 1.17  
+> ↳ spot ₩822000.00 (+2.5% vs entrée) · entrée ₩801663.72 · stop ₩775113.72 · T1 ₩832775.15 · R/R 1.17  
 > ↳ P(T1 av. stop) 32 % · EV/risk 0.039 · ¼-Kelly 0.001 · _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
@@ -26,17 +26,17 @@ Plan privilegie A (intraday), composite 3/10, conviction 'Pass'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : ₩797170.29–₩806157.13 (mid ₩801663.71)
+- Entry (zone de repli) : ₩797170.30–₩806157.14 (mid ₩801663.72)
 - Spot actuel : ₩822000.00 (+2.5% au-dessus de la zone — repli à attendre)
-- Stop : ₩775113.71 (stop swing_plan-based (-8.67%))
-- Targets : T1 ₩832775.15 · R/R 1.17 | T2 ₩850817.95 · R/R 1.85 | T3 ₩868860.76 · R/R 2.53
+- Stop : ₩775113.72 (stop swing_plan-based (-8.67%))
+- Targets : T1 ₩832775.15 · R/R 1.17 | T2 ₩850817.96 · R/R 1.85 | T3 ₩868860.77 · R/R 2.53
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩775113.71
+- Invalidation : close sous ₩775113.72
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.039 | EV/share : ₩1044.780 | p_fill : —
+- EV/risk : 0.039 | EV/share : ₩1044.777 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 32 % | T2 14 % | T3 7 %
 - Kelly (position) : f* 0.005 | ¼-Kelly 0.001 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_
@@ -82,5 +82,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16653 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16654 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
