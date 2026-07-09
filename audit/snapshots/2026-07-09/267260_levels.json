@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "267260",
-    "generated_at": "2026-07-09T20:16:16Z",
+    "generated_at": "2026-07-09T21:36:15Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-07-10T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "267260_precomputed.json"
   },
   "context": {
-    "last_price": 822000.0,
+    "last_price": 815000.0,
     "ta_score": {
       "value": 2,
       "max": 10,
@@ -24,11 +24,11 @@
     },
     "volatility_regime": "high",
     "signals_counter": {
-      "buy": 4,
+      "buy": 3,
       "sell": 6,
-      "neutral": 5,
+      "neutral": 6,
       "total": 15,
-      "verdict": "sell"
+      "verdict": "strong_sell"
     },
     "mean_reversion_score": {
       "setup": "rsi_<30_dist_ma20_<-10",
@@ -37,7 +37,7 @@
       "median_bounce_pct": 12.83,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bear (0.90), vol high, signals sell (4b/6s/5n)."
+    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bear (0.90), vol high, signals strong_sell (3b/6s/6n)."
   },
   "notes": {
     "atr_daily": 88500.0,
@@ -47,9 +47,9 @@
     "beta_corr_60d": 0.3402,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "doji",
-      "date": "2026-07-09",
-      "confidence": 0.667
+      "name": "",
+      "date": "",
+      "confidence": null
     },
     "divergences": [
       {
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -42.06,
+      "current_dd_pct": -42.55,
       "ath_price": 1418644.625,
       "ath_date": "2026-05-07",
       "max_dd_1y_pct": -42.62,
@@ -87,21 +87,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 825821.2429,
+          "price": 822330.5028,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 0.53
+          "rr": 0.47
         },
         {
           "level": 2,
-          "price": 874382.2983,
+          "price": 870550.8182,
           "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
-          "rr": 1.32
+          "rr": 1.26
         },
         {
           "level": 3,
-          "price": 922943.3538,
+          "price": 918771.1336,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 2.11
+          "rr": 2.04
         }
       ],
       "preferred_target": 1,
@@ -115,13 +115,13 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 989688.7,
-        "max": 993643.5
+        "min": 989338.35,
+        "max": 993291.75
       },
       "stop": {
-        "price": 904132.3345,
+        "price": 904097.5095,
         "basis": "below_broken_resistance",
-        "distance_pct": -8.83
+        "distance_pct": -8.8
       },
       "targets": [
         {
@@ -132,7 +132,7 @@
         },
         {
           "level": 2,
-          "price": 1091072.2825,
+          "price": 1090932.2825,
           "basis": "next_confluence_resistance",
           "rr": 1.14
         },
@@ -140,7 +140,7 @@
           "level": 3,
           "price": 1123711.8495,
           "basis": "fib_618",
-          "rr": 1.51
+          "rr": 1.52
         }
       ],
       "preferred_target": 1,
@@ -165,21 +165,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 825821.2429,
+          "price": 822330.5028,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 2.08
+          "rr": 2.06
         },
         {
           "level": 2,
-          "price": 874382.2983,
+          "price": 870550.8182,
           "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
-          "rr": 2.46
+          "rr": 2.43
         },
         {
           "level": 3,
-          "price": 922943.3538,
+          "price": 918771.1336,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 2.83
+          "rr": 2.8
         }
       ],
       "preferred_target": 1,
