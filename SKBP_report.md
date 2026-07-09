@@ -1,6 +1,6 @@
 # 326030
 
-**Generated** : 2026-07-09T16:46:36.465266+00:00  
+**Generated** : 2026-07-09T20:15:18.724644+00:00  
 **Santé technique** : 2/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite high · ₩80700.00  
@@ -80,5 +80,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16013 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16011 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

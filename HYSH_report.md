@@ -1,6 +1,6 @@
 # 298040
 
-**Generated** : 2026-07-09T16:42:03.413951+00:00  
+**Generated** : 2026-07-09T20:10:36.138646+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.8 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Pass  
@@ -82,5 +82,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16586 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16584 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
