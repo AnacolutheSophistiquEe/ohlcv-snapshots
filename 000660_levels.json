@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "000660",
-    "generated_at": "2026-07-09T16:04:23Z",
+    "generated_at": "2026-07-09T16:35:56Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-07-10T08:00:00Z",
@@ -86,7 +86,7 @@
         {
           "level": 2,
           "price": 2458217.2742,
-          "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
+          "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
           "rr": 0.72
         },
         {
@@ -125,7 +125,7 @@
         {
           "level": 2,
           "price": 2458217.2742,
-          "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
+          "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
           "rr": 1.7
         },
         {
@@ -146,11 +146,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 1568133.9375,
+        "min": 1568133.9219,
         "max": 1689717.4456
       },
       "stop": {
-        "price": 1505408.58,
+        "price": 1505408.565,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -7.58
       },
@@ -164,7 +164,7 @@
         {
           "level": 2,
           "price": 2458217.2742,
-          "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
+          "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
           "rr": 6.71
         },
         {
@@ -184,7 +184,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 1490354.4942,
+    "price": 1490354.4793,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
