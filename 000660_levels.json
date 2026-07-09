@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "000660",
-    "generated_at": "2026-07-09T21:36:15Z",
+    "generated_at": "2026-07-09T22:05:26Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-07-10T08:00:00Z",
@@ -12,7 +12,7 @@
   "context": {
     "last_price": 2186000.0,
     "ta_score": {
-      "value": 4,
+      "value": 5,
       "max": 10,
       "label": "neutral"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 36.68,
       "confidence": "very_low"
     },
-    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM bear (0.65), vol extreme, signals neutral (4b/4s/7n)."
+    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM bear (0.65), vol extreme, signals neutral (4b/4s/7n)."
   },
   "notes": {
     "atr_daily": 274785.7143,
     "atr_pct_daily": null,
-    "beta_60d": 0.6774,
+    "beta_60d": 0.6465,
     "beta_benchmark": "EWY",
-    "beta_corr_60d": 0.541,
+    "beta_corr_60d": 0.5131,
     "btc_corr_high": null,
     "candlestick": {
       "name": "hammer",
@@ -146,11 +146,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 1568133.9219,
+        "min": 1568133.9375,
         "max": 1689717.4456
       },
       "stop": {
-        "price": 1505408.565,
+        "price": 1505408.58,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -7.58
       },
@@ -184,7 +184,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 1490354.4793,
+    "price": 1490354.4942,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
