@@ -1,0 +1,154 @@
+{
+  "available": true,
+  "generated_at": "2026-07-09T21:35:54.345243+00:00",
+  "ticker": "RHM",
+  "horizons_days": {
+    "intraday": 2,
+    "swing": 7,
+    "deep": 14
+  },
+  "n_events": 9,
+  "events": [
+    {
+      "date": "2026-07-09",
+      "type": "macro",
+      "label": "US Initial Jobless Claims (weekly)",
+      "importance": "medium",
+      "sessions_to_event": 0,
+      "calendar_days": 0,
+      "in_plan_horizon": [
+        "intraday",
+        "swing",
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-09",
+      "type": "macro",
+      "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
+      "importance": "low",
+      "sessions_to_event": 0,
+      "calendar_days": 0,
+      "in_plan_horizon": [
+        "intraday",
+        "swing",
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-10",
+      "type": "macro",
+      "label": "SK Hynix (SKH) ADR IPO Nasdaq — 10/07/2026 ($29.4 Md)",
+      "importance": "high",
+      "sessions_to_event": 1,
+      "calendar_days": 1,
+      "in_plan_horizon": [
+        "intraday",
+        "swing",
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-14",
+      "type": "macro",
+      "label": "US CPI (headline)",
+      "importance": "high",
+      "sessions_to_event": 4,
+      "calendar_days": 5,
+      "in_plan_horizon": [
+        "swing",
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-14",
+      "type": "macro",
+      "label": "US Core CPI (ex food & energy)",
+      "importance": "high",
+      "sessions_to_event": 4,
+      "calendar_days": 5,
+      "in_plan_horizon": [
+        "swing",
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-14",
+      "type": "macro",
+      "label": "German ZEW Economic Sentiment",
+      "importance": "medium",
+      "sessions_to_event": 4,
+      "calendar_days": 5,
+      "in_plan_horizon": [
+        "swing",
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-23",
+      "type": "macro",
+      "label": "ECB Monetary Policy Decision",
+      "importance": "high",
+      "sessions_to_event": 10,
+      "calendar_days": 14,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-23",
+      "type": "macro",
+      "label": "Sartorius (SRT3/SRT) Q2 2026 Earnings",
+      "importance": "high",
+      "sessions_to_event": 10,
+      "calendar_days": 14,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-23",
+      "type": "macro",
+      "label": "Samsung Electronics Q2 2026 Earnings (pre-announcement mi-juillet)",
+      "importance": "medium",
+      "sessions_to_event": 10,
+      "calendar_days": 14,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    }
+  ],
+  "earnings_in_swing": false,
+  "warnings": {
+    "macro": null,
+    "corporate": null
+  },
+  "note": "réutilise data/macro_calendar.json (collecte = Claude/VPS, PAS reconstruite ici) + earnings/ex-div yfinance best-effort. Impact/reco mécaniques, observe-only."
+}

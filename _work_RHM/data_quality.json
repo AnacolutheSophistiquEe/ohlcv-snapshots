@@ -1,0 +1,161 @@
+{
+  "daily": {
+    "completeness": {
+      "n_bars": 254,
+      "expected_bars_daily": 262,
+      "completeness_pct": 96.94656488549617,
+      "missing_dates": [
+        "2025-12-24T00:00:00",
+        "2025-12-25T00:00:00",
+        "2025-12-26T00:00:00",
+        "2025-12-31T00:00:00",
+        "2026-01-01T00:00:00",
+        "2026-04-03T00:00:00",
+        "2026-04-06T00:00:00",
+        "2026-05-01T00:00:00"
+      ]
+    },
+    "outliers": {
+      "n_outliers_5sigma": 1,
+      "n_outliers_3sigma": 5,
+      "outliers_recent_30d": [
+        {
+          "date": "2026-06-24T00:00:00",
+          "return_pct": -18.652492725850223,
+          "sigma_distance": 6.237221060529138
+        }
+      ]
+    },
+    "gaps": {
+      "n_gaps_up": 5,
+      "n_gaps_down": 8,
+      "last_significant_gap": {
+        "date": "2026-06-24T00:00:00",
+        "type": "down",
+        "magnitude_pct": 6.926406926406925
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 1,
+      "mean_volume_60d": 273480.35,
+      "median_volume_60d": 226968.0,
+      "volume_consistency_score": 0.2892968235551767
+    },
+    "liquidity": {
+      "liquidity_score": 313705923.16819865,
+      "liquidity_classification": "high"
+    },
+    "freshness": {
+      "last_bar_date": "2026-07-09T00:00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 81.93107043351037,
+      "overall_label": "good",
+      "warnings": [
+        "outlier de 6.2σ le 2026-06-24 non expliqué (daily)",
+        "1 bar(s) à volume zéro (daily)"
+      ]
+    }
+  },
+  "h4": {
+    "completeness": {
+      "n_bars": 191,
+      "expected_bars_daily": null,
+      "expected_bars_h4": 192,
+      "bars_per_day_typical": 3,
+      "completeness_pct": 99.47916666666666,
+      "missing_dates": [],
+      "missing_bars_intraday": 1
+    },
+    "outliers": {
+      "n_outliers_5sigma": 1,
+      "n_outliers_3sigma": 2,
+      "outliers_recent_30d": []
+    },
+    "gaps": {
+      "n_gaps_up": 1,
+      "n_gaps_down": 1,
+      "last_significant_gap": {
+        "date": "2026-06-24T04:00:00+00:00",
+        "type": "down",
+        "magnitude_pct": 6.926406926406925
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 61,
+      "mean_volume_60d": 69870.95,
+      "median_volume_60d": 50655.5,
+      "volume_consistency_score": 0.0
+    },
+    "liquidity": {
+      "liquidity_score": 57105806.91314087,
+      "liquidity_classification": "medium"
+    },
+    "freshness": {
+      "last_bar_date": "2026-07-09T12:00:00+00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 77.44742582897032,
+      "overall_label": "good",
+      "warnings": [
+        "61 bar(s) à volume zéro (h4)"
+      ]
+    }
+  },
+  "h1": {
+    "completeness": {
+      "n_bars": 198,
+      "expected_bars_daily": null,
+      "expected_bars_h1": 198,
+      "bars_per_day_typical": 9,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_bars_intraday": 0
+    },
+    "outliers": {
+      "n_outliers_5sigma": 1,
+      "n_outliers_3sigma": 3,
+      "outliers_recent_30d": []
+    },
+    "gaps": {
+      "n_gaps_up": 0,
+      "n_gaps_down": 1,
+      "last_significant_gap": {
+        "date": "2026-06-24T07:00:00+00:00",
+        "type": "down",
+        "magnitude_pct": 7.423351257023613
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 21,
+      "mean_volume_60d": 16899.216666666667,
+      "median_volume_60d": 15320.5,
+      "volume_consistency_score": 0.3553589591357479
+    },
+    "liquidity": {
+      "liquidity_score": 17219360.93180542,
+      "liquidity_classification": "medium"
+    },
+    "freshness": {
+      "last_bar_date": "2026-07-09T15:00:00+00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 82.05008135673319,
+      "overall_label": "good",
+      "warnings": [
+        "21 bar(s) à volume zéro (h1)"
+      ]
+    }
+  },
+  "summary": {
+    "worst_tf_quality_score": 77.44742582897032,
+    "worst_tf": "h4",
+    "recommendation": "review_outliers"
+  }
+}

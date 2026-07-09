@@ -1,13 +1,13 @@
 # 326030
 
-**Generated** : 2026-07-09T20:15:18.724644+00:00  
+**Generated** : 2026-07-09T21:35:18.524725+00:00  
 **Santé technique** : 2/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : range · volatilite high · ₩80700.00  
+**Subtitle** : range · volatilite high · ₩80200.00  
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié  
-> ↳ spot ₩80700.00 (+7.5% vs entrée) · entrée ₩75078.57 · stop ₩73392.14 · T1 ₩76567.94 · R/R 0.88  
-> ↳ P(T1 av. stop) 34 % · EV/risk -0.081 · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_  
+> ↳ spot ₩80200.00 (+7.5% vs entrée) · entrée ₩74578.57 · stop ₩72892.14 · T1 ₩76063.76 · R/R 0.88  
+> ↳ P(T1 av. stop) 34 % · EV/risk -0.077 · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -24,17 +24,17 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : ₩74780.70–₩75376.45 (mid ₩75078.57)
-- Spot actuel : ₩80700.00 (+7.5% au-dessus de la zone — repli à attendre)
-- Stop : ₩73392.14 (stop swing_plan-based (-16.02%))
-- Targets : T1 ₩76567.94 · R/R 0.88 | T2 ₩78057.31 · R/R 1.77 | T3 ₩79546.69 · R/R 2.65
+- Entry (zone de repli) : ₩74281.53–₩74875.61 (mid ₩74578.57)
+- Spot actuel : ₩80200.00 (+7.5% au-dessus de la zone — repli à attendre)
+- Stop : ₩72892.14 (stop swing_plan-based (-16.12%))
+- Targets : T1 ₩76063.76 · R/R 0.88 | T2 ₩77548.95 · R/R 1.76 | T3 ₩79034.13 · R/R 2.64
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩73392.14
+- Invalidation : close sous ₩72892.14
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.081 | EV/share : ₩-137.109 | p_fill : —
+- EV/risk : -0.077 | EV/share : ₩-129.898 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 34 % | T2 16 % | T3 7 %
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_
@@ -45,7 +45,7 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative 
 ## Timing d'entrée (observe-only)
 
 - **Verdict timing** : neutre
-- Proximité zone : 0.75/2 | R/R T1 : 2.0 | extension : normal
+- Proximité zone : 0.75/2 | R/R T1 : 1.0 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -66,19 +66,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 41.6  _(momentum baissier)_
+- **RSI** : 41.1  _(momentum baissier)_
 - **ADX** : 8.8  _(pas de tendance nette)_
-- **MACD** : hist -228.416  _(bearish_recent)_
-- **BB** : %B 0.01 · largeur 13.5%
+- **MACD** : hist -260.324  _(bearish_recent)_
+- **BB** : %B -0.02 · largeur 13.7%
 - **ATR** : 5621.43 (90.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.15  _(distribution)_
-- **Vol ratio** : 0.68  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.164  _(distribution)_
+- **Vol ratio** : 0.95  _(volume normal)_
 - **Choppiness** : 65.4  _(marche en range (choppy))_
-- **MA** : MA20 86380.0 · MA50 91646.0 · MA200 108292.5  _(prix < MA20)_
-- **Dist MA** : MA20 -6.6% · MA50 -11.9% · MA200 -25.5%
+- **MA** : MA20 86355.0 · MA50 91636.0 · MA200 108290.0  _(prix < MA20)_
+- **Dist MA** : MA20 -7.1% · MA50 -12.5% · MA200 -25.9%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16011 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16012 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
