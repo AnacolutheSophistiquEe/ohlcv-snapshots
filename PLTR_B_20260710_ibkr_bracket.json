@@ -1,46 +1,38 @@
 {
   "available": true,
-  "generated_at": "2026-07-01T21:53:52.747010+00:00",
-  "prediction_id": "IONQ_B_20260701",
+  "generated_at": "2026-07-10T00:25:31.343257+00:00",
+  "prediction_id": "PLTR_B_20260710",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "IONQ",
+  "symbol": "PLTR",
   "exchange": "SMART",
   "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 51.4,
-    "quantity": 5,
+    "limit_price": 129.04,
+    "quantity": 1,
     "tif": "GTD",
-    "gtd": "2026-07-06T22:00:00+00:00"
+    "gtd": "2026-07-15T22:00:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 53.29,
-      "quantity": 3,
-      "tif": "GTC",
-      "tag": "T2"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 56.81,
-      "quantity": 2,
+      "limit_price": 132.22,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 44.5,
-      "quantity": 5,
+      "stop_price": 113.96,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "IONQ_B_swing_20260701",
+  "oca_group": "PLTR_B_swing_20260710",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "breakeven_after_T1",
@@ -54,7 +46,7 @@
     "order_validity": {
       "type": "GTD",
       "offset_sessions": 5,
-      "good_till_date": "2026-07-06T22:00:00+00:00"
+      "good_till_date": "2026-07-15T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -62,17 +54,12 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.6,
-      0.4
+      1.0
     ],
     "qty_split": [
       {
-        "tag": "T2",
-        "qty": 3
-      },
-      {
         "tag": "T3",
-        "qty": 2
+        "qty": 1
       }
     ]
   },
@@ -80,26 +67,26 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 5.0,
+    "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.0026,
+    "ev_pct_risk": -0.0364,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.3292,
-      "T2": 0.1669,
-      "T3": 0.09
+      "T1": 0.2954,
+      "T2": 0.1559,
+      "T3": 0.0731
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 257.0,
-    "hold_tolerance_breach_price": 38.55,
+    "notional_eur": 129.04,
+    "hold_tolerance_breach_price": 96.78,
     "hold_fallback_active": true,
-    "prediction_id": "IONQ_B_20260701"
+    "prediction_id": "PLTR_B_20260710"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
