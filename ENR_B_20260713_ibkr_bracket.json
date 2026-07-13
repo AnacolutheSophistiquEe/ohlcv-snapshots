@@ -1,38 +1,38 @@
 {
   "available": true,
-  "generated_at": "2026-07-02T22:00:44.516765+00:00",
-  "prediction_id": "SOFI_B_20260702",
+  "generated_at": "2026-07-13T00:05:52.663421+00:00",
+  "prediction_id": "ENR_B_20260713",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "SOFI",
-  "exchange": "SMART",
-  "currency": "USD",
+  "symbol": "ENR",
+  "exchange": "IBIS",
+  "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 18.24,
-    "quantity": 21,
+    "limit_price": 152.12,
+    "quantity": 1,
     "tif": "GTD",
-    "gtd": "2026-07-07T22:00:00+00:00"
+    "gtd": "2026-07-18T16:30:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 18.85,
-      "quantity": 21,
+      "limit_price": 157.87,
+      "quantity": 1,
       "tif": "GTC",
-      "tag": "T3"
+      "tag": "T1"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 16.64,
-      "quantity": 21,
+      "stop_price": 147.9,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "SOFI_B_swing_20260702",
+  "oca_group": "ENR_B_swing_20260713",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "breakeven_after_T1",
@@ -46,7 +46,7 @@
     "order_validity": {
       "type": "GTD",
       "offset_sessions": 5,
-      "good_till_date": "2026-07-07T22:00:00+00:00"
+      "good_till_date": "2026-07-18T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -54,12 +54,22 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      1.0
+      0.5,
+      0.3,
+      0.2
     ],
     "qty_split": [
       {
+        "tag": "T1",
+        "qty": 1
+      },
+      {
+        "tag": "T2",
+        "qty": 0
+      },
+      {
         "tag": "T3",
-        "qty": 21
+        "qty": 0
       }
     ]
   },
@@ -67,26 +77,26 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 6.0,
+    "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.0512,
+    "ev_pct_risk": 0.1126,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.3149,
-      "T2": 0.1946,
-      "T3": 0.1196
+      "T1": 0.3722,
+      "T2": 0.1613,
+      "T3": 0.0478
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 383.04,
-    "hold_tolerance_breach_price": 13.68,
+    "notional_eur": 152.12,
+    "hold_tolerance_breach_price": 114.09,
     "hold_fallback_active": true,
-    "prediction_id": "SOFI_B_20260702"
+    "prediction_id": "ENR_B_20260713"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,

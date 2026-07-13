@@ -1,13 +1,13 @@
 # 267260
 
-**Generated** : 2026-07-10T21:52:28.071403+00:00  
+**Generated** : 2026-07-13T00:15:58.687532+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · ₩851000.00  
 
-> 🟢 **ARMED** — plan valide, prix dans/proche de la zone d'entrée — exécutable  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot ₩851000.00 (+0.5% vs entrée) · entrée ₩846443.79 · stop ₩819700.93 · T1 ₩868172.37 · R/R 0.81  
-> ↳ P(T1 av. stop) 44 % · EV/risk 0.018 · ¼-Kelly 0.001 · _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 44 % · EV/risk 0.019 · ¼-Kelly 0.001 · _first-passage empirique daily (historique réel, n≈211) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -34,10 +34,10 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Pass'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.018 | EV/share : ₩493.656 | p_fill : —
+- EV/risk : 0.019 | EV/share : ₩514.321 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 44 % | T2 24 % | T3 9 %
 - Kelly (position) : f* 0.003 | ¼-Kelly 0.001 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈212) · non recalibrée track-record (n=0)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈211) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, intraday) : bull 6.7 | bear 74.7 | side 18.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
@@ -59,9 +59,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-3 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-3 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -80,5 +80,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (16333 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (16427 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

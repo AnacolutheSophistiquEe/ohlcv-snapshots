@@ -13,8 +13,8 @@
       "A",
       "B"
     ],
-    "generated_at": "2026-07-10T21:45:58.228517+00:00",
-    "source_precomputed_at": "2026-07-10T21:45:07.082333+00:00",
+    "generated_at": "2026-07-13T00:10:25.353157+00:00",
+    "source_precomputed_at": "2026-07-13T00:09:41.170629+00:00",
     "calibration_lookup": "v1.0_strict_2closes_0.5atr",
     "calibration_method": "rolling_daily_long_strict_break",
     "confluence_band_atr": 0.5,
@@ -322,14 +322,14 @@
       "type": "bracket_plan",
       "subtype": "PLAN_B_SL",
       "side": "support",
-      "source": "bracket_orders.SOI_B_20260710_ibkr_bracket.json",
+      "source": "bracket_orders.SOI_B_20260713_ibkr_bracket.json",
       "source_weight": 0.95,
       "touches": null,
       "age_days": 0,
       "raw_meta": {
         "plan_letter": "B",
         "role": "sl",
-        "prediction_id": "SOI_B_20260710",
+        "prediction_id": "SOI_B_20260713",
         "horizon_sessions": 5
       },
       "plan_roles": [
@@ -1340,7 +1340,7 @@
       "source": "anchored_vwap.anchors[2026-07-08]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 2,
+      "age_days": 5,
       "raw_meta": {
         "anchor_date": "2026-07-08",
         "anchor_event": "swing_low",
@@ -1360,12 +1360,12 @@
         "CAM_R3",
         "CAM_R4"
       ],
-      "robustness_score": 100.0,
+      "robustness_score": 99.9,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 25,
-        "age_decay": -0.0
+        "age_decay": -0.1
       },
       "probabilities": {
         "available": true,
@@ -2152,7 +2152,7 @@
       "source": "anchored_vwap.anchors[2026-03-18]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 114,
+      "age_days": 117,
       "raw_meta": {
         "anchor_date": "2026-03-18",
         "anchor_event": "swing_high",
@@ -2170,7 +2170,7 @@
         "BB_MIDDLE",
         "PLAN_A_T1"
       ],
-      "robustness_score": 98.1,
+      "robustness_score": 98.0,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
@@ -2409,7 +2409,7 @@
       "source": "anchored_vwap.anchors[2026-05-29]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 42,
+      "age_days": 45,
       "raw_meta": {
         "anchor_date": "2026-05-29",
         "anchor_event": "swing_high",
@@ -2423,12 +2423,12 @@
         "S/R_DBSCAN_WEAK",
         "HVN"
       ],
-      "robustness_score": 84.3,
+      "robustness_score": 84.2,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 10,
-        "age_decay": -0.7
+        "age_decay": -0.8
       },
       "probabilities": {
         "available": true,

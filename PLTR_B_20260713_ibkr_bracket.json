@@ -1,54 +1,38 @@
 {
   "available": true,
-  "generated_at": "2026-07-02T21:39:02.971829+00:00",
-  "prediction_id": "EVT_B_20260702",
+  "generated_at": "2026-07-13T00:25:43.687038+00:00",
+  "prediction_id": "PLTR_B_20260713",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "EVT",
-  "exchange": "IBIS",
-  "currency": "EUR",
+  "symbol": "PLTR",
+  "exchange": "SMART",
+  "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 5.14,
-    "quantity": 55,
+    "limit_price": 126.79,
+    "quantity": 1,
     "tif": "GTD",
-    "gtd": "2026-07-07T16:30:00+00:00"
+    "gtd": "2026-07-18T22:00:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 5.45,
-      "quantity": 28,
-      "tif": "GTC",
-      "tag": "T1"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 5.46,
-      "quantity": 16,
-      "tif": "GTC",
-      "tag": "T2"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 5.47,
-      "quantity": 11,
+      "limit_price": 131.1,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 4.81,
-      "quantity": 55,
+      "stop_price": 112.97,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "EVT_B_swing_20260702",
+  "oca_group": "PLTR_B_swing_20260713",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "breakeven_after_T1",
@@ -62,7 +46,7 @@
     "order_validity": {
       "type": "GTD",
       "offset_sessions": 5,
-      "good_till_date": "2026-07-07T16:30:00+00:00"
+      "good_till_date": "2026-07-18T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -70,22 +54,12 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.5,
-      0.3,
-      0.2
+      1.0
     ],
     "qty_split": [
       {
-        "tag": "T1",
-        "qty": 28
-      },
-      {
-        "tag": "T2",
-        "qty": 16
-      },
-      {
         "tag": "T3",
-        "qty": 11
+        "qty": 1
       }
     ]
   },
@@ -93,26 +67,26 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 5.0,
+    "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.0354,
+    "ev_pct_risk": -0.0384,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.1897,
-      "T2": 0.1742,
-      "T3": 0.1679
+      "T1": 0.2993,
+      "T2": 0.1531,
+      "T3": 0.0727
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 282.97,
-    "hold_tolerance_breach_price": 3.8587,
+    "notional_eur": 126.79,
+    "hold_tolerance_breach_price": 95.0925,
     "hold_fallback_active": true,
-    "prediction_id": "EVT_B_20260702"
+    "prediction_id": "PLTR_B_20260713"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
