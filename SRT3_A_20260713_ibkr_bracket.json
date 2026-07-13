@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-13T00:03:16.090083+00:00",
+  "generated_at": "2026-07-13T21:37:45.631488+00:00",
   "prediction_id": "SRT3_A_20260713",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SRT3",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 240.8,
+    "limit_price": 248.25,
     "quantity": 2,
     "tif": "DAY"
   },
@@ -17,7 +17,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 245.55,
+      "limit_price": 249.45,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -25,7 +25,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 253.65,
+      "limit_price": 257.85,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -33,7 +33,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 225.3,
+      "stop_price": 228.5,
       "quantity": 2,
       "tif": "GTC",
       "tag": "SL"
@@ -81,22 +81,22 @@
     "horizon_label_long": "intraday",
     "composite_score": 8.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.1072,
+    "ev_pct_risk": 0.0766,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.1325,
-      "T2": 0.1257,
-      "T3": 0.1189
+      "T1": 0.5767,
+      "T2": 0.221,
+      "T3": 0.1
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 484.0,
-    "hold_tolerance_breach_price": 181.5,
+    "notional_eur": 499.0,
+    "hold_tolerance_breach_price": 187.125,
     "hold_fallback_active": true,
     "prediction_id": "SRT3_A_20260713"
   },
