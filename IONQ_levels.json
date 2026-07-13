@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-07-10T22:05:30Z",
+    "generated_at": "2026-07-13T00:35:12Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-07-13T08:00:00Z",
-    "valid_until": "2026-07-13T21:00:00Z",
+    "valid_from": "2026-07-14T08:00:00Z",
+    "valid_until": "2026-07-14T21:00:00Z",
     "source_precomputed": "IONQ_precomputed.json"
   },
   "context": {
@@ -20,7 +20,7 @@
     "hmm_regime": {
       "state": "sideways",
       "probability": 0.9,
-      "expected_duration_days": 16.24
+      "expected_duration_days": 18.65
     },
     "volatility_regime": "normal",
     "signals_counter": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (0.90), vol normal, signals sell (4b/6s/5n)."
   },
   "notes": {
-    "atr_daily": 4.127,
+    "atr_daily": 4.1291,
     "atr_pct_daily": null,
     "beta_60d": 2.9923,
     "beta_benchmark": "IWM",
@@ -94,7 +94,7 @@
         "max": 43.6388
       },
       "stop": {
-        "price": 37.0102,
+        "price": 37.0095,
         "basis": "swing_plan_below_confluence_support",
         "distance_pct": -12.52
       },
@@ -129,7 +129,7 @@
         "max": 43.3557
       },
       "stop": {
-        "price": 41.0765,
+        "price": 41.0754,
         "basis": "fallback_pivot_camarilla_r1",
         "distance_pct": -5.07
       },
@@ -158,9 +158,9 @@
         "max": 30.2304
       },
       "stop": {
-        "price": 23.8895,
+        "price": 23.8863,
         "basis": "fallback_sr_support",
-        "distance_pct": -20.18
+        "distance_pct": -20.19
       },
       "targets": [
         {
@@ -203,7 +203,7 @@
     }
   ],
   "invalidation": {
-    "price": 23.6506,
+    "price": 23.6474,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
