@@ -1,0 +1,123 @@
+{
+  "available": true,
+  "generated_at": "2026-07-13T22:04:53.303626+00:00",
+  "ticker": "RGTI",
+  "horizons_days": {
+    "intraday": 2,
+    "swing": 7,
+    "deep": 14
+  },
+  "n_events": 7,
+  "events": [
+    {
+      "date": "2026-07-14",
+      "type": "macro",
+      "label": "US CPI (headline)",
+      "importance": "high",
+      "sessions_to_event": 1,
+      "calendar_days": 1,
+      "in_plan_horizon": [
+        "intraday",
+        "swing",
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+    },
+    {
+      "date": "2026-07-14",
+      "type": "macro",
+      "label": "US Core CPI (ex food & energy)",
+      "importance": "high",
+      "sessions_to_event": 1,
+      "calendar_days": 1,
+      "in_plan_horizon": [
+        "intraday",
+        "swing",
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+    },
+    {
+      "date": "2026-07-14",
+      "type": "macro",
+      "label": "German ZEW Economic Sentiment",
+      "importance": "medium",
+      "sessions_to_event": 1,
+      "calendar_days": 1,
+      "in_plan_horizon": [
+        "intraday",
+        "swing",
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-23",
+      "type": "macro",
+      "label": "ECB Monetary Policy Decision",
+      "importance": "high",
+      "sessions_to_event": 7,
+      "calendar_days": 10,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+    },
+    {
+      "date": "2026-07-23",
+      "type": "macro",
+      "label": "Sartorius (SRT3/SRT) Q2 2026 Earnings",
+      "importance": "high",
+      "sessions_to_event": 7,
+      "calendar_days": 10,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-23",
+      "type": "macro",
+      "label": "Samsung Electronics Q2 2026 Earnings (pre-announcement mi-juillet)",
+      "importance": "medium",
+      "sessions_to_event": 7,
+      "calendar_days": 10,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-24",
+      "type": "macro",
+      "label": "Taiwan tariff 10% (Section 122) expiry — ~24/07/2026",
+      "importance": "medium",
+      "sessions_to_event": 8,
+      "calendar_days": 11,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    }
+  ],
+  "earnings_in_swing": false,
+  "warnings": {
+    "macro": null,
+    "corporate": null
+  },
+  "note": "réutilise data/macro_calendar.json (collecte = Claude/VPS, PAS reconstruite ici) + earnings/ex-div yfinance best-effort. Impact/reco mécaniques, observe-only."
+}

@@ -1,6 +1,6 @@
 # 207940
 
-**Generated** : 2026-07-13T21:38:21.573878+00:00  
+**Generated** : 2026-07-13T21:56:05.902412+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite extreme · ₩1397000.00  

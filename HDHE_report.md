@@ -1,6 +1,6 @@
 # 267260
 
-**Generated** : 2026-07-13T21:33:57.786504+00:00  
+**Generated** : 2026-07-13T21:52:06.569162+00:00  
 **Santé technique** : 2/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · ₩791000.00  

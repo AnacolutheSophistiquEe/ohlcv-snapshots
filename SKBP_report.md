@@ -1,6 +1,6 @@
 # 326030
 
-**Generated** : 2026-07-13T21:39:48.730750+00:00  
+**Generated** : 2026-07-13T21:57:24.379754+00:00  
 **Santé technique** : 2/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite high · ₩79200.00  

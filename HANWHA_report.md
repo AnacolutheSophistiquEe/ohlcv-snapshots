@@ -1,6 +1,6 @@
 # 012450
 
-**Generated** : 2026-07-13T21:36:53.638802+00:00  
+**Generated** : 2026-07-13T21:54:48.475724+00:00  
 **Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · ₩944000.00  
