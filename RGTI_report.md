@@ -1,54 +1,58 @@
 # RGTI
 
-**Generated** : 2026-07-13T00:28:35.856242+00:00  
-**Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
+**Generated** : 2026-07-14T00:28:04.679506+00:00  
+**Santé technique** : 1/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · $16.54  
+**Subtitle** : indeterminate · volatilite normal · $15.36  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US CPI (headline) (J-1 sess · macro taux)  
-> ↳ spot $16.54 (+3.1% vs entrée) · entrée $16.05 · stop $15.57 · T1 $16.48 · R/R 0.9  
-> ↳ P(T1 av. stop) 11 % _(réel 5 s)_ · EV/risk -0.316 _(réel 5 s)_ (GBM 0.086) · ¼-Kelly 0.021 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ↳ spot $15.36 (+1.3% vs entrée) · entrée $15.16 · stop $14.71 · T1 $15.57 · R/R 0.91  
+> ↳ P(T1 av. stop) 48 % _(réel 5 s)_ · EV/risk -0.082 _(réel 5 s)_ (GBM 0.086) · ¼-Kelly 0.02 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −3.0% cohérent avec le bruit 5 s (EV-optimal ≈ −3.0%)  
+
+> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+>   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -21 % hors [0,100] (R² max 0.44). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
+
 
 ## Régime & alignement multi-TF
 
 - **Daily** : range (trend-range)  
-- **H4** : range | **H1** : range  
-- **Flag multi-TF** : mixed (score 3)
+- **H4** : down | **H1** : down  
+- **Flag multi-TF** : mixed (score 1)
 
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 4/10, conviction 'Pass (negative EV)'.
+Plan privilegie A (intraday), composite 1/10, conviction 'Strong Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : $15.96–$16.14 (mid $16.05)
-- Spot actuel : $16.54 (+3.1% au-dessus de la zone — repli à attendre)
-- Stop : $15.57 (stop swing_plan-based (-9.35%))
-- Targets : T1 $16.48 · R/R 0.9 | T2 $16.91 · R/R 1.79 | T3 $17.35 · R/R 2.71
+- Entry (zone de repli) : $15.08–$15.24 (mid $15.16)
+- Spot actuel : $15.36 (+1.3% au-dessus de la zone — repli à attendre)
+- Stop : $14.71 (stop swing_plan-based (-5.71%))
+- Targets : T1 $15.57 · R/R 0.91 | T2 $15.97 · R/R 1.8 | T3 $16.37 · R/R 2.69
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $15.57
+- Invalidation : close sous $14.71
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.086 | EV/share : $0.042 | p_fill : —
+- EV/risk : 0.086 | EV/share : $0.039 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 52 % | T2 36 % | T3 36 %
-- Kelly (position) : f* 0.082 | ¼-Kelly 0.021 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Kelly (position) : f* 0.08 | ¼-Kelly 0.02 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 15.8 | bear 72.8 | side 11.3  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, intraday) : bull 16.4 | bear 72.0 | side 11.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −2.969% → cible +2.693% / stop −3.0%, p_fill 48%, n_eff≈20.1) : P(cible|rempli) **11%** · **EV/risk -0.316** (×p_fill ; si rempli -1.99% du capital)
-  - **swing** (entrée dip −6.536% → cible +6.023% / stop −3.011%, p_fill 46%, n_eff≈18.6) : P(cible|rempli) **30%** · **EV/risk -0.053** (×p_fill ; si rempli -0.35% du capital)
-  - **deep** (entrée dip −10.101% → cible +8.518% / stop −4.259%, p_fill 44%, n_eff≈16.5) : P(cible|rempli) **39%** · **EV/risk +0.059** (×p_fill ; si rempli +0.56% du capital)
+  - **intraday** (entrée dip −1.278% → cible +2.662% / stop −3.0%, p_fill 81%, n_eff≈34.3) : P(cible|rempli) **48%** · **EV/risk -0.082** (×p_fill ; si rempli -0.30% du capital)
+  - **swing** (entrée dip −2.818% → cible +5.953% / stop −2.976%, p_fill 72%, n_eff≈28.5) : P(cible|rempli) **16%** · **EV/risk -0.370** (×p_fill ; si rempli -1.53% du capital)
+  - **deep** (entrée dip −4.344% → cible +8.418% / stop −4.209%, p_fill 74%, n_eff≈28.4) : P(cible|rempli) **34%** · **EV/risk -0.031** (×p_fill ; si rempli -0.18% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→89% · +1.0%→82% · +2.0%→70% · +3.0%→56% · +5.0%→39% · +8.0%→16%
 - Range intraday médian 8.12% (p90 13.36%) · excursion haute méd. +3.55% / basse méd. −2.93%
 - Profil de vol intra : ouverture 5.26% vs midi 1.68% vs clôture 1.907% _(ouverture ~3.1× plus volatile → privilégier/éviter selon le setup)_
@@ -132,8 +136,8 @@ _Symétrique du fishing : quand l'actif imprime un JOUR DE HAUSSE PROPRE, on CHE
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : loin du support — entrée non optimale (chasing)
-- Proximité zone : 0.0/2 | R/R T1 : 1.0 | extension : normal
+- **Verdict timing** : survente — dip présent, entrée sur faiblesse (favorable au dip-buy)
+- Proximité zone : 0.0/2 | R/R T1 : 2.0 | extension : stretched_down
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -147,26 +151,26 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-14 — US CPI (headline) (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 19.6  _(survente)_
-- **ADX** : 19.0  _(pas de tendance nette)_
-- **MACD** : hist -0.354  _(pas de croisement recent)_
-- **BB** : %B 0.12 · largeur 37.8%
-- **ATR** : 1.49 (39.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.173  _(distribution)_
-- **Vol ratio** : 0.59  _(volume atone)_
-- **Choppiness** : 44.9  _(transition)_
-- **MA** : MA20 19.29 · MA50 20.16 · MA200 23.69  _(prix < MA20)_
-- **Dist MA** : MA20 -14.3% · MA50 -17.9% · MA200 -30.2%
+- **RSI** : 16.9  _(survente)_
+- **ADX** : 20.3  _(pas de tendance nette)_
+- **MACD** : hist -0.39  _(pas de croisement recent)_
+- **BB** : %B 0.04 · largeur 41.9%
+- **ATR** : 1.44 (37.0e pct 1a)  _(volatilite normale)_
+- **OBV/CMF** : OBV falling · CMF -0.241  _(distribution)_
+- **Vol ratio** : 0.9  _(volume normal)_
+- **Choppiness** : 37.9  _(marche directionnel)_
+- **MA** : MA20 19.03 · MA50 20.14 · MA200 23.61  _(prix < MA20)_
+- **Dist MA** : MA20 -19.3% · MA50 -23.7% · MA200 -34.9%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88372 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88714 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
