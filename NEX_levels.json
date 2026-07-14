@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "NEX",
-    "generated_at": "2026-07-13T22:05:30Z",
+    "generated_at": "2026-07-14T00:34:25Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-07-14T08:00:00Z",
-    "valid_until": "2026-07-14T21:00:00Z",
+    "valid_from": "2026-07-15T08:00:00Z",
+    "valid_until": "2026-07-15T21:00:00Z",
     "source_precomputed": "NEX_precomputed.json"
   },
   "context": {
-    "last_price": 133.8,
+    "last_price": 133.2,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -18,9 +18,9 @@
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
-      "state": "bull",
-      "probability": 0.5019,
-      "expected_duration_days": 2.01
+      "state": "bear",
+      "probability": 0.5001,
+      "expected_duration_days": 2.0
     },
     "volatility_regime": "high",
     "signals_counter": {
@@ -37,19 +37,19 @@
       "median_bounce_pct": 2.19,
       "confidence": "low"
     },
-    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM bull (0.50), vol high, signals neutral (3b/5s/7n)."
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM bear (0.50), vol high, signals neutral (3b/5s/7n)."
   },
   "notes": {
     "atr_daily": 4.7786,
     "atr_pct_daily": null,
-    "beta_60d": 0.6438,
+    "beta_60d": 0.6459,
     "beta_benchmark": "EWQ",
-    "beta_corr_60d": 0.3397,
+    "beta_corr_60d": 0.3406,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "bullish_engulfing",
-      "date": "2026-07-10",
-      "confidence": 0.789
+      "name": "hammer",
+      "date": "2026-07-13",
+      "confidence": 0.806
     },
     "divergences": [
       {
@@ -75,7 +75,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -18.85,
+      "current_dd_pct": -19.22,
       "ath_price": 164.8832,
       "ath_date": "2026-05-14",
       "max_dd_1y_pct": -20.82,
@@ -90,32 +90,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 131.0202,
+        "min": 131.0172,
         "max": 132.7177
       },
       "stop": {
-        "price": 126.5283,
+        "price": 126.2636,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -4.05
+        "distance_pct": -4.25
       },
       "targets": [
         {
           "level": 1,
-          "price": 132.3789,
+          "price": 132.0984,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 0.1
+          "rr": 0.04
         },
         {
           "level": 2,
-          "price": 136.2793,
+          "price": 135.9883,
           "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
-          "rr": 0.83
+          "rr": 0.74
         },
         {
           "level": 3,
-          "price": 140.1797,
+          "price": 139.8782,
           "basis": "plafond band 95% · touche hist. 45% (sans stop)",
-          "rr": 1.56
+          "rr": 1.43
         }
       ],
       "preferred_target": 1,
@@ -135,28 +135,28 @@
         "max": 145.726
       },
       "stop": {
-        "price": 143.1556,
+        "price": 143.1258,
         "basis": "below_broken_resistance",
-        "distance_pct": -1.57
+        "distance_pct": -1.59
       },
       "targets": [
         {
           "level": 1,
           "price": 149.1886,
           "basis": "next_confluence_resistance",
-          "rr": 1.65
+          "rr": 1.62
         },
         {
           "level": 2,
           "price": 153.745,
           "basis": "fib_786",
-          "rr": 3.64
+          "rr": 3.6
         },
         {
           "level": 3,
-          "price": 161.1253,
+          "price": 161.171,
           "basis": "next_confluence_resistance",
-          "rr": 6.88
+          "rr": 6.81
         }
       ],
       "preferred_target": 1,
@@ -173,31 +173,31 @@
       "side": "long",
       "entry_zone": {
         "min": 124.1246,
-        "max": 126.6247
+        "max": 126.519
       },
       "stop": {
         "price": 119.1596,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -4.96
+        "distance_pct": -4.92
       },
       "targets": [
         {
           "level": 1,
-          "price": 132.3789,
+          "price": 132.0984,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 1.13
+          "rr": 1.1
         },
         {
           "level": 2,
-          "price": 136.2793,
+          "price": 135.9883,
           "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
-          "rr": 1.75
+          "rr": 1.73
         },
         {
           "level": 3,
-          "price": 140.1797,
+          "price": 139.8782,
           "basis": "plafond band 95% · touche hist. 45% (sans stop)",
-          "rr": 2.38
+          "rr": 2.36
         }
       ],
       "preferred_target": 1,
