@@ -1,9 +1,9 @@
 # 000660
 
-**Generated** : 2026-07-14T20:31:57.016135+00:00  
+**Generated** : 2026-07-14T21:48:50.612567+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
-**Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
+**Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite extreme · ₩1894000.00  
 
@@ -24,7 +24,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie B (swing), composite 4/10, conviction 'Pass (negative EV)'.
+Plan privilegie B (swing), composite 5/10, conviction 'Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
@@ -40,12 +40,12 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass (negative EV)'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.38 | EV/share : ₩84920.105 | p_fill : —
+- EV/risk : 0.38 | EV/share : ₩84920.102 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 5 % | T2 5 % | T3 5 %
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 22.9 | bear 63.0 | side 14.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 160.0
+- Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 288.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
@@ -165,7 +165,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **OBV/CMF** : OBV falling · CMF -0.096  _(distribution)_
 - **Vol ratio** : 1.49  _(volume normal)_
 - **Choppiness** : 39.5  _(transition)_
-- **MA** : MA20 2441500.0 · MA50 2165857.48 · MA200 1091275.07  _(prix < MA20)_
+- **MA** : MA20 2441500.0 · MA50 2165857.48 · MA200 1091275.06  _(prix < MA20)_
 - **Dist MA** : MA20 -22.4% · MA50 -12.6% · MA200 +73.6%
 
 

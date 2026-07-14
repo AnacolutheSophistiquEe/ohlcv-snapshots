@@ -1,7 +1,7 @@
 # 005930
 
-**Generated** : 2026-07-14T20:33:27.152095+00:00  
-> ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
+**Generated** : 2026-07-14T21:50:14.225194+00:00  
+> ⚠️ **Données suspectes** : volatilité réalisée 6.4 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -161,5 +161,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (81756 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (81787 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
