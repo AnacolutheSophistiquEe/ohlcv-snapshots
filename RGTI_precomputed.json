@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US76655K1097",
-    "generated_at": "2026-07-14T22:04:42.383285+00:00",
+    "generated_at": "2026-07-15T00:28:03.980018+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -427,7 +427,7 @@
           16.27,
           15.5784,
           16.11,
-          19955819
+          20985795
         ]
       ],
       "h4": [
@@ -1254,8 +1254,8 @@
       "macd_hist": -0.3362056950337521,
       "macd_signal_cross": null,
       "obv_trend": "falling",
-      "mfi_14": 25.587676507991972,
-      "cmf_20": -0.21868577392387423,
+      "mfi_14": 25.784783932923474,
+      "cmf_20": -0.21731991008429372,
       "adl_trend": "falling",
       "adx_14": 21.442117410437994,
       "plus_di_14": 13.352262397383827,
@@ -1263,7 +1263,7 @@
       "di_spread_14": -15.61014315536037,
       "choppiness_14": 44.356470858650795,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 0.7013717514541958,
+      "volume_ratio_ma20": 0.7362389380759943,
       "distance_ma20_pct": -14.243506481597947,
       "distance_ma50_pct": -19.914493436215675,
       "distance_ma200_pct": -31.53071733286795
@@ -1801,7 +1801,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.4304,
+          "p_touch": 0.4305,
           "distance_pct": 6.88
         },
         "t2": {
@@ -1810,7 +1810,7 @@
           "rr": 2.2,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4304,
+          "p_touch": 0.4305,
           "distance_pct": 7.56
         },
         "t3": {
@@ -1819,7 +1819,7 @@
           "rr": 2.4,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4304,
+          "p_touch": 0.4305,
           "distance_pct": 8.24
         }
       }
@@ -2202,7 +2202,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-14T22:04:18.062073+00:00",
+    "generated_at": "2026-07-15T00:27:40.859998+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7239,70 +7239,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-14T22:04:28.239566+00:00",
+    "generated_at": "2026-07-15T00:27:51.086855+00:00",
     "ticker": "RGTI",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 7,
+    "n_events": 5,
     "events": [
-      {
-        "date": "2026-07-14",
-        "type": "macro",
-        "label": "US CPI (headline)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
-      },
-      {
-        "date": "2026-07-14",
-        "type": "macro",
-        "label": "US Core CPI (ex food & energy)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
-      },
-      {
-        "date": "2026-07-14",
-        "type": "macro",
-        "label": "German ZEW Economic Sentiment",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-07-23",
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
         "importance": "high",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7316,7 +7268,7 @@
         "label": "Sartorius (SRT3/SRT) Q2 2026 Earnings",
         "importance": "high",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7330,7 +7282,7 @@
         "label": "Samsung Electronics Q2 2026 Earnings (pre-announcement mi-juillet)",
         "importance": "medium",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7343,14 +7295,28 @@
         "type": "macro",
         "label": "Taiwan tariff 10% (Section 122) expiry — ~24/07/2026",
         "importance": "medium",
-        "sessions_to_event": 7,
-        "calendar_days": 10,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
         "impact": "macro_broad",
         "ticker_specific": false,
         "recommendation": null
+      },
+      {
+        "date": "2026-07-29",
+        "type": "macro",
+        "label": "US FOMC Rate Decision",
+        "importance": "high",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
       }
     ],
     "earnings_in_swing": false,
@@ -7461,36 +7427,36 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-07-14T22:04:22.106446+00:00",
+    "generated_at": "2026-07-15T00:27:45.217846+00:00",
     "ticker": "RGTI",
     "spot_price": 16.11,
     "expiries_available": [
       {
         "date": "2026-07-17",
-        "days_to_exp": 3
+        "days_to_exp": 2
       },
       {
         "date": "2026-07-24",
-        "days_to_exp": 10
+        "days_to_exp": 9
       },
       {
         "date": "2026-07-31",
-        "days_to_exp": 17
+        "days_to_exp": 16
       },
       {
         "date": "2026-08-07",
-        "days_to_exp": 24
+        "days_to_exp": 23
       },
       {
         "date": "2026-08-14",
-        "days_to_exp": 31
+        "days_to_exp": 30
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.9902,
-      "iv_atm_90d": 0.9902,
+      "iv_atm_30d": 1.0107,
+      "iv_atm_90d": 1.0107,
       "rv_20d_annualized": 0.7949,
-      "iv_rv_ratio": 1.246,
+      "iv_rv_ratio": 1.272,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -7501,17 +7467,17 @@
     },
     "term_structure": {
       "m1_expiry": "2026-07-17",
-      "m1_days_to_exp": 3,
-      "m1_iv_atm": 0.8809,
+      "m1_days_to_exp": 2,
+      "m1_iv_atm": 1.0176,
       "m3_expiry": "2026-08-14",
-      "m3_days_to_exp": 31,
-      "m3_iv_atm": 0.959,
-      "ratio_m1_m3": 0.9185,
-      "label": "contango_fort"
+      "m3_days_to_exp": 30,
+      "m3_iv_atm": 0.9746,
+      "ratio_m1_m3": 1.0441,
+      "label": "flat"
     },
     "open_interest_m1": {
       "expiry": "2026-07-17",
-      "days_to_exp": 3,
+      "days_to_exp": 2,
       "put_call_ratio": 1.062,
       "total_oi_m1": 245506,
       "largest_call_strike_oi": {
@@ -7524,7 +7490,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": -97990092.0,
+      "gex_total_usd_per_point": -94037596.0,
       "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7538,7 +7504,7 @@
       "bullish_signals": 0,
       "bearish_signals": 1,
       "notes": [
-        "GEX négatif (-98.0M$/pt) = MM short gamma déstabilisateur",
+        "GEX négatif (-94.0M$/pt) = MM short gamma déstabilisateur",
         "max pain 20.00 vs spot 16.11 (+24.1%)"
       ]
     },
@@ -7578,7 +7544,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-07-14T22:04:27.411839+00:00",
+    "generated_at": "2026-07-15T00:27:50.308110+00:00",
     "ticker": "RGTI",
     "short_interest": {
       "status": "ok",
@@ -7592,7 +7558,7 @@
       "float_shares": 327662124,
       "delta_shares_short_mom_pct": -5.65,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-07-14T22:04:23.077484+00:00"
+      "fetched_at": "2026-07-15T00:27:46.192304+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7661,7 +7627,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 17,
-      "fetched_at": "2026-07-14T22:04:27.410495+00:00"
+      "fetched_at": "2026-07-15T00:27:50.307000+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -7865,24 +7831,24 @@
         "anchor_date": "2026-07-13",
         "anchor_event": "swing_low",
         "anchor_price": 15.15,
-        "vwap_today": 15.7682,
-        "distance_from_close_pct": 2.17,
+        "vwap_today": 15.773,
+        "distance_from_close_pct": 2.14,
         "bars_since_anchor": 1
       },
       {
         "anchor_date": "2026-06-09",
         "anchor_event": "swing_low",
         "anchor_price": 18.47,
-        "vwap_today": 19.595,
-        "distance_from_close_pct": -17.79,
+        "vwap_today": 19.5899,
+        "distance_from_close_pct": -17.76,
         "bars_since_anchor": 23
       },
       {
         "anchor_date": "2026-06-03",
         "anchor_event": "swing_high",
         "anchor_price": 28.06,
-        "vwap_today": 20.469,
-        "distance_from_close_pct": -21.3,
+        "vwap_today": 20.4641,
+        "distance_from_close_pct": -21.28,
         "bars_since_anchor": 27
       }
     ]
@@ -12730,8 +12696,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": -48242059.07253009,
-        "signal_line": -66561820.095672116,
+        "value": -47692684.68366879,
+        "signal_line": -66483338.0401205,
         "signal": "buy"
       }
     },
@@ -14252,7 +14218,7 @@
         -79439706.53926522,
         -74470322.54836237,
         -70935396.12990588,
-        -48242059.07253009
+        -47692684.68366879
       ],
       "klinger_signal": [
         0.0,
@@ -14505,7 +14471,7 @@
         -68549190.50492808,
         -69395066.51113299,
         -69615113.59952912,
-        -66561820.095672116
+        -66483338.0401205
       ]
     }
   },
@@ -14513,22 +14479,22 @@
     "available": true,
     "latest": {
       "close": 16.110000610351562,
-      "vwap": 19.36969873433782,
+      "vwap": 19.363585584930366,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": -16.828852986792185,
+        "distance_from_close_pct": -16.80259557460728,
         "position": "below_vwap"
       },
-      "force_index": -6254408.183609106,
+      "force_index": -6144053.47185744,
       "force_index_meta": {
         "signal": "neutral"
       },
-      "chaikin_oscillator": -19428612.68098378,
+      "chaikin_oscillator": -19252527.02724552,
       "chaikin_oscillator_meta": {
         "cross_recent": null,
         "signal": "neutral"
       },
-      "vroc_14": -57.201243482867255,
+      "vroc_14": -54.99227916812326,
       "vroc_14_meta": {
         "signal": "low_activity"
       }
@@ -15038,7 +15004,7 @@
         19.910133720677106,
         19.81841546938628,
         19.58622891076231,
-        19.36969873433782
+        19.363585584930366
       ],
       "force_index": [
         null,
@@ -15291,7 +15257,7 @@
         -5947358.2754824115,
         -6236849.910631653,
         -9791290.094435962,
-        -6254408.183609106
+        -6144053.47185744
       ],
       "chaikin_oscillator": [
         0.0,
@@ -15544,7 +15510,7 @@
         -19630449.37958765,
         -19875645.386060238,
         -23495411.215203047,
-        -19428612.68098378
+        -19252527.02724552
       ],
       "vroc_14": [
         null,
@@ -15797,7 +15763,7 @@
         -32.79732421769024,
         -50.46627605331425,
         -31.186019628258222,
-        -57.201243482867255
+        -54.99227916812326
       ]
     }
   },
@@ -15829,7 +15795,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": -0.7787,
+      "value": -0.7504,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -15861,9 +15827,9 @@
   },
   "anomaly_detection": {
     "available": true,
-    "anomaly_score": -0.0477,
+    "anomaly_score": -0.0473,
     "is_anomaly": false,
-    "anomaly_percentile": 73.4,
+    "anomaly_percentile": 74.2,
     "recent_anomalies": [
       {
         "date": "2026-06-05T00:00:00",
@@ -15886,13 +15852,13 @@
       {
         "date": "2026-06-15T00:00:00",
         "bars_ago": 19,
-        "score": -0.0082,
+        "score": -0.0083,
         "context": "large return + wide range"
       },
       {
         "date": "2026-07-14T00:00:00",
         "bars_ago": 0,
-        "score": -0.0477,
+        "score": -0.0473,
         "context": "large return"
       }
     ],
@@ -16074,21 +16040,21 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 40350271.983333334,
+        "mean_volume_60d": 40367438.25,
         "median_volume_60d": 32989950.0,
-        "volume_consistency_score": 0.23067578506566344
+        "volume_consistency_score": 0.23128005443840938
       },
       "liquidity": {
-        "liquidity_score": 763168732.7699515,
+        "liquidity_score": 763721829.9029064,
         "liquidity_classification": "high"
       },
       "freshness": {
         "last_bar_date": "2026-07-14T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
-        "overall_quality_score": 83.08394422816856,
+        "overall_quality_score": 83.09300826875975,
         "overall_label": "good",
         "warnings": []
       }
@@ -16129,7 +16095,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-14T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16174,7 +16140,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-14T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

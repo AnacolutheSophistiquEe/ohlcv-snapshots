@@ -1,11 +1,11 @@
 # PLTR
 
-**Generated** : 2026-07-14T22:01:38.804133+00:00  
+**Generated** : 2026-07-15T00:25:19.563953+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $133.72  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié  
 > ↳ spot $133.72 (+5.4% vs entrée) · entrée $126.88 · stop $119.27 · T1 $129.46 · R/R 0.34  
 > ↳ P(T1 av. stop) 43 % · EV/risk -0.028 · ¼-Kelly 0.046 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −6.0% cohérent avec le bruit 5 s (EV-optimal ≈ −6.0%)  
@@ -145,9 +145,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -158,7 +158,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.75 · largeur 27.3%
 - **ATR** : 7.34 (57.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV rising · CMF 0.007  _(neutre)_
-- **Vol ratio** : 1.08  _(volume normal)_
+- **Vol ratio** : 1.09  _(volume normal)_
 - **Choppiness** : 43.6  _(transition)_
 - **MA** : MA20 125.15 · MA50 132.99 · MA200 156.31  _(prix > MA20)_
 - **Dist MA** : MA20 +6.8% · MA50 +0.6% · MA200 -14.5%
@@ -166,5 +166,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (90627 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (89699 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

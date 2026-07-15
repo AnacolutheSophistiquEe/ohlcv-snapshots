@@ -1,12 +1,12 @@
 # SAF
 
-**Generated** : 2026-07-14T21:41:44.374321+00:00  
+**Generated** : 2026-07-15T00:07:15.366193+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : trending · volatilite normal · €327.80  
+**Subtitle** : trending · volatilite normal · €328.40  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
-> ↳ spot €327.80 (+2.9% vs entrée) · entrée €318.65 · stop €313.87 · T1 €322.14 · R/R 0.73  
+> 🟡 **WAIT-FOR-DIP** — spot +2.9 % au-dessus de la zone d'entrée — attendre le repli  
+> ↳ spot €328.40 (+2.9% vs entrée) · entrée €319.10 · stop €314.31 · T1 €322.59 · R/R 0.73  
 > ↳ P(T1 av. stop) 57 % · EV/risk 0.07 · ¼-Kelly 0.015 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −1.5% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
 
@@ -25,12 +25,12 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Pass'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : €317.95–€319.35 (mid €318.65)
-- Spot actuel : €327.80 (+2.9% au-dessus de la zone — repli à attendre)
-- Stop : €313.87 (stop swing_plan-based (-7.29%))
-- Targets : T1 €322.14 · R/R 0.73 | T2 €325.64 · R/R 1.46 | T3 €329.13 · R/R 2.19
+- Entry (zone de repli) : €318.40–€319.80 (mid €319.10)
+- Spot actuel : €328.40 (+2.9% au-dessus de la zone — repli à attendre)
+- Stop : €314.31 (stop swing_plan-based (-7.38%))
+- Targets : T1 €322.59 · R/R 0.73 | T2 €326.08 · R/R 1.46 | T3 €329.58 · R/R 2.19
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €313.87
+- Invalidation : close sous €314.31
 
 
 ## Edge, scénarios & sizing
@@ -135,26 +135,26 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 43.8  _(momentum baissier)_
+- **RSI** : 44.1  _(momentum baissier)_
 - **ADX** : 25.7  _(tendance etablie)_
-- **MACD** : hist -3.604  _(pas de croisement recent)_
-- **BB** : %B 0.22 · largeur 11.7%
+- **MACD** : hist -3.566  _(pas de croisement recent)_
+- **BB** : %B 0.24 · largeur 11.6%
 - **ATR** : 8.93 (64.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV falling · CMF 0.143  _(accumulation)_
-- **Vol ratio** : 0.66  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF 0.137  _(accumulation)_
+- **Vol ratio** : 0.27  _(volume atone)_
 - **Choppiness** : 44.4  _(transition)_
-- **MA** : MA20 338.81 · MA50 310.43 · MA200 303.03  _(prix < MA20)_
-- **Dist MA** : MA20 -3.2% · MA50 +5.6% · MA200 +8.2%
+- **MA** : MA20 338.84 · MA50 310.44 · MA200 303.03  _(prix < MA20)_
+- **Dist MA** : MA20 -3.1% · MA50 +5.8% · MA200 +8.4%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (89042 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88109 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

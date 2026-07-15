@@ -1,11 +1,11 @@
 # SRT3
 
-**Generated** : 2026-07-14T21:37:22.722683+00:00  
+**Generated** : 2026-07-15T00:03:17.469952+00:00  
 **Santé technique** : 8/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · €250.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié  
 > ↳ spot €250.00 (+7.3% vs entrée) · entrée €232.94 · stop €228.74 · T1 €241.32 · R/R 2.0  
 > ↳ P(T1 av. stop) 34 % · EV/risk -0.007 · ¼-Kelly 0.002 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
@@ -142,9 +142,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -154,8 +154,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 2.789  _(pas de croisement recent)_
 - **BB** : %B 1.02 · largeur 18.8%
 - **ATR** : 9.59 (80.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF 0.077  _(accumulation)_
-- **Vol ratio** : 0.56  _(volume atone)_
+- **OBV/CMF** : OBV rising · CMF 0.067  _(accumulation)_
+- **Vol ratio** : 0.27  _(volume atone)_
 - **Choppiness** : 50.8  _(transition)_
 - **MA** : MA20 227.78 · MA50 228.91 · MA200 230.81  _(prix > MA20)_
 - **Dist MA** : MA20 +9.8% · MA50 +9.2% · MA200 +8.3%
@@ -163,5 +163,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (92359 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (91430 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
