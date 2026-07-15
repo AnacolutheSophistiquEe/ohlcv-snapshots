@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "AL2SI",
-    "generated_at": "2026-07-14T22:05:15Z",
+    "generated_at": "2026-07-15T00:34:23Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-07-15T08:00:00Z",
-    "valid_until": "2026-07-15T21:00:00Z",
+    "valid_from": "2026-07-16T08:00:00Z",
+    "valid_until": "2026-07-16T21:00:00Z",
     "source_precomputed": "AL2SI_precomputed.json"
   },
   "context": {
-    "last_price": 28.2,
+    "last_price": 28.22,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 4.1457,
     "atr_pct_daily": null,
-    "beta_60d": -0.1531,
+    "beta_60d": -0.1528,
     "beta_benchmark": "EWQ",
-    "beta_corr_60d": -0.022,
+    "beta_corr_60d": -0.0219,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -51.75,
+      "current_dd_pct": -51.72,
       "ath_price": 58.45,
       "ath_date": "2026-06-02",
       "max_dd_1y_pct": -62.36,
@@ -76,20 +76,20 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 27.9359,
-        "max": 28.1041
+        "min": 27.9559,
+        "max": 28.1241
       },
       "stop": {
-        "price": 21.9814,
+        "price": 22.0014,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -21.55
+        "distance_pct": -21.54
       },
       "targets": [
         {
           "level": 1,
           "price": 33.02,
           "basis": "résistance (weak) · touche hist. 45% (sans stop)",
-          "rr": 0.83
+          "rr": 0.82
         },
         {
           "level": 2,
@@ -99,7 +99,7 @@
         },
         {
           "level": 3,
-          "price": 37.9393,
+          "price": 37.9531,
           "basis": "plafond band 95% · touche hist. 15% (sans stop)",
           "rr": 1.64
         }
@@ -158,13 +158,13 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 19.8224,
+        "min": 19.8246,
         "max": 21.5412
       },
       "stop": {
-        "price": 19.0295,
+        "price": 19.0316,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -7.99
+        "distance_pct": -7.98
       },
       "targets": [
         {
@@ -181,9 +181,9 @@
         },
         {
           "level": 3,
-          "price": 37.9393,
+          "price": 37.9531,
           "basis": "plafond band 95% · touche hist. 15% (sans stop)",
-          "rr": 10.44
+          "rr": 10.46
         }
       ],
       "preferred_target": 1,
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 18.8392,
+    "price": 18.8413,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
