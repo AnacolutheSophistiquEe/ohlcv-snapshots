@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US5949724083",
-    "generated_at": "2026-07-15T22:00:01.734475+00:00",
+    "generated_at": "2026-07-16T00:23:24.362037+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1764,7 +1764,7 @@
           "rr": 0.4,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8101,
+          "p_touch": 0.81,
           "distance_pct": 3.18
         },
         "t2": {
@@ -1773,7 +1773,7 @@
           "rr": 0.79,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8101,
+          "p_touch": 0.81,
           "distance_pct": 6.35
         },
         "t3": {
@@ -1826,7 +1826,7 @@
           "rr": 6.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4453,
+          "p_touch": 0.4452,
           "distance_pct": 21.31
         }
       }
@@ -1852,7 +1852,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.81,
+          "p_touch": 0.8099,
           "distance_pct": 10.04
         },
         "t2": {
@@ -1861,7 +1861,7 @@
           "rr": 4.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9368,
+          "p_touch": 0.9369,
           "distance_pct": 20.09
         },
         "t3": {
@@ -2165,7 +2165,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-15T21:59:33.976371+00:00",
+    "generated_at": "2026-07-16T00:22:58.827291+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7174,23 +7174,24 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-15T21:59:47.083650+00:00",
+    "generated_at": "2026-07-16T00:23:11.362762+00:00",
     "ticker": "MSTR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 5,
+    "n_events": 6,
     "events": [
       {
         "date": "2026-07-23",
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -7202,9 +7203,10 @@
         "type": "macro",
         "label": "Sartorius (SRT3/SRT) Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -7216,9 +7218,10 @@
         "type": "macro",
         "label": "Samsung Electronics Q2 2026 Earnings (pre-announcement mi-juillet)",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -7231,7 +7234,7 @@
         "label": "Taiwan tariff 10% (Section 122) expiry — ~24/07/2026",
         "importance": "medium",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7244,14 +7247,28 @@
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 10,
-        "calendar_days": 14,
+        "sessions_to_event": 9,
+        "calendar_days": 13,
         "in_plan_horizon": [
           "deep"
         ],
         "impact": "rates_sensitive",
         "ticker_specific": false,
         "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+      },
+      {
+        "date": "2026-07-30",
+        "type": "earnings",
+        "label": "MSTR earnings",
+        "importance": "high",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "gap_risk_high",
+        "ticker_specific": true,
+        "recommendation": "reduce_size_50pct_or_exit_pre_event"
       }
     ],
     "earnings_in_swing": false,
@@ -7362,57 +7379,57 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-07-15T21:59:38.353440+00:00",
+    "generated_at": "2026-07-16T00:23:02.885254+00:00",
     "ticker": "MSTR",
     "spot_price": 97.47,
     "expiries_available": [
       {
         "date": "2026-07-17",
-        "days_to_exp": 2
+        "days_to_exp": 1
       },
       {
         "date": "2026-07-24",
-        "days_to_exp": 9
+        "days_to_exp": 8
       },
       {
         "date": "2026-07-31",
-        "days_to_exp": 16
+        "days_to_exp": 15
       },
       {
         "date": "2026-08-07",
-        "days_to_exp": 23
+        "days_to_exp": 22
       },
       {
         "date": "2026-08-14",
-        "days_to_exp": 30
+        "days_to_exp": 29
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.8579,
-      "iv_atm_90d": 0.8579,
+      "iv_atm_30d": 0.8721,
+      "iv_atm_90d": 0.8721,
       "rv_20d_annualized": 0.9195,
-      "iv_rv_ratio": 0.933,
+      "iv_rv_ratio": 0.948,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": 2.71,
+      "skew_25_delta_vol_pts": 2.747,
       "label": "normal"
     },
     "term_structure": {
       "m1_expiry": "2026-07-17",
-      "m1_days_to_exp": 2,
-      "m1_iv_atm": 0.7568,
+      "m1_days_to_exp": 1,
+      "m1_iv_atm": 0.9268,
       "m3_expiry": "2026-08-14",
-      "m3_days_to_exp": 30,
-      "m3_iv_atm": 0.8579,
-      "ratio_m1_m3": 0.8822,
-      "label": "contango_fort"
+      "m3_days_to_exp": 29,
+      "m3_iv_atm": 0.8721,
+      "ratio_m1_m3": 1.0627,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-07-17",
-      "days_to_exp": 2,
+      "days_to_exp": 1,
       "put_call_ratio": 0.668,
       "total_oi_m1": 648797,
       "largest_call_strike_oi": {
@@ -7425,7 +7442,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 6792140845.0,
+      "gex_total_usd_per_point": 7390138463.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7439,7 +7456,7 @@
       "bullish_signals": 1,
       "bearish_signals": 0,
       "notes": [
-        "GEX positif (6792.1M$/pt) = MM long gamma stabilisateur"
+        "GEX positif (7390.1M$/pt) = MM long gamma stabilisateur"
       ]
     },
     "liquidity_stats": {
@@ -7449,8 +7466,8 @@
       "per_expiry": {
         "2026-07-17": {
           "total_strikes": 262,
-          "liquid_strikes": 98,
-          "filter_ratio_pct": 37.4
+          "liquid_strikes": 95,
+          "filter_ratio_pct": 36.3
         },
         "2026-07-24": {
           "total_strikes": 223,
@@ -7478,7 +7495,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-07-15T21:59:46.206046+00:00",
+    "generated_at": "2026-07-16T00:23:10.325921+00:00",
     "ticker": "MSTR",
     "short_interest": {
       "status": "ok",
@@ -7492,7 +7509,7 @@
       "float_shares": 329887095,
       "delta_shares_short_mom_pct": 13.51,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-07-15T21:59:39.466466+00:00"
+      "fetched_at": "2026-07-16T00:23:03.840323+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7601,7 +7618,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 69,
-      "fetched_at": "2026-07-15T21:59:46.205046+00:00"
+      "fetched_at": "2026-07-16T00:23:10.324728+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -16004,7 +16021,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-15T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16055,7 +16072,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-15T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16100,7 +16117,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-15T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

@@ -1,16 +1,16 @@
 # 000660
 
-**Generated** : 2026-07-15T21:49:46.111906+00:00  
+**Generated** : 2026-07-16T00:14:18.616671+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : trending · volatilite extreme · ₩2116000.00  
+**Subtitle** : trending · volatilite extreme · ₩2082000.00  
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
-> ↳ spot ₩2116000.00 (+1.1% vs entrée) · entrée ₩2091958.31 · stop ₩2014751.16 · T1 ₩2187297.52 · R/R 1.23  
-> ↳ P(T1 av. stop) 24 % _(réel 5 s)_ · EV/risk -0.212 _(réel 5 s)_ (GBM -0.017) · ¼-Kelly 0.014 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
-> ↳ stop −3.69% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
+> ↳ spot ₩2082000.00 (+0.8% vs entrée) · entrée ₩2064902.40 · stop ₩1987695.25 · T1 ₩2157817.33 · R/R 1.2  
+> ↳ P(T1 av. stop) 22 % _(réel 5 s)_ · EV/risk -0.241 _(réel 5 s)_ (GBM -0.019) · ¼-Kelly 0.014 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ↳ stop −3.74% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
 
 ## Régime & alignement multi-TF
 
@@ -27,19 +27,19 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : ₩2072890.46–₩2111026.15 (mid ₩2091958.31)
-- Spot actuel : ₩2116000.00 (+1.1% au-dessus de la zone — repli à attendre)
-- Stop : ₩2014751.16 (stop swing_plan-based (-7.47%))
-- Targets : T1 ₩2187297.52 · R/R 1.23 | T2 ₩2282636.74 · R/R 2.47 | T3 ₩2377975.96 · R/R 3.7
+- Entry (zone de repli) : ₩2047804.79–₩2082000.00 (mid ₩2064902.40)
+- Spot actuel : ₩2082000.00 (+0.8% au-dessus de la zone — repli à attendre)
+- Stop : ₩1987695.25 (stop swing_plan-based (-6.75%))
+- Targets : T1 ₩2157817.33 · R/R 1.2 | T2 ₩2250732.27 · R/R 2.41 | T3 ₩2343647.20 · R/R 3.61
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩2014751.16
+- Invalidation : close sous ₩1987695.25
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.017 | EV/share : ₩-1292.017 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 23 % | T2 21 % | T3 21 %
-- Kelly (position) : f* 0.058 | ¼-Kelly 0.014 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- EV/risk : -0.019 | EV/share : ₩-1481.154 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 24 % | T2 21 % | T3 21 %
+- Kelly (position) : f* 0.057 | ¼-Kelly 0.014 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, intraday) : bull 29.1 | bear 62.3 | side 8.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 288.0
@@ -48,9 +48,9 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −1.131% → cible +4.557% / stop −3.691%, p_fill 78%, n_eff≈28.8) : P(cible|rempli) **24%** · **EV/risk -0.212** (×p_fill ; si rempli -1.00% du capital)
-  - **swing** (entrée dip −2.502% → cible +10.191% / stop −5.095%, p_fill 71%, n_eff≈24.9) : P(cible|rempli) **27%** · **EV/risk -0.160** (×p_fill ; si rempli -1.15% du capital)
-  - **deep** (entrée dip −3.862% → cible +14.412% / stop −7.206%, p_fill 59%, n_eff≈19.2) : P(cible|rempli) **31%** · **EV/risk -0.099** (×p_fill ; si rempli -1.22% du capital)
+  - **intraday** (entrée dip −0.822% → cible +4.5% / stop −3.739%, p_fill 80%, n_eff≈30.0) : P(cible|rempli) **22%** · **EV/risk -0.241** (×p_fill ; si rempli -1.13% du capital)
+  - **swing** (entrée dip −1.81% → cible +10.062% / stop −5.031%, p_fill 73%, n_eff≈26.1) : P(cible|rempli) **23%** · **EV/risk -0.274** (×p_fill ; si rempli -1.89% du capital)
+  - **deep** (entrée dip −2.665% → cible +14.229% / stop −7.115%, p_fill 65%, n_eff≈23.1) : P(cible|rempli) **37%** · **EV/risk -0.025** (×p_fill ; si rempli -0.27% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→94% · +1.0%→81% · +2.0%→56% · +3.0%→38% · +5.0%→22% · +8.0%→12%
 - Range intraday médian 6.05% (p90 10.58%) · excursion haute méd. +2.25% / basse méd. −2.5%
 - Profil de vol intra : ouverture 2.798% vs midi 1.143% vs clôture 1.385% _(ouverture ~2.4× plus volatile → privilégier/éviter selon le setup)_
@@ -132,8 +132,8 @@ _Symétrique du fishing : quand l'actif imprime un JOUR DE HAUSSE PROPRE, on CHE
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : loin du support — entrée non optimale (chasing)
-- Proximité zone : 0.0/2 | R/R T1 : 0.5 | extension : normal
+- **Verdict timing** : neutre
+- Proximité zone : 0.25/2 | R/R T1 : 0.5 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -148,25 +148,25 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 30.8  _(momentum baissier)_
+- **RSI** : 29.6  _(survente)_
 - **ADX** : 26.9  _(tendance etablie)_
-- **MACD** : hist -80455.209  _(pas de croisement recent)_
-- **BB** : %B 0.26 · largeur 52.8%
+- **MACD** : hist -82625.01  _(pas de croisement recent)_
+- **BB** : %B 0.24 · largeur 53.1%
 - **ATR** : 257357.14 (97.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.111  _(distribution)_
-- **Vol ratio** : 0.78  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.142  _(distribution)_
+- **Vol ratio** : 0.92  _(volume normal)_
 - **Choppiness** : 41.6  _(transition)_
-- **MA** : MA20 2422200.0 · MA50 2182841.78 · MA200 1100299.57  _(prix < MA20)_
-- **Dist MA** : MA20 -12.6% · MA50 -3.1% · MA200 +92.3%
+- **MA** : MA20 2420500.0 · MA50 2182161.78 · MA200 1100129.57  _(prix < MA20)_
+- **Dist MA** : MA20 -14.0% · MA50 -4.6% · MA200 +89.3%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (86904 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (86968 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

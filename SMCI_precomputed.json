@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US86800U1043",
-    "generated_at": "2026-07-15T22:01:40.127873+00:00",
+    "generated_at": "2026-07-16T00:24:49.154944+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1841,7 +1841,7 @@
           "rr": 3.17,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4306,
+          "p_touch": 0.4305,
           "distance_pct": 6.26
         },
         "t3": {
@@ -1885,7 +1885,7 @@
           "rr": 4.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4453,
+          "p_touch": 0.4452,
           "distance_pct": 13.99
         },
         "t3": {
@@ -1894,7 +1894,7 @@
           "rr": 6.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.147,
+          "p_touch": 0.1469,
           "distance_pct": 20.98
         }
       }
@@ -1920,7 +1920,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.81,
+          "p_touch": 0.8099,
           "distance_pct": 9.89
         },
         "t2": {
@@ -1929,7 +1929,7 @@
           "rr": 4.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2858,
+          "p_touch": 0.2857,
           "distance_pct": 19.78
         },
         "t3": {
@@ -1938,7 +1938,7 @@
           "rr": 6.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2858,
+          "p_touch": 0.2857,
           "distance_pct": 29.67
         }
       }
@@ -2233,7 +2233,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-15T22:01:12.880735+00:00",
+    "generated_at": "2026-07-16T00:24:24.431983+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7255,7 +7255,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-15T22:01:25.388589+00:00",
+    "generated_at": "2026-07-16T00:24:36.350724+00:00",
     "ticker": "SMCI",
     "horizons_days": {
       "intraday": 2,
@@ -7269,9 +7269,10 @@
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -7283,9 +7284,10 @@
         "type": "macro",
         "label": "Sartorius (SRT3/SRT) Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -7297,9 +7299,10 @@
         "type": "macro",
         "label": "Samsung Electronics Q2 2026 Earnings (pre-announcement mi-juillet)",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -7312,7 +7315,7 @@
         "label": "Taiwan tariff 10% (Section 122) expiry — ~24/07/2026",
         "importance": "medium",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7325,8 +7328,8 @@
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 10,
-        "calendar_days": 14,
+        "sessions_to_event": 9,
+        "calendar_days": 13,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7443,36 +7446,36 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-07-15T22:01:16.963480+00:00",
+    "generated_at": "2026-07-16T00:24:28.249646+00:00",
     "ticker": "SMCI",
     "spot_price": 26.89,
     "expiries_available": [
       {
         "date": "2026-07-17",
-        "days_to_exp": 2
+        "days_to_exp": 1
       },
       {
         "date": "2026-07-24",
-        "days_to_exp": 9
+        "days_to_exp": 8
       },
       {
         "date": "2026-07-31",
-        "days_to_exp": 16
+        "days_to_exp": 15
       },
       {
         "date": "2026-08-07",
-        "days_to_exp": 23
+        "days_to_exp": 22
       },
       {
         "date": "2026-08-14",
-        "days_to_exp": 30
+        "days_to_exp": 29
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.9912,
-      "iv_atm_90d": 0.9912,
+      "iv_atm_30d": 1.0078,
+      "iv_atm_90d": 1.0078,
       "rv_20d_annualized": 0.9055,
-      "iv_rv_ratio": 1.095,
+      "iv_rv_ratio": 1.113,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -7483,17 +7486,17 @@
     },
     "term_structure": {
       "m1_expiry": "2026-07-17",
-      "m1_days_to_exp": 2,
-      "m1_iv_atm": 0.7246,
+      "m1_days_to_exp": 1,
+      "m1_iv_atm": 0.8877,
       "m3_expiry": "2026-08-14",
-      "m3_days_to_exp": 30,
-      "m3_iv_atm": 0.9912,
-      "ratio_m1_m3": 0.731,
+      "m3_days_to_exp": 29,
+      "m3_iv_atm": 1.0078,
+      "ratio_m1_m3": 0.8808,
       "label": "contango_fort"
     },
     "open_interest_m1": {
       "expiry": "2026-07-17",
-      "days_to_exp": 2,
+      "days_to_exp": 1,
       "put_call_ratio": 0.506,
       "total_oi_m1": 441514,
       "largest_call_strike_oi": {
@@ -7506,8 +7509,8 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 39464430.0,
-      "gex_label": "positive_stabilizing",
+      "gex_total_usd_per_point": -59712624.0,
+      "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
@@ -7516,11 +7519,12 @@
       "gap_vs_spot_pct": 9.71
     },
     "verdict": {
-      "label": "bullish",
+      "label": "favorable",
       "bullish_signals": 2,
-      "bearish_signals": 0,
+      "bearish_signals": 1,
       "notes": [
         "skew faible (-0.6 pts) — peu de demande de protection",
+        "GEX négatif (-59.7M$/pt) = MM short gamma déstabilisateur",
         "max pain 29.50 vs spot 26.89 (+9.7%)",
         "P/C ratio bas (0.51) — biais call dominant"
       ]
@@ -7532,8 +7536,8 @@
       "per_expiry": {
         "2026-07-17": {
           "total_strikes": 130,
-          "liquid_strikes": 50,
-          "filter_ratio_pct": 38.5
+          "liquid_strikes": 48,
+          "filter_ratio_pct": 36.9
         },
         "2026-07-24": {
           "total_strikes": 135,
@@ -7561,7 +7565,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-07-15T22:01:24.494496+00:00",
+    "generated_at": "2026-07-16T00:24:35.590135+00:00",
     "ticker": "SMCI",
     "short_interest": {
       "status": "ok",
@@ -7575,7 +7579,7 @@
       "float_shares": 508968433,
       "delta_shares_short_mom_pct": 38.56,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-07-15T22:01:18.000587+00:00"
+      "fetched_at": "2026-07-16T00:24:29.234264+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7604,7 +7608,7 @@
         "vesting_exercises_dominant": true
       },
       "all_transactions_count": 26,
-      "fetched_at": "2026-07-15T22:01:24.493268+00:00"
+      "fetched_at": "2026-07-16T00:24:35.589227+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -16032,7 +16036,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-15T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16079,7 +16083,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-15T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16124,7 +16128,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-15T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
