@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PRY",
-    "generated_at": "2026-07-16T00:35:36Z",
+    "generated_at": "2026-07-16T22:05:07Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-07-17T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "PRY_precomputed.json"
   },
   "context": {
-    "last_price": 134.4,
+    "last_price": 131.3,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -19,13 +19,13 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.604,
-      "expected_duration_days": 2.52
+      "probability": 0.6002,
+      "expected_duration_days": 2.5
     },
     "volatility_regime": "high",
     "signals_counter": {
-      "buy": 2,
-      "sell": 5,
+      "buy": 3,
+      "sell": 4,
       "neutral": 8,
       "total": 15,
       "verdict": "neutral"
@@ -37,10 +37,10 @@
       "median_bounce_pct": 6.81,
       "confidence": "low"
     },
-    "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM bull (0.60), vol high, signals neutral (2b/5s/8n)."
+    "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM bull (0.60), vol high, signals neutral (3b/4s/8n)."
   },
   "notes": {
-    "atr_daily": 5.8714,
+    "atr_daily": 5.9571,
     "atr_pct_daily": null,
     "beta_60d": 1.196,
     "beta_benchmark": "EWI",
@@ -55,17 +55,17 @@
       {
         "indicator": "rsi",
         "type": "hidden_bearish",
-        "confidence": 0.56,
-        "bars_ago": 8,
+        "confidence": 0.54,
+        "bars_ago": 9,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": -14.34,
+      "current_dd_pct": -16.32,
       "ath_price": 156.9,
       "ath_date": "2026-05-11",
-      "max_dd_1y_pct": -15.04,
-      "days_in_dd": 65,
+      "max_dd_1y_pct": -16.32,
+      "days_in_dd": 66,
       "median_recovery_days": null
     }
   },
@@ -76,32 +76,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 125.2069,
-        "max": 129.3307
+        "min": 125.5375,
+        "max": 127.8152
       },
       "stop": {
-        "price": 122.217,
+        "price": 120.8411,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -3.97
+        "distance_pct": -4.61
       },
       "targets": [
         {
           "level": 1,
-          "price": 128.3235,
-          "basis": "band 95% (atteignable) · touche hist. 45% (sans stop)",
-          "rr": 0.21
+          "price": 126.8903,
+          "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
+          "rr": 0.04
         },
         {
           "level": 2,
-          "price": 132.3945,
+          "price": 130.9231,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 1.01
+          "rr": 0.73
         },
         {
           "level": 3,
-          "price": 136.4656,
-          "basis": "plafond band 95% · touche hist. 91% (sans stop)",
-          "rr": 1.82
+          "price": 134.9559,
+          "basis": "plafond band 95% · touche hist. 73% (sans stop)",
+          "rr": 1.42
         }
       ],
       "preferred_target": 1,
@@ -117,20 +117,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 134.9048,
-        "max": 135.4438
+        "min": 141.9518,
+        "max": 142.519
       },
       "stop": {
-        "price": 131.8343,
-        "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -2.47
+        "price": 139.7843,
+        "basis": "below_broken_resistance",
+        "distance_pct": -1.72
       },
       "targets": [
         {
-          "level": 3,
-          "price": 136.4656,
-          "basis": "plafond band 95% · touche hist. 91% (sans stop)",
-          "rr": 0.39
+          "level": 1,
+          "price": 149.1375,
+          "basis": "next_confluence_resistance",
+          "rr": 2.82
+        },
+        {
+          "level": 2,
+          "price": 155.8048,
+          "basis": "next_confluence_resistance",
+          "rr": 5.54
         }
       ],
       "preferred_target": 1,
@@ -138,7 +144,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+      "rationale": "Breakout au-dessus confluence resistance FIB_786 + MA20 (strength 5.0)."
     },
     {
       "id": "C",
@@ -146,32 +152,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 108.1797,
-        "max": 109.3351
+        "min": 108.4226,
+        "max": 109.5008
       },
       "stop": {
-        "price": 103.8525,
+        "price": 104.0857,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -4.51
+        "distance_pct": -4.47
       },
       "targets": [
         {
           "level": 1,
-          "price": 128.3235,
-          "basis": "band 95% (atteignable) · touche hist. 45% (sans stop)",
-          "rr": 3.99
+          "price": 126.8903,
+          "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
+          "rr": 3.68
         },
         {
           "level": 2,
-          "price": 132.3945,
+          "price": 130.9231,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 4.82
+          "rr": 4.5
         },
         {
           "level": 3,
-          "price": 136.4656,
-          "basis": "plafond band 95% · touche hist. 91% (sans stop)",
-          "rr": 5.65
+          "price": 134.9559,
+          "basis": "plafond band 95% · touche hist. 73% (sans stop)",
+          "rr": 5.33
         }
       ],
       "preferred_target": 1,
@@ -195,7 +201,7 @@
     }
   ],
   "invalidation": {
-    "price": 102.814,
+    "price": 103.0448,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
