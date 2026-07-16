@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "ENR",
-    "generated_at": "2026-07-15T22:05:30Z",
+    "generated_at": "2026-07-16T00:35:36Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-07-16T08:00:00Z",
-    "valid_until": "2026-07-16T21:00:00Z",
+    "valid_from": "2026-07-17T08:00:00Z",
+    "valid_until": "2026-07-17T21:00:00Z",
     "source_precomputed": "ENR_precomputed.json"
   },
   "context": {
-    "last_price": 152.18,
+    "last_price": 152.34,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -19,14 +19,14 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.57,
-      "expected_duration_days": 2.33
+      "probability": 0.572,
+      "expected_duration_days": 2.34
     },
     "volatility_regime": "normal",
     "signals_counter": {
       "buy": 2,
-      "sell": 5,
-      "neutral": 8,
+      "sell": 4,
+      "neutral": 9,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 3.62,
       "confidence": "low"
     },
-    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.57), vol normal, signals neutral (2b/5s/8n)."
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.57), vol normal, signals neutral (2b/4s/9n)."
   },
   "notes": {
     "atr_daily": 7.3557,
     "atr_pct_daily": null,
-    "beta_60d": 1.5743,
+    "beta_60d": 1.5746,
     "beta_benchmark": "EWG",
-    "beta_corr_60d": 0.6103,
+    "beta_corr_60d": 0.6105,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -68,7 +68,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -18.89,
+      "current_dd_pct": -18.8,
       "ath_price": 187.62,
       "ath_date": "2026-04-24",
       "max_dd_1y_pct": -26.08,
@@ -83,32 +83,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 141.9501,
-        "max": 146.679
+        "min": 141.9509,
+        "max": 146.7072
       },
       "stop": {
-        "price": 140.5306,
+        "price": 140.5314,
         "basis": "below_zone_1pct_below_confluence_support",
-        "distance_pct": -2.62
+        "distance_pct": -2.63
       },
       "targets": [
         {
           "level": 1,
-          "price": 157.8189,
+          "price": 157.9825,
           "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
-          "rr": 3.57
+          "rr": 3.6
         },
         {
           "level": 2,
-          "price": 164.3423,
+          "price": 164.5101,
           "basis": "band 95% (atteignable) · touche hist. 45% (sans stop)",
-          "rr": 5.29
+          "rr": 5.31
         },
         {
           "level": 3,
-          "price": 170.8657,
+          "price": 171.0376,
           "basis": "plafond band 95% · touche hist. 15% (sans stop)",
-          "rr": 7.02
+          "rr": 7.03
         }
       ],
       "preferred_target": 1,
@@ -124,11 +124,11 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 163.8473,
-        "max": 164.502
+        "min": 163.8505,
+        "max": 164.5052
       },
       "stop": {
-        "price": 159.7104,
+        "price": 159.7184,
         "basis": "below_broken_resistance",
         "distance_pct": -2.72
       },
@@ -170,21 +170,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 157.8189,
+          "price": 157.9825,
           "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
-          "rr": 4.52
+          "rr": 4.53
         },
         {
           "level": 2,
-          "price": 164.3423,
+          "price": 164.5101,
           "basis": "band 95% (atteignable) · touche hist. 45% (sans stop)",
-          "rr": 5.14
+          "rr": 5.16
         },
         {
           "level": 3,
-          "price": 170.8657,
+          "price": 171.0376,
           "basis": "plafond band 95% · touche hist. 15% (sans stop)",
-          "rr": 5.76
+          "rr": 5.78
         }
       ],
       "preferred_target": 1,

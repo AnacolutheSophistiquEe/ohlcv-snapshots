@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "EVT",
-    "generated_at": "2026-07-15T22:05:30Z",
+    "generated_at": "2026-07-16T00:35:36Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-07-16T08:00:00Z",
-    "valid_until": "2026-07-16T21:00:00Z",
+    "valid_from": "2026-07-17T08:00:00Z",
+    "valid_until": "2026-07-17T21:00:00Z",
     "source_precomputed": "EVT_precomputed.json"
   },
   "context": {
-    "last_price": 3.506,
+    "last_price": 3.496,
     "ta_score": {
       "value": 0,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 0.2977,
     "atr_pct_daily": null,
-    "beta_60d": 0.5473,
+    "beta_60d": 0.5467,
     "beta_benchmark": "EWG",
-    "beta_corr_60d": 0.1664,
+    "beta_corr_60d": 0.166,
     "btc_corr_high": null,
     "candlestick": {
       "name": "hammer",
@@ -53,10 +53,10 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -52.98,
+      "current_dd_pct": -53.11,
       "ath_price": 7.456,
       "ath_date": "2025-07-18",
-      "max_dd_1y_pct": -52.98,
+      "max_dd_1y_pct": -53.11,
       "days_in_dd": 362,
       "median_recovery_days": null
     }
@@ -68,20 +68,20 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 3.4696,
-        "max": 3.4904
+        "min": 3.4596,
+        "max": 3.4804
       },
       "stop": {
-        "price": 3.0594,
+        "price": 3.0494,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -12.09
+        "distance_pct": -12.12
       },
       "targets": [
         {
           "level": 3,
-          "price": 3.6126,
+          "price": 3.6015,
           "basis": "plafond band 95% · touche hist. 91% (sans stop)",
-          "rr": 0.32
+          "rr": 0.31
         }
       ],
       "preferred_target": 1,
@@ -101,28 +101,28 @@
         "max": 4.0225
       },
       "stop": {
-        "price": 3.8971,
+        "price": 3.8935,
         "basis": "below_broken_resistance",
-        "distance_pct": -2.92
+        "distance_pct": -3.01
       },
       "targets": [
         {
           "level": 1,
-          "price": 4.3598,
+          "price": 4.3522,
           "basis": "fib_236",
-          "rr": 2.94
+          "rr": 2.79
         },
         {
           "level": 2,
-          "price": 4.3598,
+          "price": 4.3522,
           "basis": "next_confluence_resistance",
-          "rr": 2.94
+          "rr": 2.79
         },
         {
           "level": 3,
-          "price": 4.7828,
+          "price": 4.7823,
           "basis": "next_confluence_resistance",
-          "rr": 6.54
+          "rr": 6.35
         }
       ],
       "preferred_target": 1,
@@ -138,32 +138,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 2.9845,
-        "max": 3.0451
+        "min": 2.9747,
+        "max": 3.0351
       },
       "stop": {
-        "price": 2.5834,
+        "price": 2.5734,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -14.31
+        "distance_pct": -14.36
       },
       "targets": [
         {
           "level": 1,
-          "price": 3.1446,
+          "price": 3.1342,
           "basis": "band 95% (atteignable) · touche hist. 45% (sans stop)",
           "rr": 0.3
         },
         {
           "level": 2,
-          "price": 3.3786,
+          "price": 3.3679,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
           "rr": 0.84
         },
         {
           "level": 3,
-          "price": 3.6126,
+          "price": 3.6015,
           "basis": "plafond band 95% · touche hist. 91% (sans stop)",
-          "rr": 1.39
+          "rr": 1.38
         }
       ],
       "preferred_target": 1,
@@ -187,7 +187,7 @@
     }
   ],
   "invalidation": {
-    "price": 2.5576,
+    "price": 2.5477,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
