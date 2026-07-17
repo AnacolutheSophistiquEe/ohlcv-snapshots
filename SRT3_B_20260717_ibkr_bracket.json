@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-17T00:03:18.473057+00:00",
+  "generated_at": "2026-07-17T21:37:28.162082+00:00",
   "prediction_id": "SRT3_B_20260717",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SRT3",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 245.4,
+    "limit_price": 243.4,
     "quantity": 2,
     "tif": "GTD",
     "gtd": "2026-07-22T16:30:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 246.75,
+      "limit_price": 245.6,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 254.35,
+      "limit_price": 253.05,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 227.85,
+      "stop_price": 227.0,
       "quantity": 2,
       "tif": "GTC",
       "tag": "SL"
@@ -82,22 +82,22 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 8.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0628,
+    "ev_pct_risk": 0.0333,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.3629,
-      "T2": 0.1769,
-      "T3": 0.0709
+      "T1": 0.3586,
+      "T2": 0.1673,
+      "T3": 0.068
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 490.8,
-    "hold_tolerance_breach_price": 184.05,
+    "notional_eur": 486.8,
+    "hold_tolerance_breach_price": 182.55,
     "hold_fallback_active": true,
     "prediction_id": "SRT3_B_20260717"
   },

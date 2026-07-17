@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-07-17T00:35:41Z",
+    "generated_at": "2026-07-17T22:05:16Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-07-20T08:00:00Z",
@@ -146,11 +146,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 184824.1534,
+        "min": 184824.1537,
         "max": 195129.5515
       },
       "stop": {
-        "price": 177431.1873,
+        "price": 177431.1876,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -6.6
       },
@@ -184,7 +184,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 175656.8754,
+    "price": 175656.8757,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
