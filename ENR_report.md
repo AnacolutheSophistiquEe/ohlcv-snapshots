@@ -1,16 +1,16 @@
 # ENR
 
-**Generated** : 2026-07-16T21:40:11.604739+00:00  
+**Generated** : 2026-07-17T00:05:57.960877+00:00  
 **Santé technique** : 3/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · €148.74  
+**Subtitle** : indeterminate · volatilite normal · €148.20  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-5 sess · macro taux)  
-> ↳ spot €148.74 (+15.5% vs entrée) · entrée €128.79 · stop €126.15 · T1 €134.07 · R/R 2.0  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-4 sess · macro taux)  
+> ↳ spot €148.20 (+15.3% vs entrée) · entrée €128.55 · stop €125.90 · T1 €133.83 · R/R 1.99  
 > ↳ P(T1 av. stop) 37 % · EV/risk 0.113 · ¼-Kelly 0.009 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -55 % hors [0,100] (R² max 0.95). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
+>   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -59 % hors [0,100] (R² max 0.95). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
 ## Régime & alignement multi-TF
@@ -28,21 +28,21 @@ Plan privilegie B (swing), composite 3/10, conviction 'Pass'.
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : €127.73–€129.85 (mid €128.79)
-- Spot actuel : €148.74 (+15.5% au-dessus de la zone — repli à attendre)
-- Stop : €126.15 (stop swing_plan-based (-15.19%))
-- Targets : T1 €134.07 · R/R 2.0 | T2 €139.35 · R/R 4.0 | T3 €144.63 · R/R 6.0
+- Entry (zone de repli) : €127.49–€129.60 (mid €128.55)
+- Spot actuel : €148.20 (+15.3% au-dessus de la zone — repli à attendre)
+- Stop : €125.90 (stop swing_plan-based (-15.05%))
+- Targets : T1 €133.83 · R/R 1.99 | T2 €139.12 · R/R 3.99 | T3 €144.41 · R/R 5.98
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €126.15
+- Invalidation : close sous €125.90
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.113 | EV/share : €0.299 | p_fill : —
+- EV/risk : 0.113 | EV/share : €0.298 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 37 % | T2 19 % | T3 5 %
 - Kelly (position) : f* 0.035 | ¼-Kelly 0.009 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 9.8 | bear 15.5 | side 74.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, swing) : bull 9.6 | bear 16.7 | side 73.7  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
@@ -148,25 +148,25 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-5 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-5 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 45.6  _(neutre)_
+- **RSI** : 45.2  _(neutre)_
 - **ADX** : 17.4  _(pas de tendance nette)_
-- **MACD** : hist -1.095  _(pas de croisement recent)_
-- **BB** : %B 0.12 · largeur 17.7%
+- **MACD** : hist -1.129  _(pas de croisement recent)_
+- **BB** : %B 0.1 · largeur 17.8%
 - **ATR** : 7.18 (60.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV falling · CMF -0.17  _(distribution)_
-- **Vol ratio** : 0.82  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.168  _(distribution)_
+- **Vol ratio** : 0.45  _(volume atone)_
 - **Choppiness** : 54.2  _(transition)_
-- **MA** : MA20 159.48 · MA50 163.04 · MA200 142.2  _(prix < MA20)_
-- **Dist MA** : MA20 -6.7% · MA50 -8.8% · MA200 +4.6%
+- **MA** : MA20 159.46 · MA50 163.03 · MA200 142.2  _(prix < MA20)_
+- **Dist MA** : MA20 -7.1% · MA50 -9.1% · MA200 +4.2%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (93373 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (93377 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

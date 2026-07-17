@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US69608A1088",
-    "generated_at": "2026-07-16T22:02:29.656666+00:00",
+    "generated_at": "2026-07-17T00:26:08.884215+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1971,7 +1971,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2856,
+          "p_touch": 0.2857,
           "distance_pct": 6.1
         },
         "t2": {
@@ -2284,7 +2284,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-16T22:02:02.875465+00:00",
+    "generated_at": "2026-07-17T00:25:44.438299+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7271,7 +7271,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-16T22:02:15.119005+00:00",
+    "generated_at": "2026-07-17T00:25:55.672431+00:00",
     "ticker": "PLTR",
     "horizons_days": {
       "intraday": 2,
@@ -7285,8 +7285,8 @@
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7300,8 +7300,8 @@
         "type": "macro",
         "label": "Sartorius (SRT3/SRT) Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7315,8 +7315,8 @@
         "type": "macro",
         "label": "Samsung Electronics Q2 2026 Earnings (pre-announcement mi-juillet)",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7330,9 +7330,10 @@
         "type": "macro",
         "label": "Taiwan tariff 10% (Section 122) expiry — ~24/07/2026",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -7345,7 +7346,7 @@
         "label": "US FOMC Rate Decision",
         "importance": "high",
         "sessions_to_event": 9,
-        "calendar_days": 13,
+        "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7462,7 +7463,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-07-16T22:02:07.194095+00:00",
+    "generated_at": "2026-07-17T00:25:48.650327+00:00",
     "ticker": "PLTR",
     "spot_price": 134.44,
     "expiries_available": [
@@ -7472,42 +7473,42 @@
       },
       {
         "date": "2026-07-24",
-        "days_to_exp": 8
+        "days_to_exp": 7
       },
       {
         "date": "2026-07-31",
-        "days_to_exp": 15
+        "days_to_exp": 14
       },
       {
         "date": "2026-08-07",
-        "days_to_exp": 22
+        "days_to_exp": 21
       },
       {
         "date": "2026-08-14",
-        "days_to_exp": 29
+        "days_to_exp": 28
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.6596,
-      "iv_atm_90d": 0.6596,
+      "iv_atm_30d": 0.6709,
+      "iv_atm_90d": 0.6709,
       "rv_20d_annualized": 0.5585,
-      "iv_rv_ratio": 1.181,
+      "iv_rv_ratio": 1.201,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -0.269,
+      "skew_25_delta_vol_pts": -0.256,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-07-17",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.4036,
+      "m1_iv_atm": 0.5657,
       "m3_expiry": "2026-08-14",
-      "m3_days_to_exp": 29,
-      "m3_iv_atm": 0.6596,
-      "ratio_m1_m3": 0.6118,
+      "m3_days_to_exp": 28,
+      "m3_iv_atm": 0.6709,
+      "ratio_m1_m3": 0.8432,
       "label": "contango_fort"
     },
     "open_interest_m1": {
@@ -7525,7 +7526,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 14982706207.0,
+      "gex_total_usd_per_point": 14440426421.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7540,7 +7541,7 @@
       "bearish_signals": 0,
       "notes": [
         "skew faible (-0.3 pts) — peu de demande de protection",
-        "GEX positif (14982.7M$/pt) = MM long gamma stabilisateur"
+        "GEX positif (14440.4M$/pt) = MM long gamma stabilisateur"
       ]
     },
     "liquidity_stats": {
@@ -7550,8 +7551,8 @@
       "per_expiry": {
         "2026-07-17": {
           "total_strikes": 181,
-          "liquid_strikes": 59,
-          "filter_ratio_pct": 32.6
+          "liquid_strikes": 57,
+          "filter_ratio_pct": 31.5
         },
         "2026-07-24": {
           "total_strikes": 167,
@@ -7579,7 +7580,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-07-16T22:02:14.251207+00:00",
+    "generated_at": "2026-07-17T00:25:54.876983+00:00",
     "ticker": "PLTR",
     "short_interest": {
       "status": "ok",
@@ -7593,7 +7594,7 @@
       "float_shares": 2104288534,
       "delta_shares_short_mom_pct": 26.12,
       "squeeze_potential": "low",
-      "fetched_at": "2026-07-16T22:02:08.226237+00:00"
+      "fetched_at": "2026-07-17T00:25:49.562327+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7602,15 +7603,15 @@
       "cik": "0001321655",
       "lookback_days": 90,
       "n_filings_total": 20,
-      "n_filings_in_window": 17,
+      "n_filings_in_window": 16,
       "n_fetch_errors": 0,
       "summary": {
         "total_buy_count": 0,
         "total_buy_value_usd": 0,
-        "total_sell_count": 53,
-        "total_sell_value_usd": 156758586.88,
+        "total_sell_count": 45,
+        "total_sell_value_usd": 154528006.43,
         "vesting_exercise_count": 0,
-        "net_flow_usd": -156758586.88,
+        "net_flow_usd": -154528006.43,
         "net_flow_label": "sell_bias_strong"
       },
       "top_buys": [],
@@ -7661,13 +7662,13 @@
         "insider_selling_no_buys": true,
         "vesting_exercises_dominant": false
       },
-      "all_transactions_count": 57,
-      "fetched_at": "2026-07-16T22:02:14.250326+00:00"
+      "all_transactions_count": 49,
+      "fetched_at": "2026-07-17T00:25:54.875983+00:00"
     },
     "data_quality": {
       "short_data_available": true,
       "insider_data_available": true,
-      "insider_n_transactions": 57
+      "insider_n_transactions": 49
     }
   },
   "volatility_regime": {
@@ -16076,7 +16077,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-16T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16127,7 +16128,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-16T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16172,7 +16173,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-16T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

@@ -1,18 +1,18 @@
 # 005930
 
-**Generated** : 2026-07-16T21:50:28.634919+00:00  
+**Generated** : 2026-07-17T00:15:17.795248+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.7 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 5/10 — **Rating** : Buy  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite extreme · ₩256500.00  
+**Subtitle** : indeterminate · volatilite extreme · ₩255000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-5 sess · macro taux)  
-> ↳ spot ₩256500.00 (+7.9% vs entrée) · entrée ₩237821.66 · stop ₩228106.61 · T1 ₩257251.77 · R/R 2.0  
-> ↳ P(T1 av. stop) 37 % · EV/risk 0.539 · ¼-Kelly 0.022 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-4 sess · macro taux)  
+> ↳ spot ₩255000.00 (+7.5% vs entrée) · entrée ₩237146.66 · stop ₩227411.24 · T1 ₩256617.51 · R/R 2.0  
+> ↳ P(T1 av. stop) 37 % · EV/risk 0.537 · ¼-Kelly 0.022 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -31 % hors [0,100] (R² max 0.97). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
+>   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -32 % hors [0,100] (R² max 0.97). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
 ## Régime & alignement multi-TF
@@ -24,7 +24,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## ⚠ Contradictions techniques
 
-- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.130 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
+- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.140 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
   - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
   - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
   - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
@@ -39,19 +39,19 @@ Plan privilegie B (swing), composite 5/10, conviction 'Buy'.
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : ₩233935.64–₩241707.68 (mid ₩237821.66)
-- Spot actuel : ₩256500.00 (+7.9% au-dessus de la zone — repli à attendre)
-- Stop : ₩228106.61 (stop swing_plan-based (-11.07%))
-- Targets : T1 ₩257251.77 · R/R 2.0 | T2 ₩276681.87 · R/R 4.0 | T3 ₩296111.97 · R/R 6.0
+- Entry (zone de repli) : ₩233252.49–₩241040.83 (mid ₩237146.66)
+- Spot actuel : ₩255000.00 (+7.5% au-dessus de la zone — repli à attendre)
+- Stop : ₩227411.24 (stop swing_plan-based (-10.82%))
+- Targets : T1 ₩256617.51 · R/R 2.0 | T2 ₩276088.36 · R/R 4.0 | T3 ₩295559.21 · R/R 6.0
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩228106.61
+- Invalidation : close sous ₩227411.24
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.539 | EV/share : ₩5241.600 | p_fill : —
+- EV/risk : 0.537 | EV/share : ₩5230.592 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 37 % | T2 12 % | T3 2 %
-- Kelly (position) : f* 0.089 | ¼-Kelly 0.022 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Kelly (position) : f* 0.087 | ¼-Kelly 0.022 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 9.8 | bear 63.3 | side 26.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 288.0
@@ -60,8 +60,8 @@ Plan privilegie B (swing), composite 5/10, conviction 'Buy'.
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −3.311% → cible +5.641% / stop −3.206%, p_fill 45%, n_eff≈15.6) : P(cible|rempli) **0%** · **EV/risk -0.124** (×p_fill ; si rempli -0.88% du capital)
-  - **swing** : indisponible (échantillon insuffisant (n=14, n_eff=11))
+  - **intraday** (entrée dip −3.182% → cible +6.122% / stop −3.22%, p_fill 47%, n_eff≈16.3) : P(cible|rempli) **3%** · **EV/risk -0.107** (×p_fill ; si rempli -0.74% du capital)
+  - **swing** (entrée dip −7.002% → cible +8.21% / stop −4.105%, p_fill 36%, n_eff≈11.6) : P(cible|rempli) **40%** · **EV/risk +0.046** (×p_fill ; si rempli +0.52% du capital)
   - **deep** : indisponible (échantillon insuffisant (n=9, n_eff=8))
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→82% · +1.0%→69% · +2.0%→48% · +3.0%→31% · +5.0%→20% · +8.0%→5%
 - Range intraday médian 5.38% (p90 9.32%) · excursion haute méd. +1.96% / basse méd. −2.37%
@@ -150,25 +150,25 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-5 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-5 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 32.3  _(momentum baissier)_
+- **RSI** : 32.1  _(momentum baissier)_
 - **ADX** : 21.3  _(pas de tendance nette)_
-- **MACD** : hist -7080.092  _(pas de croisement recent)_
-- **BB** : %B 0.12 · largeur 43.5%
+- **MACD** : hist -7175.818  _(pas de croisement recent)_
+- **BB** : %B 0.12 · largeur 43.7%
 - **ATR** : 26500.0 (97.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF -0.134  _(distribution)_
-- **Vol ratio** : 0.62  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF -0.137  _(distribution)_
+- **Vol ratio** : 0.82  _(volume normal)_
 - **Choppiness** : 51.2  _(transition)_
-- **MA** : MA20 306550.0 · MA50 306390.0 · MA200 184831.65  _(prix < MA20)_
-- **Dist MA** : MA20 -16.3% · MA50 -16.3% · MA200 +38.8%
+- **MA** : MA20 306475.0 · MA50 306360.0 · MA200 184824.15  _(prix < MA20)_
+- **Dist MA** : MA20 -16.8% · MA50 -16.8% · MA200 +38.0%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (82804 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (83089 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
