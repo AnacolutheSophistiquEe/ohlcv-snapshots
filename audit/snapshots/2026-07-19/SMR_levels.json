@@ -1,0 +1,117 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "SMR",
+    "generated_at": "2026-07-17T22:05:16Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-07-20T08:00:00Z",
+    "valid_until": "2026-07-20T21:00:00Z",
+    "source_precomputed": "SMR_precomputed.json"
+  },
+  "context": {
+    "last_price": 7.64,
+    "ta_score": {
+      "value": 1,
+      "max": 10,
+      "label": "very_bearish"
+    },
+    "alignment_flag": "mixed",
+    "hmm_regime": {
+      "state": "bull",
+      "probability": 0.6061,
+      "expected_duration_days": 2.54
+    },
+    "volatility_regime": "low",
+    "signals_counter": {
+      "buy": 3,
+      "sell": 6,
+      "neutral": 6,
+      "total": 15,
+      "verdict": "strong_sell"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_<30_dist_ma20_<-10",
+      "win_rate": 0.83,
+      "sample_size": 36,
+      "median_bounce_pct": 14.42,
+      "confidence": "high"
+    },
+    "narrative_short": "TA score 1/10 (very_bearish), alignment mixed, HMM bull (0.61), vol low, signals strong_sell (3b/6s/6n)."
+  },
+  "notes": {
+    "atr_daily": 0.6782,
+    "atr_pct_daily": null,
+    "beta_60d": 3.5314,
+    "beta_benchmark": "IWM",
+    "beta_corr_60d": 0.6521,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "doji",
+      "date": "2026-07-14",
+      "confidence": 1.0
+    },
+    "divergences": [],
+    "drawdown": {
+      "current_dd_pct": -85.7,
+      "ath_price": 53.43,
+      "ath_date": "2025-10-15",
+      "max_dd_1y_pct": -85.7,
+      "days_in_dd": 274,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 6.6882,
+        "max": 6.8239
+      },
+      "stop": {
+        "price": 5.7727,
+        "basis": "fallback_pivot_classical_s3",
+        "distance_pct": -14.56
+      },
+      "targets": [
+        {
+          "level": 2,
+          "price": 7.0496,
+          "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
+          "rr": 0.3
+        },
+        {
+          "level": 3,
+          "price": 7.4326,
+          "basis": "plafond band 95% · touche hist. 91% (sans stop)",
+          "rr": 0.69
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_classical_s3. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=1<4",
+  "global_conditions": [
+    {
+      "id": "session_us_open",
+      "type": "session_window",
+      "params": {
+        "session": "us_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 5.715,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
