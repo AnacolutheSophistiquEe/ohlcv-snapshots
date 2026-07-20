@@ -1,15 +1,15 @@
 # 005930
 
-**Generated** : 2026-07-19T20:46:06.857430+00:00  
+**Generated** : 2026-07-20T00:14:32.196862+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.7 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite extreme · ₩255000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-3 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-2 sess · macro taux)  
 > ↳ spot ₩255000.00 (+7.5% vs entrée) · entrée ₩237146.66 · stop ₩227411.24 · T1 ₩256617.51 · R/R 2.0  
-> ↳ P(T1 av. stop) 31 % _(réel 5 s)_ · EV/risk -0.043 _(réel 5 s)_ (GBM 0.537) · ¼-Kelly 0.022 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 31 % _(réel 5 s)_ · EV/risk -0.043 _(réel 5 s)_ (GBM 0.541) · ¼-Kelly 0.022 · _first-passage empirique daily (historique réel, n≈207) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -32 % hors [0,100] (R² max 0.97). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
@@ -49,10 +49,10 @@ Plan privilegie B (swing), composite 5/10, conviction 'Pass (negative EV)'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.537 | EV/share : ₩5230.593 | p_fill : —
+- EV/risk : 0.541 | EV/share : ₩5265.048 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 37 % | T2 12 % | T3 2 %
-- Kelly (position) : f* 0.087 | ¼-Kelly 0.022 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
+- Kelly (position) : f* 0.088 | ¼-Kelly 0.022 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈207) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 9.8 | bear 63.3 | side 26.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 288.0
 
@@ -150,8 +150,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-3 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-3 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-2 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-2 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -160,7 +160,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 21.3  _(pas de tendance nette)_
 - **MACD** : hist -7175.818  _(pas de croisement recent)_
 - **BB** : %B 0.12 · largeur 43.7%
-- **ATR** : 26500.0 (97.0e pct 1a)  _(volatilite elevee)_
+- **ATR** : 26500.0 (96.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV rising · CMF -0.137  _(distribution)_
 - **Vol ratio** : 0.82  _(volume normal)_
 - **Choppiness** : 51.2  _(transition)_
@@ -170,5 +170,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (83277 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (83276 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

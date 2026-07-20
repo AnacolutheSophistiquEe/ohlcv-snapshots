@@ -1,6 +1,6 @@
 # 012450
 
-**Generated** : 2026-07-19T20:50:25.561884+00:00  
+**Generated** : 2026-07-20T00:18:14.187505+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · ₩943000.00  
@@ -136,15 +136,15 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-3 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-3 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-2 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-2 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
 - **RSI** : 44.5  _(momentum baissier)_
 - **ADX** : 18.5  _(pas de tendance nette)_
-- **MACD** : hist -12139.598  _(pas de croisement recent)_
+- **MACD** : hist -12139.597  _(pas de croisement recent)_
 - **BB** : %B 0.22 · largeur 33.4%
 - **ATR** : 89642.86 (92.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV falling · CMF -0.154  _(distribution)_
