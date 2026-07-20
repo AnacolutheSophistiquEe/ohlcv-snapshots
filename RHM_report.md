@@ -1,15 +1,15 @@
 # RHM
 
-**Generated** : 2026-07-20T00:01:56.579462+00:00  
-> ⚠️ **Données suspectes** : volatilité réalisée 5.4 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
+**Generated** : 2026-07-20T21:35:48.496053+00:00  
+> ⚠️ **Données suspectes** : volatilité réalisée 5.5 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
-**Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
+**Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : trending · volatilite low · €984.20  
+**Subtitle** : trending · volatilite low · €990.30  
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
-> ↳ spot €984.20 (+1.4% vs entrée) · entrée €970.35 · stop €950.94 · T1 €999.35 · R/R 1.49  
-> ↳ P(T1 av. stop) 25 % _(réel 5 s)_ · EV/risk -0.086 _(réel 5 s)_ (GBM 0.047) · ¼-Kelly 0.008 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ↳ spot €990.30 (+1.6% vs entrée) · entrée €974.92 · stop €955.43 · T1 €1004.12 · R/R 1.5  
+> ↳ P(T1 av. stop) 23 % _(réel 5 s)_ · EV/risk -0.119 _(réel 5 s)_ (GBM 0.047) · ¼-Kelly 0.008 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.0% cohérent avec le bruit 5 s (EV-optimal ≈ −2.0%)  
 
 ## Régime & alignement multi-TF
@@ -21,36 +21,36 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 5/10, conviction 'Pass (negative EV)'.
+Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : €964.55–€976.15 (mid €970.35)
-- Spot actuel : €984.20 (+1.4% au-dessus de la zone — repli à attendre)
-- Stop : €950.94 (stop swing_plan-based (-6.33%))
-- Targets : T1 €999.35 · R/R 1.49 | T2 €1028.34 · R/R 2.99 | T3 €1057.34 · R/R 4.48
+- Entry (zone de repli) : €969.09–€980.76 (mid €974.92)
+- Spot actuel : €990.30 (+1.6% au-dessus de la zone — repli à attendre)
+- Stop : €955.43 (stop swing_plan-based (-6.65%))
+- Targets : T1 €1004.12 · R/R 1.5 | T2 €1033.32 · R/R 3.0 | T3 €1062.52 · R/R 4.49
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €950.94
+- Invalidation : close sous €955.43
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.047 | EV/share : €0.910 | p_fill : —
+- EV/risk : 0.047 | EV/share : €0.913 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 31 % | T2 4 % | T3 4 %
 - Kelly (position) : f* 0.032 | ¼-Kelly 0.008 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 19.3 | bear 5.0 | side 75.7  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, intraday) : bull 20.8 | bear 5.0 | side 74.2  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −1.408% → cible +2.988% / stop −2.0%, p_fill 64%, n_eff≈25.0) : P(cible|rempli) **25%** · **EV/risk -0.086** (×p_fill ; si rempli -0.27% du capital)
-  - **swing** (entrée dip −3.092% → cible +6.682% / stop −3.341%, p_fill 46%, n_eff≈15.2) : P(cible|rempli) **7%** · **EV/risk -0.269** (×p_fill ; si rempli -1.96% du capital)
-  - **deep** (entrée dip −4.781% → cible +9.45% / stop −4.725%, p_fill 41%, n_eff≈16.0) : P(cible|rempli) **5%** · **EV/risk -0.294** (×p_fill ; si rempli -3.41% du capital)
+  - **intraday** (entrée dip −1.551% → cible +2.995% / stop −2.0%, p_fill 60%, n_eff≈23.1) : P(cible|rempli) **23%** · **EV/risk -0.119** (×p_fill ; si rempli -0.40% du capital)
+  - **swing** (entrée dip −3.416% → cible +6.697% / stop −3.348%, p_fill 46%, n_eff≈15.0) : P(cible|rempli) **7%** · **EV/risk -0.219** (×p_fill ; si rempli -1.61% du capital)
+  - **deep** (entrée dip −5.275% → cible +9.47% / stop −4.735%, p_fill 40%, n_eff≈15.7) : P(cible|rempli) **5%** · **EV/risk -0.274** (×p_fill ; si rempli -3.22% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→75% · +1.0%→64% · +2.0%→49% · +3.0%→31% · +5.0%→4% · +8.0%→0%
 - Range intraday médian 4.16% (p90 6.86%) · excursion haute méd. +1.98% / basse méd. −1.72%
 - Profil de vol intra : ouverture 2.567% vs midi 0.848% vs clôture 1.085% _(ouverture ~3.0× plus volatile → privilégier/éviter selon le setup)_
@@ -144,19 +144,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 51.7  _(neutre)_
-- **ADX** : 27.7  _(tendance etablie)_
-- **MACD** : hist -1.893  _(pas de croisement recent)_
-- **BB** : %B 0.35 · largeur 30.1%
-- **ATR** : 51.06 (21.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV falling · CMF -0.056  _(distribution)_
-- **Vol ratio** : 0.78  _(volume normal)_
-- **Choppiness** : 46.5  _(transition)_
-- **MA** : MA20 1030.5 · MA50 1130.67 · MA200 1500.39  _(prix < MA20)_
-- **Dist MA** : MA20 -4.5% · MA50 -13.0% · MA200 -34.4%
+- **RSI** : 50.0  _(neutre)_
+- **ADX** : 28.4  _(tendance etablie)_
+- **MACD** : hist 0.001  _(bullish_recent)_
+- **BB** : %B 0.39 · largeur 26.8%
+- **ATR** : 49.1 (13.0e pct 1a)  _(volatilite basse)_
+- **OBV/CMF** : OBV falling · CMF -0.051  _(distribution)_
+- **Vol ratio** : 0.52  _(volume atone)_
+- **Choppiness** : 45.0  _(transition)_
+- **MA** : MA20 1020.54 · MA50 1127.0 · MA200 1495.68  _(prix < MA20)_
+- **Dist MA** : MA20 -3.0% · MA50 -12.1% · MA200 -33.8%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (90413 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (90119 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

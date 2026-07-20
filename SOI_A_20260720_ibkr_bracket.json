@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-20T00:09:28.147476+00:00",
+  "generated_at": "2026-07-20T21:44:06.410178+00:00",
   "prediction_id": "SOI_A_20260720",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SOI",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 86.9,
+    "limit_price": 85.95,
     "quantity": 1,
     "tif": "DAY"
   },
@@ -17,7 +17,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 87.35,
+      "limit_price": 86.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -25,7 +25,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 72.1,
+      "stop_price": 71.9,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
@@ -71,23 +71,23 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 4.0,
+    "composite_score": 5.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.0247,
+    "ev_pct_risk": 0.0265,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.4321,
-      "T2": 0.3829,
-      "T3": 0.3829
+      "T1": 0.4579,
+      "T2": 0.3833,
+      "T3": 0.3833
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 87.34,
+    "notional_eur": 86.4,
     "hold_tolerance_breach_price": null,
     "hold_fallback_active": true,
     "prediction_id": "SOI_A_20260720"
