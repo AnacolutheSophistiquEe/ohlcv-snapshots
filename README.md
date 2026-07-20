@@ -1,6 +1,6 @@
 # OHLCV Snapshots
 
-Last update: `2026-07-19T20:43:46.997128+00:00`
+Last update: `2026-07-20T00:01:07.612094+00:00`
 
 Daily snapshots of OHLCV data for the trading universe of [Manuel's IBKR Dip Scalper](https://github.com/AnacolutheSophistiquEe).
 Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the only reliable network path from the claude.ai sandbox.
@@ -24,10 +24,19 @@ Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the o
 
 ## Tickers
 
-(7 assets covered)
+(31 assets covered)
 
 | Display | yfinance symbol |
 |---|---|
+| `RHM` | `RHM.DE` |
+| `SRT3` | `SRT3.DE` |
+| `EVT` | `EVT.DE` |
+| `ENR` | `ENR.DE` |
+| `SAF` | `SAF.PA` |
+| `NEX` | `NEX.PA` |
+| `SOI` | `SOI.PA` |
+| `AL2SI` | `AL2SI.PA` |
+| `PRY` | `PRY.MI` |
 | `000660` | `000660.KS` |
 | `005930` | `005930.KS` |
 | `267260` | `267260.KS` |
@@ -35,6 +44,21 @@ Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the o
 | `012450` | `012450.KS` |
 | `207940` | `207940.KS` |
 | `326030` | `326030.KS` |
+| `MSTR` | `MSTR` |
+| `SMCI` | `SMCI` |
+| `PLTR` | `PLTR` |
+| `IONQ` | `IONQ` |
+| `RGTI` | `RGTI` |
+| `CEG` | `CEG` |
+| `SMR` | `SMR` |
+| `HOOD` | `HOOD` |
+| `SOFI` | `SOFI` |
+| `SPY` | `SPY` |
+| `QQQ` | `QQQ` |
+| `IWM` | `IWM` |
+| `EWG` | `EWG` |
+| `EWQ` | `EWQ` |
+| `EWY` | `EWY` |
 
 ## Consumption
 
