@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-21T21:47:56.390207+00:00",
+  "generated_at": "2026-07-21T21:48:09.369146+00:00",
   "n_sessions": 80,
   "regime_window": "recent",
   "bar_resolution": "5s",
@@ -79,7 +79,26 @@
   ],
   "first_passage": {
     "note": "intra-séance (horizon intraday=1) ; entrée = ouverture",
-    "plan_intraday": null,
+    "plan_intraday": {
+      "horizon_sessions": 1,
+      "target_pct": 3.088,
+      "stop_pct": 4.155,
+      "entry_mode": "dip",
+      "confirm_pct": null,
+      "dip_pct": 1.988,
+      "n_windows": 80,
+      "n_filled": 44,
+      "n_eff_weighted": 26.8,
+      "halflife_sessions": 15.0,
+      "p_fill": 0.7139,
+      "p_target_first": 0.3494,
+      "p_stop_first": 0.3451,
+      "p_no_touch": 0.3055,
+      "ev_per_share": -11329.1516,
+      "ev_pct_risk": -0.1236,
+      "ev_pct_entry": -0.514,
+      "ev_pct_entry_if_filled": -0.72
+    },
     "grid": [
       {
         "target_pct": 1.0,
@@ -1074,9 +1093,66 @@
     ]
   },
   "first_passage_by_horizon": {
-    "intraday": null,
-    "swing": null,
-    "deep": null
+    "intraday": {
+      "horizon_sessions": 1,
+      "target_pct": 3.088,
+      "stop_pct": 4.155,
+      "entry_mode": "dip",
+      "confirm_pct": null,
+      "dip_pct": 1.988,
+      "n_windows": 80,
+      "n_filled": 44,
+      "n_eff_weighted": 26.8,
+      "halflife_sessions": 15.0,
+      "p_fill": 0.7139,
+      "p_target_first": 0.3494,
+      "p_stop_first": 0.3451,
+      "p_no_touch": 0.3055,
+      "ev_per_share": -11329.1516,
+      "ev_pct_risk": -0.1236,
+      "ev_pct_entry": -0.514,
+      "ev_pct_entry_if_filled": -0.72
+    },
+    "swing": {
+      "horizon_sessions": 5,
+      "target_pct": 15.055,
+      "stop_pct": 7.527,
+      "entry_mode": "dip",
+      "confirm_pct": null,
+      "dip_pct": 4.383,
+      "n_windows": 76,
+      "n_filled": 29,
+      "n_eff_weighted": 21.3,
+      "halflife_sessions": 15.0,
+      "p_fill": 0.6352,
+      "p_target_first": 0.2179,
+      "p_stop_first": 0.7088,
+      "p_no_touch": 0.0733,
+      "ev_per_share": -33612.0602,
+      "ev_pct_risk": -0.1972,
+      "ev_pct_entry": -1.485,
+      "ev_pct_entry_if_filled": -2.337
+    },
+    "deep": {
+      "horizon_sessions": 10,
+      "target_pct": 40.624,
+      "stop_pct": 18.0,
+      "entry_mode": "dip",
+      "confirm_pct": null,
+      "dip_pct": 6.768,
+      "n_windows": 71,
+      "n_filled": 22,
+      "n_eff_weighted": 16.7,
+      "halflife_sessions": 15.0,
+      "p_fill": 0.5492,
+      "p_target_first": 0.0355,
+      "p_stop_first": 0.6842,
+      "p_no_touch": 0.2802,
+      "ev_per_share": -135445.0133,
+      "ev_pct_risk": -0.324,
+      "ev_pct_entry": -5.832,
+      "ev_pct_entry_if_filled": -10.621
+    }
   },
   "vol_profile_intraday": [
     {
