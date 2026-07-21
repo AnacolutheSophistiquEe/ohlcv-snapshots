@@ -1,16 +1,16 @@
 # AL2SI
 
-**Generated** : 2026-07-20T21:45:30.792649+00:00  
+**Generated** : 2026-07-21T00:10:30.124780+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 9.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
-**Santé technique** : 5/10 — **Rating** : Pass  
+**Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : trending · volatilite high · €26.22  
+**Subtitle** : trending · volatilite high · €26.58  
 
-> 🟡 **WAIT-FOR-DIP** — spot +5.7 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot €26.22 (+5.7% vs entrée) · entrée €24.81 · stop €23.58 · T1 €26.06 · R/R 1.02  
-> ↳ P(T1 av. stop) 26 % _(réel 5 s)_ · EV/risk 0.041 _(réel 5 s)_ (GBM -0.029) · ¼-Kelly 0.025 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
-> ↳ stop −4.94% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)  
+> ↳ spot €26.58 (+6.0% vs entrée) · entrée €25.08 · stop €23.85 · T1 €26.34 · R/R 1.02  
+> ↳ P(T1 av. stop) 13 % _(réel 5 s)_ · EV/risk -0.068 _(réel 5 s)_ (GBM -0.028) · ¼-Kelly 0.025 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ↳ stop −4.89% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
 
 ## Régime & alignement multi-TF
 
@@ -21,23 +21,23 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 5/10, conviction 'Pass'.
+Plan privilegie A (intraday), composite 5/10, conviction 'Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : €24.56–€25.06 (mid €24.81)
-- Spot actuel : €26.22 (+5.7% au-dessus de la zone — repli à attendre)
-- Stop : €23.58 (stop swing_plan-based (-16.84%))
-- Targets : T1 €26.06 · R/R 1.02 | T2 €27.31 · R/R 2.03 | T3 €28.57 · R/R 3.06
+- Entry (zone de repli) : €24.82–€25.33 (mid €25.08)
+- Spot actuel : €26.58 (+6.0% au-dessus de la zone — repli à attendre)
+- Stop : €23.85 (stop swing_plan-based (-17.39%))
+- Targets : T1 €26.34 · R/R 1.02 | T2 €27.61 · R/R 2.06 | T3 €28.88 · R/R 3.09
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €23.58
+- Invalidation : close sous €23.85
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.029 | EV/share : €-0.035 | p_fill : —
+- EV/risk : -0.028 | EV/share : €-0.034 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 37 % | T2 37 % | T3 37 %
 - Kelly (position) : f* 0.101 | ¼-Kelly 0.025 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
@@ -48,8 +48,8 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Pass'.
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −5.385% → cible +5.05% / stop −4.941%, p_fill 63%, n_eff≈21.0) : P(cible|rempli) **26%** · **EV/risk +0.041** (×p_fill ; si rempli +0.33% du capital)
-  - **swing** : indisponible (échantillon insuffisant (n=12, n_eff=9))
+  - **intraday** (entrée dip −5.659% → cible +5.054% / stop −4.888%, p_fill 51%, n_eff≈17.9) : P(cible|rempli) **13%** · **EV/risk -0.068** (×p_fill ; si rempli -0.66% du capital)
+  - **swing** : indisponible (échantillon insuffisant (n=10, n_eff=8))
   - **deep** : indisponible (échantillon insuffisant (n=9, n_eff=8))
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→86% · +1.0%→80% · +2.0%→74% · +3.0%→64% · +5.0%→41% · +8.0%→24%
 - Range intraday médian 8.62% (p90 22.19%) · excursion haute méd. +4.16% / basse méd. −3.83%
@@ -137,26 +137,26 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-2 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-2 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 42.1  _(momentum baissier)_
+- **RSI** : 42.8  _(momentum baissier)_
 - **ADX** : 25.3  _(tendance etablie)_
-- **MACD** : hist -0.414  _(pas de croisement recent)_
-- **BB** : %B 0.26 · largeur 60.5%
+- **MACD** : hist -0.391  _(pas de croisement recent)_
+- **BB** : %B 0.28 · largeur 60.3%
 - **ATR** : 4.09 (88.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.049  _(neutre)_
-- **Vol ratio** : 0.59  _(volume atone)_
+- **OBV/CMF** : OBV falling · CMF -0.042  _(neutre)_
+- **Vol ratio** : 0.32  _(volume atone)_
 - **Choppiness** : 44.7  _(transition)_
-- **MA** : MA20 30.59 · MA50 39.19 · MA200 24.15  _(prix < MA20)_
-- **Dist MA** : MA20 -14.3% · MA50 -33.1% · MA200 +8.6%
+- **MA** : MA20 30.61 · MA50 39.19 · MA200 24.15  _(prix < MA20)_
+- **Dist MA** : MA20 -13.2% · MA50 -32.2% · MA200 +10.1%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (90179 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (90651 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

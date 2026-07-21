@@ -1,49 +1,45 @@
 # SMR
 
-**Generated** : 2026-07-20T00:29:49.801893+00:00  
-**Santé technique** : 3/10 — **Rating** : Pass  
+**Generated** : 2026-07-21T00:28:58.104530+00:00  
+**Santé technique** : 5/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite low · $7.72  
+**Subtitle** : indeterminate · volatilite low · $7.96  
 
-> 🟡 **WAIT-FOR-DIP** — spot +9.8 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot $7.72 (+9.8% vs entrée) · entrée $7.03 · stop $6.83 · T1 $7.22 · R/R 0.95  
-> ↳ P(T1 av. stop) 53 % · EV/risk 0.041 · ¼-Kelly 0.017 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
-> ↳ stop −2.94% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
-
-> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -39 % hors [0,100] (R² max 0.70). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
-
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)  
+> ↳ spot $7.96 (+9.3% vs entrée) · entrée $7.28 · stop $7.08 · T1 $7.43 · R/R 0.75  
+> ↳ P(T1 av. stop) 58 % · EV/risk 0.02 · ¼-Kelly 0.011 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ↳ stop −2.78% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
 
 ## Régime & alignement multi-TF
 
 - **Daily** : range (trend-range)  
-- **H4** : down | **H1** : down  
-- **Flag multi-TF** : mixed (score 1)
+- **H4** : down | **H1** : range  
+- **Flag multi-TF** : mixed (score 2)
 
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 3/10, conviction 'Pass'.
+Plan privilegie A (intraday), composite 5/10, conviction 'Pass'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : $6.99–$7.07 (mid $7.03)
-- Spot actuel : $7.72 (+9.8% au-dessus de la zone — repli à attendre)
-- Stop : $6.83 (stop swing_plan-based (-20.5%))
-- Targets : T1 $7.22 · R/R 0.95 | T2 $7.40 · R/R 1.85 | T3 $7.59 · R/R 2.8
+- Entry (zone de repli) : $7.26–$7.31 (mid $7.28)
+- Spot actuel : $7.96 (+9.3% au-dessus de la zone — repli à attendre)
+- Stop : $7.08 (stop swing_plan-based (-19.51%))
+- Targets : T1 $7.43 · R/R 0.75 | T2 $7.58 · R/R 1.5 | T3 $7.73 · R/R 2.25
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $6.83
+- Invalidation : close sous $7.08
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.041 | EV/share : $0.009 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 53 % | T2 35 % | T3 35 %
-- Kelly (position) : f* 0.066 | ¼-Kelly 0.017 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- EV/risk : 0.02 | EV/share : $0.004 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 58 % | T2 39 % | T3 34 %
+- Kelly (position) : f* 0.043 | ¼-Kelly 0.011 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 33.9 | bear 50.6 | side 15.5  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, intraday) : bull 40.0 | bear 44.9 | side 15.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
@@ -133,32 +129,32 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Factor** : attribution factorielle indisponible
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
-**Options** : favorable
+**Options** : bullish
 
 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-2 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-2 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 21.4  _(survente)_
-- **ADX** : 21.8  _(pas de tendance nette)_
-- **MACD** : hist -0.148  _(pas de croisement recent)_
-- **BB** : %B 0.1 · largeur 47.0%
-- **ATR** : 0.69 (3.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV falling · CMF -0.092  _(distribution)_
-- **Vol ratio** : 0.77  _(volume normal)_
-- **Choppiness** : 36.7  _(marche directionnel)_
-- **MA** : MA20 9.52 · MA50 10.69 · MA200 18.0  _(prix < MA20)_
-- **Dist MA** : MA20 -18.9% · MA50 -27.8% · MA200 -57.1%
+- **RSI** : 22.9  _(survente)_
+- **ADX** : 23.1  _(pas de tendance nette)_
+- **MACD** : hist -0.12  _(pas de croisement recent)_
+- **BB** : %B 0.17 · largeur 44.6%
+- **ATR** : 0.68 (2.0e pct 1a)  _(volatilite basse)_
+- **OBV/CMF** : OBV falling · CMF -0.178  _(distribution)_
+- **Vol ratio** : 1.24  _(volume normal)_
+- **Choppiness** : 36.0  _(marche directionnel)_
+- **MA** : MA20 9.34 · MA50 10.58 · MA200 17.86  _(prix < MA20)_
+- **Dist MA** : MA20 -14.7% · MA50 -24.8% · MA200 -55.4%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (81441 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (81646 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
