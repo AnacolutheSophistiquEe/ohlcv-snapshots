@@ -1,0 +1,188 @@
+{
+  "entry_used": null,
+  "entry_basis": "spot",
+  "spot_price": 262.22,
+  "stop_above_entry_warning": false,
+  "stop_recommendation": {
+    "atr_based": {
+      "price": 249.0363,
+      "distance_pct": -5.03
+    },
+    "swing_based": {
+      "price": 234.8022,
+      "swing_low_date": "2026-07-08",
+      "distance_pct": -10.46
+    },
+    "sr_based": {
+      "price": 236.3669,
+      "support_strength": "medium",
+      "distance_pct": -9.86
+    },
+    "recommended": "swing_plan",
+    "recommended_price": 244.9517,
+    "recommended_distance_pct": -6.59
+  },
+  "target_multi": {
+    "source": "plan_swing_weekly_band95",
+    "t1": {
+      "price": 255.5492,
+      "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
+      "rr": 2.0,
+      "rr_basis": "entry_mid",
+      "distance_pct": -2.54
+    },
+    "t2": {
+      "price": 262.6143,
+      "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
+      "rr": 4.0,
+      "rr_basis": "entry_mid",
+      "distance_pct": 0.15
+    },
+    "t3": {
+      "price": 269.6793,
+      "basis": "plafond band 95% · touche hist. 73% (sans stop)",
+      "rr": 6.0,
+      "rr_basis": "entry_mid",
+      "distance_pct": 2.84
+    }
+  },
+  "by_horizon": {
+    "intraday": {
+      "horizon_sessions": 1,
+      "entry_low": 255.3255,
+      "entry_high": 256.6274,
+      "entry_mid": 255.9765,
+      "stop_price": 252.1368,
+      "stop_basis": "plancher anti-bruit 5 s — stop EV-optimal −1.5% (first-passage 5 s réel)",
+      "stop_capped": false,
+      "noise_stop_5s": {
+        "ev_optimal_stop_pct": 1.5,
+        "ev_optimal_ev_pct_risk": 0.0375,
+        "prev_stop_pct": 1.03,
+        "applied": true
+      },
+      "rr_min_target": 2.0,
+      "rr_enforced": false,
+      "stop_distance_pct": -1.5,
+      "stop_distance_pct_from_spot": -3.85,
+      "target_ceiling_band95_pct": 3.81,
+      "targets": {
+        "t1": {
+          "price": 259.2313,
+          "basis": "band 95% (atteignable) · touche hist. 81% (sans stop)",
+          "rr": 0.85,
+          "rr_basis": "entry_mid",
+          "capped": true,
+          "p_touch": 0.8102,
+          "distance_pct": 1.27
+        },
+        "t2": {
+          "price": 262.4861,
+          "basis": "band 95% (atteignable) · touche hist. 81% (sans stop)",
+          "rr": 1.7,
+          "rr_basis": "entry_mid",
+          "capped": true,
+          "p_touch": 0.8102,
+          "distance_pct": 2.54
+        },
+        "t3": {
+          "price": 265.741,
+          "basis": "plafond band 95% · touche hist. 81% (sans stop)",
+          "rr": 2.54,
+          "rr_basis": "entry_mid",
+          "capped": true,
+          "p_touch": 0.8102,
+          "distance_pct": 3.81
+        }
+      }
+    },
+    "swing": {
+      "horizon_sessions": 5,
+      "entry_low": 247.0712,
+      "entry_high": 249.8972,
+      "entry_mid": 248.4842,
+      "stop_price": 244.9517,
+      "stop_basis": "R/R 2 (resserré, parité Claude)",
+      "stop_capped": false,
+      "noise_stop_5s": null,
+      "rr_min_target": 2.0,
+      "rr_enforced": true,
+      "stop_distance_pct": -1.42,
+      "stop_distance_pct_from_spot": -6.59,
+      "target_ceiling_band95_pct": 8.53,
+      "targets": {
+        "t1": {
+          "price": 255.5492,
+          "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
+          "rr": 2.0,
+          "rr_basis": "entry_mid",
+          "capped": true,
+          "p_touch": 0.726,
+          "distance_pct": 2.84
+        },
+        "t2": {
+          "price": 262.6143,
+          "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
+          "rr": 4.0,
+          "rr_basis": "entry_mid",
+          "capped": true,
+          "p_touch": 0.9122,
+          "distance_pct": 5.69
+        },
+        "t3": {
+          "price": 269.6793,
+          "basis": "plafond band 95% · touche hist. 73% (sans stop)",
+          "rr": 6.0,
+          "rr_basis": "entry_mid",
+          "capped": true,
+          "p_touch": 0.726,
+          "distance_pct": 8.53
+        }
+      }
+    },
+    "deep": {
+      "horizon_sessions": 10,
+      "entry_low": 239.0539,
+      "entry_high": 242.93,
+      "entry_mid": 240.9919,
+      "stop_price": 236.1468,
+      "stop_basis": "R/R 2 (resserré, parité Claude)",
+      "stop_capped": false,
+      "noise_stop_5s": null,
+      "rr_min_target": 2.0,
+      "rr_enforced": true,
+      "stop_distance_pct": -2.01,
+      "stop_distance_pct_from_spot": -9.94,
+      "target_ceiling_band95_pct": 12.06,
+      "targets": {
+        "t1": {
+          "price": 250.6821,
+          "basis": "band 95% (atteignable) · touche hist. 59% (sans stop)",
+          "rr": 2.0,
+          "rr_basis": "entry_mid",
+          "capped": true,
+          "p_touch": 0.5925,
+          "distance_pct": 4.02
+        },
+        "t2": {
+          "price": 260.3724,
+          "basis": "band 95% (atteignable) · touche hist. 94% (sans stop)",
+          "rr": 4.0,
+          "rr_basis": "entry_mid",
+          "capped": true,
+          "p_touch": 0.9369,
+          "distance_pct": 8.04
+        },
+        "t3": {
+          "price": 270.0626,
+          "basis": "plafond band 95% · touche hist. 81% (sans stop)",
+          "rr": 6.0,
+          "rr_basis": "entry_mid",
+          "capped": true,
+          "p_touch": 0.8092,
+          "distance_pct": 12.06
+        }
+      }
+    }
+  }
+}
