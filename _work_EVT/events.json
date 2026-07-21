@@ -1,0 +1,110 @@
+{
+  "available": true,
+  "generated_at": "2026-07-21T21:38:09.777782+00:00",
+  "ticker": "EVT",
+  "horizons_days": {
+    "intraday": 2,
+    "swing": 7,
+    "deep": 14
+  },
+  "n_events": 6,
+  "events": [
+    {
+      "date": "2026-07-23",
+      "type": "macro",
+      "label": "ECB Monetary Policy Decision",
+      "importance": "high",
+      "sessions_to_event": 1,
+      "calendar_days": 2,
+      "in_plan_horizon": [
+        "intraday",
+        "swing",
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-23",
+      "type": "macro",
+      "label": "Sartorius (SRT3/SRT) Q2 2026 Earnings",
+      "importance": "high",
+      "sessions_to_event": 1,
+      "calendar_days": 2,
+      "in_plan_horizon": [
+        "intraday",
+        "swing",
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-23",
+      "type": "macro",
+      "label": "Samsung Electronics Q2 2026 Earnings (pre-announcement mi-juillet)",
+      "importance": "medium",
+      "sessions_to_event": 1,
+      "calendar_days": 2,
+      "in_plan_horizon": [
+        "intraday",
+        "swing",
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-24",
+      "type": "macro",
+      "label": "Taiwan tariff 10% (Section 122) expiry — ~24/07/2026",
+      "importance": "medium",
+      "sessions_to_event": 2,
+      "calendar_days": 3,
+      "in_plan_horizon": [
+        "swing",
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-07-29",
+      "type": "macro",
+      "label": "US FOMC Rate Decision",
+      "importance": "high",
+      "sessions_to_event": 6,
+      "calendar_days": 8,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-08-04",
+      "type": "macro",
+      "label": "SoFi Technologies (SOFI) Q2 2026 Earnings",
+      "importance": "medium",
+      "sessions_to_event": 10,
+      "calendar_days": 14,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "macro_broad",
+      "ticker_specific": false,
+      "recommendation": null
+    }
+  ],
+  "earnings_in_swing": false,
+  "warnings": {
+    "macro": null,
+    "corporate": null
+  },
+  "note": "réutilise data/macro_calendar.json (collecte = Claude/VPS, PAS reconstruite ici) + earnings/ex-div yfinance best-effort. Impact/reco mécaniques, observe-only."
+}
