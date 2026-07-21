@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "buy": 3,
+    "sell": 5,
+    "neutral": 7,
+    "total": 15,
+    "buy_pct": 20.0,
+    "sell_pct": 33.33,
+    "neutral_pct": 46.67
+  },
+  "verdict": "neutral",
+  "details": {
+    "moving_averages": {
+      "buy": 2,
+      "sell": 2,
+      "neutral": 0
+    },
+    "oscillators": {
+      "buy": 0,
+      "sell": 2,
+      "neutral": 4
+    },
+    "volume_trend": {
+      "buy": 1,
+      "sell": 1,
+      "neutral": 2
+    },
+    "multi_tf": {
+      "buy": 0,
+      "sell": 0,
+      "neutral": 1
+    }
+  },
+  "signals": {
+    "moving_averages": {
+      "ma20": "buy",
+      "ma50": "sell",
+      "ma200": "sell",
+      "ema20": "buy"
+    },
+    "oscillators": {
+      "rsi_14": "neutral",
+      "macd": "neutral",
+      "stochastic": "neutral",
+      "cci_20": "sell",
+      "williams_r": "sell",
+      "ultimate": "neutral"
+    },
+    "volume_trend": {
+      "adx": "neutral",
+      "obv": "buy",
+      "mfi_14": "neutral",
+      "cmf_20": "sell"
+    },
+    "multi_tf": {
+      "alignment": "neutral"
+    }
+  }
+}
