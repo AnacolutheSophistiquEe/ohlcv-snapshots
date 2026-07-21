@@ -1,37 +1,46 @@
 {
   "available": true,
-  "generated_at": "2026-07-21T00:32:36.571181+00:00",
+  "generated_at": "2026-07-21T21:48:20.728377+00:00",
   "window_sessions": 54,
   "tickers_used": [
+    "ENR",
+    "NEX",
     "PLTR",
-    "PRY",
-    "SRT3"
+    "PRY"
   ],
   "tickers_skipped": [],
   "weights_eur": {
+    "ENR": 158.14,
+    "NEX": 134.8,
     "PLTR": 269.7,
-    "PRY": 124.8,
-    "SRT3": 475.8
+    "PRY": 130.4
   },
-  "total_notional_eur": 870.3,
+  "total_notional_eur": 693.04,
   "capital_total_eur": 2000.0,
   "var_95": {
     "method": "gaussian_1d",
     "z_95": 1.6448536269514722,
-    "sigma_portfolio_daily_eur": 15.98,
-    "value_eur": 26.28,
+    "sigma_portfolio_daily_eur": 12.72,
+    "value_eur": 20.92,
     "pct_total_notional": 3.02,
-    "pct_capital": 1.31
+    "pct_capital": 1.05
   },
   "panel_beta_weighted": {},
-  "concentration_flags": [
+  "concentration_flags": [],
+  "high_corr_pairs_in_panel": [
     {
-      "ticker": "SRT3",
-      "share_pct": 54.7,
-      "flag": "highly_concentrated"
+      "pair": "NEX_PRY",
+      "rho": 0.68,
+      "share_pct": 38.3,
+      "flag": "red"
+    },
+    {
+      "pair": "ENR_PRY",
+      "rho": 0.6574,
+      "share_pct": 41.6,
+      "flag": "red"
     }
   ],
-  "high_corr_pairs_in_panel": [],
   "scaling": {
     "var_threshold_pct": 8.0,
     "var_ref_metric": "var_95_pct_capital",
