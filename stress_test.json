@@ -1,13 +1,14 @@
 {
   "available": true,
-  "generated_at": "2026-07-21T21:58:53.805636+00:00",
+  "generated_at": "2026-07-22T00:32:58.987909+00:00",
   "weights_eur": {
-    "ENR": 158.14,
+    "ENR": 158.58,
+    "HOOD": 212.72,
     "NEX": 134.8,
-    "PLTR": 269.7,
-    "PRY": 130.4
+    "PLTR": 265.32,
+    "PRY": 130.15
   },
-  "total_notional_eur": 693.04,
+  "total_notional_eur": 901.57,
   "capital_total_eur": 2000.0,
   "periods_tested": [
     "Lehman_2008",
@@ -25,20 +26,24 @@
       "end_recovery_date": "2009-09-30",
       "context": "Lehman bankruptcy → S&P -57%, recovery ~12 mois",
       "severity": "extreme",
-      "portfolio_initial_eur": 427.84,
-      "portfolio_min_eur": 112.56,
-      "portfolio_final_eur": 407.46,
-      "max_dd_panel_pct": -73.69,
-      "final_pnl_pct": -4.76,
-      "recovery_sessions": 3,
+      "portfolio_initial_eur": 636.62,
+      "portfolio_min_eur": 112.87,
+      "portfolio_final_eur": 632.77,
+      "max_dd_panel_pct": -82.27,
+      "final_pnl_pct": -0.6,
+      "recovery_sessions": 2,
       "recovered_within_window": true,
-      "pct_time_in_drawdown": 98.9,
+      "pct_time_in_drawdown": 97.0,
       "best_ticker": "ENR",
-      "worst_ticker": "PLTR",
+      "worst_ticker": "HOOD",
       "proxies_used": [
         {
           "original": "ENR",
           "proxy": "^GDAXI"
+        },
+        {
+          "original": "HOOD",
+          "proxy": "IAI"
         },
         {
           "original": "PLTR",
@@ -58,17 +63,25 @@
       "tickers_perf": {
         "ENR": {
           "proxy_used": "^GDAXI",
-          "initial_value_eur": 158.14,
-          "min_value_eur": 95.61,
-          "final_value_eur": 149.0,
+          "initial_value_eur": 158.58,
+          "min_value_eur": 95.88,
+          "final_value_eur": 149.41,
           "max_dd_pct": -39.54,
           "final_pnl_pct": -5.78
         },
+        "HOOD": {
+          "proxy_used": "IAI",
+          "initial_value_eur": 212.72,
+          "min_value_eur": 107.79,
+          "final_value_eur": 229.1,
+          "max_dd_pct": -49.33,
+          "final_pnl_pct": 7.7
+        },
         "PLTR": {
           "proxy_used": "IGV",
-          "initial_value_eur": 269.7,
-          "min_value_eur": 160.74,
-          "final_value_eur": 258.46,
+          "initial_value_eur": 265.32,
+          "min_value_eur": 158.13,
+          "final_value_eur": 254.27,
           "max_dd_pct": -40.4,
           "final_pnl_pct": -4.17
         }
@@ -82,20 +95,24 @@
       "end_recovery_date": "2020-08-18",
       "context": "COVID-19 shock → S&P -34% en 23 sessions, recovery 5 mois",
       "severity": "severe_fast",
-      "portfolio_initial_eur": 427.84,
-      "portfolio_min_eur": 130.64,
-      "portfolio_final_eur": 448.73,
-      "max_dd_panel_pct": -69.46,
-      "final_pnl_pct": 4.88,
-      "recovery_sessions": 86,
-      "recovered_within_window": true,
-      "pct_time_in_drawdown": 71.1,
+      "portfolio_initial_eur": 636.62,
+      "portfolio_min_eur": 131.01,
+      "portfolio_final_eur": 635.35,
+      "max_dd_panel_pct": -79.42,
+      "final_pnl_pct": -0.2,
+      "recovery_sessions": 127,
+      "recovered_within_window": false,
+      "pct_time_in_drawdown": 99.2,
       "best_ticker": "PLTR",
-      "worst_ticker": "ENR",
+      "worst_ticker": "HOOD",
       "proxies_used": [
         {
           "original": "ENR",
           "proxy": "^GDAXI"
+        },
+        {
+          "original": "HOOD",
+          "proxy": "IAI"
         },
         {
           "original": "PLTR",
@@ -115,17 +132,25 @@
       "tickers_perf": {
         "ENR": {
           "proxy_used": "^GDAXI",
-          "initial_value_eur": 158.14,
-          "min_value_eur": 96.81,
-          "final_value_eur": 148.18,
+          "initial_value_eur": 158.58,
+          "min_value_eur": 97.08,
+          "final_value_eur": 148.59,
           "max_dd_pct": -38.78,
           "final_pnl_pct": -6.3
         },
+        "HOOD": {
+          "proxy_used": "IAI",
+          "initial_value_eur": 212.72,
+          "min_value_eur": 127.51,
+          "final_value_eur": 191.09,
+          "max_dd_pct": -40.06,
+          "final_pnl_pct": -10.17
+        },
         "PLTR": {
           "proxy_used": "IGV",
-          "initial_value_eur": 269.7,
-          "min_value_eur": 187.99,
-          "final_value_eur": 300.55,
+          "initial_value_eur": 265.32,
+          "min_value_eur": 184.94,
+          "final_value_eur": 295.67,
           "max_dd_pct": -30.3,
           "final_pnl_pct": 11.44
         }
@@ -139,14 +164,14 @@
       "end_recovery_date": "2024-01-19",
       "context": "Fed hikes + inflation → S&P -25% sur 10 mois, recovery 15 mois",
       "severity": "long",
-      "portfolio_initial_eur": 427.84,
-      "portfolio_min_eur": 214.55,
-      "portfolio_final_eur": 371.0,
-      "max_dd_panel_pct": -49.85,
-      "final_pnl_pct": -13.29,
-      "recovery_sessions": 393,
-      "recovered_within_window": true,
-      "pct_time_in_drawdown": 98.6,
+      "portfolio_initial_eur": 636.62,
+      "portfolio_min_eur": 292.51,
+      "portfolio_final_eur": 490.58,
+      "max_dd_panel_pct": -54.05,
+      "final_pnl_pct": -22.94,
+      "recovery_sessions": 512,
+      "recovered_within_window": false,
+      "pct_time_in_drawdown": 99.8,
       "best_ticker": "ENR",
       "worst_ticker": "PLTR",
       "proxies_used": [],
@@ -163,17 +188,25 @@
       "tickers_perf": {
         "ENR": {
           "proxy_used": null,
-          "initial_value_eur": 158.14,
-          "min_value_eur": 100.39,
-          "final_value_eur": 132.3,
+          "initial_value_eur": 158.58,
+          "min_value_eur": 100.67,
+          "final_value_eur": 132.67,
           "max_dd_pct": -36.52,
           "final_pnl_pct": -16.34
         },
+        "HOOD": {
+          "proxy_used": null,
+          "initial_value_eur": 212.72,
+          "min_value_eur": 79.48,
+          "final_value_eur": 123.09,
+          "max_dd_pct": -62.64,
+          "final_pnl_pct": -42.14
+        },
         "PLTR": {
           "proxy_used": null,
-          "initial_value_eur": 269.7,
-          "min_value_eur": 87.33,
-          "final_value_eur": 238.7,
+          "initial_value_eur": 265.32,
+          "min_value_eur": 85.91,
+          "final_value_eur": 234.82,
           "max_dd_pct": -67.62,
           "final_pnl_pct": -11.49
         }
@@ -187,11 +220,11 @@
       "end_recovery_date": "2019-04-12",
       "context": "Powell pivot tardif → S&P -20% en 12 semaines, recovery 4 mois",
       "severity": "moderate",
-      "portfolio_initial_eur": 269.7,
-      "portfolio_min_eur": 143.83,
-      "portfolio_final_eur": 440.81,
-      "max_dd_panel_pct": -46.67,
-      "final_pnl_pct": 63.44,
+      "portfolio_initial_eur": 478.04,
+      "portfolio_min_eur": 144.23,
+      "portfolio_final_eur": 645.19,
+      "max_dd_panel_pct": -69.83,
+      "final_pnl_pct": 34.96,
       "recovery_sessions": 1,
       "recovered_within_window": true,
       "pct_time_in_drawdown": 5.2,
@@ -201,6 +234,10 @@
         {
           "original": "ENR",
           "proxy": "^GDAXI"
+        },
+        {
+          "original": "HOOD",
+          "proxy": "IAI"
         },
         {
           "original": "PLTR",
@@ -220,17 +257,25 @@
       "tickers_perf": {
         "ENR": {
           "proxy_used": "^GDAXI",
-          "initial_value_eur": 158.14,
-          "min_value_eur": 134.08,
-          "final_value_eur": 154.15,
+          "initial_value_eur": 158.58,
+          "min_value_eur": 134.46,
+          "final_value_eur": 154.58,
           "max_dd_pct": -15.21,
           "final_pnl_pct": -2.52
         },
+        "HOOD": {
+          "proxy_used": "IAI",
+          "initial_value_eur": 212.72,
+          "min_value_eur": 178.75,
+          "final_value_eur": 208.61,
+          "max_dd_pct": -15.97,
+          "final_pnl_pct": -1.93
+        },
         "PLTR": {
           "proxy_used": "IGV",
-          "initial_value_eur": 269.7,
-          "min_value_eur": 212.52,
-          "final_value_eur": 286.66,
+          "initial_value_eur": 265.32,
+          "min_value_eur": 209.07,
+          "final_value_eur": 282.0,
           "max_dd_pct": -21.2,
           "final_pnl_pct": 6.29
         }
@@ -244,16 +289,16 @@
       "end_recovery_date": "2024-08-26",
       "context": "Yen carry unwind → S&P -6% en 3 sessions, recovery 3 semaines",
       "severity": "mild",
-      "portfolio_initial_eur": 427.84,
-      "portfolio_min_eur": 391.8,
-      "portfolio_final_eur": 476.3,
-      "max_dd_panel_pct": -8.42,
-      "final_pnl_pct": 11.33,
-      "recovery_sessions": 5,
+      "portfolio_initial_eur": 636.62,
+      "portfolio_min_eur": 558.09,
+      "portfolio_final_eur": 689.97,
+      "max_dd_panel_pct": -12.33,
+      "final_pnl_pct": 8.38,
+      "recovery_sessions": 8,
       "recovered_within_window": true,
-      "pct_time_in_drawdown": 27.8,
+      "pct_time_in_drawdown": 44.4,
       "best_ticker": "ENR",
-      "worst_ticker": "PLTR",
+      "worst_ticker": "HOOD",
       "proxies_used": [],
       "fetch_errors": [
         {
@@ -268,17 +313,25 @@
       "tickers_perf": {
         "ENR": {
           "proxy_used": null,
-          "initial_value_eur": 158.14,
-          "min_value_eur": 147.66,
-          "final_value_eur": 157.56,
+          "initial_value_eur": 158.58,
+          "min_value_eur": 148.07,
+          "final_value_eur": 158.0,
           "max_dd_pct": -6.63,
           "final_pnl_pct": -0.37
         },
+        "HOOD": {
+          "proxy_used": null,
+          "initial_value_eur": 212.72,
+          "min_value_eur": 169.8,
+          "final_value_eur": 218.41,
+          "max_dd_pct": -20.18,
+          "final_pnl_pct": 2.67
+        },
         "PLTR": {
           "proxy_used": null,
-          "initial_value_eur": 269.7,
-          "min_value_eur": 241.62,
-          "final_value_eur": 318.75,
+          "initial_value_eur": 265.32,
+          "min_value_eur": 237.69,
+          "final_value_eur": 313.57,
           "max_dd_pct": -10.41,
           "final_pnl_pct": 18.19
         }
@@ -288,18 +341,19 @@
   "panel_summary": {
     "n_periods_ok": 5,
     "n_periods_total": 5,
-    "max_dd_avg_pct": -49.62,
-    "max_dd_median_pct": -49.85,
-    "max_dd_worst_pct": -73.69,
-    "recovery_sessions_avg": 98,
-    "recovery_sessions_median": 5,
-    "recovery_sessions_worst": 393,
-    "n_recovered_within_window": 5,
+    "max_dd_avg_pct": -59.58,
+    "max_dd_median_pct": -69.83,
+    "max_dd_worst_pct": -82.27,
+    "recovery_sessions_avg": 4,
+    "recovery_sessions_median": 2,
+    "recovery_sessions_worst": 8,
+    "n_recovered_within_window": 3,
     "prob_severe_event_5y_base_rate": 0.35,
-    "resilience_score": 2.48
+    "resilience_score": 3.94
   },
   "proxies_legend": {
     "PLTR": "IGV (used for periods before 2020-09-30)",
+    "HOOD": "IAI (used for periods before 2021-07-29)",
     "ENR": "^GDAXI (used for periods before 2020-09-28)",
     "NEX": "^FCHI (used for periods before 2001-06-13)",
     "PRY": "FTSEMIB.MI (used for periods before 2007-05-03)"
