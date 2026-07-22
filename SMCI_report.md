@@ -1,6 +1,6 @@
 # SMCI
 
-**Generated** : 2026-07-21T21:59:44.062615+00:00  
+**Generated** : 2026-07-22T00:22:54.733756+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite low · $25.50  
@@ -167,5 +167,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88279 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88617 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

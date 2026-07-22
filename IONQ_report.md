@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-07-21T22:02:39.823122+00:00  
+**Generated** : 2026-07-22T00:25:33.121673+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : strong_trend · volatilite normal · $35.51  
@@ -172,5 +172,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88802 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (89283 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # NEX
 
-**Generated** : 2026-07-21T21:42:40.129969+00:00  
+**Generated** : 2026-07-22T00:07:59.236232+00:00  
 **Santé technique** : 4/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · €134.80  
@@ -146,8 +146,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.15  _(bullish_recent)_
 - **BB** : %B 0.34 · largeur 14.8%
 - **ATR** : 4.52 (72.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF 0.024  _(neutre)_
-- **Vol ratio** : 0.75  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.025  _(neutre)_
+- **Vol ratio** : 0.2  _(volume atone)_
 - **Choppiness** : 62.4  _(marche en range (choppy))_
 - **MA** : MA20 138.04 · MA50 148.74 · MA200 131.24  _(prix < MA20)_
 - **Dist MA** : MA20 -2.3% · MA50 -9.4% · MA200 +2.7%
@@ -155,5 +155,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (91670 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (92004 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

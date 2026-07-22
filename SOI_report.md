@@ -1,6 +1,6 @@
 # SOI
 
-**Generated** : 2026-07-21T21:44:07.739850+00:00  
+**Generated** : 2026-07-22T00:09:14.503555+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.6 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass  
@@ -165,8 +165,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.549  _(pas de croisement recent)_
 - **BB** : %B 0.29 · largeur 40.4%
 - **ATR** : 8.73 (74.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV falling · CMF -0.09  _(distribution)_
-- **Vol ratio** : 0.82  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.11  _(distribution)_
+- **Vol ratio** : 0.43  _(volume atone)_
 - **Choppiness** : 45.2  _(transition)_
 - **MA** : MA20 104.29 · MA50 130.56 · MA200 68.47  _(prix < MA20)_
 - **Dist MA** : MA20 -8.4% · MA50 -26.9% · MA200 +39.4%
@@ -174,5 +174,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (95000 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (95335 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,15 +1,15 @@
 # RHM
 
-**Generated** : 2026-07-21T21:35:42.466339+00:00  
+**Generated** : 2026-07-22T00:01:56.327209+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.5 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : trending · volatilite low · €995.40  
+**Subtitle** : trending · volatilite low · €997.70  
 
 > ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)  
-> ↳ spot €995.40 (+1.7% vs entrée) · entrée €978.75 · stop €959.17 · T1 €1008.08 · R/R 1.5  
-> ↳ P(T1 av. stop) 17 % _(réel 5 s)_ · EV/risk -0.161 _(réel 5 s)_ (GBM 0.023) · ¼-Kelly 0.006 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ↳ spot €997.70 (+1.8% vs entrée) · entrée €980.48 · stop €960.87 · T1 €1009.87 · R/R 1.5  
+> ↳ P(T1 av. stop) 18 % _(réel 5 s)_ · EV/risk -0.086 _(réel 5 s)_ (GBM 0.023) · ¼-Kelly 0.006 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.0% cohérent avec le bruit 5 s (EV-optimal ≈ −2.0%)  
 
 ## Régime & alignement multi-TF
@@ -27,30 +27,30 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Pass (negative EV)'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : €972.88–€984.62 (mid €978.75)
-- Spot actuel : €995.40 (+1.7% au-dessus de la zone — repli à attendre)
-- Stop : €959.17 (stop swing_plan-based (-6.91%))
-- Targets : T1 €1008.08 · R/R 1.5 | T2 €1037.41 · R/R 3.0 | T3 €1066.74 · R/R 4.49
+- Entry (zone de repli) : €974.60–€986.35 (mid €980.48)
+- Spot actuel : €997.70 (+1.8% au-dessus de la zone — repli à attendre)
+- Stop : €960.87 (stop swing_plan-based (-7.02%))
+- Targets : T1 €1009.87 · R/R 1.5 | T2 €1039.27 · R/R 3.0 | T3 €1068.67 · R/R 4.5
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €959.17
+- Invalidation : close sous €960.87
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.023 | EV/share : €0.451 | p_fill : —
+- EV/risk : 0.023 | EV/share : €0.452 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 30 % | T2 2 % | T3 2 %
 - Kelly (position) : f* 0.025 | ¼-Kelly 0.006 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 17.7 | bear 5.0 | side 77.3  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, intraday) : bull 19.9 | bear 5.0 | side 75.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −1.673% → cible +2.997% / stop −2.0%, p_fill 54%, n_eff≈21.3) : P(cible|rempli) **17%** · **EV/risk -0.161** (×p_fill ; si rempli -0.60% du capital)
-  - **swing** (entrée dip −3.683% → cible +6.701% / stop −3.35%, p_fill 44%, n_eff≈15.0) : P(cible|rempli) **7%** · **EV/risk -0.201** (×p_fill ; si rempli -1.54% du capital)
-  - **deep** (entrée dip −5.692% → cible +9.476% / stop −4.738%, p_fill 39%, n_eff≈14.2) : P(cible|rempli) **5%** · **EV/risk -0.275** (×p_fill ; si rempli -3.33% du capital)
+  - **intraday** (entrée dip −1.724% → cible +2.998% / stop −2.0%, p_fill 52%, n_eff≈20.7) : P(cible|rempli) **18%** · **EV/risk -0.086** (×p_fill ; si rempli -0.33% du capital)
+  - **swing** (entrée dip −3.795% → cible +6.705% / stop −3.352%, p_fill 44%, n_eff≈15.0) : P(cible|rempli) **7%** · **EV/risk -0.197** (×p_fill ; si rempli -1.52% du capital)
+  - **deep** (entrée dip −5.867% → cible +9.482% / stop −4.741%, p_fill 38%, n_eff≈13.3) : P(cible|rempli) **1%** · **EV/risk -0.302** (×p_fill ; si rempli -3.80% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→75% · +1.0%→64% · +2.0%→48% · +3.0%→30% · +5.0%→2% · +8.0%→0%
 - Range intraday médian 4.15% (p90 6.86%) · excursion haute méd. +1.85% / basse méd. −1.72%
 - Profil de vol intra : ouverture 2.551% vs midi 0.842% vs clôture 1.085% _(ouverture ~3.0× plus volatile → privilégier/éviter selon le setup)_
@@ -144,19 +144,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 41.4  _(momentum baissier)_
+- **RSI** : 41.8  _(momentum baissier)_
 - **ADX** : 28.4  _(tendance etablie)_
-- **MACD** : hist 1.945  _(bullish_recent)_
-- **BB** : %B 0.43 · largeur 23.4%
+- **MACD** : hist 2.091  _(bullish_recent)_
+- **BB** : %B 0.44 · largeur 23.4%
 - **ATR** : 46.67 (6.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV falling · CMF -0.041  _(neutre)_
-- **Vol ratio** : 0.55  _(volume atone)_
+- **OBV/CMF** : OBV falling · CMF -0.035  _(neutre)_
+- **Vol ratio** : 0.34  _(volume atone)_
 - **Choppiness** : 43.0  _(transition)_
-- **MA** : MA20 1011.98 · MA50 1123.9 · MA200 1490.83  _(prix < MA20)_
-- **Dist MA** : MA20 -1.6% · MA50 -11.4% · MA200 -33.2%
+- **MA** : MA20 1012.1 · MA50 1123.95 · MA200 1490.84  _(prix < MA20)_
+- **Dist MA** : MA20 -1.4% · MA50 -11.2% · MA200 -33.1%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (90610 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (90947 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
