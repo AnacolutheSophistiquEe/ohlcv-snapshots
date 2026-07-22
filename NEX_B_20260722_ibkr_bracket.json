@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-07-22T00:07:59.560049+00:00",
+  "generated_at": "2026-07-22T21:42:54.775347+00:00",
   "prediction_id": "NEX_B_20260722",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "NEX",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 134.8,
+    "limit_price": 134.1,
     "quantity": 1,
     "tif": "GTD",
     "gtd": "2026-07-27T16:30:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 135.7,
+      "limit_price": 135.3,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 127.4,
+      "stop_price": 127.1,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
@@ -74,22 +74,22 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.12,
+    "ev_pct_risk": 0.1009,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.3923,
-      "T2": 0.1799,
-      "T3": 0.0758
+      "T1": 0.3841,
+      "T2": 0.1771,
+      "T3": 0.0754
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 134.8,
-    "hold_tolerance_breach_price": 101.1,
+    "notional_eur": 134.1,
+    "hold_tolerance_breach_price": 100.575,
     "hold_fallback_active": true,
     "prediction_id": "NEX_B_20260722"
   },
