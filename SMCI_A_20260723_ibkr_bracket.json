@@ -1,37 +1,45 @@
 {
   "available": true,
-  "generated_at": "2026-07-14T22:01:39.236116+00:00",
-  "prediction_id": "PLTR_A_20260714",
+  "generated_at": "2026-07-23T00:21:23.807447+00:00",
+  "prediction_id": "SMCI_A_20260723",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "PLTR",
+  "symbol": "SMCI",
   "exchange": "SMART",
   "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 133.05,
-    "quantity": 2,
+    "limit_price": 30.41,
+    "quantity": 9,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 134.87,
-      "quantity": 2,
+      "limit_price": 31.8,
+      "quantity": 5,
+      "tif": "GTC",
+      "tag": "T2"
+    },
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 33.82,
+      "quantity": 4,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 115.98,
-      "quantity": 2,
+      "stop_price": 26.73,
+      "quantity": 9,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "PLTR_A_intraday_20260714",
+  "oca_group": "SMCI_A_intraday_20260723",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -45,7 +53,7 @@
     "order_validity": {
       "type": "DAY",
       "offset_sessions": 0,
-      "good_till_date": "2026-07-14T22:00:00+00:00"
+      "good_till_date": "2026-07-23T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -53,12 +61,17 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      1.0
+      0.6,
+      0.4
     ],
     "qty_split": [
       {
+        "tag": "T2",
+        "qty": 5
+      },
+      {
         "tag": "T3",
-        "qty": 2
+        "qty": 4
       }
     ]
   },
@@ -66,26 +79,26 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 6.0,
+    "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.028,
+    "ev_pct_risk": 0.032,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.4282,
-      "T2": 0.1091,
-      "T3": 0.075
+      "T1": 0.2625,
+      "T2": 0.2625,
+      "T3": 0.2625
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 267.44,
-    "hold_tolerance_breach_price": 100.29,
+    "notional_eur": 275.04,
+    "hold_tolerance_breach_price": 22.92,
     "hold_fallback_active": true,
-    "prediction_id": "PLTR_A_20260714"
+    "prediction_id": "SMCI_A_20260723"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,

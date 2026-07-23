@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US76655K1097",
-    "generated_at": "2026-07-22T22:03:13.821610+00:00",
+    "generated_at": "2026-07-23T00:25:12.587920+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1765,7 +1765,7 @@
           "rr": 2.04,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.43,
+          "p_touch": 0.4299,
           "distance_pct": 5.1
         },
         "t3": {
@@ -1774,7 +1774,7 @@
           "rr": 3.06,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.43,
+          "p_touch": 0.4299,
           "distance_pct": 7.65
         }
       }
@@ -1800,7 +1800,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.912,
+          "p_touch": 0.9119,
           "distance_pct": 5.71
         },
         "t2": {
@@ -1844,7 +1844,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8086,
+          "p_touch": 0.8084,
           "distance_pct": 8.07
         },
         "t2": {
@@ -1862,7 +1862,7 @@
           "rr": 6.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2849,
+          "p_touch": 0.2846,
           "distance_pct": 24.21
         }
       }
@@ -2157,7 +2157,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-22T22:02:51.033449+00:00",
+    "generated_at": "2026-07-23T00:24:51.534050+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -6893,22 +6893,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-22T22:03:01.008499+00:00",
+    "generated_at": "2026-07-23T00:25:00.736905+00:00",
     "ticker": "RGTI",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 8,
+    "n_events": 9,
     "events": [
       {
         "date": "2026-07-23",
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -6923,8 +6923,8 @@
         "type": "macro",
         "label": "Sartorius (SRT3/SRT) Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -6939,8 +6939,8 @@
         "type": "macro",
         "label": "Samsung Electronics Q2 2026 Earnings (pre-announcement mi-juillet)",
         "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -6956,7 +6956,7 @@
         "label": "Taiwan tariff 10% (Section 122) expiry — ~24/07/2026",
         "importance": "medium",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -6971,8 +6971,8 @@
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -6987,7 +6987,7 @@
         "label": "SoFi Technologies (SOFI) Q2 2026 Earnings",
         "importance": "medium",
         "sessions_to_event": 9,
-        "calendar_days": 13,
+        "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7000,8 +7000,8 @@
         "type": "macro",
         "label": "Siemens Energy Q2 FY2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 10,
-        "calendar_days": 14,
+        "sessions_to_event": 9,
+        "calendar_days": 13,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7013,6 +7013,20 @@
         "date": "2026-08-05",
         "type": "macro",
         "label": "IonQ (IONQ) Q2 2026 Earnings — 2026-08-05 (estimé)",
+        "importance": "high",
+        "sessions_to_event": 9,
+        "calendar_days": 13,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-08-06",
+        "type": "macro",
+        "label": "Rheinmetall Q2 2026 Earnings",
         "importance": "high",
         "sessions_to_event": 10,
         "calendar_days": 14,
@@ -7132,57 +7146,57 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-07-22T22:02:54.990040+00:00",
+    "generated_at": "2026-07-23T00:24:55.097054+00:00",
     "ticker": "RGTI",
     "spot_price": 15.23,
     "expiries_available": [
       {
         "date": "2026-07-24",
-        "days_to_exp": 2
+        "days_to_exp": 1
       },
       {
         "date": "2026-07-31",
-        "days_to_exp": 9
+        "days_to_exp": 8
       },
       {
         "date": "2026-08-07",
-        "days_to_exp": 16
+        "days_to_exp": 15
       },
       {
         "date": "2026-08-14",
-        "days_to_exp": 23
+        "days_to_exp": 22
       },
       {
         "date": "2026-08-21",
-        "days_to_exp": 30
+        "days_to_exp": 29
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 1.021,
-      "iv_atm_90d": 1.021,
+      "iv_atm_30d": 1.0381,
+      "iv_atm_90d": 1.0381,
       "rv_20d_annualized": 0.7387,
-      "iv_rv_ratio": 1.382,
+      "iv_rv_ratio": 1.405,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -1.953,
+      "skew_25_delta_vol_pts": -1.954,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-07-24",
-      "m1_days_to_exp": 2,
-      "m1_iv_atm": 0.8105,
+      "m1_days_to_exp": 1,
+      "m1_iv_atm": 0.9922,
       "m3_expiry": "2026-08-21",
-      "m3_days_to_exp": 30,
-      "m3_iv_atm": 1.021,
-      "ratio_m1_m3": 0.7939,
-      "label": "contango_fort"
+      "m3_days_to_exp": 29,
+      "m3_iv_atm": 1.0381,
+      "ratio_m1_m3": 0.9558,
+      "label": "contango_leger"
     },
     "open_interest_m1": {
       "expiry": "2026-07-24",
-      "days_to_exp": 2,
+      "days_to_exp": 1,
       "put_call_ratio": 0.362,
       "total_oi_m1": 51159,
       "largest_call_strike_oi": {
@@ -7195,7 +7209,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 144223281.0,
+      "gex_total_usd_per_point": 147655926.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7210,7 +7224,7 @@
       "bearish_signals": 0,
       "notes": [
         "skew faible (-2.0 pts) — peu de demande de protection",
-        "GEX positif (144.2M$/pt) = MM long gamma stabilisateur",
+        "GEX positif (147.7M$/pt) = MM long gamma stabilisateur",
         "P/C ratio bas (0.36) — biais call dominant"
       ]
     },
@@ -7250,7 +7264,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-07-22T22:03:00.170151+00:00",
+    "generated_at": "2026-07-23T00:24:59.972520+00:00",
     "ticker": "RGTI",
     "short_interest": {
       "status": "ok",
@@ -7264,7 +7278,7 @@
       "float_shares": 327662124,
       "delta_shares_short_mom_pct": -5.65,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-07-22T22:02:55.950828+00:00"
+      "fetched_at": "2026-07-23T00:24:55.929763+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7333,7 +7347,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 17,
-      "fetched_at": "2026-07-22T22:03:00.169247+00:00"
+      "fetched_at": "2026-07-23T00:24:59.971546+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -15743,7 +15757,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-22T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -15788,7 +15802,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-22T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -15839,7 +15853,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-22T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

@@ -1,12 +1,12 @@
 # 267260
 
-**Generated** : 2026-07-22T21:50:58.570926+00:00  
+**Generated** : 2026-07-23T00:14:05.711916+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · ₩795000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)  
-> ↳ spot ₩795000.00 (+1.7% vs entrée) · entrée ₩781413.72 · stop ₩718900.62 · T1 ₩832775.15 · R/R 0.82  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)  
+> ↳ spot ₩795000.00 (+1.7% vs entrée) · entrée ₩781413.71 · stop ₩718900.62 · T1 ₩832775.15 · R/R 0.82  
 > ↳ P(T1 av. stop) 11 % _(réel 5 s)_ · EV/risk -0.069 _(réel 5 s)_ (GBM -0.172) · ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
 
@@ -34,10 +34,10 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Pass (negative EV)'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : ₩777501.89–₩785325.55 (mid ₩781413.72)
+- Entry (zone de repli) : ₩777501.88–₩785325.55 (mid ₩781413.71)
 - Spot actuel : ₩795000.00 (+1.7% au-dessus de la zone — repli à attendre)
 - Stop : ₩718900.62 (stop swing_plan-based (-6.51%))
-- Targets : T1 ₩832775.15 · R/R 0.82 | T2 ₩836344.27 · R/R 0.88 | T3 ₩839913.40 · R/R 0.94
+- Targets : T1 ₩832775.15 · R/R 0.82 | T2 ₩836344.27 · R/R 0.88 | T3 ₩839913.39 · R/R 0.94
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩718900.62
 
@@ -144,9 +144,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -165,5 +165,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (84382 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (84500 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

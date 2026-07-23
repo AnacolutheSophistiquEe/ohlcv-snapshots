@@ -1,11 +1,11 @@
 # 012450
 
-**Generated** : 2026-07-22T21:53:33.661727+00:00  
+**Generated** : 2026-07-23T00:16:28.397491+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · ₩891000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)  
 > ↳ spot ₩891000.00 (+2.5% vs entrée) · entrée ₩869120.69 · stop ₩799591.04 · T1 ₩899702.30 · R/R 0.44  
 > ↳ P(T1 av. stop) 31 % _(réel 5 s)_ · EV/risk -0.051 _(réel 5 s)_ (GBM -0.142) · ¼-Kelly 0.024 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -135,9 +135,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -146,7 +146,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 19.5  _(pas de tendance nette)_
 - **MACD** : hist -10391.339  _(pas de croisement recent)_
 - **BB** : %B 0.2 · largeur 38.3%
-- **ATR** : 86500.0 (87.0e pct 1a)  _(volatilite elevee)_
+- **ATR** : 86500.0 (86.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV falling · CMF -0.147  _(distribution)_
 - **Vol ratio** : 0.86  _(volume normal)_
 - **Choppiness** : 43.5  _(transition)_
@@ -156,5 +156,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (82664 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (82784 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

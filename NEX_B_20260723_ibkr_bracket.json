@@ -1,46 +1,38 @@
 {
   "available": true,
-  "generated_at": "2026-07-14T00:32:04.594501+00:00",
-  "prediction_id": "HOOD_B_20260714",
+  "generated_at": "2026-07-23T00:06:55.454529+00:00",
+  "prediction_id": "NEX_B_20260723",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "HOOD",
-  "exchange": "SMART",
-  "currency": "USD",
+  "symbol": "NEX",
+  "exchange": "SBF",
+  "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 109.86,
-    "quantity": 5,
+    "limit_price": 134.6,
+    "quantity": 1,
     "tif": "GTD",
-    "gtd": "2026-07-19T22:00:00+00:00"
+    "gtd": "2026-07-28T16:30:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 113.17,
-      "quantity": 3,
+      "limit_price": 135.5,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 118.36,
-      "quantity": 2,
-      "tif": "GTC",
-      "tag": "T3"
-    },
-    {
-      "action": "SELL",
       "order_type": "STP",
-      "stop_price": 100.19,
-      "quantity": 5,
+      "stop_price": 127.3,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "HOOD_B_swing_20260714",
+  "oca_group": "NEX_B_swing_20260723",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "breakeven_after_T1",
@@ -54,7 +46,7 @@
     "order_validity": {
       "type": "GTD",
       "offset_sessions": 5,
-      "good_till_date": "2026-07-19T22:00:00+00:00"
+      "good_till_date": "2026-07-28T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -68,11 +60,11 @@
     "qty_split": [
       {
         "tag": "T2",
-        "qty": 3
+        "qty": 1
       },
       {
         "tag": "T3",
-        "qty": 2
+        "qty": 0
       }
     ]
   },
@@ -80,33 +72,33 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 8.0,
+    "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.0194,
+    "ev_pct_risk": 0.1008,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.3209,
-      "T2": 0.1635,
-      "T3": 0.1129
+      "T1": 0.3841,
+      "T2": 0.1771,
+      "T3": 0.0754
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 549.3,
-    "hold_tolerance_breach_price": 82.395,
+    "notional_eur": 134.6,
+    "hold_tolerance_breach_price": 100.95,
     "hold_fallback_active": true,
-    "prediction_id": "HOOD_B_20260714"
+    "prediction_id": "NEX_B_20260723"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.01,
+    "tick_size_used": 0.1,
     "qty_total_positive": true
   }
 }

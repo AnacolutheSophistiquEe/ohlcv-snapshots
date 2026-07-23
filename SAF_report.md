@@ -1,12 +1,12 @@
 # SAF
 
-**Generated** : 2026-07-22T21:41:30.856778+00:00  
+**Generated** : 2026-07-23T00:05:42.469165+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · €327.30  
+**Subtitle** : indeterminate · volatilite normal · €327.20  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)  
-> ↳ spot €327.30 (+2.8% vs entrée) · entrée €318.48 · stop €312.11 · T1 €321.73 · R/R 0.51  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)  
+> ↳ spot €327.20 (+2.8% vs entrée) · entrée €318.41 · stop €312.04 · T1 €321.66 · R/R 0.51  
 > ↳ P(T1 av. stop) 55 % · EV/risk 0.016 · ¼-Kelly 0.015 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.0% cohérent avec le bruit 5 s (EV-optimal ≈ −2.0%)  
 
@@ -33,12 +33,12 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : €317.83–€319.13 (mid €318.48)
-- Spot actuel : €327.30 (+2.8% au-dessus de la zone — repli à attendre)
-- Stop : €312.11 (stop swing_plan-based (-7.0%))
-- Targets : T1 €321.73 · R/R 0.51 | T2 €324.99 · R/R 1.02 | T3 €328.24 · R/R 1.53
+- Entry (zone de repli) : €317.76–€319.06 (mid €318.41)
+- Spot actuel : €327.20 (+2.8% au-dessus de la zone — repli à attendre)
+- Stop : €312.04 (stop swing_plan-based (-6.98%))
+- Targets : T1 €321.66 · R/R 0.51 | T2 €324.91 · R/R 1.02 | T3 €328.15 · R/R 1.53
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €312.11
+- Invalidation : close sous €312.04
 
 
 ## Edge, scénarios & sizing
@@ -47,7 +47,7 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 55 % | T2 35 % | T3 14 %
 - Kelly (position) : f* 0.06 | ¼-Kelly 0.015 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 5.0 | bear 22.4 | side 72.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, intraday) : bull 5.0 | bear 23.3 | side 71.7  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 160.0
 
 
@@ -143,26 +143,26 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 29.8  _(survente)_
+- **RSI** : 29.6  _(survente)_
 - **ADX** : 19.0  _(pas de tendance nette)_
-- **MACD** : hist -3.451  _(pas de croisement recent)_
+- **MACD** : hist -3.458  _(pas de croisement recent)_
 - **BB** : %B 0.26 · largeur 12.8%
 - **ATR** : 8.36 (56.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF 0.192  _(accumulation)_
-- **Vol ratio** : 0.99  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF 0.175  _(accumulation)_
+- **Vol ratio** : 0.36  _(volume atone)_
 - **Choppiness** : 37.9  _(marche directionnel)_
-- **MA** : MA20 337.65 · MA50 315.61 · MA200 303.94  _(prix < MA20)_
+- **MA** : MA20 337.64 · MA50 315.61 · MA200 303.94  _(prix < MA20)_
 - **Dist MA** : MA20 -3.1% · MA50 +3.7% · MA200 +7.7%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (90182 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (90300 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

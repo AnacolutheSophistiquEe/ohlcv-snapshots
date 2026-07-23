@@ -1,14 +1,14 @@
 # SOI
 
-**Generated** : 2026-07-22T21:44:16.877567+00:00  
+**Generated** : 2026-07-23T00:08:07.196223+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.1 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · €96.02  
+**Subtitle** : indeterminate · volatilite normal · €96.04  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)  
-> ↳ spot €96.02 (+8.7% vs entrée) · entrée €88.31 · stop €85.75 · T1 €91.27 · R/R 1.16  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)  
+> ↳ spot €96.04 (+8.7% vs entrée) · entrée €88.32 · stop €85.77 · T1 €91.29 · R/R 1.16  
 > ↳ P(T1 av. stop) 45 % · EV/risk 0.037 · ¼-Kelly 0.021 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.89% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
 
@@ -31,12 +31,12 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : €87.71–€88.90 (mid €88.31)
-- Spot actuel : €96.02 (+8.7% au-dessus de la zone — repli à attendre)
-- Stop : €85.75 (stop swing_plan-based (-20.77%))
-- Targets : T1 €91.27 · R/R 1.16 | T2 €94.23 · R/R 2.31 | T3 €97.20 · R/R 3.47
+- Entry (zone de repli) : €87.73–€88.91 (mid €88.32)
+- Spot actuel : €96.04 (+8.7% au-dessus de la zone — repli à attendre)
+- Stop : €85.77 (stop swing_plan-based (-20.77%))
+- Targets : T1 €91.29 · R/R 1.16 | T2 €94.25 · R/R 2.33 | T3 €97.22 · R/R 3.49
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €85.75
+- Invalidation : close sous €85.77
 
 
 ## Edge, scénarios & sizing
@@ -153,20 +153,20 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
 - **RSI** : 38.8  _(momentum baissier)_
 - **ADX** : 18.5  _(pas de tendance nette)_
-- **MACD** : hist 0.035  _(bullish_recent)_
+- **MACD** : hist 0.036  _(bullish_recent)_
 - **BB** : %B 0.32 · largeur 41.1%
 - **ATR** : 8.51 (74.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV falling · CMF -0.024  _(neutre)_
-- **Vol ratio** : 0.8  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.036  _(neutre)_
+- **Vol ratio** : 0.39  _(volume atone)_
 - **Choppiness** : 44.2  _(transition)_
 - **MA** : MA20 103.73 · MA50 129.36 · MA200 68.74  _(prix < MA20)_
 - **Dist MA** : MA20 -7.4% · MA50 -25.8% · MA200 +39.7%
@@ -174,5 +174,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (98181 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (98302 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
