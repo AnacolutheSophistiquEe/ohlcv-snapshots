@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "207940",
-    "generated_at": "2026-07-23T00:31:04Z",
+    "generated_at": "2026-07-23T22:05:07Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-07-24T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "207940_precomputed.json"
   },
   "context": {
-    "last_price": 1372000.0,
+    "last_price": 1379000.0,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -25,8 +25,8 @@
     "volatility_regime": "high",
     "signals_counter": {
       "buy": 1,
-      "sell": 3,
-      "neutral": 11,
+      "sell": 2,
+      "neutral": 12,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,27 +37,35 @@
       "median_bounce_pct": 2.36,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.90), vol high, signals neutral (1b/3s/11n)."
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.90), vol high, signals neutral (1b/2s/12n)."
   },
   "notes": {
-    "atr_daily": 67857.1429,
+    "atr_daily": 64785.7143,
     "atr_pct_daily": null,
-    "beta_60d": 0.0552,
+    "beta_60d": 0.0547,
     "beta_benchmark": "EWY",
-    "beta_corr_60d": 0.0943,
+    "beta_corr_60d": 0.0933,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bearish_engulfing",
       "date": "2026-07-20",
       "confidence": 0.867
     },
-    "divergences": [],
+    "divergences": [
+      {
+        "indicator": "rsi",
+        "type": "hidden_bullish",
+        "confidence": 0.46,
+        "bars_ago": 3,
+        "at_price": null
+      }
+    ],
     "drawdown": {
-      "current_dd_pct": -30.18,
+      "current_dd_pct": -29.82,
       "ath_price": 1965000.0,
       "ath_date": "2026-01-15",
       "max_dd_1y_pct": -36.74,
-      "days_in_dd": 188,
+      "days_in_dd": 189,
       "median_recovery_days": null
     }
   },
@@ -68,38 +76,38 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 1329234.122,
-        "max": 1337909.0909
+        "min": 1328823.1876,
+        "max": 1386950.0
       },
       "stop": {
-        "price": 1288248.8299,
+        "price": 1295689.2832,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -3.4
+        "distance_pct": -4.58
       },
       "targets": [
         {
           "level": 1,
-          "price": 1375327.3402,
+          "price": 1369896.4336,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 0.92
+          "rr": 0.19
         },
         {
           "level": 2,
-          "price": 1433379.6805,
+          "price": 1419367.8673,
           "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
-          "rr": 2.2
+          "rr": 0.99
         },
         {
           "level": 3,
-          "price": 1491432.0207,
+          "price": 1468839.3009,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 3.48
+          "rr": 1.78
         }
       ],
       "preferred_target": 1,
       "conditions": [],
       "max_budget_pct": 50,
-      "rationale": "Confluence support BB_LOWER + VPVR_VAL (strength 5.0). Bounce mecanique."
+      "rationale": "Confluence support BB_LOWER + VPVR_VAL + MA50 + VPVR_POC + MA20 (strength 30.0). Bounce mecanique."
     },
     {
       "id": "B",
@@ -107,38 +115,38 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 1390025.0,
-        "max": 1395579.5454
+        "min": 1478292.6053,
+        "max": 1484199.8684
       },
       "stop": {
-        "price": 1365279.3,
+        "price": 1424903.68,
         "basis": "below_broken_resistance",
-        "distance_pct": -1.98
+        "distance_pct": -3.8
       },
       "targets": [
         {
           "level": 1,
-          "price": 1445265.878,
-          "basis": "next_confluence_resistance",
-          "rr": 1.91
+          "price": 1530468.0,
+          "basis": "fib_382",
+          "rr": 0.87
         },
         {
           "level": 2,
-          "price": 1453120.0,
-          "basis": "fib_236",
-          "rr": 2.19
+          "price": 1610000.0,
+          "basis": "fib_50",
+          "rr": 2.29
         },
         {
           "level": 3,
-          "price": 1550940.0,
-          "basis": "fib_382",
-          "rr": 5.75
+          "price": 1610000.0,
+          "basis": "next_confluence_resistance",
+          "rr": 2.29
         }
       ],
       "preferred_target": 1,
       "conditions": [],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance MA50 + MA20 + VPVR_POC (strength 10.5)."
+      "rationale": "Breakout au-dessus confluence resistance FIB_236 + BB_UPPER + VPVR_VAH (strength 12.0)."
     },
     {
       "id": "C",
@@ -150,28 +158,28 @@
         "max": 1278862.5
       },
       "stop": {
-        "price": 1170714.2857,
+        "price": 1175321.4286,
         "basis": "fallback_sr_support",
-        "distance_pct": -7.54
+        "distance_pct": -7.17
       },
       "targets": [
         {
           "level": 1,
-          "price": 1375327.3402,
+          "price": 1369896.4336,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
           "rr": 1.14
         },
         {
           "level": 2,
-          "price": 1433379.6805,
+          "price": 1419367.8673,
           "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
-          "rr": 1.75
+          "rr": 1.69
         },
         {
           "level": 3,
-          "price": 1491432.0207,
+          "price": 1468839.3009,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 2.36
+          "rr": 2.23
         }
       ],
       "preferred_target": 1,
@@ -184,7 +192,7 @@
   "bot_actionable_reason": "ta_score=3<4",
   "global_conditions": [],
   "invalidation": {
-    "price": 1159007.1428,
+    "price": 1163568.2143,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

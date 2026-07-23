@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "AL2SI",
-    "generated_at": "2026-07-23T00:31:04Z",
+    "generated_at": "2026-07-23T22:05:07Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-07-24T08:00:00Z",
@@ -10,11 +10,11 @@
     "source_precomputed": "AL2SI_precomputed.json"
   },
   "context": {
-    "last_price": 27.1,
+    "last_price": 26.5,
     "ta_score": {
-      "value": 3,
+      "value": 2,
       "max": 10,
-      "label": "bearish"
+      "label": "very_bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
@@ -24,9 +24,9 @@
     },
     "volatility_regime": "high",
     "signals_counter": {
-      "buy": 2,
+      "buy": 3,
       "sell": 5,
-      "neutral": 8,
+      "neutral": 7,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 26.74,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.90), vol high, signals neutral (2b/5s/8n)."
+    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM sideways (0.90), vol high, signals neutral (3b/5s/7n)."
   },
   "notes": {
-    "atr_daily": 3.81,
+    "atr_daily": 3.9,
     "atr_pct_daily": null,
-    "beta_60d": 0.0934,
+    "beta_60d": 0.1054,
     "beta_benchmark": "EWQ",
-    "beta_corr_60d": 0.0129,
+    "beta_corr_60d": 0.0148,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -56,16 +56,16 @@
         "indicator": "obv",
         "type": "hidden_bullish",
         "confidence": 0.26,
-        "bars_ago": 4,
+        "bars_ago": 5,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": -53.64,
+      "current_dd_pct": -54.66,
       "ath_price": 58.45,
       "ath_date": "2026-06-02",
       "max_dd_1y_pct": -62.36,
-      "days_in_dd": 50,
+      "days_in_dd": 51,
       "median_recovery_days": null
     }
   },
@@ -76,32 +76,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 24.2884,
-        "max": 25.5924
+        "min": 25.9918,
+        "max": 26.1482
       },
       "stop": {
-        "price": 22.3615,
-        "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -10.34
+        "price": 20.65,
+        "basis": "fallback_pivot_camarilla_s1",
+        "distance_pct": -20.79
       },
       "targets": [
         {
-          "level": 1,
-          "price": 25.7971,
-          "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 0.33
-        },
-        {
           "level": 2,
-          "price": 28.0875,
+          "price": 27.7562,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 1.22
+          "rr": 0.31
         },
         {
           "level": 3,
-          "price": 30.3779,
+          "price": 30.016,
           "basis": "plafond band 95% · touche hist. 73% (sans stop)",
-          "rr": 2.11
+          "rr": 0.73
         }
       ],
       "preferred_target": 1,
@@ -109,7 +103,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support MA200 + VPVR_VAL (strength 5.0). Bounce mecanique."
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_s1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
     },
     {
       "id": "B",
@@ -117,26 +111,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 27.5075,
-        "max": 27.6174
+        "min": 26.9569,
+        "max": 27.0646
       },
       "stop": {
-        "price": 25.575,
+        "price": 24.98,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -7.21
+        "distance_pct": -7.52
       },
       "targets": [
         {
           "level": 2,
-          "price": 28.0875,
+          "price": 27.7562,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 0.26
+          "rr": 0.37
         },
         {
           "level": 3,
-          "price": 30.3779,
+          "price": 30.016,
           "basis": "plafond band 95% · touche hist. 73% (sans stop)",
-          "rr": 1.42
+          "rr": 1.48
         }
       ],
       "preferred_target": 1,
@@ -153,31 +147,31 @@
       "side": "long",
       "entry_zone": {
         "min": 20.5667,
-        "max": 21.694
+        "max": 21.6282
       },
       "stop": {
         "price": 19.744,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -6.56
+        "distance_pct": -6.42
       },
       "targets": [
         {
           "level": 1,
-          "price": 25.7971,
+          "price": 25.4964,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 3.37
+          "rr": 3.25
         },
         {
           "level": 2,
-          "price": 28.0875,
+          "price": 27.7562,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 5.02
+          "rr": 4.92
         },
         {
           "level": 3,
-          "price": 30.3779,
+          "price": 30.016,
           "basis": "plafond band 95% · touche hist. 73% (sans stop)",
-          "rr": 6.67
+          "rr": 6.59
         }
       ],
       "preferred_target": 1,
@@ -185,11 +179,11 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 35,
-      "rationale": "Deep value mecanique : entree sur confluence support basse S/R_support + BB_LOWER + FIB_236 (strength 13.5). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+      "rationale": "Deep value mecanique : entree sur confluence support basse S/R_support + FIB_236 + BB_LOWER (strength 13.5). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
     }
   ],
   "bot_actionable": false,
-  "bot_actionable_reason": "ta_score=3<4",
+  "bot_actionable_reason": "ta_score=2<4",
   "global_conditions": [
     {
       "id": "session_eu_paris_open",
