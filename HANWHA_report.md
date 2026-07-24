@@ -1,13 +1,13 @@
 # 012450
 
-**Generated** : 2026-07-23T21:52:15.143845+00:00  
+**Generated** : 2026-07-24T00:16:22.443490+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · ₩958000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot ₩958000.00 (+1.5% vs entrée) · entrée ₩943425.57 · stop ₩867951.53 · T1 ₩1023728.53 · R/R 1.06  
 > ↳ P(T1 av. stop) 3 % _(réel 5 s)_ · EV/risk -0.085 _(réel 5 s)_ (GBM -0.154) · ¼-Kelly 0.016 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -137,7 +137,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
 - **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
 - **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
 
@@ -146,7 +146,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 - **RSI** : 37.4  _(momentum baissier)_
 - **ADX** : 19.1  _(pas de tendance nette)_
-- **MACD** : hist -4034.975  _(pas de croisement recent)_
+- **MACD** : hist -4034.974  _(pas de croisement recent)_
 - **BB** : %B 0.39 · largeur 37.9%
 - **ATR** : 84285.71 (85.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV falling · CMF -0.135  _(distribution)_
@@ -158,5 +158,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (83140 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (82383 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

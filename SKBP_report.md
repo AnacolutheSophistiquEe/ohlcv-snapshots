@@ -1,11 +1,11 @@
 # 326030
 
-**Generated** : 2026-07-23T21:54:43.868571+00:00  
+**Generated** : 2026-07-24T00:18:42.330928+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩79700.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot ₩79700.00 (+1.8% vs entrée) · entrée ₩78275.00 · stop ₩77012.50 · T1 ₩80800.00 · R/R 2.0  
 > ↳ P(T1 av. stop) 9 % _(réel 5 s)_ · EV/risk -0.271 _(réel 5 s)_ (GBM -0.115) · ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −1.61% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
@@ -144,7 +144,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
 - **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
 - **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
 
@@ -155,7 +155,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 17.5  _(pas de tendance nette)_
 - **MACD** : hist -60.137  _(pas de croisement recent)_
 - **BB** : %B 0.36 · largeur 21.9%
-- **ATR** : 4042.86 (44.0e pct 1a)  _(volatilite normale)_
+- **ATR** : 4042.86 (45.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV rising · CMF -0.158  _(distribution)_
 - **Vol ratio** : 0.76  _(volume normal)_
 - **Choppiness** : 52.9  _(transition)_
@@ -165,5 +165,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (84598 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (83841 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

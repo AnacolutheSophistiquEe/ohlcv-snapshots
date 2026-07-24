@@ -1,13 +1,13 @@
 # 267260
 
-**Generated** : 2026-07-23T21:49:43.330949+00:00  
+**Generated** : 2026-07-24T00:14:02.624189+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · ₩869000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot ₩869000.00 (+1.1% vs entrée) · entrée ₩859943.79 · stop ₩791148.28 · T1 ₩883741.67 · R/R 0.35  
 > ↳ P(T1 av. stop) 35 % _(réel 5 s)_ · EV/risk -0.116 _(réel 5 s)_ (GBM -0.154) · ¼-Kelly 0.004 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -146,7 +146,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-23 — ECB Monetary Policy Decision (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
 - **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
 - **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-4 sess · macro taux)
 
@@ -157,7 +157,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 24.7  _(pas de tendance nette)_
 - **MACD** : hist 3297.899  _(bullish_recent)_
 - **BB** : %B 0.5 · largeur 35.9%
-- **ATR** : 67357.14 (77.0e pct 1a)  _(volatilite elevee)_
+- **ATR** : 67357.14 (76.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV rising · CMF -0.089  _(distribution)_
 - **Vol ratio** : 0.77  _(volume normal)_
 - **Choppiness** : 44.7  _(transition)_
@@ -167,5 +167,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (84599 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (83843 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

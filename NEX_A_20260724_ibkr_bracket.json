@@ -1,37 +1,37 @@
 {
   "available": true,
-  "generated_at": "2026-07-15T00:33:26.430887+00:00",
-  "prediction_id": "SOFI_A_20260715",
+  "generated_at": "2026-07-24T00:06:50.945988+00:00",
+  "prediction_id": "NEX_A_20260724",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "SOFI",
-  "exchange": "SMART",
-  "currency": "USD",
+  "symbol": "NEX",
+  "exchange": "SBF",
+  "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 18.46,
-    "quantity": 21,
+    "limit_price": 132.7,
+    "quantity": 1,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 18.81,
-      "quantity": 21,
+      "limit_price": 134.9,
+      "quantity": 1,
       "tif": "GTC",
-      "tag": "T3"
+      "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 16.8,
-      "quantity": 21,
+      "stop_price": 126.8,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "SOFI_A_intraday_20260715",
+  "oca_group": "NEX_A_intraday_20260724",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -45,7 +45,7 @@
     "order_validity": {
       "type": "DAY",
       "offset_sessions": 0,
-      "good_till_date": "2026-07-15T22:00:00+00:00"
+      "good_till_date": "2026-07-24T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -53,12 +53,17 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      1.0
+      0.6,
+      0.4
     ],
     "qty_split": [
       {
+        "tag": "T2",
+        "qty": 1
+      },
+      {
         "tag": "T3",
-        "qty": 21
+        "qty": 0
       }
     ]
   },
@@ -66,33 +71,33 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 6.0,
+    "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0023,
+    "ev_pct_risk": 0.0006,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.5624,
-      "T2": 0.3498,
-      "T3": 0.1623
+      "T1": 0.5402,
+      "T2": 0.2402,
+      "T3": 0.0821
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 389.55,
-    "hold_tolerance_breach_price": 13.9125,
+    "notional_eur": 133.4,
+    "hold_tolerance_breach_price": 100.05,
     "hold_fallback_active": true,
-    "prediction_id": "SOFI_A_20260715"
+    "prediction_id": "NEX_A_20260724"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.01,
+    "tick_size_used": 0.1,
     "qty_total_positive": true
   }
 }
