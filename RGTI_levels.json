@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RGTI",
-    "generated_at": "2026-07-24T22:05:07Z",
+    "generated_at": "2026-07-27T00:31:16Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-07-27T08:00:00Z",
-    "valid_until": "2026-07-27T21:00:00Z",
+    "valid_from": "2026-07-28T08:00:00Z",
+    "valid_until": "2026-07-28T21:00:00Z",
     "source_precomputed": "RGTI_precomputed.json"
   },
   "context": {
-    "last_price": 14.15,
+    "last_price": 14.17,
     "ta_score": {
       "value": 0,
       "max": 10,
@@ -20,7 +20,7 @@
     "hmm_regime": {
       "state": "sideways",
       "probability": 0.9,
-      "expected_duration_days": 18.08
+      "expected_duration_days": 18.09
     },
     "volatility_regime": "low",
     "signals_counter": {
@@ -42,14 +42,14 @@
   "notes": {
     "atr_daily": 1.0266,
     "atr_pct_daily": null,
-    "beta_60d": 3.62,
+    "beta_60d": 3.6191,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.575,
+    "beta_corr_60d": 0.5749,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bearish_engulfing",
       "date": "2026-07-24",
-      "confidence": 0.772
+      "confidence": 0.766
     },
     "divergences": [
       {
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -74.88,
+      "current_dd_pct": -74.85,
       "ath_price": 56.34,
       "ath_date": "2025-10-15",
       "max_dd_1y_pct": -77.1,
@@ -76,26 +76,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 14.0378,
-        "max": 14.1222
+        "min": 14.0577,
+        "max": 14.1423
       },
       "stop": {
-        "price": 12.61,
+        "price": 12.63,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -10.44
+        "distance_pct": -10.43
       },
       "targets": [
         {
           "level": 2,
-          "price": 14.6622,
+          "price": 14.6702,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 0.4
+          "rr": 0.39
         },
         {
           "level": 3,
-          "price": 15.3638,
+          "price": 15.3713,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 0.87
+          "rr": 0.86
         }
       ],
       "preferred_target": 1,
@@ -122,7 +122,7 @@
       "targets": [
         {
           "level": 1,
-          "price": 16.3695,
+          "price": 16.3705,
           "basis": "next_confluence_resistance",
           "rr": 8.4
         },
@@ -153,31 +153,31 @@
       "side": "long",
       "entry_zone": {
         "min": 12.53,
-        "max": 12.8158
+        "max": 12.8194
       },
       "stop": {
         "price": 12.0288,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -5.08
+        "distance_pct": -5.1
       },
       "targets": [
         {
           "level": 1,
-          "price": 13.9606,
+          "price": 13.9691,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
           "rr": 2.0
         },
         {
           "level": 2,
-          "price": 14.6622,
+          "price": 14.6702,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
           "rr": 3.09
         },
         {
           "level": 3,
-          "price": 15.3638,
+          "price": 15.3713,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 4.18
+          "rr": 4.17
         }
       ],
       "preferred_target": 1,
