@@ -1,45 +1,37 @@
 {
   "available": true,
-  "generated_at": "2026-07-16T00:33:12.223114+00:00",
-  "prediction_id": "HOOD_A_20260716",
+  "generated_at": "2026-07-27T00:11:14.014521+00:00",
+  "prediction_id": "PRY_A_20260727",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "HOOD",
-  "exchange": "SMART",
-  "currency": "USD",
+  "symbol": "PRY",
+  "exchange": "BVME",
+  "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 114.96,
-    "quantity": 5,
+    "limit_price": 126.3,
+    "quantity": 1,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 115.78,
-      "quantity": 3,
+      "limit_price": 129.0,
+      "quantity": 1,
       "tif": "GTC",
-      "tag": "T2"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 121.0,
-      "quantity": 2,
-      "tif": "GTC",
-      "tag": "T3"
+      "tag": "T1"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 102.74,
-      "quantity": 5,
+      "stop_price": 122.8,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "HOOD_A_intraday_20260716",
+  "oca_group": "PRY_A_intraday_20260727",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -53,7 +45,7 @@
     "order_validity": {
       "type": "DAY",
       "offset_sessions": 0,
-      "good_till_date": "2026-07-16T22:00:00+00:00"
+      "good_till_date": "2026-07-27T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -61,17 +53,22 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.6,
-      0.4
+      0.5,
+      0.3,
+      0.2
     ],
     "qty_split": [
       {
+        "tag": "T1",
+        "qty": 1
+      },
+      {
         "tag": "T2",
-        "qty": 3
+        "qty": 0
       },
       {
         "tag": "T3",
-        "qty": 2
+        "qty": 0
       }
     ]
   },
@@ -79,33 +76,33 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 8.0,
+    "composite_score": 5.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.0643,
+    "ev_pct_risk": -0.0201,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "below_threshold",
+    "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.4835,
-      "T2": 0.2568,
-      "T3": 0.2125
+      "T1": 0.5085,
+      "T2": 0.2946,
+      "T3": 0.121
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 577.7,
-    "hold_tolerance_breach_price": 86.655,
+    "notional_eur": 126.9,
+    "hold_tolerance_breach_price": 95.175,
     "hold_fallback_active": true,
-    "prediction_id": "HOOD_A_20260716"
+    "prediction_id": "PRY_A_20260727"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.01,
+    "tick_size_used": 0.1,
     "qty_total_positive": true
   }
 }
