@@ -6,7 +6,7 @@
     "exchange": "NYSE",
     "currency": "USD",
     "isin": "US67079K1051",
-    "generated_at": "2026-07-27T22:05:23.064820+00:00",
+    "generated_at": "2026-07-28T00:27:23.175367+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1759,7 +1759,7 @@
           "rr": 0.99,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.81,
+          "p_touch": 0.8099,
           "distance_pct": 2.32
         },
         "t2": {
@@ -1768,7 +1768,7 @@
           "rr": 1.98,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.81,
+          "p_touch": 0.8099,
           "distance_pct": 4.65
         },
         "t3": {
@@ -1777,7 +1777,7 @@
           "rr": 2.97,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.81,
+          "p_touch": 0.8099,
           "distance_pct": 6.97
         }
       }
@@ -1803,7 +1803,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7249,
+          "p_touch": 0.7248,
           "distance_pct": 5.19
         },
         "t2": {
@@ -1812,7 +1812,7 @@
           "rr": 4.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9119,
+          "p_touch": 0.9118,
           "distance_pct": 10.39
         },
         "t3": {
@@ -1821,7 +1821,7 @@
           "rr": 6.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7249,
+          "p_touch": 0.7248,
           "distance_pct": 15.58
         }
       }
@@ -1856,7 +1856,7 @@
           "rr": 4.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9365,
+          "p_touch": 0.9364,
           "distance_pct": 14.69
         },
         "t3": {
@@ -2160,7 +2160,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-27T22:05:00.220627+00:00",
+    "generated_at": "2026-07-28T00:27:02.035942+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -6896,14 +6896,14 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-27T22:05:10.262294+00:00",
+    "generated_at": "2026-07-28T00:27:11.554644+00:00",
     "ticker": "SMR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 6,
+    "n_events": 7,
     "events": [
       {
         "date": "2026-07-29",
@@ -6911,7 +6911,7 @@
         "label": "US FOMC Rate Decision",
         "importance": "high",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -6926,9 +6926,10 @@
         "type": "macro",
         "label": "SoFi Technologies (SOFI) Q2 2026 Earnings",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -6941,7 +6942,7 @@
         "label": "Siemens Energy Q2 FY2026 Earnings",
         "importance": "high",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -6955,7 +6956,7 @@
         "label": "IonQ (IONQ) Q2 2026 Earnings — 2026-08-05 (estimé)",
         "importance": "high",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -6969,7 +6970,7 @@
         "label": "SMR earnings",
         "importance": "high",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -6982,8 +6983,22 @@
         "type": "macro",
         "label": "Rheinmetall Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 7,
-        "calendar_days": 10,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-08-11",
+        "type": "macro",
+        "label": "Rigetti Computing Q2 2026 Earnings",
+        "importance": "high",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7100,57 +7115,57 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-07-27T22:05:04.210514+00:00",
+    "generated_at": "2026-07-28T00:27:05.642567+00:00",
     "ticker": "SMR",
     "spot_price": 8.54,
     "expiries_available": [
       {
         "date": "2026-07-31",
-        "days_to_exp": 4
+        "days_to_exp": 3
       },
       {
         "date": "2026-08-07",
-        "days_to_exp": 11
+        "days_to_exp": 10
       },
       {
         "date": "2026-08-14",
-        "days_to_exp": 18
+        "days_to_exp": 17
       },
       {
         "date": "2026-08-21",
-        "days_to_exp": 25
+        "days_to_exp": 24
       },
       {
         "date": "2026-08-28",
-        "days_to_exp": 32
+        "days_to_exp": 31
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 1.0346,
-      "iv_atm_90d": 1.0313,
+      "iv_atm_30d": 1.0499,
+      "iv_atm_90d": 1.0479,
       "rv_20d_annualized": 0.6726,
-      "iv_rv_ratio": 1.538,
+      "iv_rv_ratio": 1.561,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": 1.172,
+      "skew_25_delta_vol_pts": 1.367,
       "label": "normal"
     },
     "term_structure": {
       "m1_expiry": "2026-07-31",
-      "m1_days_to_exp": 4,
-      "m1_iv_atm": 0.9414,
+      "m1_days_to_exp": 3,
+      "m1_iv_atm": 1.0547,
       "m3_expiry": "2026-08-28",
-      "m3_days_to_exp": 32,
-      "m3_iv_atm": 1.0313,
-      "ratio_m1_m3": 0.9129,
-      "label": "contango_fort"
+      "m3_days_to_exp": 31,
+      "m3_iv_atm": 1.0479,
+      "ratio_m1_m3": 1.0065,
+      "label": "flat"
     },
     "open_interest_m1": {
       "expiry": "2026-07-31",
-      "days_to_exp": 4,
+      "days_to_exp": 3,
       "put_call_ratio": 0.414,
       "total_oi_m1": 30675,
       "largest_call_strike_oi": {
@@ -7163,7 +7178,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 3985554.0,
+      "gex_total_usd_per_point": 3766306.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7216,7 +7231,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-07-27T22:05:09.439721+00:00",
+    "generated_at": "2026-07-28T00:27:10.828325+00:00",
     "ticker": "SMR",
     "short_interest": {
       "status": "ok",
@@ -7230,7 +7245,7 @@
       "float_shares": 339311728,
       "delta_shares_short_mom_pct": 1.4,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-07-27T22:05:05.176436+00:00"
+      "fetched_at": "2026-07-28T00:27:06.475983+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7273,7 +7288,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 2,
-      "fetched_at": "2026-07-27T22:05:09.438751+00:00"
+      "fetched_at": "2026-07-28T00:27:10.827503+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -15649,7 +15664,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-27T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -15694,7 +15709,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-27T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -15739,7 +15754,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-27T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

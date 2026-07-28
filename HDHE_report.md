@@ -1,6 +1,6 @@
 # 267260
 
-**Generated** : 2026-07-27T21:50:30.662390+00:00  
+**Generated** : 2026-07-28T00:13:58.130143+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
@@ -157,8 +157,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 5071.517  _(bullish_recent)_
 - **BB** : %B 0.31 · largeur 36.2%
 - **ATR** : 62857.14 (71.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF -0.051  _(distribution)_
-- **Vol ratio** : 0.31  _(volume atone)_
+- **OBV/CMF** : OBV rising · CMF -0.054  _(distribution)_
+- **Vol ratio** : 0.51  _(volume atone)_
 - **Choppiness** : 54.5  _(transition)_
 - **MA** : MA20 857450.0 · MA50 977940.0 · MA200 920794.21  _(prix < MA20)_
 - **Dist MA** : MA20 -7.0% · MA50 -18.5% · MA200 -13.4%
@@ -166,5 +166,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (83556 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (83712 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

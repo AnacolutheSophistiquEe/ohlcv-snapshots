@@ -1,6 +1,6 @@
 # NEX
 
-**Generated** : 2026-07-27T21:42:36.429433+00:00  
+**Generated** : 2026-07-28T00:06:50.941162+00:00  
 **Santé technique** : 2/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · €130.30  
@@ -146,8 +146,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.138  _(pas de croisement recent)_
 - **BB** : %B 0.16 · largeur 11.5%
 - **ATR** : 3.57 (31.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF 0.085  _(accumulation)_
-- **Vol ratio** : 1.15  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF 0.094  _(accumulation)_
+- **Vol ratio** : 0.55  _(volume atone)_
 - **Choppiness** : 60.6  _(transition)_
 - **MA** : MA20 135.62 · MA50 146.43 · MA200 131.38  _(prix < MA20)_
 - **Dist MA** : MA20 -3.9% · MA50 -11.0% · MA200 -0.8%
@@ -155,5 +155,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (89275 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (89430 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

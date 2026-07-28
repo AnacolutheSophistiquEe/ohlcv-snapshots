@@ -1,6 +1,6 @@
 # CEG
 
-**Generated** : 2026-07-27T22:04:04.161354+00:00  
+**Generated** : 2026-07-28T00:26:12.698661+00:00  
 **Santé technique** : 4/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $270.00  
@@ -173,5 +173,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88213 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88367 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # RGTI
 
-**Generated** : 2026-07-27T22:02:40.461587+00:00  
+**Generated** : 2026-07-28T00:24:58.842286+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite low · $15.64  
@@ -156,5 +156,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (82957 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (83104 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
