@@ -1,0 +1,85 @@
+{
+  "available": true,
+  "thresholds": {
+    "strong_buy": {
+      "ev_pct_risk_min": 0.5,
+      "p_fill_min": 0.6,
+      "composite_min": 7
+    },
+    "buy": {
+      "ev_pct_risk_min": 0.3,
+      "p_fill_min": 0.5,
+      "composite_min": 5
+    },
+    "neutral": {
+      "ev_pct_risk_min": 0.1,
+      "composite_min": 4
+    },
+    "pass_zero": {
+      "ev_pct_risk_min": 0.0
+    },
+    "pass_negative_ev": {
+      "ev_pct_risk_max": 0.0,
+      "composite_min": 4
+    },
+    "strong_pass_negative_ev": {
+      "ev_pct_risk_max": 0.0,
+      "composite_max": 4
+    }
+  },
+  "note": "p_fill = proba que le prix atteigne la zone d'entrée (dip) dans l'horizon, CALCULÉE depuis entry_mid + σ (principe de réflexion, GBM sans dérive — audit AT v2.2). Override skill prioritaire. Tag `(p_fill_unknown)` seulement si ni calcul ni override disponibles.",
+  "by_horizon": {
+    "intraday": {
+      "plan_id": "A",
+      "rating": "Pass (negative EV)",
+      "reason": "ev=-0.141 < 0 mais santé 4.0 ≥ 4 (actif sain, entrée non favorable)",
+      "inputs": {
+        "ev_pct_risk": -0.1407,
+        "ev_source": "empirical_5s",
+        "ev_pct_risk_gbm": 0.0726,
+        "ev_pct_risk_empirical_5s": -0.1407,
+        "n_eff_5s": 19.8,
+        "composite_score": 4.0,
+        "p_fill": 0.4764,
+        "p_fill_source": "empirical_5s"
+      }
+    },
+    "swing": {
+      "plan_id": "B",
+      "rating": "Strong Pass (negative EV)",
+      "reason": "ev=-0.184 < 0 ET santé 3.0 < 4 (faible + EV négative)",
+      "inputs": {
+        "ev_pct_risk": -0.1837,
+        "ev_source": "empirical_5s",
+        "ev_pct_risk_gbm": -0.1774,
+        "ev_pct_risk_empirical_5s": -0.1837,
+        "n_eff_5s": 12.0,
+        "composite_score": 3.0,
+        "p_fill": 0.293,
+        "p_fill_source": "empirical_5s"
+      }
+    },
+    "deep": {
+      "plan_id": "C",
+      "rating": "Strong Pass (negative EV)",
+      "reason": "ev=-0.333 < 0 ET santé 3.0 < 4 (faible + EV négative)",
+      "inputs": {
+        "ev_pct_risk": -0.3328,
+        "ev_source": "empirical_5s",
+        "ev_pct_risk_gbm": -0.1919,
+        "ev_pct_risk_empirical_5s": -0.3328,
+        "n_eff_5s": 13.2,
+        "composite_score": 3.0,
+        "p_fill": 0.3875,
+        "p_fill_source": "empirical_5s"
+      }
+    }
+  },
+  "best_rating": {
+    "plan_id": "A",
+    "horizon": "intraday",
+    "rating": "Pass (negative EV)",
+    "reason": "ev=-0.141 < 0 mais santé 4.0 ≥ 4 (actif sain, entrée non favorable)",
+    "selected_by": "composite_plan (source unique §6)"
+  }
+}
