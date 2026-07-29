@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "267260",
-    "generated_at": "2026-07-28T22:05:30Z",
+    "generated_at": "2026-07-29T00:32:21Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-07-29T08:00:00Z",
-    "valid_until": "2026-07-29T21:00:00Z",
+    "valid_from": "2026-07-30T08:00:00Z",
+    "valid_until": "2026-07-30T21:00:00Z",
     "source_precomputed": "267260_precomputed.json"
   },
   "context": {
@@ -155,32 +155,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 482283.1133,
-        "max": 492075.6638
+        "min": 490117.1519,
+        "max": 500068.7692
       },
       "stop": {
-        "price": 389556.0976,
+        "price": 397509.4363,
         "basis": "fallback_sr_support",
-        "distance_pct": -20.04
+        "distance_pct": -19.71
       },
       "targets": [
         {
           "level": 1,
           "price": 702207.4399,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 2.2
+          "rr": 2.12
         },
         {
           "level": 2,
           "price": 745966.5909,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 2.65
+          "rr": 2.57
         },
         {
           "level": 3,
           "price": 789725.7419,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 3.1
+          "rr": 3.02
         }
       ],
       "preferred_target": 1,
@@ -193,7 +193,7 @@
   "bot_actionable_reason": "ta_score=2<4",
   "global_conditions": [],
   "invalidation": {
-    "price": 385660.5366,
+    "price": 393534.3419,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
