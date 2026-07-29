@@ -1,11 +1,11 @@
 # SRT3
 
-**Generated** : 2026-07-28T21:37:22.287183+00:00  
+**Generated** : 2026-07-29T00:03:05.843850+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite extreme · €222.40  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)  
 > ↳ spot €222.40 (+5.6% vs entrée) · entrée €210.64 · stop €206.65 · T1 €214.44 · R/R 0.95  
 > ↳ P(T1 av. stop) 48 % · EV/risk -0.002 · ¼-Kelly 0.006 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −1.89% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
@@ -135,9 +135,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -147,8 +147,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -2.503  _(pas de croisement recent)_
 - **BB** : %B 0.29 · largeur 19.8%
 - **ATR** : 13.28 (100.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.034  _(neutre)_
-- **Vol ratio** : 1.17  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.047  _(neutre)_
+- **Vol ratio** : 0.72  _(volume normal)_
 - **Choppiness** : 55.2  _(transition)_
 - **MA** : MA20 231.87 · MA50 231.66 · MA200 231.66  _(prix < MA20)_
 - **Dist MA** : MA20 -4.1% · MA50 -4.0% · MA200 -4.0%
@@ -156,5 +156,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88936 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (89234 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

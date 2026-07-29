@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE0007165631",
-    "generated_at": "2026-07-28T21:37:22.287183+00:00",
+    "generated_at": "2026-07-29T00:03:05.843850+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -427,7 +427,7 @@
           226.0,
           210.7,
           222.4,
-          144677
+          87247
         ]
       ],
       "h4": [
@@ -1254,8 +1254,8 @@
       "macd_hist": -2.503149496020365,
       "macd_signal_cross": null,
       "obv_trend": "falling",
-      "mfi_14": 47.60242094270467,
-      "cmf_20": -0.033925116198311706,
+      "mfi_14": 46.14549707463278,
+      "cmf_20": -0.04727519606206637,
       "adl_trend": "falling",
       "adx_14": 18.692460076780193,
       "plus_di_14": 14.13208574845301,
@@ -1263,7 +1263,7 @@
       "di_spread_14": -8.726702953601281,
       "choppiness_14": 55.21124168912922,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 1.1663662278863083,
+      "volume_ratio_ma20": 0.7200421228809607,
       "distance_ma20_pct": -4.086255685930691,
       "distance_ma50_pct": -3.998068453946487,
       "distance_ma200_pct": -3.998783015536247
@@ -1755,7 +1755,7 @@
           "rr": 1.91,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8099,
+          "p_touch": 0.8101,
           "distance_pct": 3.61
         },
         "t3": {
@@ -1764,7 +1764,7 @@
           "rr": 2.86,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8099,
+          "p_touch": 0.8101,
           "distance_pct": 5.41
         }
       }
@@ -1790,7 +1790,7 @@
           "rr": 1.99,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.443,
+          "p_touch": 0.4426,
           "distance_pct": 4.04
         },
         "t2": {
@@ -1799,7 +1799,7 @@
           "rr": 3.98,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7248,
+          "p_touch": 0.7246,
           "distance_pct": 8.07
         },
         "t3": {
@@ -1808,7 +1808,7 @@
           "rr": 5.97,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9118,
+          "p_touch": 0.912,
           "distance_pct": 12.11
         }
       }
@@ -1834,7 +1834,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2835,
+          "p_touch": 0.2831,
           "distance_pct": 5.71
         },
         "t2": {
@@ -1843,7 +1843,7 @@
           "rr": 4.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5906,
+          "p_touch": 0.5903,
           "distance_pct": 11.41
         },
         "t3": {
@@ -1852,7 +1852,7 @@
           "rr": 6.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.808,
+          "p_touch": 0.8078,
           "distance_pct": 17.12
         }
       }
@@ -2147,7 +2147,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-28T21:37:06.241981+00:00",
+    "generated_at": "2026-07-29T00:02:50.546488+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7474,22 +7474,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-28T21:37:09.381486+00:00",
+    "generated_at": "2026-07-29T00:02:53.371230+00:00",
     "ticker": "SRT3",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 6,
+    "n_events": 8,
     "events": [
       {
         "date": "2026-07-29",
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7504,8 +7504,8 @@
         "type": "macro",
         "label": "SoFi Technologies (SOFI) Q2 2026 Earnings",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7519,9 +7519,10 @@
         "type": "macro",
         "label": "Siemens Energy Q2 FY2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -7533,9 +7534,10 @@
         "type": "macro",
         "label": "IonQ (IONQ) Q2 2026 Earnings — 2026-08-05 (estimé)",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -7548,7 +7550,7 @@
         "label": "Rheinmetall Q2 2026 Earnings",
         "importance": "high",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7561,12 +7563,40 @@
         "type": "macro",
         "label": "Rigetti Computing Q2 2026 Earnings",
         "importance": "high",
+        "sessions_to_event": 9,
+        "calendar_days": 13,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-08-12",
+        "type": "macro",
+        "label": "US CPI (headline)",
+        "importance": "high",
         "sessions_to_event": 10,
         "calendar_days": 14,
         "in_plan_horizon": [
           "deep"
         ],
-        "impact": "macro_broad",
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-08-12",
+        "type": "macro",
+        "label": "US Core CPI (ex food & energy)",
+        "importance": "high",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
         "ticker_specific": false,
         "recommendation": null
       }
@@ -7843,24 +7873,24 @@
         "anchor_date": "2026-07-21",
         "anchor_event": "swing_low",
         "anchor_price": 208.0,
-        "vwap_today": 221.1006,
-        "distance_from_close_pct": 0.59,
+        "vwap_today": 221.1649,
+        "distance_from_close_pct": 0.56,
         "bars_since_anchor": 5
       },
       {
         "anchor_date": "2026-07-17",
         "anchor_event": "swing_high",
         "anchor_price": 251.3,
-        "vwap_today": 223.2862,
-        "distance_from_close_pct": -0.4,
+        "vwap_today": 223.434,
+        "distance_from_close_pct": -0.46,
         "bars_since_anchor": 7
       },
       {
         "anchor_date": "2026-06-18",
         "anchor_event": "swing_low",
         "anchor_price": 207.4,
-        "vwap_today": 225.6742,
-        "distance_from_close_pct": -1.45,
+        "vwap_today": 225.7698,
+        "distance_from_close_pct": -1.49,
         "bars_since_anchor": 28
       }
     ]
@@ -12747,8 +12777,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": -147004.7964471787,
-        "signal_line": -70436.23238158308,
+        "value": -156538.00028545555,
+        "signal_line": -71798.11864419407,
         "signal": "neutral"
       }
     },
@@ -14287,7 +14317,7 @@
         -10595.007379367366,
         -98517.4420493595,
         -194310.10992295493,
-        -147004.7964471787
+        -156538.00028545555
       ],
       "klinger_signal": [
         0.0,
@@ -14543,7 +14573,7 @@
         -24299.72291865829,
         -34902.254223044176,
         -57674.80503731714,
-        -70436.23238158308
+        -71798.11864419407
       ]
     }
   },
@@ -14551,22 +14581,22 @@
     "available": true,
     "latest": {
       "close": 222.3999938964844,
-      "vwap": 228.55335940828746,
+      "vwap": 228.76316857863029,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": -2.6923102455084438,
+        "distance_from_close_pct": -2.7815555806828827,
         "position": "below_vwap"
       },
-      "force_index": -352323.72671720374,
+      "force_index": -418778.36589043925,
       "force_index_meta": {
         "signal": "neutral"
       },
-      "chaikin_oscillator": -59412.39657795652,
+      "chaikin_oscillator": -69086.42114714066,
       "chaikin_oscillator_meta": {
         "cross_recent": null,
         "signal": "neutral"
       },
-      "vroc_14": 25.81483929316822,
+      "vroc_14": -24.127765409767633,
       "vroc_14_meta": {
         "signal": "normal"
       }
@@ -15082,7 +15112,7 @@
         229.79669439616723,
         229.42798235175704,
         229.05092271674147,
-        228.55335940828746
+        228.76316857863029
       ],
       "force_index": [
         null,
@@ -15338,7 +15368,7 @@
         -659578.9060983002,
         -578595.7986000045,
         -606358.0770771558,
-        -352323.72671720374
+        -418778.36589043925
       ],
       "chaikin_oscillator": [
         0.0,
@@ -15594,7 +15624,7 @@
         -75669.0414151984,
         -57359.169166569336,
         -81360.70604971479,
-        -59412.39657795652
+        -69086.42114714066
       ],
       "vroc_14": [
         null,
@@ -15850,7 +15880,7 @@
         453.38081273565143,
         75.38407979778104,
         35.82024535543573,
-        25.81483929316822
+        -24.127765409767633
       ]
     }
   },
@@ -15882,7 +15912,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": 0.4393,
+      "value": -0.2546,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -15914,38 +15944,38 @@
   },
   "anomaly_detection": {
     "available": true,
-    "anomaly_score": -0.0086,
+    "anomaly_score": -0.0043,
     "is_anomaly": false,
-    "anomaly_percentile": 85.7,
+    "anomaly_percentile": 86.9,
     "recent_anomalies": [
       {
         "date": "2026-07-21T00:00:00",
         "bars_ago": 5,
-        "score": 0.2727,
+        "score": 0.2737,
         "context": "high volume + large return + wide range + strong body"
       },
       {
         "date": "2026-07-23T00:00:00",
         "bars_ago": 3,
-        "score": 0.1536,
+        "score": 0.1542,
         "context": "high volume + wide range + strong body"
       },
       {
         "date": "2026-06-18T00:00:00",
         "bars_ago": 28,
-        "score": 0.1256,
+        "score": 0.1265,
         "context": "high volume + large return + wide range + strong body"
       },
       {
         "date": "2026-07-09T00:00:00",
         "bars_ago": 13,
-        "score": 0.1036,
+        "score": 0.1004,
         "context": "large return + wide range + strong body"
       },
       {
         "date": "2026-06-25T00:00:00",
         "bars_ago": 23,
-        "score": 0.0773,
+        "score": 0.0751,
         "context": "high volume + large return + wide range + strong body"
       }
     ],
@@ -16131,21 +16161,21 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 105370.76666666666,
-        "median_volume_60d": 92571.5,
-        "volume_consistency_score": 0.375705933536168
+        "mean_volume_60d": 104413.6,
+        "median_volume_60d": 89026.0,
+        "volume_consistency_score": 0.3715537204168815
       },
       "liquidity": {
-        "liquidity_score": 28048094.16546529,
+        "liquidity_score": 27622346.44381612,
         "liquidity_classification": "medium"
       },
       "freshness": {
         "last_bar_date": "2026-07-28T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
-        "overall_quality_score": 80.22720708322524,
+        "overall_quality_score": 80.16492388643596,
         "overall_label": "good",
         "warnings": []
       }
@@ -16197,7 +16227,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-28T12:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16251,7 +16281,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-28T15:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

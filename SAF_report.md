@@ -1,16 +1,16 @@
 # SAF
 
-**Generated** : 2026-07-28T21:41:13.494535+00:00  
+**Generated** : 2026-07-29T00:06:40.109401+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · €343.00  
+**Subtitle** : indeterminate · volatilite normal · €340.90  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)  
-> ↳ spot €343.00 (+8.9% vs entrée) · entrée €314.97 · stop €311.39 · T1 €322.13 · R/R 2.0  
-> ↳ P(T1 av. stop) 34 % · EV/risk 0.059 · ¼-Kelly 0.003 · _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)  
+> ↳ spot €340.90 (+8.6% vs entrée) · entrée €314.02 · stop €310.54 · T1 €320.98 · R/R 2.0  
+> ↳ P(T1 av. stop) 34 % · EV/risk 0.066 · ¼-Kelly 0.004 · _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 145 % hors [0,100] (R² max 0.75). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
+>   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 135 % hors [0,100] (R² max 0.75). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
 ## Régime & alignement multi-TF
@@ -28,29 +28,29 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass'.
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : €313.54–€316.40 (mid €314.97)
-- Spot actuel : €343.00 (+8.9% au-dessus de la zone — repli à attendre)
-- Stop : €311.39 (stop swing_plan-based (-9.22%))
-- Targets : T1 €322.13 · R/R 2.0 | T2 €329.29 · R/R 4.0 | T3 €336.45 · R/R 6.0
+- Entry (zone de repli) : €312.63–€315.42 (mid €314.02)
+- Spot actuel : €340.90 (+8.6% au-dessus de la zone — repli à attendre)
+- Stop : €310.54 (stop swing_plan-based (-8.9%))
+- Targets : T1 €320.98 · R/R 2.0 | T2 €327.94 · R/R 4.0 | T3 €334.90 · R/R 6.0
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €311.39
+- Invalidation : close sous €310.54
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.059 | EV/share : €0.212 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 34 % | T2 17 % | T3 12 %
-- Kelly (position) : f* 0.01 | ¼-Kelly 0.003 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- EV/risk : 0.066 | EV/share : €0.228 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 34 % | T2 19 % | T3 12 %
+- Kelly (position) : f* 0.016 | ¼-Kelly 0.004 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 5.0 | bear 38.6 | side 56.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional réel 343.0 (= 1 part(s) × prix) · cible 400.0
+- Régime probabiliste (posterior HMM, swing) : bull 5.0 | bear 38.8 | side 56.2  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Sizing : notional réel 341.0 (= 1 part(s) × prix) · cible 400.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈None séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
   - **intraday** : indisponible (échantillon insuffisant (n=6, n_eff=3))
-  - **swing** : indisponible (échantillon insuffisant (n=2, n_eff=2))
+  - **swing** : indisponible (échantillon insuffisant (n=3, n_eff=1))
   - **deep** : indisponible (échantillon insuffisant (n=1, n_eff=1))
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→69% · +1.0%→54% · +2.0%→35% · +3.0%→15% · +5.0%→4% · +8.0%→1%
 - Range intraday médian 2.72% (p90 4.55%) · excursion haute méd. +1.13% / basse méd. −1.01%
@@ -138,26 +138,26 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 58.3  _(momentum haussier)_
+- **RSI** : 56.9  _(momentum haussier)_
 - **ADX** : 16.7  _(pas de tendance nette)_
-- **MACD** : hist -0.832  _(pas de croisement recent)_
-- **BB** : %B 0.65 · largeur 13.4%
+- **MACD** : hist -0.966  _(pas de croisement recent)_
+- **BB** : %B 0.61 · largeur 13.4%
 - **ATR** : 9.21 (67.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV falling · CMF 0.126  _(accumulation)_
-- **Vol ratio** : 1.24  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF 0.1  _(accumulation)_
+- **Vol ratio** : 0.6  _(volume atone)_
 - **Choppiness** : 56.8  _(transition)_
-- **MA** : MA20 336.12 · MA50 320.35 · MA200 304.64  _(prix > MA20)_
-- **Dist MA** : MA20 +2.0% · MA50 +7.1% · MA200 +12.6%
+- **MA** : MA20 336.01 · MA50 320.31 · MA200 304.63  _(prix > MA20)_
+- **Dist MA** : MA20 +1.5% · MA50 +6.4% · MA200 +11.9%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88617 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88924 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

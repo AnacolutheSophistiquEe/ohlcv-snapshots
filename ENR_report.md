@@ -1,11 +1,11 @@
 # ENR
 
-**Generated** : 2026-07-28T21:39:57.818529+00:00  
+**Generated** : 2026-07-29T00:05:29.382299+00:00  
 **Santé technique** : 2/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €137.90  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-04 — ENR earnings (J-4 sess · earnings)  
 > ↳ spot €137.90 (+9.2% vs entrée) · entrée €126.28 · stop €123.72 · T1 €131.40 · R/R 2.0  
 > ↳ P(T1 av. stop) 37 % · EV/risk 0.073 · ¼-Kelly 0.007 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
@@ -147,9 +147,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-04 — ENR earnings (J-4 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-04 — ENR earnings (J-4 sess · earnings)
 
 
 ## Indicateurs (résumé)
@@ -159,8 +159,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.957  _(pas de croisement recent)_
 - **BB** : %B -0.04 · largeur 19.9%
 - **ATR** : 7.36 (63.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV falling · CMF -0.142  _(distribution)_
-- **Vol ratio** : 2.06  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV falling · CMF -0.104  _(distribution)_
+- **Vol ratio** : 1.19  _(volume normal)_
 - **Choppiness** : 55.2  _(transition)_
 - **MA** : MA20 154.39 · MA50 159.27 · MA200 143.97  _(prix < MA20)_
 - **Dist MA** : MA20 -10.7% · MA50 -13.4% · MA200 -4.2%
@@ -168,5 +168,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (94899 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (95081 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
