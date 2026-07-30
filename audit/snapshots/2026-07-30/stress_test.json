@@ -1,0 +1,267 @@
+{
+  "available": true,
+  "generated_at": "2026-07-30T00:32:10.604974+00:00",
+  "weights_eur": {
+    "CEG": 257.95,
+    "SAF": 339.8,
+    "SOI": 287.4
+  },
+  "total_notional_eur": 885.15,
+  "capital_total_eur": 2000.0,
+  "periods_tested": [
+    "Lehman_2008",
+    "COVID_Mar_2020",
+    "2022_selloff",
+    "Q4_2018_Powell_pivot",
+    "Aug_2024_flash_crash"
+  ],
+  "per_period": [
+    {
+      "status": "ok",
+      "label": "Lehman_2008",
+      "start_date": "2008-09-15",
+      "end_dd_date": "2009-03-09",
+      "end_recovery_date": "2009-09-30",
+      "context": "Lehman bankruptcy → S&P -57%, recovery ~12 mois",
+      "severity": "extreme",
+      "portfolio_initial_eur": 257.95,
+      "portfolio_min_eur": 170.19,
+      "portfolio_final_eur": 228.18,
+      "max_dd_panel_pct": -34.02,
+      "final_pnl_pct": -11.54,
+      "recovery_sessions": 3,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 99.2,
+      "best_ticker": "CEG",
+      "worst_ticker": "CEG",
+      "proxies_used": [
+        {
+          "original": "CEG",
+          "proxy": "XLU"
+        }
+      ],
+      "fetch_errors": [
+        {
+          "ticker": "SAF",
+          "error": "empty data"
+        },
+        {
+          "ticker": "SOI",
+          "error": "empty data"
+        }
+      ],
+      "tickers_perf": {
+        "CEG": {
+          "proxy_used": "XLU",
+          "initial_value_eur": 257.95,
+          "min_value_eur": 170.19,
+          "final_value_eur": 228.18,
+          "max_dd_pct": -34.02,
+          "final_pnl_pct": -11.54
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "COVID_Mar_2020",
+      "start_date": "2020-02-19",
+      "end_dd_date": "2020-03-23",
+      "end_recovery_date": "2020-08-18",
+      "context": "COVID-19 shock → S&P -34% en 23 sessions, recovery 5 mois",
+      "severity": "severe_fast",
+      "portfolio_initial_eur": 597.75,
+      "portfolio_min_eur": 372.52,
+      "portfolio_final_eur": 563.47,
+      "max_dd_panel_pct": -37.68,
+      "final_pnl_pct": -5.73,
+      "recovery_sessions": 123,
+      "recovered_within_window": false,
+      "pct_time_in_drawdown": 97.6,
+      "best_ticker": "CEG",
+      "worst_ticker": "SAF",
+      "proxies_used": [
+        {
+          "original": "CEG",
+          "proxy": "XLU"
+        }
+      ],
+      "fetch_errors": [
+        {
+          "ticker": "SOI",
+          "error": "empty data"
+        }
+      ],
+      "tickers_perf": {
+        "CEG": {
+          "proxy_used": "XLU",
+          "initial_value_eur": 257.95,
+          "min_value_eur": 166.72,
+          "final_value_eur": 225.63,
+          "max_dd_pct": -35.37,
+          "final_pnl_pct": -12.53
+        },
+        "SAF": {
+          "proxy_used": null,
+          "initial_value_eur": 339.8,
+          "min_value_eur": 169.9,
+          "final_value_eur": 337.85,
+          "max_dd_pct": -50.0,
+          "final_pnl_pct": -0.58
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "2022_selloff",
+      "start_date": "2022-01-03",
+      "end_dd_date": "2022-10-12",
+      "end_recovery_date": "2024-01-19",
+      "context": "Fed hikes + inflation → S&P -25% sur 10 mois, recovery 15 mois",
+      "severity": "long",
+      "portfolio_initial_eur": 257.95,
+      "portfolio_min_eur": 215.64,
+      "portfolio_final_eur": 236.54,
+      "max_dd_panel_pct": -16.4,
+      "final_pnl_pct": -8.3,
+      "recovery_sessions": 41,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 62.8,
+      "best_ticker": "CEG",
+      "worst_ticker": "CEG",
+      "proxies_used": [
+        {
+          "original": "CEG",
+          "proxy": "XLU"
+        }
+      ],
+      "fetch_errors": [
+        {
+          "ticker": "SAF",
+          "error": "empty data"
+        },
+        {
+          "ticker": "SOI",
+          "error": "empty data"
+        }
+      ],
+      "tickers_perf": {
+        "CEG": {
+          "proxy_used": "XLU",
+          "initial_value_eur": 257.95,
+          "min_value_eur": 215.64,
+          "final_value_eur": 236.54,
+          "max_dd_pct": -16.4,
+          "final_pnl_pct": -8.3
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "Q4_2018_Powell_pivot",
+      "start_date": "2018-10-03",
+      "end_dd_date": "2018-12-24",
+      "end_recovery_date": "2019-04-12",
+      "context": "Powell pivot tardif → S&P -20% en 12 semaines, recovery 4 mois",
+      "severity": "moderate",
+      "portfolio_initial_eur": 597.75,
+      "portfolio_min_eur": 581.42,
+      "portfolio_final_eur": 648.7,
+      "max_dd_panel_pct": -2.73,
+      "final_pnl_pct": 8.52,
+      "recovery_sessions": 6,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 4.6,
+      "best_ticker": "CEG",
+      "worst_ticker": "SAF",
+      "proxies_used": [
+        {
+          "original": "CEG",
+          "proxy": "XLU"
+        }
+      ],
+      "fetch_errors": [
+        {
+          "ticker": "SOI",
+          "error": "empty data"
+        }
+      ],
+      "tickers_perf": {
+        "CEG": {
+          "proxy_used": "XLU",
+          "initial_value_eur": 257.95,
+          "min_value_eur": 255.29,
+          "final_value_eur": 289.01,
+          "max_dd_pct": -1.03,
+          "final_pnl_pct": 12.04
+        },
+        "SAF": {
+          "proxy_used": null,
+          "initial_value_eur": 339.8,
+          "min_value_eur": 320.48,
+          "final_value_eur": 359.69,
+          "max_dd_pct": -5.68,
+          "final_pnl_pct": 5.85
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "Aug_2024_flash_crash",
+      "start_date": "2024-07-31",
+      "end_dd_date": "2024-08-05",
+      "end_recovery_date": "2024-08-26",
+      "context": "Yen carry unwind → S&P -6% en 3 sessions, recovery 3 semaines",
+      "severity": "mild",
+      "portfolio_initial_eur": 257.95,
+      "portfolio_min_eur": 227.07,
+      "portfolio_final_eur": 265.5,
+      "max_dd_panel_pct": -11.97,
+      "final_pnl_pct": 2.93,
+      "recovery_sessions": 6,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 50.0,
+      "best_ticker": "CEG",
+      "worst_ticker": "CEG",
+      "proxies_used": [],
+      "fetch_errors": [
+        {
+          "ticker": "SAF",
+          "error": "empty data"
+        },
+        {
+          "ticker": "SOI",
+          "error": "empty data"
+        }
+      ],
+      "tickers_perf": {
+        "CEG": {
+          "proxy_used": null,
+          "initial_value_eur": 257.95,
+          "min_value_eur": 227.07,
+          "final_value_eur": 265.5,
+          "max_dd_pct": -11.97,
+          "final_pnl_pct": 2.93
+        }
+      }
+    }
+  ],
+  "panel_summary": {
+    "n_periods_ok": 5,
+    "n_periods_total": 5,
+    "max_dd_avg_pct": -20.56,
+    "max_dd_median_pct": -16.4,
+    "max_dd_worst_pct": -37.68,
+    "recovery_sessions_avg": 14,
+    "recovery_sessions_median": 6,
+    "recovery_sessions_worst": 41,
+    "n_recovered_within_window": 4,
+    "prob_severe_event_5y_base_rate": 0.35,
+    "resilience_score": 7.31
+  },
+  "proxies_legend": {
+    "CEG": "XLU (used for periods before 2022-01-31)",
+    "SAF": "^FCHI (used for periods before 2007-01-01)",
+    "SOI": "^FCHI (used for periods before 1998-11-13)"
+  },
+  "note": "Backtest avec ETF proxies pour tickers IPO post-période. yfinance pull live — si offline ou erreur, ce ticker est skippé (fetch_errors loggé). Ne tient pas compte du sizing dynamique (hold-and-suffer constant). Stop loss non simulé."
+}
