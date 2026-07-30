@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE0007030009",
-    "generated_at": "2026-07-29T21:36:05.444884+00:00",
+    "generated_at": "2026-07-30T00:01:52.981273+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -427,7 +427,7 @@
           1187.4,
           1058.0,
           1153.4,
-          440089
+          345470
         ]
       ],
       "h4": [
@@ -1254,8 +1254,8 @@
       "macd_hist": 21.377743141996707,
       "macd_signal_cross": null,
       "obv_trend": "rising",
-      "mfi_14": 70.40551159011092,
-      "cmf_20": 0.07059865811418367,
+      "mfi_14": 69.30811817917873,
+      "cmf_20": 0.061891326411945696,
       "adl_trend": "rising",
       "adx_14": 23.570109934459772,
       "plus_di_14": 34.781954907681225,
@@ -1263,7 +1263,7 @@
       "di_spread_14": 14.957534835389552,
       "choppiness_14": 35.13444908159807,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 1.9630945942178484,
+      "volume_ratio_ma20": 1.5742516642720472,
       "distance_ma20_pct": 11.245070644111872,
       "distance_ma50_pct": 3.8148890026840223,
       "distance_ma200_pct": -21.317130572071026
@@ -1770,7 +1770,7 @@
           "rr": 1.59,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4291,
+          "p_touch": 0.429,
           "distance_pct": 3.17
         },
         "t3": {
@@ -1779,7 +1779,7 @@
           "rr": 2.38,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1158,
+          "p_touch": 0.1157,
           "distance_pct": 4.76
         }
       }
@@ -1805,7 +1805,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7247,
+          "p_touch": 0.7246,
           "distance_pct": 3.55
         },
         "t2": {
@@ -1814,7 +1814,7 @@
           "rr": 4.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4425,
+          "p_touch": 0.4424,
           "distance_pct": 7.1
         },
         "t3": {
@@ -1849,7 +1849,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8079,
+          "p_touch": 0.8077,
           "distance_pct": 5.02
         },
         "t2": {
@@ -2162,7 +2162,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-29T21:35:48.779596+00:00",
+    "generated_at": "2026-07-30T00:01:38.144952+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7550,38 +7550,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-29T21:35:51.946113+00:00",
+    "generated_at": "2026-07-30T00:01:40.847467+00:00",
     "ticker": "RHM",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 8,
+    "n_events": 7,
     "events": [
-      {
-        "date": "2026-07-29",
-        "type": "macro",
-        "label": "US FOMC Rate Decision",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-08-04",
         "type": "macro",
         "label": "SoFi Technologies (SOFI) Q2 2026 Earnings",
         "importance": "medium",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7595,8 +7579,8 @@
         "type": "macro",
         "label": "Siemens Energy Q2 FY2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7610,8 +7594,8 @@
         "type": "macro",
         "label": "IonQ (IONQ) Q2 2026 Earnings — 2026-08-05 (estimé)",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7625,9 +7609,10 @@
         "type": "macro",
         "label": "Rheinmetall Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -7640,7 +7625,7 @@
         "label": "Rigetti Computing Q2 2026 Earnings",
         "importance": "high",
         "sessions_to_event": 9,
-        "calendar_days": 13,
+        "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7653,8 +7638,8 @@
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 10,
-        "calendar_days": 14,
+        "sessions_to_event": 9,
+        "calendar_days": 13,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7667,8 +7652,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 10,
-        "calendar_days": 14,
+        "sessions_to_event": 9,
+        "calendar_days": 13,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7916,10 +7901,10 @@
     "sample_window_days": 100
   },
   "volume_climax": {
-    "recent_buy_climax": true,
+    "recent_buy_climax": false,
     "recent_sell_climax": false,
-    "bars_ago": 0,
-    "volume_z_score": 2.8558
+    "bars_ago": null,
+    "volume_z_score": null
   },
   "patterns_advanced": {
     "n_candidates_evaluated": 89,
@@ -7949,24 +7934,24 @@
         "anchor_date": "2026-07-15",
         "anchor_event": "swing_low",
         "anchor_price": 936.2,
-        "vwap_today": 1035.7534,
-        "distance_from_close_pct": 11.36,
+        "vwap_today": 1031.406,
+        "distance_from_close_pct": 11.83,
         "bars_since_anchor": 10
       },
       {
         "anchor_date": "2026-06-26",
         "anchor_event": "swing_low",
         "anchor_price": 928.8,
-        "vwap_today": 1031.9035,
-        "distance_from_close_pct": 11.77,
+        "vwap_today": 1030.2323,
+        "distance_from_close_pct": 11.96,
         "bars_since_anchor": 23
       },
       {
         "anchor_date": "2026-05-29",
         "anchor_event": "swing_high",
         "anchor_price": 1304.8,
-        "vwap_today": 1088.1645,
-        "distance_from_close_pct": 6.0,
+        "vwap_today": 1087.7918,
+        "distance_from_close_pct": 6.03,
         "bars_since_anchor": 43
       }
     ]
@@ -12853,8 +12838,8 @@
         "signal": "buy"
       },
       "klinger": {
-        "value": 1683844.0827172897,
-        "signal_line": 738883.2146097738,
+        "value": 1593282.7874058383,
+        "signal_line": 725945.8867081379,
         "signal": "neutral"
       }
     },
@@ -14393,7 +14378,7 @@
         845707.2650595398,
         1091184.2368781818,
         1388429.6792132277,
-        1683844.0827172897
+        1593282.7874058383
       ],
       "klinger_signal": [
         0.0,
@@ -14649,7 +14634,7 @@
         339499.5532566439,
         446883.0794882922,
         581389.7365918545,
-        738883.2146097738
+        725945.8867081379
       ]
     }
   },
@@ -14657,24 +14642,24 @@
     "available": true,
     "latest": {
       "close": 1153.4000244140625,
-      "vwap": 1045.418587371143,
+      "vwap": 1043.531928002662,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": 10.32901445864421,
+        "distance_from_close_pct": 10.528484415583714,
         "position": "above_vwap"
       },
-      "force_index": 5021570.044547202,
+      "force_index": 4121338.174552085,
       "force_index_meta": {
         "signal": "buy"
       },
-      "chaikin_oscillator": 82008.74586677714,
+      "chaikin_oscillator": 67723.49411129858,
       "chaikin_oscillator_meta": {
         "cross_recent": "up",
         "signal": "buy"
       },
-      "vroc_14": 66.84004412784945,
+      "vroc_14": 30.969485819568654,
       "vroc_14_meta": {
-        "signal": "high_activity"
+        "signal": "normal"
       }
     },
     "series": {
@@ -15188,7 +15173,7 @@
         1024.2482880134817,
         1029.7586650700277,
         1035.8497792966527,
-        1045.418587371143
+        1043.531928002662
       ],
       "force_index": [
         null,
@@ -15444,7 +15429,7 @@
         -760479.0961630233,
         -285649.65385402,
         973512.2760317943,
-        5021570.044547202
+        4121338.174552085
       ],
       "chaikin_oscillator": [
         0.0,
@@ -15700,7 +15685,7 @@
         6303.098825914203,
         -4419.0312485420145,
         10436.977620368009,
-        82008.74586677714
+        67723.49411129858
       ],
       "vroc_14": [
         null,
@@ -15956,7 +15941,7 @@
         -47.91076184081866,
         -4.026264170045412,
         -1.3127966254340733,
-        66.84004412784945
+        30.969485819568654
       ]
     }
   },
@@ -15988,7 +15973,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": 1.4752,
+      "value": 0.7834,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -16020,9 +16005,9 @@
   },
   "anomaly_detection": {
     "available": true,
-    "anomaly_score": 0.1475,
+    "anomaly_score": 0.1426,
     "is_anomaly": true,
-    "anomaly_percentile": 98.0,
+    "anomaly_percentile": 97.6,
     "recent_anomalies": [
       {
         "date": "2026-06-24T00:00:00",
@@ -16033,7 +16018,7 @@
       {
         "date": "2026-07-29T00:00:00",
         "bars_ago": 0,
-        "score": 0.1475,
+        "score": 0.1426,
         "context": "large return + wide range + strong body"
       },
       {
@@ -16045,13 +16030,13 @@
       {
         "date": "2026-07-02T00:00:00",
         "bars_ago": 19,
-        "score": 0.0432,
+        "score": 0.0402,
         "context": "large return + wide range + strong body"
       },
       {
         "date": "2026-07-09T00:00:00",
         "bars_ago": 14,
-        "score": 0.0236,
+        "score": 0.0233,
         "context": "large return + wide range + strong body"
       }
     ],
@@ -16237,21 +16222,21 @@
       },
       "volume": {
         "n_zero_volume_bars": 1,
-        "mean_volume_60d": 268909.31666666665,
+        "mean_volume_60d": 267332.3333333333,
         "median_volume_60d": 226968.0,
-        "volume_consistency_score": 0.26794269617766076
+        "volume_consistency_score": 0.26743296729406363
       },
       "liquidity": {
-        "liquidity_score": 293926117.5628967,
+        "liquidity_score": 290288332.33256227,
         "liquidity_classification": "high"
       },
       "freshness": {
         "last_bar_date": "2026-07-29T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
-        "overall_quality_score": 82.39816009765079,
+        "overall_quality_score": 82.39051416439683,
         "overall_label": "good",
         "warnings": [
           "outlier de 6.1σ le 2026-06-24 non expliqué (daily)",
@@ -16295,7 +16280,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-29T12:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16353,7 +16338,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-29T15:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

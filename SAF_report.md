@@ -1,11 +1,11 @@
 # SAF
 
-**Generated** : 2026-07-29T21:41:22.761900+00:00  
+**Generated** : 2026-07-30T00:06:40.764552+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €339.80  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)  
+> 🟡 **WAIT-FOR-DIP** — spot +8.4 % au-dessus de la zone d'entrée — attendre le repli  
 > ↳ spot €339.80 (+8.4% vs entrée) · entrée €313.53 · stop €310.01 · T1 €320.57 · R/R 2.0  
 > ↳ P(T1 av. stop) 34 % · EV/risk 0.051 · ¼-Kelly 0.003 · _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_  
 
@@ -123,8 +123,8 @@ _Trop peu de séances trend-up (3) pour des stats fiables : 1.9% des séances se
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : entrée acceptable (proche d'une zone support/confluence)
-- Proximité zone : 1.25/2 | R/R T1 : 0.5 | extension : normal
+- **Verdict timing** : neutre
+- Proximité zone : 0.75/2 | R/R T1 : 2.0 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -138,9 +138,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -150,8 +150,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.28  _(pas de croisement recent)_
 - **BB** : %B 0.6 · largeur 12.9%
 - **ATR** : 9.2 (66.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF 0.051  _(accumulation)_
-- **Vol ratio** : 1.02  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.078  _(accumulation)_
+- **Vol ratio** : 0.45  _(volume atone)_
 - **Choppiness** : 54.5  _(transition)_
 - **MA** : MA20 335.61 · MA50 321.56 · MA200 304.85  _(prix > MA20)_
 - **Dist MA** : MA20 +1.2% · MA50 +5.7% · MA200 +11.5%
@@ -159,5 +159,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (89015 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88284 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

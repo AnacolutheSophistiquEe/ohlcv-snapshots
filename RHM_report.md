@@ -1,11 +1,11 @@
 # RHM
 
-**Generated** : 2026-07-29T21:36:05.444884+00:00  
+**Generated** : 2026-07-30T00:01:52.981273+00:00  
 **Santé technique** : 8/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €1153.40  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)  
+> 🟢 **ARMED** — plan valide, prix dans/proche de la zone d'entrée — exécutable  
 > ↳ spot €1153.40 (+0.4% vs entrée) · entrée €1148.70 · stop €1125.73 · T1 €1166.93 · R/R 0.79  
 > ↳ P(T1 av. stop) 41 % _(réel 5 s)_ · EV/risk 0.017 _(réel 5 s)_ (GBM 0.018) · ¼-Kelly 0.015 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.0% cohérent avec le bruit 5 s (EV-optimal ≈ −2.0%)  
@@ -147,9 +147,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -159,8 +159,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 21.378  _(pas de croisement recent)_
 - **BB** : %B 0.99 · largeur 22.8%
 - **ATR** : 45.35 (5.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV rising · CMF 0.071  _(accumulation)_
-- **Vol ratio** : 1.96  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV rising · CMF 0.062  _(accumulation)_
+- **Vol ratio** : 1.57  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 35.1  _(marche directionnel)_
 - **MA** : MA20 1036.81 · MA50 1111.02 · MA200 1465.88  _(prix > MA20)_
 - **Dist MA** : MA20 +11.2% · MA50 +3.8% · MA200 -21.3%
@@ -168,5 +168,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (92735 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (92057 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

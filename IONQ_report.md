@@ -1,11 +1,11 @@
 # IONQ
 
-**Generated** : 2026-07-29T22:01:34.393417+00:00  
+**Generated** : 2026-07-30T00:24:59.013791+00:00  
 **Santé technique** : 2/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : strong_trend · volatilite low · $31.99  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot $31.99 (+1.5% vs entrée) · entrée $31.51 · stop $30.71 · T1 $32.23 · R/R 0.9  
 > ↳ P(T1 av. stop) 31 % _(réel 5 s)_ · EV/risk -0.231 _(réel 5 s)_ (GBM -0.002) · ¼-Kelly 0.006 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.53% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
@@ -151,9 +151,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-05 — IONQ earnings (J-5 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-05 — IONQ earnings (J-5 sess · earnings)
+- **intraday** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-05 — IONQ earnings (J-4 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-05 — IONQ earnings (J-4 sess · earnings)
 
 
 ## Indicateurs (résumé)
@@ -172,5 +172,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (89257 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88896 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

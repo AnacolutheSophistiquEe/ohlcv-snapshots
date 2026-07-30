@@ -1,14 +1,14 @@
 # 012450
 
-**Generated** : 2026-07-29T21:53:19.423959+00:00  
+**Generated** : 2026-07-30T00:17:29.436108+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.7 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 2/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · ₩809000.00  
+**Subtitle** : indeterminate · volatilite normal · ₩810000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)  
-> ↳ spot ₩809000.00 (+10.6% vs entrée) · entrée ₩731357.14 · stop ₩672848.57 · T1 ₩754076.24 · R/R 0.39  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié  
+> ↳ spot ₩810000.00 (+10.6% vs entrée) · entrée ₩732357.14 · stop ₩673768.57 · T1 ₩755076.18 · R/R 0.39  
 > ↳ P(T1 av. stop) 22 % · EV/risk -0.16 · ¼-Kelly 0.019 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
 
@@ -27,17 +27,17 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : ₩726813.32–₩735900.96 (mid ₩731357.14)
-- Spot actuel : ₩809000.00 (+10.6% au-dessus de la zone — repli à attendre)
-- Stop : ₩672848.57 (stop swing_plan-based (-22.07%))
-- Targets : T1 ₩754076.24 · R/R 0.39 | T2 ₩776795.35 · R/R 0.78 | T3 ₩799514.45 · R/R 1.16
+- Entry (zone de repli) : ₩727813.33–₩736900.95 (mid ₩732357.14)
+- Spot actuel : ₩810000.00 (+10.6% au-dessus de la zone — repli à attendre)
+- Stop : ₩673768.57 (stop swing_plan-based (-22.05%))
+- Targets : T1 ₩755076.18 · R/R 0.39 | T2 ₩777795.22 · R/R 0.78 | T3 ₩800514.26 · R/R 1.16
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩672848.57
+- Invalidation : close sous ₩673768.57
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.16 | EV/share : ₩-9372.869 | p_fill : —
+- EV/risk : -0.16 | EV/share : ₩-9387.272 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 22 % | T2 11 % | T3 11 %
 - Kelly (position) : f* 0.075 | ¼-Kelly 0.019 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
@@ -137,26 +137,26 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
 
 - **RSI** : 31.5  _(momentum baissier)_
 - **ADX** : 17.8  _(pas de tendance nette)_
-- **MACD** : hist -5305.105  _(pas de croisement recent)_
+- **MACD** : hist -5241.288  _(pas de croisement recent)_
 - **BB** : %B 0.11 · largeur 43.7%
 - **ATR** : 77642.86 (72.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
 - **OBV/CMF** : OBV falling · CMF -0.202  _(distribution)_
-- **Vol ratio** : 1.12  _(volume normal)_
+- **Vol ratio** : 1.27  _(volume normal)_
 - **Choppiness** : 52.2  _(transition)_
-- **MA** : MA20 974450.0 · MA50 1065740.0 · MA200 1141042.51  _(prix < MA20)_
-- **Dist MA** : MA20 -17.0% · MA50 -24.1% · MA200 -29.1%
+- **MA** : MA20 974500.0 · MA50 1065760.0 · MA200 1141047.51  _(prix < MA20)_
+- **Dist MA** : MA20 -16.9% · MA50 -24.0% · MA200 -29.0%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (81910 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (81236 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

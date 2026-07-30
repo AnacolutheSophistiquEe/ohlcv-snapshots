@@ -1,11 +1,11 @@
 # PLTR
 
-**Generated** : 2026-07-29T22:00:08.046671+00:00  
+**Generated** : 2026-07-30T00:23:42.912166+00:00  
 **Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $123.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié  
 > ↳ spot $123.00 (+3.5% vs entrée) · entrée $118.84 · stop $115.87 · T1 $121.11 · R/R 0.76  
 > ↳ P(T1 av. stop) 47 % · EV/risk -0.021 · ¼-Kelly 0.006 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.5% cohérent avec le bruit 5 s (EV-optimal ≈ −2.5%)  
@@ -145,9 +145,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-29 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-4 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-4 sess · earnings)
+- **intraday** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-3 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-3 sess · earnings)
 
 
 ## Indicateurs (résumé)
@@ -166,5 +166,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88832 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88383 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
