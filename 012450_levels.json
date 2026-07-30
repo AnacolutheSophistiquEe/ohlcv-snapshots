@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "012450",
-    "generated_at": "2026-07-29T22:05:30Z",
+    "generated_at": "2026-07-30T00:32:05Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-07-30T08:00:00Z",
-    "valid_until": "2026-07-30T21:00:00Z",
+    "valid_from": "2026-07-31T08:00:00Z",
+    "valid_until": "2026-07-31T21:00:00Z",
     "source_precomputed": "012450_precomputed.json"
   },
   "context": {
-    "last_price": 809000.0,
+    "last_price": 810000.0,
     "ta_score": {
       "value": 2,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 77642.8571,
     "atr_pct_daily": null,
-    "beta_60d": -0.0025,
+    "beta_60d": -0.0029,
     "beta_benchmark": "EWY",
-    "beta_corr_60d": -0.0031,
+    "beta_corr_60d": -0.0035,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -53,10 +53,10 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -47.36,
+      "current_dd_pct": -47.3,
       "ath_price": 1537000.0,
       "ath_date": "2026-04-07",
-      "max_dd_1y_pct": -47.36,
+      "max_dd_1y_pct": -47.3,
       "days_in_dd": 113,
       "median_recovery_days": null
     }
@@ -68,30 +68,30 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 663561.67,
-        "max": 677035.0034
+        "min": 664218.33,
+        "max": 677704.9966
       },
       "stop": {
-        "price": 557202.3843,
+        "price": 557869.0443,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -16.87
+        "distance_pct": -16.86
       },
       "targets": [
         {
           "level": 1,
-          "price": 699122.5218,
+          "price": 700129.7627,
           "basis": "band 95% (atteignable) · touche hist. 44% (sans stop)",
-          "rr": 0.25
+          "rr": 0.26
         },
         {
           "level": 2,
-          "price": 744530.7578,
+          "price": 745545.2396,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
           "rr": 0.66
         },
         {
           "level": 3,
-          "price": 789938.9939,
+          "price": 790960.7165,
           "basis": "plafond band 95% · touche hist. 91% (sans stop)",
           "rr": 1.06
         }
@@ -106,7 +106,7 @@
   "bot_actionable_reason": "ta_score=2<4",
   "global_conditions": [],
   "invalidation": {
-    "price": 551630.3605,
+    "price": 552290.3539,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

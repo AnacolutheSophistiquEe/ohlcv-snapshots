@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SAF",
-    "generated_at": "2026-07-29T22:05:30Z",
+    "generated_at": "2026-07-30T00:32:05Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-07-30T08:00:00Z",
-    "valid_until": "2026-07-30T21:00:00Z",
+    "valid_from": "2026-07-31T08:00:00Z",
+    "valid_until": "2026-07-31T21:00:00Z",
     "source_precomputed": "SAF_precomputed.json"
   },
   "context": {
@@ -68,20 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 345.8138,
-        "max": 347.1956
+        "min": 361.1608,
+        "max": 362.604
       },
       "stop": {
-        "price": 339.8272,
+        "price": 355.5468,
         "basis": "below_broken_resistance",
-        "distance_pct": -1.93
+        "distance_pct": -1.75
       },
       "targets": [
         {
           "level": 1,
-          "price": 357.3335,
-          "basis": "next_confluence_resistance",
-          "rr": 1.62
+          "price": 368.218,
+          "basis": "r_multiple_1",
+          "rr": 1.0
+        },
+        {
+          "level": 2,
+          "price": 374.5535,
+          "basis": "r_multiple_2",
+          "rr": 2.0
+        },
+        {
+          "level": 3,
+          "price": 380.8891,
+          "basis": "r_multiple_3",
+          "rr": 3.0
         }
       ],
       "preferred_target": 1,
@@ -89,7 +101,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance VPVR_VAH + S/R_resistance (strength 7.0)."
+      "rationale": "Breakout au-dessus confluence resistance BB_UPPER + S/R_resistance (strength 4.0)."
     },
     {
       "id": "C",
