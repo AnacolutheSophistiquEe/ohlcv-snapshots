@@ -1,6 +1,6 @@
 # 298040
 
-**Generated** : 2026-07-30T21:52:12.418279+00:00  
+**Generated** : 2026-07-31T00:15:18.025294+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.4 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 2/10 — **Rating** : Strong Pass (negative EV)  
@@ -9,7 +9,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot ₩1894000.00 (+4.5% vs entrée) · entrée ₩1813155.88 · stop ₩1609733.82 · T1 ₩2220000.00 · R/R 2.0  
-> ↳ P(T1 av. stop) 7 % _(réel 5 s)_ · EV/risk -0.106 _(réel 5 s)_ (GBM 0.092) · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 7 % _(réel 5 s)_ · EV/risk -0.106 _(réel 5 s)_ (GBM 0.092) · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -134 % hors [0,100] (R² max 0.98). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
@@ -40,11 +40,11 @@ Plan privilegie B (swing), composite 2/10, conviction 'Strong Pass (negative EV)
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.092 | EV/share : ₩18801.596 | p_fill : —
+- EV/risk : 0.092 | EV/share : ₩18732.475 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 5 % | T2 5 % | T3 5 %
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 21.5 | bear 64.5 | side 14.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
+- Régime probabiliste (posterior HMM, swing) : bull 20.7 | bear 65.4 | side 14.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
@@ -160,7 +160,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 - **RSI** : 30.5  _(momentum baissier)_
 - **ADX** : 17.9  _(pas de tendance nette)_
-- **MACD** : hist -63415.29  _(pas de croisement recent)_
+- **MACD** : hist -63415.291  _(pas de croisement recent)_
 - **BB** : %B -0.06 · largeur 54.2%
 - **ATR** : 261357.14 (78.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV falling · CMF -0.247  _(distribution)_
@@ -172,5 +172,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (87782 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (87783 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

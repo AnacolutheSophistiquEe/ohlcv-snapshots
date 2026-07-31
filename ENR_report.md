@@ -1,12 +1,12 @@
 # ENR
 
-**Generated** : 2026-07-30T21:40:06.107471+00:00  
+**Generated** : 2026-07-31T00:04:28.390975+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite high · €146.16  
+**Subtitle** : indeterminate · volatilite high · €146.12  
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié  
-> ↳ spot €146.16 (+5.7% vs entrée) · entrée €138.31 · stop €135.95 · T1 €141.21 · R/R 1.23  
+> ↳ spot €146.12 (+5.7% vs entrée) · entrée €138.28 · stop €135.92 · T1 €141.18 · R/R 1.23  
 > ↳ P(T1 av. stop) 37 % · EV/risk -0.032 · ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −1.71% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
 
@@ -29,12 +29,12 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : €137.73–€138.89 (mid €138.31)
-- Spot actuel : €146.16 (+5.7% au-dessus de la zone — repli à attendre)
-- Stop : €135.95 (stop swing_plan-based (-13.88%))
-- Targets : T1 €141.21 · R/R 1.23 | T2 €144.11 · R/R 2.46 | T3 €147.01 · R/R 3.69
+- Entry (zone de repli) : €137.70–€138.86 (mid €138.28)
+- Spot actuel : €146.12 (+5.7% au-dessus de la zone — repli à attendre)
+- Stop : €135.92 (stop swing_plan-based (-13.86%))
+- Targets : T1 €141.18 · R/R 1.23 | T2 €144.08 · R/R 2.46 | T3 €146.97 · R/R 3.68
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €135.95
+- Invalidation : close sous €135.92
 
 
 ## Edge, scénarios & sizing
@@ -149,25 +149,25 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-04 — ENR earnings (J-4 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-04 — ENR earnings (J-4 sess · earnings)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-04 — ENR earnings (J-3 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-04 — ENR earnings (J-3 sess · earnings)
 
 
 ## Indicateurs (résumé)
 
 - **RSI** : 44.8  _(momentum baissier)_
 - **ADX** : 21.9  _(pas de tendance nette)_
-- **MACD** : hist -1.026  _(pas de croisement recent)_
+- **MACD** : hist -1.029  _(pas de croisement recent)_
 - **BB** : %B 0.32 · largeur 21.2%
 - **ATR** : 7.89 (78.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.128  _(distribution)_
-- **Vol ratio** : 1.42  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.155  _(distribution)_
+- **Vol ratio** : 0.93  _(volume normal)_
 - **Choppiness** : 51.8  _(transition)_
 - **MA** : MA20 152.0 · MA50 157.94 · MA200 144.31  _(prix < MA20)_
-- **Dist MA** : MA20 -3.8% · MA50 -7.5% · MA200 +1.3%
+- **Dist MA** : MA20 -3.9% · MA50 -7.5% · MA200 +1.3%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (94631 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (94630 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

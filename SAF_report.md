@@ -1,12 +1,12 @@
 # SAF
 
-**Generated** : 2026-07-30T21:41:26.278579+00:00  
+**Generated** : 2026-07-31T00:05:41.000104+00:00  
 **Santé technique** : 8/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · €340.30  
+**Subtitle** : indeterminate · volatilite normal · €339.90  
 
-> 🟡 **WAIT-FOR-DIP** — spot +8.3 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot €340.30 (+8.3% vs entrée) · entrée €314.30 · stop €310.80 · T1 €321.30 · R/R 2.0  
+> 🟡 **WAIT-FOR-DIP** — spot +8.2 % au-dessus de la zone d'entrée — attendre le repli  
+> ↳ spot €339.90 (+8.2% vs entrée) · entrée €314.12 · stop €310.63 · T1 €321.11 · R/R 2.0  
 > ↳ P(T1 av. stop) 34 % · EV/risk 0.072 · ¼-Kelly 0.004 · _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
@@ -24,17 +24,17 @@ Plan privilegie B (swing), composite 8/10, conviction 'Pass'.
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : €312.90–€315.70 (mid €314.30)
-- Spot actuel : €340.30 (+8.3% au-dessus de la zone — repli à attendre)
-- Stop : €310.80 (stop swing_plan-based (-8.67%))
-- Targets : T1 €321.30 · R/R 2.0 | T2 €328.29 · R/R 4.0 | T3 €335.29 · R/R 6.0
+- Entry (zone de repli) : €312.72–€315.52 (mid €314.12)
+- Spot actuel : €339.90 (+8.2% au-dessus de la zone — repli à attendre)
+- Stop : €310.63 (stop swing_plan-based (-8.61%))
+- Targets : T1 €321.11 · R/R 2.0 | T2 €328.10 · R/R 4.01 | T3 €335.09 · R/R 6.01
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €310.80
+- Invalidation : close sous €310.63
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.072 | EV/share : €0.251 | p_fill : —
+- EV/risk : 0.072 | EV/share : €0.250 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 34 % | T2 19 % | T3 12 %
 - Kelly (position) : f* 0.017 | ¼-Kelly 0.004 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_
@@ -45,7 +45,7 @@ Plan privilegie B (swing), composite 8/10, conviction 'Pass'.
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈None séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** : indisponible (échantillon insuffisant (n=7, n_eff=3))
+  - **intraday** : indisponible (échantillon insuffisant (n=8, n_eff=4))
   - **swing** : indisponible (échantillon insuffisant (n=3, n_eff=1))
   - **deep** : indisponible (échantillon insuffisant (n=1, n_eff=1))
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→70% · +1.0%→54% · +2.0%→34% · +3.0%→14% · +5.0%→2% · +8.0%→1%
@@ -141,16 +141,16 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 53.8  _(neutre)_
+- **RSI** : 53.4  _(neutre)_
 - **ADX** : 14.8  _(pas de tendance nette)_
-- **MACD** : hist 0.087  _(bullish_recent)_
-- **BB** : %B 0.63 · largeur 12.1%
+- **MACD** : hist 0.062  _(bullish_recent)_
+- **BB** : %B 0.62 · largeur 12.1%
 - **ATR** : 9.19 (65.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF 0.05  _(neutre)_
-- **Vol ratio** : 0.83  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.045  _(neutre)_
+- **Vol ratio** : 0.33  _(volume atone)_
 - **Choppiness** : 54.4  _(transition)_
-- **MA** : MA20 334.96 · MA50 322.84 · MA200 305.09  _(prix > MA20)_
-- **Dist MA** : MA20 +1.6% · MA50 +5.4% · MA200 +11.5%
+- **MA** : MA20 334.94 · MA50 322.83 · MA200 305.09  _(prix > MA20)_
+- **Dist MA** : MA20 +1.5% · MA50 +5.3% · MA200 +11.4%
 
 
 ---

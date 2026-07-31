@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-07-30T22:00:32.106787+00:00  
+**Generated** : 2026-07-31T00:22:48.128706+00:00  
 **Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $122.26  
@@ -146,8 +146,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-3 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-3 sess · earnings)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-2 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-2 sess · earnings)
 
 
 ## Indicateurs (résumé)
@@ -166,5 +166,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88485 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88486 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,11 +1,11 @@
 # MSTR
 
-**Generated** : 2026-07-30T21:57:34.764523+00:00  
+**Generated** : 2026-07-31T00:20:06.622906+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · $97.74  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-07-30 — MSTR earnings (J-0 sess · earnings)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot $97.74 (+2.0% vs entrée) · entrée $95.81 · stop $91.98 · T1 $97.92 · R/R 0.55  
 > ↳ P(T1 av. stop) 44 % _(réel 5 s)_ · EV/risk -0.045 _(réel 5 s)_ (GBM -0.001) · ¼-Kelly 0.025 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −4.0% cohérent avec le bruit 5 s (EV-optimal ≈ −4.0%)  
@@ -151,9 +151,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-07-30 — MSTR earnings (J-0 sess · earnings)
-- **swing** : ❄️ GELÉ jusqu'au 2026-07-30 — MSTR earnings (J-0 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-07-30 — MSTR earnings (J-0 sess · earnings)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -172,5 +172,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (91978 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (91510 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # 326030
 
-**Generated** : 2026-07-30T21:56:06.736352+00:00  
+**Generated** : 2026-07-31T00:18:47.400701+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite normal · ₩77600.00  

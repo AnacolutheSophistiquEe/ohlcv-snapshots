@@ -1,6 +1,6 @@
 # RGTI
 
-**Generated** : 2026-07-30T22:03:23.443288+00:00  
+**Generated** : 2026-07-31T00:25:25.451158+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.1 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 5/10 — **Rating** : Pass  
@@ -138,8 +138,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-5 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-5 sess · earnings)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-4 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-4 sess · earnings)
 
 
 ## Indicateurs (résumé)
@@ -158,5 +158,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (82608 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (82609 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
