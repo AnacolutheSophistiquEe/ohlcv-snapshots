@@ -1,0 +1,39 @@
+{
+  "available": true,
+  "generated_at": "2026-07-31T00:31:28.451445+00:00",
+  "window_sessions": 55,
+  "tickers_used": [
+    "AL2SI",
+    "SAF",
+    "SMCI",
+    "SOI"
+  ],
+  "tickers_skipped": [],
+  "weights_eur": {
+    "AL2SI": 134.5,
+    "SAF": 339.9,
+    "SMCI": 138.65,
+    "SOI": 315.15
+  },
+  "total_notional_eur": 928.2,
+  "capital_total_eur": 2000.0,
+  "var_95": {
+    "method": "gaussian_1d",
+    "z_95": 1.6448536269514722,
+    "sigma_portfolio_daily_eur": 37.82,
+    "value_eur": 62.21,
+    "pct_total_notional": 6.7,
+    "pct_capital": 3.11
+  },
+  "panel_beta_weighted": {},
+  "concentration_flags": [],
+  "high_corr_pairs_in_panel": [],
+  "scaling": {
+    "var_threshold_pct": 8.0,
+    "var_ref_metric": "var_95_pct_capital",
+    "scale_factor": 1.0,
+    "scaling_applied": false,
+    "note": "VaR sous le seuil, pas de scaling nécessaire."
+  },
+  "note": "Modèle Gaussien — ne capte pas les queues épaisses. Pour stress, utiliser compute_stress_test.py. Net beta = combinaison linéaire pondérée des betas par ticker × benchmark."
+}
