@@ -1,6 +1,6 @@
 # SOFI
 
-**Generated** : 2026-08-01T20:27:55.001966+00:00  
+**Generated** : 2026-08-01T21:55:02.883710+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $16.31  

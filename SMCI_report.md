@@ -1,6 +1,6 @@
 # SMCI
 
-**Generated** : 2026-08-01T20:17:14.667041+00:00  
+**Generated** : 2026-08-01T21:44:54.242253+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  

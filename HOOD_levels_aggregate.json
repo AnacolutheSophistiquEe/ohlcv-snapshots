@@ -4,17 +4,16 @@
     "spot": 86.56,
     "atr_14": 6.31,
     "atr_pct": 7.29,
-    "n_levels": 45,
+    "n_levels": 42,
     "n_supports": 14,
-    "n_resistances": 31,
+    "n_resistances": 28,
     "n_neutral": 0,
-    "n_with_plan_role": 8,
+    "n_with_plan_role": 3,
     "plans_detected": [
-      "A",
       "B"
     ],
-    "generated_at": "2026-08-01T20:27:08.480189+00:00",
-    "source_precomputed_at": "2026-08-01T20:26:21.829966+00:00",
+    "generated_at": "2026-08-01T21:54:18.041900+00:00",
+    "source_precomputed_at": "2026-08-01T21:53:33.860116+00:00",
     "calibration_lookup": "v1.0_strict_2closes_0.5atr",
     "calibration_method": "rolling_daily_long_strict_break",
     "confluence_band_atr": 0.5,
@@ -1868,9 +1867,6 @@
         "cluster_range_low": 92.8,
         "cluster_range_high": 104.45
       },
-      "plan_roles": [
-        "A_sl"
-      ],
       "distance_pct_to_spot": 12.734,
       "distance_in_atr": 1.747,
       "confluence_count": 6,
@@ -2127,13 +2123,12 @@
       },
       "distance_pct_to_spot": 18.837,
       "distance_in_atr": 2.584,
-      "confluence_count": 6,
+      "confluence_count": 5,
       "confluence_concepts": [
         "HVN",
         "AVWAP_swing_high",
         "MA20",
         "BB_MIDDLE",
-        "PLAN_A_T1",
         "PLAN_B_ENTRY"
       ],
       "robustness_score": 100,
@@ -2198,13 +2193,12 @@
       "raw_meta": {},
       "distance_pct_to_spot": 19.738,
       "distance_in_atr": 2.708,
-      "confluence_count": 6,
+      "confluence_count": 5,
       "confluence_concepts": [
         "FIB_50",
         "AVWAP_swing_high",
         "MA20",
         "BB_MIDDLE",
-        "PLAN_A_T1",
         "PLAN_B_ENTRY"
       ],
       "robustness_score": 90.0,
@@ -2267,19 +2261,14 @@
       "touches": null,
       "age_days": null,
       "raw_meta": {},
-      "plan_roles": [
-        "A_entry"
-      ],
-      "source_weight_boosted_by_plan": true,
       "distance_pct_to_spot": 19.796,
       "distance_in_atr": 2.716,
-      "confluence_count": 6,
+      "confluence_count": 5,
       "confluence_concepts": [
         "FIB_50",
         "HVN",
         "AVWAP_swing_high",
         "BB_MIDDLE",
-        "PLAN_A_T1",
         "PLAN_B_ENTRY"
       ],
       "robustness_score": 85.0,
@@ -2344,13 +2333,12 @@
       "raw_meta": {},
       "distance_pct_to_spot": 19.796,
       "distance_in_atr": 2.716,
-      "confluence_count": 6,
+      "confluence_count": 5,
       "confluence_concepts": [
         "FIB_50",
         "HVN",
         "AVWAP_swing_high",
         "MA20",
-        "PLAN_A_T1",
         "PLAN_B_ENTRY"
       ],
       "robustness_score": 80.0,
@@ -2387,13 +2375,12 @@
       "source_weight_boosted_by_plan": true,
       "distance_pct_to_spot": 20.79,
       "distance_in_atr": 2.852,
-      "confluence_count": 6,
+      "confluence_count": 5,
       "confluence_concepts": [
         "FIB_50",
         "HVN",
         "MA20",
         "BB_MIDDLE",
-        "PLAN_A_T1",
         "PLAN_B_ENTRY"
       ],
       "robustness_score": 99.5,
@@ -2444,47 +2431,6 @@
       }
     },
     {
-      "price": 105.96,
-      "type": "bracket_plan",
-      "subtype": "PLAN_A_T1",
-      "side": "resistance",
-      "source": "bracket_orders.HOOD_A_20260723_ibkr_bracket.json",
-      "source_weight": 0.95,
-      "touches": null,
-      "age_days": 0,
-      "raw_meta": {
-        "plan_letter": "A",
-        "role": "t1",
-        "prediction_id": "HOOD_A_20260723",
-        "horizon_sessions": 1
-      },
-      "plan_roles": [
-        "A_t1"
-      ],
-      "distance_pct_to_spot": 22.412,
-      "distance_in_atr": 3.074,
-      "confluence_count": 5,
-      "confluence_concepts": [
-        "FIB_50",
-        "HVN",
-        "AVWAP_swing_high",
-        "MA20",
-        "BB_MIDDLE"
-      ],
-      "robustness_score": 100,
-      "robustness_components": {
-        "base_from_source": 95.0,
-        "touches_boost": 0,
-        "confluence_boost": 25,
-        "age_decay": 0
-      },
-      "probabilities": {
-        "available": false,
-        "reason": "no_matching_bucket",
-        "dim_key_attempted": "bracket_plan|resistance|2-4|high"
-      }
-    },
-    {
       "price": 110.7863,
       "type": "fibonacci",
       "subtype": "FIB_618",
@@ -2498,15 +2444,13 @@
       },
       "distance_pct_to_spot": 27.988,
       "distance_in_atr": 3.839,
-      "confluence_count": 1,
-      "confluence_concepts": [
-        "PLAN_A_T2"
-      ],
-      "robustness_score": 90.0,
+      "confluence_count": 0,
+      "confluence_concepts": [],
+      "robustness_score": 85.0,
       "robustness_components": {
         "base_from_source": 85.0,
         "touches_boost": 0,
-        "confluence_boost": 5,
+        "confluence_boost": 0,
         "age_decay": 0
       },
       "probabilities": {
@@ -2553,45 +2497,6 @@
       }
     },
     {
-      "price": 111.55,
-      "type": "bracket_plan",
-      "subtype": "PLAN_A_T2",
-      "side": "resistance",
-      "source": "bracket_orders.HOOD_A_20260723_ibkr_bracket.json",
-      "source_weight": 0.95,
-      "touches": null,
-      "age_days": 0,
-      "raw_meta": {
-        "plan_letter": "A",
-        "role": "t2",
-        "prediction_id": "HOOD_A_20260723",
-        "horizon_sessions": 1
-      },
-      "plan_roles": [
-        "A_t2"
-      ],
-      "distance_pct_to_spot": 28.87,
-      "distance_in_atr": 3.96,
-      "confluence_count": 3,
-      "confluence_concepts": [
-        "FIB_618",
-        "VAH",
-        "HVN"
-      ],
-      "robustness_score": 100,
-      "robustness_components": {
-        "base_from_source": 95.0,
-        "touches_boost": 0,
-        "confluence_boost": 15,
-        "age_decay": 0
-      },
-      "probabilities": {
-        "available": false,
-        "reason": "no_matching_bucket",
-        "dim_key_attempted": "bracket_plan|resistance|2-4|high"
-      }
-    },
-    {
       "price": 114.5818,
       "type": "volume_profile",
       "subtype": "VAH",
@@ -2603,17 +2508,15 @@
       "raw_meta": {},
       "distance_pct_to_spot": 32.373,
       "distance_in_atr": 4.441,
-      "confluence_count": 3,
+      "confluence_count": 1,
       "confluence_concepts": [
-        "HVN",
-        "PLAN_A_T2",
-        "PLAN_A_T3"
+        "HVN"
       ],
-      "robustness_score": 90.0,
+      "robustness_score": 80.0,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
-        "confluence_boost": 15,
+        "confluence_boost": 5,
         "age_decay": 0
       },
       "probabilities": {
@@ -2668,96 +2571,21 @@
       "raw_meta": {},
       "distance_pct_to_spot": 32.373,
       "distance_in_atr": 4.441,
-      "confluence_count": 3,
+      "confluence_count": 1,
       "confluence_concepts": [
-        "VAH",
-        "PLAN_A_T2",
-        "PLAN_A_T3"
+        "VAH"
       ],
-      "robustness_score": 80.0,
+      "robustness_score": 70.0,
       "robustness_components": {
         "base_from_source": 65.0,
         "touches_boost": 0,
-        "confluence_boost": 15,
-        "age_decay": 0
-      },
-      "probabilities": {
-        "available": true,
-        "bucket_match_quality": "exact",
-        "dim_key": "volume_profile|resistance|>4|high",
-        "n_samples_in_bucket": 172,
-        "p_touch_h1": 0.0,
-        "ci95_lo_p_touch_h1": 0.0,
-        "ci95_hi_p_touch_h1": 0.0,
-        "p_break_unconditional_h1": 0.0,
-        "ci95_lo_p_break_unconditional_h1": 0.0,
-        "ci95_hi_p_break_unconditional_h1": 0.0,
-        "p_touch_h3": 0.0058,
-        "ci95_lo_p_touch_h3": 0.0,
-        "ci95_hi_p_touch_h3": 0.0172,
-        "p_break_after_touch_h3": 0.0,
-        "ci95_lo_p_break_after_touch_h3": 0.0,
-        "ci95_hi_p_break_after_touch_h3": 0.0,
-        "p_break_unconditional_h3": 0.0,
-        "ci95_lo_p_break_unconditional_h3": 0.0,
-        "ci95_hi_p_break_unconditional_h3": 0.0,
-        "p_touch_h5": 0.0174,
-        "ci95_lo_p_touch_h5": 0.0,
-        "ci95_hi_p_touch_h5": 0.037,
-        "p_break_after_touch_h5": 0.0,
-        "ci95_lo_p_break_after_touch_h5": 0.0,
-        "ci95_hi_p_break_after_touch_h5": 0.0,
-        "p_break_unconditional_h5": 0.0,
-        "ci95_lo_p_break_unconditional_h5": 0.0,
-        "ci95_hi_p_break_unconditional_h5": 0.0,
-        "p_touch_h10": 0.1163,
-        "ci95_lo_p_touch_h10": 0.0684,
-        "ci95_hi_p_touch_h10": 0.1642,
-        "p_break_after_touch_h10": 0.7,
-        "ci95_lo_p_break_after_touch_h10": 0.4992,
-        "ci95_hi_p_break_after_touch_h10": 0.9008,
-        "p_break_unconditional_h10": 0.0814,
-        "ci95_lo_p_break_unconditional_h10": 0.0405,
-        "ci95_hi_p_break_unconditional_h10": 0.1223
-      }
-    },
-    {
-      "price": 117.14,
-      "type": "bracket_plan",
-      "subtype": "PLAN_A_T3",
-      "side": "resistance",
-      "source": "bracket_orders.HOOD_A_20260723_ibkr_bracket.json",
-      "source_weight": 0.95,
-      "touches": null,
-      "age_days": 0,
-      "raw_meta": {
-        "plan_letter": "A",
-        "role": "t3",
-        "prediction_id": "HOOD_A_20260723",
-        "horizon_sessions": 1
-      },
-      "plan_roles": [
-        "A_t3"
-      ],
-      "distance_pct_to_spot": 35.328,
-      "distance_in_atr": 4.846,
-      "confluence_count": 3,
-      "confluence_concepts": [
-        "S/R_DBSCAN_STRONG",
-        "VAH",
-        "HVN"
-      ],
-      "robustness_score": 100,
-      "robustness_components": {
-        "base_from_source": 95.0,
-        "touches_boost": 0,
-        "confluence_boost": 15,
+        "confluence_boost": 5,
         "age_decay": 0
       },
       "probabilities": {
         "available": false,
         "reason": "no_matching_bucket",
-        "dim_key_attempted": "bracket_plan|resistance|>4|high"
+        "dim_key_attempted": "volume_profile|resistance|>4|med"
       }
     },
     {
@@ -2780,15 +2608,13 @@
       },
       "distance_pct_to_spot": 36.873,
       "distance_in_atr": 5.058,
-      "confluence_count": 1,
-      "confluence_concepts": [
-        "PLAN_A_T3"
-      ],
+      "confluence_count": 0,
+      "confluence_concepts": [],
       "robustness_score": 100,
       "robustness_components": {
         "base_from_source": 95.0,
         "touches_boost": 15,
-        "confluence_boost": 5,
+        "confluence_boost": 0,
         "age_decay": 0
       },
       "probabilities": {

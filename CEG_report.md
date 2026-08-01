@@ -1,6 +1,6 @@
 # CEG
 
-**Generated** : 2026-08-01T20:23:31.299122+00:00  
+**Generated** : 2026-08-01T21:50:45.716940+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $262.75  

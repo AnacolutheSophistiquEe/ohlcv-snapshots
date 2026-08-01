@@ -6,7 +6,7 @@
     "exchange": "Euronext Paris",
     "currency": "EUR",
     "isin": "FR0000073272",
-    "generated_at": "2026-08-01T19:58:09.742636+00:00",
+    "generated_at": "2026-08-01T21:26:49.578645+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1723,7 +1723,7 @@
     "source": "plan_swing_weekly_band95",
     "t1": {
       "price": 320.8521,
-      "basis": "band 95% (atteignable) · touche hist. 14% (sans stop)",
+      "basis": "band 95% (atteignable) · touche hist. 15% (sans stop)",
       "rr": 0.75,
       "rr_basis": "entry_mid",
       "distance_pct": -5.49
@@ -1770,7 +1770,7 @@
           "rr": 0.12,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4284,
+          "p_touch": 0.4283,
           "distance_pct": 0.98
         },
         "t2": {
@@ -1779,7 +1779,7 @@
           "rr": 0.25,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4284,
+          "p_touch": 0.4283,
           "distance_pct": 1.97
         },
         "t3": {
@@ -1788,7 +1788,7 @@
           "rr": 0.37,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8099,
+          "p_touch": 0.81,
           "distance_pct": 2.95
         }
       }
@@ -1810,11 +1810,11 @@
       "targets": {
         "t1": {
           "price": 320.8521,
-          "basis": "band 95% (atteignable) · touche hist. 14% (sans stop)",
+          "basis": "band 95% (atteignable) · touche hist. 15% (sans stop)",
           "rr": 0.75,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.145,
+          "p_touch": 0.1451,
           "distance_pct": 2.2
         },
         "t2": {
@@ -1823,7 +1823,7 @@
           "rr": 1.51,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 4.4
         },
         "t3": {
@@ -1832,7 +1832,7 @@
           "rr": 2.26,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7241,
+          "p_touch": 0.724,
           "distance_pct": 6.6
         }
       }
@@ -1858,7 +1858,7 @@
           "rr": 0.68,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2823,
+          "p_touch": 0.2824,
           "distance_pct": 3.11
         },
         "t2": {
@@ -1867,7 +1867,7 @@
           "rr": 1.36,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2823,
+          "p_touch": 0.2824,
           "distance_pct": 6.23
         },
         "t3": {
@@ -2171,7 +2171,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-01T19:57:52.216365+00:00",
+    "generated_at": "2026-08-01T21:26:32.716453+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7338,6 +7338,28 @@
     "halflife_sessions": 15.0,
     "ticker": "SAF"
   },
+  "empirical_fp_daily": {
+    "available": false,
+    "generated_at": "2026-08-01T21:26:22.094055+00:00",
+    "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
+    "min_neff": 30.0,
+    "halflife_sessions": 500.0,
+    "cost_pct_per_leg": 0.08,
+    "by_horizon": {
+      "intraday": {
+        "available": false,
+        "reason": "plan incomplet"
+      },
+      "swing": {
+        "available": false,
+        "reason": "plan incomplet"
+      },
+      "deep": {
+        "available": false,
+        "reason": "plan incomplet"
+      }
+    }
+  },
   "scenarios": {
     "available": true,
     "probabilities": {
@@ -7489,7 +7511,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-01T19:57:55.349485+00:00",
+    "generated_at": "2026-08-01T21:26:35.919524+00:00",
     "ticker": "SAF",
     "horizons_days": {
       "intraday": 2,
@@ -7649,6 +7671,9 @@
           "ev_pct_risk_gbm": -0.0131,
           "ev_pct_risk_empirical_5s": null,
           "n_eff_5s": null,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 5.0,
           "p_fill": 0.0524,
           "p_fill_source": "computed_entry_zone"
@@ -7664,6 +7689,9 @@
           "ev_pct_risk_gbm": -0.0303,
           "ev_pct_risk_empirical_5s": null,
           "n_eff_5s": null,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 8.0,
           "p_fill": 0.0512,
           "p_fill_source": "computed_entry_zone"
@@ -7679,6 +7707,9 @@
           "ev_pct_risk_gbm": 0.1291,
           "ev_pct_risk_empirical_5s": null,
           "n_eff_5s": null,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 7.0,
           "p_fill": 0.0293,
           "p_fill_source": "computed_entry_zone"
@@ -8611,7 +8642,7 @@
         "day": "Friday",
         "avg_return_pct": -0.002,
         "std_return_pct": 1.899,
-        "p_value": 0.9865,
+        "p_value": 0.9866,
         "n_samples": 254
       }
     ],

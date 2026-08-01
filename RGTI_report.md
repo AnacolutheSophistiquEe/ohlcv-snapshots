@@ -1,6 +1,6 @@
 # RGTI
 
-**Generated** : 2026-08-01T20:22:03.054673+00:00  
+**Generated** : 2026-08-01T21:49:20.999875+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  

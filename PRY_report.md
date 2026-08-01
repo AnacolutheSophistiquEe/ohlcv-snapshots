@@ -1,6 +1,6 @@
 # PRY
 
-**Generated** : 2026-08-01T20:04:00.781684+00:00  
+**Generated** : 2026-08-01T21:32:27.520183+00:00  
 **Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · €119.20  

@@ -6,7 +6,7 @@
     "exchange": "Borsa Italiana (Milan)",
     "currency": "EUR",
     "isin": "IT0004176001",
-    "generated_at": "2026-08-01T20:04:00.781684+00:00",
+    "generated_at": "2026-08-01T21:32:27.520183+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1472,7 +1472,7 @@
           "available": true,
           "n_samples": 53,
           "completion_rate": 0.434,
-          "avg_post_completion_return_pct": -5.59,
+          "avg_post_completion_return_pct": -5.7,
           "horizon_bars": 20,
           "low_sample": false,
           "confidence_is_fit_not_probability": true,
@@ -1839,7 +1839,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.4284,
+          "p_touch": 0.4283,
           "distance_pct": 4.07
         },
         "t2": {
@@ -1848,7 +1848,7 @@
           "rr": 2.19,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4284,
+          "p_touch": 0.4283,
           "distance_pct": 4.45
         },
         "t3": {
@@ -1857,7 +1857,7 @@
           "rr": 2.38,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4284,
+          "p_touch": 0.4283,
           "distance_pct": 4.84
         }
       }
@@ -1892,7 +1892,7 @@
           "rr": 1.37,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 7.21
         },
         "t3": {
@@ -1901,7 +1901,7 @@
           "rr": 2.06,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 10.82
         }
       }
@@ -1927,7 +1927,7 @@
           "rr": 0.64,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8075,
+          "p_touch": 0.8074,
           "distance_pct": 5.1
         },
         "t2": {
@@ -1945,7 +1945,7 @@
           "rr": 1.92,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2823,
+          "p_touch": 0.2824,
           "distance_pct": 15.3
         }
       }
@@ -2240,7 +2240,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-01T20:03:42.794410+00:00",
+    "generated_at": "2026-08-01T21:32:10.078455+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7483,6 +7483,28 @@
     "halflife_sessions": 15.0,
     "ticker": "PRY"
   },
+  "empirical_fp_daily": {
+    "available": false,
+    "generated_at": "2026-08-01T21:31:59.385535+00:00",
+    "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
+    "min_neff": 30.0,
+    "halflife_sessions": 500.0,
+    "cost_pct_per_leg": 0.08,
+    "by_horizon": {
+      "intraday": {
+        "available": false,
+        "reason": "plan incomplet"
+      },
+      "swing": {
+        "available": false,
+        "reason": "plan incomplet"
+      },
+      "deep": {
+        "available": false,
+        "reason": "plan incomplet"
+      }
+    }
+  },
   "scenarios": {
     "available": true,
     "probabilities": {
@@ -7624,7 +7646,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-01T20:03:46.634984+00:00",
+    "generated_at": "2026-08-01T21:32:14.131284+00:00",
     "ticker": "PRY",
     "horizons_days": {
       "intraday": 2,
@@ -7784,6 +7806,9 @@
           "ev_pct_risk_gbm": -0.0065,
           "ev_pct_risk_empirical_5s": -0.2865,
           "n_eff_5s": 30.9,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 3.0,
           "p_fill": 0.7889,
           "p_fill_source": "empirical_5s"
@@ -7799,6 +7824,9 @@
           "ev_pct_risk_gbm": -0.0441,
           "ev_pct_risk_empirical_5s": -0.2369,
           "n_eff_5s": 26.2,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 3.0,
           "p_fill": 0.6834,
           "p_fill_source": "empirical_5s"
@@ -7814,6 +7842,9 @@
           "ev_pct_risk_gbm": 0.0307,
           "ev_pct_risk_empirical_5s": -0.3347,
           "n_eff_5s": 29.2,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 4.0,
           "p_fill": 0.7959,
           "p_fill_source": "empirical_5s"

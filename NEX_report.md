@@ -1,6 +1,6 @@
 # NEX
 
-**Generated** : 2026-08-01T19:59:38.805716+00:00  
+**Generated** : 2026-08-01T21:28:13.235862+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · €132.10  

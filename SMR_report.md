@@ -1,6 +1,6 @@
 # SMR
 
-**Generated** : 2026-08-01T20:24:56.257138+00:00  
+**Generated** : 2026-08-01T21:52:10.399262+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.9 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  

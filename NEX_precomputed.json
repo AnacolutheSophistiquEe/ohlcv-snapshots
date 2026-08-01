@@ -6,7 +6,7 @@
     "exchange": "Euronext Paris",
     "currency": "EUR",
     "isin": "FR0000044448",
-    "generated_at": "2026-08-01T19:59:38.805716+00:00",
+    "generated_at": "2026-08-01T21:28:13.235862+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1434,9 +1434,9 @@
         "confidence_is_fit_not_probability": true,
         "historical_stats": {
           "available": true,
-          "n_samples": 31,
+          "n_samples": 30,
           "completion_rate": 1.0,
-          "avg_post_completion_return_pct": -4.24,
+          "avg_post_completion_return_pct": -4.56,
           "horizon_bars": 20,
           "low_sample": false,
           "confidence_is_fit_not_probability": true,
@@ -1780,7 +1780,7 @@
           "rr": 0.15,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8099,
+          "p_touch": 0.81,
           "distance_pct": 1.18
         },
         "t2": {
@@ -1789,7 +1789,7 @@
           "rr": 0.29,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8099,
+          "p_touch": 0.81,
           "distance_pct": 2.35
         },
         "t3": {
@@ -1798,7 +1798,7 @@
           "rr": 0.44,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4284,
+          "p_touch": 0.4283,
           "distance_pct": 3.53
         }
       }
@@ -1824,7 +1824,7 @@
           "rr": 0.72,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9119,
+          "p_touch": 0.912,
           "distance_pct": 2.63
         },
         "t2": {
@@ -1833,7 +1833,7 @@
           "rr": 1.44,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7241,
+          "p_touch": 0.724,
           "distance_pct": 5.26
         },
         "t3": {
@@ -1842,7 +1842,7 @@
           "rr": 2.16,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 7.89
         }
       }
@@ -1877,7 +1877,7 @@
           "rr": 1.34,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8075,
+          "p_touch": 0.8074,
           "distance_pct": 7.44
         },
         "t3": {
@@ -2181,7 +2181,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-01T19:59:19.749191+00:00",
+    "generated_at": "2026-08-01T21:27:54.983271+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7394,6 +7394,28 @@
     "halflife_sessions": 15.0,
     "ticker": "NEX"
   },
+  "empirical_fp_daily": {
+    "available": false,
+    "generated_at": "2026-08-01T21:27:44.473656+00:00",
+    "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
+    "min_neff": 30.0,
+    "halflife_sessions": 500.0,
+    "cost_pct_per_leg": 0.08,
+    "by_horizon": {
+      "intraday": {
+        "available": false,
+        "reason": "plan incomplet"
+      },
+      "swing": {
+        "available": false,
+        "reason": "plan incomplet"
+      },
+      "deep": {
+        "available": false,
+        "reason": "plan incomplet"
+      }
+    }
+  },
   "scenarios": {
     "available": true,
     "probabilities": {
@@ -7546,7 +7568,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-01T19:59:25.012704+00:00",
+    "generated_at": "2026-08-01T21:27:59.215547+00:00",
     "ticker": "NEX",
     "horizons_days": {
       "intraday": 2,
@@ -7706,6 +7728,9 @@
           "ev_pct_risk_gbm": -0.0403,
           "ev_pct_risk_empirical_5s": -0.0367,
           "n_eff_5s": 20.6,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 5.0,
           "p_fill": 0.5572,
           "p_fill_source": "empirical_5s"
@@ -7721,6 +7746,9 @@
           "ev_pct_risk_gbm": -0.053,
           "ev_pct_risk_empirical_5s": -0.0925,
           "n_eff_5s": 19.2,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 4.0,
           "p_fill": 0.408,
           "p_fill_source": "empirical_5s"
@@ -7736,6 +7764,9 @@
           "ev_pct_risk_gbm": -0.0754,
           "ev_pct_risk_empirical_5s": -0.0708,
           "n_eff_5s": 18.2,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 3.0,
           "p_fill": 0.4293,
           "p_fill_source": "empirical_5s"
