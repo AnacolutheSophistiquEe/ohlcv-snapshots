@@ -6,7 +6,7 @@
     "exchange": "Euronext Paris",
     "currency": "EUR",
     "isin": "FR0013227113",
-    "generated_at": "2026-08-01T20:01:07.284773+00:00",
+    "generated_at": "2026-08-01T21:29:39.083443+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1797,7 +1797,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.8099,
+          "p_touch": 0.81,
           "distance_pct": 9.33
         },
         "t2": {
@@ -1806,7 +1806,7 @@
           "rr": 2.41,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4284,
+          "p_touch": 0.4283,
           "distance_pct": 11.24
         },
         "t3": {
@@ -1815,7 +1815,7 @@
           "rr": 2.82,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4284,
+          "p_touch": 0.4283,
           "distance_pct": 13.14
         }
       }
@@ -1841,7 +1841,7 @@
           "rr": 2.39,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 28.64
         },
         "t2": {
@@ -1850,7 +1850,7 @@
           "rr": 2.42,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 29.01
         },
         "t3": {
@@ -1859,7 +1859,7 @@
           "rr": 2.45,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 29.38
         }
       }
@@ -1885,7 +1885,7 @@
           "rr": 0.77,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8075,
+          "p_touch": 0.8074,
           "distance_pct": 13.85
         },
         "t2": {
@@ -2198,7 +2198,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-01T20:00:48.482137+00:00",
+    "generated_at": "2026-08-01T21:29:21.447060+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7728,6 +7728,28 @@
     "halflife_sessions": 15.0,
     "ticker": "SOI"
   },
+  "empirical_fp_daily": {
+    "available": false,
+    "generated_at": "2026-08-01T21:29:10.438143+00:00",
+    "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
+    "min_neff": 30.0,
+    "halflife_sessions": 500.0,
+    "cost_pct_per_leg": 0.08,
+    "by_horizon": {
+      "intraday": {
+        "available": false,
+        "reason": "plan incomplet"
+      },
+      "swing": {
+        "available": false,
+        "reason": "plan incomplet"
+      },
+      "deep": {
+        "available": false,
+        "reason": "plan incomplet"
+      }
+    }
+  },
   "scenarios": {
     "available": true,
     "probabilities": {
@@ -7880,7 +7902,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-01T20:00:52.841182+00:00",
+    "generated_at": "2026-08-01T21:29:25.306694+00:00",
     "ticker": "SOI",
     "horizons_days": {
       "intraday": 2,
@@ -8040,6 +8062,9 @@
           "ev_pct_risk_gbm": 0.0831,
           "ev_pct_risk_empirical_5s": -0.1042,
           "n_eff_5s": 16.3,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 4.0,
           "p_fill": 0.4048,
           "p_fill_source": "empirical_5s"
@@ -8055,6 +8080,9 @@
           "ev_pct_risk_gbm": 0.2036,
           "ev_pct_risk_empirical_5s": 0.0401,
           "n_eff_5s": 9.0,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 5.0,
           "p_fill": 0.4881,
           "p_fill_source": "computed_entry_zone"
@@ -8070,6 +8098,9 @@
           "ev_pct_risk_gbm": 0.1877,
           "ev_pct_risk_empirical_5s": null,
           "n_eff_5s": null,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 3.0,
           "p_fill": 0.4321,
           "p_fill_source": "computed_entry_zone"

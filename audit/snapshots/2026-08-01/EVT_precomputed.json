@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE0005664809",
-    "generated_at": "2026-08-01T19:55:15.556686+00:00",
+    "generated_at": "2026-08-01T21:24:07.095288+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1729,7 +1729,7 @@
     },
     "t3": {
       "price": 4.0509,
-      "basis": "plafond band 95% · touche hist. 14% (sans stop)",
+      "basis": "plafond band 95% · touche hist. 15% (sans stop)",
       "rr": 2.79,
       "rr_basis": "entry_mid",
       "distance_pct": 18.66
@@ -1762,7 +1762,7 @@
           "rr": 1.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8099,
+          "p_touch": 0.81,
           "distance_pct": 3.49
         },
         "t2": {
@@ -1771,7 +1771,7 @@
           "rr": 1.99,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4284,
+          "p_touch": 0.4283,
           "distance_pct": 6.97
         },
         "t3": {
@@ -1780,7 +1780,7 @@
           "rr": 2.99,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1155,
+          "p_touch": 0.1154,
           "distance_pct": 10.46
         }
       }
@@ -1806,7 +1806,7 @@
           "rr": 0.93,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9119,
+          "p_touch": 0.912,
           "distance_pct": 7.8
         },
         "t2": {
@@ -1815,16 +1815,16 @@
           "rr": 1.86,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 15.59
         },
         "t3": {
           "price": 4.0509,
-          "basis": "plafond band 95% · touche hist. 14% (sans stop)",
+          "basis": "plafond band 95% · touche hist. 15% (sans stop)",
           "rr": 2.79,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.145,
+          "p_touch": 0.1451,
           "distance_pct": 23.39
         }
       }
@@ -1850,7 +1850,7 @@
           "rr": 0.86,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8075,
+          "p_touch": 0.8074,
           "distance_pct": 11.02
         },
         "t2": {
@@ -1868,7 +1868,7 @@
           "rr": 2.57,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2823,
+          "p_touch": 0.2824,
           "distance_pct": 33.07
         }
       }
@@ -2163,7 +2163,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-01T19:54:57.249034+00:00",
+    "generated_at": "2026-08-01T21:23:50.022427+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7406,6 +7406,28 @@
     "halflife_sessions": 15.0,
     "ticker": "EVT"
   },
+  "empirical_fp_daily": {
+    "available": false,
+    "generated_at": "2026-08-01T21:23:39.323440+00:00",
+    "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
+    "min_neff": 30.0,
+    "halflife_sessions": 500.0,
+    "cost_pct_per_leg": 0.08,
+    "by_horizon": {
+      "intraday": {
+        "available": false,
+        "reason": "plan incomplet"
+      },
+      "swing": {
+        "available": false,
+        "reason": "plan incomplet"
+      },
+      "deep": {
+        "available": false,
+        "reason": "plan incomplet"
+      }
+    }
+  },
   "scenarios": {
     "available": true,
     "probabilities": {
@@ -7547,7 +7569,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-01T19:55:00.916729+00:00",
+    "generated_at": "2026-08-01T21:23:53.087401+00:00",
     "ticker": "EVT",
     "horizons_days": {
       "intraday": 2,
@@ -7707,6 +7729,9 @@
           "ev_pct_risk_gbm": 0.0097,
           "ev_pct_risk_empirical_5s": -0.035,
           "n_eff_5s": 18.3,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 1.0,
           "p_fill": 0.4394,
           "p_fill_source": "empirical_5s"
@@ -7722,6 +7747,9 @@
           "ev_pct_risk_gbm": -0.0593,
           "ev_pct_risk_empirical_5s": -0.0907,
           "n_eff_5s": 12.8,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 1.0,
           "p_fill": 0.3517,
           "p_fill_source": "empirical_5s"
@@ -7737,6 +7765,9 @@
           "ev_pct_risk_gbm": -0.0958,
           "ev_pct_risk_empirical_5s": -0.2107,
           "n_eff_5s": 15.3,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 2.0,
           "p_fill": 0.4475,
           "p_fill_source": "empirical_5s"

@@ -6,7 +6,7 @@
     "exchange": "KRX (KOSPI)",
     "currency": "KRW",
     "isin": "KR7298040007",
-    "generated_at": "2026-08-01T20:09:42.566424+00:00",
+    "generated_at": "2026-08-01T21:37:51.967078+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1843,7 +1843,7 @@
           "rr": 3.87,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.4284,
+          "p_touch": 0.4283,
           "distance_pct": 14.21
         },
         "t3": {
@@ -1852,7 +1852,7 @@
           "rr": 3.94,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4284,
+          "p_touch": 0.4283,
           "distance_pct": 14.47
         }
       }
@@ -1887,7 +1887,7 @@
           "rr": 2.14,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 25.68
         },
         "t3": {
@@ -1896,7 +1896,7 @@
           "rr": 2.7,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 32.36
         }
       }
@@ -2235,7 +2235,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-01T20:09:24.019955+00:00",
+    "generated_at": "2026-08-01T21:37:34.153566+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7068,6 +7068,16 @@
     "halflife_sessions": 15.0,
     "ticker": "298040"
   },
+  "empirical_fp_daily": {
+    "available": false,
+    "generated_at": "2026-08-01T21:37:22.963587+00:00",
+    "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
+    "min_neff": 30.0,
+    "halflife_sessions": 500.0,
+    "cost_pct_per_leg": 0.08,
+    "by_horizon": {},
+    "reason": "historique journalier trop court (243 barres)"
+  },
   "scenarios": {
     "available": true,
     "probabilities": {
@@ -7209,7 +7219,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-01T20:09:28.670888+00:00",
+    "generated_at": "2026-08-01T21:37:38.601160+00:00",
     "ticker": "298040",
     "horizons_days": {
       "intraday": 2,
@@ -7369,6 +7379,9 @@
           "ev_pct_risk_gbm": -0.2368,
           "ev_pct_risk_empirical_5s": -0.0879,
           "n_eff_5s": 27.4,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 7.0,
           "p_fill": 0.7168,
           "p_fill_source": "empirical_5s"
@@ -7384,6 +7397,9 @@
           "ev_pct_risk_gbm": 0.0811,
           "ev_pct_risk_empirical_5s": -0.0183,
           "n_eff_5s": 16.0,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 2.0,
           "p_fill": 0.393,
           "p_fill_source": "empirical_5s"
@@ -7399,6 +7415,9 @@
           "ev_pct_risk_gbm": 0.0827,
           "ev_pct_risk_empirical_5s": -0.1466,
           "n_eff_5s": 17.5,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 2.0,
           "p_fill": 0.4841,
           "p_fill_source": "empirical_5s"

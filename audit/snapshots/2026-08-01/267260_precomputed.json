@@ -6,7 +6,7 @@
     "exchange": "KRX (KOSPI)",
     "currency": "KRW",
     "isin": "KR7267260008",
-    "generated_at": "2026-08-01T20:08:17.314596+00:00",
+    "generated_at": "2026-08-01T21:36:31.516987+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1872,7 +1872,7 @@
           "rr": 1.62,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 18.55
         },
         "t3": {
@@ -1881,7 +1881,7 @@
           "rr": 2.43,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4418,
+          "p_touch": 0.4419,
           "distance_pct": 27.82
         }
       }
@@ -1907,7 +1907,7 @@
           "rr": 0.74,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9365,
+          "p_touch": 0.9366,
           "distance_pct": 13.11
         },
         "t2": {
@@ -1925,7 +1925,7 @@
           "rr": 2.22,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2824,
+          "p_touch": 0.2823,
           "distance_pct": 39.34
         }
       }
@@ -2220,7 +2220,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-01T20:07:58.409714+00:00",
+    "generated_at": "2026-08-01T21:36:13.626666+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -6752,6 +6752,16 @@
     "halflife_sessions": 15.0,
     "ticker": "267260"
   },
+  "empirical_fp_daily": {
+    "available": false,
+    "generated_at": "2026-08-01T21:36:02.094686+00:00",
+    "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
+    "min_neff": 30.0,
+    "halflife_sessions": 500.0,
+    "cost_pct_per_leg": 0.08,
+    "by_horizon": {},
+    "reason": "historique journalier trop court (243 barres)"
+  },
   "scenarios": {
     "available": true,
     "probabilities": {
@@ -6893,7 +6903,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-01T20:08:03.146309+00:00",
+    "generated_at": "2026-08-01T21:36:17.987816+00:00",
     "ticker": "267260",
     "horizons_days": {
       "intraday": 2,
@@ -7053,6 +7063,9 @@
           "ev_pct_risk_gbm": -0.1923,
           "ev_pct_risk_empirical_5s": -0.1058,
           "n_eff_5s": 33.6,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 6.0,
           "p_fill": 0.8276,
           "p_fill_source": "empirical_5s"
@@ -7068,6 +7081,9 @@
           "ev_pct_risk_gbm": 0.0051,
           "ev_pct_risk_empirical_5s": -0.12,
           "n_eff_5s": 25.4,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 1.0,
           "p_fill": 0.5776,
           "p_fill_source": "empirical_5s"
@@ -7083,6 +7099,9 @@
           "ev_pct_risk_gbm": 0.0094,
           "ev_pct_risk_empirical_5s": -0.0664,
           "n_eff_5s": 27.3,
+          "ev_pct_risk_empirical_daily": null,
+          "n_eff_daily": null,
+          "ci95_empirical_daily": null,
           "composite_score": 2.0,
           "p_fill": 0.7267,
           "p_fill_source": "empirical_5s"
@@ -15013,11 +15032,11 @@
     "yang_zhang_20d_annualized_pct": 113.25,
     "volatility_cone": {
       "current_rv_5d": 208.98058051956318,
-      "p10": 29.234238901863858,
-      "p25": 38.93703648406678,
-      "p50": 55.47732254602964,
-      "p75": 72.90003029816685,
-      "p90": 92.05483473423803,
+      "p10": 29.234229180409287,
+      "p25": 38.93703666298205,
+      "p50": 55.47729208593485,
+      "p75": 72.90005197605211,
+      "p90": 92.05485709674153,
       "current_percentile": 100.0
     },
     "fit_source": "long_csv",
