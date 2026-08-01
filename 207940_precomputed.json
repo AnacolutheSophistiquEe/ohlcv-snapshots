@@ -6,7 +6,7 @@
     "exchange": "KRX (KOSPI)",
     "currency": "KRW",
     "isin": "KR7207940008",
-    "generated_at": "2026-07-31T21:55:22.297175+00:00",
+    "generated_at": "2026-08-01T20:12:33.199504+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1726,29 +1726,29 @@
       "distance_pct": -14.85
     },
     "recommended": "swing_plan",
-    "recommended_price": 1339113.718,
-    "recommended_distance_pct": -9.82
+    "recommended_price": 1288196.4286,
+    "recommended_distance_pct": -13.25
   },
   "target_multi": {
     "source": "plan_swing_weekly_band95",
     "t1": {
       "price": 1426147.564,
       "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-      "rr": 2.0,
+      "rr": 0.73,
       "rr_basis": "entry_mid",
       "distance_pct": -3.96
     },
     "t2": {
       "price": 1484170.1279,
       "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-      "rr": 4.0,
+      "rr": 1.45,
       "rr_basis": "entry_mid",
       "distance_pct": -0.06
     },
     "t3": {
       "price": 1542192.6919,
       "basis": "plafond band 95% · touche hist. 72% (sans stop)",
-      "rr": 6.0,
+      "rr": 2.18,
       "rr_basis": "entry_mid",
       "distance_pct": 3.85
     }
@@ -1780,7 +1780,7 @@
           "rr": 0.49,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.8099,
+          "p_touch": 0.81,
           "distance_pct": 3.94
         },
         "t2": {
@@ -1789,7 +1789,7 @@
           "rr": 0.6,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8099,
+          "p_touch": 0.81,
           "distance_pct": 4.81
         },
         "t3": {
@@ -1798,7 +1798,7 @@
           "rr": 0.71,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8099,
+          "p_touch": 0.81,
           "distance_pct": 5.69
         }
       }
@@ -1808,41 +1808,41 @@
       "entry_low": 1356520.4872,
       "entry_high": 1379729.5128,
       "entry_mid": 1368125.0,
-      "stop_price": 1339113.718,
-      "stop_basis": "R/R 2 (resserré, parité Claude)",
+      "stop_price": 1288196.4286,
+      "stop_basis": "plancher anti-bruit (R/R<2)",
       "stop_capped": false,
       "noise_stop_5s": null,
       "rr_min_target": 2.0,
-      "rr_enforced": true,
-      "stop_distance_pct": -2.12,
-      "stop_distance_pct_from_spot": -9.82,
+      "rr_enforced": false,
+      "stop_distance_pct": -5.84,
+      "stop_distance_pct_from_spot": -13.25,
       "target_ceiling_band95_pct": 12.72,
       "targets": {
         "t1": {
           "price": 1426147.564,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 2.0,
+          "rr": 0.73,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7241,
+          "p_touch": 0.724,
           "distance_pct": 4.24
         },
         "t2": {
           "price": 1484170.1279,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 4.0,
+          "rr": 1.45,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9119,
+          "p_touch": 0.912,
           "distance_pct": 8.48
         },
         "t3": {
           "price": 1542192.6919,
           "basis": "plafond band 95% · touche hist. 72% (sans stop)",
-          "rr": 6.0,
+          "rr": 2.18,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7241,
+          "p_touch": 0.724,
           "distance_pct": 12.72
         }
       }
@@ -1852,29 +1852,29 @@
       "entry_low": 1288728.4498,
       "entry_high": 1320021.5502,
       "entry_mid": 1304375.0,
-      "stop_price": 1265258.6246,
-      "stop_basis": "R/R 2 (resserré, parité Claude)",
+      "stop_price": 1184482.1429,
+      "stop_basis": "plancher anti-bruit (R/R<2)",
       "stop_capped": false,
       "noise_stop_5s": null,
       "rr_min_target": 2.0,
-      "rr_enforced": true,
-      "stop_distance_pct": -3.0,
-      "stop_distance_pct_from_spot": -14.8,
+      "rr_enforced": false,
+      "stop_distance_pct": -9.19,
+      "stop_distance_pct_from_spot": -20.24,
       "target_ceiling_band95_pct": 17.99,
       "targets": {
         "t1": {
           "price": 1382607.7508,
           "basis": "band 95% (atteignable) · touche hist. 59% (sans stop)",
-          "rr": 2.0,
+          "rr": 0.65,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5896,
+          "p_touch": 0.5897,
           "distance_pct": 6.0
         },
         "t2": {
           "price": 1460840.5017,
           "basis": "band 95% (atteignable) · touche hist. 94% (sans stop)",
-          "rr": 4.0,
+          "rr": 1.31,
           "rr_basis": "entry_mid",
           "capped": true,
           "p_touch": 0.9365,
@@ -1883,10 +1883,10 @@
         "t3": {
           "price": 1539073.2525,
           "basis": "plafond band 95% · touche hist. 81% (sans stop)",
-          "rr": 6.0,
+          "rr": 1.96,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8075,
+          "p_touch": 0.8074,
           "distance_pct": 17.99
         }
       }
@@ -1899,7 +1899,7 @@
     "basis_used": 1368125.0,
     "s0_used": 1485000.0,
     "entry_used": null,
-    "stop_used": 1339113.718,
+    "stop_used": 1288196.4286,
     "per_horizon_stops": true,
     "sigma_daily_pct": 3.4589,
     "sigma_intraday_pct": 3.306,
@@ -1908,7 +1908,7 @@
     "mu_cap_pct_daily": 0.1,
     "mu_was_capped": true,
     "drift_source": "hmm_mu_effective_capped",
-    "risk_per_share": 29011.282,
+    "risk_per_share": 79928.5714,
     "cost_per_share": 1094.5,
     "n_paths": 20000,
     "method": "empirical_first_passage_primary_gbm_fallback",
@@ -2010,72 +2010,72 @@
       "swing": {
         "horizon_sessions": 5,
         "basis_used": 1368125.0,
-        "stop_used": 1339113.718,
-        "risk_per_share": 29011.282,
+        "stop_used": 1288196.4286,
+        "risk_per_share": 79928.5714,
         "targets": {
           "t1": {
             "price": 1426147.564,
-            "ev_per_share_gross": -34.390889,
-            "terminal_mean_no_touch": 1374623.8541,
-            "p_hit_upper": 0.2662,
-            "p_hit_lower_first": 0.5702,
-            "p_no_touch": 0.1636,
+            "ev_per_share_gross": -3825.919205,
+            "terminal_mean_no_touch": 1353100.7763,
+            "p_hit_upper": 0.3537,
+            "p_hit_lower_first": 0.2256,
+            "p_no_touch": 0.4207,
             "n": 238,
             "n_eff": 209.0,
             "prob_method": "empirical_daily_first_passage",
             "gbm_reference": {
-              "p_hit_upper": 0.3346,
-              "p_hit_lower_first": 0.6604,
-              "ev_per_share_gross": 322.057018
+              "p_hit_upper": 0.4833,
+              "p_hit_lower_first": 0.3938,
+              "ev_per_share_gross": -5147.935096
             },
-            "ev_per_share": -1128.8909,
-            "ev_pct_risk": -0.0389,
+            "ev_per_share": -4920.4192,
+            "ev_pct_risk": -0.0616,
             "status": "negative_ev",
-            "reward_risk": 2.0,
-            "kelly_fraction": 0.0,
-            "kelly_quarter": 0.0
+            "reward_risk": 0.7259,
+            "kelly_fraction": 0.0429,
+            "kelly_quarter": 0.0107
           },
           "t2": {
             "price": 1484170.1279,
-            "ev_per_share_gross": 2116.304877,
-            "terminal_mean_no_touch": 1384234.5846,
-            "p_hit_upper": 0.1335,
-            "p_hit_lower_first": 0.6058,
-            "p_no_touch": 0.2606,
+            "ev_per_share_gross": -3327.560603,
+            "terminal_mean_no_touch": 1364414.8531,
+            "p_hit_upper": 0.1548,
+            "p_hit_lower_first": 0.2383,
+            "p_no_touch": 0.6069,
             "n": 238,
             "n_eff": 209.0,
             "prob_method": "empirical_daily_first_passage",
             "gbm_reference": {
-              "p_hit_upper": 0.1711,
-              "p_hit_lower_first": 0.7469,
-              "ev_per_share_gross": 1588.951133
+              "p_hit_upper": 0.2261,
+              "p_hit_lower_first": 0.4319,
+              "ev_per_share_gross": -3960.771351
             },
-            "ev_per_share": 1021.8049,
-            "ev_pct_risk": 0.0352,
-            "status": "below_threshold",
-            "reward_risk": 4.0,
+            "ev_per_share": -4422.0606,
+            "ev_pct_risk": -0.0553,
+            "status": "negative_ev",
+            "reward_risk": 1.4519,
             "kelly_fraction": 0.0,
             "kelly_quarter": 0.0
           },
           "t3": {
             "price": 1542192.6919,
-            "ev_per_share_gross": 1877.919785,
-            "terminal_mean_no_touch": 1403779.0194,
-            "p_hit_upper": 0.0451,
-            "p_hit_lower_first": 0.6188,
-            "p_no_touch": 0.3362,
+            "ev_per_share_gross": -3078.285191,
+            "terminal_mean_no_touch": 1377763.6403,
+            "p_hit_upper": 0.0524,
+            "p_hit_lower_first": 0.2383,
+            "p_no_touch": 0.7093,
             "n": 238,
             "n_eff": 209.0,
             "prob_method": "empirical_daily_first_passage",
             "gbm_reference": {
-              "p_hit_upper": 0.0701,
-              "p_hit_lower_first": 0.7564,
-              "ev_per_share_gross": 1878.505719
+              "p_hit_upper": 0.0862,
+              "p_hit_lower_first": 0.4341,
+              "ev_per_share_gross": -3430.640216
             },
-            "ev_per_share": 783.4198,
-            "ev_pct_risk": 0.027,
-            "status": "below_threshold",
-            "reward_risk": 6.0,
+            "ev_per_share": -4172.7852,
+            "ev_pct_risk": -0.0522,
+            "status": "negative_ev",
+            "reward_risk": 2.1778,
             "kelly_fraction": 0.0,
             "kelly_quarter": 0.0
           }
@@ -2086,81 +2086,81 @@
             "t2": 0.3,
             "t3": 0.2
           },
-          "ev_per_share": -101.22,
-          "ev_pct_risk": -0.0035,
-          "kelly_fraction": 0.0,
-          "kelly_quarter": 0.0
+          "ev_per_share": -4621.3848,
+          "ev_pct_risk": -0.0578,
+          "kelly_fraction": 0.0215,
+          "kelly_quarter": 0.0054
         }
       },
       "deep": {
         "horizon_sessions": 10,
         "basis_used": 1304375.0,
-        "stop_used": 1265258.6246,
-        "risk_per_share": 39116.3754,
+        "stop_used": 1184482.1429,
+        "risk_per_share": 119892.8571,
         "targets": {
           "t1": {
             "price": 1382607.7508,
-            "ev_per_share_gross": -6234.377195,
-            "terminal_mean_no_touch": 1310536.3001,
-            "p_hit_upper": 0.2343,
-            "p_hit_lower_first": 0.6467,
-            "p_no_touch": 0.119,
+            "ev_per_share_gross": -11936.359321,
+            "terminal_mean_no_touch": 1275117.7694,
+            "p_hit_upper": 0.3328,
+            "p_hit_lower_first": 0.2036,
+            "p_no_touch": 0.4636,
             "n": 233,
             "n_eff": 205.6,
             "prob_method": "empirical_daily_first_passage",
             "gbm_reference": {
-              "p_hit_upper": 0.3295,
-              "p_hit_lower_first": 0.6676,
-              "ev_per_share_gross": -295.33566
+              "p_hit_upper": 0.4991,
+              "p_hit_lower_first": 0.3537,
+              "ev_per_share_gross": -7340.791134
             },
-            "ev_per_share": -7277.8772,
-            "ev_pct_risk": -0.1861,
+            "ev_per_share": -12979.8593,
+            "ev_pct_risk": -0.1083,
             "status": "negative_ev",
-            "reward_risk": 2.0,
-            "kelly_fraction": 0.0,
-            "kelly_quarter": 0.0
+            "reward_risk": 0.6525,
+            "kelly_fraction": 0.0208,
+            "kelly_quarter": 0.0052
           },
           "t2": {
             "price": 1460840.5017,
-            "ev_per_share_gross": -3842.869797,
-            "terminal_mean_no_touch": 1331864.0209,
-            "p_hit_upper": 0.1083,
-            "p_hit_lower_first": 0.6801,
-            "p_no_touch": 0.2117,
+            "ev_per_share_gross": -5788.749521,
+            "terminal_mean_no_touch": 1296504.685,
+            "p_hit_upper": 0.1514,
+            "p_hit_lower_first": 0.2036,
+            "p_no_touch": 0.645,
             "n": 233,
             "n_eff": 205.6,
             "prob_method": "empirical_daily_first_passage",
             "gbm_reference": {
-              "p_hit_upper": 0.1661,
-              "p_hit_lower_first": 0.7666,
-              "ev_per_share_gross": -439.974022
+              "p_hit_upper": 0.2313,
+              "p_hit_lower_first": 0.3926,
+              "ev_per_share_gross": -8292.646461
             },
-            "ev_per_share": -4886.3698,
-            "ev_pct_risk": -0.1249,
+            "ev_per_share": -6832.2495,
+            "ev_pct_risk": -0.057,
             "status": "negative_ev",
-            "reward_risk": 4.0,
+            "reward_risk": 1.305,
             "kelly_fraction": 0.0,
             "kelly_quarter": 0.0
           },
           "t3": {
             "price": 1539073.2525,
-            "ev_per_share_gross": -5409.63733,
-            "terminal_mean_no_touch": 1364157.5826,
+            "ev_per_share_gross": -9950.391927,
+            "terminal_mean_no_touch": 1319268.6002,
             "p_hit_upper": 0.0118,
-            "p_hit_lower_first": 0.6801,
-            "p_no_touch": 0.3081,
+            "p_hit_lower_first": 0.2036,
+            "p_no_touch": 0.7846,
             "n": 233,
             "n_eff": 205.6,
             "prob_method": "empirical_daily_first_passage",
             "gbm_reference": {
-              "p_hit_upper": 0.0703,
-              "p_hit_lower_first": 0.7787,
-              "ev_per_share_gross": -806.521798
+              "p_hit_upper": 0.0897,
+              "p_hit_lower_first": 0.3951,
+              "ev_per_share_gross": -8612.754143
             },
-            "ev_per_share": -6453.1373,
-            "ev_pct_risk": -0.165,
+            "ev_per_share": -10993.8919,
+            "ev_pct_risk": -0.0917,
             "status": "negative_ev",
-            "reward_risk": 6.0,
+            "reward_risk": 1.9576,
             "kelly_fraction": 0.0,
             "kelly_quarter": 0.0
           }
@@ -2171,17 +2171,17 @@
             "t2": 0.3,
             "t3": 0.2
           },
-          "ev_per_share": -6395.477,
-          "ev_pct_risk": -0.1635,
-          "kelly_fraction": 0.0,
-          "kelly_quarter": 0.0
+          "ev_per_share": -10738.3829,
+          "ev_pct_risk": -0.0896,
+          "kelly_fraction": 0.0104,
+          "kelly_quarter": 0.0026
         }
       }
     }
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-07-31T21:55:04.534810+00:00",
+    "generated_at": "2026-08-01T20:12:14.641923+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -6797,7 +6797,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-07-31T21:55:08.983480+00:00",
+    "generated_at": "2026-08-01T20:12:19.074402+00:00",
     "ticker": "207940",
     "horizons_days": {
       "intraday": 2,
@@ -6811,8 +6811,8 @@
         "type": "macro",
         "label": "SoFi Technologies (SOFI) Q2 2026 Earnings",
         "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -6826,8 +6826,8 @@
         "type": "macro",
         "label": "Siemens Energy Q2 FY2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -6841,8 +6841,8 @@
         "type": "macro",
         "label": "IonQ (IONQ) Q2 2026 Earnings — 2026-08-05 (estimé)",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -6857,7 +6857,7 @@
         "label": "Rheinmetall Q2 2026 Earnings",
         "importance": "high",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -6871,8 +6871,8 @@
         "type": "macro",
         "label": "Rigetti Computing Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -6885,8 +6885,8 @@
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 8,
+        "calendar_days": 11,
         "in_plan_horizon": [
           "deep"
         ],
@@ -6899,8 +6899,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 8,
+        "calendar_days": 11,
         "in_plan_horizon": [
           "deep"
         ],
@@ -6965,11 +6965,11 @@
       "swing": {
         "plan_id": "B",
         "rating": "Pass (negative EV)",
-        "reason": "ev=-0.004 < 0 mais santé 6.0 ≥ 4 (actif sain, entrée non favorable)",
+        "reason": "ev=-0.058 < 0 mais santé 6.0 ≥ 4 (actif sain, entrée non favorable)",
         "inputs": {
-          "ev_pct_risk": -0.0035,
+          "ev_pct_risk": -0.0578,
           "ev_source": "gbm",
-          "ev_pct_risk_gbm": -0.0035,
+          "ev_pct_risk_gbm": -0.0578,
           "ev_pct_risk_empirical_5s": null,
           "n_eff_5s": null,
           "composite_score": 6.0,
@@ -6980,11 +6980,11 @@
       "deep": {
         "plan_id": "C",
         "rating": "Pass (negative EV)",
-        "reason": "ev=-0.164 < 0 mais santé 6.0 ≥ 4 (actif sain, entrée non favorable)",
+        "reason": "ev=-0.090 < 0 mais santé 6.0 ≥ 4 (actif sain, entrée non favorable)",
         "inputs": {
-          "ev_pct_risk": -0.1635,
+          "ev_pct_risk": -0.0896,
           "ev_source": "gbm",
-          "ev_pct_risk_gbm": -0.1635,
+          "ev_pct_risk_gbm": -0.0896,
           "ev_pct_risk_empirical_5s": null,
           "n_eff_5s": null,
           "composite_score": 6.0,
@@ -6997,7 +6997,7 @@
       "plan_id": "B",
       "horizon": "swing",
       "rating": "Pass (negative EV)",
-      "reason": "ev=-0.004 < 0 mais santé 6.0 ≥ 4 (actif sain, entrée non favorable)",
+      "reason": "ev=-0.058 < 0 mais santé 6.0 ≥ 4 (actif sain, entrée non favorable)",
       "selected_by": "composite_plan (source unique §6)"
     }
   },
@@ -15178,7 +15178,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-31T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -15232,7 +15232,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-31T04:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -15273,7 +15273,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-07-31T05:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

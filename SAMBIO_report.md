@@ -1,13 +1,13 @@
 # 207940
 
-**Generated** : 2026-07-31T21:55:22.297175+00:00  
+**Generated** : 2026-08-01T20:12:33.199504+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite extreme · ₩1485000.00  
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié  
-> ↳ spot ₩1485000.00 (+8.5% vs entrée) · entrée ₩1368125.00 · stop ₩1339113.72 · T1 ₩1426147.56 · R/R 2.0  
-> ↳ P(T1 av. stop) 27 % · EV/risk -0.004 · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ spot ₩1485000.00 (+8.5% vs entrée) · entrée ₩1368125.00 · stop ₩1288196.43 · T1 ₩1426147.56 · R/R 0.73  
+> ↳ P(T1 av. stop) 35 % · EV/risk -0.058 · ¼-Kelly 0.005 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 149 % hors [0,100] (R² max 0.64). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
@@ -30,17 +30,17 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass (negative EV)'.
 **Plan B — swing** (order_type LMT)
 - Entry (zone de repli) : ₩1356520.49–₩1379729.51 (mid ₩1368125.00)
 - Spot actuel : ₩1485000.00 (+8.5% au-dessus de la zone — repli à attendre)
-- Stop : ₩1339113.72 (stop swing_plan-based (-9.82%))
-- Targets : T1 ₩1426147.56 · R/R 2.0 | T2 ₩1484170.13 · R/R 4.0 | T3 ₩1542192.69 · R/R 6.0
+- Stop : ₩1288196.43 (stop swing_plan-based (-13.25%))
+- Targets : T1 ₩1426147.56 · R/R 0.73 | T2 ₩1484170.13 · R/R 1.45 | T3 ₩1542192.69 · R/R 2.18
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩1339113.72
+- Invalidation : close sous ₩1288196.43
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.004 | EV/share : ₩-101.220 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 27 % | T2 13 % | T3 5 %
-- Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- EV/risk : -0.058 | EV/share : ₩-4621.385 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 35 % | T2 15 % | T3 5 %
+- Kelly (position) : f* 0.021 | ¼-Kelly 0.005 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 46.2 | bear 19.0 | side 34.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 400.0
@@ -159,5 +159,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (80188 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (80216 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

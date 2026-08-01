@@ -1,6 +1,6 @@
 # 012450
 
-**Generated** : 2026-07-31T21:54:00.553187+00:00  
+**Generated** : 2026-08-01T20:11:07.940194+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.6 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
@@ -38,7 +38,7 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 **Plan A — intraday** (order_type LMT)
 - Entry (zone de repli) : ₩893283.78–₩904370.63 (mid ₩898827.20)
 - Spot actuel : ₩917000.00 (+2.0% au-dessus de la zone — repli à attendre)
-- Stop : ₩826921.03 (stop swing_plan-based (-7.65%))
+- Stop : ₩826921.03 (stop swing_plan-based (-12.83%))
 - Targets : T1 ₩971115.65 · R/R 1.01 | T2 ₩976421.15 · R/R 1.08 | T3 ₩981726.65 · R/R 1.15
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩826921.03
@@ -58,8 +58,8 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
   - **intraday** (entrée dip −1.978% → cible +8.043% / stop −8.0%, p_fill 79%, n_eff≈32.5) : P(cible|rempli) **0%** · **EV/risk -0.125** (×p_fill ; si rempli -1.26% du capital)
-  - **swing** (entrée dip −4.363% → cible +6.874% / stop −3.437%, p_fill 58%, n_eff≈26.1) : P(cible|rempli) **25%** · **EV/risk -0.166** (×p_fill ; si rempli -0.99% du capital)
-  - **deep** (entrée dip −6.736% → cible +9.722% / stop −4.861%, p_fill 68%, n_eff≈25.3) : P(cible|rempli) **30%** · **EV/risk -0.020** (×p_fill ; si rempli -0.14% du capital)
+  - **swing** (entrée dip −4.355% → cible +6.874% / stop −8.861%, p_fill 58%, n_eff≈26.1) : P(cible|rempli) **44%** · **EV/risk -0.096** (×p_fill ; si rempli -1.47% du capital)
+  - **deep** (entrée dip −6.738% → cible +9.722% / stop −13.631%, p_fill 68%, n_eff≈25.3) : P(cible|rempli) **45%** · **EV/risk -0.026** (×p_fill ; si rempli -0.51% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→74% · +1.0%→59% · +2.0%→40% · +3.0%→22% · +5.0%→11% · +8.0%→1%
 - Range intraday médian 5.9% (p90 8.74%) · excursion haute méd. +1.78% / basse méd. −3.17%
 - Profil de vol intra : ouverture 4.132% vs midi 1.143% vs clôture 1.166% _(ouverture ~3.6× plus volatile → privilégier/éviter selon le setup)_
@@ -167,5 +167,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (83633 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (83637 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

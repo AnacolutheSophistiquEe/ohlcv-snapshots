@@ -1,18 +1,18 @@
 # SOI
 
-**Generated** : 2026-07-31T21:44:20.904262+00:00  
+**Generated** : 2026-08-01T20:01:07.284773+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 8.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 5/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite high · €104.00  
+**Subtitle** : indeterminate · volatilite high · €103.60  
 
-> 🟡 **WAIT-FOR-DIP** — spot +13.4 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot €104.00 (+13.4% vs entrée) · entrée €91.71 · stop €80.71 · T1 €117.75 · R/R 2.37  
-> ↳ P(T1 av. stop) 14 % · EV/risk 0.202 · ¼-Kelly 0.005 · _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_  
+> 🟡 **WAIT-FOR-DIP** — spot +13.2 % au-dessus de la zone d'entrée — attendre le repli  
+> ↳ spot €103.60 (+13.2% vs entrée) · entrée €91.53 · stop €80.55 · T1 €117.75 · R/R 2.39  
+> ↳ P(T1 av. stop) 14 % · EV/risk 0.204 · ¼-Kelly 0.005 · _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -85 % hors [0,100] (R² max 0.13). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
+>   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -88 % hors [0,100] (R² max 0.13). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
 ## Régime & alignement multi-TF
@@ -30,29 +30,29 @@ Plan privilegie B (swing), composite 5/10, conviction 'Neutral'.
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : €89.91–€93.52 (mid €91.71)
-- Spot actuel : €104.00 (+13.4% au-dessus de la zone — repli à attendre)
-- Stop : €80.71 (stop swing_plan-based (-22.4%))
-- Targets : T1 €117.75 · R/R 2.37 | T2 €118.21 · R/R 2.41 | T3 €118.66 · R/R 2.45
+- Entry (zone de repli) : €89.73–€93.33 (mid €91.53)
+- Spot actuel : €103.60 (+13.2% au-dessus de la zone — repli à attendre)
+- Stop : €80.55 (stop swing_plan-based (-22.25%))
+- Targets : T1 €117.75 · R/R 2.39 | T2 €118.09 · R/R 2.42 | T3 €118.43 · R/R 2.45
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €80.71
+- Invalidation : close sous €80.55
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.202 | EV/share : €2.220 | p_fill : —
+- EV/risk : 0.204 | EV/share : €2.236 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 14 % | T2 14 % | T3 14 %
-- Kelly (position) : f* 0.021 | ¼-Kelly 0.005 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Kelly (position) : f* 0.022 | ¼-Kelly 0.005 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 21.7 | bear 10.3 | side 68.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional réel 208.0 (= 2 part(s) × prix) · cible 288.0
+- Sizing : notional réel 207.0 (= 2 part(s) × prix) · cible 288.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −5.373% → cible +8.997% / stop −4.498%, p_fill 36%, n_eff≈15.2) : P(cible|rempli) **2%** · **EV/risk -0.126** (×p_fill ; si rempli -1.59% du capital)
-  - **swing** (entrée dip −11.818% → cible +28.39% / stop −12.0%, p_fill 21%, n_eff≈9.0) : P(cible|rempli) **6%** · **EV/risk +0.043** (×p_fill ; si rempli +2.43% du capital)
+  - **intraday** (entrée dip −5.292% → cible +9.33% / stop −4.665%, p_fill 40%, n_eff≈16.3) : P(cible|rempli) **1%** · **EV/risk -0.104** (×p_fill ; si rempli -1.20% du capital)
+  - **swing** (entrée dip −11.648% → cible +28.642% / stop −12.0%, p_fill 21%, n_eff≈9.0) : P(cible|rempli) **6%** · **EV/risk +0.040** (×p_fill ; si rempli +2.29% du capital)
   - **deep** : indisponible (échantillon insuffisant (n=7, n_eff=5))
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→86% · +1.0%→78% · +2.0%→69% · +3.0%→59% · +5.0%→45% · +8.0%→22%
 - Range intraday médian 9.52% (p90 17.62%) · excursion haute méd. +3.99% / basse méd. −3.47%
@@ -159,19 +159,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 53.8  _(neutre)_
+- **RSI** : 53.5  _(neutre)_
 - **ADX** : 15.4  _(pas de tendance nette)_
-- **MACD** : hist 1.838  _(pas de croisement recent)_
-- **BB** : %B 0.59 · largeur 34.9%
-- **ATR** : 10.78 (80.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.147  _(distribution)_
-- **Vol ratio** : 1.28  _(volume normal)_
+- **MACD** : hist 1.812  _(pas de croisement recent)_
+- **BB** : %B 0.58 · largeur 34.9%
+- **ATR** : 10.79 (80.0e pct 1a)  _(volatilite elevee)_
+- **OBV/CMF** : OBV falling · CMF -0.123  _(distribution)_
+- **Vol ratio** : 0.63  _(volume normal)_
 - **Choppiness** : 44.8  _(transition)_
-- **MA** : MA20 100.69 · MA50 122.52 · MA200 70.99  _(prix > MA20)_
-- **Dist MA** : MA20 +3.3% · MA50 -15.1% · MA200 +46.5%
+- **MA** : MA20 100.67 · MA50 122.51 · MA200 70.99  _(prix > MA20)_
+- **Dist MA** : MA20 +2.9% · MA50 -15.4% · MA200 +45.9%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (98057 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (98073 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

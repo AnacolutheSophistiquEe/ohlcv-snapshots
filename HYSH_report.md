@@ -1,6 +1,6 @@
 # 298040
 
-**Generated** : 2026-07-31T21:52:37.877754+00:00  
+**Generated** : 2026-08-01T20:09:42.566424+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 8.8 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
@@ -29,7 +29,7 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 **Plan A — intraday** (order_type LMT)
 - Entry (zone de repli) : ₩2319119.21–₩2358146.28 (mid ₩2338632.74)
 - Spot actuel : ₩2417000.00 (+3.4% au-dessus de la zone — repli à attendre)
-- Stop : ₩2252747.03 (stop swing_plan-based (-15.95%))
+- Stop : ₩2252747.03 (stop swing_plan-based (-18.28%))
 - Targets : T1 ₩2436200.42 · R/R 1.14 | T2 ₩2671000.00 · R/R 3.87 | T3 ₩2677039.20 · R/R 3.94
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩2252747.03
@@ -49,7 +49,7 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
   - **intraday** (entrée dip −3.247% → cible +4.172% / stop −3.672%, p_fill 72%, n_eff≈27.4) : P(cible|rempli) **34%** · **EV/risk -0.088** (×p_fill ; si rempli -0.45% du capital)
-  - **swing** (entrée dip −7.129% → cible +18.997% / stop −9.499%, p_fill 39%, n_eff≈16.0) : P(cible|rempli) **12%** · **EV/risk -0.014** (×p_fill ; si rempli -0.34% du capital)
+  - **swing** (entrée dip −7.136% → cible +18.997% / stop −12.0%, p_fill 39%, n_eff≈16.0) : P(cible|rempli) **12%** · **EV/risk -0.018** (×p_fill ; si rempli -0.56% du capital)
   - **deep** (entrée dip −11.024% → cible +41.375% / stop −18.0%, p_fill 48%, n_eff≈17.5) : P(cible|rempli) **0%** · **EV/risk -0.147** (×p_fill ; si rempli -5.45% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→79% · +1.0%→61% · +2.0%→51% · +3.0%→38% · +5.0%→21% · +8.0%→6%
 - Range intraday médian 6.97% (p90 10.06%) · excursion haute méd. +2.1% / basse méd. −3.94%

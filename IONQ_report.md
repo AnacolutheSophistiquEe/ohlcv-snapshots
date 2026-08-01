@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-07-31T22:02:42.355314+00:00  
+**Generated** : 2026-08-01T20:20:30.681740+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
@@ -50,7 +50,7 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
   - **intraday** (entrée dip −1.345% → cible +8.161% / stop −4.08%, p_fill 77%, n_eff≈32.4) : P(cible|rempli) **6%** · **EV/risk -0.197** (×p_fill ; si rempli -1.04% du capital)
   - **swing** (entrée dip −2.965% → cible +18.498% / stop −9.249%, p_fill 74%, n_eff≈29.7) : P(cible|rempli) **5%** · **EV/risk -0.380** (×p_fill ; si rempli -4.77% du capital)
-  - **deep** (entrée dip −4.586% → cible +8.96% / stop −4.48%, p_fill 87%, n_eff≈32.3) : P(cible|rempli) **25%** · **EV/risk -0.192** (×p_fill ; si rempli -0.99% du capital)
+  - **deep** (entrée dip −4.578% → cible +8.96% / stop −11.163%, p_fill 87%, n_eff≈32.3) : P(cible|rempli) **28%** · **EV/risk -0.381** (×p_fill ; si rempli -4.88% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→88% · +1.0%→80% · +2.0%→65% · +3.0%→61% · +5.0%→31% · +8.0%→15%
 - Range intraday médian 7.68% (p90 12.54%) · excursion haute méd. +3.72% / basse méd. −3.27%
 - Profil de vol intra : ouverture 5.21% vs midi 1.572% vs clôture 1.683% _(ouverture ~3.3× plus volatile → privilégier/éviter selon le setup)_
@@ -143,15 +143,15 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Factor** : attribution factorielle indisponible
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
-**Options** : bullish
+**Options** : neutral
 
 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-05 — IONQ earnings (J-4 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-05 — IONQ earnings (J-4 sess · earnings)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-05 — IONQ earnings (J-3 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-05 — IONQ earnings (J-3 sess · earnings)
 
 
 ## Indicateurs (résumé)

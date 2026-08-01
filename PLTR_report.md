@@ -1,11 +1,11 @@
 # PLTR
 
-**Generated** : 2026-07-31T22:01:13.281938+00:00  
+**Generated** : 2026-08-01T20:18:53.608601+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $123.06  
 
-> 🟡 **WAIT-FOR-DIP** — spot +3.5 % au-dessus de la zone d'entrée — attendre le repli  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-03 — PLTR earnings (J-1 sess · earnings)  
 > ↳ spot $123.06 (+3.5% vs entrée) · entrée $118.89 · stop $115.92 · T1 $120.83 · R/R 0.65  
 > ↳ P(T1 av. stop) 57 % · EV/risk 0.01 · ¼-Kelly 0.017 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.5% cohérent avec le bruit 5 s (EV-optimal ≈ −2.5%)  
@@ -27,7 +27,7 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Pass'.
 **Plan A — intraday** (order_type LMT)
 - Entry (zone de repli) : $118.50–$119.28 (mid $118.89)
 - Spot actuel : $123.06 (+3.5% au-dessus de la zone — repli à attendre)
-- Stop : $115.92 (stop swing_plan-based (-9.15%))
+- Stop : $115.92 (stop swing_plan-based (-12.81%))
 - Targets : T1 $120.83 · R/R 0.65 | T2 $122.77 · R/R 1.31 | T3 $124.71 · R/R 1.96
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous $115.92
@@ -145,9 +145,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-2 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-2 sess · earnings)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-1 sess · earnings)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-1 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-1 sess · earnings)
 
 
 ## Indicateurs (résumé)
@@ -157,8 +157,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.692  _(pas de croisement recent)_
 - **BB** : %B 0.19 · largeur 14.8%
 - **ATR** : 6.58 (24.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV falling · CMF 0.199  _(accumulation)_
-- **Vol ratio** : 0.82  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF 0.2  _(accumulation)_
+- **Vol ratio** : 0.85  _(volume normal)_
 - **Choppiness** : 59.8  _(transition)_
 - **MA** : MA20 129.05 · MA50 130.72 · MA200 152.89  _(prix < MA20)_
 - **Dist MA** : MA20 -4.6% · MA50 -5.9% · MA200 -19.5%
@@ -166,5 +166,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88355 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88583 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

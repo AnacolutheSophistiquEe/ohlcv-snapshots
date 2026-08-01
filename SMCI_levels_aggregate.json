@@ -13,8 +13,8 @@
       "A",
       "B"
     ],
-    "generated_at": "2026-07-31T22:00:27.036832+00:00",
-    "source_precomputed_at": "2026-07-31T21:59:42.905555+00:00",
+    "generated_at": "2026-08-01T20:18:02.968454+00:00",
+    "source_precomputed_at": "2026-08-01T20:17:14.667041+00:00",
     "calibration_lookup": "v1.0_strict_2closes_0.5atr",
     "calibration_method": "rolling_daily_long_strict_break",
     "confluence_band_atr": 0.5,
@@ -95,15 +95,16 @@
       },
       "distance_pct_to_spot": -17.676,
       "distance_in_atr": -2.118,
-      "confluence_count": 1,
+      "confluence_count": 2,
       "confluence_concepts": [
-        "BB_LOWER"
+        "BB_LOWER",
+        "PLAN_A_SL"
       ],
-      "robustness_score": 60.0,
+      "robustness_score": 65.0,
       "robustness_components": {
         "base_from_source": 55.0,
         "touches_boost": 0,
-        "confluence_boost": 5,
+        "confluence_boost": 10,
         "age_decay": 0
       },
       "probabilities": {
@@ -124,58 +125,62 @@
       "raw_meta": {},
       "distance_pct_to_spot": -17.56,
       "distance_in_atr": -2.104,
-      "confluence_count": 1,
+      "confluence_count": 2,
       "confluence_concepts": [
-        "S/R_DBSCAN_WEAK"
+        "S/R_DBSCAN_WEAK",
+        "PLAN_A_SL"
       ],
-      "robustness_score": 70.0,
+      "robustness_score": 75.0,
       "robustness_components": {
         "base_from_source": 65.0,
         "touches_boost": 0,
-        "confluence_boost": 5,
+        "confluence_boost": 10,
         "age_decay": 0
       },
       "probabilities": {
-        "available": true,
-        "bucket_match_quality": "exact",
-        "dim_key": "bollinger|support|2-4|med",
-        "n_samples_in_bucket": 339,
-        "p_touch_h1": 0.0147,
-        "ci95_lo_p_touch_h1": 0.0019,
-        "ci95_hi_p_touch_h1": 0.0276,
-        "p_break_after_touch_h1": 0.0,
-        "ci95_lo_p_break_after_touch_h1": 0.0,
-        "ci95_hi_p_break_after_touch_h1": 0.0,
-        "p_break_unconditional_h1": 0.0,
-        "ci95_lo_p_break_unconditional_h1": 0.0,
-        "ci95_hi_p_break_unconditional_h1": 0.0,
-        "p_touch_h3": 0.059,
-        "ci95_lo_p_touch_h3": 0.0339,
-        "ci95_hi_p_touch_h3": 0.0841,
-        "p_break_after_touch_h3": 0.35,
-        "ci95_lo_p_break_after_touch_h3": 0.141,
-        "ci95_hi_p_break_after_touch_h3": 0.559,
-        "p_break_unconditional_h3": 0.0206,
-        "ci95_lo_p_break_unconditional_h3": 0.0055,
-        "ci95_hi_p_break_unconditional_h3": 0.0358,
-        "p_touch_h5": 0.1032,
-        "ci95_lo_p_touch_h5": 0.0709,
-        "ci95_hi_p_touch_h5": 0.1356,
-        "p_break_after_touch_h5": 0.4571,
-        "ci95_lo_p_break_after_touch_h5": 0.2921,
-        "ci95_hi_p_break_after_touch_h5": 0.6222,
-        "p_break_unconditional_h5": 0.0472,
-        "ci95_lo_p_break_unconditional_h5": 0.0246,
-        "ci95_hi_p_break_unconditional_h5": 0.0698,
-        "p_touch_h10": 0.1976,
-        "ci95_lo_p_touch_h10": 0.1552,
-        "ci95_hi_p_touch_h10": 0.24,
-        "p_break_after_touch_h10": 0.7463,
-        "ci95_lo_p_break_after_touch_h10": 0.6421,
-        "ci95_hi_p_break_after_touch_h10": 0.8505,
-        "p_break_unconditional_h10": 0.1475,
-        "ci95_lo_p_break_unconditional_h10": 0.1097,
-        "ci95_hi_p_break_unconditional_h10": 0.1852
+        "available": false,
+        "reason": "no_matching_bucket",
+        "dim_key_attempted": "bollinger|support|2-4|high"
+      }
+    },
+    {
+      "price": 24.4,
+      "type": "bracket_plan",
+      "subtype": "PLAN_A_SL",
+      "side": "support",
+      "source": "bracket_orders.SMCI_A_20260801_ibkr_bracket.json",
+      "source_weight": 0.95,
+      "touches": null,
+      "age_days": 0,
+      "raw_meta": {
+        "plan_letter": "A",
+        "role": "sl",
+        "prediction_id": "SMCI_A_20260801",
+        "horizon_sessions": 1
+      },
+      "plan_roles": [
+        "A_sl"
+      ],
+      "distance_pct_to_spot": -14.085,
+      "distance_in_atr": -1.687,
+      "confluence_count": 4,
+      "confluence_concepts": [
+        "S/R_DBSCAN_MEDIUM",
+        "S/R_DBSCAN_WEAK",
+        "S3",
+        "BB_LOWER"
+      ],
+      "robustness_score": 100,
+      "robustness_components": {
+        "base_from_source": 95.0,
+        "touches_boost": 0,
+        "confluence_boost": 20,
+        "age_decay": 0
+      },
+      "probabilities": {
+        "available": false,
+        "reason": "no_matching_bucket",
+        "dim_key_attempted": "bracket_plan|support|1-2|high"
       }
     },
     {
@@ -325,46 +330,6 @@
       }
     },
     {
-      "price": 25.75,
-      "type": "bracket_plan",
-      "subtype": "PLAN_A_SL",
-      "side": "support",
-      "source": "bracket_orders.SMCI_A_20260731_ibkr_bracket.json",
-      "source_weight": 0.95,
-      "touches": null,
-      "age_days": 0,
-      "raw_meta": {
-        "plan_letter": "A",
-        "role": "sl",
-        "prediction_id": "SMCI_A_20260731",
-        "horizon_sessions": 1
-      },
-      "plan_roles": [
-        "A_sl"
-      ],
-      "distance_pct_to_spot": -9.331,
-      "distance_in_atr": -1.118,
-      "confluence_count": 4,
-      "confluence_concepts": [
-        "S/R_DBSCAN_MEDIUM",
-        "S2",
-        "S3",
-        "PLAN_B_SL"
-      ],
-      "robustness_score": 100,
-      "robustness_components": {
-        "base_from_source": 95.0,
-        "touches_boost": 0,
-        "confluence_boost": 20,
-        "age_decay": 0
-      },
-      "probabilities": {
-        "available": false,
-        "reason": "no_matching_bucket",
-        "dim_key_attempted": "bracket_plan|support|1-2|high"
-      }
-    },
-    {
       "price": 25.85,
       "type": "bracket_plan",
       "subtype": "PLAN_B_SL",
@@ -384,18 +349,17 @@
       ],
       "distance_pct_to_spot": -8.979,
       "distance_in_atr": -1.076,
-      "confluence_count": 4,
+      "confluence_count": 3,
       "confluence_concepts": [
         "S/R_DBSCAN_MEDIUM",
         "S2",
-        "S3",
-        "PLAN_A_SL"
+        "S3"
       ],
       "robustness_score": 100,
       "robustness_components": {
         "base_from_source": 95.0,
         "touches_boost": 0,
-        "confluence_boost": 20,
+        "confluence_boost": 15,
         "age_decay": 0
       },
       "probabilities": {
@@ -416,13 +380,12 @@
       "raw_meta": {},
       "distance_pct_to_spot": -7.711,
       "distance_in_atr": -0.924,
-      "confluence_count": 6,
+      "confluence_count": 5,
       "confluence_concepts": [
         "S/R_DBSCAN_MEDIUM",
         "S1",
         "S3",
         "CAM_S4",
-        "PLAN_A_SL",
         "PLAN_B_SL"
       ],
       "robustness_score": 80.0,
@@ -1323,14 +1286,14 @@
       }
     },
     {
-      "price": 28.7234,
+      "price": 28.7229,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_low",
       "side": "resistance",
       "source": "anchored_vwap.anchors[2026-07-17]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 14,
+      "age_days": 15,
       "raw_meta": {
         "anchor_date": "2026-07-17",
         "anchor_event": "swing_low",
@@ -1341,7 +1304,7 @@
         "B_t1"
       ],
       "source_weight_boosted_by_plan": true,
-      "distance_pct_to_spot": 1.139,
+      "distance_pct_to_spot": 1.137,
       "distance_in_atr": 0.136,
       "confluence_count": 13,
       "confluence_concepts": [
@@ -1555,21 +1518,21 @@
       }
     },
     {
-      "price": 29.233,
+      "price": 29.2311,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_high",
       "side": "resistance",
       "source": "anchored_vwap.anchors[2026-07-23]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 8,
+      "age_days": 9,
       "raw_meta": {
         "anchor_date": "2026-07-23",
         "anchor_event": "swing_high",
         "anchor_price": 32.59,
         "bars_since_anchor": 6
       },
-      "distance_pct_to_spot": 2.933,
+      "distance_pct_to_spot": 2.926,
       "distance_in_atr": 0.351,
       "confluence_count": 11,
       "confluence_concepts": [
@@ -1582,7 +1545,7 @@
         "CAM_R3",
         "CAM_R4"
       ],
-      "robustness_score": 99.9,
+      "robustness_score": 99.8,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
@@ -2071,22 +2034,22 @@
       }
     },
     {
-      "price": 31.6093,
+      "price": 31.6085,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_high",
       "side": "resistance",
       "source": "anchored_vwap.anchors[2026-06-02]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 59,
+      "age_days": 60,
       "raw_meta": {
         "anchor_date": "2026-06-02",
         "anchor_event": "swing_high",
         "anchor_price": 51.4,
         "bars_since_anchor": 41
       },
-      "distance_pct_to_spot": 11.3,
-      "distance_in_atr": 1.354,
+      "distance_pct_to_spot": 11.298,
+      "distance_in_atr": 1.353,
       "confluence_count": 6,
       "confluence_concepts": [
         "S/R_DBSCAN_STRONG",

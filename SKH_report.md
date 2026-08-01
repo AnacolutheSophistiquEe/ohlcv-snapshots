@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-07-31T21:48:31.412347+00:00  
+**Generated** : 2026-08-01T20:05:29.101868+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 8/10 — **Rating** : Pass (negative EV)  
@@ -29,7 +29,7 @@ Plan privilegie A (intraday), composite 8/10, conviction 'Pass (negative EV)'.
 **Plan A — intraday** (order_type LMT)
 - Entry (zone de repli) : ₩1691346.17–₩1718000.00 (mid ₩1704673.08)
 - Spot actuel : ₩1718000.00 (+0.8% au-dessus de la zone — repli à attendre)
-- Stop : ₩1629509.63 (stop swing_plan-based (-11.36%))
+- Stop : ₩1629509.63 (stop swing_plan-based (-13.51%))
 - Targets : T1 ₩1855000.00 · R/R 2.0 | T2 ₩1920749.45 · R/R 2.87 | T3 ₩1986498.90 · R/R 3.75
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩1629509.63
@@ -49,7 +49,7 @@ Plan privilegie A (intraday), composite 8/10, conviction 'Pass (negative EV)'.
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
   - **intraday** (entrée dip −0.775% → cible +8.819% / stop −4.409%, p_fill 87%, n_eff≈33.7) : P(cible|rempli) **4%** · **EV/risk -0.391** (×p_fill ; si rempli -1.99% du capital)
-  - **swing** (entrée dip −1.715% → cible +19.626% / stop −9.813%, p_fill 81%, n_eff≈30.9) : P(cible|rempli) **9%** · **EV/risk -0.304** (×p_fill ; si rempli -3.70% du capital)
+  - **swing** (entrée dip −1.716% → cible +19.626% / stop −12.0%, p_fill 81%, n_eff≈30.9) : P(cible|rempli) **9%** · **EV/risk -0.285** (×p_fill ; si rempli -4.25% du capital)
   - **deep** (entrée dip −2.488% → cible +43.679% / stop −18.0%, p_fill 82%, n_eff≈29.1) : P(cible|rempli) **2%** · **EV/risk -0.467** (×p_fill ; si rempli -10.29% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→94% · +1.0%→79% · +2.0%→54% · +3.0%→39% · +5.0%→26% · +8.0%→14%
 - Range intraday médian 6.39% (p90 11.5%) · excursion haute méd. +2.16% / basse méd. −2.61%
@@ -168,5 +168,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (87846 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (87845 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

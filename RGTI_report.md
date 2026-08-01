@@ -1,6 +1,6 @@
 # RGTI
 
-**Generated** : 2026-07-31T22:04:10.614322+00:00  
+**Generated** : 2026-08-01T20:22:03.054673+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
@@ -150,7 +150,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.42 · largeur 31.2%
 - **ATR** : 1.17 (14.0e pct 1a)  _(volatilite basse)_
 - **OBV/CMF** : OBV falling · CMF -0.201  _(distribution)_
-- **Vol ratio** : 0.73  _(volume normal)_
+- **Vol ratio** : 0.75  _(volume normal)_
 - **Choppiness** : 61.4  _(transition)_
 - **MA** : MA20 15.34 · MA50 19.15 · MA200 21.97  _(prix < MA20)_
 - **Dist MA** : MA20 -2.6% · MA50 -21.9% · MA200 -31.9%
@@ -158,5 +158,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (82626 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (82627 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
