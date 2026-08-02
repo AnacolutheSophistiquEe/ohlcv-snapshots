@@ -1,6 +1,6 @@
 # EVT
 
-**Generated** : 2026-08-01T21:24:07.095288+00:00  
+**Generated** : 2026-08-02T14:36:25.846481+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.4 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 1/10 — **Rating** : Strong Pass (negative EV)  
@@ -9,7 +9,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot €3.41 (+1.8% vs entrée) · entrée €3.35 · stop €3.24 · T1 €3.47 · R/R 1.09  
-> ↳ P(T1 av. stop) 17 % _(réel 5 s)_ · EV/risk -0.035 _(réel 5 s)_ (GBM 0.01) · ¼-Kelly 0.004 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 14 % _(réel 5 s)_ · EV/risk -0.039 _(réel 5 s)_ (GBM 0.016) · ¼-Kelly 0.006 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −3.5% cohérent avec le bruit 5 s (EV-optimal ≈ −3.5%)  
 
 ## Régime & alignement multi-TF
@@ -37,9 +37,9 @@ Plan privilegie A (intraday), composite 1/10, conviction 'Strong Pass (negative 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.01 | EV/share : €0.001 | p_fill : —
+- EV/risk : 0.016 | EV/share : €0.002 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 21 % | T2 9 % | T3 9 %
-- Kelly (position) : f* 0.018 | ¼-Kelly 0.004 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Kelly (position) : f* 0.025 | ¼-Kelly 0.006 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, intraday) : bull 21.1 | bear 71.6 | side 7.3  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
@@ -48,76 +48,76 @@ Plan privilegie A (intraday), composite 1/10, conviction 'Strong Pass (negative 
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −1.741% → cible +3.485% / stop −3.5%, p_fill 44%, n_eff≈18.3) : P(cible|rempli) **17%** · **EV/risk -0.035** (×p_fill ; si rempli -0.28% du capital)
-  - **swing** (entrée dip −3.832% → cible +7.794% / stop −8.379%, p_fill 35%, n_eff≈12.8) : P(cible|rempli) **6%** · **EV/risk -0.091** (×p_fill ; si rempli -2.16% du capital)
-  - **deep** (entrée dip −5.921% → cible +11.025% / stop −12.85%, p_fill 45%, n_eff≈15.3) : P(cible|rempli) **3%** · **EV/risk -0.211** (×p_fill ; si rempli -6.05% du capital)
-- Courbe de touche réelle (high atteint, en séance) : +0.5%→86% · +1.0%→72% · +2.0%→46% · +3.0%→26% · +5.0%→9% · +8.0%→2%
-- Range intraday médian 4.25% (p90 6.57%) · excursion haute méd. +1.75% / basse méd. −1.7%
-- Profil de vol intra : ouverture 2.764% vs midi 1.194% vs clôture 1.246% _(ouverture ~2.3× plus volatile → privilégier/éviter selon le setup)_
-- **Asset Behavior Profiler** (160 séances, frais pipeline) : **choppy-dominant (trend-following risqué)** _(jours choppy 96% · range 4% · trend ↑0%/↓0% ; spike-down 52% · recovery-V 40%)_
-- **Régime intraday** : **chop** _(efficiency 0.077 ; mean-reverting — autocorr -0.133)_ ; drift intra méd. -0.144% ; recovery-V 41%
-- **σ réalisé intraday** 3.529% (sans gap overnight) — le MC l'utilise pour l'horizon intraday (le σ daily, plus élevé, surestimait les touches)
-- Opening range (30min) : cassure haut 62% / bas 65% / whipsaw 31%
-- POC intraday (dernière séance, temps-au-prix) : 3.4951 (VA 3.4885–3.5193 ; dernier close 3.478)
+  - **intraday** (entrée dip −1.741% → cible +3.485% / stop −3.5%, p_fill 49%, n_eff≈18.6) : P(cible|rempli) **14%** · **EV/risk -0.039** (×p_fill ; si rempli -0.28% du capital)
+  - **swing** (entrée dip −3.832% → cible +7.794% / stop −8.379%, p_fill 32%, n_eff≈12.7) : P(cible|rempli) **5%** · **EV/risk -0.084** (×p_fill ; si rempli -2.20% du capital)
+  - **deep** (entrée dip −5.921% → cible +11.025% / stop −12.85%, p_fill 41%, n_eff≈15.3) : P(cible|rempli) **3%** · **EV/risk -0.192** (×p_fill ; si rempli -6.05% du capital)
+- Courbe de touche réelle (high atteint, en séance) : +0.5%→86% · +1.0%→71% · +2.0%→46% · +3.0%→26% · +5.0%→9% · +8.0%→2%
+- Range intraday médian 4.21% (p90 6.57%) · excursion haute méd. +1.75% / basse méd. −1.7%
+- Profil de vol intra : ouverture 2.735% vs midi 1.205% vs clôture 1.252% _(ouverture ~2.3× plus volatile → privilégier/éviter selon le setup)_
+- **Asset Behavior Profiler** (160 séances, frais pipeline) : **choppy-dominant (trend-following risqué)** _(jours choppy 96% · range 4% · trend ↑0%/↓0% ; spike-down 54% · recovery-V 38%)_
+- **Régime intraday** : **chop** _(efficiency 0.078 ; mean-reverting — autocorr -0.138)_ ; drift intra méd. -0.302% ; recovery-V 36%
+- **σ réalisé intraday** 3.43% (sans gap overnight) — le MC l'utilise pour l'horizon intraday (le σ daily, plus élevé, surestimait les touches)
+- Opening range (30min) : cassure haut 66% / bas 64% / whipsaw 33%
+- POC intraday (dernière séance, temps-au-prix) : 3.4891 (VA 3.4483–3.5027 ; dernier close 3.408)
 
 
 ## 🎣 PRE-OUVERTURE FISHING — playbook début de séance (5 s)
 
 _À appliquer au réveil ~30 min avant l'open US : où poser des limit/trailing buy AVANT l'ouverture (réf. = close de la veille), avec proba de remplissage et de rebond. Vérité terrain 5 s, pondérée récence._
-- **▶ Plan recommandé** : achat **−3.0%** sous le close veille · fill 32% · rebond 68% · **stop −3.5%** sous le fill (sous le bruit) · cible +1.66% · R/R 0.47 (high win-rate)
-- Gaps overnight (n=159) : méd. -0.01% · baisse 50% (gap-down >1% 22% · >2% 10%)
-- Excursion ouverture 5min (n=160) : bas méd −0.61% (p90 −2.67%) · haut méd +0.61% · range méd 1.43%
-- Excursion ouverture 15min (n=160) : bas méd −0.82% (p90 −2.75%) · haut méd +0.84% · range méd 1.76%
-- Excursion ouverture 30min (n=160) : bas méd −1.06% (p90 −2.82%) · haut méd +0.95% · range méd 2.09%
-- Excursion ouverture 60min (n=160) : bas méd −1.11% (p90 −3.17%) · haut méd +0.96% · range méd 2.38%
-- **Niveaux d'achat fishing** (limit buy à −L% sous le close veille 3.478 ; rebond = P(prix +1.0% après fill, déclenche un réveil de gestion)) :
-   - −0.5% : fill 30min 70% · séance 85% (133/159) · gap 31% · délai 0.2min · rebond 67% (88/133) (MFE +1.57%)
-   - −1.0% : fill 30min 53% · séance 74% (119/159) · gap 22% · délai 0.4min · rebond 66% (77/119) (MFE +1.6%)
-   - −1.5% : fill 30min 39% · séance 60% (99/159) · gap 16% · délai 1.6min · rebond 62% (64/99) (MFE +1.39%)
-   - −2.0% : fill 30min 28% · séance 47% (79/159) · gap 10% · délai 14.3min · rebond 63% (52/79) (MFE +1.42%)
-   - −3.0% : fill 30min 15% · séance 32% (56/159) · gap 5% · délai 30.4min · rebond 68% (42/56) (MFE +1.66%)
+- **▶ Plan recommandé** : achat **−1.0%** sous le close veille · fill 75% · rebond 67% · **stop −3.18%** sous le fill (sous le bruit) · cible +1.6% · R/R 0.5 (high win-rate)
+- Gaps overnight (n=159) : méd. 0.0% · baisse 48% (gap-down >1% 21% · >2% 9%)
+- Excursion ouverture 5min (n=160) : bas méd −0.68% (p90 −2.57%) · haut méd +0.48% · range méd 1.43%
+- Excursion ouverture 15min (n=160) : bas méd −0.85% (p90 −2.69%) · haut méd +0.79% · range méd 1.75%
+- Excursion ouverture 30min (n=160) : bas méd −1.06% (p90 −2.8%) · haut méd +0.92% · range méd 2.06%
+- Excursion ouverture 60min (n=160) : bas méd −1.11% (p90 −3.08%) · haut méd +0.95% · range méd 2.38%
+- **Niveaux d'achat fishing** (limit buy à −L% sous le close veille 3.408 ; rebond = P(prix +1.0% après fill, déclenche un réveil de gestion)) :
+   - −0.5% : fill 30min 69% · séance 85% (133/159) · gap 30% · délai 0.2min · rebond 68% (88/133) (MFE +1.56%)
+   - −1.0% : fill 30min 53% · séance 75% (119/159) · gap 21% · délai 0.6min · rebond 67% (77/119) (MFE +1.6%)
+   - −1.5% : fill 30min 37% · séance 60% (100/159) · gap 15% · délai 2.5min · rebond 60% (64/100) (MFE +1.33%)
+   - −2.0% : fill 30min 27% · séance 47% (80/159) · gap 9% · délai 14.8min · rebond 64% (53/80) (MFE +1.43%)
+   - −3.0% : fill 30min 15% · séance 30% (56/159) · gap 5% · délai 30.4min · rebond 68% (42/56) (MFE +1.66%)
    - −4.0% : fill 30min 8% · séance 17% (30/159) · gap 2% · délai 35.3min · rebond 49% (18/30) (MFE +1.04%)
    - −5.0% : fill 30min 5% · séance 9% (17/159) · gap 2% · délai 5.0min · rebond 50% (11/17) (MFE +1.35%)
 - **Stop « survie au bruit »** (creux NORMAL d'une trajectoire pourtant gagnante → ne jamais couper au-dessus) :
-   - capter +1.0% : creux à tolérer méd −0.35% (p90 −2.51%) → stop au-delà de −1.48% (survit 80% du bruit)
+   - capter +1.0% : creux à tolérer méd −0.35% (p90 −2.52%) → stop au-delà de −1.48% (survit 80% du bruit)
    - capter +2.0% : creux à tolérer méd −0.58% (p90 −1.92%) → stop au-delà de −1.27% (survit 80% du bruit)
    - capter +3.0% : creux à tolérer méd −0.62% (p90 −1.94%) → stop au-delà de −1.35% (survit 80% du bruit)
-- Zig-zag intra-séance (seuil 0.5% · n=815 jambes) : jambe baissière méd −1.08% (p90 −2.32%) · ~10.0 jambes/séance
+- Zig-zag intra-séance (seuil 0.5% · n=814 jambes) : jambe baissière méd −1.08% (p90 −2.32%) · ~10.0 jambes/séance
 - **Fishing selon l'ouverture** (tu vois le gap au pré-open ; comptes bruts entre parenthèses) :
-   - **gap-down** (63 séances) :
-      · −1.0% : fill 95% (60/63) · rebond 71% (37/60)
-      · −2.0% : fill 64% (44/63) · rebond 60% (28/44)
-      · −3.0% : fill 38% (32/63) · rebond 68% (24/32)
-      · −4.0% : fill 26% (20/63) · rebond 56% (14/20)
-      · −5.0% : fill 16% (13/63) · rebond 57% (9/13)
-   - **flat** (42 séances) :
-      · −1.0% : fill 79% (33/42) · rebond 68% (25/33)
-      · −2.0% : fill 53% (19/42) · rebond 68% (13/19)
-      · −3.0% : fill 40% (12/42) · rebond 73% (9/12)
-      · −4.0% : fill 17% (5/42) · rebond 20% (1/5)
-      · −5.0% : fill 8% (3/42) · rebond 27% (1/3)
-   - **gap-up** (54 séances) :
-      · −1.0% : fill 44% (26/54) · rebond 48% (15/26)
-      · −2.0% : fill 21% (16/54) · rebond 61% (11/16)
-      · −3.0% : fill 16% (12/54) · rebond 57% (9/12)
-      · −4.0% : fill 7% (5/54) · rebond 80% (3/5)
-      · −5.0% : fill 1% (1/54) · rebond 100% (1/1)
-- **P(clôture VERTE) selon le drive 15min** (n=160) : 56% en base · 68% si les 15 1res min sont vertes (77 cas) · 45% si rouges (83 cas) — même proba, 3 conditions (l'écart = pouvoir prédictif)
-- **Fenêtre du début la PLUS prédictive** (balayage 5min→306min, n=160) : COUDE à **6min** → P(séance verte=clôture>ouverture) 70% si début vert vs 43% si rouge (base 56% · écart 26 pts) ; prédictivité sature ensuite (plafond brut 259min ~trivial proche clôture)
-- **GESTION si rempli & vert au coude** (cond. vert au coude, n=77) : tient le vert **70%** · continue >prix actuel 50% ; creux résiduel méd -1.84% (q20 -2.74%) → **SL/trailing à −2.74%** sous le prix (survit 80% du bruit) ; potentiel restant MFE méd +1.39% / q75 +2.38% → **scale +1.39% / runner +2.38%**, sortie à la clôture
-  - **si ROUGE au coude** (n=83) : edge inversé — récupère vert seulement **43%** (continue à baisser 40%) → **RÉDUIRE ~57%** de la position, garder un petit runner (≈ taille des odds de récup.) à **stop large −4.72%** (au-delà de la MAE q10 -4.72%), cible rebond +2.12% ; ne PAS se contenter de serrer le SL (balayé sur le bruit)
+   - **gap-down** (62 séances) :
+      · −1.0% : fill 95% (59/62) · rebond 71% (36/59)
+      · −2.0% : fill 64% (44/62) · rebond 60% (28/44)
+      · −3.0% : fill 38% (32/62) · rebond 68% (24/32)
+      · −4.0% : fill 26% (20/62) · rebond 56% (14/20)
+      · −5.0% : fill 16% (13/62) · rebond 57% (9/13)
+   - **flat** (41 séances) :
+      · −1.0% : fill 79% (32/41) · rebond 68% (24/32)
+      · −2.0% : fill 53% (19/41) · rebond 68% (13/19)
+      · −3.0% : fill 40% (12/41) · rebond 73% (9/12)
+      · −4.0% : fill 17% (5/41) · rebond 20% (1/5)
+      · −5.0% : fill 8% (3/41) · rebond 27% (1/3)
+   - **gap-up** (56 séances) :
+      · −1.0% : fill 50% (28/56) · rebond 59% (17/28)
+      · −2.0% : fill 24% (17/56) · rebond 70% (12/17)
+      · −3.0% : fill 14% (12/56) · rebond 57% (9/12)
+      · −4.0% : fill 6% (5/56) · rebond 80% (3/5)
+      · −5.0% : fill 1% (1/56) · rebond 100% (1/1)
+- **P(clôture VERTE) selon le drive 15min** (n=160) : 54% en base · 68% si les 15 1res min sont vertes (76 cas) · 42% si rouges (84 cas) — même proba, 3 conditions (l'écart = pouvoir prédictif)
+- **Fenêtre du début la PLUS prédictive** (balayage 5min→306min, n=160) : COUDE à **6min** → P(séance verte=clôture>ouverture) 67% si début vert vs 42% si rouge (base 54% · écart 25 pts) ; prédictivité sature ensuite (plafond brut 259min ~trivial proche clôture)
+- **GESTION si rempli & vert au coude** (cond. vert au coude, n=78) : tient le vert **67%** · continue >prix actuel 48% ; creux résiduel méd -1.85% (q20 -3.13%) → **SL/trailing à −3.13%** sous le prix (survit 80% du bruit) ; potentiel restant MFE méd +1.35% / q75 +2.2% → **scale +1.35% / runner +2.2%**, sortie à la clôture
+  - **si ROUGE au coude** (n=82) : edge inversé — récupère vert seulement **42%** (continue à baisser 43%) → **RÉDUIRE ~58%** de la position, garder un petit runner (≈ taille des odds de récup.) à **stop large −4.66%** (au-delà de la MAE q10 -4.66%), cible rebond +2.11% ; ne PAS se contenter de serrer le SL (balayé sur le bruit)
 - Bandes d'excursion forward depuis l'open (QUANTILES, pas des probas : 90% des séances entre q05 et q95) :
-   - 30min (n=160) : retour [-2.74% .. +2.45%] · haut q95 +3.51% · bas q05 -3.48%
-   - 60min (n=160) : retour [-3.18% .. +3.32%] · haut q95 +4.48% · bas q05 -3.66%
-   - 2h (n=160) : retour [-3.49% .. +3.23%] · haut q95 +4.63% · bas q05 -4.29%
-   - 4h (n=160) : retour [-3.0% .. +3.21%] · haut q95 +4.63% · bas q05 -5.29%
-   - 6h (n=160) : retour [-3.41% .. +3.28%] · haut q95 +5.08% · bas q05 -5.41%
-   - session (n=160) : retour [-4.36% .. +4.13%] · haut q95 +6.2% · bas q05 -5.86%
+   - 30min (n=160) : retour [-2.61% .. +2.44%] · haut q95 +3.51% · bas q05 -3.45%
+   - 60min (n=160) : retour [-3.14% .. +3.21%] · haut q95 +4.42% · bas q05 -3.59%
+   - 2h (n=160) : retour [-3.48% .. +3.22%] · haut q95 +4.58% · bas q05 -4.28%
+   - 4h (n=160) : retour [-2.95% .. +3.09%] · haut q95 +4.58% · bas q05 -4.89%
+   - 6h (n=160) : retour [-3.35% .. +3.26%] · haut q95 +4.89% · bas q05 -5.36%
+   - session (n=160) : retour [-4.28% .. +4.1%] · haut q95 +6.03% · bas q05 -5.77%
 
 
 ## 🚀 RIDER DE JOUR DE TENDANCE — non disponible
 
-_Trop peu de séances trend-up (1) pour des stats fiables : 0.6% des séances seulement sont des jours de hausse propre — EVT = **volatil sans tendance propre (choppy)** (vol intra méd 2.98%). La stratégie « rider » réduit / s'abstient (la pêche aux gaps reste l'angle adapté)._
+_Trop peu de séances trend-up (1) pour des stats fiables : 0.6% des séances seulement sont des jours de hausse propre — EVT = **volatil sans tendance propre (choppy)** (vol intra méd 2.97%). La stratégie « rider » réduit / s'abstient (la pêche aux gaps reste l'angle adapté)._
 
 
 ## Timing d'entrée (observe-only)
@@ -158,5 +158,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (90138 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (89864 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
