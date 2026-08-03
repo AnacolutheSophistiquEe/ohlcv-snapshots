@@ -1,6 +1,6 @@
 # 326030
 
-**Generated** : 2026-08-02T14:54:23.239087+00:00  
+**Generated** : 2026-08-03T00:18:34.904635+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite normal · ₩79000.00  
@@ -48,7 +48,7 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 15 % | T2 11 % | T3 8 %
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 32.5 | bear 59.0 | side 8.5  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, intraday) : bull 32.5 | bear 59.0 | side 8.6  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 160.0
 
 
@@ -155,7 +155,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 18.7  _(pas de tendance nette)_
 - **MACD** : hist 305.154  _(pas de croisement recent)_
 - **BB** : %B 0.43 · largeur 15.3%
-- **ATR** : 4350.0 (58.0e pct 1a)  _(volatilite normale)_
+- **ATR** : 4350.0 (57.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV rising · CMF -0.118  _(distribution)_
 - **Vol ratio** : 1.16  _(volume normal)_
 - **Choppiness** : 63.8  _(marche en range (choppy))_

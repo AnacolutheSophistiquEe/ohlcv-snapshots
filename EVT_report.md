@@ -1,6 +1,6 @@
 # EVT
 
-**Generated** : 2026-08-02T14:36:25.846481+00:00  
+**Generated** : 2026-08-03T00:03:16.948965+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.4 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 1/10 — **Rating** : Strong Pass (negative EV)  

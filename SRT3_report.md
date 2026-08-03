@@ -1,6 +1,6 @@
 # SRT3
 
-**Generated** : 2026-08-02T14:35:04.122174+00:00  
+**Generated** : 2026-08-03T00:02:04.342618+00:00  
 **Santé technique** : 3/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite extreme · €219.80  

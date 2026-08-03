@@ -1,6 +1,6 @@
 # HOOD
 
-**Generated** : 2026-08-02T15:06:10.045418+00:00  
+**Generated** : 2026-08-03T00:28:34.350432+00:00  
 **Santé technique** : 4/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $86.56  

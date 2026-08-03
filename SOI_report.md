@@ -1,6 +1,6 @@
 # SOI
 
-**Generated** : 2026-08-02T14:41:59.321447+00:00  
+**Generated** : 2026-08-03T00:08:04.203776+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 8.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 5/10 — **Rating** : Neutral  

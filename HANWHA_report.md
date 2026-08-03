@@ -1,6 +1,6 @@
 # 012450
 
-**Generated** : 2026-08-02T14:51:43.967819+00:00  
+**Generated** : 2026-08-03T00:16:15.020240+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.6 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
@@ -155,7 +155,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 - **RSI** : 46.0  _(neutre)_
 - **ADX** : 17.3  _(pas de tendance nette)_
-- **MACD** : hist 1040.201  _(pas de croisement recent)_
+- **MACD** : hist 1040.2  _(pas de croisement recent)_
 - **BB** : %B 0.41 · largeur 41.7%
 - **ATR** : 77714.29 (72.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
 - **OBV/CMF** : OBV rising · CMF -0.165  _(distribution)_
@@ -167,5 +167,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (83831 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (83829 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # 298040
 
-**Generated** : 2026-08-02T14:50:21.946532+00:00  
+**Generated** : 2026-08-03T00:15:04.588478+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 8.8 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
@@ -159,7 +159,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 17.9  _(pas de tendance nette)_
 - **MACD** : hist -37202.918  _(bearish_recent)_
 - **BB** : %B 0.31 · largeur 49.9%
-- **ATR** : 286285.71 (87.0e pct 1a)  _(volatilite elevee)_
+- **ATR** : 286285.71 (86.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV falling · CMF -0.129  _(distribution)_
 - **Vol ratio** : 1.78  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 47.7  _(transition)_

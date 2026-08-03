@@ -1,6 +1,6 @@
 # RHM
 
-**Generated** : 2026-08-02T14:33:40.702460+00:00  
+**Generated** : 2026-08-03T00:00:53.547030+00:00  
 **Santé technique** : 6/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €1141.40  
