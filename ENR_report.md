@@ -1,45 +1,45 @@
 # ENR
 
-**Generated** : 2026-08-03T00:04:29.076133+00:00  
-**Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
+**Generated** : 2026-08-03T21:40:17.576984+00:00  
+**Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite high · €148.14  
+**Subtitle** : indeterminate · volatilite high · €147.54  
 
 > ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-04 — ENR earnings (J-1 sess · earnings)  
-> ↳ spot €148.14 (+5.7% vs entrée) · entrée €140.15 · stop €137.75 · T1 €143.09 · R/R 1.22  
+> ↳ spot €147.54 (+5.6% vs entrée) · entrée €139.70 · stop €137.29 · T1 €142.62 · R/R 1.21  
 > ↳ P(T1 av. stop) 36 % · EV/risk -0.047 · ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
-> ↳ stop −1.71% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
+> ↳ stop −1.73% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
 
 ## Régime & alignement multi-TF
 
 - **Daily** : range (trend-range)  
-- **H4** : up | **H1** : up  
-- **Flag multi-TF** : mixed (score 1)
+- **H4** : up | **H1** : range  
+- **Flag multi-TF** : mixed (score 2)
 
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 5/10, conviction 'Pass (negative EV)'.
+Plan privilegie A (intraday), composite 3/10, conviction 'Strong Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : €139.56–€140.74 (mid €140.15)
-- Spot actuel : €148.14 (+5.7% au-dessus de la zone — repli à attendre)
-- Stop : €137.75 (stop swing_plan-based (-17.26%))
-- Targets : T1 €143.09 · R/R 1.22 | T2 €146.03 · R/R 2.45 | T3 €148.96 · R/R 3.67
+- Entry (zone de repli) : €139.12–€140.29 (mid €139.70)
+- Spot actuel : €147.54 (+5.6% au-dessus de la zone — repli à attendre)
+- Stop : €137.29 (stop swing_plan-based (-17.14%))
+- Targets : T1 €142.62 · R/R 1.21 | T2 €145.54 · R/R 2.42 | T3 €148.46 · R/R 3.63
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €137.75
+- Invalidation : close sous €137.29
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.047 | EV/share : €-0.113 | p_fill : —
+- EV/risk : -0.047 | EV/share : €-0.115 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 36 % | T2 13 % | T3 8 %
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 9.1 | bear 50.0 | side 40.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, intraday) : bull 9.2 | bear 49.9 | side 40.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
@@ -47,7 +47,7 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Pass (negative EV)'.
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈None séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
   - **intraday** : indisponible (échantillon insuffisant (n=10, n_eff=5))
-  - **swing** : indisponible (échantillon insuffisant (n=0, n_eff=0))
+  - **swing** : indisponible (échantillon insuffisant (n=1, n_eff=1))
   - **deep** : indisponible (échantillon insuffisant (n=0, n_eff=0))
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→78% · +1.0%→60% · +2.0%→41% · +3.0%→26% · +5.0%→10% · +8.0%→1%
 - Range intraday médian 4.02% (p90 6.67%) · excursion haute méd. +1.4% / basse méd. −1.81%
@@ -130,7 +130,7 @@ _Symétrique du fishing : quand l'actif imprime un JOUR DE HAUSSE PROPRE, on CHE
 ## Timing d'entrée (observe-only)
 
 - **Verdict timing** : neutre
-- Proximité zone : 0.75/2 | R/R T1 : 2.0 | extension : normal
+- Proximité zone : 0.75/2 | R/R T1 : 0.5 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -151,19 +151,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 47.8  _(neutre)_
-- **ADX** : 21.3  _(pas de tendance nette)_
-- **MACD** : hist -0.518  _(pas de croisement recent)_
-- **BB** : %B 0.4 · largeur 18.9%
-- **ATR** : 8.0 (82.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.15  _(distribution)_
-- **Vol ratio** : 0.46  _(volume atone)_
-- **Choppiness** : 52.3  _(transition)_
-- **MA** : MA20 151.0 · MA50 157.39 · MA200 144.52  _(prix < MA20)_
-- **Dist MA** : MA20 -1.9% · MA50 -5.9% · MA200 +2.5%
+- **RSI** : 47.3  _(neutre)_
+- **ADX** : 21.5  _(pas de tendance nette)_
+- **MACD** : hist -0.557  _(pas de croisement recent)_
+- **BB** : %B 0.38 · largeur 19.0%
+- **ATR** : 8.05 (83.0e pct 1a)  _(volatilite elevee)_
+- **OBV/CMF** : OBV falling · CMF -0.133  _(distribution)_
+- **Vol ratio** : 0.92  _(volume normal)_
+- **Choppiness** : 52.5  _(transition)_
+- **MA** : MA20 150.97 · MA50 157.38 · MA200 144.52  _(prix < MA20)_
+- **Dist MA** : MA20 -2.3% · MA50 -6.3% · MA200 +2.1%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (94533 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (94584 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
