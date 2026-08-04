@@ -1,13 +1,13 @@
 # RGTI
 
-**Generated** : 2026-08-03T22:04:27.740247+00:00  
+**Generated** : 2026-08-04T00:27:00.794121+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.3 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite low · $16.02  
 
-> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-06 — RGTI earnings (J-1 sess · earnings)  
 > ↳ spot $16.02 (+2.4% vs entrée) · entrée $15.65 · stop $15.28 · T1 $16.30 · R/R 1.76  
 > ↳ P(T1 av. stop) 12 % _(réel 5 s)_ · EV/risk -0.273 _(réel 5 s)_ (GBM 0.185) · ¼-Kelly 0.03 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.34% cohérent avec le bruit 5 s (EV-optimal ≈ −2.0%)  
@@ -149,9 +149,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-2 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-2 sess · earnings)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-1 sess · earnings)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-1 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-1 sess · earnings)
 
 
 ## Indicateurs (résumé)
@@ -170,5 +170,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88152 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88289 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

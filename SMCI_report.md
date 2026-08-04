@@ -1,6 +1,6 @@
 # SMCI
 
-**Generated** : 2026-08-03T21:59:53.840097+00:00  
+**Generated** : 2026-08-04T00:23:03.583165+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
@@ -158,8 +158,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-11 — SMCI earnings (J-5 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-11 — SMCI earnings (J-5 sess · earnings)
 
 
 ## Indicateurs (résumé)
@@ -178,5 +178,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (92990 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (93181 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

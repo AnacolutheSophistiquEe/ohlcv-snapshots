@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-08-03T22:02:59.835302+00:00  
+**Generated** : 2026-08-04T00:25:43.271048+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.5 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  

@@ -1,45 +1,49 @@
 # CEG
 
-**Generated** : 2026-08-03T00:26:10.299124+00:00  
-**Santé technique** : 5/10 — **Rating** : Neutral  
+**Generated** : 2026-08-04T00:28:13.730103+00:00  
+**Santé technique** : 7/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite low · $262.75  
+**Subtitle** : indeterminate · volatilite low · $273.71  
 
-> 🟡 **WAIT-FOR-DIP** — spot +3.7 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot $262.75 (+3.7% vs entrée) · entrée $253.32 · stop $249.52 · T1 $256.33 · R/R 0.79  
-> ↳ P(T1 av. stop) 62 % · EV/risk 0.311 · ¼-Kelly 0.005 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-06 — CEG earnings (J-1 sess · earnings)  
+> ↳ spot $273.71 (+3.6% vs entrée) · entrée $264.13 · stop $260.17 · T1 $267.41 · R/R 0.83  
+> ↳ P(T1 av. stop) 60 % · EV/risk 0.232 · ¼-Kelly 0.005 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −1.5% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
+
+> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+>   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 184 % hors [0,100] (R² max 0.86). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
+
 
 ## Régime & alignement multi-TF
 
 - **Daily** : range (trend-range)  
-- **H4** : range | **H1** : range  
-- **Flag multi-TF** : mixed (score 3)
+- **H4** : range | **H1** : up  
+- **Flag multi-TF** : mixed (score 2)
 
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 5/10, conviction 'Neutral'.
+Plan privilegie A (intraday), composite 7/10, conviction 'Neutral'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : $252.71–$253.92 (mid $253.32)
-- Spot actuel : $262.75 (+3.7% au-dessus de la zone — repli à attendre)
-- Stop : $249.52 (stop swing_plan-based (-10.77%))
-- Targets : T1 $256.33 · R/R 0.79 | T2 $259.34 · R/R 1.58 | T3 $262.36 · R/R 2.38
+- Entry (zone de repli) : $263.48–$264.79 (mid $264.13)
+- Spot actuel : $273.71 (+3.6% au-dessus de la zone — repli à attendre)
+- Stop : $260.17 (stop swing_plan-based (-10.5%))
+- Targets : T1 $267.41 · R/R 0.83 | T2 $270.69 · R/R 1.66 | T3 $273.96 · R/R 2.48
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $249.52
+- Invalidation : close sous $260.17
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.043 | EV/share : $-0.164 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 55 % | T2 29 % | T3 8 %
-- Kelly (position) : f* 0.02 | ¼-Kelly 0.005 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- EV/risk : -0.041 | EV/share : $-0.163 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 54 % | T2 27 % | T3 8 %
+- Kelly (position) : f* 0.021 | ¼-Kelly 0.005 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 83.2 | bear 6.9 | side 9.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, intraday) : bull 83.2 | bear 6.8 | side 10.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 160.0
 
 
@@ -48,7 +52,7 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Neutral'.
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈None séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
   - **intraday** : indisponible (échantillon insuffisant (n=13, n_eff=7))
   - **swing** : indisponible (échantillon insuffisant (n=7, n_eff=5))
-  - **deep** : indisponible (échantillon insuffisant (n=7, n_eff=5))
+  - **deep** : indisponible (échantillon insuffisant (n=8, n_eff=5))
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→79% · +1.0%→64% · +2.0%→38% · +3.0%→19% · +5.0%→5% · +8.0%→0%
 - Range intraday médian 3.38% (p90 5.5%) · excursion haute méd. +1.44% / basse méd. −1.52%
 - Profil de vol intra : ouverture 2.475% vs midi 0.71% vs clôture 0.738% _(ouverture ~3.5× plus volatile → privilégier/éviter selon le setup)_
@@ -129,8 +133,8 @@ _Symétrique du fishing : quand l'actif imprime un JOUR DE HAUSSE PROPRE, on CHE
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : neutre
-- Proximité zone : 0.5/2 | R/R T1 : 0.5 | extension : normal
+- **Verdict timing** : entrée acceptable (proche d'une zone support/confluence)
+- Proximité zone : 1.0/2 | R/R T1 : 0.5 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -138,32 +142,32 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Factor** : attribution factorielle indisponible
 **Short/Insider** : SI —% | insider — | verdict neutral
-**Options** : neutral
+**Options** : favorable
 
 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-06 — CEG earnings (J-2 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-06 — CEG earnings (J-2 sess · earnings)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-08-06 — CEG earnings (J-1 sess · earnings)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-06 — CEG earnings (J-1 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-06 — CEG earnings (J-1 sess · earnings)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 54.5  _(neutre)_
-- **ADX** : 13.3  _(pas de tendance nette)_
-- **MACD** : hist 0.868  _(pas de croisement recent)_
-- **BB** : %B 0.61 · largeur 15.6%
-- **ATR** : 9.43 (11.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV falling · CMF -0.007  _(neutre)_
-- **Vol ratio** : 0.67  _(volume normal)_
-- **Choppiness** : 50.7  _(transition)_
-- **MA** : MA20 258.16 · MA50 263.2 · MA200 307.37  _(prix > MA20)_
-- **Dist MA** : MA20 +1.8% · MA50 -0.2% · MA200 -14.5%
+- **RSI** : 62.9  _(momentum haussier)_
+- **ADX** : 12.9  _(pas de tendance nette)_
+- **MACD** : hist 1.343  _(pas de croisement recent)_
+- **BB** : %B 0.85 · largeur 15.8%
+- **ATR** : 9.58 (13.0e pct 1a)  _(volatilite basse)_
+- **OBV/CMF** : OBV falling · CMF -0.002  _(neutre)_
+- **Vol ratio** : 0.86  _(volume normal)_
+- **Choppiness** : 51.3  _(transition)_
+- **MA** : MA20 259.55 · MA50 263.05 · MA200 306.8  _(prix > MA20)_
+- **Dist MA** : MA20 +5.5% · MA50 +4.1% · MA200 -10.8%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (86723 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (87331 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

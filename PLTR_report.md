@@ -1,11 +1,11 @@
 # PLTR
 
-**Generated** : 2026-08-03T22:01:32.736264+00:00  
+**Generated** : 2026-08-04T00:24:24.933711+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $125.65  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-03 — PLTR earnings (J-0 sess · earnings)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot $125.65 (+4.0% vs entrée) · entrée $120.83 · stop $117.81 · T1 $122.79 · R/R 0.65  
 > ↳ P(T1 av. stop) 57 % · EV/risk -0.005 · ¼-Kelly 0.019 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.5% cohérent avec le bruit 5 s (EV-optimal ≈ −2.5%)  
@@ -145,9 +145,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-0 sess · earnings)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-0 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-03 — PLTR earnings (J-0 sess · earnings)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -166,5 +166,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88527 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (88062 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
