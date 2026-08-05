@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SRT3",
-    "generated_at": "2026-08-04T22:05:30Z",
+    "generated_at": "2026-08-05T00:33:20Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-08-05T08:00:00Z",
-    "valid_until": "2026-08-05T21:00:00Z",
+    "valid_from": "2026-08-06T08:00:00Z",
+    "valid_until": "2026-08-06T21:00:00Z",
     "source_precomputed": "SRT3_precomputed.json"
   },
   "context": {
-    "last_price": 227.6,
+    "last_price": 228.5,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 11.7357,
     "atr_pct_daily": null,
-    "beta_60d": 0.5205,
+    "beta_60d": 0.5252,
     "beta_benchmark": "EWG",
-    "beta_corr_60d": 0.2325,
+    "beta_corr_60d": 0.2343,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bullish_engulfing",
@@ -53,7 +53,7 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -13.91,
+      "current_dd_pct": -13.57,
       "ath_price": 264.389,
       "ath_date": "2026-01-08",
       "max_dd_1y_pct": -22.5,
@@ -72,28 +72,28 @@
         "max": 234.7411
       },
       "stop": {
-        "price": 213.0045,
+        "price": 213.4095,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -5.05
+        "distance_pct": -4.87
       },
       "targets": [
         {
           "level": 1,
-          "price": 233.8361,
-          "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 0.84
+          "price": 234.28,
+          "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
+          "rr": 0.91
         },
         {
           "level": 2,
-          "price": 242.932,
+          "price": 243.4148,
           "basis": "band 95% (atteignable) · touche hist. 44% (sans stop)",
-          "rr": 1.64
+          "rr": 1.75
         },
         {
           "level": 3,
-          "price": 252.028,
+          "price": 252.5497,
           "basis": "plafond band 95% · touche hist. 14% (sans stop)",
-          "rr": 2.45
+          "rr": 2.58
         }
       ],
       "preferred_target": 1,
@@ -101,7 +101,7 @@
         "session_eu_xetra_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support VPVR_VAL + FIB_236 + VPVR_POC + S/R_support + FIB_382 + MA20 + MA50 + MA200 + FIB_50 (strength 121.5). Bounce mecanique."
+      "rationale": "Confluence support VPVR_VAL + FIB_236 + VPVR_POC + S/R_support + FIB_382 + MA50 + MA20 + MA200 + FIB_50 (strength 121.5). Bounce mecanique."
     },
     {
       "id": "B",
@@ -144,32 +144,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 201.7674,
-        "max": 205.8642
+        "min": 202.5652,
+        "max": 206.6782
       },
       "stop": {
-        "price": 187.2364,
+        "price": 188.0464,
         "basis": "fallback_psych_-10pct",
-        "distance_pct": -8.13
+        "distance_pct": -8.1
       },
       "targets": [
         {
           "level": 1,
-          "price": 233.8361,
-          "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 1.81
+          "price": 234.28,
+          "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
+          "rr": 1.79
         },
         {
           "level": 2,
-          "price": 242.932,
+          "price": 243.4148,
           "basis": "band 95% (atteignable) · touche hist. 44% (sans stop)",
-          "rr": 2.36
+          "rr": 2.34
         },
         {
           "level": 3,
-          "price": 252.028,
+          "price": 252.5497,
           "basis": "plafond band 95% · touche hist. 14% (sans stop)",
-          "rr": 2.91
+          "rr": 2.89
         }
       ],
       "preferred_target": 1,
@@ -193,7 +193,7 @@
     }
   ],
   "invalidation": {
-    "price": 185.364,
+    "price": 186.1659,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-08-04T22:05:30Z",
+    "generated_at": "2026-08-05T00:33:20Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-08-05T08:00:00Z",
-    "valid_until": "2026-08-05T21:00:00Z",
+    "valid_from": "2026-08-06T08:00:00Z",
+    "valid_until": "2026-08-06T21:00:00Z",
     "source_precomputed": "005930_precomputed.json"
   },
   "context": {
-    "last_price": 238750.0,
+    "last_price": 240000.0,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -42,14 +42,14 @@
   "notes": {
     "atr_daily": 25485.7143,
     "atr_pct_daily": null,
-    "beta_60d": 0.5752,
+    "beta_60d": 0.5771,
     "beta_benchmark": "EWY",
-    "beta_corr_60d": 0.4423,
+    "beta_corr_60d": 0.4438,
     "btc_corr_high": null,
     "candlestick": {
       "name": "hammer",
-      "date": "2026-07-31",
-      "confidence": 0.813
+      "date": "2026-08-04",
+      "confidence": 0.963
     },
     "divergences": [
       {
@@ -75,7 +75,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -34.07,
+      "current_dd_pct": -33.72,
       "ath_price": 362100.6562,
       "ath_date": "2026-06-18",
       "max_dd_1y_pct": -42.83,
@@ -90,32 +90,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 236525.7875,
-        "max": 237949.2125
+        "min": 237772.0375,
+        "max": 239202.9625
       },
       "stop": {
-        "price": 200521.4286,
+        "price": 201771.4286,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -15.48
+        "distance_pct": -15.4
       },
       "targets": [
         {
           "level": 1,
-          "price": 261711.3688,
-          "basis": "résistance (weak) · touche hist. 72% (sans stop)",
-          "rr": 0.67
+          "price": 253951.3843,
+          "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
+          "rr": 0.42
         },
         {
           "level": 2,
-          "price": 287183.2933,
-          "basis": "résistance (weak) · touche hist. 44% (sans stop)",
-          "rr": 1.36
+          "price": 277640.9449,
+          "basis": "band 95% (atteignable) · touche hist. 44% (sans stop)",
+          "rr": 1.07
         },
         {
           "level": 3,
-          "price": 300556.5365,
+          "price": 301330.5054,
           "basis": "plafond band 95% · touche hist. 14% (sans stop)",
-          "rr": 1.72
+          "rr": 1.71
         }
       ],
       "preferred_target": 1,
@@ -133,22 +133,22 @@
         "max": 263019.9256
       },
       "stop": {
-        "price": 253812.0625,
+        "price": 253874.25,
         "basis": "below_broken_resistance",
-        "distance_pct": -3.31
+        "distance_pct": -3.28
       },
       "targets": [
         {
           "level": 1,
-          "price": 278562.2667,
+          "price": 297416.1319,
           "basis": "next_confluence_resistance",
-          "rr": 1.85
+          "rr": 4.05
         },
         {
           "level": 2,
-          "price": 301595.7427,
+          "price": 301595.741,
           "basis": "fib_786",
-          "rr": 4.5
+          "rr": 4.53
         }
       ],
       "preferred_target": 1,
@@ -162,32 +162,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 194164.0221,
-        "max": 226073.9414
+        "min": 194170.2721,
+        "max": 226073.9375
       },
       "stop": {
-        "price": 186397.4612,
+        "price": 186403.4612,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -11.29
       },
       "targets": [
         {
           "level": 1,
-          "price": 261711.3688,
-          "basis": "résistance (weak) · touche hist. 72% (sans stop)",
-          "rr": 2.17
+          "price": 253951.3843,
+          "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
+          "rr": 1.85
         },
         {
           "level": 2,
-          "price": 287183.2933,
-          "basis": "résistance (weak) · touche hist. 44% (sans stop)",
-          "rr": 3.25
+          "price": 277640.9449,
+          "basis": "band 95% (atteignable) · touche hist. 44% (sans stop)",
+          "rr": 2.85
         },
         {
           "level": 3,
-          "price": 300556.5365,
+          "price": 301330.5054,
           "basis": "plafond band 95% · touche hist. 14% (sans stop)",
-          "rr": 3.81
+          "rr": 3.85
         }
       ],
       "preferred_target": 1,
@@ -200,7 +200,7 @@
   "bot_actionable_reason": "ta_score=3<4",
   "global_conditions": [],
   "invalidation": {
-    "price": 184533.4866,
+    "price": 184539.4266,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
