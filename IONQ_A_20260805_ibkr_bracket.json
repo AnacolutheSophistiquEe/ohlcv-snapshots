@@ -1,23 +1,23 @@
 {
   "available": true,
-  "generated_at": "2026-07-29T00:21:09.684316+00:00",
-  "prediction_id": "MSTR_A_20260729",
+  "generated_at": "2026-08-05T00:25:55.209403+00:00",
+  "prediction_id": "IONQ_A_20260805",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "MSTR",
+  "symbol": "IONQ",
   "exchange": "SMART",
   "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 95.68,
-    "quantity": 2,
+    "limit_price": 41.51,
+    "quantity": 3,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 97.79,
+      "limit_price": 42.89,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
@@ -25,21 +25,29 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 102.8,
+      "limit_price": 45.62,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 48.35,
+      "quantity": 1,
+      "tif": "GTC",
+      "tag": "T3"
+    },
+    {
+      "action": "SELL",
       "order_type": "STP",
-      "stop_price": 90.28,
-      "quantity": 2,
+      "stop_price": 37.36,
+      "quantity": 3,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "MSTR_A_intraday_20260729",
+  "oca_group": "IONQ_A_intraday_20260805",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -53,7 +61,7 @@
     "order_validity": {
       "type": "DAY",
       "offset_sessions": 0,
-      "good_till_date": "2026-07-29T22:00:00+00:00"
+      "good_till_date": "2026-08-05T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -76,7 +84,7 @@
       },
       {
         "tag": "T3",
-        "qty": 0
+        "qty": 1
       }
     ]
   },
@@ -84,26 +92,26 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 6.0,
+    "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0151,
+    "ev_pct_risk": -0.0239,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.5357,
-      "T2": 0.1753,
-      "T3": 0.1625
+      "T1": 0.3125,
+      "T2": 0.3125,
+      "T3": 0.3125
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 192.32,
-    "hold_tolerance_breach_price": 72.12,
+    "notional_eur": 125.16,
+    "hold_tolerance_breach_price": 31.29,
     "hold_fallback_active": true,
-    "prediction_id": "MSTR_A_20260729"
+    "prediction_id": "IONQ_A_20260805"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
