@@ -1,13 +1,13 @@
 # IONQ
 
-**Generated** : 2026-08-05T22:02:29.210125+00:00  
+**Generated** : 2026-08-06T00:25:41.583717+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.6 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite low · $39.93  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-05 — IONQ earnings (J-0 sess · earnings)  
+> 🟡 **WAIT-FOR-DIP** — spot +0.7 % au-dessus de la zone d'entrée — attendre le repli  
 > ↳ spot $39.93 (+0.7% vs entrée) · entrée $39.67 · stop $38.84 · T1 $40.89 · R/R 1.47  
 > ↳ P(T1 av. stop) 32 % _(réel 5 s)_ · EV/risk 0.002 _(réel 5 s)_ (GBM 0.062) · ¼-Kelly 0.022 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.08% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
@@ -162,9 +162,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-08-05 — IONQ earnings (J-0 sess · earnings)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-5 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-5 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -183,5 +183,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (93340 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (92631 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

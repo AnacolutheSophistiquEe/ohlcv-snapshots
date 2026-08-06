@@ -1,13 +1,13 @@
 # RGTI
 
-**Generated** : 2026-08-05T22:03:57.218041+00:00  
+**Generated** : 2026-08-06T00:27:04.903927+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.4 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $16.78  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-06 — RGTI earnings (J-1 sess · earnings)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-06 — RGTI earnings (J-0 sess · earnings)  
 > ↳ spot $16.78 (+0.7% vs entrée) · entrée $16.66 · stop $16.30 · T1 $17.27 · R/R 1.69  
 > ↳ P(T1 av. stop) 37 % _(réel 5 s)_ · EV/risk 0.114 _(réel 5 s)_ (GBM 0.166) · ¼-Kelly 0.029 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.16% cohérent avec le bruit 5 s (EV-optimal ≈ −2.0%)  
@@ -158,9 +158,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-1 sess · earnings)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-1 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-1 sess · earnings)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-08-06 — RGTI earnings (J-0 sess · earnings)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -179,5 +179,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (92509 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (92199 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
