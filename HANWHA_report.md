@@ -1,15 +1,15 @@
 # 012450
 
-**Generated** : 2026-08-06T21:54:40.309757+00:00  
+**Generated** : 2026-08-07T00:17:54.475046+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.7 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · ₩1057000.00  
+**Subtitle** : indeterminate · volatilite normal · ₩1054000.00  
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
-> ↳ spot ₩1057000.00 (+3.0% vs entrée) · entrée ₩1026525.98 · stop ₩944403.90 · T1 ₩1058763.33 · R/R 0.39  
-> ↳ P(T1 av. stop) 29 % _(réel 5 s)_ · EV/risk -0.059 _(réel 5 s)_ (GBM -0.153) · ¼-Kelly 0.021 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ↳ spot ₩1054000.00 (+2.9% vs entrée) · entrée ₩1024275.98 · stop ₩942333.90 · T1 ₩1056374.61 · R/R 0.39  
+> ↳ P(T1 av. stop) 25 % _(réel 5 s)_ · EV/risk -0.067 _(réel 5 s)_ (GBM -0.153) · ¼-Kelly 0.021 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
 
 ## Régime & alignement multi-TF
@@ -21,7 +21,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## ⚠ Contradictions techniques
 
-- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.140 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
+- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.130 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
   - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
   - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
   - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
@@ -40,17 +40,17 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : ₩1020078.51–₩1032973.45 (mid ₩1026525.98)
-- Spot actuel : ₩1057000.00 (+3.0% au-dessus de la zone — repli à attendre)
-- Stop : ₩944403.90 (stop swing_plan-based (-13.2%))
-- Targets : T1 ₩1058763.33 · R/R 0.39 | T2 ₩1091000.68 · R/R 0.79 | T3 ₩1123238.03 · R/R 1.18
+- Entry (zone de repli) : ₩1017856.26–₩1030695.71 (mid ₩1024275.98)
+- Spot actuel : ₩1054000.00 (+2.9% au-dessus de la zone — repli à attendre)
+- Stop : ₩942333.90 (stop swing_plan-based (-13.08%))
+- Targets : T1 ₩1056374.61 · R/R 0.39 | T2 ₩1088473.23 · R/R 0.78 | T3 ₩1120571.86 · R/R 1.18
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩944403.90
+- Invalidation : close sous ₩942333.90
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.153 | EV/share : ₩-12545.716 | p_fill : —
+- EV/risk : -0.153 | EV/share : ₩-12522.505 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 25 % | T2 15 % | T3 15 %
 - Kelly (position) : f* 0.084 | ¼-Kelly 0.021 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
@@ -61,9 +61,9 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −2.88% → cible +3.14% / stop −8.0%, p_fill 44%, n_eff≈25.0) : P(cible|rempli) **29%** · **EV/risk -0.059** (×p_fill ; si rempli -1.07% du capital)
-  - **swing** (entrée dip −6.348% → cible +7.022% / stop −7.316%, p_fill 53%, n_eff≈20.4) : P(cible|rempli) **45%** · **EV/risk -0.025** (×p_fill ; si rempli -0.35% du capital)
-  - **deep** (entrée dip −9.801% → cible +9.931% / stop −11.395%, p_fill 34%, n_eff≈16.8) : P(cible|rempli) **38%** · **EV/risk -0.070** (×p_fill ; si rempli -2.35% du capital)
+  - **intraday** (entrée dip −2.815% → cible +3.134% / stop −8.0%, p_fill 44%, n_eff≈25.0) : P(cible|rempli) **25%** · **EV/risk -0.067** (×p_fill ; si rempli -1.22% du capital)
+  - **swing** (entrée dip −6.209% → cible +7.007% / stop −7.326%, p_fill 53%, n_eff≈20.6) : P(cible|rempli) **42%** · **EV/risk -0.055** (×p_fill ; si rempli -0.76% du capital)
+  - **deep** (entrée dip −9.593% → cible +9.91% / stop −11.401%, p_fill 34%, n_eff≈16.8) : P(cible|rempli) **38%** · **EV/risk -0.071** (×p_fill ; si rempli -2.39% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→74% · +1.0%→60% · +2.0%→42% · +3.0%→25% · +5.0%→15% · +8.0%→4%
 - Range intraday médian 5.99% (p90 9.34%) · excursion haute méd. +1.85% / basse méd. −2.99%
 - Profil de vol intra : ouverture 4.311% vs midi 1.209% vs clôture 1.203% _(ouverture ~3.6× plus volatile → privilégier/éviter selon le setup)_
@@ -157,19 +157,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 59.4  _(momentum haussier)_
+- **RSI** : 59.2  _(momentum haussier)_
 - **ADX** : 15.1  _(pas de tendance nette)_
-- **MACD** : hist 23545.361  _(pas de croisement recent)_
-- **BB** : %B 1.05 · largeur 25.1%
+- **MACD** : hist 23353.908  _(pas de croisement recent)_
+- **BB** : %B 1.05 · largeur 25.0%
 - **ATR** : 72428.57 (59.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF -0.14  _(distribution)_
-- **Vol ratio** : 0.6  _(volume atone)_
+- **OBV/CMF** : OBV rising · CMF -0.126  _(distribution)_
+- **Vol ratio** : 1.17  _(volume normal)_
 - **Choppiness** : 47.4  _(transition)_
-- **MA** : MA20 927750.0 · MA50 1030700.0 · MA200 1138789.79  _(prix > MA20)_
-- **Dist MA** : MA20 +13.9% · MA50 +2.6% · MA200 -7.2%
+- **MA** : MA20 927600.0 · MA50 1030640.0 · MA200 1138774.79  _(prix > MA20)_
+- **Dist MA** : MA20 +13.6% · MA50 +2.3% · MA200 -7.4%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (84735 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (84592 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

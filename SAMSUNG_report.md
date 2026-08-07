@@ -1,15 +1,15 @@
 # 005930
 
-**Generated** : 2026-08-06T21:50:23.976470+00:00  
+**Generated** : 2026-08-07T00:13:59.204371+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 8.3 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : trending · volatilite high · ₩230250.00  
+**Subtitle** : trending · volatilite high · ₩230500.00  
 
 > ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US CPI (headline) (J-4 sess · macro taux)  
-> ↳ spot ₩230250.00 (+2.0% vs entrée) · entrée ₩225749.65 · stop ₩201406.79 · T1 ₩261711.37 · R/R 1.48  
-> ↳ P(T1 av. stop) 8 % _(réel 5 s)_ · EV/risk -0.41 _(réel 5 s)_ (GBM 0.187) · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ spot ₩230500.00 (+2.0% vs entrée) · entrée ₩225930.82 · stop ₩201587.97 · T1 ₩261711.37 · R/R 1.47  
+> ↳ P(T1 av. stop) 8 % _(réel 5 s)_ · EV/risk -0.41 _(réel 5 s)_ (GBM 0.186) · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -26,20 +26,20 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass (negative EV)'.
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : ₩221249.30–₩230250.00 (mid ₩225749.65)
-- Spot actuel : ₩230250.00 (+2.0% au-dessus de la zone — repli à attendre)
-- Stop : ₩201406.79 (stop swing_plan-based (-12.53%))
-- Targets : T1 ₩261711.37 · R/R 1.48 | T2 ₩287183.29 · R/R 2.52 | T3 ₩294876.71 · R/R 2.84
+- Entry (zone de repli) : ₩221361.65–₩230500.00 (mid ₩225930.82)
+- Spot actuel : ₩230500.00 (+2.0% au-dessus de la zone — repli à attendre)
+- Stop : ₩201587.97 (stop swing_plan-based (-12.54%))
+- Targets : T1 ₩261711.37 · R/R 1.47 | T2 ₩287183.29 · R/R 2.52 | T3 ₩295081.24 · R/R 2.84
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩201406.79
+- Invalidation : close sous ₩201587.97
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.187 | EV/share : ₩4558.300 | p_fill : —
+- EV/risk : 0.186 | EV/share : ₩4538.671 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 15 % | T2 2 % | T3 1 %
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 39.5 | bear 49.8 | side 10.7  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 160.0
 
@@ -47,9 +47,9 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass (negative EV)'.
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −0.888% → cible +5.166% / stop −3.2%, p_fill 88%, n_eff≈34.1) : P(cible|rempli) **10%** · **EV/risk -0.464** (×p_fill ; si rempli -1.69% du capital)
-  - **swing** (entrée dip −1.958% → cible +15.93% / stop −10.783%, p_fill 80%, n_eff≈30.5) : P(cible|rempli) **8%** · **EV/risk -0.410** (×p_fill ; si rempli -5.51% du capital)
-  - **deep** (entrée dip −2.942% → cible +28.501% / stop −16.338%, p_fill 76%, n_eff≈29.2) : P(cible|rempli) **2%** · **EV/risk -0.415** (×p_fill ; si rempli -8.95% du capital)
+  - **intraday** (entrée dip −0.902% → cible +5.066% / stop −3.197%, p_fill 88%, n_eff≈34.1) : P(cible|rempli) **10%** · **EV/risk -0.466** (×p_fill ; si rempli -1.69% du capital)
+  - **swing** (entrée dip −1.979% → cible +15.837% / stop −10.774%, p_fill 80%, n_eff≈30.5) : P(cible|rempli) **8%** · **EV/risk -0.410** (×p_fill ; si rempli -5.51% du capital)
+  - **deep** (entrée dip −3.029% → cible +28.479% / stop −16.336%, p_fill 76%, n_eff≈29.2) : P(cible|rempli) **2%** · **EV/risk -0.413** (×p_fill ; si rempli -8.91% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→81% · +1.0%→66% · +2.0%→48% · +3.0%→34% · +5.0%→21% · +8.0%→5%
 - Range intraday médian 5.97% (p90 9.84%) · excursion haute méd. +1.93% / basse méd. −3.0%
 - Profil de vol intra : ouverture 3.023% vs midi 1.333% vs clôture 1.516% _(ouverture ~2.3× plus volatile → privilégier/éviter selon le setup)_
@@ -143,19 +143,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 44.1  _(momentum baissier)_
+- **RSI** : 44.2  _(momentum baissier)_
 - **ADX** : 26.6  _(tendance etablie)_
-- **MACD** : hist 796.406  _(bullish_recent)_
+- **MACD** : hist 812.361  _(bullish_recent)_
 - **BB** : %B 0.27 · largeur 34.7%
 - **ATR** : 24342.86 (86.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.237  _(distribution)_
-- **Vol ratio** : 0.72  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.239  _(distribution)_
+- **Vol ratio** : 0.83  _(volume normal)_
 - **Choppiness** : 51.8  _(transition)_
-- **MA** : MA20 250287.5 · MA50 295124.16 · MA200 195634.41  _(prix < MA20)_
-- **Dist MA** : MA20 -8.0% · MA50 -22.0% · MA200 +17.7%
+- **MA** : MA20 250300.0 · MA50 295129.16 · MA200 195635.66  _(prix < MA20)_
+- **Dist MA** : MA20 -7.9% · MA50 -21.9% · MA200 +17.8%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (82195 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (82046 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

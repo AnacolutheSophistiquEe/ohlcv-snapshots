@@ -1,13 +1,13 @@
 # SMCI
 
-**Generated** : 2026-08-06T22:00:26.009642+00:00  
+**Generated** : 2026-08-07T00:23:22.784470+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.5 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $29.38  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-11 — SMCI earnings (J-4 sess · earnings)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-11 — SMCI earnings (J-3 sess · earnings)  
 > ↳ spot $29.38 (+7.8% vs entrée) · entrée $27.26 · stop $24.83 · T1 $29.43 · R/R 0.89  
 > ↳ P(T1 av. stop) 46 % _(réel 5 s)_ · EV/risk -0.045 _(réel 5 s)_ (GBM 0.004) · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈214) · non recalibrée track-record (n=0)_  
 
@@ -157,8 +157,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-11 — SMCI earnings (J-4 sess · earnings)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-11 — SMCI earnings (J-4 sess · earnings)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-11 — SMCI earnings (J-3 sess · earnings)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-11 — SMCI earnings (J-3 sess · earnings)
 
 
 ## Indicateurs (résumé)
@@ -177,5 +177,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (92455 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (92305 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
