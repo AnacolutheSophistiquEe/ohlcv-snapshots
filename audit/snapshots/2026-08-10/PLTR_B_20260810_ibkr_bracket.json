@@ -1,0 +1,112 @@
+{
+  "available": true,
+  "generated_at": "2026-08-10T00:24:22.808582+00:00",
+  "prediction_id": "PLTR_B_20260810",
+  "account": "${IBKR_ACCOUNT_ID}",
+  "symbol": "PLTR",
+  "exchange": "SMART",
+  "currency": "USD",
+  "parent": {
+    "action": "BUY",
+    "order_type": "LMT",
+    "limit_price": 172.01,
+    "quantity": 3,
+    "tif": "GTD",
+    "gtd": "2026-08-15T22:00:00+00:00"
+  },
+  "children": [
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 184.74,
+      "quantity": 2,
+      "tif": "GTC",
+      "tag": "T2"
+    },
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 197.95,
+      "quantity": 1,
+      "tif": "GTC",
+      "tag": "T3"
+    },
+    {
+      "action": "SELL",
+      "order_type": "STP",
+      "stop_price": 149.05,
+      "quantity": 3,
+      "tif": "GTC",
+      "tag": "SL"
+    }
+  ],
+  "oca_group": "PLTR_B_swing_20260810",
+  "oca_type": 1,
+  "execution_rules": {
+    "stop_mode": "breakeven_after_T1",
+    "stop_mode_description": "SL → prix d'entrée après hit T1",
+    "trail_distance_atr": null,
+    "time_stop": {
+      "enabled": true,
+      "max_holding_sessions": 5,
+      "exit_mode": "market_close_at_breakeven"
+    },
+    "order_validity": {
+      "type": "GTD",
+      "offset_sessions": 5,
+      "good_till_date": "2026-08-15T22:00:00+00:00"
+    },
+    "scale_out_weights": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "scale_out_weights_normalized": [
+      0.6,
+      0.4
+    ],
+    "qty_split": [
+      {
+        "tag": "T2",
+        "qty": 2
+      },
+      {
+        "tag": "T3",
+        "qty": 1
+      }
+    ]
+  },
+  "bracket_metadata": {
+    "plan_id": "B",
+    "horizon": "swing",
+    "horizon_label_long": "swing_court_~1_semaine",
+    "composite_score": 9.0,
+    "composite_score_source": "horizon_ta_score.plan_b.score",
+    "ev_pct_risk": -0.0607,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
+    "ev_pct_risk_threshold": 0.3,
+    "ev_status": "negative_ev",
+    "p_hit_upper": {
+      "T1": 0.2178,
+      "T2": 0.0767,
+      "T3": 0.0293
+    },
+    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
+    "p_fill": null,
+    "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
+    "rating": null,
+    "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
+    "notional_eur": 516.03,
+    "hold_tolerance_breach_price": 129.0075,
+    "hold_fallback_active": true,
+    "prediction_id": "PLTR_B_20260810"
+  },
+  "sanity_checks": {
+    "all_targets_above_entry": true,
+    "stop_below_entry": true,
+    "stop_above_zero": true,
+    "qty_split_sum_equals_total": true,
+    "tick_size_used": 0.01,
+    "qty_total_positive": true
+  }
+}
