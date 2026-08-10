@@ -1,9 +1,10 @@
 {
   "available": true,
-  "generated_at": "2026-08-08T15:59:09.961673+00:00",
+  "generated_at": "2026-08-10T00:33:03.740499+00:00",
   "window_sessions": 55,
   "tickers_used": [
     "AL2SI",
+    "CEG",
     "ENR",
     "IONQ",
     "MSTR",
@@ -21,6 +22,7 @@
   "tickers_skipped": [],
   "weights_eur": {
     "AL2SI": 276.0,
+    "CEG": 269.89,
     "ENR": 307.08,
     "IONQ": 399.87,
     "MSTR": 200.02,
@@ -30,20 +32,20 @@
     "RGTI": 394.68,
     "SAF": 357.4,
     "SMCI": 373.56,
-    "SMR": 284.1,
-    "SOFI": 271.5,
+    "SMR": 284.78,
+    "SOFI": 275.7,
     "SOI": 490.0,
     "SRT3": 232.2
   },
-  "total_notional_eur": 4773.24,
+  "total_notional_eur": 5048.01,
   "capital_total_eur": 2000.0,
   "var_95": {
     "method": "gaussian_1d",
     "z_95": 1.6448536269514722,
-    "sigma_portfolio_daily_eur": 156.7,
-    "value_eur": 257.75,
-    "pct_total_notional": 5.4,
-    "pct_capital": 12.89
+    "sigma_portfolio_daily_eur": 160.07,
+    "value_eur": 263.29,
+    "pct_total_notional": 5.22,
+    "pct_capital": 13.16
   },
   "panel_beta_weighted": {},
   "concentration_flags": [],
@@ -51,62 +53,62 @@
     {
       "pair": "IONQ_RGTI",
       "rho": 0.8849,
-      "share_pct": 16.6,
+      "share_pct": 15.7,
       "flag": "red"
     },
     {
       "pair": "IONQ_SMR",
       "rho": 0.7559,
-      "share_pct": 14.3,
+      "share_pct": 13.6,
       "flag": "red"
     },
     {
       "pair": "RGTI_SMR",
       "rho": 0.736,
-      "share_pct": 14.2,
+      "share_pct": 13.5,
       "flag": "red"
     },
     {
       "pair": "NEX_PRY",
       "rho": 0.7198,
-      "share_pct": 14.1,
+      "share_pct": 13.3,
       "flag": "red"
     },
     {
       "pair": "ENR_PRY",
       "rho": 0.7176,
-      "share_pct": 11.7,
+      "share_pct": 11.1,
       "flag": "red"
     },
     {
       "pair": "ENR_NEX",
       "rho": 0.6336,
-      "share_pct": 15.2,
+      "share_pct": 14.4,
       "flag": "red"
     },
     {
       "pair": "PRY_RGTI",
       "rho": 0.6072,
-      "share_pct": 13.5,
+      "share_pct": 12.8,
       "flag": "red"
     },
     {
       "pair": "PRY_SMR",
       "rho": 0.6066,
-      "share_pct": 11.2,
+      "share_pct": 10.6,
       "flag": "red"
     },
     {
       "pair": "SMR_SOFI",
       "rho": 0.6038,
-      "share_pct": 11.6,
+      "share_pct": 11.1,
       "flag": "red"
     }
   ],
   "scaling": {
     "var_threshold_pct": 8.0,
     "var_ref_metric": "var_95_pct_capital",
-    "scale_factor": 0.6207,
+    "scale_factor": 0.6077,
     "scaling_applied": true,
     "note": "Scale factor < 1 → réduire tous les sizings × scale_factor pour ramener la VaR sous le seuil."
   },
