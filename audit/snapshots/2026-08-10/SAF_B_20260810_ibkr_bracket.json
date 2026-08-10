@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-10T00:06:54.608581+00:00",
+  "generated_at": "2026-08-10T21:41:46.002275+00:00",
   "prediction_id": "SAF_B_20260810",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SAF",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 357.4,
+    "limit_price": 363.2,
     "quantity": 1,
     "tif": "GTD",
     "gtd": "2026-08-15T16:30:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 363.8,
+      "limit_price": 369.4,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 341.7,
+      "stop_price": 346.9,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
@@ -74,22 +74,22 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 9.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0059,
+    "ev_pct_risk": 0.0137,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.5455,
-      "T2": 0.3444,
-      "T3": 0.1976
+      "T1": 0.5615,
+      "T2": 0.3431,
+      "T3": 0.1969
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 357.4,
-    "hold_tolerance_breach_price": 268.05,
+    "notional_eur": 363.2,
+    "hold_tolerance_breach_price": 272.4,
     "hold_fallback_active": true,
     "prediction_id": "SAF_B_20260810"
   },
