@@ -1,0 +1,100 @@
+{
+  "available": true,
+  "generated_at": "2026-08-11T00:33:58.767098+00:00",
+  "window_sessions": 55,
+  "tickers_used": [
+    "AL2SI",
+    "ENR",
+    "IONQ",
+    "NEX",
+    "PLTR",
+    "PRY",
+    "RGTI",
+    "SAF",
+    "SMCI",
+    "SMR",
+    "SOFI",
+    "SOI",
+    "SRT3"
+  ],
+  "tickers_skipped": [],
+  "weights_eur": {
+    "AL2SI": 374.14,
+    "ENR": 310.12,
+    "IONQ": 382.77,
+    "NEX": 277.2,
+    "PLTR": 525.69,
+    "PRY": 379.5,
+    "RGTI": 282.4,
+    "SAF": 363.2,
+    "SMCI": 377.52,
+    "SMR": 284.58,
+    "SOFI": 271.8,
+    "SOI": 479.4,
+    "SRT3": 238.4
+  },
+  "total_notional_eur": 4546.72,
+  "capital_total_eur": 2000.0,
+  "var_95": {
+    "method": "gaussian_1d",
+    "z_95": 1.6448536269514722,
+    "sigma_portfolio_daily_eur": 146.65,
+    "value_eur": 241.23,
+    "pct_total_notional": 5.31,
+    "pct_capital": 12.06
+  },
+  "panel_beta_weighted": {},
+  "concentration_flags": [],
+  "high_corr_pairs_in_panel": [
+    {
+      "pair": "IONQ_RGTI",
+      "rho": 0.8828,
+      "share_pct": 14.6,
+      "flag": "red"
+    },
+    {
+      "pair": "IONQ_SMR",
+      "rho": 0.7497,
+      "share_pct": 14.7,
+      "flag": "red"
+    },
+    {
+      "pair": "RGTI_SMR",
+      "rho": 0.7255,
+      "share_pct": 12.5,
+      "flag": "red"
+    },
+    {
+      "pair": "ENR_PRY",
+      "rho": 0.7166,
+      "share_pct": 15.2,
+      "flag": "red"
+    },
+    {
+      "pair": "NEX_PRY",
+      "rho": 0.7163,
+      "share_pct": 14.4,
+      "flag": "red"
+    },
+    {
+      "pair": "ENR_NEX",
+      "rho": 0.6233,
+      "share_pct": 12.9,
+      "flag": "red"
+    },
+    {
+      "pair": "PRY_RGTI",
+      "rho": 0.6014,
+      "share_pct": 14.6,
+      "flag": "red"
+    }
+  ],
+  "scaling": {
+    "var_threshold_pct": 8.0,
+    "var_ref_metric": "var_95_pct_capital",
+    "scale_factor": 0.6633,
+    "scaling_applied": true,
+    "note": "Scale factor < 1 → réduire tous les sizings × scale_factor pour ramener la VaR sous le seuil."
+  },
+  "note": "Modèle Gaussien — ne capte pas les queues épaisses. Pour stress, utiliser compute_stress_test.py. Net beta = combinaison linéaire pondérée des betas par ticker × benchmark."
+}
