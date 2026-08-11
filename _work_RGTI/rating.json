@@ -1,0 +1,103 @@
+{
+  "available": true,
+  "thresholds": {
+    "strong_buy": {
+      "ev_pct_risk_min": 0.5,
+      "p_fill_min": 0.6,
+      "composite_min": 7
+    },
+    "buy": {
+      "ev_pct_risk_min": 0.3,
+      "p_fill_min": 0.5,
+      "composite_min": 5
+    },
+    "neutral": {
+      "ev_pct_risk_min": 0.1,
+      "composite_min": 4
+    },
+    "pass_zero": {
+      "ev_pct_risk_min": 0.0
+    },
+    "pass_negative_ev": {
+      "ev_pct_risk_max": 0.0,
+      "composite_min": 4
+    },
+    "strong_pass_negative_ev": {
+      "ev_pct_risk_max": 0.0,
+      "composite_max": 4
+    }
+  },
+  "note": "p_fill = proba que le prix atteigne la zone d'entrée (dip) dans l'horizon, CALCULÉE depuis entry_mid + σ (principe de réflexion, GBM sans dérive — audit AT v2.2). Override skill prioritaire. Tag `(p_fill_unknown)` seulement si ni calcul ni override disponibles.",
+  "by_horizon": {
+    "intraday": {
+      "plan_id": "A",
+      "rating": "Neutral",
+      "reason": "ev=0.119 ≥ 0.10, composite=5.0 ≥ 4",
+      "inputs": {
+        "ev_pct_risk": 0.119,
+        "ev_source": "empirical_5s",
+        "ev_pct_risk_gbm": 0.2696,
+        "ev_pct_risk_empirical_5s": 0.119,
+        "n_eff_5s": 33.0,
+        "ev_pct_risk_empirical_daily": -0.385,
+        "n_eff_daily": 187.3,
+        "ci95_empirical_daily": [
+          -0.587,
+          -0.1782
+        ],
+        "composite_score": 5.0,
+        "p_fill": 0.7426,
+        "p_fill_source": "empirical_5s"
+      }
+    },
+    "swing": {
+      "plan_id": "B",
+      "rating": "Pass (negative EV)",
+      "reason": "ev=-0.292 < 0 mais santé 6.0 ≥ 4 (actif sain, entrée non favorable)",
+      "inputs": {
+        "ev_pct_risk": -0.2923,
+        "ev_source": "empirical_5s",
+        "ev_pct_risk_gbm": -0.0524,
+        "ev_pct_risk_empirical_5s": -0.2923,
+        "n_eff_5s": 29.1,
+        "ev_pct_risk_empirical_daily": -0.221,
+        "n_eff_daily": 195.3,
+        "ci95_empirical_daily": [
+          -0.4976,
+          0.098
+        ],
+        "composite_score": 6.0,
+        "p_fill": 0.6726,
+        "p_fill_source": "empirical_5s"
+      }
+    },
+    "deep": {
+      "plan_id": "C",
+      "rating": "Pass (negative EV)",
+      "reason": "ev=-0.207 < 0 mais santé 4.0 ≥ 4 (actif sain, entrée non favorable)",
+      "inputs": {
+        "ev_pct_risk": -0.2073,
+        "ev_source": "empirical_5s",
+        "ev_pct_risk_gbm": -0.1448,
+        "ev_pct_risk_empirical_5s": -0.2073,
+        "n_eff_5s": 33.0,
+        "ev_pct_risk_empirical_daily": -0.3006,
+        "n_eff_daily": 183.5,
+        "ci95_empirical_daily": [
+          -0.5866,
+          0.0647
+        ],
+        "composite_score": 4.0,
+        "p_fill": 0.8402,
+        "p_fill_source": "empirical_5s"
+      }
+    }
+  },
+  "best_rating": {
+    "plan_id": "B",
+    "horizon": "swing",
+    "rating": "Pass (negative EV)",
+    "reason": "ev=-0.292 < 0 mais santé 6.0 ≥ 4 (actif sain, entrée non favorable)",
+    "selected_by": "composite_plan (source unique §6)"
+  }
+}

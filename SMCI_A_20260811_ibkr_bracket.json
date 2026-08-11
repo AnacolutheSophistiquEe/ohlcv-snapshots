@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-11T00:23:32.622222+00:00",
+  "generated_at": "2026-08-11T21:59:53.154851+00:00",
   "prediction_id": "SMCI_A_20260811",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SMCI",
@@ -9,32 +9,32 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 31.3,
-    "quantity": 12,
+    "limit_price": 31.44,
+    "quantity": 9,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 32.75,
-      "quantity": 7,
+      "limit_price": 32.82,
+      "quantity": 5,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 35.03,
-      "quantity": 5,
+      "limit_price": 35.11,
+      "quantity": 4,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 25.64,
-      "quantity": 12,
+      "stop_price": 26.09,
+      "quantity": 9,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -67,11 +67,11 @@
     "qty_split": [
       {
         "tag": "T2",
-        "qty": 7
+        "qty": 5
       },
       {
         "tag": "T3",
-        "qty": 5
+        "qty": 4
       }
     ]
   },
@@ -79,9 +79,9 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 7.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.0319,
+    "ev_pct_risk": 0.052,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
@@ -95,8 +95,8 @@
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 377.52,
-    "hold_tolerance_breach_price": 23.595,
+    "notional_eur": 284.4,
+    "hold_tolerance_breach_price": 23.7,
     "hold_fallback_active": true,
     "prediction_id": "SMCI_A_20260811"
   },

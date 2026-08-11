@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-11T00:03:15.980864+00:00",
+  "generated_at": "2026-08-11T21:37:03.495108+00:00",
   "prediction_id": "SRT3_A_20260811",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SRT3",
@@ -9,24 +9,32 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 237.2,
-    "quantity": 1,
+    "limit_price": 237.1,
+    "quantity": 2,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 237.7,
+      "limit_price": 237.4,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
     },
     {
       "action": "SELL",
-      "order_type": "STP",
-      "stop_price": 218.15,
+      "order_type": "LMT",
+      "limit_price": 244.8,
       "quantity": 1,
+      "tif": "GTC",
+      "tag": "T2"
+    },
+    {
+      "action": "SELL",
+      "order_type": "STP",
+      "stop_price": 220.05,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -64,7 +72,7 @@
       },
       {
         "tag": "T2",
-        "qty": 0
+        "qty": 1
       },
       {
         "tag": "T3",
@@ -78,22 +86,22 @@
     "horizon_label_long": "intraday",
     "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.0249,
+    "ev_pct_risk": 0.0455,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.1074,
-      "T2": 0.104,
-      "T3": 0.1006
+      "T1": 0.5557,
+      "T2": 0.2333,
+      "T3": 0.067
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 238.4,
-    "hold_tolerance_breach_price": 178.8,
+    "notional_eur": 476.6,
+    "hold_tolerance_breach_price": 178.725,
     "hold_fallback_active": true,
     "prediction_id": "SRT3_A_20260811"
   },

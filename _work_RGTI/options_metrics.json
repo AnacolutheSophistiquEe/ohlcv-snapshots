@@ -1,0 +1,118 @@
+{
+  "available": true,
+  "generated_at": "2026-08-11T22:04:09.296864+00:00",
+  "ticker": "RGTI",
+  "spot_price": 18.09,
+  "expiries_available": [
+    {
+      "date": "2026-08-14",
+      "days_to_exp": 3
+    },
+    {
+      "date": "2026-08-21",
+      "days_to_exp": 10
+    },
+    {
+      "date": "2026-08-28",
+      "days_to_exp": 17
+    },
+    {
+      "date": "2026-09-04",
+      "days_to_exp": 24
+    },
+    {
+      "date": "2026-09-11",
+      "days_to_exp": 31
+    }
+  ],
+  "iv_metrics": {
+    "iv_atm_30d": 0.8223,
+    "iv_atm_90d": 0.8223,
+    "rv_20d_annualized": 1.0034,
+    "iv_rv_ratio": 0.819,
+    "iv_rank_1y": null,
+    "iv_percentile_1y": null,
+    "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
+  },
+  "skew": {
+    "skew_25_delta_vol_pts": null,
+    "label": null
+  },
+  "term_structure": {
+    "m1_expiry": "2026-08-14",
+    "m1_days_to_exp": 3,
+    "m1_iv_atm": 0.7822,
+    "m3_expiry": "2026-09-11",
+    "m3_days_to_exp": 31,
+    "m3_iv_atm": 0.8135,
+    "ratio_m1_m3": 0.9616,
+    "label": "contango_leger"
+  },
+  "open_interest_m1": {
+    "expiry": "2026-08-14",
+    "days_to_exp": 3,
+    "put_call_ratio": 0.334,
+    "total_oi_m1": 46878,
+    "largest_call_strike_oi": {
+      "strike": 18.0,
+      "oi": 5655
+    },
+    "largest_put_strike_oi": {
+      "strike": 17.0,
+      "oi": 1768
+    }
+  },
+  "gex": {
+    "gex_total_usd_per_point": 222811708.0,
+    "gex_label": "positive_stabilizing",
+    "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
+  },
+  "max_pain": {
+    "strike": 17.0,
+    "expiry": "2026-08-14",
+    "gap_vs_spot_pct": -6.03
+  },
+  "verdict": {
+    "label": "bullish",
+    "bullish_signals": 2,
+    "bearish_signals": 0,
+    "notes": [
+      "GEX positif (222.8M$/pt) = MM long gamma stabilisateur",
+      "max pain 17.00 vs spot 18.09 (-6.0%)",
+      "P/C ratio bas (0.33) — biais call dominant"
+    ]
+  },
+  "liquidity_stats": {
+    "min_oi_threshold": 50,
+    "max_iv_threshold": 5.0,
+    "max_bidask_spread_pct": 0.3,
+    "per_expiry": {
+      "2026-08-14": {
+        "total_strikes": 85,
+        "liquid_strikes": 22,
+        "filter_ratio_pct": 25.9
+      },
+      "2026-08-21": {
+        "total_strikes": 101,
+        "liquid_strikes": 26,
+        "filter_ratio_pct": 25.7
+      },
+      "2026-08-28": {
+        "total_strikes": 63,
+        "liquid_strikes": 9,
+        "filter_ratio_pct": 14.3
+      },
+      "2026-09-04": {
+        "total_strikes": 50,
+        "liquid_strikes": 4,
+        "filter_ratio_pct": 8.0
+      },
+      "2026-09-11": {
+        "total_strikes": 48,
+        "liquid_strikes": 3,
+        "filter_ratio_pct": 6.2
+      }
+    }
+  },
+  "filters_note": "IV metrics et skew utilisent UNIQUEMENT les options liquides (OI>=50, IV<=500%, spread bid-ask<=30% mid). OI/GEX/max_pain utilisent toutes les options (l'OI compte même si l'option est illiquide). Évite les artefacts d'IV de cotations déconnectées sur les expiries longues."
+}
