@@ -1,6 +1,6 @@
 # 267260
 
-**Generated** : 2026-08-10T21:51:40.402213+00:00  
+**Generated** : 2026-08-11T00:15:47.229538+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 7.6 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
@@ -152,7 +152,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **OBV/CMF** : OBV falling · CMF -0.034  _(neutre)_
 - **Vol ratio** : 0.65  _(volume normal)_
 - **Choppiness** : 41.1  _(transition)_
-- **MA** : MA20 749322.78 · MA50 889503.85 · MA200 923063.82  _(prix > MA20)_
+- **MA** : MA20 749322.78 · MA50 889503.85 · MA200 923063.83  _(prix > MA20)_
 - **Dist MA** : MA20 +1.8% · MA50 -14.3% · MA200 -17.4%
 
 

@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-08-10T21:50:16.866231+00:00  
+**Generated** : 2026-08-11T00:14:33.859682+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 8.3 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
@@ -8,7 +8,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 **Subtitle** : trending · volatilite high · ₩230000.00  
 
 > ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)  
-> ↳ spot ₩230000.00 (+2.0% vs entrée) · entrée ₩225580.97 · stop ₩202488.11 · T1 ₩262931.82 · R/R 1.62  
+> ↳ spot ₩230000.00 (+2.0% vs entrée) · entrée ₩225580.96 · stop ₩202488.10 · T1 ₩262931.82 · R/R 1.62  
 > ↳ P(T1 av. stop) 7 % _(réel 5 s)_ · EV/risk -0.425 _(réel 5 s)_ (GBM 0.178) · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
@@ -35,12 +35,12 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass (negative EV)'.
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : ₩221161.93–₩230000.00 (mid ₩225580.97)
+- Entry (zone de repli) : ₩221161.92–₩230000.00 (mid ₩225580.96)
 - Spot actuel : ₩230000.00 (+2.0% au-dessus de la zone — repli à attendre)
-- Stop : ₩202488.11 (stop swing_plan-based (-11.96%))
+- Stop : ₩202488.10 (stop swing_plan-based (-11.96%))
 - Targets : T1 ₩262931.82 · R/R 1.62 | T2 ₩287183.29 · R/R 2.67 | T3 ₩294315.28 · R/R 2.98
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩202488.11
+- Invalidation : close sous ₩202488.10
 
 
 ## Edge, scénarios & sizing
@@ -166,5 +166,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (83177 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (83176 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

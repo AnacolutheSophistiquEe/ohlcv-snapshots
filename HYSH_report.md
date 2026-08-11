@@ -1,6 +1,6 @@
 # 298040
 
-**Generated** : 2026-08-10T21:53:06.155734+00:00  
+**Generated** : 2026-08-11T00:17:02.897198+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 9.3 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  

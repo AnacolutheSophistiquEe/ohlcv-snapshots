@@ -6,7 +6,7 @@
     "exchange": "KRX (KOSPI)",
     "currency": "KRW",
     "isin": "KR7326030004",
-    "generated_at": "2026-08-10T21:57:17.301517+00:00",
+    "generated_at": "2026-08-11T00:20:46.807751+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1463,7 +1463,7 @@
           "confidence_is_fit_not_probability": true,
           "note": "§10.4 : completion_rate = stat historique observée (≠ confidence de fit). n<5 -> rate masqué ; 5≤n<15 -> low_sample (précision faible, ne pas sur-pondérer).",
           "scan_source": "long_csv",
-          "scan_n_bars": 1219
+          "scan_n_bars": 1218
         }
       },
       {
@@ -1486,7 +1486,7 @@
           "confidence_is_fit_not_probability": true,
           "note": "§10.4 : completion_rate = stat historique observée (≠ confidence de fit). n<5 -> rate masqué ; 5≤n<15 -> low_sample (précision faible, ne pas sur-pondérer).",
           "scan_source": "long_csv",
-          "scan_n_bars": 1219
+          "scan_n_bars": 1218
         }
       }
     ]
@@ -1838,7 +1838,7 @@
           "rr": 1.13,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8097,
+          "p_touch": 0.8098,
           "distance_pct": 1.7
         },
         "t2": {
@@ -1847,7 +1847,7 @@
           "rr": 2.27,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8097,
+          "p_touch": 0.8098,
           "distance_pct": 3.4
         },
         "t3": {
@@ -1856,7 +1856,7 @@
           "rr": 3.4,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4283,
+          "p_touch": 0.4284,
           "distance_pct": 5.1
         }
       }
@@ -1882,7 +1882,7 @@
           "rr": 0.74,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.912,
+          "p_touch": 0.9121,
           "distance_pct": 3.8
         },
         "t2": {
@@ -1926,7 +1926,7 @@
           "rr": 0.68,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9365,
+          "p_touch": 0.9366,
           "distance_pct": 5.38
         },
         "t2": {
@@ -1935,7 +1935,7 @@
           "rr": 1.37,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8077,
+          "p_touch": 0.8078,
           "distance_pct": 10.75
         },
         "t3": {
@@ -1944,7 +1944,7 @@
           "rr": 2.05,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5896,
+          "p_touch": 0.5894,
           "distance_pct": 16.13
         }
       }
@@ -2239,7 +2239,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-10T21:56:58.770251+00:00",
+    "generated_at": "2026-08-11T00:20:29.589868+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -6827,7 +6827,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-10T21:56:48.289543+00:00",
+    "generated_at": "2026-08-11T00:20:20.067821+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -6923,9 +6923,9 @@
     ],
     "probabilities_mode": "markov_horizon_projection",
     "stationary_distribution": {
-      "bull": 0.4988,
+      "bull": 0.4983,
       "bear": 0.0141,
-      "sideways": 0.4871
+      "sideways": 0.4875
     },
     "transition_matrix_available": true,
     "drift_source": "hmm_drift_by_state",
@@ -6941,13 +6941,13 @@
         "sessions_post_regime": 0.0,
         "long_run_drift_pct_daily": -0.1,
         "probabilities_horizon": {
-          "bull": 0.7744,
+          "bull": 0.7742,
           "bear": 0.0611,
-          "sideways": 0.1645
+          "sideways": 0.1647
         },
         "scenarios": {
           "bull": {
-            "probability": 0.7744,
+            "probability": 0.7742,
             "expected_return_pct": -0.1,
             "drift_regime_pct_daily": -0.0966
           },
@@ -6957,7 +6957,7 @@
             "drift_regime_pct_daily": -0.5975
           },
           "sideways": {
-            "probability": 0.1645,
+            "probability": 0.1647,
             "expected_return_pct": -0.4,
             "drift_regime_pct_daily": -0.4048
           }
@@ -6970,13 +6970,13 @@
         "sessions_post_regime": 0.0,
         "long_run_drift_pct_daily": -0.1,
         "probabilities_horizon": {
-          "bull": 0.6656,
+          "bull": 0.6653,
           "bear": 0.0525,
-          "sideways": 0.2819
+          "sideways": 0.2822
         },
         "scenarios": {
           "bull": {
-            "probability": 0.6656,
+            "probability": 0.6653,
             "expected_return_pct": -0.48,
             "drift_regime_pct_daily": -0.0966
           },
@@ -6986,7 +6986,7 @@
             "drift_regime_pct_daily": -0.5975
           },
           "sideways": {
-            "probability": 0.2819,
+            "probability": 0.2822,
             "expected_return_pct": -2.01,
             "drift_regime_pct_daily": -0.4048
           }
@@ -6999,13 +6999,13 @@
         "sessions_post_regime": 0.0,
         "long_run_drift_pct_daily": -0.1,
         "probabilities_horizon": {
-          "bull": 0.5977,
+          "bull": 0.5973,
           "bear": 0.05,
-          "sideways": 0.3523
+          "sideways": 0.3527
         },
         "scenarios": {
           "bull": {
-            "probability": 0.5977,
+            "probability": 0.5973,
             "expected_return_pct": -0.96,
             "drift_regime_pct_daily": -0.0966
           },
@@ -7015,7 +7015,7 @@
             "drift_regime_pct_daily": -0.5975
           },
           "sideways": {
-            "probability": 0.3523,
+            "probability": 0.3527,
             "expected_return_pct": -3.98,
             "drift_regime_pct_daily": -0.4048
           }
@@ -7049,7 +7049,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-10T21:57:03.417815+00:00",
+    "generated_at": "2026-08-11T00:20:34.542659+00:00",
     "ticker": "326030",
     "horizons_days": {
       "intraday": 2,
@@ -7063,8 +7063,8 @@
         "type": "macro",
         "label": "Rigetti Computing Q2 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7080,7 +7080,7 @@
         "label": "US CPI (headline)",
         "importance": "high",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7096,7 +7096,7 @@
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7112,7 +7112,7 @@
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7271,7 +7271,7 @@
     "drawdown_start_date": "2025-11-26",
     "time_in_drawdown_days": 257,
     "time_to_recovery_days_historical_median": 513,
-    "recovery_source_bars": 1219,
+    "recovery_source_bars": 1218,
     "recovery_source": "daily_long",
     "recovery_by_magnitude": [
       {
@@ -8062,9 +8062,9 @@
     },
     "transition_matrix": {
       "bull": {
-        "bull": 0.8735,
+        "bull": 0.8733,
         "bear": 0.0033,
-        "sideways": 0.1231
+        "sideways": 0.1233
       },
       "bear": {
         "bull": 0.1177,
@@ -8078,11 +8078,11 @@
       }
     },
     "stationary_distribution": {
-      "bull": 0.4988,
+      "bull": 0.4983,
       "bear": 0.0141,
-      "sideways": 0.4871
+      "sideways": 0.4875
     },
-    "transition_fitted_on_bars": 1206,
+    "transition_fitted_on_bars": 1205,
     "expected_duration_days": null,
     "fitted_on_bars": 110,
     "drift_by_state_pct_daily": {
@@ -8117,7 +8117,7 @@
     "recent_ret_pct_daily": 0.993,
     "dd_from_ath_pct": -36.96,
     "fit_source": "long_csv",
-    "fit_n_bars": 1219
+    "fit_n_bars": 1218
   },
   "seasonality": {
     "best_day_of_week": null,
@@ -8143,10 +8143,10 @@
       },
       {
         "day": "Wednesday",
-        "avg_return_pct": -0.223,
-        "std_return_pct": 2.619,
-        "p_value": 0.1858,
-        "n_samples": 244
+        "avg_return_pct": -0.242,
+        "std_return_pct": 2.606,
+        "p_value": 0.1493,
+        "n_samples": 243
       },
       {
         "day": "Thursday",
@@ -8215,10 +8215,10 @@
       },
       {
         "month": "August",
-        "avg_return_pct": 0.444,
-        "std_return_pct": 3.48,
-        "p_value": 0.1962,
-        "n_samples": 105
+        "avg_return_pct": 0.405,
+        "std_return_pct": 3.474,
+        "p_value": 0.2396,
+        "n_samples": 104
       },
       {
         "month": "September",
@@ -8249,9 +8249,9 @@
         "n_samples": 103
       }
     ],
-    "n_total_samples": 1218,
+    "n_total_samples": 1217,
     "fit_source": "long_csv",
-    "fit_n_bars": 1219
+    "fit_n_bars": 1218
   },
   "returns_stats": {
     "skewness_1y": 0.6979,
@@ -8261,7 +8261,7 @@
     "positive_days_ratio_1y": 0.456,
     "n_samples": 252,
     "fit_source": "long_csv",
-    "fit_n_bars": 1219
+    "fit_n_bars": 1218
   },
   "oscillators_extra": {
     "stochastic_14_3": {
@@ -15129,7 +15129,7 @@
       "current_percentile": 8.3
     },
     "fit_source": "long_csv",
-    "fit_n_bars": 1219
+    "fit_n_bars": 1218
   },
   "z_scores": {
     "price_zscore": {
@@ -15207,7 +15207,7 @@
     "n_anomalies_30d": 4,
     "n_bars_fit": 252,
     "fit_source": "long_csv",
-    "fit_n_bars": 1219
+    "fit_n_bars": 1218
   },
   "autocorrelation": {
     "available": true,
@@ -15239,9 +15239,9 @@
     "n_swings_detected": 106,
     "n_patterns_found": 0,
     "tolerance": 0.05,
-    "lookback_bars": 1219,
+    "lookback_bars": 1218,
     "scan_source": "long_csv",
-    "scan_n_bars": 1219,
+    "scan_n_bars": 1218,
     "patterns": []
   },
   "andrews_pitchfork": {
@@ -15399,7 +15399,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-10T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -15446,7 +15446,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-10T04:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -15497,7 +15497,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-10T05:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
