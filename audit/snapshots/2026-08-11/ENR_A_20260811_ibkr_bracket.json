@@ -1,15 +1,15 @@
 {
   "available": true,
-  "generated_at": "2026-08-11T21:37:03.495108+00:00",
-  "prediction_id": "SRT3_A_20260811",
+  "generated_at": "2026-08-11T21:39:53.827496+00:00",
+  "prediction_id": "ENR_A_20260811",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "SRT3",
+  "symbol": "ENR",
   "exchange": "IBIS",
   "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 237.1,
+    "limit_price": 157.77,
     "quantity": 2,
     "tif": "DAY"
   },
@@ -17,7 +17,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 237.4,
+      "limit_price": 170.08,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
@@ -25,7 +25,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 244.8,
+      "limit_price": 171.43,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -33,13 +33,13 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 220.05,
+      "stop_price": 146.56,
       "quantity": 2,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "SRT3_A_intraday_20260811",
+  "oca_group": "ENR_A_intraday_20260811",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -84,33 +84,33 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 7.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.0455,
+    "ev_pct_risk": -0.0606,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "below_threshold",
+    "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.5557,
-      "T2": 0.2333,
-      "T3": 0.067
+      "T1": 0.4529,
+      "T2": 0.2039,
+      "T3": 0.0875
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 476.6,
-    "hold_tolerance_breach_price": 178.725,
+    "notional_eur": 317.12,
+    "hold_tolerance_breach_price": 118.92,
     "hold_fallback_active": true,
-    "prediction_id": "SRT3_A_20260811"
+    "prediction_id": "ENR_A_20260811"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.05,
+    "tick_size_used": 0.01,
     "qty_total_positive": true
   }
 }

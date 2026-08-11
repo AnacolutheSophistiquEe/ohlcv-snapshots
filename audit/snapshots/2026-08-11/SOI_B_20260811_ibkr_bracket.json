@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-11T00:09:33.217290+00:00",
+  "generated_at": "2026-08-11T21:44:12.601141+00:00",
   "prediction_id": "SOI_B_20260811",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SOI",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 119.85,
+    "limit_price": 122.15,
     "quantity": 4,
     "tif": "GTD",
     "gtd": "2026-08-16T16:30:00+00:00"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 142.1,
+      "limit_price": 143.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 148.15,
+      "limit_price": 149.9,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -42,7 +42,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 107.45,
+      "stop_price": 109.2,
       "quantity": 4,
       "tif": "GTC",
       "tag": "SL"
@@ -95,22 +95,22 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.1686,
+    "ev_pct_risk": 0.1541,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.292,
-      "T2": 0.1959,
-      "T3": 0.1534
+      "T1": 0.3095,
+      "T2": 0.1996,
+      "T3": 0.1486
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 479.4,
-    "hold_tolerance_breach_price": 89.8875,
+    "notional_eur": 488.6,
+    "hold_tolerance_breach_price": 91.6125,
     "hold_fallback_active": true,
     "prediction_id": "SOI_B_20260811"
   },
