@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-11T21:45:18.521012+00:00",
+  "generated_at": "2026-08-12T00:32:16.417725+00:00",
   "window_sessions": 55,
   "tickers_used": [
     "AL2SI",
@@ -20,30 +20,30 @@
   ],
   "tickers_skipped": [],
   "weights_eur": {
-    "AL2SI": 374.14,
+    "AL2SI": 392.0,
     "ENR": 317.12,
-    "EVT": 159.36,
-    "IONQ": 382.77,
-    "NEX": 277.6,
-    "PLTR": 525.69,
-    "PRY": 379.5,
-    "RGTI": 282.4,
-    "SAF": 361.5,
-    "SMCI": 377.52,
-    "SMR": 284.58,
-    "SOFI": 271.8,
-    "SOI": 488.6,
-    "SRT3": 476.6
+    "EVT": 158.84,
+    "IONQ": 477.84,
+    "NEX": 278.4,
+    "PLTR": 524.82,
+    "PRY": 383.85,
+    "RGTI": 397.98,
+    "SAF": 361.1,
+    "SMCI": 284.4,
+    "SMR": 286.81,
+    "SOFI": 287.68,
+    "SOI": 486.8,
+    "SRT3": 477.0
   },
-  "total_notional_eur": 4959.18,
+  "total_notional_eur": 5114.64,
   "capital_total_eur": 2000.0,
   "var_95": {
     "method": "gaussian_1d",
     "z_95": 1.6448536269514722,
-    "sigma_portfolio_daily_eur": 149.0,
-    "value_eur": 245.09,
-    "pct_total_notional": 4.94,
-    "pct_capital": 12.25
+    "sigma_portfolio_daily_eur": 157.61,
+    "value_eur": 259.25,
+    "pct_total_notional": 5.07,
+    "pct_capital": 12.96
   },
   "panel_beta_weighted": {},
   "concentration_flags": [],
@@ -51,44 +51,44 @@
     {
       "pair": "IONQ_RGTI",
       "rho": 0.8814,
-      "share_pct": 13.4,
+      "share_pct": 17.1,
       "flag": "red"
     },
     {
       "pair": "IONQ_SMR",
       "rho": 0.7427,
-      "share_pct": 13.5,
+      "share_pct": 15.0,
       "flag": "red"
     },
     {
       "pair": "ENR_PRY",
-      "rho": 0.7303,
-      "share_pct": 14.0,
+      "rho": 0.731,
+      "share_pct": 13.7,
       "flag": "red"
     },
     {
       "pair": "RGTI_SMR",
       "rho": 0.7149,
-      "share_pct": 11.4,
+      "share_pct": 13.4,
       "flag": "red"
     },
     {
       "pair": "NEX_PRY",
-      "rho": 0.7133,
-      "share_pct": 13.3,
+      "rho": 0.7141,
+      "share_pct": 12.9,
       "flag": "red"
     },
     {
       "pair": "ENR_NEX",
-      "rho": 0.6301,
-      "share_pct": 12.0,
+      "rho": 0.6313,
+      "share_pct": 11.6,
       "flag": "red"
     }
   ],
   "scaling": {
     "var_threshold_pct": 8.0,
     "var_ref_metric": "var_95_pct_capital",
-    "scale_factor": 0.6528,
+    "scale_factor": 0.6172,
     "scaling_applied": true,
     "note": "Scale factor < 1 → réduire tous les sizings × scale_factor pour ramener la VaR sous le seuil."
   },
