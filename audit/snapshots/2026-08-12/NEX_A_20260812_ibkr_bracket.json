@@ -1,15 +1,15 @@
 {
   "available": true,
-  "generated_at": "2026-08-12T21:40:20.480631+00:00",
-  "prediction_id": "ENR_A_20260812",
+  "generated_at": "2026-08-12T21:43:13.256516+00:00",
+  "prediction_id": "NEX_A_20260812",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "ENR",
-  "exchange": "IBIS",
+  "symbol": "NEX",
+  "exchange": "SBF",
   "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 160.89,
+    "limit_price": 144.0,
     "quantity": 3,
     "tif": "DAY"
   },
@@ -17,37 +17,21 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 167.54,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T1"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 170.92,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T2"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 174.31,
-      "quantity": 1,
+      "limit_price": 144.8,
+      "quantity": 3,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 148.69,
+      "stop_price": 128.2,
       "quantity": 3,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "ENR_A_intraday_20260812",
+  "oca_group": "NEX_A_intraday_20260812",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -69,22 +53,12 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.5,
-      0.3,
-      0.2
+      1.0
     ],
     "qty_split": [
       {
-        "tag": "T1",
-        "qty": 1
-      },
-      {
-        "tag": "T2",
-        "qty": 1
-      },
-      {
         "tag": "T3",
-        "qty": 1
+        "qty": 3
       }
     ]
   },
@@ -94,31 +68,31 @@
     "horizon_label_long": "intraday",
     "composite_score": 8.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.1151,
+    "ev_pct_risk": -0.0445,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.0859,
-      "T2": 0.0761,
-      "T3": 0.075
+      "T1": 0.4621,
+      "T2": 0.212,
+      "T3": 0.0686
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 485.1,
-    "hold_tolerance_breach_price": 121.275,
+    "notional_eur": 434.1,
+    "hold_tolerance_breach_price": 108.525,
     "hold_fallback_active": true,
-    "prediction_id": "ENR_A_20260812"
+    "prediction_id": "NEX_A_20260812"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.01,
+    "tick_size_used": 0.1,
     "qty_total_positive": true
   }
 }
