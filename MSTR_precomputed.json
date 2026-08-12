@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US5949724083",
-    "generated_at": "2026-08-11T21:58:20.744085+00:00",
+    "generated_at": "2026-08-12T00:20:49.248386+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1860,7 +1860,7 @@
           "rr": 0.72,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.912,
+          "p_touch": 0.9119,
           "distance_pct": 4.34
         },
         "t2": {
@@ -1869,7 +1869,7 @@
           "rr": 1.44,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7239,
+          "p_touch": 0.724,
           "distance_pct": 8.67
         },
         "t3": {
@@ -1878,7 +1878,7 @@
           "rr": 2.16,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4417,
+          "p_touch": 0.4419,
           "distance_pct": 13.01
         }
       }
@@ -1904,7 +1904,7 @@
           "rr": 0.67,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9365,
+          "p_touch": 0.9364,
           "distance_pct": 6.13
         },
         "t2": {
@@ -1913,7 +1913,7 @@
           "rr": 1.33,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5894,
+          "p_touch": 0.5898,
           "distance_pct": 12.27
         },
         "t3": {
@@ -1922,7 +1922,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.282,
+          "p_touch": 0.2819,
           "distance_pct": 18.4
         }
       }
@@ -2217,7 +2217,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-11T21:57:52.962860+00:00",
+    "generated_at": "2026-08-12T00:20:20.852544+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7115,7 +7115,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-11T21:57:42.086519+00:00",
+    "generated_at": "2026-08-12T00:20:11.419005+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7337,38 +7337,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-11T21:58:06.941728+00:00",
+    "generated_at": "2026-08-12T00:20:37.229379+00:00",
     "ticker": "MSTR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 4,
+    "n_events": 3,
     "events": [
-      {
-        "date": "2026-08-11",
-        "type": "macro",
-        "label": "Rigetti Computing Q2 2026 Earnings",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-08-12",
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7383,8 +7367,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7399,9 +7383,10 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -7535,57 +7520,57 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-11T21:57:56.980681+00:00",
+    "generated_at": "2026-08-12T00:20:24.433712+00:00",
     "ticker": "MSTR",
     "spot_price": 96.09,
     "expiries_available": [
       {
         "date": "2026-08-14",
-        "days_to_exp": 3
+        "days_to_exp": 2
       },
       {
         "date": "2026-08-21",
-        "days_to_exp": 10
+        "days_to_exp": 9
       },
       {
         "date": "2026-08-28",
-        "days_to_exp": 17
+        "days_to_exp": 16
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 24
+        "days_to_exp": 23
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 31
+        "days_to_exp": 30
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.6716,
-      "iv_atm_90d": 0.6711,
+      "iv_atm_30d": 0.6819,
+      "iv_atm_90d": 0.6819,
       "rv_20d_annualized": 0.5615,
-      "iv_rv_ratio": 1.196,
+      "iv_rv_ratio": 1.214,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -2.27,
+      "skew_25_delta_vol_pts": -2.319,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-14",
-      "m1_days_to_exp": 3,
-      "m1_iv_atm": 0.6394,
+      "m1_days_to_exp": 2,
+      "m1_iv_atm": 0.7385,
       "m3_expiry": "2026-09-11",
-      "m3_days_to_exp": 31,
-      "m3_iv_atm": 0.6711,
-      "ratio_m1_m3": 0.9527,
-      "label": "contango_leger"
+      "m3_days_to_exp": 30,
+      "m3_iv_atm": 0.6819,
+      "ratio_m1_m3": 1.0831,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-14",
-      "days_to_exp": 3,
+      "days_to_exp": 2,
       "put_call_ratio": 0.565,
       "total_oi_m1": 347549,
       "largest_call_strike_oi": {
@@ -7598,7 +7583,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 4552962581.0,
+      "gex_total_usd_per_point": 4383707792.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7613,7 +7598,7 @@
       "bearish_signals": 0,
       "notes": [
         "skew faible (-2.3 pts) — peu de demande de protection",
-        "GEX positif (4553.0M$/pt) = MM long gamma stabilisateur",
+        "GEX positif (4383.7M$/pt) = MM long gamma stabilisateur",
         "P/C ratio bas (0.56) — biais call dominant"
       ]
     },
@@ -7653,7 +7638,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-11T21:58:06.026951+00:00",
+    "generated_at": "2026-08-12T00:20:36.405234+00:00",
     "ticker": "MSTR",
     "short_interest": {
       "status": "ok",
@@ -7667,7 +7652,7 @@
       "float_shares": 357752597,
       "delta_shares_short_mom_pct": -1.48,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-11T21:57:58.010899+00:00"
+      "fetched_at": "2026-08-12T00:20:25.443443+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7776,7 +7761,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 64,
-      "fetched_at": "2026-08-11T21:58:06.025729+00:00"
+      "fetched_at": "2026-08-12T00:20:36.403897+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -16184,7 +16169,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-11T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16229,7 +16214,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-11T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16280,7 +16265,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-11T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

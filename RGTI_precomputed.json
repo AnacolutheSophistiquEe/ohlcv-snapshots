@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US76655K1097",
-    "generated_at": "2026-08-11T22:04:37.983779+00:00",
+    "generated_at": "2026-08-12T00:26:06.735381+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1780,7 +1780,7 @@
           "rr": 3.89,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1156,
+          "p_touch": 0.1157,
           "distance_pct": 10.4
         }
       }
@@ -1850,7 +1850,7 @@
           "rr": 1.02,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8076,
+          "p_touch": 0.8077,
           "distance_pct": 10.96
         },
         "t2": {
@@ -1859,7 +1859,7 @@
           "rr": 2.03,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.282,
+          "p_touch": 0.2819,
           "distance_pct": 21.92
         },
         "t3": {
@@ -1868,7 +1868,7 @@
           "rr": 3.05,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.0631,
+          "p_touch": 0.0632,
           "distance_pct": 32.88
         }
       }
@@ -2163,7 +2163,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-11T22:04:05.369112+00:00",
+    "generated_at": "2026-08-12T00:25:44.330390+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7061,7 +7061,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-11T22:03:54.164276+00:00",
+    "generated_at": "2026-08-12T00:25:34.880862+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7290,38 +7290,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-11T22:04:24.137939+00:00",
+    "generated_at": "2026-08-12T00:25:54.673778+00:00",
     "ticker": "RGTI",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 4,
+    "n_events": 3,
     "events": [
-      {
-        "date": "2026-08-11",
-        "type": "macro",
-        "label": "Rigetti Computing Q2 2026 Earnings",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-08-12",
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7336,8 +7320,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7352,9 +7336,10 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -7488,36 +7473,36 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-11T22:04:09.296864+00:00",
+    "generated_at": "2026-08-12T00:25:48.333922+00:00",
     "ticker": "RGTI",
     "spot_price": 18.09,
     "expiries_available": [
       {
         "date": "2026-08-14",
-        "days_to_exp": 3
+        "days_to_exp": 2
       },
       {
         "date": "2026-08-21",
-        "days_to_exp": 10
+        "days_to_exp": 9
       },
       {
         "date": "2026-08-28",
-        "days_to_exp": 17
+        "days_to_exp": 16
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 24
+        "days_to_exp": 23
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 31
+        "days_to_exp": 30
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.8223,
-      "iv_atm_90d": 0.8223,
+      "iv_atm_30d": 0.8457,
+      "iv_atm_90d": 0.8457,
       "rv_20d_annualized": 1.0034,
-      "iv_rv_ratio": 0.819,
+      "iv_rv_ratio": 0.843,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -7528,17 +7513,17 @@
     },
     "term_structure": {
       "m1_expiry": "2026-08-14",
-      "m1_days_to_exp": 3,
-      "m1_iv_atm": 0.7822,
+      "m1_days_to_exp": 2,
+      "m1_iv_atm": 0.9023,
       "m3_expiry": "2026-09-11",
-      "m3_days_to_exp": 31,
-      "m3_iv_atm": 0.8135,
-      "ratio_m1_m3": 0.9616,
-      "label": "contango_leger"
+      "m3_days_to_exp": 30,
+      "m3_iv_atm": 0.8262,
+      "ratio_m1_m3": 1.0922,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-14",
-      "days_to_exp": 3,
+      "days_to_exp": 2,
       "put_call_ratio": 0.334,
       "total_oi_m1": 46878,
       "largest_call_strike_oi": {
@@ -7551,7 +7536,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 222811708.0,
+      "gex_total_usd_per_point": 227724389.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7565,7 +7550,7 @@
       "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "GEX positif (222.8M$/pt) = MM long gamma stabilisateur",
+        "GEX positif (227.7M$/pt) = MM long gamma stabilisateur",
         "max pain 17.00 vs spot 18.09 (-6.0%)",
         "P/C ratio bas (0.33) — biais call dominant"
       ]
@@ -7606,7 +7591,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-11T22:04:23.188562+00:00",
+    "generated_at": "2026-08-12T00:25:53.920446+00:00",
     "ticker": "RGTI",
     "short_interest": {
       "status": "ok",
@@ -7620,7 +7605,7 @@
       "float_shares": 327440492,
       "delta_shares_short_mom_pct": 3.57,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-11T22:04:10.483531+00:00"
+      "fetched_at": "2026-08-12T00:25:49.542273+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7689,7 +7674,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 17,
-      "fetched_at": "2026-08-11T22:04:23.186609+00:00"
+      "fetched_at": "2026-08-12T00:25:53.919220+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -16119,7 +16104,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-11T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16164,7 +16149,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-11T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16209,7 +16194,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-11T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

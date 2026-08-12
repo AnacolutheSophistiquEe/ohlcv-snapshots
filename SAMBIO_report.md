@@ -1,17 +1,17 @@
 # 207940
 
-**Generated** : 2026-08-11T21:55:26.823585+00:00  
+**Generated** : 2026-08-12T00:18:11.770357+00:00  
 **Santé technique** : 9/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite high · ₩1614000.00  
+**Subtitle** : indeterminate · volatilite high · ₩1609000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)  
-> ↳ spot ₩1614000.00 (+0.9% vs entrée) · entrée ₩1600285.69 · stop ₩1472262.83 · T1 ₩1629690.71 · R/R 0.23  
-> ↳ P(T1 av. stop) 51 % _(réel 5 s)_ · EV/risk 0.009 _(réel 5 s)_ (GBM -0.058) · ¼-Kelly 0.062 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ↳ spot ₩1609000.00 (+0.8% vs entrée) · entrée ₩1596535.69 · stop ₩1468812.83 · T1 ₩1625787.68 · R/R 0.23  
+> ↳ P(T1 av. stop) 54 % _(réel 5 s)_ · EV/risk 0.015 _(réel 5 s)_ (GBM -0.058) · ¼-Kelly 0.062 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -1062 % hors [0,100] (R² max 0.64). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
+>   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -1039 % hors [0,100] (R² max 0.64). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
 ## Régime & alignement multi-TF
@@ -23,7 +23,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## ⚠ Contradictions techniques
 
-- 🔴 **Santé haussière vs sur-extension** — Santé technique 9/10 élevée alors que : RSI 70.5 > 70 (surachat) — le score mesure la santé durable, PAS le timing ; entrée au prix actuel défavorable.
+- 🔴 **Santé haussière vs sur-extension** — Santé technique 9/10 élevée alors que : RSI 70.3 > 70 (surachat) — le score mesure la santé durable, PAS le timing ; entrée au prix actuel défavorable.
   - _Par DESIGN (le plus courant) : le score mesure la santé technique DURABLE (structure de tendance), pas le timing. Un uptrend sain mais étiré score haut ET flag surachat — c'est attendu ; le flag empêche de lire « score élevé = acheter maintenant »._
   - _Momentum parabolique : RSI > 70 + %B > 0,95 + extension extrême = phase d'accélération qui peut soit continuer (trend-following) soit se retourner brutalement → forte asymétrie de risque à l'entrée._
   - _Point de calcul à vérifier (≠ ce que disait l'audit §3.4) : le malus d'over-extension (ex-T_penalty, −2 si « extreme ») a été SORTI du score lors de la refonte §A3 — le score = santé pure, le malus vit dans le bloc TIMING (d'où le « étendu »). Donc le « score plafond + surachat » est normal, pas un poids mal calibré. Le seul vrai risque de calcul ici est la CLASSIFICATION d'over-extension elle-même (compute_overextension) : qu'« extreme » se déclenche au bon seuil._
@@ -37,30 +37,30 @@ Plan privilegie A (intraday), composite 9/10, conviction 'Pass'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : ₩1594404.68–₩1606166.69 (mid ₩1600285.69)
-- Spot actuel : ₩1614000.00 (+0.9% au-dessus de la zone — repli à attendre)
-- Stop : ₩1472262.83 (stop swing_plan-based (-6.56%))
-- Targets : T1 ₩1629690.71 · R/R 0.23 | T2 ₩1659095.73 · R/R 0.46 | T3 ₩1688500.75 · R/R 0.69
+- Entry (zone de repli) : ₩1590685.29–₩1602386.09 (mid ₩1596535.69)
+- Spot actuel : ₩1609000.00 (+0.8% au-dessus de la zone — repli à attendre)
+- Stop : ₩1468812.83 (stop swing_plan-based (-6.41%))
+- Targets : T1 ₩1625787.68 · R/R 0.23 | T2 ₩1655039.67 · R/R 0.46 | T3 ₩1684291.66 · R/R 0.69
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩1472262.83
+- Invalidation : close sous ₩1468812.83
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.058 | EV/share : ₩-7416.534 | p_fill : —
+- EV/risk : -0.058 | EV/share : ₩-7402.856 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 40 % | T2 12 % | T3 6 %
-- Kelly (position) : f* 0.249 | ¼-Kelly 0.062 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Kelly (position) : f* 0.25 | ¼-Kelly 0.062 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 42.8 | bear 10.9 | side 46.3  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, intraday) : bull 43.1 | bear 10.9 | side 46.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 608.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −0.848% → cible +1.837% / stop −8.0%, p_fill 88%, n_eff≈36.7) : P(cible|rempli) **51%** · **EV/risk +0.009** (×p_fill ; si rempli +0.09% du capital)
-  - **swing** (entrée dip −1.869% → cible +4.109% / stop −4.78%, p_fill 78%, n_eff≈30.6) : P(cible|rempli) **59%** · **EV/risk +0.095** (×p_fill ; si rempli +0.58% du capital)
-  - **deep** (entrée dip −2.894% → cible +5.811% / stop −7.246%, p_fill 71%, n_eff≈29.3) : P(cible|rempli) **71%** · **EV/risk +0.300** (×p_fill ; si rempli +3.06% du capital)
+  - **intraday** (entrée dip −0.772% → cible +1.832% / stop −8.0%, p_fill 89%, n_eff≈37.5) : P(cible|rempli) **54%** · **EV/risk +0.015** (×p_fill ; si rempli +0.13% du capital)
+  - **swing** (entrée dip −1.704% → cible +4.097% / stop −4.787%, p_fill 79%, n_eff≈31.5) : P(cible|rempli) **59%** · **EV/risk +0.097** (×p_fill ; si rempli +0.59% du capital)
+  - **deep** (entrée dip −2.631% → cible +5.794% / stop −7.249%, p_fill 77%, n_eff≈30.9) : P(cible|rempli) **69%** · **EV/risk +0.294** (×p_fill ; si rempli +2.77% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→71% · +1.0%→54% · +2.0%→39% · +3.0%→25% · +5.0%→6% · +8.0%→2%
 - Range intraday médian 4.08% (p90 6.65%) · excursion haute méd. +1.08% / basse méd. −1.96%
 - Profil de vol intra : ouverture 2.56% vs midi 0.746% vs clôture 0.843% _(ouverture ~3.4× plus volatile → privilégier/éviter selon le setup)_
@@ -147,26 +147,26 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 70.5  _(surachat)_
+- **RSI** : 70.3  _(surachat)_
 - **ADX** : 14.2  _(pas de tendance nette)_
-- **MACD** : hist 12037.319  _(pas de croisement recent)_
-- **BB** : %B 0.95 · largeur 21.9%
+- **MACD** : hist 11718.231  _(pas de croisement recent)_
+- **BB** : %B 0.94 · largeur 21.8%
 - **ATR** : 75714.29 (89.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF 0.236  _(accumulation)_
-- **Vol ratio** : 0.83  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.231  _(accumulation)_
+- **Vol ratio** : 1.0  _(volume normal)_
 - **Choppiness** : 52.8  _(transition)_
-- **MA** : MA20 1469200.0 · MA50 1402580.0 · MA200 1607019.8  _(prix > MA20)_
-- **Dist MA** : MA20 +9.9% · MA50 +15.1% · MA200 +0.4%
+- **MA** : MA20 1468950.0 · MA50 1402480.0 · MA200 1606994.8  _(prix > MA20)_
+- **Dist MA** : MA20 +9.5% · MA50 +14.7% · MA200 +0.1%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (83596 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (83584 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

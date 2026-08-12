@@ -1,11 +1,11 @@
 # RHM
 
-**Generated** : 2026-08-11T21:35:39.232947+00:00  
+**Generated** : 2026-08-12T00:00:53.843985+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €1142.20  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
 > ↳ spot €1142.20 (+0.3% vs entrée) · entrée €1138.77 · stop €1116.00 · T1 €1151.50 · R/R 0.56  
 > ↳ P(T1 av. stop) 59 % _(réel 5 s)_ · EV/risk 0.006 _(réel 5 s)_ (GBM 0.082) · ¼-Kelly 0.039 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.0% cohérent avec le bruit 5 s (EV-optimal ≈ −2.0%)  
@@ -135,9 +135,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -147,8 +147,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 11.22  _(pas de croisement recent)_
 - **BB** : %B 0.69 · largeur 31.4%
 - **ATR** : 54.42 (36.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.01  _(neutre)_
-- **Vol ratio** : 0.74  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.008  _(neutre)_
+- **Vol ratio** : 0.46  _(volume atone)_
 - **Choppiness** : 43.0  _(transition)_
 - **MA** : MA20 1077.44 · MA50 1098.44 · MA200 1442.17  _(prix > MA20)_
 - **Dist MA** : MA20 +6.0% · MA50 +4.0% · MA200 -20.8%
@@ -156,5 +156,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (90351 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (90339 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

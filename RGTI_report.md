@@ -1,16 +1,15 @@
 # RGTI
 
-**Generated** : 2026-08-11T00:27:45.131339+00:00  
-> ⚠️ **Données suspectes** : volatilité réalisée 6.4 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
+**Generated** : 2026-08-12T00:26:06.735381+00:00  
+> ⚠️ **Données suspectes** : volatilité réalisée 6.3 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
-**Santé technique** : 6/10 — **Rating** : Pass  
+**Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite low · $17.65  
+**Subtitle** : indeterminate · volatilite low · $18.09  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)  
-> ↳ spot $17.65 (+0.6% vs entrée) · entrée $17.54 · stop $16.89 · T1 $18.84 · R/R 2.0  
-> ↳ P(T1 av. stop) 22 % _(réel 5 s)_ · EV/risk 0.087 _(réel 5 s)_ (GBM 0.136) · ¼-Kelly 0.052 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
-> ↳ stop −3.7% cohérent avec le bruit 5 s (EV-optimal ≈ −2.0%)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ↳ spot $18.09 (+2.6% vs entrée) · entrée $17.64 · stop $15.86 · T1 $21.19 · R/R 1.99  
+> ↳ P(T1 av. stop) 7 % _(réel 5 s)_ · EV/risk -0.292 _(réel 5 s)_ (GBM -0.052) · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈214) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -21,7 +20,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## ⚠ Contradictions techniques
 
-- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.030 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
+- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.040 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
   - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
   - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
   - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
@@ -30,36 +29,36 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 6/10, conviction 'Pass'.
+Plan privilegie B (swing), composite 6/10, conviction 'Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
-**Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : $17.43–$17.65 (mid $17.54)
-- Spot actuel : $17.65 (+0.6% au-dessus de la zone — repli à attendre)
-- Stop : $16.89 (stop swing_plan-based (-12.1%))
-- Targets : T1 $18.84 · R/R 2.0 | T2 $19.11 · R/R 2.42 | T3 $19.38 · R/R 2.83
+**Plan B — swing** (order_type LMT)
+- Entry (zone de repli) : $17.36–$17.91 (mid $17.64)
+- Spot actuel : $18.09 (+2.6% au-dessus de la zone — repli à attendre)
+- Stop : $15.86 (stop swing_plan-based (-12.33%))
+- Targets : T1 $21.19 · R/R 1.99 | T2 $21.47 · R/R 2.15 | T3 $21.74 · R/R 2.3
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $16.89
+- Invalidation : close sous $15.86
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.136 | EV/share : $0.088 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 39 % | T2 39 % | T3 39 %
-- Kelly (position) : f* 0.206 | ¼-Kelly 0.052 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 5.0 | bear 17.5 | side 77.5  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional réel 282.0 (= 16 part(s) × prix) · cible 288.0
+- EV/risk : -0.052 | EV/share : $-0.093 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 14 % | T2 12 % | T3 11 %
+- Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈214) · non recalibrée track-record (n=0)_
+- Régime probabiliste (posterior HMM, swing) : bull 5.2 | bear 28.0 | side 66.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Sizing : notional réel 398.0 (= 22 part(s) × prix) · cible 400.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −0.619% → cible +7.407% / stop −3.704%, p_fill 83%, n_eff≈36.5) : P(cible|rempli) **22%** · **EV/risk +0.087** (×p_fill ; si rempli +0.39% du capital)
-  - **swing** (entrée dip −1.364% → cible +21.747% / stop −10.874%, p_fill 87%, n_eff≈36.1) : P(cible|rempli) **12%** · **EV/risk -0.206** (×p_fill ; si rempli -2.57% du capital)
-  - **deep** (entrée dip −2.013% → cible +11.058% / stop −10.733%, p_fill 87%, n_eff≈35.2) : P(cible|rempli) **26%** · **EV/risk -0.435** (×p_fill ; si rempli -5.34% du capital)
+  - **intraday** (entrée dip −1.139% → cible +5.343% / stop −2.671%, p_fill 74%, n_eff≈33.0) : P(cible|rempli) **32%** · **EV/risk +0.119** (×p_fill ; si rempli +0.43% du capital)
+  - **swing** (entrée dip −2.502% → cible +20.162% / stop −10.081%, p_fill 67%, n_eff≈29.1) : P(cible|rempli) **7%** · **EV/risk -0.292** (×p_fill ; si rempli -4.38% du capital)
+  - **deep** (entrée dip −3.859% → cible +10.96% / stop −10.788%, p_fill 84%, n_eff≈33.0) : P(cible|rempli) **41%** · **EV/risk -0.207** (×p_fill ; si rempli -2.66% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→89% · +1.0%→79% · +2.0%→71% · +3.0%→56% · +5.0%→40% · +8.0%→14%
 - Range intraday médian 8.05% (p90 13.36%) · excursion haute méd. +3.52% / basse méd. −2.82%
 - Profil de vol intra : ouverture 5.386% vs midi 1.613% vs clôture 1.879% _(ouverture ~3.3× plus volatile → privilégier/éviter selon le setup)_
@@ -143,41 +142,41 @@ _Symétrique du fishing : quand l'actif imprime un JOUR DE HAUSSE PROPRE, on CHE
 
 ## Timing d'entrée (observe-only)
 
-- **Verdict timing** : neutre
-- Proximité zone : 0.75/2 | R/R T1 : 2.0 | extension : normal
+- **Verdict timing** : étendu — attendre un repli vers une zone
+- Proximité zone : 0.5/2 | R/R T1 : 0.5 | extension : stretched_up
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
 ## Positioning & factor
 
 **Factor** : attribution factorielle indisponible
-**Short/Insider** : SI —% | insider — | verdict neutral
+**Short/Insider** : SI —% | insider — | verdict sell_bias_strong
 **Options** : bullish
 
 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US CPI (headline) (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 60.0  _(momentum haussier)_
-- **ADX** : 21.1  _(pas de tendance nette)_
-- **MACD** : hist 0.533  _(pas de croisement recent)_
-- **BB** : %B 0.92 · largeur 33.8%
-- **ATR** : 1.24 (18.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV rising · CMF -0.033  _(neutre)_
-- **Vol ratio** : 0.8  _(volume normal)_
-- **Choppiness** : 45.9  _(transition)_
-- **MA** : MA20 15.44 · MA50 18.36 · MA200 21.03  _(prix > MA20)_
-- **Dist MA** : MA20 +14.3% · MA50 -3.9% · MA200 -16.1%
+- **RSI** : 61.6  _(momentum haussier)_
+- **ADX** : 20.3  _(pas de tendance nette)_
+- **MACD** : hist 0.544  _(pas de croisement recent)_
+- **BB** : %B 0.95 · largeur 36.8%
+- **ATR** : 1.25 (20.0e pct 1a)  _(volatilite basse)_
+- **OBV/CMF** : OBV rising · CMF -0.037  _(neutre)_
+- **Vol ratio** : 0.75  _(volume normal)_
+- **Choppiness** : 46.3  _(transition)_
+- **MA** : MA20 15.54 · MA50 18.21 · MA200 20.94  _(prix > MA20)_
+- **Dist MA** : MA20 +16.4% · MA50 -0.7% · MA200 -13.6%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (92016 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (91592 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
