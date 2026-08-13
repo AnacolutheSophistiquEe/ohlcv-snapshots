@@ -1,13 +1,13 @@
 # PLTR
 
-**Generated** : 2026-08-12T22:02:09.340091+00:00  
+**Generated** : 2026-08-13T00:24:35.892761+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.8 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 10/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : strong_trend · volatilite high · $171.04  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot $171.04 (+8.3% vs entrée) · entrée $157.88 · stop $141.77 · T1 $190.10 · R/R 2.0  
 > ↳ P(T1 av. stop) 5 % · EV/risk -0.136 · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈214) · non recalibrée track-record (n=0)_  
 
@@ -158,9 +158,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -179,5 +179,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (91973 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (91139 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

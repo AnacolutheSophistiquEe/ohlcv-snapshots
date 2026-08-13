@@ -1,13 +1,13 @@
 # 005930
 
-**Generated** : 2026-08-12T21:50:23.456688+00:00  
+**Generated** : 2026-08-13T00:13:49.518382+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 8.1 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · ₩255500.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot ₩255500.00 (+1.5% vs entrée) · entrée ₩251625.00 · stop ₩244547.14 · T1 ₩262931.82 · R/R 1.6  
 > ↳ P(T1 av. stop) 8 % _(réel 5 s)_ · EV/risk -0.389 _(réel 5 s)_ (GBM -0.118) · ¼-Kelly 0.008 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.81% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
@@ -146,9 +146,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -167,5 +167,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (83924 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (83091 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

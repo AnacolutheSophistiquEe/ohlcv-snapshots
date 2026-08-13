@@ -1,14 +1,14 @@
 # 267260
 
-**Generated** : 2026-08-12T21:51:48.505649+00:00  
+**Generated** : 2026-08-13T00:15:06.808893+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 7.6 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩782000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
-> ↳ spot ₩782000.00 (+1.4% vs entrée) · entrée ₩771348.65 · stop ₩709640.75 · T1 ₩836988.63 · R/R 1.06  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
+> ↳ spot ₩782000.00 (+1.4% vs entrée) · entrée ₩771348.65 · stop ₩709640.75 · T1 ₩836988.64 · R/R 1.06  
 > ↳ P(T1 av. stop) 2 % _(réel 5 s)_ · EV/risk -0.088 _(réel 5 s)_ (GBM -0.183) · ¼-Kelly 0.002 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
 
@@ -39,7 +39,7 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
 - Entry (zone de repli) : ₩764918.25–₩777779.04 (mid ₩771348.65)
 - Spot actuel : ₩782000.00 (+1.4% au-dessus de la zone — repli à attendre)
 - Stop : ₩709640.75 (stop swing_plan-based (-11.52%))
-- Targets : T1 ₩836988.63 · R/R 1.06 | T2 ₩852250.46 · R/R 1.31 | T3 ₩867512.28 · R/R 1.56
+- Targets : T1 ₩836988.64 · R/R 1.06 | T2 ₩852250.46 · R/R 1.31 | T3 ₩867512.28 · R/R 1.56
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩709640.75
 
@@ -146,9 +146,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -161,11 +161,11 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **OBV/CMF** : OBV rising · CMF -0.013  _(neutre)_
 - **Vol ratio** : 0.65  _(volume normal)_
 - **Choppiness** : 39.2  _(transition)_
-- **MA** : MA20 746257.63 · MA50 877615.96 · MA200 923979.53  _(prix > MA20)_
+- **MA** : MA20 746257.63 · MA50 877615.96 · MA200 923979.54  _(prix > MA20)_
 - **Dist MA** : MA20 +4.8% · MA50 -10.9% · MA200 -15.4%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (83648 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (82814 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,13 +1,13 @@
 # 207940
 
-**Generated** : 2026-08-12T21:56:01.463868+00:00  
+**Generated** : 2026-08-13T00:18:57.958789+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · ₩1549000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié  
 > ↳ spot ₩1549000.00 (+10.9% vs entrée) · entrée ₩1396925.00 · stop ₩1319139.29 · T1 ₩1455628.88 · R/R 0.75  
-> ↳ P(T1 av. stop) 37 % · EV/risk -0.042 · ¼-Kelly 0.003 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 37 % · EV/risk -0.042 · ¼-Kelly 0.003 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -609 % hors [0,100] (R² max 0.64). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
@@ -38,11 +38,11 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass (negative EV)'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.042 | EV/share : ₩-3259.102 | p_fill : —
+- EV/risk : -0.042 | EV/share : ₩-3257.886 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 37 % | T2 17 % | T3 5 %
 - Kelly (position) : f* 0.013 | ¼-Kelly 0.003 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 26.0 | bear 29.9 | side 44.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
+- Régime probabiliste (posterior HMM, swing) : bull 26.1 | bear 29.9 | side 44.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 512.0
 
 
@@ -138,9 +138,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -159,5 +159,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (80327 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (79401 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

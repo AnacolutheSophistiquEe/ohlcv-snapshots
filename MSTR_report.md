@@ -1,11 +1,11 @@
 # MSTR
 
-**Generated** : 2026-08-12T21:59:00.212324+00:00  
+**Generated** : 2026-08-13T00:21:41.029604+00:00  
 **Santé technique** : 3/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $94.83  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> 🟡 **WAIT-FOR-DIP** — spot +1.4 % au-dessus de la zone d'entrée — attendre le repli  
 > ↳ spot $94.83 (+1.4% vs entrée) · entrée $93.53 · stop $89.79 · T1 $95.35 · R/R 0.49  
 > ↳ P(T1 av. stop) 58 % _(réel 5 s)_ · EV/risk 0.019 _(réel 5 s)_ (GBM -0.031) · ¼-Kelly 0.021 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −4.0% cohérent avec le bruit 5 s (EV-optimal ≈ −4.0%)  
@@ -144,16 +144,16 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Positioning & factor
 
 **Factor** : attribution factorielle indisponible
-**Short/Insider** : SI —% | insider — | verdict sell_bias_strong
+**Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : bullish
 
 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-08-12 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -172,5 +172,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (88471 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (87509 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
