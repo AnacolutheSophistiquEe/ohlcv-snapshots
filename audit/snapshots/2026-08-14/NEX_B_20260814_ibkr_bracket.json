@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-14T00:07:18.053027+00:00",
+  "generated_at": "2026-08-14T21:43:25.848710+00:00",
   "prediction_id": "NEX_B_20260814",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "NEX",
@@ -9,8 +9,8 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 143.1,
-    "quantity": 3,
+    "limit_price": 140.0,
+    "quantity": 2,
     "tif": "GTD",
     "gtd": "2026-08-19T16:30:00+00:00"
   },
@@ -18,16 +18,16 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 143.8,
-      "quantity": 3,
+      "limit_price": 142.4,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 127.2,
-      "quantity": 3,
+      "stop_price": 125.7,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -59,7 +59,7 @@
     "qty_split": [
       {
         "tag": "T3",
-        "qty": 3
+        "qty": 2
       }
     ]
   },
@@ -67,24 +67,24 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 7.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.0154,
+    "ev_pct_risk": -0.0111,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.5071,
-      "T2": 0.2386,
-      "T3": 0.0968
+      "T1": 0.5133,
+      "T2": 0.2355,
+      "T3": 0.0962
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 429.15,
-    "hold_tolerance_breach_price": 107.2875,
+    "notional_eur": 280.0,
+    "hold_tolerance_breach_price": 105.0,
     "hold_fallback_active": true,
     "prediction_id": "NEX_B_20260814"
   },

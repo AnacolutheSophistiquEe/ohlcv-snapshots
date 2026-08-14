@@ -1,60 +1,59 @@
 {
   "available": true,
-  "generated_at": "2026-08-14T21:40:28.937967+00:00",
-  "prediction_id": "ENR_B_20260814",
+  "generated_at": "2026-08-14T21:46:22.604249+00:00",
+  "prediction_id": "AL2SI_A_20260814",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "ENR",
-  "exchange": "IBIS",
+  "symbol": "AL2SI",
+  "exchange": "SBF",
   "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 160.72,
-    "quantity": 2,
-    "tif": "GTD",
-    "gtd": "2026-08-19T16:30:00+00:00"
+    "limit_price": 27.72,
+    "quantity": 14,
+    "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 167.54,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T1"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 170.48,
-      "quantity": 1,
+      "limit_price": 28.45,
+      "quantity": 8,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 30.08,
+      "quantity": 6,
+      "tif": "GTC",
+      "tag": "T3"
+    },
+    {
+      "action": "SELL",
       "order_type": "STP",
-      "stop_price": 148.32,
-      "quantity": 2,
+      "stop_price": 23.27,
+      "quantity": 14,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "ENR_B_swing_20260814",
+  "oca_group": "AL2SI_A_intraday_20260814",
   "oca_type": 1,
   "execution_rules": {
-    "stop_mode": "breakeven_after_T1",
-    "stop_mode_description": "SL → prix d'entrée après hit T1",
+    "stop_mode": "fixed",
+    "stop_mode_description": "SL hard statique, pas de trailing",
     "trail_distance_atr": null,
     "time_stop": {
       "enabled": true,
-      "max_holding_sessions": 5,
-      "exit_mode": "market_close_at_breakeven"
+      "max_holding_sessions": 1,
+      "exit_mode": "market_close_unconditional"
     },
     "order_validity": {
-      "type": "GTD",
-      "offset_sessions": 5,
-      "good_till_date": "2026-08-19T16:30:00+00:00"
+      "type": "DAY",
+      "offset_sessions": 0,
+      "good_till_date": "2026-08-14T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -62,49 +61,44 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.5,
-      0.3,
-      0.2
+      0.6,
+      0.4
     ],
     "qty_split": [
       {
-        "tag": "T1",
-        "qty": 1
-      },
-      {
         "tag": "T2",
-        "qty": 1
+        "qty": 8
       },
       {
         "tag": "T3",
-        "qty": 0
+        "qty": 6
       }
     ]
   },
   "bracket_metadata": {
-    "plan_id": "B",
-    "horizon": "swing",
-    "horizon_label_long": "swing_court_~1_semaine",
+    "plan_id": "A",
+    "horizon": "intraday",
+    "horizon_label_long": "intraday",
     "composite_score": 6.0,
-    "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0953,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
+    "composite_score_source": "horizon_ta_score.plan_a.score",
+    "ev_pct_risk": 0.1327,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.3018,
-      "T2": 0.1566,
-      "T3": 0.095
+      "T1": 0.4499,
+      "T2": 0.3287,
+      "T3": 0.3287
     },
-    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
+    "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 321.44,
-    "hold_tolerance_breach_price": 120.54,
+    "notional_eur": 390.04,
+    "hold_tolerance_breach_price": 20.895,
     "hold_fallback_active": true,
-    "prediction_id": "ENR_B_20260814"
+    "prediction_id": "AL2SI_A_20260814"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
