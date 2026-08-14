@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-08-13T22:02:19.948962+00:00  
+**Generated** : 2026-08-14T00:24:08.501821+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.9 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 10/10 — **Rating** : Pass  

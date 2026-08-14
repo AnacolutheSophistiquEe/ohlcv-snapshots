@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US76655K1097",
-    "generated_at": "2026-08-13T22:05:24.840121+00:00",
+    "generated_at": "2026-08-14T00:26:53.835225+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1741,7 +1741,7 @@
           "rr": 1.22,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.8093,
+          "p_touch": 0.8094,
           "distance_pct": 3.05
         },
         "t2": {
@@ -1750,7 +1750,7 @@
           "rr": 2.52,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4282,
+          "p_touch": 0.4283,
           "distance_pct": 6.3
         },
         "t3": {
@@ -1759,7 +1759,7 @@
           "rr": 3.82,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1159,
+          "p_touch": 0.1158,
           "distance_pct": 9.55
         }
       }
@@ -1829,7 +1829,7 @@
           "rr": 0.92,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9363,
+          "p_touch": 0.9364,
           "distance_pct": 10.06
         },
         "t2": {
@@ -1838,7 +1838,7 @@
           "rr": 1.84,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5905,
+          "p_touch": 0.5904,
           "distance_pct": 20.13
         },
         "t3": {
@@ -1847,7 +1847,7 @@
           "rr": 2.76,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.283,
+          "p_touch": 0.2829,
           "distance_pct": 30.19
         }
       }
@@ -2142,7 +2142,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-13T22:04:57.351297+00:00",
+    "generated_at": "2026-08-14T00:26:26.357443+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7040,7 +7040,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-13T22:04:45.993113+00:00",
+    "generated_at": "2026-08-14T00:26:16.526141+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7269,7 +7269,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-13T22:05:11.223670+00:00",
+    "generated_at": "2026-08-14T00:26:41.501729+00:00",
     "ticker": "RGTI",
     "horizons_days": {
       "intraday": 2,
@@ -7284,7 +7284,7 @@
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -7420,7 +7420,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-13T22:05:01.742712+00:00",
+    "generated_at": "2026-08-14T00:26:29.908162+00:00",
     "ticker": "RGTI",
     "spot_price": 18.62,
     "expiries_available": [
@@ -7430,43 +7430,43 @@
       },
       {
         "date": "2026-08-21",
-        "days_to_exp": 8
+        "days_to_exp": 7
       },
       {
         "date": "2026-08-28",
-        "days_to_exp": 15
+        "days_to_exp": 14
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 22
+        "days_to_exp": 21
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 29
+        "days_to_exp": 28
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7744,
-      "iv_atm_90d": 0.7744,
+      "iv_atm_30d": 0.7876,
+      "iv_atm_90d": 0.7876,
       "rv_20d_annualized": 0.9213,
-      "iv_rv_ratio": 0.841,
+      "iv_rv_ratio": 0.855,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -6.445,
+      "skew_25_delta_vol_pts": -6.543,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-14",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.5723,
+      "m1_iv_atm": 0.8105,
       "m3_expiry": "2026-09-11",
-      "m3_days_to_exp": 29,
-      "m3_iv_atm": 0.7744,
-      "ratio_m1_m3": 0.739,
-      "label": "contango_fort"
+      "m3_days_to_exp": 28,
+      "m3_iv_atm": 0.7876,
+      "ratio_m1_m3": 1.0291,
+      "label": "flat"
     },
     "open_interest_m1": {
       "expiry": "2026-08-14",
@@ -7483,7 +7483,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 415383320.0,
+      "gex_total_usd_per_point": 379526996.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7497,8 +7497,8 @@
       "bullish_signals": 3,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-6.4 pts) — peu de demande de protection",
-        "GEX positif (415.4M$/pt) = MM long gamma stabilisateur",
+        "skew faible (-6.5 pts) — peu de demande de protection",
+        "GEX positif (379.5M$/pt) = MM long gamma stabilisateur",
         "max pain 17.00 vs spot 18.62 (-8.7%)",
         "P/C ratio bas (0.33) — biais call dominant"
       ]
@@ -7510,8 +7510,8 @@
       "per_expiry": {
         "2026-08-14": {
           "total_strikes": 85,
-          "liquid_strikes": 10,
-          "filter_ratio_pct": 11.8
+          "liquid_strikes": 9,
+          "filter_ratio_pct": 10.6
         },
         "2026-08-21": {
           "total_strikes": 101,
@@ -7539,7 +7539,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-13T22:05:10.320157+00:00",
+    "generated_at": "2026-08-14T00:26:40.664414+00:00",
     "ticker": "RGTI",
     "short_interest": {
       "status": "ok",
@@ -7553,7 +7553,7 @@
       "float_shares": 327440492,
       "delta_shares_short_mom_pct": 8.12,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-13T22:05:02.949925+00:00"
+      "fetched_at": "2026-08-14T00:26:31.148689+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7622,7 +7622,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 17,
-      "fetched_at": "2026-08-13T22:05:10.318967+00:00"
+      "fetched_at": "2026-08-14T00:26:40.663585+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -16070,7 +16070,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-13T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16115,7 +16115,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-13T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16160,7 +16160,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-13T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
