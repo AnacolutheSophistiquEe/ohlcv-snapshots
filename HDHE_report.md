@@ -1,6 +1,6 @@
 # 267260
 
-**Generated** : 2026-08-17T00:15:34.160922+00:00  
+**Generated** : 2026-08-17T21:50:51.331791+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 7.5 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass  
@@ -8,7 +8,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 **Subtitle** : indeterminate · volatilite normal · ₩803000.00  
 
 > 🟡 **WAIT-FOR-DIP** — spot +2.0 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot ₩803000.00 (+2.0% vs entrée) · entrée ₩787098.65 · stop ₩724130.75 · T1 ₩836988.63 · R/R 0.79  
+> ↳ spot ₩803000.00 (+2.0% vs entrée) · entrée ₩787098.65 · stop ₩724130.75 · T1 ₩836988.64 · R/R 0.79  
 > ↳ P(T1 av. stop) 5 % _(réel 5 s)_ · EV/risk 0.014 _(réel 5 s)_ (GBM -0.195) · ¼-Kelly 0.001 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
 
@@ -39,7 +39,7 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass'.
 - Entry (zone de repli) : ₩780582.86–₩793614.43 (mid ₩787098.65)
 - Spot actuel : ₩803000.00 (+2.0% au-dessus de la zone — repli à attendre)
 - Stop : ₩724130.75 (stop swing_plan-based (-12.17%))
-- Targets : T1 ₩836988.63 · R/R 0.79 | T2 ₩860763.97 · R/R 1.17 | T3 ₩884539.30 · R/R 1.55
+- Targets : T1 ₩836988.64 · R/R 0.79 | T2 ₩860763.97 · R/R 1.17 | T3 ₩884539.30 · R/R 1.55
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩724130.75
 
@@ -167,5 +167,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (82641 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (82637 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
