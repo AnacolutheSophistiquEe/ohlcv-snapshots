@@ -13,8 +13,8 @@
       "A",
       "B"
     ],
-    "generated_at": "2026-08-14T22:01:55.642639+00:00",
-    "source_precomputed_at": "2026-08-14T22:01:09.769129+00:00",
+    "generated_at": "2026-08-17T00:23:52.731185+00:00",
+    "source_precomputed_at": "2026-08-17T00:23:12.661435+00:00",
     "calibration_lookup": "v1.0_strict_2closes_0.5atr",
     "calibration_method": "rolling_daily_long_strict_break",
     "confluence_band_atr": 0.5,
@@ -27,10 +27,10 @@
   },
   "summary": {
     "nearest_support": {
-      "price": 39.8344,
+      "price": 39.8342,
       "subtype": "AVWAP_swing_high",
-      "distance_pct": -0.014,
-      "robustness": 100.0
+      "distance_pct": -0.015,
+      "robustness": 99.9
     },
     "nearest_resistance": {
       "price": 37.49,
@@ -903,22 +903,22 @@
       }
     },
     {
-      "price": 31.9433,
+      "price": 31.9461,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_low",
       "side": "support",
       "source": "anchored_vwap.anchors[2026-07-17]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 28,
+      "age_days": 31,
       "raw_meta": {
         "anchor_date": "2026-07-17",
         "anchor_event": "swing_low",
         "anchor_price": 23.38,
         "bars_since_anchor": 20
       },
-      "distance_pct_to_spot": -19.821,
-      "distance_in_atr": -3.022,
+      "distance_pct_to_spot": -19.814,
+      "distance_in_atr": -3.021,
       "confluence_count": 8,
       "confluence_concepts": [
         "S/R_DBSCAN_STRONG",
@@ -1054,22 +1054,22 @@
       }
     },
     {
-      "price": 32.9813,
+      "price": 32.9844,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_high",
       "side": "support",
       "source": "anchored_vwap.anchors[2026-07-23]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 22,
+      "age_days": 25,
       "raw_meta": {
         "anchor_date": "2026-07-23",
         "anchor_event": "swing_high",
         "anchor_price": 32.59,
         "bars_since_anchor": 16
       },
-      "distance_pct_to_spot": -17.216,
-      "distance_in_atr": -2.625,
+      "distance_pct_to_spot": -17.208,
+      "distance_in_atr": -2.624,
       "confluence_count": 4,
       "confluence_concepts": [
         "FIB_382",
@@ -2046,14 +2046,14 @@
       }
     },
     {
-      "price": 39.8344,
+      "price": 39.8342,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_high",
       "side": "support",
       "source": "anchored_vwap.anchors[2026-08-13]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 1,
+      "age_days": 4,
       "raw_meta": {
         "anchor_date": "2026-08-13",
         "anchor_event": "swing_high",
@@ -2064,7 +2064,7 @@
         "B_entry"
       ],
       "source_weight_boosted_by_plan": true,
-      "distance_pct_to_spot": -0.014,
+      "distance_pct_to_spot": -0.015,
       "distance_in_atr": -0.002,
       "confluence_count": 14,
       "confluence_concepts": [
@@ -2077,12 +2077,12 @@
         "CAM_R2",
         "CAM_R3"
       ],
-      "robustness_score": 100.0,
+      "robustness_score": 99.9,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 25,
-        "age_decay": -0.0
+        "age_decay": -0.1
       },
       "probabilities": {
         "available": true,
@@ -2857,14 +2857,14 @@
       "type": "bracket_plan",
       "subtype": "PLAN_B_T3",
       "side": "resistance",
-      "source": "bracket_orders.SMCI_B_20260814_ibkr_bracket.json",
+      "source": "bracket_orders.SMCI_B_20260817_ibkr_bracket.json",
       "source_weight": 0.95,
       "touches": null,
       "age_days": 0,
       "raw_meta": {
         "plan_letter": "B",
         "role": "t3",
-        "prediction_id": "SMCI_B_20260814",
+        "prediction_id": "SMCI_B_20260817",
         "horizon_sessions": 5
       },
       "plan_roles": [
