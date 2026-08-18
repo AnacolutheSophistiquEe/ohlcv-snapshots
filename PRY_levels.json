@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PRY",
-    "generated_at": "2026-08-17T22:05:07Z",
+    "generated_at": "2026-08-18T00:33:18Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-08-18T08:00:00Z",
-    "valid_until": "2026-08-18T21:00:00Z",
+    "valid_from": "2026-08-19T08:00:00Z",
+    "valid_until": "2026-08-19T21:00:00Z",
     "source_precomputed": "PRY_precomputed.json"
   },
   "context": {
-    "last_price": 131.05,
+    "last_price": 131.35,
     "ta_score": {
       "value": 7,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.5351,
-      "expected_duration_days": 4.15
+      "probability": 0.538,
+      "expected_duration_days": 4.05
     },
     "volatility_regime": "high",
     "signals_counter": {
@@ -31,10 +31,10 @@
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_60-70_dist_ma20_+2_+5",
-      "win_rate": 0.93,
-      "sample_size": 15,
-      "median_bounce_pct": 6.23,
+      "setup": "rsi_60-70_dist_ma20_+5_+10",
+      "win_rate": 0.95,
+      "sample_size": 22,
+      "median_bounce_pct": 6.14,
       "confidence": "medium"
     },
     "narrative_short": "TA score 7/10 (bullish), alignment mixed, HMM bull (0.54), vol high, signals neutral (5b/4s/6n)."
@@ -68,7 +68,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -16.48,
+      "current_dd_pct": -16.28,
       "ath_price": 156.9,
       "ath_date": "2026-05-11",
       "max_dd_1y_pct": -26.9,
@@ -84,31 +84,31 @@
       "side": "long",
       "entry_zone": {
         "min": 123.2,
-        "max": 125.01
+        "max": 125.025
       },
       "stop": {
-        "price": 120.7325,
+        "price": 120.8675,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -2.72
+        "distance_pct": -2.61
       },
       "targets": [
         {
           "level": 1,
-          "price": 130.6274,
+          "price": 130.7836,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 1.93
+          "rr": 2.06
         },
         {
           "level": 2,
-          "price": 134.5223,
+          "price": 134.6996,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 3.09
+          "rr": 3.26
         },
         {
           "level": 3,
-          "price": 138.4172,
+          "price": 138.6157,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 4.24
+          "rr": 4.47
         }
       ],
       "preferred_target": 1,
@@ -128,22 +128,22 @@
         "max": 136.479
       },
       "stop": {
-        "price": 133.7329,
+        "price": 133.7891,
         "basis": "below_broken_resistance",
-        "distance_pct": -1.82
+        "distance_pct": -1.78
       },
       "targets": [
         {
           "level": 1,
           "price": 140.7246,
           "basis": "fib_786",
-          "rr": 1.83
+          "rr": 1.87
         },
         {
           "level": 2,
           "price": 148.9734,
           "basis": "next_confluence_resistance",
-          "rr": 5.16
+          "rr": 5.28
         }
       ],
       "preferred_target": 1,
@@ -160,7 +160,7 @@
       "side": "long",
       "entry_zone": {
         "min": 108.9967,
-        "max": 112.3414
+        "max": 112.3429
       },
       "stop": {
         "price": 104.6368,
@@ -170,21 +170,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 130.6274,
+          "price": 130.7836,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 3.31
+          "rr": 3.33
         },
         {
           "level": 2,
-          "price": 134.5223,
+          "price": 134.6996,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 3.95
+          "rr": 3.98
         },
         {
           "level": 3,
-          "price": 138.4172,
+          "price": 138.6157,
           "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 4.6
+          "rr": 4.63
         }
       ],
       "preferred_target": 1,
