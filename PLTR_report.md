@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-08-17T22:00:37.937952+00:00  
+**Generated** : 2026-08-18T00:24:18.169744+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.9 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 10/10 — **Rating** : Pass  
@@ -147,7 +147,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Positioning & factor
 
 **Factor** : attribution factorielle indisponible
-**Short/Insider** : SI —% | insider — | verdict neutral
+**Short/Insider** : SI —% | insider — | verdict sell_bias_strong
 **Options** : bullish
 
 
@@ -175,5 +175,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (91209 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (91254 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

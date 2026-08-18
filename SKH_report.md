@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-08-17T21:48:11.610736+00:00  
+**Generated** : 2026-08-18T00:12:58.112246+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 7/10 — **Rating** : Pass  

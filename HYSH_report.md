@@ -1,6 +1,6 @@
 # 298040
 
-**Generated** : 2026-08-17T21:52:12.407422+00:00  
+**Generated** : 2026-08-18T00:16:35.312074+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 9.0 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
@@ -9,7 +9,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot ₩2954000.00 (+5.6% vs entrée) · entrée ₩2798350.00 · stop ₩2532921.43 · T1 ₩3107611.73 · R/R 1.17  
-> ↳ P(T1 av. stop) 30 % _(réel 5 s)_ · EV/risk -0.007 _(réel 5 s)_ (GBM 0.164) · ¼-Kelly 0.016 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 30 % _(réel 5 s)_ · EV/risk -0.007 _(réel 5 s)_ (GBM 0.166) · ¼-Kelly 0.016 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -45,11 +45,11 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass (negative EV)'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.164 | EV/share : ₩43485.301 | p_fill : —
+- EV/risk : 0.166 | EV/share : ₩44121.487 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 39 % | T2 8 % | T3 2 %
-- Kelly (position) : f* 0.064 | ¼-Kelly 0.016 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 25.0 | bear 20.1 | side 54.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Kelly (position) : f* 0.065 | ¼-Kelly 0.016 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
+- Régime probabiliste (posterior HMM, swing) : bull 25.0 | bear 20.2 | side 54.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 400.0
 
 

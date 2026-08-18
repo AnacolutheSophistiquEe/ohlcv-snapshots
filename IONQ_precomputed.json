@@ -6,7 +6,7 @@
     "exchange": "NYSE",
     "currency": "USD",
     "isin": "US46222L1089",
-    "generated_at": "2026-08-17T22:02:03.719067+00:00",
+    "generated_at": "2026-08-18T00:25:41.423986+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1798,7 +1798,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.4286,
+          "p_touch": 0.4284,
           "distance_pct": 7.3
         },
         "t2": {
@@ -1807,7 +1807,7 @@
           "rr": 2.21,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4286,
+          "p_touch": 0.4284,
           "distance_pct": 8.07
         },
         "t3": {
@@ -1842,7 +1842,7 @@
           "rr": 0.99,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9118,
+          "p_touch": 0.9119,
           "distance_pct": 6.59
         },
         "t2": {
@@ -1851,7 +1851,7 @@
           "rr": 1.99,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4429,
+          "p_touch": 0.443,
           "distance_pct": 13.17
         },
         "t3": {
@@ -1860,7 +1860,7 @@
           "rr": 2.98,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.146,
+          "p_touch": 0.1461,
           "distance_pct": 19.76
         }
       }
@@ -1886,7 +1886,7 @@
           "rr": 0.91,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9363,
+          "p_touch": 0.9365,
           "distance_pct": 9.31
         },
         "t2": {
@@ -1895,7 +1895,7 @@
           "rr": 1.82,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5907,
+          "p_touch": 0.5908,
           "distance_pct": 18.63
         },
         "t3": {
@@ -2199,7 +2199,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-17T22:01:39.246519+00:00",
+    "generated_at": "2026-08-18T00:25:14.932289+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7097,7 +7097,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-17T22:01:28.838291+00:00",
+    "generated_at": "2026-08-18T00:25:05.440980+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7326,7 +7326,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-17T22:01:50.419292+00:00",
+    "generated_at": "2026-08-18T00:25:29.291859+00:00",
     "ticker": "IONQ",
     "horizons_days": {
       "intraday": 2,
@@ -7341,7 +7341,7 @@
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -7478,57 +7478,57 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-17T22:01:43.548398+00:00",
+    "generated_at": "2026-08-18T00:25:18.885831+00:00",
     "ticker": "IONQ",
     "spot_price": 46.84,
     "expiries_available": [
       {
         "date": "2026-08-21",
-        "days_to_exp": 4
+        "days_to_exp": 3
       },
       {
         "date": "2026-08-28",
-        "days_to_exp": 11
+        "days_to_exp": 10
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 18
+        "days_to_exp": 17
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 25
+        "days_to_exp": 24
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 32
+        "days_to_exp": 31
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7929,
-      "iv_atm_90d": 0.7872,
+      "iv_atm_30d": 0.8027,
+      "iv_atm_90d": 0.7993,
       "rv_20d_annualized": 0.8526,
-      "iv_rv_ratio": 0.93,
+      "iv_rv_ratio": 0.942,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -9.961,
+      "skew_25_delta_vol_pts": -10.107,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-21",
-      "m1_days_to_exp": 4,
-      "m1_iv_atm": 0.7598,
+      "m1_days_to_exp": 3,
+      "m1_iv_atm": 0.8491,
       "m3_expiry": "2026-09-18",
-      "m3_days_to_exp": 32,
-      "m3_iv_atm": 0.7872,
-      "ratio_m1_m3": 0.9651,
-      "label": "contango_leger"
+      "m3_days_to_exp": 31,
+      "m3_iv_atm": 0.7993,
+      "ratio_m1_m3": 1.0623,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-21",
-      "days_to_exp": 4,
+      "days_to_exp": 3,
       "put_call_ratio": 0.687,
       "total_oi_m1": 157329,
       "largest_call_strike_oi": {
@@ -7541,7 +7541,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 580670357.0,
+      "gex_total_usd_per_point": 589343196.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7555,8 +7555,8 @@
       "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-10.0 pts) — peu de demande de protection",
-        "GEX positif (580.7M$/pt) = MM long gamma stabilisateur"
+        "skew faible (-10.1 pts) — peu de demande de protection",
+        "GEX positif (589.3M$/pt) = MM long gamma stabilisateur"
       ]
     },
     "liquidity_stats": {
@@ -7595,7 +7595,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-17T22:01:49.506611+00:00",
+    "generated_at": "2026-08-18T00:25:28.345978+00:00",
     "ticker": "IONQ",
     "short_interest": {
       "status": "ok",
@@ -7609,7 +7609,7 @@
       "float_shares": 378080026,
       "delta_shares_short_mom_pct": 13.91,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-17T22:01:44.829805+00:00"
+      "fetched_at": "2026-08-18T00:25:20.077819+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7678,7 +7678,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 3,
-      "fetched_at": "2026-08-17T22:01:49.505488+00:00"
+      "fetched_at": "2026-08-18T00:25:28.345028+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -16086,7 +16086,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-17T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16131,7 +16131,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-17T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16176,7 +16176,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-17T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

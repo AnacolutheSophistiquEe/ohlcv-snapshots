@@ -1,13 +1,13 @@
 # 207940
 
-**Generated** : 2026-08-17T21:54:52.038012+00:00  
+**Generated** : 2026-08-18T00:19:00.342440+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · ₩1548000.00  
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié  
 > ↳ spot ₩1548000.00 (+10.9% vs entrée) · entrée ₩1396475.00 · stop ₩1331475.00 · T1 ₩1455461.68 · R/R 0.91  
-> ↳ P(T1 av. stop) 36 % · EV/risk -0.047 · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 36 % · EV/risk -0.047 · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -34,11 +34,11 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass (negative EV)'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.047 | EV/share : ₩-3054.411 | p_fill : —
+- EV/risk : -0.047 | EV/share : ₩-3050.079 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 36 % | T2 17 % | T3 5 %
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 50.4 | bear 31.6 | side 18.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
+- Régime probabiliste (posterior HMM, swing) : bull 50.8 | bear 31.2 | side 18.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 512.0
 
 
