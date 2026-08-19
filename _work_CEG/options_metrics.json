@@ -1,0 +1,116 @@
+{
+  "available": true,
+  "generated_at": "2026-08-19T22:04:44.070327+00:00",
+  "ticker": "CEG",
+  "spot_price": 274.17,
+  "expiries_available": [
+    {
+      "date": "2026-08-21",
+      "days_to_exp": 2
+    },
+    {
+      "date": "2026-08-28",
+      "days_to_exp": 9
+    },
+    {
+      "date": "2026-09-04",
+      "days_to_exp": 16
+    },
+    {
+      "date": "2026-09-11",
+      "days_to_exp": 23
+    },
+    {
+      "date": "2026-09-18",
+      "days_to_exp": 30
+    }
+  ],
+  "iv_metrics": {
+    "iv_atm_30d": 0.4222,
+    "iv_atm_90d": 0.4222,
+    "rv_20d_annualized": 0.3556,
+    "iv_rv_ratio": 1.187,
+    "iv_rank_1y": null,
+    "iv_percentile_1y": null,
+    "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
+  },
+  "skew": {
+    "skew_25_delta_vol_pts": 1.416,
+    "label": "normal"
+  },
+  "term_structure": {
+    "m1_expiry": "2026-08-21",
+    "m1_days_to_exp": 2,
+    "m1_iv_atm": 0.6085,
+    "m3_expiry": "2026-09-18",
+    "m3_days_to_exp": 30,
+    "m3_iv_atm": 0.4222,
+    "ratio_m1_m3": 1.4414,
+    "label": "backwardation"
+  },
+  "open_interest_m1": {
+    "expiry": "2026-08-21",
+    "days_to_exp": 2,
+    "put_call_ratio": 0.863,
+    "total_oi_m1": 39937,
+    "largest_call_strike_oi": {
+      "strike": 300.0,
+      "oi": 2881
+    },
+    "largest_put_strike_oi": {
+      "strike": 230.0,
+      "oi": 2177
+    }
+  },
+  "gex": {
+    "gex_total_usd_per_point": -218867708.0,
+    "gex_label": "negative_destabilizing",
+    "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
+  },
+  "max_pain": {
+    "strike": 277.5,
+    "expiry": "2026-08-21",
+    "gap_vs_spot_pct": 1.21
+  },
+  "verdict": {
+    "label": "neutral_cautious",
+    "bullish_signals": 0,
+    "bearish_signals": 1,
+    "notes": [
+      "GEX négatif (-218.9M$/pt) = MM short gamma déstabilisateur"
+    ]
+  },
+  "liquidity_stats": {
+    "min_oi_threshold": 50,
+    "max_iv_threshold": 5.0,
+    "max_bidask_spread_pct": 0.3,
+    "per_expiry": {
+      "2026-08-21": {
+        "total_strikes": 133,
+        "liquid_strikes": 8,
+        "filter_ratio_pct": 6.0
+      },
+      "2026-08-28": {
+        "total_strikes": 73,
+        "liquid_strikes": 2,
+        "filter_ratio_pct": 2.7
+      },
+      "2026-09-04": {
+        "total_strikes": 53,
+        "liquid_strikes": 0,
+        "filter_ratio_pct": 0.0
+      },
+      "2026-09-11": {
+        "total_strikes": 42,
+        "liquid_strikes": 0,
+        "filter_ratio_pct": 0.0
+      },
+      "2026-09-18": {
+        "total_strikes": 92,
+        "liquid_strikes": 21,
+        "filter_ratio_pct": 22.8
+      }
+    }
+  },
+  "filters_note": "IV metrics et skew utilisent UNIQUEMENT les options liquides (OI>=50, IV<=500%, spread bid-ask<=30% mid). OI/GEX/max_pain utilisent toutes les options (l'OI compte même si l'option est illiquide). Évite les artefacts d'IV de cotations déconnectées sur les expiries longues."
+}

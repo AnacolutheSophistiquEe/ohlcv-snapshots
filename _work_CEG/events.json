@@ -1,0 +1,35 @@
+{
+  "available": true,
+  "generated_at": "2026-08-19T22:04:47.649745+00:00",
+  "ticker": "CEG",
+  "horizons_days": {
+    "intraday": 2,
+    "swing": 7,
+    "deep": 14
+  },
+  "n_events": 1,
+  "events": [
+    {
+      "date": "2026-08-19",
+      "type": "macro",
+      "label": "US FOMC Meeting Minutes",
+      "importance": "medium",
+      "sessions_to_event": 0,
+      "calendar_days": 0,
+      "in_plan_horizon": [
+        "intraday",
+        "swing",
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": null
+    }
+  ],
+  "earnings_in_swing": false,
+  "warnings": {
+    "macro": null,
+    "corporate": null
+  },
+  "note": "réutilise data/macro_calendar.json (collecte = Claude/VPS, PAS reconstruite ici) + earnings/ex-div yfinance best-effort. Impact/reco mécaniques, observe-only."
+}

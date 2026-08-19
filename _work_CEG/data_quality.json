@@ -1,0 +1,156 @@
+{
+  "daily": {
+    "completeness": {
+      "n_bars": 251,
+      "expected_bars_daily": 261,
+      "completeness_pct": 96.16858237547893,
+      "missing_dates": [
+        "2025-09-01T00:00:00",
+        "2025-11-27T00:00:00",
+        "2025-12-25T00:00:00",
+        "2026-01-01T00:00:00",
+        "2026-01-19T00:00:00",
+        "2026-02-16T00:00:00",
+        "2026-04-03T00:00:00",
+        "2026-05-25T00:00:00",
+        "2026-06-19T00:00:00",
+        "2026-07-03T00:00:00"
+      ]
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 2,
+      "outliers_recent_30d": []
+    },
+    "gaps": {
+      "n_gaps_up": 4,
+      "n_gaps_down": 6,
+      "last_significant_gap": {
+        "date": "2026-06-01T00:00:00",
+        "type": "down",
+        "magnitude_pct": 3.3969200007502365
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 3500152.2333333334,
+      "median_volume_60d": 3185900.0,
+      "volume_consistency_score": 0.5253319950336449
+    },
+    "liquidity": {
+      "liquidity_score": 726298978.7825032,
+      "liquidity_classification": "high"
+    },
+    "freshness": {
+      "last_bar_date": "2026-08-19T00:00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 87.50378737768828,
+      "overall_label": "excellent",
+      "warnings": []
+    }
+  },
+  "h4": {
+    "completeness": {
+      "n_bars": 126,
+      "expected_bars_daily": null,
+      "expected_bars_h4": 126,
+      "bars_per_day_typical": 2,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_bars_intraday": 0
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 0,
+      "outliers_recent_30d": []
+    },
+    "gaps": {
+      "n_gaps_up": 2,
+      "n_gaps_down": 1,
+      "last_significant_gap": {
+        "date": "2026-08-06T12:00:00+00:00",
+        "type": "up",
+        "magnitude_pct": 4.460224288657089
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 1091641.4333333333,
+      "median_volume_60d": 1066078.5,
+      "volume_consistency_score": 0.7110442016882685
+    },
+    "liquidity": {
+      "liquidity_score": 297199317.7706991,
+      "liquidity_classification": "high"
+    },
+    "freshness": {
+      "last_bar_date": "2026-08-19T16:00:00+00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 93.41566302532402,
+      "overall_label": "excellent",
+      "warnings": []
+    }
+  },
+  "h1": {
+    "completeness": {
+      "n_bars": 161,
+      "expected_bars_daily": null,
+      "expected_bars_h1": 161,
+      "bars_per_day_typical": 7,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_bars_intraday": 0
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 3,
+      "outliers_recent_30d": [
+        {
+          "date": "2026-08-18T17:30:00+00:00",
+          "return_pct": -2.9900778384369553,
+          "sigma_distance": 3.014831669336142
+        }
+      ]
+    },
+    "gaps": {
+      "n_gaps_up": 1,
+      "n_gaps_down": 0,
+      "last_significant_gap": {
+        "date": "2026-08-06T13:30:00+00:00",
+        "type": "up",
+        "magnitude_pct": 4.530922068011911
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 282617.75,
+      "median_volume_60d": 220279.0,
+      "volume_consistency_score": 0.46067466169938
+    },
+    "liquidity": {
+      "liquidity_score": 80104694.55302429,
+      "liquidity_classification": "medium"
+    },
+    "freshness": {
+      "last_bar_date": "2026-08-19T19:30:00+00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 82.93341185095653,
+      "overall_label": "good",
+      "warnings": []
+    }
+  },
+  "summary": {
+    "worst_tf_quality_score": 82.93341185095653,
+    "worst_tf": "h1",
+    "recommendation": "review_outliers"
+  }
+}

@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SOI",
-    "generated_at": "2026-08-19T00:33:30Z",
+    "generated_at": "2026-08-19T22:05:07Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-08-20T08:00:00Z",
@@ -10,41 +10,41 @@
     "source_precomputed": "SOI_precomputed.json"
   },
   "context": {
-    "last_price": 115.35,
+    "last_price": 109.15,
     "ta_score": {
-      "value": 8,
+      "value": 7,
       "max": 10,
       "label": "bullish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.7677,
-      "expected_duration_days": 4.3
+      "probability": 0.5725,
+      "expected_duration_days": 2.34
     },
     "volatility_regime": "normal",
     "signals_counter": {
       "buy": 2,
-      "sell": 3,
-      "neutral": 10,
+      "sell": 5,
+      "neutral": 8,
       "total": 15,
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_60-70_dist_ma20_-2_+2",
-      "win_rate": 0.0,
-      "sample_size": 0,
-      "median_bounce_pct": 0.0,
+      "setup": "rsi_50-60_dist_ma20_-10_-5",
+      "win_rate": 1.0,
+      "sample_size": 3,
+      "median_bounce_pct": 6.68,
       "confidence": "very_low"
     },
-    "narrative_short": "TA score 8/10 (bullish), alignment mixed, HMM bull (0.77), vol normal, signals neutral (2b/3s/10n)."
+    "narrative_short": "TA score 7/10 (bullish), alignment mixed, HMM bull (0.57), vol normal, signals neutral (2b/5s/8n)."
   },
   "notes": {
-    "atr_daily": 8.9321,
+    "atr_daily": 8.6857,
     "atr_pct_daily": null,
-    "beta_60d": 0.2139,
+    "beta_60d": 0.1897,
     "beta_benchmark": "EWQ",
-    "beta_corr_60d": 0.0269,
+    "beta_corr_60d": 0.0239,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -55,17 +55,17 @@
       {
         "indicator": "obv",
         "type": "hidden_bullish",
-        "confidence": 0.39,
+        "confidence": 0.37,
         "bars_ago": 14,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": -39.98,
+      "current_dd_pct": -43.21,
       "ath_price": 192.2,
       "ath_date": "2026-05-28",
       "max_dd_1y_pct": -55.05,
-      "days_in_dd": 82,
+      "days_in_dd": 83,
       "median_recovery_days": null
     }
   },
@@ -76,32 +76,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 113.4486,
-        "max": 114.1314
+        "min": 108.2543,
+        "max": 108.9057
       },
       "stop": {
-        "price": 101.9518,
+        "price": 96.1214,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -10.4
+        "distance_pct": -11.47
       },
       "targets": [
         {
           "level": 1,
           "price": 128.0,
-          "basis": "résistance (weak) · touche hist. 44% (sans stop)",
-          "rr": 1.2
+          "basis": "résistance (weak) · touche hist. 15% (sans stop)",
+          "rr": 1.56
         },
         {
           "level": 2,
           "price": 136.1,
           "basis": "résistance (weak) · touche hist. 15% (sans stop)",
-          "rr": 1.88
+          "rr": 2.21
         },
         {
           "level": 3,
-          "price": 140.0663,
+          "price": 136.8948,
           "basis": "plafond band 95% · touche hist. 15% (sans stop)",
-          "rr": 2.22
+          "rr": 2.27
         }
       ],
       "preferred_target": 1,
@@ -117,32 +117,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 117.0269,
-        "max": 117.4945
+        "min": 119.5922,
+        "max": 120.0701
       },
       "stop": {
-        "price": 112.4439,
-        "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -4.11
+        "price": 112.9156,
+        "basis": "below_broken_resistance",
+        "distance_pct": -5.77
       },
       "targets": [
         {
           "level": 1,
-          "price": 128.0,
-          "basis": "résistance (weak) · touche hist. 44% (sans stop)",
-          "rr": 2.23
+          "price": 136.1,
+          "basis": "next_confluence_resistance",
+          "rr": 2.35
         },
         {
           "level": 2,
-          "price": 136.1,
-          "basis": "résistance (weak) · touche hist. 15% (sans stop)",
-          "rr": 3.91
-        },
-        {
-          "level": 3,
-          "price": 140.0663,
-          "basis": "plafond band 95% · touche hist. 15% (sans stop)",
-          "rr": 4.73
+          "price": 144.4977,
+          "basis": "fib_786",
+          "rr": 3.57
         }
       ],
       "preferred_target": 1,
@@ -150,7 +144,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+      "rationale": "Breakout au-dessus confluence resistance MA50 + MA20 + S/R_resistance + FIB_618 + VPVR_POC (strength 35.0)."
     },
     {
       "id": "C",
@@ -159,31 +153,31 @@
       "side": "long",
       "entry_zone": {
         "min": 81.66,
-        "max": 84.9611
+        "max": 84.9011
       },
       "stop": {
         "price": 78.3936,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -5.9
+        "distance_pct": -5.87
       },
       "targets": [
         {
           "level": 1,
           "price": 128.0,
-          "basis": "résistance (weak) · touche hist. 44% (sans stop)",
-          "rr": 9.09
+          "basis": "résistance (weak) · touche hist. 15% (sans stop)",
+          "rr": 9.15
         },
         {
           "level": 2,
           "price": 136.1,
           "basis": "résistance (weak) · touche hist. 15% (sans stop)",
-          "rr": 10.74
+          "rr": 10.81
         },
         {
           "level": 3,
-          "price": 140.0663,
+          "price": 136.8948,
           "basis": "plafond band 95% · touche hist. 15% (sans stop)",
-          "rr": 11.54
+          "rr": 10.97
         }
       ],
       "preferred_target": 1,
