@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "207940",
-    "generated_at": "2026-08-18T22:05:30Z",
+    "generated_at": "2026-08-19T00:33:30Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-08-19T08:00:00Z",
-    "valid_until": "2026-08-19T21:00:00Z",
+    "valid_from": "2026-08-20T08:00:00Z",
+    "valid_until": "2026-08-20T21:00:00Z",
     "source_precomputed": "207940_precomputed.json"
   },
   "context": {
-    "last_price": 1520000.0,
+    "last_price": 1531000.0,
     "ta_score": {
       "value": 7,
       "max": 10,
@@ -19,14 +19,14 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.7711,
-      "expected_duration_days": 4.37
+      "probability": 0.7698,
+      "expected_duration_days": 4.34
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 4,
+      "buy": 5,
       "sell": 1,
-      "neutral": 10,
+      "neutral": 9,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 3.55,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 7/10 (bullish), alignment mixed, HMM bull (0.77), vol normal, signals neutral (4b/1s/10n)."
+    "narrative_short": "TA score 7/10 (bullish), alignment mixed, HMM bull (0.77), vol normal, signals neutral (5b/1s/9n)."
   },
   "notes": {
     "atr_daily": 62857.1429,
     "atr_pct_daily": null,
-    "beta_60d": 0.0491,
+    "beta_60d": 0.0466,
     "beta_benchmark": "EWY",
-    "beta_corr_60d": 0.0728,
+    "beta_corr_60d": 0.0692,
     "btc_corr_high": null,
     "candlestick": {
       "name": "hammer",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -22.65,
+      "current_dd_pct": -22.09,
       "ath_price": 1965000.0,
       "ath_date": "2026-01-15",
       "max_dd_1y_pct": -36.74,
@@ -77,19 +77,25 @@
       "side": "long",
       "entry_zone": {
         "min": 1497230.7692,
-        "max": 1503400.0
+        "max": 1503950.0
       },
       "stop": {
-        "price": 1321017.8571,
+        "price": 1325967.8571,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -11.95
+        "distance_pct": -11.64
       },
       "targets": [
         {
+          "level": 2,
+          "price": 1501999.5392,
+          "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
+          "rr": 0.01
+        },
+        {
           "level": 3,
-          "price": 1554244.9787,
-          "basis": "plafond band 95% · touche hist. 73% (sans stop)",
-          "rr": 0.3
+          "price": 1558586.8088,
+          "basis": "plafond band 95% · touche hist. 91% (sans stop)",
+          "rr": 0.33
         }
       ],
       "preferred_target": 1,
@@ -114,7 +120,7 @@
       "targets": [
         {
           "level": 1,
-          "price": 1602428.8487,
+          "price": 1602483.8487,
           "basis": "next_confluence_resistance",
           "rr": 1.84
         },
@@ -143,31 +149,31 @@
       "side": "long",
       "entry_zone": {
         "min": 1343384.6154,
-        "max": 1417420.0
+        "max": 1417640.0
       },
       "stop": {
         "price": 1289649.2308,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -6.57
+        "distance_pct": -6.58
       },
       "targets": [
         {
           "level": 1,
-          "price": 1440664.9929,
+          "price": 1445412.2696,
           "basis": "band 95% (atteignable) · touche hist. 44% (sans stop)",
-          "rr": 0.66
+          "rr": 0.71
         },
         {
           "level": 2,
-          "price": 1497454.9858,
+          "price": 1501999.5392,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 1.29
+          "rr": 1.34
         },
         {
           "level": 3,
-          "price": 1554244.9787,
-          "basis": "plafond band 95% · touche hist. 73% (sans stop)",
-          "rr": 1.92
+          "price": 1558586.8088,
+          "basis": "plafond band 95% · touche hist. 91% (sans stop)",
+          "rr": 1.96
         }
       ],
       "preferred_target": 1,
