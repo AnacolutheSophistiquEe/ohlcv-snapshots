@@ -1,6 +1,6 @@
 # NEX
 
-**Generated** : 2026-08-18T21:43:01.003218+00:00  
+**Generated** : 2026-08-19T00:08:20.272594+00:00  
 **Santé technique** : 5/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €138.00  
@@ -38,7 +38,7 @@ Plan privilegie B (swing), composite 5/10, conviction 'Neutral'.
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 50 % | T2 23 % | T3 9 %
 - Kelly (position) : f* 0.008 | ¼-Kelly 0.002 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 25.7 | bear 50.4 | side 23.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, swing) : bull 36.5 | bear 36.3 | side 27.2  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 276.0 (= 2 part(s) × prix) · cible 288.0
 
 
@@ -146,8 +146,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.97  _(pas de croisement recent)_
 - **BB** : %B 0.62 · largeur 15.9%
 - **ATR** : 4.7 (71.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV falling · CMF -0.243  _(distribution)_
-- **Vol ratio** : 0.67  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.236  _(distribution)_
+- **Vol ratio** : 0.27  _(volume atone)_
 - **Choppiness** : 45.1  _(transition)_
 - **MA** : MA20 135.48 · MA50 139.64 · MA200 132.79  _(prix > MA20)_
 - **Dist MA** : MA20 +1.9% · MA50 -1.2% · MA200 +3.9%
@@ -155,5 +155,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (90140 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (90139 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

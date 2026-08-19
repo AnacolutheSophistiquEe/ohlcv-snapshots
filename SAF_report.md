@@ -1,6 +1,6 @@
 # SAF
 
-**Generated** : 2026-08-18T21:41:36.559901+00:00  
+**Generated** : 2026-08-19T00:07:05.963220+00:00  
 **Santé technique** : 8/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €353.10  
@@ -14,15 +14,6 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 - **Daily** : range (trend-range)  
 - **H4** : range | **H1** : down  
 - **Flag multi-TF** : mixed (score 2)
-
-
-## ⚠ Contradictions techniques
-
-- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.010 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
-  - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
-  - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
-  - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
-  - _Vraie incohérence (rare) : volume corrompu/dégradé (flux délayé, volume nul certains jours) fausserait l'un des deux — vérifier la qualité du volume si les valeurs semblent aberrantes._
 
 
 ## Lecture chartiste
@@ -155,8 +146,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.092  _(bearish_recent)_
 - **BB** : %B 0.58 · largeur 15.3%
 - **ATR** : 7.56 (47.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF -0.013  _(neutre)_
-- **Vol ratio** : 0.97  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.012  _(neutre)_
+- **Vol ratio** : 0.31  _(volume atone)_
 - **Choppiness** : 46.9  _(transition)_
 - **MA** : MA20 348.65 · MA50 338.39 · MA200 308.68  _(prix > MA20)_
 - **Dist MA** : MA20 +1.3% · MA50 +4.3% · MA200 +14.4%
@@ -164,5 +155,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (92161 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (90940 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

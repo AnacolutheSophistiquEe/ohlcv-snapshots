@@ -1,6 +1,6 @@
 # RGTI
 
-**Generated** : 2026-08-18T22:04:30.054586+00:00  
+**Generated** : 2026-08-19T00:27:25.358049+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.8 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
@@ -177,5 +177,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (91112 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (91111 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
