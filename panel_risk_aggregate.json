@@ -1,116 +1,112 @@
 {
   "available": true,
-  "generated_at": "2026-08-19T21:46:07.720971+00:00",
+  "generated_at": "2026-08-19T23:24:12.838238+00:00",
   "window_sessions": 55,
   "tickers_used": [
+    "000660",
+    "005930",
+    "012450",
+    "207940",
     "AL2SI",
-    "CEG",
     "ENR",
-    "HOOD",
     "IONQ",
-    "NEX",
-    "PLTR",
-    "PRY",
-    "RGTI",
-    "SAF",
+    "MSTR",
+    "RHM",
     "SMCI",
-    "SMR",
-    "SOFI",
-    "SOI",
     "SRT3"
   ],
-  "tickers_skipped": [],
+  "tickers_skipped": [
+    "005380",
+    "042660",
+    "196170",
+    "ALCPB",
+    "AMD",
+    "APP",
+    "BESI",
+    "BILI",
+    "CAPR",
+    "CAT",
+    "COIN",
+    "FFAI",
+    "FIG",
+    "IFX",
+    "IS0E",
+    "LRCX",
+    "MU",
+    "NNE",
+    "NOK",
+    "NVTS",
+    "R3NK",
+    "SNDK",
+    "STLAP",
+    "VETO"
+  ],
   "weights_eur": {
-    "AL2SI": 262.2,
-    "CEG": 266.83,
-    "ENR": 308.68,
-    "HOOD": 274.59,
-    "IONQ": 485.32,
-    "NEX": 276.2,
-    "PLTR": 514.62,
-    "PRY": 498.2,
-    "RGTI": 389.62,
-    "SAF": 349.1,
-    "SMCI": 635.97,
-    "SMR": 155.52,
-    "SOFI": 388.52,
-    "SOI": 436.6,
-    "SRT3": 234.7
+    "000660": 4024.27,
+    "005930": 4139.5,
+    "012450": 728.53,
+    "207940": 947.84,
+    "AL2SI": 523.47,
+    "ENR": 2301.3,
+    "IONQ": 111.44,
+    "MSTR": 89.25,
+    "RHM": 1180.0,
+    "SMCI": 31.33,
+    "SRT3": 469.49
   },
-  "total_notional_eur": 5476.67,
-  "capital_total_eur": 2000.0,
+  "weights_source": {
+    "source": "tws_live_state",
+    "status": "ok",
+    "age_days": 0.14,
+    "n_positions": 35,
+    "total_notional_eur": 34156.03,
+    "account": {
+      "nlv_eur": 11376.0,
+      "gross_position_value_eur": 34080.69,
+      "maint_margin_eur": 8696.65,
+      "excess_liquidity_eur": 2679.35,
+      "leverage": 3.0,
+      "excess_over_maint_pct": 30.8
+    },
+    "skipped": []
+  },
+  "total_notional_eur": 14546.42,
+  "capital_total_eur": 11376.0,
+  "var_95_historical": {
+    "method": "historical_empirical",
+    "n_sessions": 1298,
+    "var_eur": 344.99,
+    "cvar_eur": 618.88,
+    "var_pct_notional": 2.37,
+    "cvar_pct_notional": 4.25,
+    "worst_session_eur": 1299.52,
+    "note": "quantile empirique de la serie du panier pondere ; aucune hypothese de distribution — a preferer a la version gaussienne sur des titres a queues epaisses"
+  },
   "var_95": {
     "method": "gaussian_1d",
+    "method_caveat": "VaR 95 % seule : ne dit rien de la QUEUE. Le CVaR de `var_95_historical` est 28-36 % au-dessus, et la pire seance 1,7-2,4x au-dessus. Sensible a la fenetre.",
     "z_95": 1.6448536269514722,
-    "sigma_portfolio_daily_eur": 167.33,
-    "value_eur": 275.24,
-    "pct_total_notional": 5.03,
-    "pct_capital": 13.76
+    "sigma_portfolio_daily_eur": 552.65,
+    "value_eur": 909.03,
+    "pct_total_notional": 6.25,
+    "pct_capital": 7.99
   },
   "panel_beta_weighted": {},
   "concentration_flags": [],
   "high_corr_pairs_in_panel": [
     {
-      "pair": "IONQ_RGTI",
-      "rho": 0.9104,
-      "share_pct": 16.0,
-      "flag": "red"
-    },
-    {
-      "pair": "RGTI_SMR",
-      "rho": 0.7656,
-      "share_pct": 10.0,
-      "flag": "red"
-    },
-    {
-      "pair": "ENR_PRY",
-      "rho": 0.7628,
-      "share_pct": 14.7,
-      "flag": "red"
-    },
-    {
-      "pair": "IONQ_SMR",
-      "rho": 0.7078,
-      "share_pct": 11.7,
-      "flag": "red"
-    },
-    {
-      "pair": "NEX_PRY",
-      "rho": 0.7024,
-      "share_pct": 14.1,
-      "flag": "red"
-    },
-    {
-      "pair": "PRY_SOI",
-      "rho": 0.635,
-      "share_pct": 17.1,
-      "flag": "red"
-    },
-    {
-      "pair": "ENR_NEX",
-      "rho": 0.6299,
-      "share_pct": 10.7,
-      "flag": "red"
-    },
-    {
-      "pair": "SMR_SOFI",
-      "rho": 0.621,
-      "share_pct": 9.9,
-      "flag": "red"
-    },
-    {
-      "pair": "PRY_RGTI",
-      "rho": 0.6074,
-      "share_pct": 16.2,
+      "pair": "000660_005930",
+      "rho": 0.8637,
+      "share_pct": 56.1,
       "flag": "red"
     }
   ],
   "scaling": {
     "var_threshold_pct": 8.0,
     "var_ref_metric": "var_95_pct_capital",
-    "scale_factor": 0.5813,
-    "scaling_applied": true,
-    "note": "Scale factor < 1 → réduire tous les sizings × scale_factor pour ramener la VaR sous le seuil."
+    "scale_factor": 1.0,
+    "scaling_applied": false,
+    "note": "VaR sous le seuil, pas de scaling nécessaire."
   },
   "note": "Modèle Gaussien — ne capte pas les queues épaisses. Pour stress, utiliser compute_stress_test.py. Net beta = combinaison linéaire pondérée des betas par ticker × benchmark."
 }

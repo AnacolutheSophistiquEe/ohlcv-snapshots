@@ -1,6 +1,6 @@
 # OHLCV Snapshots
 
-Last update: `2026-08-19T21:30:42.182244+00:00`
+Last update: `2026-08-19T23:57:54.158774+00:00`
 
 Daily snapshots of OHLCV data for the trading universe of [Manuel's IBKR Dip Scalper](https://github.com/AnacolutheSophistiquEe).
 Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the only reliable network path from the claude.ai sandbox.
@@ -24,7 +24,7 @@ Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the o
 
 ## Tickers
 
-(31 assets covered)
+(59 assets covered)
 
 | Display | yfinance symbol |
 |---|---|
@@ -59,6 +59,34 @@ Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the o
 | `EWG` | `EWG` |
 | `EWQ` | `EWQ` |
 | `EWY` | `EWY` |
+| `KS11` | `^KS11` |
+| `GDAXI` | `^GDAXI` |
+| `FCHI` | `^FCHI` |
+| `FTSEMIB` | `FTSEMIB.MI` |
+| `005380` | `005380.KS` |
+| `042660` | `042660.KS` |
+| `196170` | `196170.KQ` |
+| `ALCPB` | `ALCPB.PA` |
+| `BESI` | `BESI.AS` |
+| `IFX` | `IFX.DE` |
+| `IS0E` | `IS0E.DE` |
+| `R3NK` | `R3NK.DE` |
+| `STLAP` | `STLAP.PA` |
+| `VETO` | `VETO.PA` |
+| `AMD` | `AMD` |
+| `APP` | `APP` |
+| `BILI` | `BILI` |
+| `CAPR` | `CAPR` |
+| `CAT` | `CAT` |
+| `COIN` | `COIN` |
+| `FFAI` | `FFAI` |
+| `FIG` | `FIG` |
+| `LRCX` | `LRCX` |
+| `MU` | `MU` |
+| `NNE` | `NNE` |
+| `NOK` | `NOK` |
+| `NVTS` | `NVTS` |
+| `SNDK` | `SNDK` |
 
 ## Consumption
 
