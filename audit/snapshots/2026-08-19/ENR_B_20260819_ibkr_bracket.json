@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-19T00:05:54.246313+00:00",
+  "generated_at": "2026-08-19T21:39:52.729333+00:00",
   "prediction_id": "ENR_B_20260819",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "ENR",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 153.9,
+    "limit_price": 154.34,
     "quantity": 2,
     "tif": "GTD",
     "gtd": "2026-08-24T16:30:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 169.98,
+      "limit_price": 168.8,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 170.26,
+      "limit_price": 169.72,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 144.07,
+      "stop_price": 144.97,
       "quantity": 2,
       "tif": "GTC",
       "tag": "SL"
@@ -87,22 +87,22 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0455,
+    "ev_pct_risk": 0.0663,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.1009,
-      "T2": 0.0906,
-      "T3": 0.0788
+      "T1": 0.1178,
+      "T2": 0.1031,
+      "T3": 0.079
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 307.8,
-    "hold_tolerance_breach_price": 115.425,
+    "notional_eur": 308.68,
+    "hold_tolerance_breach_price": 115.755,
     "hold_fallback_active": true,
     "prediction_id": "ENR_B_20260819"
   },
