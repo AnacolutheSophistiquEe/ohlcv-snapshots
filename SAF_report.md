@@ -1,6 +1,6 @@
 # SAF
 
-**Generated** : 2026-08-20T19:50:58.508358+00:00  
+**Generated** : 2026-08-20T21:42:09.486072+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €343.60  
@@ -35,7 +35,11 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟢 **Régime de gap : gap_calme** — p_breach(-3 %)=0.62 % < 1 % et 100 % des franchissements viennent des 4 pires jours/an — la queue est TOUT, l'ordinaire est sans risque de gap
-- **Au stop du plan (10.27 %)** : le gap seul le franchit 0.0 % des séances ; quand il le franchit, l'exécution est **0.0 points plus bas** → perte réelle **— %** _(et non 10.27 %)_
+- **Au stop du plan (10.27 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1279).
+   - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
+   - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 10.27 % annoncés par la distance
+   - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+   - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
 - Chocs d'ouverture : p05 -1.405 % | p01 -2.356 % | pire -9.986 % _(sur 1279 séances)_
 - **P(stop avant cible)** _(source : daily, 1280 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0124** [0.0027 ; 0.0379] _(largeur 3.5 pt, n_eff 173.1)_
@@ -172,5 +176,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (404207 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (594713 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

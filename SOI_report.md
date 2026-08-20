@@ -1,6 +1,6 @@
 # SOI
 
-**Generated** : 2026-08-20T19:54:09.630987+00:00  
+**Generated** : 2026-08-20T21:45:10.104722+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 7.4 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 5/10 — **Rating** : Neutral  
@@ -37,7 +37,11 @@ Plan privilegie B (swing), composite 5/10, conviction 'Neutral'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=3.83 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (10.59 %)** : le gap seul le franchit 0.235 % des séances ; quand il le franchit, l'exécution est **10.866 points plus bas** → perte réelle **21.456 %** _(et non 10.59 %)_
+- **Au stop du plan (10.59 %)** : le gap seul le franchit 0.235 % des séances (3 fois sur 1279).
+   - exécution **8.129 pt plus bas** dans le cas TYPIQUE (médiane), 16.589 au p90, **18.704 au pire**
+   - perte réelle **21.456 %** en moyenne _(tirée par la queue)_, jusqu'à **29.294 %** — au lieu des 10.59 % annoncés par la distance
+   - coût AMORTI sur toutes les séances : 0.0255 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+   - ⚠ seulement 3 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
 - Chocs d'ouverture : p05 -2.589 % | p01 -4.835 % | pire -29.294 % _(sur 1279 séances)_
 - **P(stop avant cible)** _(source : daily, 1280 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
@@ -189,5 +193,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (416695 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (608791 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

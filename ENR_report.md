@@ -1,6 +1,6 @@
 # ENR
 
-**Generated** : 2026-08-20T19:49:26.554403+00:00  
+**Generated** : 2026-08-20T21:40:40.633625+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €152.58  
@@ -44,7 +44,11 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass (negative EV)'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟠 **Régime de gap : intermediaire** — p_breach(-3 %)=2.51 % — entre les deux regimes ; ni queue pure ni franchissement ordinaire
-- **Au stop du plan (6.06 %)** : le gap seul le franchit 0.628 % des séances ; quand il le franchit, l'exécution est **6.549 points plus bas** → perte réelle **12.609 %** _(et non 6.06 %)_
+- **Au stop du plan (6.06 %)** : le gap seul le franchit 0.628 % des séances (8 fois sur 1273).
+   - exécution **1.847 pt plus bas** dans le cas TYPIQUE (médiane), 15.986 au p90, **29.697 au pire**
+   - perte réelle **12.609 %** en moyenne _(tirée par la queue)_, jusqu'à **35.757 %** — au lieu des 6.06 % annoncés par la distance
+   - coût AMORTI sur toutes les séances : 0.0412 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+   - ⚠ seulement 8 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
 - Chocs d'ouverture : p05 -2.307 % | p01 -5.092 % | pire -35.757 % _(sur 1273 séances)_
 - **P(stop avant cible)** _(source : daily, 1274 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.1009** [0.0626 ; 0.1524] _(largeur 9.0 pt, n_eff 173.1)_
@@ -191,5 +195,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (416989 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (608781 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

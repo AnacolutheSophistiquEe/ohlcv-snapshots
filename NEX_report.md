@@ -1,6 +1,6 @@
 # NEX
 
-**Generated** : 2026-08-20T19:52:35.095087+00:00  
+**Generated** : 2026-08-20T21:43:39.244156+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €138.50  
@@ -36,7 +36,11 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟠 **Régime de gap : intermediaire** — p_breach(-3 %)=1.64 % — entre les deux regimes ; ni queue pure ni franchissement ordinaire
-- **Au stop du plan (8.23 %)** : le gap seul le franchit 0.235 % des séances ; quand il le franchit, l'exécution est **0.509 points plus bas** → perte réelle **8.739 %** _(et non 8.23 %)_
+- **Au stop du plan (8.23 %)** : le gap seul le franchit 0.235 % des séances (3 fois sur 1279).
+   - exécution **0.123 pt plus bas** dans le cas TYPIQUE (médiane), 1.117 au p90, **1.366 au pire**
+   - perte réelle **8.739 %** en moyenne _(tirée par la queue)_, jusqu'à **9.596 %** — au lieu des 8.23 % annoncés par la distance
+   - coût AMORTI sur toutes les séances : 0.0012 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+   - ⚠ seulement 3 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
 - Chocs d'ouverture : p05 -1.516 % | p01 -3.644 % | pire -9.596 % _(sur 1279 séances)_
 - **P(stop avant cible)** _(source : daily, 1280 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0054** [0.0005 ; 0.026] _(largeur 2.5 pt, n_eff 173.1)_
@@ -174,5 +178,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (409545 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (600661 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
