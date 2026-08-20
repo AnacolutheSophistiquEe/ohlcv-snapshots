@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US86800U1043",
-    "generated_at": "2026-08-19T21:59:11.957218+00:00",
+    "generated_at": "2026-08-20T00:20:28.110905+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1867,7 +1867,7 @@
           "rr": 1.58,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8097,
+          "p_touch": 0.8096,
           "distance_pct": 3.34
         },
         "t2": {
@@ -1876,7 +1876,7 @@
           "rr": 3.17,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8097,
+          "p_touch": 0.8096,
           "distance_pct": 6.69
         },
         "t3": {
@@ -1885,7 +1885,7 @@
           "rr": 4.75,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4287,
+          "p_touch": 0.4288,
           "distance_pct": 10.03
         }
       }
@@ -1929,7 +1929,7 @@
           "rr": 3.05,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4436,
+          "p_touch": 0.4437,
           "distance_pct": 22.43
         }
       }
@@ -1955,7 +1955,7 @@
           "rr": 0.92,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9365,
+          "p_touch": 0.9364,
           "distance_pct": 10.57
         },
         "t2": {
@@ -1964,7 +1964,7 @@
           "rr": 1.83,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5915,
+          "p_touch": 0.5917,
           "distance_pct": 21.15
         },
         "t3": {
@@ -1973,7 +1973,7 @@
           "rr": 2.75,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2843,
+          "p_touch": 0.2842,
           "distance_pct": 31.72
         }
       }
@@ -2268,7 +2268,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-19T21:58:44.301099+00:00",
+    "generated_at": "2026-08-20T00:19:59.202567+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7151,7 +7151,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-19T21:58:34.146248+00:00",
+    "generated_at": "2026-08-20T00:19:49.794241+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7380,32 +7380,15 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-19T21:58:58.901299+00:00",
+    "generated_at": "2026-08-20T00:20:16.123759+00:00",
     "ticker": "SMCI",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 1,
-    "events": [
-      {
-        "date": "2026-08-19",
-        "type": "macro",
-        "label": "US FOMC Meeting Minutes",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      }
-    ],
+    "n_events": 0,
+    "events": [],
     "earnings_in_swing": false,
     "warnings": {
       "macro": null,
@@ -7532,57 +7515,57 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-19T21:58:48.201369+00:00",
+    "generated_at": "2026-08-20T00:20:03.220463+00:00",
     "ticker": "SMCI",
     "spot_price": 36.58,
     "expiries_available": [
       {
         "date": "2026-08-21",
-        "days_to_exp": 2
+        "days_to_exp": 1
       },
       {
         "date": "2026-08-28",
-        "days_to_exp": 9
+        "days_to_exp": 8
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 16
+        "days_to_exp": 15
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 23
+        "days_to_exp": 22
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 30
+        "days_to_exp": 29
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.731,
-      "iv_atm_90d": 0.731,
+      "iv_atm_30d": 0.7429,
+      "iv_atm_90d": 0.7429,
       "rv_20d_annualized": 0.9681,
-      "iv_rv_ratio": 0.755,
+      "iv_rv_ratio": 0.767,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -6.396,
+      "skew_25_delta_vol_pts": -6.494,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-21",
-      "m1_days_to_exp": 2,
-      "m1_iv_atm": 0.6914,
+      "m1_days_to_exp": 1,
+      "m1_iv_atm": 0.8467,
       "m3_expiry": "2026-09-18",
-      "m3_days_to_exp": 30,
-      "m3_iv_atm": 0.731,
-      "ratio_m1_m3": 0.9459,
-      "label": "contango_fort"
+      "m3_days_to_exp": 29,
+      "m3_iv_atm": 0.7429,
+      "ratio_m1_m3": 1.1397,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-21",
-      "days_to_exp": 2,
+      "days_to_exp": 1,
       "put_call_ratio": 0.45,
       "total_oi_m1": 495867,
       "largest_call_strike_oi": {
@@ -7595,7 +7578,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 2317668605.0,
+      "gex_total_usd_per_point": 2154989763.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7609,8 +7592,8 @@
       "bullish_signals": 3,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-6.4 pts) — peu de demande de protection",
-        "GEX positif (2317.7M$/pt) = MM long gamma stabilisateur",
+        "skew faible (-6.5 pts) — peu de demande de protection",
+        "GEX positif (2155.0M$/pt) = MM long gamma stabilisateur",
         "max pain 31.00 vs spot 36.58 (-15.3%)",
         "P/C ratio bas (0.45) — biais call dominant"
       ]
@@ -7651,7 +7634,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-19T21:58:58.020599+00:00",
+    "generated_at": "2026-08-20T00:20:15.297132+00:00",
     "ticker": "SMCI",
     "short_interest": {
       "status": "ok",
@@ -7665,7 +7648,7 @@
       "float_shares": 519093352,
       "delta_shares_short_mom_pct": -11.4,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-19T21:58:49.314269+00:00"
+      "fetched_at": "2026-08-20T00:20:04.271444+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7694,7 +7677,7 @@
         "vesting_exercises_dominant": true
       },
       "all_transactions_count": 19,
-      "fetched_at": "2026-08-19T21:58:58.019423+00:00"
+      "fetched_at": "2026-08-20T00:20:15.296138+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -7801,6 +7784,242 @@
       },
       "methodology": "Pour chaque pic local de close, mesurer N sessions jusqu'à retour breakeven post-drawdown >= X%. Seuils alignés notice v2.1 §C.1.4."
     }
+  },
+  "gap_risk": {
+    "available": true,
+    "generated_at": "2026-08-20T00:19:49.710088+00:00",
+    "source_csv": "/home/ibkr/ohlcv-snapshots/SMCI_daily_long.csv",
+    "input_window": "daily_long (5 ans)",
+    "n_sessions": 1253,
+    "first_date": "2021-08-23",
+    "last_date": "2026-08-19",
+    "years_covered": 4.97,
+    "regime": "gap_prone",
+    "regime_reason": "p_breach(-3 %)=7.74 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large",
+    "grid": [
+      {
+        "stop_pct": 1.5,
+        "n_sessions": 1253,
+        "n_breach": 212,
+        "p_breach_pct": 16.919,
+        "p_breach_ci95_pct": [
+          14.763,
+          19.234
+        ],
+        "overshoot_mean_pt": 2.476,
+        "overshoot_p50_pt": 1.302,
+        "overshoot_p90_pt": 5.991,
+        "overshoot_worst_pt": 27.551,
+        "loss_if_breach_pct": 3.976,
+        "loss_if_breach_worst_pct": 29.051,
+        "expected_extra_loss_pct": 0.4189
+      },
+      {
+        "stop_pct": 3.0,
+        "n_sessions": 1253,
+        "n_breach": 97,
+        "p_breach_pct": 7.741,
+        "p_breach_ci95_pct": [
+          6.065,
+          9.497
+        ],
+        "overshoot_mean_pt": 3.29,
+        "overshoot_p50_pt": 1.381,
+        "overshoot_p90_pt": 8.867,
+        "overshoot_worst_pt": 26.051,
+        "loss_if_breach_pct": 6.29,
+        "loss_if_breach_worst_pct": 29.051,
+        "expected_extra_loss_pct": 0.2547
+      },
+      {
+        "stop_pct": 5.0,
+        "n_sessions": 1253,
+        "n_breach": 36,
+        "p_breach_pct": 2.873,
+        "p_breach_ci95_pct": [
+          1.836,
+          3.99
+        ],
+        "overshoot_mean_pt": 5.537,
+        "overshoot_p50_pt": 3.873,
+        "overshoot_p90_pt": 13.227,
+        "overshoot_worst_pt": 24.051,
+        "loss_if_breach_pct": 10.537,
+        "loss_if_breach_worst_pct": 29.051,
+        "expected_extra_loss_pct": 0.1591
+      },
+      {
+        "stop_pct": 7.0,
+        "n_sessions": 1253,
+        "n_breach": 22,
+        "p_breach_pct": 1.756,
+        "p_breach_ci95_pct": [
+          1.038,
+          2.634
+        ],
+        "overshoot_mean_pt": 6.549,
+        "overshoot_p50_pt": 4.388,
+        "overshoot_p90_pt": 17.102,
+        "overshoot_worst_pt": 22.051,
+        "loss_if_breach_pct": 13.549,
+        "loss_if_breach_worst_pct": 29.051,
+        "expected_extra_loss_pct": 0.115
+      },
+      {
+        "stop_pct": 14.24,
+        "n_sessions": 1253,
+        "n_breach": 7,
+        "p_breach_pct": 0.559,
+        "p_breach_ci95_pct": [
+          0.16,
+          1.038
+        ],
+        "overshoot_mean_pt": 6.581,
+        "overshoot_p50_pt": 4.871,
+        "overshoot_p90_pt": 13.496,
+        "overshoot_worst_pt": 14.811,
+        "loss_if_breach_pct": 20.821,
+        "loss_if_breach_worst_pct": 29.051,
+        "expected_extra_loss_pct": 0.0368
+      }
+    ],
+    "grid_ex_extremes": [
+      {
+        "stop_pct": 1.5,
+        "n_sessions": 1229,
+        "n_breach": 189,
+        "p_breach_pct": 15.378,
+        "p_breach_ci95_pct": [
+          null,
+          null
+        ],
+        "overshoot_mean_pt": 1.637,
+        "overshoot_p50_pt": 0.968,
+        "overshoot_p90_pt": 3.519,
+        "overshoot_worst_pt": 12.053,
+        "loss_if_breach_pct": 3.137,
+        "loss_if_breach_worst_pct": 13.553,
+        "expected_extra_loss_pct": 0.2517
+      },
+      {
+        "stop_pct": 3.0,
+        "n_sessions": 1229,
+        "n_breach": 77,
+        "p_breach_pct": 6.265,
+        "p_breach_ci95_pct": [
+          null,
+          null
+        ],
+        "overshoot_mean_pt": 1.752,
+        "overshoot_p50_pt": 0.991,
+        "overshoot_p90_pt": 3.944,
+        "overshoot_worst_pt": 10.553,
+        "loss_if_breach_pct": 4.752,
+        "loss_if_breach_worst_pct": 13.553,
+        "expected_extra_loss_pct": 0.1098
+      },
+      {
+        "stop_pct": 5.0,
+        "n_sessions": 1229,
+        "n_breach": 20,
+        "p_breach_pct": 1.627,
+        "p_breach_ci95_pct": [
+          null,
+          null
+        ],
+        "overshoot_mean_pt": 2.552,
+        "overshoot_p50_pt": 1.308,
+        "overshoot_p90_pt": 6.291,
+        "overshoot_worst_pt": 8.553,
+        "loss_if_breach_pct": 7.552,
+        "loss_if_breach_worst_pct": 13.553,
+        "expected_extra_loss_pct": 0.0415
+      },
+      {
+        "stop_pct": 7.0,
+        "n_sessions": 1229,
+        "n_breach": 8,
+        "p_breach_pct": 0.651,
+        "p_breach_ci95_pct": [
+          null,
+          null
+        ],
+        "overshoot_mean_pt": 3.34,
+        "overshoot_p50_pt": 3.341,
+        "overshoot_p90_pt": 5.123,
+        "overshoot_worst_pt": 6.553,
+        "loss_if_breach_pct": 10.34,
+        "loss_if_breach_worst_pct": 13.553,
+        "expected_extra_loss_pct": 0.0217
+      },
+      {
+        "stop_pct": 14.24,
+        "n_sessions": 1229,
+        "n_breach": 0,
+        "p_breach_pct": 0.0,
+        "p_breach_ci95_pct": [
+          null,
+          null
+        ],
+        "overshoot_mean_pt": 0.0,
+        "overshoot_p50_pt": null,
+        "overshoot_p90_pt": null,
+        "overshoot_worst_pt": null,
+        "loss_if_breach_pct": null,
+        "loss_if_breach_worst_pct": null,
+        "expected_extra_loss_pct": 0.0
+      }
+    ],
+    "extremes_per_year_removed": 4,
+    "share_of_breaches_from_extremes_pct": 20.6,
+    "p_breach_3pct_ex_extremes": 6.265,
+    "plan_stop_pct": 14.24,
+    "plan_stop_source": "stops_targets.stop_recommendation",
+    "at_plan_stop": {
+      "stop_pct": 14.24,
+      "n_sessions": 1253,
+      "n_breach": 7,
+      "p_breach_pct": 0.559,
+      "p_breach_ci95_pct": [
+        0.16,
+        1.038
+      ],
+      "overshoot_mean_pt": 6.581,
+      "overshoot_p50_pt": 4.871,
+      "overshoot_p90_pt": 13.496,
+      "overshoot_worst_pt": 14.811,
+      "loss_if_breach_pct": 20.821,
+      "loss_if_breach_worst_pct": 29.051,
+      "expected_extra_loss_pct": 0.0368
+    },
+    "shock_quantiles_pct": {
+      "gap_p50": 0.134,
+      "gap_p10": -2.305,
+      "gap_p05": -3.765,
+      "gap_p01": -10.307,
+      "gap_worst": -29.051,
+      "gap_p99_up": 11.755,
+      "gap_best": 25.859
+    },
+    "asymmetry": {
+      "n_down": 558,
+      "n_up": 674,
+      "mean_down_pct": -1.94,
+      "mean_up_pct": 1.953,
+      "worst_down_pct": -29.051,
+      "best_up_pct": 25.859,
+      "downside_heavier": true
+    },
+    "sigma_gap_pct": 3.428,
+    "sufficient_history": true,
+    "method": {
+      "gap": "Open / Close_veille - 1",
+      "overshoot": "prix du stop - prix d'ouverture, en points de %",
+      "ci": "bootstrap par blocs mobiles (5 seances, 2000 tirages, graine 20260820) — un IC binomial surestimerait la precision, les gaps se groupent dans le temps",
+      "not_conditioned_on_events": "aucun conditionnement par date de resultats (objet de T14) — les frequences ci-dessus sont des moyennes tous jours confondus et SOUS-ESTIMENT un jour d'earnings",
+      "cross_asset_dependence": "non traitee ici : les gaps sont correles entre tickers (rho moyen 0,240, ~3,8 actifs independants sur 31) — grandeur de PORTEFEUILLE, cf. bloc panel"
+    },
+    "doctrine": "La distance du stop NE BORNE PAS la perte : perte effective = stop + surcout. Sur un titre gap_prone, la reponse correcte est une TAILLE plus faible, pas un stop plus large (elargir echange de la frequence contre de la severite)."
   },
   "beta_dynamic": {
     "available": true,
@@ -7969,6 +8188,8 @@
   },
   "risk_metrics": {
     "var_1d_95pct": -7.54,
+    "horizon_5d_method": "scaling_sqrt5_from_1d",
+    "horizon_5d_caveat": "transformation deterministe de l'horizon 1 jour (x2.236), pas une mesure ; suppose des rendements i.i.d., hypothese contredite par le clustering de volatilite -> sous-estime en stress",
     "var_5d_95pct": -16.85,
     "cvar_1d_95pct": -12.28,
     "cvar_5d_95pct": -27.45,
@@ -15863,6 +16084,10 @@
   },
   "beta_tail": {
     "available": true,
+    "benchmark": "IWM",
+    "benchmark_synchronous": true,
+    "asset_market": "US",
+    "benchmark_market": "US",
     "beta_up_days": 1.658,
     "beta_down_days": 3.0295,
     "beta_asymmetry": 1.8272,
@@ -16107,7 +16332,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-19T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16152,7 +16377,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-19T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16199,7 +16424,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-19T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

@@ -6,7 +6,7 @@
     "exchange": "NYSE",
     "currency": "USD",
     "isin": "US46222L1089",
-    "generated_at": "2026-08-19T22:02:10.039742+00:00",
+    "generated_at": "2026-08-20T00:23:11.356782+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1797,7 +1797,7 @@
           "rr": 3.09,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4287,
+          "p_touch": 0.4288,
           "distance_pct": 6.12
         },
         "t3": {
@@ -1832,7 +1832,7 @@
           "rr": 1.03,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7248,
+          "p_touch": 0.7249,
           "distance_pct": 6.84
         },
         "t2": {
@@ -1841,7 +1841,7 @@
           "rr": 2.06,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4436,
+          "p_touch": 0.4437,
           "distance_pct": 13.69
         },
         "t3": {
@@ -1850,7 +1850,7 @@
           "rr": 3.09,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1462,
+          "p_touch": 0.1461,
           "distance_pct": 20.53
         }
       }
@@ -1876,7 +1876,7 @@
           "rr": 0.97,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5916,
+          "p_touch": 0.5917,
           "distance_pct": 9.68
         },
         "t2": {
@@ -2189,7 +2189,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-19T22:01:45.567792+00:00",
+    "generated_at": "2026-08-20T00:22:48.934726+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7087,7 +7087,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-19T22:01:35.156653+00:00",
+    "generated_at": "2026-08-20T00:22:39.279777+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7316,32 +7316,15 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-19T22:01:56.857544+00:00",
+    "generated_at": "2026-08-20T00:22:59.010358+00:00",
     "ticker": "IONQ",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 1,
-    "events": [
-      {
-        "date": "2026-08-19",
-        "type": "macro",
-        "label": "US FOMC Meeting Minutes",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
-      }
-    ],
+    "n_events": 0,
+    "events": [],
     "earnings_in_swing": false,
     "warnings": {
       "macro": null,
@@ -7468,57 +7451,57 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-19T22:01:49.230645+00:00",
+    "generated_at": "2026-08-20T00:22:52.744641+00:00",
     "ticker": "IONQ",
     "spot_price": 43.36,
     "expiries_available": [
       {
         "date": "2026-08-21",
-        "days_to_exp": 2
+        "days_to_exp": 1
       },
       {
         "date": "2026-08-28",
-        "days_to_exp": 9
+        "days_to_exp": 8
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 16
+        "days_to_exp": 15
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 23
+        "days_to_exp": 22
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 30
+        "days_to_exp": 29
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7524,
-      "iv_atm_90d": 0.7524,
+      "iv_atm_30d": 0.7651,
+      "iv_atm_90d": 0.7651,
       "rv_20d_annualized": 0.8862,
-      "iv_rv_ratio": 0.849,
+      "iv_rv_ratio": 0.863,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -6.299,
+      "skew_25_delta_vol_pts": -6.396,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-21",
-      "m1_days_to_exp": 2,
-      "m1_iv_atm": 0.7173,
+      "m1_days_to_exp": 1,
+      "m1_iv_atm": 0.8789,
       "m3_expiry": "2026-09-18",
-      "m3_days_to_exp": 30,
-      "m3_iv_atm": 0.7524,
-      "ratio_m1_m3": 0.9533,
-      "label": "contango_leger"
+      "m3_days_to_exp": 29,
+      "m3_iv_atm": 0.7651,
+      "ratio_m1_m3": 1.1487,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-21",
-      "days_to_exp": 2,
+      "days_to_exp": 1,
       "put_call_ratio": 0.707,
       "total_oi_m1": 166069,
       "largest_call_strike_oi": {
@@ -7531,7 +7514,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 224018029.0,
+      "gex_total_usd_per_point": 210316560.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7545,8 +7528,8 @@
       "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-6.3 pts) — peu de demande de protection",
-        "GEX positif (224.0M$/pt) = MM long gamma stabilisateur"
+        "skew faible (-6.4 pts) — peu de demande de protection",
+        "GEX positif (210.3M$/pt) = MM long gamma stabilisateur"
       ]
     },
     "liquidity_stats": {
@@ -7585,7 +7568,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-19T22:01:55.943714+00:00",
+    "generated_at": "2026-08-20T00:22:58.170985+00:00",
     "ticker": "IONQ",
     "short_interest": {
       "status": "ok",
@@ -7599,7 +7582,7 @@
       "float_shares": 378201947,
       "delta_shares_short_mom_pct": 13.91,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-19T22:01:50.353311+00:00"
+      "fetched_at": "2026-08-20T00:22:53.779778+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -7668,7 +7651,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 3,
-      "fetched_at": "2026-08-19T22:01:55.942814+00:00"
+      "fetched_at": "2026-08-20T00:22:58.169795+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -7775,6 +7758,242 @@
       },
       "methodology": "Pour chaque pic local de close, mesurer N sessions jusqu'à retour breakeven post-drawdown >= X%. Seuils alignés notice v2.1 §C.1.4."
     }
+  },
+  "gap_risk": {
+    "available": true,
+    "generated_at": "2026-08-20T00:22:39.192531+00:00",
+    "source_csv": "/home/ibkr/ohlcv-snapshots/IONQ_daily_long.csv",
+    "input_window": "daily_long (5 ans)",
+    "n_sessions": 1253,
+    "first_date": "2021-08-23",
+    "last_date": "2026-08-19",
+    "years_covered": 4.97,
+    "regime": "gap_prone",
+    "regime_reason": "p_breach(-3 %)=8.70 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large",
+    "grid": [
+      {
+        "stop_pct": 1.5,
+        "n_sessions": 1253,
+        "n_breach": 269,
+        "p_breach_pct": 21.468,
+        "p_breach_ci95_pct": [
+          19.314,
+          23.703
+        ],
+        "overshoot_mean_pt": 1.772,
+        "overshoot_p50_pt": 1.176,
+        "overshoot_p90_pt": 3.834,
+        "overshoot_worst_pt": 20.359,
+        "loss_if_breach_pct": 3.272,
+        "loss_if_breach_worst_pct": 21.859,
+        "expected_extra_loss_pct": 0.3804
+      },
+      {
+        "stop_pct": 3.0,
+        "n_sessions": 1253,
+        "n_breach": 109,
+        "p_breach_pct": 8.699,
+        "p_breach_ci95_pct": [
+          7.183,
+          10.295
+        ],
+        "overshoot_mean_pt": 1.986,
+        "overshoot_p50_pt": 1.291,
+        "overshoot_p90_pt": 3.862,
+        "overshoot_worst_pt": 18.859,
+        "loss_if_breach_pct": 4.986,
+        "loss_if_breach_worst_pct": 21.859,
+        "expected_extra_loss_pct": 0.1727
+      },
+      {
+        "stop_pct": 5.0,
+        "n_sessions": 1253,
+        "n_breach": 37,
+        "p_breach_pct": 2.953,
+        "p_breach_ci95_pct": [
+          1.995,
+          3.911
+        ],
+        "overshoot_mean_pt": 2.093,
+        "overshoot_p50_pt": 1.154,
+        "overshoot_p90_pt": 4.787,
+        "overshoot_worst_pt": 16.859,
+        "loss_if_breach_pct": 7.093,
+        "loss_if_breach_worst_pct": 21.859,
+        "expected_extra_loss_pct": 0.0618
+      },
+      {
+        "stop_pct": 7.0,
+        "n_sessions": 1253,
+        "n_breach": 11,
+        "p_breach_pct": 0.878,
+        "p_breach_ci95_pct": [
+          0.399,
+          1.437
+        ],
+        "overshoot_mean_pt": 3.324,
+        "overshoot_p50_pt": 1.974,
+        "overshoot_p90_pt": 4.946,
+        "overshoot_worst_pt": 14.859,
+        "loss_if_breach_pct": 10.324,
+        "loss_if_breach_worst_pct": 21.859,
+        "expected_extra_loss_pct": 0.0292
+      },
+      {
+        "stop_pct": 7.71,
+        "n_sessions": 1253,
+        "n_breach": 8,
+        "p_breach_pct": 0.638,
+        "p_breach_ci95_pct": [
+          0.239,
+          1.117
+        ],
+        "overshoot_mean_pt": 3.669,
+        "overshoot_p50_pt": 2.215,
+        "overshoot_p90_pt": 7.21,
+        "overshoot_worst_pt": 14.149,
+        "loss_if_breach_pct": 11.379,
+        "loss_if_breach_worst_pct": 21.859,
+        "expected_extra_loss_pct": 0.0234
+      }
+    ],
+    "grid_ex_extremes": [
+      {
+        "stop_pct": 1.5,
+        "n_sessions": 1229,
+        "n_breach": 245,
+        "p_breach_pct": 19.935,
+        "p_breach_ci95_pct": [
+          null,
+          null
+        ],
+        "overshoot_mean_pt": 1.346,
+        "overshoot_p50_pt": 1.029,
+        "overshoot_p90_pt": 3.262,
+        "overshoot_worst_pt": 5.683,
+        "loss_if_breach_pct": 2.846,
+        "loss_if_breach_worst_pct": 7.183,
+        "expected_extra_loss_pct": 0.2682
+      },
+      {
+        "stop_pct": 3.0,
+        "n_sessions": 1229,
+        "n_breach": 85,
+        "p_breach_pct": 6.916,
+        "p_breach_ci95_pct": [
+          null,
+          null
+        ],
+        "overshoot_mean_pt": 1.24,
+        "overshoot_p50_pt": 1.018,
+        "overshoot_p90_pt": 2.34,
+        "overshoot_worst_pt": 4.183,
+        "loss_if_breach_pct": 4.24,
+        "loss_if_breach_worst_pct": 7.183,
+        "expected_extra_loss_pct": 0.0858
+      },
+      {
+        "stop_pct": 5.0,
+        "n_sessions": 1229,
+        "n_breach": 16,
+        "p_breach_pct": 1.302,
+        "p_breach_ci95_pct": [
+          null,
+          null
+        ],
+        "overshoot_mean_pt": 0.73,
+        "overshoot_p50_pt": 0.376,
+        "overshoot_p90_pt": 1.573,
+        "overshoot_worst_pt": 2.183,
+        "loss_if_breach_pct": 5.73,
+        "loss_if_breach_worst_pct": 7.183,
+        "expected_extra_loss_pct": 0.0095
+      },
+      {
+        "stop_pct": 7.0,
+        "n_sessions": 1229,
+        "n_breach": 1,
+        "p_breach_pct": 0.081,
+        "p_breach_ci95_pct": [
+          null,
+          null
+        ],
+        "overshoot_mean_pt": 0.183,
+        "overshoot_p50_pt": 0.183,
+        "overshoot_p90_pt": 0.183,
+        "overshoot_worst_pt": 0.183,
+        "loss_if_breach_pct": 7.183,
+        "loss_if_breach_worst_pct": 7.183,
+        "expected_extra_loss_pct": 0.0001
+      },
+      {
+        "stop_pct": 7.71,
+        "n_sessions": 1229,
+        "n_breach": 0,
+        "p_breach_pct": 0.0,
+        "p_breach_ci95_pct": [
+          null,
+          null
+        ],
+        "overshoot_mean_pt": 0.0,
+        "overshoot_p50_pt": null,
+        "overshoot_p90_pt": null,
+        "overshoot_worst_pt": null,
+        "loss_if_breach_pct": null,
+        "loss_if_breach_worst_pct": null,
+        "expected_extra_loss_pct": 0.0
+      }
+    ],
+    "extremes_per_year_removed": 4,
+    "share_of_breaches_from_extremes_pct": 22.0,
+    "p_breach_3pct_ex_extremes": 6.916,
+    "plan_stop_pct": 7.71,
+    "plan_stop_source": "stops_targets.stop_recommendation",
+    "at_plan_stop": {
+      "stop_pct": 7.71,
+      "n_sessions": 1253,
+      "n_breach": 8,
+      "p_breach_pct": 0.638,
+      "p_breach_ci95_pct": [
+        0.239,
+        1.117
+      ],
+      "overshoot_mean_pt": 3.669,
+      "overshoot_p50_pt": 2.215,
+      "overshoot_p90_pt": 7.21,
+      "overshoot_worst_pt": 14.149,
+      "loss_if_breach_pct": 11.379,
+      "loss_if_breach_worst_pct": 21.859,
+      "expected_extra_loss_pct": 0.0234
+    },
+    "shock_quantiles_pct": {
+      "gap_p50": 0.25,
+      "gap_p10": -2.791,
+      "gap_p05": -4.035,
+      "gap_p01": -6.632,
+      "gap_worst": -21.859,
+      "gap_p99_up": 8.694,
+      "gap_best": 16.255
+    },
+    "asymmetry": {
+      "n_down": 532,
+      "n_up": 686,
+      "mean_down_pct": -2.007,
+      "mean_up_pct": 2.001,
+      "worst_down_pct": -21.859,
+      "best_up_pct": 16.255,
+      "downside_heavier": true
+    },
+    "sigma_gap_pct": 2.755,
+    "sufficient_history": true,
+    "method": {
+      "gap": "Open / Close_veille - 1",
+      "overshoot": "prix du stop - prix d'ouverture, en points de %",
+      "ci": "bootstrap par blocs mobiles (5 seances, 2000 tirages, graine 20260820) — un IC binomial surestimerait la precision, les gaps se groupent dans le temps",
+      "not_conditioned_on_events": "aucun conditionnement par date de resultats (objet de T14) — les frequences ci-dessus sont des moyennes tous jours confondus et SOUS-ESTIMENT un jour d'earnings",
+      "cross_asset_dependence": "non traitee ici : les gaps sont correles entre tickers (rho moyen 0,240, ~3,8 actifs independants sur 31) — grandeur de PORTEFEUILLE, cf. bloc panel"
+    },
+    "doctrine": "La distance du stop NE BORNE PAS la perte : perte effective = stop + surcout. Sur un titre gap_prone, la reponse correcte est une TAILLE plus faible, pas un stop plus large (elargir echange de la frequence contre de la severite)."
   },
   "beta_dynamic": {
     "available": true,
@@ -7949,6 +8168,8 @@
   },
   "risk_metrics": {
     "var_1d_95pct": -8.44,
+    "horizon_5d_method": "scaling_sqrt5_from_1d",
+    "horizon_5d_caveat": "transformation deterministe de l'horizon 1 jour (x2.236), pas une mesure ; suppose des rendements i.i.d., hypothese contredite par le clustering de volatilite -> sous-estime en stress",
     "var_5d_95pct": -18.88,
     "cvar_1d_95pct": -10.35,
     "cvar_5d_95pct": -23.14,
@@ -15843,6 +16064,10 @@
   },
   "beta_tail": {
     "available": true,
+    "benchmark": "IWM",
+    "benchmark_synchronous": true,
+    "asset_market": "US",
+    "benchmark_market": "US",
     "beta_up_days": 1.9206,
     "beta_down_days": 2.7773,
     "beta_asymmetry": 1.446,
@@ -16076,7 +16301,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-19T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16121,7 +16346,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-19T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -16166,7 +16391,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-19T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
