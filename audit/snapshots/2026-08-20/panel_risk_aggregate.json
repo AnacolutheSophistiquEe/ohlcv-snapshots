@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-20T00:30:50.312691+00:00",
+  "generated_at": "2026-08-20T20:24:40.949778+00:00",
   "window_sessions": 53,
   "tickers_used": [
     "000660",
@@ -80,7 +80,7 @@
   "weights_source": {
     "source": "tws_live_state",
     "status": "ok",
-    "age_days": 0.19,
+    "age_days": 1.02,
     "n_positions": 35,
     "total_notional_eur": 34156.03,
     "account": {
@@ -100,10 +100,10 @@
     "basket": "portefeuille complet",
     "n_lines": 35,
     "notional_eur": 34156.03,
-    "n_sessions": 272,
+    "n_sessions": 273,
     "window_start": "2025-08-01",
-    "window_end": "2026-08-19",
-    "var_eur": 1216.6,
+    "window_end": "2026-08-20",
+    "var_eur": 1215.45,
     "cvar_eur": 1697.93,
     "var_pct_notional": 3.56,
     "cvar_pct_notional": 4.97,
@@ -133,7 +133,7 @@
       "FIG": 97.1,
       "IFX": 97.4,
       "IONQ": 97.1,
-      "IS0E": 97.4,
+      "IS0E": 97.1,
       "LRCX": 97.1,
       "MSTR": 97.1,
       "MU": 97.1,
@@ -153,13 +153,13 @@
       "basket": "lignes a historique profond",
       "n_lines": 31,
       "notional_eur": 32584.54,
-      "n_sessions": 1254,
+      "n_sessions": 1255,
       "window_start": "2021-10-21",
-      "window_end": "2026-08-19",
-      "var_eur": 735.48,
-      "cvar_eur": 1145.18,
+      "window_end": "2026-08-20",
+      "var_eur": 734.91,
+      "cvar_eur": 1147.25,
       "var_pct_notional": 2.26,
-      "cvar_pct_notional": 3.51,
+      "cvar_pct_notional": 3.52,
       "worst_session_eur": 2278.64,
       "min_sessions_required": 750,
       "notional_share_pct": 95.4,
@@ -177,17 +177,19 @@
     "method": "gaussian_1d",
     "method_caveat": "VaR 95 % seule : ne dit rien de la QUEUE. Le CVaR de `var_95_historical` est 28-36 % au-dessus, et la pire seance 1,7-2,4x au-dessus. Sensible a la fenetre.",
     "z_95": 1.6448536269514722,
-    "sigma_portfolio_daily_eur": 1092.71,
-    "value_eur": 1797.35,
-    "pct_total_notional": 5.26,
-    "pct_capital": 15.8
+    "sigma_portfolio_daily_eur": 1098.17,
+    "value_eur": 1806.33,
+    "pct_total_notional": 5.29,
+    "pct_capital": 15.88
   },
-  "panel_beta_weighted": {
-    "KS11": 1.2003,
-    "GDAXI": 1.5546,
-    "IWM": 2.399,
-    "FCHI": -1.0385
+  "panel_beta_weighted": {},
+  "panel_beta_partial": {
+    "KS11": 1.2107,
+    "IWM": 2.3843,
+    "FCHI": -1.0956,
+    "GDAXI": 1.5713
   },
+  "panel_beta_status": "aucun beta ne couvre >= 50 % du portefeuille — le livre s'etale sur 5 places et aucun indice unique ne le decrit ; les valeurs sont dans `panel_beta_partial` AVEC leur couverture. Un beta net SYNCHRONE par place, pondere par le poids de chaque place, est le livrable du chantier B1.",
   "panel_beta_coverage": {
     "KS11": {
       "notional_covered_eur": 9840.14,
@@ -223,45 +225,6 @@
         "SMCI",
         "SNDK",
         "SRT3",
-        "STLAP",
-        "VETO"
-      ]
-    },
-    "GDAXI": {
-      "notional_covered_eur": 3950.79,
-      "notional_total_eur": 34156.03,
-      "coverage_pct": 11.6,
-      "lines_missing_beta": [
-        "000660",
-        "005380",
-        "005930",
-        "012450",
-        "042660",
-        "196170",
-        "207940",
-        "AL2SI",
-        "ALCPB",
-        "AMD",
-        "APP",
-        "BESI",
-        "BILI",
-        "CAPR",
-        "CAT",
-        "COIN",
-        "FFAI",
-        "FIG",
-        "IFX",
-        "IONQ",
-        "IS0E",
-        "LRCX",
-        "MSTR",
-        "MU",
-        "NNE",
-        "NOK",
-        "NVTS",
-        "R3NK",
-        "SMCI",
-        "SNDK",
         "STLAP",
         "VETO"
       ]
@@ -345,296 +308,323 @@
         "STLAP",
         "VETO"
       ]
+    },
+    "GDAXI": {
+      "notional_covered_eur": 3950.79,
+      "notional_total_eur": 34156.03,
+      "coverage_pct": 11.6,
+      "lines_missing_beta": [
+        "000660",
+        "005380",
+        "005930",
+        "012450",
+        "042660",
+        "196170",
+        "207940",
+        "AL2SI",
+        "ALCPB",
+        "AMD",
+        "APP",
+        "BESI",
+        "BILI",
+        "CAPR",
+        "CAT",
+        "COIN",
+        "FFAI",
+        "FIG",
+        "IFX",
+        "IONQ",
+        "IS0E",
+        "LRCX",
+        "MSTR",
+        "MU",
+        "NNE",
+        "NOK",
+        "NVTS",
+        "R3NK",
+        "SMCI",
+        "SNDK",
+        "STLAP",
+        "VETO"
+      ]
     }
   },
   "concentration_flags": [],
   "high_corr_pairs_in_panel": [
     {
       "pair": "LRCX_MU",
-      "rho": 0.8747,
+      "rho": 0.8832,
       "share_pct": 3.9,
       "flag": "red"
     },
     {
       "pair": "MU_SNDK",
-      "rho": 0.8721,
+      "rho": 0.8725,
       "share_pct": 6.3,
       "flag": "red"
     },
     {
       "pair": "000660_005930",
-      "rho": 0.8674,
+      "rho": 0.8688,
       "share_pct": 23.9,
       "flag": "red"
     },
     {
       "pair": "LRCX_SNDK",
-      "rho": 0.8553,
+      "rho": 0.8587,
       "share_pct": 5.5,
       "flag": "red"
     },
     {
       "pair": "AMD_LRCX",
-      "rho": 0.8536,
+      "rho": 0.8527,
       "share_pct": 2.7,
       "flag": "red"
     },
     {
-      "pair": "COIN_MSTR",
-      "rho": 0.8149,
-      "share_pct": 0.7,
-      "flag": "red"
-    },
-    {
       "pair": "AMD_SNDK",
-      "rho": 0.8145,
+      "rho": 0.8143,
       "share_pct": 5.1,
       "flag": "red"
     },
     {
-      "pair": "AMD_IFX",
-      "rho": 0.8136,
-      "share_pct": 5.2,
-      "flag": "red"
-    },
-    {
       "pair": "AMD_MU",
-      "rho": 0.8098,
+      "rho": 0.8118,
       "share_pct": 3.5,
       "flag": "red"
     },
     {
+      "pair": "AMD_IFX",
+      "rho": 0.8112,
+      "share_pct": 5.2,
+      "flag": "red"
+    },
+    {
+      "pair": "COIN_MSTR",
+      "rho": 0.8051,
+      "share_pct": 0.7,
+      "flag": "red"
+    },
+    {
       "pair": "CAT_LRCX",
-      "rho": 0.7912,
+      "rho": 0.7874,
       "share_pct": 3.6,
       "flag": "red"
     },
     {
       "pair": "IFX_LRCX",
-      "rho": 0.7773,
+      "rho": 0.7751,
       "share_pct": 5.6,
       "flag": "red"
     },
     {
+      "pair": "IONQ_NNE",
+      "rho": 0.7518,
+      "share_pct": 0.6,
+      "flag": "red"
+    },
+    {
       "pair": "BESI_IFX",
-      "rho": 0.7549,
+      "rho": 0.7512,
       "share_pct": 11.5,
       "flag": "red"
     },
     {
       "pair": "AMD_NVTS",
-      "rho": 0.7475,
+      "rho": 0.7491,
       "share_pct": 2.8,
       "flag": "red"
     },
     {
       "pair": "CAT_MU",
-      "rho": 0.7464,
+      "rho": 0.7477,
       "share_pct": 4.4,
       "flag": "red"
     },
     {
-      "pair": "IONQ_NNE",
-      "rho": 0.7411,
-      "share_pct": 0.6,
-      "flag": "red"
-    },
-    {
-      "pair": "BESI_LRCX",
-      "rho": 0.7379,
-      "share_pct": 9.0,
-      "flag": "red"
-    },
-    {
-      "pair": "LRCX_NOK",
-      "rho": 0.7331,
-      "share_pct": 1.7,
-      "flag": "red"
-    },
-    {
       "pair": "IFX_MU",
-      "rho": 0.7329,
+      "rho": 0.736,
       "share_pct": 6.4,
       "flag": "red"
     },
     {
+      "pair": "LRCX_NOK",
+      "rho": 0.7349,
+      "share_pct": 1.7,
+      "flag": "red"
+    },
+    {
+      "pair": "BESI_LRCX",
+      "rho": 0.7328,
+      "share_pct": 9.0,
+      "flag": "red"
+    },
+    {
       "pair": "AMD_NOK",
-      "rho": 0.732,
+      "rho": 0.7312,
       "share_pct": 1.3,
       "flag": "red"
     },
     {
-      "pair": "IONQ_NVTS",
-      "rho": 0.7317,
-      "share_pct": 1.9,
-      "flag": "red"
-    },
-    {
       "pair": "IFX_SNDK",
-      "rho": 0.7309,
+      "rho": 0.7304,
       "share_pct": 8.0,
       "flag": "red"
     },
     {
+      "pair": "IONQ_NVTS",
+      "rho": 0.7239,
+      "share_pct": 1.9,
+      "flag": "red"
+    },
+    {
       "pair": "MU_NOK",
-      "rho": 0.7143,
+      "rho": 0.7152,
       "share_pct": 2.5,
       "flag": "red"
     },
     {
       "pair": "CAT_SNDK",
-      "rho": 0.707,
+      "rho": 0.7058,
       "share_pct": 6.0,
       "flag": "red"
     },
     {
       "pair": "AMD_CAT",
-      "rho": 0.7003,
+      "rho": 0.6966,
       "share_pct": 3.2,
       "flag": "red"
     },
     {
+      "pair": "NOK_SNDK",
+      "rho": 0.6947,
+      "share_pct": 4.1,
+      "flag": "red"
+    },
+    {
       "pair": "AMD_BESI",
-      "rho": 0.6977,
+      "rho": 0.6941,
       "share_pct": 8.6,
       "flag": "red"
     },
     {
-      "pair": "NOK_SNDK",
-      "rho": 0.6953,
-      "share_pct": 4.1,
-      "flag": "red"
-    },
-    {
       "pair": "BESI_SNDK",
-      "rho": 0.6877,
+      "rho": 0.6872,
       "share_pct": 11.4,
       "flag": "red"
     },
     {
-      "pair": "NNE_NVTS",
-      "rho": 0.6851,
-      "share_pct": 1.8,
-      "flag": "red"
-    },
-    {
       "pair": "IFX_NOK",
-      "rho": 0.6832,
+      "rho": 0.6827,
       "share_pct": 4.1,
       "flag": "red"
     },
     {
-      "pair": "NOK_NVTS",
-      "rho": 0.6792,
-      "share_pct": 1.7,
-      "flag": "red"
-    },
-    {
       "pair": "LRCX_NVTS",
-      "rho": 0.6761,
+      "rho": 0.6817,
       "share_pct": 3.1,
       "flag": "red"
     },
     {
+      "pair": "NNE_NVTS",
+      "rho": 0.6817,
+      "share_pct": 1.8,
+      "flag": "red"
+    },
+    {
+      "pair": "NOK_NVTS",
+      "rho": 0.6798,
+      "share_pct": 1.7,
+      "flag": "red"
+    },
+    {
       "pair": "CAT_IFX",
-      "rho": 0.6741,
+      "rho": 0.6687,
       "share_pct": 6.1,
       "flag": "red"
     },
     {
-      "pair": "IFX_NVTS",
-      "rho": 0.6618,
-      "share_pct": 5.6,
-      "flag": "red"
-    },
-    {
       "pair": "AMD_ENR",
-      "rho": 0.6593,
+      "rho": 0.6642,
       "share_pct": 7.9,
       "flag": "red"
     },
     {
-      "pair": "AMD_IONQ",
-      "rho": 0.6545,
-      "share_pct": 1.5,
+      "pair": "IFX_NVTS",
+      "rho": 0.664,
+      "share_pct": 5.6,
       "flag": "red"
     },
     {
       "pair": "R3NK_RHM",
-      "rho": 0.6525,
+      "rho": 0.6556,
       "share_pct": 3.7,
       "flag": "red"
     },
     {
-      "pair": "IFX_IONQ",
-      "rho": 0.6297,
-      "share_pct": 4.3,
-      "flag": "red"
-    },
-    {
-      "pair": "005380_005930",
-      "rho": 0.6285,
-      "share_pct": 18.9,
+      "pair": "AMD_IONQ",
+      "rho": 0.6527,
+      "share_pct": 1.5,
       "flag": "red"
     },
     {
       "pair": "CAT_ENR",
-      "rho": 0.6265,
+      "rho": 0.6338,
       "share_pct": 8.8,
       "flag": "red"
     },
     {
-      "pair": "ENR_NVTS",
-      "rho": 0.6255,
-      "share_pct": 8.3,
-      "flag": "red"
-    },
-    {
       "pair": "ENR_IFX",
-      "rho": 0.6254,
+      "rho": 0.6275,
       "share_pct": 10.8,
       "flag": "red"
     },
     {
+      "pair": "IFX_IONQ",
+      "rho": 0.6235,
+      "share_pct": 4.3,
+      "flag": "red"
+    },
+    {
+      "pair": "ENR_NVTS",
+      "rho": 0.623,
+      "share_pct": 8.3,
+      "flag": "red"
+    },
+    {
+      "pair": "005380_005930",
+      "rho": 0.6212,
+      "share_pct": 18.9,
+      "flag": "red"
+    },
+    {
       "pair": "IONQ_LRCX",
-      "rho": 0.6204,
+      "rho": 0.6212,
       "share_pct": 1.9,
       "flag": "red"
     },
     {
       "pair": "MU_NVTS",
-      "rho": 0.6161,
+      "rho": 0.6172,
       "share_pct": 4.0,
       "flag": "red"
     },
     {
       "pair": "ENR_LRCX",
-      "rho": 0.607,
+      "rho": 0.6171,
       "share_pct": 8.3,
       "flag": "red"
     },
     {
       "pair": "BESI_MU",
-      "rho": 0.6068,
+      "rho": 0.6092,
       "share_pct": 9.8,
       "flag": "red"
     },
     {
       "pair": "NVTS_SNDK",
-      "rho": 0.6048,
+      "rho": 0.6052,
       "share_pct": 5.5,
-      "flag": "red"
-    },
-    {
-      "pair": "IONQ_NOK",
-      "rho": 0.602,
-      "share_pct": 0.5,
-      "flag": "red"
-    },
-    {
-      "pair": "CAT_NOK",
-      "rho": 0.6017,
-      "share_pct": 2.2,
       "flag": "red"
     },
     {
@@ -647,7 +637,7 @@
   "scaling": {
     "var_threshold_pct": 8.0,
     "var_ref_metric": "var_95_pct_capital",
-    "scale_factor": 0.5063,
+    "scale_factor": 0.5038,
     "scaling_applied": true,
     "note": "Scale factor < 1 → réduire tous les sizings × scale_factor pour ramener la VaR sous le seuil."
   },

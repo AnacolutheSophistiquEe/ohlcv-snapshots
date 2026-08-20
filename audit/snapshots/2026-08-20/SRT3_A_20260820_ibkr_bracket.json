@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-20T00:00:04.356542+00:00",
+  "generated_at": "2026-08-20T19:46:19.703258+00:00",
   "prediction_id": "SRT3_A_20260820",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SRT3",
@@ -9,24 +9,24 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 233.75,
-    "quantity": 1,
+    "limit_price": 247.65,
+    "quantity": 2,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 233.9,
-      "quantity": 1,
+      "limit_price": 253.45,
+      "quantity": 2,
       "tif": "GTC",
-      "tag": "T1"
+      "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 221.95,
-      "quantity": 1,
+      "stop_price": 227.55,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -53,22 +53,12 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.5,
-      0.3,
-      0.2
+      1.0
     ],
     "qty_split": [
       {
-        "tag": "T1",
-        "qty": 1
-      },
-      {
-        "tag": "T2",
-        "qty": 0
-      },
-      {
         "tag": "T3",
-        "qty": 0
+        "qty": 2
       }
     ]
   },
@@ -76,24 +66,24 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 7.0,
+    "composite_score": 9.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.0562,
+    "ev_pct_risk": 0.0772,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.6875,
-      "T2": 0.4385,
-      "T3": 0.2433
+      "T1": 0.6529,
+      "T2": 0.3743,
+      "T3": 0.1908
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 234.9,
-    "hold_tolerance_breach_price": 176.175,
+    "notional_eur": 497.8,
+    "hold_tolerance_breach_price": 186.675,
     "hold_fallback_active": true,
     "prediction_id": "SRT3_A_20260820"
   },
