@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-20T00:25:49.908851+00:00",
+  "generated_at": "2026-08-20T20:18:35.876033+00:00",
   "prediction_id": "CEG_A_20260820",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "CEG",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 272.8,
+    "limit_price": 272.12,
     "quantity": 1,
     "tif": "DAY"
   },
@@ -17,7 +17,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 275.83,
+      "limit_price": 275.51,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
@@ -25,7 +25,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 257.75,
+      "stop_price": 257.59,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
@@ -76,15 +76,15 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 7.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0197,
+    "ev_pct_risk": 0.0059,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.6138,
-      "T2": 0.2808,
+      "T1": 0.4287,
+      "T2": 0.2089,
       "T3": 0.0704
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
@@ -92,8 +92,8 @@
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 274.17,
-    "hold_tolerance_breach_price": 205.6275,
+    "notional_eur": 273.48,
+    "hold_tolerance_breach_price": 205.1137,
     "hold_fallback_active": true,
     "prediction_id": "CEG_A_20260820"
   },
