@@ -50,7 +50,11 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass (negative EV)'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟠 **Régime de gap : intermediaire** — p_breach(-3 %)=2.96 % — entre les deux regimes ; ni queue pure ni franchissement ordinaire
-- **Au stop du plan (11.12 %)** : le gap seul le franchit 0.082 % des séances ; quand il le franchit, l'exécution est **0.566 points plus bas** → perte réelle **11.686 %** _(et non 11.12 %)_
+- **Au stop du plan (11.12 %)** : le gap seul le franchit 0.082 % des séances (1 fois sur 1218).
+   - exécution **0.566 pt plus bas** dans le cas TYPIQUE (médiane), 0.566 au p90, **0.566 au pire**
+   - perte réelle **11.686 %** en moyenne _(tirée par la queue)_, jusqu'à **11.686 %** — au lieu des 11.12 % annoncés par la distance
+   - coût AMORTI sur toutes les séances : 0.0005 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+   - ⚠ seulement 1 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
 - Chocs d'ouverture : p05 -2.437 % | p01 -4.603 % | pire -11.686 % _(sur 1218 séances)_
 - **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.2982** [0.2338 ; 0.3693] _(largeur 13.5 pt, n_eff 173.1)_

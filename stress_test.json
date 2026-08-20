@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-20T00:37:22.987563+00:00",
+  "generated_at": "2026-08-20T20:25:21.013308+00:00",
   "weights_eur": {
     "000660": 4024.27,
     "005380": 2327.77,
@@ -60,20 +60,15 @@
       "coverage_note": null,
       "portfolio_initial_eur": 32451.17,
       "portfolio_min_eur": 4911.42,
-      "portfolio_final_eur": 37572.54,
+      "portfolio_final_eur": 36650.61,
       "max_dd_panel_pct": -84.87,
-      "final_pnl_pct": 15.78,
-      "recovery_sessions": 1,
+      "final_pnl_pct": 12.94,
+      "recovery_sessions": 3,
       "recovered_within_window": true,
-      "pct_time_in_drawdown": 79.3,
+      "pct_time_in_drawdown": 82.7,
       "best_ticker": "005930",
       "worst_ticker": "IFX",
       "proxies_used": [
-        {
-          "original": "196170",
-          "proxy": "^KS11",
-          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
-        },
         {
           "original": "207940",
           "proxy": "^KS11",
@@ -165,7 +160,14 @@
           "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
         }
       ],
-      "fetch_errors": [],
+      "fetch_errors": [
+        {
+          "ticker": "196170.KQ",
+          "error": "empty data",
+          "fallback_tried": "^KS11",
+          "fallback_error": "empty data"
+        }
+      ],
       "tickers_perf": {
         "000660": {
           "proxy_used": null,
@@ -179,7 +181,7 @@
           "proxy_used": null,
           "initial_value_eur": 2327.77,
           "min_value_eur": 1221.5,
-          "final_value_eur": 3704.57,
+          "final_value_eur": 3704.58,
           "max_dd_pct": -47.52,
           "final_pnl_pct": 59.15
         },
@@ -206,14 +208,6 @@
           "final_value_eur": 1395.16,
           "max_dd_pct": -72.39,
           "final_pnl_pct": -39.82
-        },
-        "196170": {
-          "proxy_used": "^KS11",
-          "initial_value_eur": 757.03,
-          "min_value_eur": 512.1,
-          "final_value_eur": 921.94,
-          "max_dd_pct": -32.35,
-          "final_pnl_pct": 21.78
         },
         "207940": {
           "proxy_used": "^KS11",
@@ -435,7 +429,7 @@
           "proxy_used": null,
           "initial_value_eur": 1396.05,
           "min_value_eur": 447.64,
-          "final_value_eur": 1156.95,
+          "final_value_eur": 1156.96,
           "max_dd_pct": -67.94,
           "final_pnl_pct": -17.13
         },
@@ -532,7 +526,7 @@
           "proxy_used": null,
           "initial_value_eur": 4024.27,
           "min_value_eur": 2682.85,
-          "final_value_eur": 3118.32,
+          "final_value_eur": 3118.33,
           "max_dd_pct": -33.33,
           "final_pnl_pct": -22.51
         },
@@ -819,10 +813,10 @@
       "context": "Fed hikes + inflation → S&P -25% sur 10 mois, recovery 15 mois",
       "severity": "long",
       "coverage_pct": 55.4,
-      "coverage_note": "panier RECONSTITUE a 55 % du notionnel : les lignes sans historique a cette epoque sont absentes, le drawdown ci-dessous ne decrit PAS le portefeuille actuel",
+      "coverage_note": "panier RECONSTITUE a 55 % du notionnel a l'ouverture de la periode : les lignes dont la serie DEBUTE plus tard rejoignent le panier en cours de route. Leur arrivee gonfle la valeur du portefeuille sans qu'aucun gain n'ait ete realise, ce qui DEFORME le drawdown (mesure contre la valeur initiale). Le chiffre ci-dessous n'est donc pas le drawdown qu'aurait subi le portefeuille ACTUEL. Remplacement prevu : `portfolio_stress()` (chantier B2), qui propage un choc par les betas au lieu de rejouer les prix ligne a ligne.",
       "portfolio_initial_eur": 18912.8,
       "portfolio_min_eur": 4631.81,
-      "portfolio_final_eur": 39700.75,
+      "portfolio_final_eur": 39700.74,
       "max_dd_panel_pct": -75.51,
       "final_pnl_pct": 109.91,
       "recovery_sessions": 3,
@@ -1145,10 +1139,10 @@
       "context": "Powell pivot tardif → S&P -20% en 12 semaines, recovery 4 mois",
       "severity": "moderate",
       "coverage_pct": 35.9,
-      "coverage_note": "panier RECONSTITUE a 36 % du notionnel : les lignes sans historique a cette epoque sont absentes, le drawdown ci-dessous ne decrit PAS le portefeuille actuel",
+      "coverage_note": "panier RECONSTITUE a 36 % du notionnel a l'ouverture de la periode : les lignes dont la serie DEBUTE plus tard rejoignent le panier en cours de route. Leur arrivee gonfle la valeur du portefeuille sans qu'aucun gain n'ait ete realise, ce qui DEFORME le drawdown (mesure contre la valeur initiale). Le chiffre ci-dessous n'est donc pas le drawdown qu'aurait subi le portefeuille ACTUEL. Remplacement prevu : `portfolio_stress()` (chantier B2), qui propage un choc par les betas au lieu de rejouer les prix ligne a ligne.",
       "portfolio_initial_eur": 12258.64,
       "portfolio_min_eur": 10612.8,
-      "portfolio_final_eur": 35802.94,
+      "portfolio_final_eur": 35802.95,
       "max_dd_panel_pct": -13.43,
       "final_pnl_pct": 192.06,
       "recovery_sessions": 1,
@@ -1227,14 +1221,14 @@
           "proxy_used": null,
           "initial_value_eur": 2327.77,
           "min_value_eur": 1735.08,
-          "final_value_eur": 2454.57,
+          "final_value_eur": 2454.58,
           "max_dd_pct": -25.46,
           "final_pnl_pct": 5.45
         },
         "005930": {
           "proxy_used": null,
           "initial_value_eur": 4139.5,
-          "min_value_eur": 3500.42,
+          "min_value_eur": 3500.41,
           "final_value_eur": 4356.95,
           "max_dd_pct": -15.44,
           "final_pnl_pct": 5.25
@@ -1822,12 +1816,12 @@
       "2022_selloff",
       "Q4_2018_Powell_pivot"
     ],
-    "coverage_caveat": "certaines periodes reconstituent moins de 80 %% du notionnel (lignes sans historique a l'epoque) : leur drawdown ne decrit pas le portefeuille actuel, et la moyenne ci-dessous en herite",
+    "coverage_caveat": "certaines periodes n'ouvrent qu'avec une partie du notionnel : les lignes dont la serie debute plus tard rejoignent le panier en cours de periode, ce qui DEFORME le drawdown (mesure contre la valeur initiale). Ces periodes ne decrivent pas le portefeuille actuel et la moyenne en herite. A remplacer par `portfolio_stress()` (chantier B2) : propager un choc par les betas plutot que rejouer les prix ligne a ligne rend le probleme sans objet.",
     "max_dd_avg_pct": -59.0,
     "max_dd_median_pct": -74.69,
     "max_dd_worst_pct": -84.87,
     "recovery_sessions_avg": 20,
-    "recovery_sessions_median": 2,
+    "recovery_sessions_median": 3,
     "recovery_sessions_worst": 74,
     "n_recovered_within_window": 4,
     "prob_severe_event_5y_base_rate": 0.35,

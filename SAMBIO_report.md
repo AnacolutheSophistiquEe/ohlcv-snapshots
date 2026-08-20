@@ -40,7 +40,11 @@ Plan privilegie A (intraday), composite 9/10, conviction 'Pass (negative EV)'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟢 **Régime de gap : gap_calme** — p_breach(-3 %)=0.49 % < 1 % et 100 % des franchissements viennent des 4 pires jours/an — la queue est TOUT, l'ordinaire est sans risque de gap
-- **Au stop du plan (4.36 %)** : le gap seul le franchit 0.246 % des séances ; quand il le franchit, l'exécution est **0.859 points plus bas** → perte réelle **5.219 %** _(et non 4.36 %)_
+- **Au stop du plan (4.36 %)** : le gap seul le franchit 0.246 % des séances (3 fois sur 1218).
+   - exécution **0.871 pt plus bas** dans le cas TYPIQUE (médiane), 0.985 au p90, **1.013 au pire**
+   - perte réelle **5.219 %** en moyenne _(tirée par la queue)_, jusqu'à **5.373 %** — au lieu des 4.36 % annoncés par la distance
+   - coût AMORTI sur toutes les séances : 0.0021 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+   - ⚠ seulement 3 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
 - Chocs d'ouverture : p05 -1.249 % | p01 -2.574 % | pire -5.373 % _(sur 1218 séances)_
 - **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0686** [0.0379 ; 0.1135] _(largeur 7.6 pt, n_eff 173.1)_
