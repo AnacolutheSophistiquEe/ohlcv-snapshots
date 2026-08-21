@@ -1,13 +1,13 @@
 # SRT3
 
-**Generated** : 2026-08-20T21:37:41.628899+00:00  
-**Santé technique** : 9/10 — **Rating** : Pass (negative EV)  
+**Generated** : 2026-08-21T00:03:32.502162+00:00  
+**Santé technique** : 8/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · €248.90  
+**Subtitle** : indeterminate · volatilite normal · €249.70  
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
-> ↳ spot €248.90 (+2.5% vs entrée) · entrée €242.74 · stop €239.10 · T1 €245.52 · R/R 0.76  
-> ↳ P(T1 av. stop) 41 % _(réel 5 s)_ · EV/risk -0.005 _(réel 5 s)_ (GBM 0.077) · ¼-Kelly 0.038 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ↳ spot €249.70 (+2.6% vs entrée) · entrée €243.34 · stop €239.69 · T1 €246.19 · R/R 0.78  
+> ↳ P(T1 av. stop) 41 % _(réel 5 s)_ · EV/risk 0.0 _(réel 5 s)_ (GBM 0.078) · ¼-Kelly 0.037 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −1.5% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
 
 ## Régime & alignement multi-TF
@@ -19,7 +19,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## ⚠ Contradictions techniques
 
-- 🔴 **Santé haussière vs sur-extension** — Santé technique 9/10 élevée alors que : RSI 76.2 > 70 (surachat) ; %B 1.08 (collé à la bande haute) ; extension étirée (≥2×ATR au-dessus de la MA20) — le score mesure la santé durable, PAS le timing ; entrée au prix actuel défavorable.
+- 🔴 **Santé haussière vs sur-extension** — Santé technique 8/10 élevée alors que : RSI 76.6 > 70 (surachat) ; %B 1.10 (collé à la bande haute) ; extension étirée (≥2×ATR au-dessus de la MA20) — le score mesure la santé durable, PAS le timing ; entrée au prix actuel défavorable.
   - _Par DESIGN (le plus courant) : le score mesure la santé technique DURABLE (structure de tendance), pas le timing. Un uptrend sain mais étiré score haut ET flag surachat — c'est attendu ; le flag empêche de lire « score élevé = acheter maintenant »._
   - _Momentum parabolique : RSI > 70 + %B > 0,95 + extension extrême = phase d'accélération qui peut soit continuer (trend-following) soit se retourner brutalement → forte asymétrie de risque à l'entrée._
   - _Point de calcul à vérifier (≠ ce que disait l'audit §3.4) : le malus d'over-extension (ex-T_penalty, −2 si « extreme ») a été SORTI du score lors de la refonte §A3 — le score = santé pure, le malus vit dans le bloc TIMING (d'où le « étendu »). Donc le « score plafond + surachat » est normal, pas un poids mal calibré. Le seul vrai risque de calcul ici est la CLASSIFICATION d'over-extension elle-même (compute_overextension) : qu'« extreme » se déclenche au bon seuil._
@@ -27,27 +27,27 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 9/10, conviction 'Pass (negative EV)'.
+Plan privilegie A (intraday), composite 8/10, conviction 'Pass'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : €242.19–€243.30 (mid €242.74)
-- Spot actuel : €248.90 (+2.5% au-dessus de la zone — repli à attendre)
-- Stop : €239.10 (stop swing_plan-based (-8.58%))
-- Targets : T1 €245.52 · R/R 0.76 | T2 €248.30 · R/R 1.53 | T3 €251.08 · R/R 2.29
+- Entry (zone de repli) : €242.77–€243.91 (mid €243.34)
+- Spot actuel : €249.70 (+2.6% au-dessus de la zone — repli à attendre)
+- Stop : €239.69 (stop swing_plan-based (-8.73%))
+- Targets : T1 €246.19 · R/R 0.78 | T2 €249.03 · R/R 1.56 | T3 €251.88 · R/R 2.34
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €239.10
+- Invalidation : close sous €239.69
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟠 **Régime de gap : intermediaire** — p_breach(-3 %)=1.18 % — entre les deux regimes ; ni queue pure ni franchissement ordinaire
-- **Au stop du plan (8.58 %)** : le gap seul le franchit 0.236 % des séances (3 fois sur 1273).
-   - exécution **1.392 pt plus bas** dans le cas TYPIQUE (médiane), 4.779 au p90, **5.625 au pire**
-   - perte réelle **11.278 %** en moyenne _(tirée par la queue)_, jusqu'à **14.205 %** — au lieu des 8.58 % annoncés par la distance
-   - coût AMORTI sur toutes les séances : 0.0064 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+- **Au stop du plan (8.73 %)** : le gap seul le franchit 0.236 % des séances (3 fois sur 1273).
+   - exécution **1.242 pt plus bas** dans le cas TYPIQUE (médiane), 4.629 au p90, **5.475 au pire**
+   - perte réelle **11.278 %** en moyenne _(tirée par la queue)_, jusqu'à **14.205 %** — au lieu des 8.73 % annoncés par la distance
+   - coût AMORTI sur toutes les séances : 0.006 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 3 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
 - Chocs d'ouverture : p05 -1.616 % | p01 -3.241 % | pire -14.205 % _(sur 1273 séances)_
 - **P(stop avant cible)** _(source : daily, 1274 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
@@ -55,29 +55,29 @@ Plan privilegie A (intraday), composite 9/10, conviction 'Pass (negative EV)'.
    - swing : **0.3555** [0.3064 ; 0.407] _(largeur 10.1 pt, n_eff 345.8)_
    - deep : **0.49** [0.4376 ; 0.5426] _(largeur 10.5 pt, n_eff 345.8)_
 - ⚠ **5 s — échantillon insuffisant sur : intraday (50.4 pt).** Ces chiffres peuvent être CITÉS, jamais servir à dimensionner ni à arbitrer entre deux plans.
-- **VaR/CVaR à 1 j (fenêtre adaptative, 1260 séances)** : VaR **-4.18 %** | CVaR **-6.61 %** | vol 2.85 %/j
+- **VaR/CVaR à 1 j (fenêtre adaptative, 1260 séances)** : VaR **-4.18 %** | CVaR **-6.61 %** | vol 2.86 %/j
    - _fenêtre arrêtée : historique epuise — le regime est homogene sur toute la profondeur_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -10.0 % vs -9.26 % si l'on extrapolait par √5 _(rapport 1.08 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0659** (β de hausse 1.1628, asymétrie 0.9167) vs GDAXI — 601 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 1.352× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 1.0591** (β de hausse 1.1628, asymétrie 0.9108) vs GDAXI — 600 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 1.325× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.077 | EV/share : €0.281 | p_fill : —
+- EV/risk : 0.078 | EV/share : €0.283 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 65 % | T2 37 % | T3 19 %
-- Kelly (position) : f* 0.151 | ¼-Kelly 0.038 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Kelly (position) : f* 0.147 | ¼-Kelly 0.037 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, intraday) : bull 5.5 | bear 81.5 | side 13.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional réel 498.0 (= 2 part(s) × prix) · cible 512.0
+- Sizing : notional réel 250.0 (= 1 part(s) × prix) · cible 288.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −2.477% → cible +1.145% / stop −1.5%, p_fill 20%, n_eff≈12.1) : P(cible|rempli) **41%** · **EV/risk -0.005** (×p_fill ; si rempli -0.04% du capital)
-  - **swing** : indisponible (échantillon insuffisant (n=7, n_eff=6))
+  - **intraday** (entrée dip −2.548% → cible +1.169% / stop −1.5%, p_fill 20%, n_eff≈12.1) : P(cible|rempli) **41%** · **EV/risk +0.000** (×p_fill ; si rempli +0.00% du capital)
+  - **swing** : indisponible (échantillon insuffisant (n=6, n_eff=5))
   - **deep** : indisponible (échantillon insuffisant (n=8, n_eff=6))
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→86% · +1.0%→78% · +2.0%→49% · +3.0%→26% · +5.0%→6% · +8.0%→0%
 - Range intraday médian 3.37% (p90 6.59%) · excursion haute méd. +1.94% / basse méd. −1.45%
@@ -172,19 +172,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 76.2  _(surachat)_
+- **RSI** : 76.6  _(surachat)_
 - **ADX** : 13.5  _(pas de tendance nette)_
-- **MACD** : hist 1.281  _(pas de croisement recent)_
-- **BB** : %B 1.08 · largeur 14.0%
+- **MACD** : hist 1.332  _(pas de croisement recent)_
+- **BB** : %B 1.1 · largeur 14.1%
 - **ATR** : 7.82 (30.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF 0.002  _(neutre)_
-- **Vol ratio** : 1.83  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV falling · CMF -0.012  _(neutre)_
+- **Vol ratio** : 0.76  _(volume normal)_
 - **Choppiness** : 45.9  _(transition)_
-- **MA** : MA20 230.13 · MA50 229.86 · MA200 231.92  _(prix > MA20)_
-- **Dist MA** : MA20 +8.2% · MA50 +8.3% · MA200 +7.3%
+- **MA** : MA20 230.17 · MA50 229.88 · MA200 231.92  _(prix > MA20)_
+- **Dist MA** : MA20 +8.5% · MA50 +8.6% · MA200 +7.7%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (602081 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (578777 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

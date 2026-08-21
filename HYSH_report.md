@@ -1,6 +1,6 @@
 # 298040
 
-**Generated** : 2026-08-20T21:53:59.888718+00:00  
+**Generated** : 2026-08-21T00:18:49.400340+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 8.7 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass  
@@ -9,7 +9,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 > 🟡 **WAIT-FOR-DIP** — spot +3.7 % au-dessus de la zone d'entrée — attendre le repli  
 > ↳ spot ₩2857000.00 (+3.7% vs entrée) · entrée ₩2754700.00 · stop ₩2532414.29 · T1 ₩3049631.30 · R/R 1.33  
-> ↳ P(T1 av. stop) 36 % _(réel 5 s)_ · EV/risk 0.019 _(réel 5 s)_ (GBM 0.161) · ¼-Kelly 0.013 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 36 % _(réel 5 s)_ · EV/risk 0.019 _(réel 5 s)_ (GBM 0.158) · ¼-Kelly 0.013 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -50,31 +50,53 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟠 **Régime de gap : intermediaire** — p_breach(-3 %)=2.96 % — entre les deux regimes ; ni queue pure ni franchissement ordinaire
-- **Au stop du plan (11.36 %)** : le gap seul le franchit 0.082 % des séances (1 fois sur 1218).
+- **Au stop du plan (11.36 %)** : le gap seul le franchit 0.082 % des séances (1 fois sur 1217).
    - exécution **0.326 pt plus bas** dans le cas TYPIQUE (médiane), 0.326 au p90, **0.326 au pire**
    - perte réelle **11.686 %** en moyenne _(tirée par la queue)_, jusqu'à **11.686 %** — au lieu des 11.36 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0003 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 1 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
-- Chocs d'ouverture : p05 -2.437 % | p01 -4.603 % | pire -11.686 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -2.437 % | p01 -4.607 % | pire -11.686 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.2982** [0.2338 ; 0.3693] _(largeur 13.5 pt, n_eff 173.1)_
    - swing : **0.4736** [0.4214 ; 0.5263] _(largeur 10.5 pt, n_eff 345.6)_
-   - deep : **0.4863** [0.4339 ; 0.5389] _(largeur 10.5 pt, n_eff 345.6)_
+   - deep : **0.4862** [0.4338 ; 0.5388] _(largeur 10.5 pt, n_eff 345.6)_
 - ⚠ **5 s — échantillon insuffisant sur : swing (32.9 pt), deep (28.1 pt).** Ces chiffres peuvent être CITÉS, jamais servir à dimensionner ni à arbitrer entre deux plans.
 - **VaR/CVaR à 1 j (fenêtre adaptative, 250 séances)** : VaR **-6.93 %** | CVaR **-9.26 %** | vol 4.9 %/j
    - _fenêtre arrêtée : rupture de regime a 180 seances en arriere (volatilite 3.66 % contre 6.02 % aujourd'hui, rapport 0.61)_
    - ⚠ le regime n'est homogene que sur 120 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -11.9 % vs -12.54 % si l'on extrapolait par √5 _(rapport 0.949 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0848** (β de hausse 0.9961, asymétrie 1.0891) vs KS11 — 553 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -11.91 % vs -12.54 % si l'on extrapolait par √5 _(rapport 0.949 ; < 1 = le √5 surestime)_
+- **β de baisse : 1.0848** (β de hausse 0.9959, asymétrie 1.0893) vs KS11 — 553 séances de repli, historique complet
+
+
+## Echelle Warden — OU poser le stop
+
+- **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : cela veut dire que la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier n'est alors PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable.**
+- Candidats (la structure propose, la statistique elimine) :
+   - 🔴 support a 0.84 ATR (stop 8.844 %) — p(stop avant cible) 0.2503 [0.21 ; 0.30], R/R 0.349, perte reelle 11.686 % (gap inclus), EV 0.0543 % — **REFUSE**
+      - refuse : R/R 0.35 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - ⚠ support DETECTE a 0.84 ATR du spot, sous le seuil de 1 ATR : mesure a 51 % de casse (pile ou face, IC clusterise [0,474 ; 0,545] sur 940 touches) contre ~35 % au-dela. L'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
+   - ⚪ atr_based a 1.5 ATR (stop 11.671 %) — p(stop avant cible) 0.1987 [0.16 ; 0.24], R/R 0.349, perte reelle 11.686 % (gap inclus), EV 0.7531 % — **REFUSE**
+      - refuse : R/R 0.35 < plancher 1.60 (mesure vs SPOT, gap inclus)
+   - 🟢 support a 2.06 ATR (stop 18.33 %) — p(stop avant cible) 0.1057 [0.08 ; 0.14], R/R 0.223, perte reelle 18.33 % (gap inclus), EV 0.7673 % — **REFUSE**
+      - refuse : R/R 0.22 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 18.33 % > budget 12.0 %
+   - 🟢 support a 3.54 ATR (stop 29.841 %) — p(stop avant cible) 0.0114 [0.00 ; 0.03], R/R 0.137, perte reelle 29.841 % (gap inclus), EV 1.2881 % — **REFUSE**
+      - refuse : R/R 0.14 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 29.84 % > budget 12.0 %
+   - ⚪ swing_based a 4.8 ATR (stop 39.697 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.103, perte reelle 39.697 % (gap inclus), EV 1.6678 % — **REFUSE**
+      - refuse : R/R 0.10 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 39.70 % > budget 12.0 %
+- ⚠ **Un ancrage marque `faible` est un support DETECTE a moins de 1 ATR du spot : mesure a 51 % de casse (pile ou face, IC clusterise [0,474 ; 0,545]) contre ~35 % au-dela. Il est GARDE comme candidat, jamais refuse en silence — mais si c est le seul disponible, la ligne n est pas ancrable et le levier redevient la TAILLE.**
+- ⚠ `anchor_quality: non mesure` ne veut PAS dire mauvais : la mesure porte sur les supports DETECTES, pas sur un multiple d ATR ni sur un bas de canal.
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.161 | EV/share : ₩35691.305 | p_fill : —
+- EV/risk : 0.158 | EV/share : ₩35176.821 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 37 % | T2 8 % | T3 2 %
-- Kelly (position) : f* 0.053 | ¼-Kelly 0.013 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
+- Kelly (position) : f* 0.052 | ¼-Kelly 0.013 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 21.8 | bear 41.0 | side 37.2  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 512.0
 
@@ -203,5 +225,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (576496 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (600112 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

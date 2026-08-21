@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-08-20T22:03:06.642900+00:00  
+**Generated** : 2026-08-21T00:27:14.521636+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.7 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 9/10 — **Rating** : Pass (negative EV)  
@@ -61,6 +61,27 @@ Plan privilegie B (swing), composite 9/10, conviction 'Pass (negative EV)'.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -13.44 % vs -13.82 % si l'on extrapolait par √5 _(rapport 0.972 ; < 1 = le √5 surestime)_
 - **β de baisse : 1.7055** (β de hausse 1.418, asymétrie 1.2028) vs IWM — 601 séances de repli, historique complet
+
+
+## Echelle Warden — OU poser le stop
+
+- **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : cela veut dire que la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier n'est alors PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable.**
+- Candidats (la structure propose, la statistique elimine) :
+   - ⚪ atr_based a 1.5 ATR (stop 7.92 %) — p(stop avant cible) 0.3866 [0.34 ; 0.44], R/R 0.781, perte reelle 11.982 % (gap inclus), EV -0.8551 % — **REFUSE**
+      - refuse : R/R 0.78 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.86 %) : P(cible) 39.1 % x 9.36 % + P(rien) 22.3 % x 0.54 % ne couvrent pas P(stop) 38.7 % x 11.98 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+   - ⚪ sr_based a 3.0 ATR (stop 17.437 %) — p(stop avant cible) 0.1051 [0.08 ; 0.14], R/R 0.522, perte reelle 17.932 % (gap inclus), EV 0.5121 % — **REFUSE**
+      - refuse : R/R 0.52 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 17.44 % > budget 12.0 %
+   - 🟢 support a 6.1 ATR (stop 33.816 %) — p(stop avant cible) 0.0015 [0.00 ; 0.01], R/R 0.277, perte reelle 33.816 % (gap inclus), EV 1.0254 % — **REFUSE**
+      - refuse : R/R 0.28 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 33.82 % > budget 12.0 %
+   - 🟢 support a 7.36 ATR (stop 40.438 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.232, perte reelle 40.438 % (gap inclus), EV 1.03 % — **REFUSE**
+      - refuse : R/R 0.23 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 40.44 % > budget 12.0 %
+- ⚠ **Un ancrage marque `faible` est un support DETECTE a moins de 1 ATR du spot : mesure a 51 % de casse (pile ou face, IC clusterise [0,474 ; 0,545]) contre ~35 % au-dela. Il est GARDE comme candidat, jamais refuse en silence — mais si c est le seul disponible, la ligne n est pas ancrable et le levier redevient la TAILLE.**
+- ⚠ `anchor_quality: non mesure` ne veut PAS dire mauvais : la mesure porte sur les supports DETECTES, pas sur un multiple d ATR ni sur un bas de canal.
 
 
 ## Edge, scénarios & sizing
@@ -188,7 +209,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.71 · largeur 60.2%
 - **ATR** : 9.19 (88.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV falling · CMF 0.2  _(accumulation)_
-- **Vol ratio** : 0.57  _(volume atone)_
+- **Vol ratio** : 0.58  _(volume atone)_
 - **Choppiness** : 31.1  _(marche directionnel)_
 - **MA** : MA20 154.42 · MA50 137.94 · MA200 151.64  _(prix > MA20)_
 - **Dist MA** : MA20 +12.7% · MA50 +26.1% · MA200 +14.7%
@@ -196,5 +217,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (575963 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (592935 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

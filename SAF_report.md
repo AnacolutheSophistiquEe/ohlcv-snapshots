@@ -1,13 +1,13 @@
 # SAF
 
-**Generated** : 2026-08-20T21:42:09.486072+00:00  
+**Generated** : 2026-08-21T00:07:39.523890+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · €343.60  
+**Subtitle** : indeterminate · volatilite normal · €343.70  
 
 > 🟡 **WAIT-FOR-DIP** — spot +8.8 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot €343.60 (+8.8% vs entrée) · entrée €315.82 · stop €308.30 · T1 €321.96 · R/R 0.82  
-> ↳ P(T1 av. stop) 53 % · EV/risk 0.017 · ¼-Kelly 0.003 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
+> ↳ spot €343.70 (+8.8% vs entrée) · entrée €315.86 · stop €308.34 · T1 €322.00 · R/R 0.82  
+> ↳ P(T1 av. stop) 53 % · EV/risk 0.016 · ¼-Kelly 0.003 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -24,20 +24,20 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass'.
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : €314.59–€317.05 (mid €315.82)
-- Spot actuel : €343.60 (+8.8% au-dessus de la zone — repli à attendre)
-- Stop : €308.30 (stop swing_plan-based (-10.27%))
-- Targets : T1 €321.96 · R/R 0.82 | T2 €328.10 · R/R 1.63 | T3 €334.25 · R/R 2.45
+- Entry (zone de repli) : €314.63–€317.09 (mid €315.86)
+- Spot actuel : €343.70 (+8.8% au-dessus de la zone — repli à attendre)
+- Stop : €308.34 (stop swing_plan-based (-10.29%))
+- Targets : T1 €322.00 · R/R 0.82 | T2 €328.14 · R/R 1.63 | T3 €334.27 · R/R 2.45
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous €308.30
+- Invalidation : close sous €308.34
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟢 **Régime de gap : gap_calme** — p_breach(-3 %)=0.62 % < 1 % et 100 % des franchissements viennent des 4 pires jours/an — la queue est TOUT, l'ordinaire est sans risque de gap
-- **Au stop du plan (10.27 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1279).
+- **Au stop du plan (10.29 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1279).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
-   - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 10.27 % annoncés par la distance
+   - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 10.29 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
 - Chocs d'ouverture : p05 -1.405 % | p01 -2.356 % | pire -9.986 % _(sur 1279 séances)_
@@ -50,16 +50,16 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass'.
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -5.63 % vs -6.07 % si l'on extrapolait par √5 _(rapport 0.927 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.3705** (β de hausse 1.3363, asymétrie 1.0256) vs FCHI — 617 séances de repli, historique complet
+- **β de baisse : 1.3711** (β de hausse 1.3363, asymétrie 1.026) vs FCHI — 616 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.017 | EV/share : €0.129 | p_fill : —
+- EV/risk : 0.016 | EV/share : €0.122 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 53 % | T2 30 % | T3 18 %
-- Kelly (position) : f* 0.012 | ¼-Kelly 0.003 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Kelly (position) : f* 0.011 | ¼-Kelly 0.003 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 5.0 | bear 10.9 | side 84.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, swing) : bull 5.0 | bear 10.8 | side 84.2  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 344.0 (= 1 part(s) × prix) · cible 400.0
 
 
@@ -162,19 +162,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 52.8  _(neutre)_
+- **RSI** : 52.9  _(neutre)_
 - **ADX** : 16.4  _(pas de tendance nette)_
-- **MACD** : hist -1.796  _(bearish_recent)_
+- **MACD** : hist -1.79  _(bearish_recent)_
 - **BB** : %B 0.37 · largeur 13.9%
-- **ATR** : 7.51 (47.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.092  _(distribution)_
-- **Vol ratio** : 0.8  _(volume normal)_
-- **Choppiness** : 56.8  _(transition)_
-- **MA** : MA20 350.0 · MA50 339.65 · MA200 308.92  _(prix < MA20)_
-- **Dist MA** : MA20 -1.8% · MA50 +1.2% · MA200 +11.2%
+- **ATR** : 7.52 (47.0e pct 1a)  _(volatilite normale)_
+- **OBV/CMF** : OBV falling · CMF -0.071  _(distribution)_
+- **Vol ratio** : 0.29  _(volume atone)_
+- **Choppiness** : 56.7  _(transition)_
+- **MA** : MA20 350.01 · MA50 339.65 · MA200 308.92  _(prix < MA20)_
+- **Dist MA** : MA20 -1.8% · MA50 +1.2% · MA200 +11.3%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (594713 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (571519 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

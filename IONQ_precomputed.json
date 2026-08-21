@@ -6,7 +6,7 @@
     "exchange": "NYSE",
     "currency": "USD",
     "isin": "US46222L1089",
-    "generated_at": "2026-08-20T22:04:46.864481+00:00",
+    "generated_at": "2026-08-21T00:28:40.159997+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -427,7 +427,7 @@
           43.59,
           40.33,
           41.53,
-          17088220
+          17118354
         ]
       ],
       "h4": [
@@ -1254,8 +1254,8 @@
       "macd_hist": 0.6431742919151954,
       "macd_signal_cross": null,
       "obv_trend": "rising",
-      "mfi_14": 60.523585455426385,
-      "cmf_20": 0.02170719193028952,
+      "mfi_14": 60.5174476670242,
+      "cmf_20": 0.0216866022056169,
       "adl_trend": "rising",
       "adx_14": 22.516119839549525,
       "plus_di_14": 20.64015214186556,
@@ -1263,7 +1263,7 @@
       "di_spread_14": -1.587843707008016,
       "choppiness_14": 44.98861690860888,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 0.8179504105758554,
+      "volume_ratio_ma20": 0.819333724108222,
       "distance_ma20_pct": 2.574866496488865,
       "distance_ma50_pct": -7.257706821277318,
       "distance_ma200_pct": -7.563214952036044
@@ -1861,7 +1861,7 @@
           "rr": 2.86,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1461,
+          "p_touch": 0.146,
           "distance_pct": 20.89
         }
       }
@@ -1896,7 +1896,7 @@
           "rr": 1.76,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5918,
+          "p_touch": 0.5917,
           "distance_pct": 19.7
         },
         "t3": {
@@ -1905,7 +1905,7 @@
           "rr": 2.64,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2842,
+          "p_touch": 0.2839,
           "distance_pct": 29.55
         }
       }
@@ -2200,7 +2200,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-20T22:04:15.142803+00:00",
+    "generated_at": "2026-08-21T00:28:17.746234+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7673,7 +7673,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-20T22:04:03.803065+00:00",
+    "generated_at": "2026-08-21T00:28:07.347014+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7902,7 +7902,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-20T22:04:33.356965+00:00",
+    "generated_at": "2026-08-21T00:28:27.722256+00:00",
     "ticker": "IONQ",
     "horizons_days": {
       "intraday": 2,
@@ -8037,7 +8037,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-20T22:04:19.006640+00:00",
+    "generated_at": "2026-08-21T00:28:21.443197+00:00",
     "ticker": "IONQ",
     "spot_price": 41.53,
     "expiries_available": [
@@ -8047,43 +8047,43 @@
       },
       {
         "date": "2026-08-28",
-        "days_to_exp": 8
+        "days_to_exp": 7
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 15
+        "days_to_exp": 14
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 22
+        "days_to_exp": 21
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 29
+        "days_to_exp": 28
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7678,
-      "iv_atm_90d": 0.7678,
+      "iv_atm_30d": 0.7813,
+      "iv_atm_90d": 0.7813,
       "rv_20d_annualized": 0.9016,
-      "iv_rv_ratio": 0.852,
+      "iv_rv_ratio": 0.866,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -8.984,
+      "skew_25_delta_vol_pts": -9.131,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-21",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.5801,
+      "m1_iv_atm": 0.8203,
       "m3_expiry": "2026-09-18",
-      "m3_days_to_exp": 29,
-      "m3_iv_atm": 0.7678,
-      "ratio_m1_m3": 0.7555,
-      "label": "contango_fort"
+      "m3_days_to_exp": 28,
+      "m3_iv_atm": 0.7813,
+      "ratio_m1_m3": 1.05,
+      "label": "flat"
     },
     "open_interest_m1": {
       "expiry": "2026-08-21",
@@ -8100,7 +8100,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 67483455.0,
+      "gex_total_usd_per_point": 115864725.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -8114,8 +8114,8 @@
       "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-9.0 pts) — peu de demande de protection",
-        "GEX positif (67.5M$/pt) = MM long gamma stabilisateur",
+        "skew faible (-9.1 pts) — peu de demande de protection",
+        "GEX positif (115.9M$/pt) = MM long gamma stabilisateur",
         "max pain 45.00 vs spot 41.53 (+8.4%)"
       ]
     },
@@ -8155,7 +8155,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-20T22:04:32.421374+00:00",
+    "generated_at": "2026-08-21T00:28:26.874030+00:00",
     "ticker": "IONQ",
     "short_interest": {
       "status": "ok",
@@ -8169,7 +8169,7 @@
       "float_shares": 378201947,
       "delta_shares_short_mom_pct": 13.91,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-20T22:04:20.120552+00:00"
+      "fetched_at": "2026-08-21T00:28:22.475861+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -8238,7 +8238,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 3,
-      "fetched_at": "2026-08-20T22:04:32.420409+00:00"
+      "fetched_at": "2026-08-21T00:28:26.873161+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -8348,7 +8348,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-08-20T22:04:02.051000+00:00",
+    "generated_at": "2026-08-21T00:28:05.835997+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/IONQ_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -8584,7 +8584,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-08-20T22:04:03.615160+00:00",
+    "generated_at": "2026-08-21T00:28:07.189816+00:00",
     "ticker": "IONQ",
     "source_csv": "IONQ_daily_long.csv",
     "n_sessions": 1254,
@@ -24398,7 +24398,7 @@
         "anchor_date": "2026-08-13",
         "anchor_event": "swing_high",
         "anchor_price": 47.945,
-        "vwap_today": 44.6933,
+        "vwap_today": 44.6924,
         "distance_from_close_pct": -7.08,
         "bars_since_anchor": 5
       },
@@ -24414,7 +24414,7 @@
         "anchor_date": "2026-06-03",
         "anchor_event": "swing_high",
         "anchor_price": 73.65,
-        "vwap_today": 47.8958,
+        "vwap_today": 47.8956,
         "distance_from_close_pct": -13.29,
         "bars_since_anchor": 54
       }
@@ -29293,8 +29293,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": 25543749.41713342,
-        "signal_line": 12617333.404569091,
+        "value": 25519235.064181,
+        "signal_line": 12613831.354147317,
         "signal": "neutral"
       }
     },
@@ -30815,7 +30815,7 @@
         67240678.83214232,
         59480406.77854281,
         41620057.48158941,
-        25543749.41713342
+        25519235.064181
       ],
       "klinger_signal": [
         0.0,
@@ -31068,7 +31068,7 @@
         -3764978.8052159045,
         5270076.278178196,
         10462930.735808369,
-        12617333.404569091
+        12613831.354147317
       ]
     }
   },
@@ -31076,22 +31076,22 @@
     "available": true,
     "latest": {
       "close": 41.52999877929688,
-      "vwap": 40.24373704043976,
+      "vwap": 40.24385047228025,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": 3.1961786689059064,
+        "distance_from_close_pct": 3.1958877988141907,
         "position": "above_vwap"
       },
-      "force_index": 699030.494046432,
+      "force_index": 691152.5975925745,
       "force_index_meta": {
         "signal": "neutral"
       },
-      "chaikin_oscillator": -29566.801696538925,
+      "chaikin_oscillator": -32096.189688891172,
       "chaikin_oscillator_meta": {
         "cross_recent": "down",
         "signal": "sell"
       },
-      "vroc_14": -6.2035085408158785,
+      "vroc_14": -6.038104334079832,
       "vroc_14_meta": {
         "signal": "normal"
       }
@@ -31601,7 +31601,7 @@
         39.23283193554121,
         39.64088575208504,
         39.932158526636705,
-        40.24373704043976
+        40.24385047228025
       ],
       "force_index": [
         null,
@@ -31854,7 +31854,7 @@
         18074464.722454228,
         8932765.675363949,
         6027447.891298371,
-        699030.494046432
+        691152.5975925745
       ],
       "chaikin_oscillator": [
         0.0,
@@ -32107,7 +32107,7 @@
         4830909.368911803,
         2154837.059641719,
         1734441.0301555395,
-        -29566.801696538925
+        -32096.189688891172
       ],
       "vroc_14": [
         null,
@@ -32360,7 +32360,7 @@
         -30.707366569032217,
         -23.784628164842704,
         -36.04986149584487,
-        -6.2035085408158785
+        -6.038104334079832
       ]
     }
   },
@@ -32392,7 +32392,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": -0.6382,
+      "value": -0.6359,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -32653,21 +32653,21 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 23071113.666666668,
+        "mean_volume_60d": 23071615.9,
         "median_volume_60d": 22176800.0,
-        "volume_consistency_score": 0.6321879713642121
+        "volume_consistency_score": 0.6322115476078863
       },
       "liquidity": {
-        "liquidity_score": 798807559.0838242,
+        "liquidity_score": 798849274.5832647,
         "liquidity_classification": "high"
       },
       "freshness": {
         "last_bar_date": "2026-08-20T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
-        "overall_quality_score": 88.30981427364281,
+        "overall_quality_score": 88.31016791729792,
         "overall_label": "excellent",
         "warnings": []
       }
@@ -32708,7 +32708,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-20T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -32753,7 +32753,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-20T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

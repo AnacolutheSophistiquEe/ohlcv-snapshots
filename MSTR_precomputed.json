@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US5949724083",
-    "generated_at": "2026-08-20T21:59:52.583883+00:00",
+    "generated_at": "2026-08-21T00:24:18.758836+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -427,7 +427,7 @@
           113.74,
           108.35,
           112.39,
-          46401256
+          46928823
         ]
       ],
       "h4": [
@@ -1254,8 +1254,8 @@
       "macd_hist": 1.8364593974676882,
       "macd_signal_cross": null,
       "obv_trend": "rising",
-      "mfi_14": 72.09612901407488,
-      "cmf_20": 0.16617663753707637,
+      "mfi_14": 72.15249160260295,
+      "cmf_20": 0.1666340143393308,
       "adl_trend": "rising",
       "adx_14": 12.907864991864798,
       "plus_di_14": 35.19165030246381,
@@ -1263,7 +1263,7 @@
       "di_spread_14": 19.560161163096467,
       "choppiness_14": 48.06112979750354,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 2.42016218423906,
+      "volume_ratio_ma20": 2.444315687116443,
       "distance_ma20_pct": 15.639468271629406,
       "distance_ma50_pct": 12.725470844977394,
       "distance_ma200_pct": -22.319132768456114
@@ -1897,7 +1897,7 @@
           "rr": 3.2,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1461,
+          "p_touch": 0.146,
           "distance_pct": 17.12
         }
       }
@@ -1923,7 +1923,7 @@
           "rr": 0.98,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9365,
+          "p_touch": 0.9364,
           "distance_pct": 8.07
         },
         "t2": {
@@ -1932,7 +1932,7 @@
           "rr": 1.97,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5918,
+          "p_touch": 0.5917,
           "distance_pct": 16.14
         },
         "t3": {
@@ -1941,7 +1941,7 @@
           "rr": 2.95,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2841,
+          "p_touch": 0.2839,
           "distance_pct": 24.21
         }
       }
@@ -2236,7 +2236,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-20T21:59:25.571545+00:00",
+    "generated_at": "2026-08-21T00:23:53.584850+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7709,7 +7709,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-20T21:59:14.383817+00:00",
+    "generated_at": "2026-08-21T00:23:43.091336+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7938,7 +7938,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-20T21:59:38.945624+00:00",
+    "generated_at": "2026-08-21T00:24:06.410318+00:00",
     "ticker": "MSTR",
     "horizons_days": {
       "intraday": 2,
@@ -8073,7 +8073,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-20T21:59:29.389467+00:00",
+    "generated_at": "2026-08-21T00:23:57.565183+00:00",
     "ticker": "MSTR",
     "spot_price": 112.39,
     "expiries_available": [
@@ -8083,43 +8083,43 @@
       },
       {
         "date": "2026-08-28",
-        "days_to_exp": 8
+        "days_to_exp": 7
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 15
+        "days_to_exp": 14
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 22
+        "days_to_exp": 21
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 29
+        "days_to_exp": 28
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7636,
-      "iv_atm_90d": 0.7636,
+      "iv_atm_30d": 0.7766,
+      "iv_atm_90d": 0.7766,
       "rv_20d_annualized": 0.7388,
-      "iv_rv_ratio": 1.034,
+      "iv_rv_ratio": 1.051,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -8.74,
+      "skew_25_delta_vol_pts": -8.887,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-21",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.7317,
+      "m1_iv_atm": 1.0347,
       "m3_expiry": "2026-09-18",
-      "m3_days_to_exp": 29,
-      "m3_iv_atm": 0.7636,
-      "ratio_m1_m3": 0.9583,
-      "label": "contango_leger"
+      "m3_days_to_exp": 28,
+      "m3_iv_atm": 0.7766,
+      "ratio_m1_m3": 1.3324,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-21",
@@ -8136,7 +8136,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 7748837927.0,
+      "gex_total_usd_per_point": 9160026481.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -8150,8 +8150,8 @@
       "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-8.7 pts) — peu de demande de protection",
-        "GEX positif (7748.8M$/pt) = MM long gamma stabilisateur",
+        "skew faible (-8.9 pts) — peu de demande de protection",
+        "GEX positif (9160.0M$/pt) = MM long gamma stabilisateur",
         "max pain 95.00 vs spot 112.39 (-15.5%)"
       ]
     },
@@ -8162,8 +8162,8 @@
       "per_expiry": {
         "2026-08-21": {
           "total_strikes": 263,
-          "liquid_strikes": 65,
-          "filter_ratio_pct": 24.7
+          "liquid_strikes": 63,
+          "filter_ratio_pct": 24.0
         },
         "2026-08-28": {
           "total_strikes": 119,
@@ -8191,7 +8191,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-20T21:59:38.063823+00:00",
+    "generated_at": "2026-08-21T00:24:05.548751+00:00",
     "ticker": "MSTR",
     "short_interest": {
       "status": "ok",
@@ -8205,7 +8205,7 @@
       "float_shares": 363654304,
       "delta_shares_short_mom_pct": -24.07,
       "squeeze_potential": "low",
-      "fetched_at": "2026-08-20T21:59:30.527137+00:00"
+      "fetched_at": "2026-08-21T00:23:58.613137+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -8314,7 +8314,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 64,
-      "fetched_at": "2026-08-20T21:59:38.062725+00:00"
+      "fetched_at": "2026-08-21T00:24:05.547866+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -8424,7 +8424,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-08-20T21:59:12.688284+00:00",
+    "generated_at": "2026-08-21T00:23:41.507133+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/MSTR_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -8660,7 +8660,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-08-20T21:59:14.172474+00:00",
+    "generated_at": "2026-08-21T00:23:42.897434+00:00",
     "ticker": "MSTR",
     "source_csv": "MSTR_daily_long.csv",
     "n_sessions": 1254,
@@ -24417,7 +24417,7 @@
     "recent_buy_climax": true,
     "recent_sell_climax": false,
     "bars_ago": 0,
-    "volume_z_score": 2.6108
+    "volume_z_score": 2.6414
   },
   "patterns_advanced": {
     "n_candidates_evaluated": 117,
@@ -24487,24 +24487,24 @@
         "anchor_date": "2026-07-31",
         "anchor_event": "swing_low",
         "anchor_price": 89.21,
-        "vwap_today": 99.388,
-        "distance_from_close_pct": 13.08,
+        "vwap_today": 99.4085,
+        "distance_from_close_pct": 13.06,
         "bars_since_anchor": 14
       },
       {
         "anchor_date": "2026-07-21",
         "anchor_event": "swing_high",
         "anchor_price": 104.6,
-        "vwap_today": 98.71,
-        "distance_from_close_pct": 13.86,
+        "vwap_today": 98.7255,
+        "distance_from_close_pct": 13.84,
         "bars_since_anchor": 22
       },
       {
         "anchor_date": "2026-06-26",
         "anchor_event": "swing_low",
         "anchor_price": 81.81,
-        "vwap_today": 96.1736,
-        "distance_from_close_pct": 16.86,
+        "vwap_today": 96.1836,
+        "distance_from_close_pct": 16.85,
         "bars_since_anchor": 38
       }
     ]
@@ -29382,8 +29382,8 @@
         "signal": "buy"
       },
       "klinger": {
-        "value": 160811367.07341087,
-        "signal_line": 79839379.07354142,
+        "value": 161416574.94651577,
+        "signal_line": 79925837.34112783,
         "signal": "neutral"
       }
     },
@@ -30904,7 +30904,7 @@
         70994531.89824422,
         69358067.94363312,
         112400861.78017867,
-        160811367.07341087
+        161416574.94651577
       ],
       "klinger_signal": [
         0.0,
@@ -31157,7 +31157,7 @@
         56886219.42078367,
         58667912.06690502,
         66344047.74022983,
-        79839379.07354142
+        79925837.34112783
       ]
     }
   },
@@ -31165,22 +31165,22 @@
     "available": true,
     "latest": {
       "close": 112.38999938964844,
-      "vwap": 98.67181581747552,
+      "vwap": 98.68943170955933,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": 13.902838879086813,
+        "distance_from_close_pct": 13.88250742025707,
         "position": "above_vwap"
       },
-      "force_index": 120656180.20091721,
+      "force_index": 121269665.20920274,
       "force_index_meta": {
         "signal": "buy"
       },
-      "chaikin_oscillator": 14100125.936507821,
+      "chaikin_oscillator": 14183901.419312239,
       "chaikin_oscillator_meta": {
         "cross_recent": "up",
         "signal": "buy"
       },
-      "vroc_14": 124.3958932794282,
+      "vroc_14": 126.94720068864463,
       "vroc_14_meta": {
         "signal": "high_activity"
       }
@@ -31690,7 +31690,7 @@
         96.62617015323134,
         96.14552674498503,
         96.7896290165702,
-        98.67181581747552
+        98.68943170955933
       ],
       "force_index": [
         null,
@@ -31943,7 +31943,7 @@
         8297198.392101947,
         -5353947.368188563,
         77814510.98124993,
-        120656180.20091721
+        121269665.20920274
       ],
       "chaikin_oscillator": [
         0.0,
@@ -32196,7 +32196,7 @@
         -1007936.631356895,
         -4336592.681158543,
         3761040.7534891963,
-        14100125.936507821
+        14183901.419312239
       ],
       "vroc_14": [
         null,
@@ -32449,7 +32449,7 @@
         52.42224768409307,
         18.73034149629297,
         265.0123958967355,
-        124.3958932794282
+        126.94720068864463
       ]
     }
   },
@@ -32481,7 +32481,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": 3.0891,
+      "value": 3.1455,
       "classification": "extreme_high"
     },
     "rsi_zscore": {
@@ -32529,20 +32529,20 @@
   },
   "anomaly_detection": {
     "available": true,
-    "anomaly_score": 0.054,
+    "anomaly_score": 0.0564,
     "is_anomaly": true,
     "anomaly_percentile": 94.4,
     "recent_anomalies": [
       {
         "date": "2026-08-19T00:00:00",
         "bars_ago": 1,
-        "score": 0.1376,
+        "score": 0.1368,
         "context": "high volume + large return + wide range + strong body"
       },
       {
         "date": "2026-08-20T00:00:00",
         "bars_ago": 0,
-        "score": 0.054,
+        "score": 0.0564,
         "context": "high volume + large return"
       },
       {
@@ -32560,7 +32560,7 @@
       {
         "date": "2026-08-07T00:00:00",
         "bars_ago": 9,
-        "score": -0.046,
+        "score": -0.0466,
         "context": "wide range"
       }
     ],
@@ -32742,21 +32742,21 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 21857724.266666666,
+        "mean_volume_60d": 21866517.05,
         "median_volume_60d": 17922400.0,
-        "volume_consistency_score": 0.5231107780508761
+        "volume_consistency_score": 0.5223305016124544
       },
       "liquidity": {
-        "liquidity_score": 1758827348.957848,
+        "liquidity_score": 1760803790.7847815,
         "liquidity_classification": "very_high"
       },
       "freshness": {
         "last_bar_date": "2026-08-20T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
-        "overall_quality_score": 89.72046912294675,
+        "overall_quality_score": 89.70876497637043,
         "overall_label": "excellent",
         "warnings": []
       }
@@ -32803,7 +32803,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-20T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -32854,7 +32854,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-20T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

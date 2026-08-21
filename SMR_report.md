@@ -1,16 +1,16 @@
 # SMR
 
-**Generated** : 2026-08-20T20:20:13.514732+00:00  
+**Generated** : 2026-08-21T00:32:57.718705+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.9 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite low · $9.06  
+**Subtitle** : indeterminate · volatilite low · $9.07  
 
 > 🟢 **ARMED** — plan valide, prix dans/proche de la zone d'entrée — exécutable  
-> ↳ spot $9.06 (+0.4% vs entrée) · entrée $9.02 · stop $8.70 · T1 $9.66 · R/R 2.0  
-> ↳ P(T1 av. stop) 20 % _(réel 5 s)_ · EV/risk 0.122 _(réel 5 s)_ (GBM 0.067) · ¼-Kelly 0.043 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
-> ↳ stop −3.56% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
+> ↳ spot $9.07 (+0.4% vs entrée) · entrée $9.03 · stop $8.71 · T1 $9.66 · R/R 1.97  
+> ↳ P(T1 av. stop) 22 % _(réel 5 s)_ · EV/risk 0.132 _(réel 5 s)_ (GBM 0.066) · ¼-Kelly 0.043 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ↳ stop −3.53% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 169 % hors [0,100] (R² max 0.71). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
@@ -31,38 +31,71 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Neutral'.
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : $8.98–$9.06 (mid $9.02)
-- Spot actuel : $9.06 (+0.4% au-dessus de la zone — repli à attendre)
-- Stop : $8.70 (stop swing_plan-based (-8.31%))
-- Targets : T1 $9.66 · R/R 2.0 | T2 $9.78 · R/R 2.37 | T3 $9.90 · R/R 2.75
+- Entry (zone de repli) : $8.98–$9.07 (mid $9.03)
+- Spot actuel : $9.07 (+0.4% au-dessus de la zone — repli à attendre)
+- Stop : $8.71 (stop swing_plan-based (-8.32%))
+- Targets : T1 $9.66 · R/R 1.97 | T2 $9.79 · R/R 2.38 | T3 $9.91 · R/R 2.75
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $8.70
+- Invalidation : close sous $8.71
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=6.33 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (8.31 %)** : le gap seul le franchit 0.891 % des séances ; quand il le franchit, l'exécution est **5.189 points plus bas** → perte réelle **13.499 %** _(et non 8.31 %)_
+- **Au stop du plan (8.32 %)** : le gap seul le franchit 0.891 % des séances (10 fois sur 1122).
+   - exécution **3.11 pt plus bas** dans le cas TYPIQUE (médiane), 10.222 au p90, **22.003 au pire**
+   - perte réelle **13.499 %** en moyenne _(tirée par la queue)_, jusqu'à **30.323 %** — au lieu des 8.32 % annoncés par la distance
+   - coût AMORTI sur toutes les séances : 0.0462 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+   - ⚠ seulement 10 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
 - Chocs d'ouverture : p05 -3.434 % | p01 -6.963 % | pire -30.323 % _(sur 1122 séances)_
 - **P(stop avant cible)** _(source : daily, 1123 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.3098** [0.2445 ; 0.3814] _(largeur 13.7 pt, n_eff 173.1)_
    - swing : **0.6014** [0.5491 ; 0.652] _(largeur 10.3 pt, n_eff 345.2)_
    - deep : **0.6166** [0.5645 ; 0.6668] _(largeur 10.2 pt, n_eff 345.1)_
-- ⚠ **5 s — échantillon insuffisant sur : intraday (31.0 pt), swing (31.1 pt), deep (32.4 pt).** Ces chiffres peuvent être CITÉS, jamais servir à dimensionner ni à arbitrer entre deux plans.
+- ⚠ **5 s — échantillon insuffisant sur : intraday (30.8 pt), swing (31.1 pt), deep (32.4 pt).** Ces chiffres peuvent être CITÉS, jamais servir à dimensionner ni à arbitrer entre deux plans.
 - **VaR/CVaR à 1 j (fenêtre adaptative, 600 séances)** : VaR **-9.4 %** | CVaR **-11.92 %** | vol 6.95 %/j
    - _fenêtre arrêtée : rupture de regime a 660 seances en arriere (volatilite 11.03 % contre 5.84 % aujourd'hui, rapport 1.89)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -19.01 % vs -18.72 % si l'on extrapolait par √5 _(rapport 1.016 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.6149** (β de hausse 1.3786, asymétrie 1.1714) vs IWM — 532 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 2.03× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 1.6149** (β de hausse 1.3786, asymétrie 1.1713) vs IWM — 532 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 2.031× celui de l'historique complet : la sensibilité du titre au marché a changé.
+
+
+## Echelle Warden — OU poser le stop
+
+- **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : cela veut dire que la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier n'est alors PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable.**
+- Candidats (la structure propose, la statistique elimine) :
+   - 🔴 support a 0.33 ATR (stop 4.616 %) — p(stop avant cible) 0.7544 [0.71 ; 0.80], R/R 1.328, perte reelle 8.845 % (gap inclus), EV -3.9188 % — **REFUSE**
+      - refuse : p_stop_first 0.754, borne haute 0.798 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
+      - refuse : R/R 1.33 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - ⚠ support DETECTE a 0.15 ATR du spot, sous le seuil de 1 ATR : mesure a 51 % de casse (pile ou face, IC clusterise [0,474 ; 0,545] sur 940 touches) contre ~35 % au-dela. L'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-3.92 %) : P(cible) 23.4 % x 11.74 % + P(rien) 1.1 % x 0.34 % ne couvrent pas P(stop) 75.4 % x 8.84 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+   - ⚪ atr_based a 1.5 ATR (stop 10.957 %) — p(stop avant cible) 0.5006 [0.45 ; 0.55], R/R 0.665, perte reelle 17.667 % (gap inclus), EV -4.0378 % — **REFUSE**
+      - refuse : p_stop_first 0.501, borne haute 0.553 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
+      - refuse : R/R 0.66 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-4.04 %) : P(cible) 42.5 % x 11.74 % + P(rien) 7.4 % x -2.47 % ne couvrent pas P(stop) 50.1 % x 17.67 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+   - ⚪ swing_based a 2.51 ATR (stop 20.52 %) — p(stop avant cible) 0.2128 [0.17 ; 0.26], R/R 0.387, perte reelle 30.323 % (gap inclus), EV -2.5238 % — **REFUSE**
+      - refuse : R/R 0.39 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 20.53 % > budget 12.0 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-2.52 %) : P(cible) 49.8 % x 11.74 % + P(rien) 28.9 % x -6.62 % ne couvrent pas P(stop) 21.3 % x 30.32 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+   - 🟢 support a 2.81 ATR (stop 22.698 %) — p(stop avant cible) 0.163 [0.13 ; 0.20], R/R 0.387, perte reelle 30.323 % (gap inclus), EV -1.5857 % — **REFUSE**
+      - refuse : R/R 0.39 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 22.70 % > budget 12.0 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.59 %) : P(cible) 49.9 % x 11.74 % + P(rien) 33.8 % x -7.42 % ne couvrent pas P(stop) 16.3 % x 30.32 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+- ⚠ **Un ancrage marque `faible` est un support DETECTE a moins de 1 ATR du spot : mesure a 51 % de casse (pile ou face, IC clusterise [0,474 ; 0,545]) contre ~35 % au-dela. Il est GARDE comme candidat, jamais refuse en silence — mais si c est le seul disponible, la ligne n est pas ancrable et le levier redevient la TAILLE.**
+- ⚠ `anchor_quality: non mesure` ne veut PAS dire mauvais : la mesure porte sur les supports DETECTES, pas sur un multiple d ATR ni sur un bas de canal.
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.067 | EV/share : $0.021 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 37 % | T2 37 % | T3 37 %
-- Kelly (position) : f* 0.173 | ¼-Kelly 0.043 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- EV/risk : 0.066 | EV/share : $0.021 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 36 % | T2 36 % | T3 36 %
+- Kelly (position) : f* 0.17 | ¼-Kelly 0.043 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, intraday) : bull 82.3 | bear 6.3 | side 11.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 154.0 (= 17 part(s) × prix) · cible 160.0
@@ -71,9 +104,9 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Neutral'.
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −0.472% → cible +7.128% / stop −3.565%, p_fill 92%, n_eff≈36.7) : P(cible|rempli) **20%** · **EV/risk +0.122** (×p_fill ; si rempli +0.47% du capital)
-  - **swing** (entrée dip −1.001% → cible +12.939% / stop −7.383%, p_fill 93%, n_eff≈36.7) : P(cible|rempli) **20%** · **EV/risk -0.023** (×p_fill ; si rempli -0.18% du capital)
-  - **deep** (entrée dip −1.457% → cible +22.837% / stop −11.419%, p_fill 83%, n_eff≈34.0) : P(cible|rempli) **10%** · **EV/risk -0.114** (×p_fill ; si rempli -1.56% du capital)
+  - **intraday** (entrée dip −0.472% → cible +7.069% / stop −3.535%, p_fill 92%, n_eff≈36.7) : P(cible|rempli) **22%** · **EV/risk +0.132** (×p_fill ; si rempli +0.51% du capital)
+  - **swing** (entrée dip −1.015% → cible +12.892% / stop −7.379%, p_fill 93%, n_eff≈36.7) : P(cible|rempli) **23%** · **EV/risk -0.015** (×p_fill ; si rempli -0.12% du capital)
+  - **deep** (entrée dip −1.48% → cible +22.797% / stop −11.399%, p_fill 83%, n_eff≈34.0) : P(cible|rempli) **10%** · **EV/risk -0.113** (×p_fill ; si rempli -1.54% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→91% · +1.0%→82% · +2.0%→66% · +3.0%→61% · +5.0%→40% · +8.0%→12%
 - Range intraday médian 7.55% (p90 12.48%) · excursion haute méd. +3.55% / basse méd. −3.15%
 - Profil de vol intra : ouverture 4.787% vs midi 1.504% vs clôture 1.839% _(ouverture ~3.2× plus volatile → privilégier/éviter selon le setup)_
@@ -167,19 +200,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 55.7  _(momentum haussier)_
+- **RSI** : 55.8  _(momentum haussier)_
 - **ADX** : 13.7  _(pas de tendance nette)_
 - **MACD** : hist 0.016  _(pas de croisement recent)_
 - **BB** : %B 0.51 · largeur 28.2%
 - **ATR** : 0.66 (3.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV falling · CMF -0.013  _(neutre)_
-- **Vol ratio** : 0.93  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.01  _(neutre)_
+- **Vol ratio** : 1.03  _(volume normal)_
 - **Choppiness** : 61.2  _(transition)_
 - **MA** : MA20 9.04 · MA50 9.3 · MA200 14.12  _(prix > MA20)_
-- **Dist MA** : MA20 +0.3% · MA50 -2.5% · MA200 -35.8%
+- **Dist MA** : MA20 +0.4% · MA50 -2.5% · MA200 -35.8%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (405223 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (594898 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # 012450
 
-**Generated** : 2026-08-20T21:55:27.559302+00:00  
+**Generated** : 2026-08-21T00:20:11.426764+00:00  
 **Santé technique** : 8/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩1167000.00  
@@ -48,13 +48,13 @@ Plan privilegie A (intraday), composite 8/10, conviction 'Pass (negative EV)'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟠 **Régime de gap : intermediaire** — p_breach(-3 %)=1.48 % — entre les deux regimes ; ni queue pure ni franchissement ordinaire
-- **Au stop du plan (16.58 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
+- **Au stop du plan (16.58 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1217).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 16.58 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
-- Chocs d'ouverture : p05 -1.758 % | p01 -3.827 % | pire -13.219 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -1.761 % | p01 -3.828 % | pire -13.219 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.2419** [0.1827 ; 0.3096] _(largeur 12.7 pt, n_eff 173.1)_
    - swing : **0.4787** [0.4264 ; 0.5314] _(largeur 10.5 pt, n_eff 345.6)_
    - deep : **0.527** [0.4743 ; 0.5792] _(largeur 10.5 pt, n_eff 345.6)_
@@ -63,9 +63,31 @@ Plan privilegie A (intraday), composite 8/10, conviction 'Pass (negative EV)'.
 - **VaR/CVaR à 1 j (fenêtre adaptative, 780 séances)** : VaR **-5.51 %** | CVaR **-7.48 %** | vol 3.89 %/j
    - _fenêtre arrêtée : rupture de regime a 840 seances en arriere (volatilite 2.67 % contre 4.47 % aujourd'hui, rapport 0.60)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -10.29 % vs -11.94 % si l'on extrapolait par √5 _(rapport 0.862 ; < 1 = le √5 surestime)_
+- 5 jours **mesuré** : VaR -10.3 % vs -11.94 % si l'on extrapolait par √5 _(rapport 0.862 ; < 1 = le √5 surestime)_
 - **β de baisse : 0.5263** (β de hausse 0.306, asymétrie 1.7202) vs KS11 — 553 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 0.312× celui de l'historique complet : la sensibilité du titre au marché a changé.
+
+
+## Echelle Warden — OU poser le stop
+
+- **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : cela veut dire que la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier n'est alors PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable.**
+- Candidats (la structure propose, la statistique elimine) :
+   - ⚪ atr_based a 1.5 ATR (stop 9.209 %) — p(stop avant cible) 0.0696 [0.05 ; 0.10], R/R 0.015, perte reelle 13.188 % (gap inclus), EV -0.7306 % — **REFUSE**
+      - refuse : R/R 0.02 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.73 %) : P(cible) 92.9 % x 0.20 % + P(rien) 0.1 % x -0.61 % ne couvrent pas P(stop) 7.0 % x 13.19 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+   - ⚪ sr_based a 3.19 ATR (stop 21.441 %) — p(stop avant cible) 0.0062 [0.00 ; 0.02], R/R 0.009, perte reelle 21.441 % (gap inclus), EV -0.2508 % — **REFUSE**
+      - refuse : R/R 0.01 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 21.44 % > budget 12.0 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.25 %) : P(cible) 96.1 % x 0.20 % + P(rien) 3.3 % x -9.47 % ne couvrent pas P(stop) 0.6 % x 21.44 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+   - 🟢 support a 5.36 ATR (stop 34.747 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.006, perte reelle 34.747 % (gap inclus), EV -0.2505 % — **REFUSE**
+      - refuse : R/R 0.01 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 34.75 % > budget 12.0 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.25 %) : P(cible) 96.1 % x 0.20 % + P(rien) 3.9 % x -11.35 % ne couvrent pas P(stop) 0.0 % x 34.75 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+- ⚠ **Un ancrage marque `faible` est un support DETECTE a moins de 1 ATR du spot : mesure a 51 % de casse (pile ou face, IC clusterise [0,474 ; 0,545]) contre ~35 % au-dela. Il est GARDE comme candidat, jamais refuse en silence — mais si c est le seul disponible, la ligne n est pas ancrable et le levier redevient la TAILLE.**
+- ⚠ `anchor_quality: non mesure` ne veut PAS dire mauvais : la mesure porte sur les supports DETECTES, pas sur un multiple d ATR ni sur un bas de canal.
 
 
 ## Edge, scénarios & sizing
@@ -191,5 +213,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (570954 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (587667 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

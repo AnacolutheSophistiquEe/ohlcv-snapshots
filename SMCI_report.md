@@ -1,6 +1,6 @@
 # SMCI
 
-**Generated** : 2026-08-20T22:01:31.790400+00:00  
+**Generated** : 2026-08-21T00:25:47.981296+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.1 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 9/10 — **Rating** : Pass  
@@ -64,6 +64,32 @@ Plan privilegie B (swing), composite 9/10, conviction 'Pass'.
 - 5 jours **mesuré** : VaR -16.69 % vs -16.05 % si l'on extrapolait par √5 _(rapport 1.04 ; < 1 = le √5 surestime)_
 - **β de baisse : 1.5462** (β de hausse 1.2487, asymétrie 1.2382) vs IWM — 601 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 1.944× celui de l'historique complet : la sensibilité du titre au marché a changé.
+
+
+## Echelle Warden — OU poser le stop
+
+- **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : cela veut dire que la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier n'est alors PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable.**
+- Candidats (la structure propose, la statistique elimine) :
+   - ⚪ atr_based a 1.5 ATR (stop 10.544 %) — p(stop avant cible) 0.4013 [0.35 ; 0.45], R/R 0.713, perte reelle 16.875 % (gap inclus), EV -1.9959 % — **REFUSE**
+      - refuse : R/R 0.71 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-2.00 %) : P(cible) 39.2 % x 12.03 % + P(rien) 20.7 % x 0.31 % ne couvrent pas P(stop) 40.1 % x 16.88 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+   - ⚪ sr_based a 2.0 ATR (stop 16.135 %) — p(stop avant cible) 0.209 [0.17 ; 0.25], R/R 0.514, perte reelle 23.404 % (gap inclus), EV -0.5665 % — **REFUSE**
+      - refuse : R/R 0.51 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 16.16 % > budget 12.0 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.57 %) : P(cible) 42.2 % x 12.03 % + P(rien) 36.9 % x -2.05 % ne couvrent pas P(stop) 20.9 % x 23.40 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+   - 🟢 support a 3.43 ATR (stop 26.191 %) — p(stop avant cible) 0.0891 [0.06 ; 0.12], R/R 0.43, perte reelle 27.955 % (gap inclus), EV 0.7443 % — **REFUSE**
+      - refuse : R/R 0.43 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 26.19 % > budget 12.0 %
+   - 🟢 support a 4.32 ATR (stop 32.492 %) — p(stop avant cible) 0.072 [0.05 ; 0.10], R/R 0.37, perte reelle 32.492 % (gap inclus), EV 0.4664 % — **REFUSE**
+      - refuse : R/R 0.37 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 32.49 % > budget 12.0 %
+   - 🟢 support a 5.11 ATR (stop 38.054 %) — p(stop avant cible) 0.044 [0.03 ; 0.07], R/R 0.316, perte reelle 38.054 % (gap inclus), EV 0.39 % — **REFUSE**
+      - refuse : R/R 0.32 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 38.05 % > budget 12.0 %
+- ⚠ **Un ancrage marque `faible` est un support DETECTE a moins de 1 ATR du spot : mesure a 51 % de casse (pile ou face, IC clusterise [0,474 ; 0,545]) contre ~35 % au-dela. Il est GARDE comme candidat, jamais refuse en silence — mais si c est le seul disponible, la ligne n est pas ancrable et le levier redevient la TAILLE.**
+- ⚠ `anchor_quality: non mesure` ne veut PAS dire mauvais : la mesure porte sur les supports DETECTES, pas sur un multiple d ATR ni sur un bas de canal.
 
 
 ## Edge, scénarios & sizing
@@ -191,8 +217,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.627  _(pas de croisement recent)_
 - **BB** : %B 0.73 · largeur 53.9%
 - **ATR** : 2.57 (73.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF -0.0  _(neutre)_
-- **Vol ratio** : 0.89  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF -0.001  _(neutre)_
+- **Vol ratio** : 0.92  _(volume normal)_
 - **Choppiness** : 33.4  _(marche directionnel)_
 - **MA** : MA20 32.49 · MA50 30.32 · MA200 31.52  _(prix > MA20)_
 - **Dist MA** : MA20 +12.3% · MA50 +20.4% · MA200 +15.8%
@@ -200,5 +226,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (580387 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (600819 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

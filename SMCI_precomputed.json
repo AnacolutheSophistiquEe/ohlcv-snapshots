@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US86800U1043",
-    "generated_at": "2026-08-20T22:01:31.790400+00:00",
+    "generated_at": "2026-08-21T00:25:47.981296+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -427,7 +427,7 @@
           38.74,
           35.582,
           36.5,
-          49198482
+          51210655
         ]
       ],
       "h4": [
@@ -1254,8 +1254,8 @@
       "macd_hist": 0.626755922506971,
       "macd_signal_cross": null,
       "obv_trend": "rising",
-      "mfi_14": 58.51526483919697,
-      "cmf_20": -0.0004237383668904569,
+      "mfi_14": 58.61527239688027,
+      "cmf_20": -0.0011829915099608303,
       "adl_trend": "rising",
       "adx_14": 25.135191541634914,
       "plus_di_14": 36.725041794663454,
@@ -1263,7 +1263,7 @@
       "di_spread_14": 18.50921588053891,
       "choppiness_14": 33.41695973779882,
       "regime_label": "strong_trend",
-      "volume_ratio_ma20": 0.8894304884206398,
+      "volume_ratio_ma20": 0.9241265407195989,
       "distance_ma20_pct": 12.343988229158901,
       "distance_ma50_pct": 20.36670663297145,
       "distance_ma200_pct": 15.79563527752331
@@ -1875,7 +1875,7 @@
           "rr": 4.6,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4288,
+          "p_touch": 0.4287,
           "distance_pct": 10.03
         }
       }
@@ -1945,7 +1945,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.2841,
+          "p_touch": 0.2839,
           "distance_pct": 30.72
         },
         "t2": {
@@ -1954,7 +1954,7 @@
           "rr": 2.03,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2841,
+          "p_touch": 0.2839,
           "distance_pct": 31.22
         },
         "t3": {
@@ -1963,7 +1963,7 @@
           "rr": 2.06,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2841,
+          "p_touch": 0.2839,
           "distance_pct": 31.72
         }
       }
@@ -2258,7 +2258,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-20T22:01:01.558293+00:00",
+    "generated_at": "2026-08-21T00:25:21.235506+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7716,7 +7716,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-20T22:00:50.301766+00:00",
+    "generated_at": "2026-08-21T00:25:10.895424+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7945,7 +7945,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-20T22:01:18.243028+00:00",
+    "generated_at": "2026-08-21T00:25:35.752134+00:00",
     "ticker": "SMCI",
     "horizons_days": {
       "intraday": 2,
@@ -8080,7 +8080,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-20T22:01:05.784652+00:00",
+    "generated_at": "2026-08-21T00:25:24.783507+00:00",
     "ticker": "SMCI",
     "spot_price": 36.5,
     "expiries_available": [
@@ -8090,43 +8090,43 @@
       },
       {
         "date": "2026-08-28",
-        "days_to_exp": 8
+        "days_to_exp": 7
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 15
+        "days_to_exp": 14
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 22
+        "days_to_exp": 21
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 29
+        "days_to_exp": 28
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7451,
-      "iv_atm_90d": 0.7451,
+      "iv_atm_30d": 0.7581,
+      "iv_atm_90d": 0.7581,
       "rv_20d_annualized": 0.9678,
-      "iv_rv_ratio": 0.77,
+      "iv_rv_ratio": 0.783,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -6.738,
+      "skew_25_delta_vol_pts": -6.885,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-21",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.626,
+      "m1_iv_atm": 0.8857,
       "m3_expiry": "2026-09-18",
-      "m3_days_to_exp": 29,
-      "m3_iv_atm": 0.7451,
-      "ratio_m1_m3": 0.8401,
-      "label": "contango_fort"
+      "m3_days_to_exp": 28,
+      "m3_iv_atm": 0.7581,
+      "ratio_m1_m3": 1.1684,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-21",
@@ -8143,7 +8143,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 2191498156.0,
+      "gex_total_usd_per_point": 2362230920.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -8157,8 +8157,8 @@
       "bullish_signals": 3,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-6.7 pts) — peu de demande de protection",
-        "GEX positif (2191.5M$/pt) = MM long gamma stabilisateur",
+        "skew faible (-6.9 pts) — peu de demande de protection",
+        "GEX positif (2362.2M$/pt) = MM long gamma stabilisateur",
         "max pain 31.00 vs spot 36.50 (-15.1%)",
         "P/C ratio bas (0.46) — biais call dominant"
       ]
@@ -8170,8 +8170,8 @@
       "per_expiry": {
         "2026-08-21": {
           "total_strikes": 138,
-          "liquid_strikes": 46,
-          "filter_ratio_pct": 33.3
+          "liquid_strikes": 45,
+          "filter_ratio_pct": 32.6
         },
         "2026-08-28": {
           "total_strikes": 101,
@@ -8199,7 +8199,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-20T22:01:17.347538+00:00",
+    "generated_at": "2026-08-21T00:25:34.909104+00:00",
     "ticker": "SMCI",
     "short_interest": {
       "status": "ok",
@@ -8213,16 +8213,41 @@
       "float_shares": 519093352,
       "delta_shares_short_mom_pct": -11.4,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-20T22:01:07.234999+00:00"
+      "fetched_at": "2026-08-21T00:25:25.832916+00:00"
     },
     "insider_transactions_90d": {
-      "status": "no_filings_found",
-      "cik": "0001375365"
+      "status": "ok",
+      "source": "sec_edgar_form_4",
+      "ticker": "SMCI",
+      "cik": "0001375365",
+      "lookback_days": 90,
+      "n_filings_total": 20,
+      "n_filings_in_window": 20,
+      "n_fetch_errors": 0,
+      "summary": {
+        "total_buy_count": 0,
+        "total_buy_value_usd": 0,
+        "total_sell_count": 0,
+        "total_sell_value_usd": 0,
+        "vesting_exercise_count": 19,
+        "net_flow_usd": 0,
+        "net_flow_label": "neutral"
+      },
+      "top_buys": [],
+      "top_sells": [],
+      "flags": {
+        "ceo_or_cfo_concentrated_sells": false,
+        "insider_buying_no_offsetting_sells": false,
+        "insider_selling_no_buys": false,
+        "vesting_exercises_dominant": true
+      },
+      "all_transactions_count": 19,
+      "fetched_at": "2026-08-21T00:25:34.908134+00:00"
     },
     "data_quality": {
       "short_data_available": true,
-      "insider_data_available": false,
-      "insider_n_transactions": 0
+      "insider_data_available": true,
+      "insider_n_transactions": 19
     }
   },
   "volatility_regime": {
@@ -8327,7 +8352,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-08-20T22:00:48.586353+00:00",
+    "generated_at": "2026-08-21T00:25:09.351275+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/SMCI_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -8563,7 +8588,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-08-20T22:00:50.098989+00:00",
+    "generated_at": "2026-08-21T00:25:10.734844+00:00",
     "ticker": "SMCI",
     "source_csv": "SMCI_daily_long.csv",
     "n_sessions": 1254,
@@ -24377,24 +24402,24 @@
         "anchor_date": "2026-08-13",
         "anchor_event": "swing_high",
         "anchor_price": 42.31,
-        "vwap_today": 38.6046,
-        "distance_from_close_pct": -5.45,
+        "vwap_today": 38.5958,
+        "distance_from_close_pct": -5.43,
         "bars_since_anchor": 5
       },
       {
         "anchor_date": "2026-07-23",
         "anchor_event": "swing_high",
         "anchor_price": 32.59,
-        "vwap_today": 33.7011,
-        "distance_from_close_pct": 8.31,
+        "vwap_today": 33.7065,
+        "distance_from_close_pct": 8.29,
         "bars_since_anchor": 20
       },
       {
         "anchor_date": "2026-07-17",
         "anchor_event": "swing_low",
         "anchor_price": 23.38,
-        "vwap_today": 32.6665,
-        "distance_from_close_pct": 11.74,
+        "vwap_today": 32.6724,
+        "distance_from_close_pct": 11.72,
         "bars_since_anchor": 24
       }
     ]
@@ -29265,8 +29290,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": 26942383.34512034,
-        "signal_line": 67165330.89871417,
+        "value": 27941298.02170521,
+        "signal_line": 67308032.99536915,
         "signal": "sell"
       }
     },
@@ -30787,7 +30812,7 @@
         117270955.78961854,
         45103526.318101406,
         -3630552.1418396235,
-        26942383.34512034
+        27941298.02170521
       ],
       "klinger_signal": [
         0.0,
@@ -31040,7 +31065,7 @@
         93732814.61506331,
         86785773.42978303,
         73869155.4909798,
-        67165330.89871417
+        67308032.99536915
       ]
     }
   },
@@ -31048,22 +31073,22 @@
     "available": true,
     "latest": {
       "close": 36.5,
-      "vwap": 33.88761449843551,
+      "vwap": 33.89315744604463,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": 7.708968424688304,
+        "distance_from_close_pct": 7.691353507283188,
         "position": "above_vwap"
       },
-      "force_index": 64870889.90550199,
+      "force_index": 64847893.11630216,
       "force_index_meta": {
         "signal": "neutral"
       },
-      "chaikin_oscillator": -4283500.799272776,
+      "chaikin_oscillator": -4551516.766249329,
       "chaikin_oscillator_meta": {
         "cross_recent": "down",
         "signal": "sell"
       },
-      "vroc_14": 40.74362414571419,
+      "vroc_14": 46.49990988697252,
       "vroc_14_meta": {
         "signal": "normal"
       }
@@ -31573,7 +31598,7 @@
         32.583311429857226,
         33.075830480093344,
         33.561744685987534,
-        33.88761449843551
+        33.89315744604463
       ],
       "force_index": [
         null,
@@ -31826,7 +31851,7 @@
         117206994.44856206,
         93967962.215883,
         76338699.6639375,
-        64870889.90550199
+        64847893.11630216
       ],
       "chaikin_oscillator": [
         0.0,
@@ -32079,7 +32104,7 @@
         4663389.662877679,
         5022207.750621736,
         3280384.0654349327,
-        -4283500.799272776
+        -4551516.766249329
       ],
       "vroc_14": [
         null,
@@ -32332,7 +32357,7 @@
         52.17367447832362,
         27.799678178234483,
         -7.987308307973298,
-        40.74362414571419
+        46.49990988697252
       ]
     }
   },
@@ -32364,7 +32389,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": 0.3407,
+      "value": 0.4056,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -32412,20 +32437,20 @@
   },
   "anomaly_detection": {
     "available": true,
-    "anomaly_score": -0.0625,
+    "anomaly_score": -0.0633,
     "is_anomaly": false,
-    "anomaly_percentile": 75.8,
+    "anomaly_percentile": 75.4,
     "recent_anomalies": [
       {
         "date": "2026-07-22T00:00:00",
         "bars_ago": 21,
-        "score": 0.1573,
+        "score": 0.1565,
         "context": "high volume + large return + wide range + strong body"
       },
       {
         "date": "2026-08-12T00:00:00",
         "bars_ago": 6,
-        "score": 0.1205,
+        "score": 0.1203,
         "context": "high volume + large return + wide range + strong body"
       },
       {
@@ -32437,13 +32462,13 @@
       {
         "date": "2026-08-13T00:00:00",
         "bars_ago": 5,
-        "score": -0.0018,
+        "score": -0.0019,
         "context": "large return + wide range"
       },
       {
         "date": "2026-08-04T00:00:00",
         "bars_ago": 12,
-        "score": -0.0056,
+        "score": -0.0064,
         "context": "large return + wide range + strong body"
       }
     ],
@@ -32636,21 +32661,21 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 60086953.03333333,
-        "median_volume_60d": 50062000.0,
-        "volume_consistency_score": 0.28079352071750285
+        "mean_volume_60d": 60120489.25,
+        "median_volume_60d": 50732150.0,
+        "volume_consistency_score": 0.28132466154056013
       },
       "liquidity": {
-        "liquidity_score": 1714662746.1642764,
+        "liquidity_score": 1717110889.980943,
         "liquidity_classification": "very_high"
       },
       "freshness": {
         "last_bar_date": "2026-08-20T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
-        "overall_quality_score": 82.89845926693022,
+        "overall_quality_score": 82.90642637927608,
         "overall_label": "good",
         "warnings": []
       }
@@ -32691,7 +32716,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-20T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -32738,7 +32763,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-20T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
