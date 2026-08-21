@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "ENR",
-    "generated_at": "2026-08-20T22:05:30Z",
+    "generated_at": "2026-08-21T00:36:48Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-08-21T08:00:00Z",
-    "valid_until": "2026-08-21T21:00:00Z",
+    "valid_from": "2026-08-24T08:00:00Z",
+    "valid_until": "2026-08-24T21:00:00Z",
     "source_precomputed": "ENR_precomputed.json"
   },
   "context": {
-    "last_price": 152.58,
+    "last_price": 152.7,
     "ta_score": {
       "value": 6,
       "max": 10,
@@ -25,8 +25,8 @@
     "volatility_regime": "normal",
     "signals_counter": {
       "buy": 2,
-      "sell": 3,
-      "neutral": 10,
+      "sell": 2,
+      "neutral": 11,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 0.25,
       "confidence": "very_low"
     },
-    "narrative_short": "TA score 6/10 (bullish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (2b/3s/10n)."
+    "narrative_short": "TA score 6/10 (bullish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (2b/2s/11n)."
   },
   "notes": {
     "atr_daily": 6.4714,
     "atr_pct_daily": null,
-    "beta_60d": 2.0523,
+    "beta_60d": 2.06,
     "beta_benchmark": "GDAXI",
-    "beta_corr_60d": 0.5248,
+    "beta_corr_60d": 0.5203,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -18.68,
+      "current_dd_pct": -18.61,
       "ath_price": 187.62,
       "ath_date": "2026-04-24",
       "max_dd_1y_pct": -27.95,
@@ -76,32 +76,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 137.9381,
+        "min": 137.9436,
         "max": 141.9435
       },
       "stop": {
-        "price": 136.5587,
+        "price": 136.5642,
         "basis": "below_zone_1pct_below_confluence_support",
-        "distance_pct": -2.42
+        "distance_pct": -2.41
       },
       "targets": [
         {
           "level": 1,
           "price": 168.6596,
           "basis": "VPVR VAH · touche hist. 15% (sans stop)",
-          "rr": 8.49
+          "rr": 8.5
         },
         {
           "level": 2,
-          "price": 168.7291,
+          "price": 168.7733,
           "basis": "band 95% (atteignable) · touche hist. 15% (sans stop)",
-          "rr": 8.51
+          "rr": 8.53
         },
         {
           "level": 3,
-          "price": 168.7986,
+          "price": 168.887,
           "basis": "plafond band 95% · touche hist. 15% (sans stop)",
-          "rr": 8.53
+          "rr": 8.56
         }
       ],
       "preferred_target": 1,
@@ -121,26 +121,26 @@
         "max": 170.904
       },
       "stop": {
-        "price": 165.8485,
+        "price": 165.851,
         "basis": "below_broken_resistance",
         "distance_pct": -2.76
       },
       "targets": [
         {
           "level": 1,
-          "price": 175.2792,
+          "price": 175.2767,
           "basis": "r_multiple_1",
           "rr": 1.0
         },
         {
           "level": 2,
-          "price": 179.9946,
+          "price": 179.9896,
           "basis": "r_multiple_2",
           "rr": 2.0
         },
         {
           "level": 3,
-          "price": 184.71,
+          "price": 184.7025,
           "basis": "r_multiple_3",
           "rr": 3.0
         }
@@ -150,7 +150,7 @@
         "session_eu_xetra_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance BB_UPPER + S/R_resistance + VPVR_VAH + FIB_786 (strength 28.0)."
+      "rationale": "Breakout au-dessus confluence resistance S/R_resistance + BB_UPPER + VPVR_VAH + FIB_786 (strength 28.0)."
     },
     {
       "id": "C",
@@ -175,15 +175,15 @@
         },
         {
           "level": 2,
-          "price": 168.7291,
+          "price": 168.7733,
           "basis": "band 95% (atteignable) · touche hist. 15% (sans stop)",
-          "rr": 6.63
+          "rr": 6.64
         },
         {
           "level": 3,
-          "price": 168.7986,
+          "price": 168.887,
           "basis": "plafond band 95% · touche hist. 15% (sans stop)",
-          "rr": 6.65
+          "rr": 6.66
         }
       ],
       "preferred_target": 1,
