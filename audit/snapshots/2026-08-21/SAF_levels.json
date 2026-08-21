@@ -1,0 +1,158 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "SAF",
+    "generated_at": "2026-08-21T00:36:48Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-08-24T08:00:00Z",
+    "valid_until": "2026-08-24T21:00:00Z",
+    "source_precomputed": "SAF_precomputed.json"
+  },
+  "context": {
+    "last_price": 343.7,
+    "ta_score": {
+      "value": 6,
+      "max": 10,
+      "label": "bullish"
+    },
+    "alignment_flag": "mixed",
+    "hmm_regime": {
+      "state": "sideways",
+      "probability": 0.9,
+      "expected_duration_days": 30.0
+    },
+    "volatility_regime": "normal",
+    "signals_counter": {
+      "buy": 2,
+      "sell": 5,
+      "neutral": 8,
+      "total": 15,
+      "verdict": "neutral"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_50-60_dist_ma20_-2_+2",
+      "win_rate": 0.86,
+      "sample_size": 37,
+      "median_bounce_pct": 2.87,
+      "confidence": "high"
+    },
+    "narrative_short": "TA score 6/10 (bullish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (2b/5s/8n)."
+  },
+  "notes": {
+    "atr_daily": 7.5214,
+    "atr_pct_daily": null,
+    "beta_60d": 1.7544,
+    "beta_benchmark": "FCHI",
+    "beta_corr_60d": 0.7163,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "three_black_crows",
+      "date": "2026-08-20",
+      "confidence": 0.918
+    },
+    "divergences": [],
+    "drawdown": {
+      "current_dd_pct": -5.47,
+      "ath_price": 363.6,
+      "ath_date": "2026-08-12",
+      "max_dd_1y_pct": -23.62,
+      "days_in_dd": 8,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 324.8856,
+        "max": 325.7646
+      },
+      "stop": {
+        "price": 308.3404,
+        "basis": "swing_plan_below_confluence_support",
+        "distance_pct": -5.22
+      },
+      "targets": [
+        {
+          "level": 2,
+          "price": 328.1372,
+          "basis": "band 95% (atteignable) · touche hist. 15% (sans stop)",
+          "rr": 0.17
+        },
+        {
+          "level": 3,
+          "price": 334.2748,
+          "basis": "plafond band 95% · touche hist. 44% (sans stop)",
+          "rr": 0.53
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support FIB_618 + BB_LOWER (strength 5.0). Bounce mecanique."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 293.0852,
+        "max": 293.5628
+      },
+      "stop": {
+        "price": 281.3618,
+        "basis": "deep_below_confluence_support_4pct",
+        "distance_pct": -4.08
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 321.9995,
+          "basis": "band 95% (atteignable) · touche hist. 15% (sans stop)",
+          "rr": 2.4
+        },
+        {
+          "level": 2,
+          "price": 328.1372,
+          "basis": "band 95% (atteignable) · touche hist. 15% (sans stop)",
+          "rr": 2.91
+        },
+        {
+          "level": 3,
+          "price": 334.2748,
+          "basis": "plafond band 95% · touche hist. 44% (sans stop)",
+          "rr": 3.42
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Deep value mecanique : entree sur confluence support basse S/R_support + VPVR_VAL (strength 9.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+    }
+  ],
+  "bot_actionable": true,
+  "bot_actionable_reason": "ok",
+  "global_conditions": [
+    {
+      "id": "session_eu_paris_open",
+      "type": "session_window",
+      "params": {
+        "session": "eu_paris_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 278.5482,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}

@@ -1,0 +1,1852 @@
+{
+  "available": true,
+  "generated_at": "2026-08-21T00:37:52.437874+00:00",
+  "weights_eur": {
+    "000660": 4192.92,
+    "005380": 2295.07,
+    "005930": 4009.02,
+    "012450": 713.53,
+    "042660": 2283.67,
+    "196170": 818.97,
+    "207940": 957.51,
+    "AL2SI": 514.98,
+    "ALCPB": 547.76,
+    "AMD": 401.1,
+    "APP": 795.0,
+    "BESI": 1685.6,
+    "BILI": 114.33,
+    "CAT": 697.01,
+    "COIN": 147.75,
+    "ENR": 2739.6,
+    "FFAI": 556.58,
+    "FIG": 46.75,
+    "HOOD": 978.0,
+    "IFX": 2218.4,
+    "IONQ": 106.37,
+    "IS0E": 751.35,
+    "LRCX": 531.87,
+    "MSTR": 385.67,
+    "NNE": 78.01,
+    "NOK": 43.2,
+    "NVTS": 556.15,
+    "R3NK": 96.32,
+    "RGTI": 274.86,
+    "RHM": 1157.4,
+    "SMCI": 31.32,
+    "SNDK": 1364.53,
+    "SRT3": 247.7,
+    "VETO": 71.0
+  },
+  "total_notional_eur": 32409.29,
+  "capital_total_eur": 11792.68,
+  "periods_tested": [
+    "Lehman_2008",
+    "COVID_Mar_2020",
+    "2022_selloff",
+    "Q4_2018_Powell_pivot",
+    "Aug_2024_flash_crash"
+  ],
+  "per_period": [
+    {
+      "status": "ok",
+      "label": "Lehman_2008",
+      "start_date": "2008-09-15",
+      "end_dd_date": "2009-03-09",
+      "end_recovery_date": "2009-09-30",
+      "context": "Lehman bankruptcy → S&P -57%, recovery ~12 mois",
+      "severity": "extreme",
+      "coverage_pct": 94.5,
+      "coverage_note": "panier RECONSTITUE a 95 % du notionnel a l'ouverture de la periode : les lignes dont la serie DEBUTE plus tard rejoignent le panier en cours de route. Leur arrivee gonfle la valeur du portefeuille sans qu'aucun gain n'ait ete realise, ce qui DEFORME le drawdown (mesure contre la valeur initiale). Le chiffre ci-dessous n'est donc pas le drawdown qu'aurait subi le portefeuille ACTUEL. Remplacement prevu : `portfolio_stress()` (chantier B2), qui propage un choc par les betas au lieu de rejouer les prix ligne a ligne.",
+      "portfolio_initial_eur": 30632.82,
+      "portfolio_min_eur": 5341.33,
+      "portfolio_final_eur": 35609.91,
+      "max_dd_panel_pct": -82.56,
+      "final_pnl_pct": 16.25,
+      "recovery_sessions": 1,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 78.6,
+      "best_ticker": "005930",
+      "worst_ticker": "IFX",
+      "proxies_used": [
+        {
+          "original": "196170",
+          "proxy": "^KS11",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "207940",
+          "proxy": "^KS11",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "AL2SI",
+          "proxy": "^FCHI",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "ALCPB",
+          "proxy": "^FCHI",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "APP",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "BILI",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "COIN",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "ENR",
+          "proxy": "^GDAXI",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "FFAI",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "FIG",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "HOOD",
+          "proxy": "IAI",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "IONQ",
+          "proxy": "ARKQ",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "IONQ",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "IS0E",
+          "proxy": "^GDAXI",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "MSTR",
+          "proxy": "^IXIC",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "NNE",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "NVTS",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "R3NK",
+          "proxy": "^GDAXI",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "RGTI",
+          "proxy": "ARKQ",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "RGTI",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "RHM",
+          "proxy": "^GDAXI",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "SNDK",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        }
+      ],
+      "fetch_errors": [],
+      "tickers_perf": {
+        "000660": {
+          "proxy_used": null,
+          "initial_value_eur": 4192.92,
+          "min_value_eur": 1202.38,
+          "final_value_eur": 4364.61,
+          "max_dd_pct": -71.32,
+          "final_pnl_pct": 4.09
+        },
+        "005380": {
+          "proxy_used": null,
+          "initial_value_eur": 2295.07,
+          "min_value_eur": 1204.34,
+          "final_value_eur": 3652.54,
+          "max_dd_pct": -47.52,
+          "final_pnl_pct": 59.15
+        },
+        "005930": {
+          "proxy_used": null,
+          "initial_value_eur": 4009.02,
+          "min_value_eur": 2968.0,
+          "final_value_eur": 6066.63,
+          "max_dd_pct": -25.97,
+          "final_pnl_pct": 51.32
+        },
+        "012450": {
+          "proxy_used": null,
+          "initial_value_eur": 713.53,
+          "min_value_eur": 506.95,
+          "final_value_eur": 2522.4,
+          "max_dd_pct": -28.95,
+          "final_pnl_pct": 253.51
+        },
+        "042660": {
+          "proxy_used": null,
+          "initial_value_eur": 2283.67,
+          "min_value_eur": 630.46,
+          "final_value_eur": 1374.33,
+          "max_dd_pct": -72.39,
+          "final_pnl_pct": -39.82
+        },
+        "196170": {
+          "proxy_used": "^KS11",
+          "initial_value_eur": 818.97,
+          "min_value_eur": 553.99,
+          "final_value_eur": 997.37,
+          "max_dd_pct": -32.35,
+          "final_pnl_pct": 21.78
+        },
+        "207940": {
+          "proxy_used": "^KS11",
+          "initial_value_eur": 957.51,
+          "min_value_eur": 647.71,
+          "final_value_eur": 1166.08,
+          "max_dd_pct": -32.35,
+          "final_pnl_pct": 21.78
+        },
+        "AL2SI": {
+          "proxy_used": "^FCHI",
+          "initial_value_eur": 514.98,
+          "min_value_eur": 311.2,
+          "final_value_eur": 471.14,
+          "max_dd_pct": -39.57,
+          "final_pnl_pct": -8.51
+        },
+        "ALCPB": {
+          "proxy_used": "^FCHI",
+          "initial_value_eur": 547.76,
+          "min_value_eur": 331.01,
+          "final_value_eur": 501.13,
+          "max_dd_pct": -39.57,
+          "final_pnl_pct": -8.51
+        },
+        "AMD": {
+          "proxy_used": null,
+          "initial_value_eur": 401.1,
+          "min_value_eur": 139.38,
+          "final_value_eur": 447.56,
+          "max_dd_pct": -65.25,
+          "final_pnl_pct": 11.58
+        },
+        "APP": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 795.0,
+          "min_value_eur": 450.94,
+          "final_value_eur": 706.95,
+          "max_dd_pct": -43.28,
+          "final_pnl_pct": -11.07
+        },
+        "BESI": {
+          "proxy_used": null,
+          "initial_value_eur": 1685.6,
+          "min_value_eur": 637.17,
+          "final_value_eur": 1523.41,
+          "max_dd_pct": -62.2,
+          "final_pnl_pct": -9.62
+        },
+        "BILI": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 114.33,
+          "min_value_eur": 64.85,
+          "final_value_eur": 101.67,
+          "max_dd_pct": -43.28,
+          "final_pnl_pct": -11.07
+        },
+        "CAT": {
+          "proxy_used": null,
+          "initial_value_eur": 697.01,
+          "min_value_eur": 249.59,
+          "final_value_eur": 595.8,
+          "max_dd_pct": -64.19,
+          "final_pnl_pct": -14.52
+        },
+        "COIN": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 147.75,
+          "min_value_eur": 83.81,
+          "final_value_eur": 131.39,
+          "max_dd_pct": -43.28,
+          "final_pnl_pct": -11.07
+        },
+        "ENR": {
+          "proxy_used": "^GDAXI",
+          "initial_value_eur": 2739.6,
+          "min_value_eur": 1656.37,
+          "final_value_eur": 2581.19,
+          "max_dd_pct": -39.54,
+          "final_pnl_pct": -5.78
+        },
+        "FFAI": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 556.58,
+          "min_value_eur": 315.7,
+          "final_value_eur": 494.94,
+          "max_dd_pct": -43.28,
+          "final_pnl_pct": -11.07
+        },
+        "FIG": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 46.75,
+          "min_value_eur": 26.52,
+          "final_value_eur": 41.57,
+          "max_dd_pct": -43.28,
+          "final_pnl_pct": -11.07
+        },
+        "HOOD": {
+          "proxy_used": "IAI",
+          "initial_value_eur": 978.0,
+          "min_value_eur": 495.56,
+          "final_value_eur": 1053.29,
+          "max_dd_pct": -49.33,
+          "final_pnl_pct": 7.7
+        },
+        "IFX": {
+          "proxy_used": null,
+          "initial_value_eur": 2218.4,
+          "min_value_eur": 145.77,
+          "final_value_eur": 1538.62,
+          "max_dd_pct": -93.43,
+          "final_pnl_pct": -30.64
+        },
+        "IONQ": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 106.37,
+          "min_value_eur": 60.34,
+          "final_value_eur": 94.59,
+          "max_dd_pct": -43.28,
+          "final_pnl_pct": -11.07
+        },
+        "IS0E": {
+          "proxy_used": "^GDAXI",
+          "initial_value_eur": 751.35,
+          "min_value_eur": 454.27,
+          "final_value_eur": 707.91,
+          "max_dd_pct": -39.54,
+          "final_pnl_pct": -5.78
+        },
+        "LRCX": {
+          "proxy_used": null,
+          "initial_value_eur": 531.87,
+          "min_value_eur": 256.2,
+          "final_value_eur": 573.37,
+          "max_dd_pct": -51.83,
+          "final_pnl_pct": 7.8
+        },
+        "MSTR": {
+          "proxy_used": "^IXIC",
+          "initial_value_eur": 385.67,
+          "min_value_eur": 224.45,
+          "final_value_eur": 375.78,
+          "max_dd_pct": -41.8,
+          "final_pnl_pct": -2.56
+        },
+        "NNE": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 78.01,
+          "min_value_eur": 44.25,
+          "final_value_eur": 69.37,
+          "max_dd_pct": -43.28,
+          "final_pnl_pct": -11.07
+        },
+        "NOK": {
+          "proxy_used": null,
+          "initial_value_eur": 43.2,
+          "min_value_eur": 18.8,
+          "final_value_eur": 32.86,
+          "max_dd_pct": -56.47,
+          "final_pnl_pct": -23.94
+        },
+        "NVTS": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 556.15,
+          "min_value_eur": 315.46,
+          "final_value_eur": 494.56,
+          "max_dd_pct": -43.28,
+          "final_pnl_pct": -11.07
+        },
+        "R3NK": {
+          "proxy_used": "^GDAXI",
+          "initial_value_eur": 96.32,
+          "min_value_eur": 58.24,
+          "final_value_eur": 90.75,
+          "max_dd_pct": -39.54,
+          "final_pnl_pct": -5.78
+        },
+        "RGTI": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 274.86,
+          "min_value_eur": 155.91,
+          "final_value_eur": 244.42,
+          "max_dd_pct": -43.28,
+          "final_pnl_pct": -11.07
+        },
+        "RHM": {
+          "proxy_used": "^GDAXI",
+          "initial_value_eur": 1157.4,
+          "min_value_eur": 699.77,
+          "final_value_eur": 1090.48,
+          "max_dd_pct": -39.54,
+          "final_pnl_pct": -5.78
+        },
+        "SMCI": {
+          "proxy_used": null,
+          "initial_value_eur": 31.32,
+          "min_value_eur": 12.14,
+          "final_value_eur": 27.57,
+          "max_dd_pct": -61.23,
+          "final_pnl_pct": -11.98
+        },
+        "SNDK": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 1364.53,
+          "min_value_eur": 774.0,
+          "final_value_eur": 1213.41,
+          "max_dd_pct": -43.28,
+          "final_pnl_pct": -11.07
+        },
+        "SRT3": {
+          "proxy_used": null,
+          "initial_value_eur": 247.7,
+          "min_value_eur": 94.44,
+          "final_value_eur": 197.61,
+          "max_dd_pct": -61.88,
+          "final_pnl_pct": -20.22
+        },
+        "VETO": {
+          "proxy_used": null,
+          "initial_value_eur": 71.0,
+          "min_value_eur": 35.74,
+          "final_value_eur": 64.6,
+          "max_dd_pct": -49.66,
+          "final_pnl_pct": -9.01
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "COVID_Mar_2020",
+      "start_date": "2020-02-19",
+      "end_dd_date": "2020-03-23",
+      "end_recovery_date": "2020-08-18",
+      "context": "COVID-19 shock → S&P -34% en 23 sessions, recovery 5 mois",
+      "severity": "severe_fast",
+      "coverage_pct": 100.0,
+      "coverage_note": null,
+      "portfolio_initial_eur": 32409.29,
+      "portfolio_min_eur": 5850.09,
+      "portfolio_final_eur": 19143.43,
+      "max_dd_panel_pct": -81.95,
+      "final_pnl_pct": -40.93,
+      "recovery_sessions": 97,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 76.0,
+      "best_ticker": "BILI",
+      "worst_ticker": "AL2SI",
+      "proxies_used": [
+        {
+          "original": "APP",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "COIN",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "ENR",
+          "proxy": "^GDAXI",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "FFAI",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "FIG",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "HOOD",
+          "proxy": "IAI",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "IONQ",
+          "proxy": "ARKQ",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "MSTR",
+          "proxy": "^IXIC",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "NNE",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "NVTS",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "R3NK",
+          "proxy": "^GDAXI",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "RGTI",
+          "proxy": "ARKQ",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "SNDK",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        }
+      ],
+      "fetch_errors": [],
+      "tickers_perf": {
+        "000660": {
+          "proxy_used": null,
+          "initial_value_eur": 4192.92,
+          "min_value_eur": 2795.28,
+          "final_value_eur": 3249.01,
+          "max_dd_pct": -33.33,
+          "final_pnl_pct": -22.51
+        },
+        "005380": {
+          "proxy_used": null,
+          "initial_value_eur": 2295.07,
+          "min_value_eur": 1150.15,
+          "final_value_eur": 2914.66,
+          "max_dd_pct": -49.89,
+          "final_pnl_pct": 27.0
+        },
+        "005930": {
+          "proxy_used": null,
+          "initial_value_eur": 4009.02,
+          "min_value_eur": 2830.29,
+          "final_value_eur": 3917.04,
+          "max_dd_pct": -29.4,
+          "final_pnl_pct": -2.29
+        },
+        "012450": {
+          "proxy_used": null,
+          "initial_value_eur": 713.53,
+          "min_value_eur": 326.81,
+          "final_value_eur": 590.43,
+          "max_dd_pct": -54.2,
+          "final_pnl_pct": -17.25
+        },
+        "042660": {
+          "proxy_used": null,
+          "initial_value_eur": 2283.67,
+          "min_value_eur": 1027.19,
+          "final_value_eur": 2352.46,
+          "max_dd_pct": -55.02,
+          "final_pnl_pct": 3.01
+        },
+        "196170": {
+          "proxy_used": null,
+          "initial_value_eur": 818.97,
+          "min_value_eur": 489.72,
+          "final_value_eur": 2878.44,
+          "max_dd_pct": -40.2,
+          "final_pnl_pct": 251.47
+        },
+        "207940": {
+          "proxy_used": null,
+          "initial_value_eur": 957.51,
+          "min_value_eur": 693.95,
+          "final_value_eur": 1516.84,
+          "max_dd_pct": -27.52,
+          "final_pnl_pct": 58.42
+        },
+        "AL2SI": {
+          "proxy_used": null,
+          "initial_value_eur": 514.98,
+          "min_value_eur": 221.08,
+          "final_value_eur": 440.2,
+          "max_dd_pct": -57.07,
+          "final_pnl_pct": -14.52
+        },
+        "ALCPB": {
+          "proxy_used": null,
+          "initial_value_eur": 547.76,
+          "min_value_eur": 348.01,
+          "final_value_eur": 2115.21,
+          "max_dd_pct": -36.47,
+          "final_pnl_pct": 286.16
+        },
+        "AMD": {
+          "proxy_used": null,
+          "initial_value_eur": 401.1,
+          "min_value_eur": 263.61,
+          "final_value_eur": 561.27,
+          "max_dd_pct": -34.28,
+          "final_pnl_pct": 39.93
+        },
+        "APP": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 795.0,
+          "min_value_eur": 525.29,
+          "final_value_eur": 794.02,
+          "max_dd_pct": -33.92,
+          "final_pnl_pct": -0.12
+        },
+        "BESI": {
+          "proxy_used": null,
+          "initial_value_eur": 1685.6,
+          "min_value_eur": 915.09,
+          "final_value_eur": 1766.13,
+          "max_dd_pct": -45.71,
+          "final_pnl_pct": 4.78
+        },
+        "BILI": {
+          "proxy_used": null,
+          "initial_value_eur": 114.33,
+          "min_value_eur": 83.27,
+          "final_value_eur": 179.37,
+          "max_dd_pct": -27.16,
+          "final_pnl_pct": 56.89
+        },
+        "CAT": {
+          "proxy_used": null,
+          "initial_value_eur": 697.01,
+          "min_value_eur": 467.78,
+          "final_value_eur": 718.3,
+          "max_dd_pct": -32.89,
+          "final_pnl_pct": 3.06
+        },
+        "COIN": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 147.75,
+          "min_value_eur": 97.63,
+          "final_value_eur": 147.57,
+          "max_dd_pct": -33.92,
+          "final_pnl_pct": -0.12
+        },
+        "ENR": {
+          "proxy_used": "^GDAXI",
+          "initial_value_eur": 2739.6,
+          "min_value_eur": 1677.2,
+          "final_value_eur": 2567.08,
+          "max_dd_pct": -38.78,
+          "final_pnl_pct": -6.3
+        },
+        "FFAI": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 556.58,
+          "min_value_eur": 367.76,
+          "final_value_eur": 555.89,
+          "max_dd_pct": -33.92,
+          "final_pnl_pct": -0.12
+        },
+        "FIG": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 46.75,
+          "min_value_eur": 30.89,
+          "final_value_eur": 46.7,
+          "max_dd_pct": -33.92,
+          "final_pnl_pct": -0.12
+        },
+        "HOOD": {
+          "proxy_used": "IAI",
+          "initial_value_eur": 978.0,
+          "min_value_eur": 586.23,
+          "final_value_eur": 878.56,
+          "max_dd_pct": -40.06,
+          "final_pnl_pct": -10.17
+        },
+        "IFX": {
+          "proxy_used": null,
+          "initial_value_eur": 2218.4,
+          "min_value_eur": 1081.19,
+          "final_value_eur": 2278.21,
+          "max_dd_pct": -51.26,
+          "final_pnl_pct": 2.7
+        },
+        "IONQ": {
+          "proxy_used": "ARKQ",
+          "initial_value_eur": 106.37,
+          "min_value_eur": 67.29,
+          "final_value_eur": 134.31,
+          "max_dd_pct": -36.74,
+          "final_pnl_pct": 26.26
+        },
+        "IS0E": {
+          "proxy_used": null,
+          "initial_value_eur": 751.35,
+          "min_value_eur": 499.79,
+          "final_value_eur": 974.35,
+          "max_dd_pct": -33.48,
+          "final_pnl_pct": 29.68
+        },
+        "LRCX": {
+          "proxy_used": null,
+          "initial_value_eur": 531.87,
+          "min_value_eur": 299.33,
+          "final_value_eur": 609.95,
+          "max_dd_pct": -43.72,
+          "final_pnl_pct": 14.68
+        },
+        "MSTR": {
+          "proxy_used": "^IXIC",
+          "initial_value_eur": 385.67,
+          "min_value_eur": 269.52,
+          "final_value_eur": 437.23,
+          "max_dd_pct": -30.12,
+          "final_pnl_pct": 13.37
+        },
+        "NNE": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 78.01,
+          "min_value_eur": 51.54,
+          "final_value_eur": 77.91,
+          "max_dd_pct": -33.92,
+          "final_pnl_pct": -0.12
+        },
+        "NOK": {
+          "proxy_used": null,
+          "initial_value_eur": 43.2,
+          "min_value_eur": 24.89,
+          "final_value_eur": 52.15,
+          "max_dd_pct": -42.38,
+          "final_pnl_pct": 20.71
+        },
+        "NVTS": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 556.15,
+          "min_value_eur": 367.48,
+          "final_value_eur": 555.47,
+          "max_dd_pct": -33.92,
+          "final_pnl_pct": -0.12
+        },
+        "R3NK": {
+          "proxy_used": "^GDAXI",
+          "initial_value_eur": 96.32,
+          "min_value_eur": 58.97,
+          "final_value_eur": 90.25,
+          "max_dd_pct": -38.78,
+          "final_pnl_pct": -6.3
+        },
+        "RGTI": {
+          "proxy_used": "ARKQ",
+          "initial_value_eur": 274.86,
+          "min_value_eur": 173.87,
+          "final_value_eur": 347.04,
+          "max_dd_pct": -36.74,
+          "final_pnl_pct": 26.26
+        },
+        "RHM": {
+          "proxy_used": null,
+          "initial_value_eur": 1157.4,
+          "min_value_eur": 535.35,
+          "final_value_eur": 986.68,
+          "max_dd_pct": -53.75,
+          "final_pnl_pct": -14.75
+        },
+        "SMCI": {
+          "proxy_used": null,
+          "initial_value_eur": 31.32,
+          "min_value_eur": 18.16,
+          "final_value_eur": 29.25,
+          "max_dd_pct": -42.02,
+          "final_pnl_pct": -6.6
+        },
+        "SNDK": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 1364.53,
+          "min_value_eur": 901.61,
+          "final_value_eur": 1362.85,
+          "max_dd_pct": -33.92,
+          "final_pnl_pct": -0.12
+        },
+        "SRT3": {
+          "proxy_used": null,
+          "initial_value_eur": 247.7,
+          "min_value_eur": 179.79,
+          "final_value_eur": 362.49,
+          "max_dd_pct": -27.42,
+          "final_pnl_pct": 46.34
+        },
+        "VETO": {
+          "proxy_used": null,
+          "initial_value_eur": 71.0,
+          "min_value_eur": 44.27,
+          "final_value_eur": 74.96,
+          "max_dd_pct": -37.64,
+          "final_pnl_pct": 5.58
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "2022_selloff",
+      "start_date": "2022-01-03",
+      "end_dd_date": "2022-10-12",
+      "end_recovery_date": "2024-01-19",
+      "context": "Fed hikes + inflation → S&P -25% sur 10 mois, recovery 15 mois",
+      "severity": "long",
+      "coverage_pct": 52.9,
+      "coverage_note": "panier RECONSTITUE a 53 % du notionnel a l'ouverture de la periode : les lignes dont la serie DEBUTE plus tard rejoignent le panier en cours de route. Leur arrivee gonfle la valeur du portefeuille sans qu'aucun gain n'ait ete realise, ce qui DEFORME le drawdown (mesure contre la valeur initiale). Le chiffre ci-dessous n'est donc pas le drawdown qu'aurait subi le portefeuille ACTUEL. Remplacement prevu : `portfolio_stress()` (chantier B2), qui propage un choc par les betas au lieu de rejouer les prix ligne a ligne.",
+      "portfolio_initial_eur": 17138.6,
+      "portfolio_min_eur": 4078.73,
+      "portfolio_final_eur": 35150.14,
+      "max_dd_panel_pct": -76.2,
+      "final_pnl_pct": 105.09,
+      "recovery_sessions": 3,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 5.8,
+      "best_ticker": "RHM",
+      "worst_ticker": "FFAI",
+      "proxies_used": [
+        {
+          "original": "FIG",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "NNE",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "R3NK",
+          "proxy": "^GDAXI",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "RGTI",
+          "proxy": "ARKQ",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "SNDK",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        }
+      ],
+      "fetch_errors": [],
+      "tickers_perf": {
+        "000660": {
+          "proxy_used": null,
+          "initial_value_eur": 4192.92,
+          "min_value_eur": 2479.9,
+          "final_value_eur": 4552.33,
+          "max_dd_pct": -40.86,
+          "final_pnl_pct": 8.57
+        },
+        "005380": {
+          "proxy_used": null,
+          "initial_value_eur": 2295.07,
+          "min_value_eur": 1714.13,
+          "final_value_eur": 2089.54,
+          "max_dd_pct": -25.31,
+          "final_pnl_pct": -8.96
+        },
+        "005930": {
+          "proxy_used": null,
+          "initial_value_eur": 4009.02,
+          "min_value_eur": 2725.25,
+          "final_value_eur": 3820.64,
+          "max_dd_pct": -32.02,
+          "final_pnl_pct": -4.7
+        },
+        "012450": {
+          "proxy_used": null,
+          "initial_value_eur": 713.53,
+          "min_value_eur": 589.65,
+          "final_value_eur": 2058.37,
+          "max_dd_pct": -17.36,
+          "final_pnl_pct": 188.48
+        },
+        "042660": {
+          "proxy_used": null,
+          "initial_value_eur": 2283.67,
+          "min_value_eur": 1706.69,
+          "final_value_eur": 2410.04,
+          "max_dd_pct": -25.27,
+          "final_pnl_pct": 5.53
+        },
+        "196170": {
+          "proxy_used": null,
+          "initial_value_eur": 818.97,
+          "min_value_eur": 390.74,
+          "final_value_eur": 1131.33,
+          "max_dd_pct": -52.29,
+          "final_pnl_pct": 38.14
+        },
+        "207940": {
+          "proxy_used": null,
+          "initial_value_eur": 957.51,
+          "min_value_eur": 741.01,
+          "final_value_eur": 817.29,
+          "max_dd_pct": -22.61,
+          "final_pnl_pct": -14.64
+        },
+        "AL2SI": {
+          "proxy_used": null,
+          "initial_value_eur": 514.98,
+          "min_value_eur": 91.08,
+          "final_value_eur": 193.62,
+          "max_dd_pct": -82.31,
+          "final_pnl_pct": -62.4
+        },
+        "ALCPB": {
+          "proxy_used": null,
+          "initial_value_eur": 547.76,
+          "min_value_eur": 34.1,
+          "final_value_eur": 38.75,
+          "max_dd_pct": -93.77,
+          "final_pnl_pct": -92.92
+        },
+        "AMD": {
+          "proxy_used": null,
+          "initial_value_eur": 401.1,
+          "min_value_eur": 149.35,
+          "final_value_eur": 434.29,
+          "max_dd_pct": -62.77,
+          "final_pnl_pct": 8.27
+        },
+        "APP": {
+          "proxy_used": null,
+          "initial_value_eur": 795.0,
+          "min_value_eur": 78.34,
+          "final_value_eur": 362.96,
+          "max_dd_pct": -90.15,
+          "final_pnl_pct": -54.34
+        },
+        "BESI": {
+          "proxy_used": null,
+          "initial_value_eur": 1685.6,
+          "min_value_eur": 981.95,
+          "final_value_eur": 3511.62,
+          "max_dd_pct": -41.74,
+          "final_pnl_pct": 108.33
+        },
+        "BILI": {
+          "proxy_used": null,
+          "initial_value_eur": 114.33,
+          "min_value_eur": 22.97,
+          "final_value_eur": 24.98,
+          "max_dd_pct": -79.91,
+          "final_pnl_pct": -78.15
+        },
+        "CAT": {
+          "proxy_used": null,
+          "initial_value_eur": 697.01,
+          "min_value_eur": 556.1,
+          "final_value_eur": 991.41,
+          "max_dd_pct": -20.22,
+          "final_pnl_pct": 42.24
+        },
+        "COIN": {
+          "proxy_used": null,
+          "initial_value_eur": 147.75,
+          "min_value_eur": 19.14,
+          "final_value_eur": 73.18,
+          "max_dd_pct": -87.04,
+          "final_pnl_pct": -50.47
+        },
+        "ENR": {
+          "proxy_used": null,
+          "initial_value_eur": 2739.6,
+          "min_value_eur": 811.24,
+          "final_value_eur": 1383.95,
+          "max_dd_pct": -70.39,
+          "final_pnl_pct": -49.48
+        },
+        "FFAI": {
+          "proxy_used": null,
+          "initial_value_eur": 556.58,
+          "min_value_eur": 0.18,
+          "final_value_eur": 0.18,
+          "max_dd_pct": -99.97,
+          "final_pnl_pct": -99.97
+        },
+        "FIG": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 46.75,
+          "min_value_eur": 34.87,
+          "final_value_eur": 46.6,
+          "max_dd_pct": -25.43,
+          "final_pnl_pct": -0.33
+        },
+        "HOOD": {
+          "proxy_used": null,
+          "initial_value_eur": 978.0,
+          "min_value_eur": 365.42,
+          "final_value_eur": 565.9,
+          "max_dd_pct": -62.64,
+          "final_pnl_pct": -42.14
+        },
+        "IFX": {
+          "proxy_used": null,
+          "initial_value_eur": 2218.4,
+          "min_value_eur": 1152.18,
+          "final_value_eur": 1881.83,
+          "max_dd_pct": -48.06,
+          "final_pnl_pct": -15.17
+        },
+        "IONQ": {
+          "proxy_used": null,
+          "initial_value_eur": 106.37,
+          "min_value_eur": 18.88,
+          "final_value_eur": 65.27,
+          "max_dd_pct": -82.26,
+          "final_pnl_pct": -38.64
+        },
+        "IS0E": {
+          "proxy_used": null,
+          "initial_value_eur": 751.35,
+          "min_value_eur": 597.85,
+          "final_value_eur": 692.86,
+          "max_dd_pct": -20.43,
+          "final_pnl_pct": -7.78
+        },
+        "LRCX": {
+          "proxy_used": null,
+          "initial_value_eur": 531.87,
+          "min_value_eur": 233.32,
+          "final_value_eur": 591.32,
+          "max_dd_pct": -56.13,
+          "final_pnl_pct": 11.18
+        },
+        "MSTR": {
+          "proxy_used": null,
+          "initial_value_eur": 385.67,
+          "min_value_eur": 94.39,
+          "final_value_eur": 336.16,
+          "max_dd_pct": -75.53,
+          "final_pnl_pct": -12.84
+        },
+        "NNE": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 78.01,
+          "min_value_eur": 58.17,
+          "final_value_eur": 77.75,
+          "max_dd_pct": -25.43,
+          "final_pnl_pct": -0.33
+        },
+        "NOK": {
+          "proxy_used": null,
+          "initial_value_eur": 43.2,
+          "min_value_eur": 21.53,
+          "final_value_eur": 24.91,
+          "max_dd_pct": -50.15,
+          "final_pnl_pct": -42.34
+        },
+        "NVTS": {
+          "proxy_used": null,
+          "initial_value_eur": 556.15,
+          "min_value_eur": 110.14,
+          "final_value_eur": 210.35,
+          "max_dd_pct": -80.2,
+          "final_pnl_pct": -62.18
+        },
+        "R3NK": {
+          "proxy_used": "^GDAXI",
+          "initial_value_eur": 96.32,
+          "min_value_eur": 72.0,
+          "final_value_eur": 99.61,
+          "max_dd_pct": -25.25,
+          "final_pnl_pct": 3.41
+        },
+        "RGTI": {
+          "proxy_used": "ARKQ",
+          "initial_value_eur": 274.86,
+          "min_value_eur": 137.82,
+          "final_value_eur": 186.83,
+          "max_dd_pct": -49.86,
+          "final_pnl_pct": -32.03
+        },
+        "RHM": {
+          "proxy_used": null,
+          "initial_value_eur": 1157.4,
+          "min_value_eur": 1157.4,
+          "final_value_eur": 4718.26,
+          "max_dd_pct": 0.0,
+          "final_pnl_pct": 307.66
+        },
+        "SMCI": {
+          "proxy_used": null,
+          "initial_value_eur": 31.32,
+          "min_value_eur": 23.91,
+          "final_value_eur": 213.83,
+          "max_dd_pct": -23.65,
+          "final_pnl_pct": 582.68
+        },
+        "SNDK": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 1364.53,
+          "min_value_eur": 1017.6,
+          "final_value_eur": 1360.09,
+          "max_dd_pct": -25.43,
+          "final_pnl_pct": -0.33
+        },
+        "SRT3": {
+          "proxy_used": null,
+          "initial_value_eur": 247.7,
+          "min_value_eur": 91.94,
+          "final_value_eur": 125.5,
+          "max_dd_pct": -62.88,
+          "final_pnl_pct": -49.33
+        },
+        "VETO": {
+          "proxy_used": null,
+          "initial_value_eur": 71.0,
+          "min_value_eur": 42.63,
+          "final_value_eur": 58.58,
+          "max_dd_pct": -39.96,
+          "final_pnl_pct": -17.49
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "Q4_2018_Powell_pivot",
+      "start_date": "2018-10-03",
+      "end_dd_date": "2018-12-24",
+      "end_recovery_date": "2019-04-12",
+      "context": "Powell pivot tardif → S&P -20% en 12 semaines, recovery 4 mois",
+      "severity": "moderate",
+      "coverage_pct": 30.6,
+      "coverage_note": "panier RECONSTITUE a 31 % du notionnel a l'ouverture de la periode : les lignes dont la serie DEBUTE plus tard rejoignent le panier en cours de route. Leur arrivee gonfle la valeur du portefeuille sans qu'aucun gain n'ait ete realise, ce qui DEFORME le drawdown (mesure contre la valeur initiale). Le chiffre ci-dessous n'est donc pas le drawdown qu'aurait subi le portefeuille ACTUEL. Remplacement prevu : `portfolio_stress()` (chantier B2), qui propage un choc par les betas au lieu de rejouer les prix ligne a ligne.",
+      "portfolio_initial_eur": 9927.83,
+      "portfolio_min_eur": 8458.29,
+      "portfolio_final_eur": 33540.45,
+      "max_dd_panel_pct": -14.8,
+      "final_pnl_pct": 237.84,
+      "recovery_sessions": 1,
+      "recovered_within_window": true,
+      "pct_time_in_drawdown": 0.7,
+      "best_ticker": "012450",
+      "worst_ticker": "ALCPB",
+      "proxies_used": [
+        {
+          "original": "APP",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "COIN",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "ENR",
+          "proxy": "^GDAXI",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "FFAI",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "FIG",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "HOOD",
+          "proxy": "IAI",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "IONQ",
+          "proxy": "ARKQ",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "MSTR",
+          "proxy": "^IXIC",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "NNE",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "NVTS",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "R3NK",
+          "proxy": "^GDAXI",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "RGTI",
+          "proxy": "ARKQ",
+          "reason": "IPO posterieure au debut de la periode"
+        },
+        {
+          "original": "SNDK",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        }
+      ],
+      "fetch_errors": [],
+      "tickers_perf": {
+        "000660": {
+          "proxy_used": null,
+          "initial_value_eur": 4192.92,
+          "min_value_eur": 3510.07,
+          "final_value_eur": 4816.28,
+          "max_dd_pct": -16.29,
+          "final_pnl_pct": 14.87
+        },
+        "005380": {
+          "proxy_used": null,
+          "initial_value_eur": 2295.07,
+          "min_value_eur": 1710.7,
+          "final_value_eur": 2420.09,
+          "max_dd_pct": -25.46,
+          "final_pnl_pct": 5.45
+        },
+        "005930": {
+          "proxy_used": null,
+          "initial_value_eur": 4009.02,
+          "min_value_eur": 3390.08,
+          "final_value_eur": 4219.62,
+          "max_dd_pct": -15.44,
+          "final_pnl_pct": 5.25
+        },
+        "012450": {
+          "proxy_used": null,
+          "initial_value_eur": 713.53,
+          "min_value_eur": 693.15,
+          "final_value_eur": 802.72,
+          "max_dd_pct": -2.86,
+          "final_pnl_pct": 12.5
+        },
+        "042660": {
+          "proxy_used": null,
+          "initial_value_eur": 2283.67,
+          "min_value_eur": 1638.09,
+          "final_value_eur": 1770.82,
+          "max_dd_pct": -28.27,
+          "final_pnl_pct": -22.46
+        },
+        "196170": {
+          "proxy_used": null,
+          "initial_value_eur": 818.97,
+          "min_value_eur": 585.64,
+          "final_value_eur": 1038.29,
+          "max_dd_pct": -28.49,
+          "final_pnl_pct": 26.78
+        },
+        "207940": {
+          "proxy_used": null,
+          "initial_value_eur": 957.51,
+          "min_value_eur": 519.71,
+          "final_value_eur": 664.43,
+          "max_dd_pct": -45.72,
+          "final_pnl_pct": -30.61
+        },
+        "AL2SI": {
+          "proxy_used": null,
+          "initial_value_eur": 514.98,
+          "min_value_eur": 439.97,
+          "final_value_eur": 514.98,
+          "max_dd_pct": -14.57,
+          "final_pnl_pct": 0.0
+        },
+        "ALCPB": {
+          "proxy_used": null,
+          "initial_value_eur": 547.76,
+          "min_value_eur": 196.88,
+          "final_value_eur": 244.14,
+          "max_dd_pct": -64.06,
+          "final_pnl_pct": -55.43
+        },
+        "AMD": {
+          "proxy_used": null,
+          "initial_value_eur": 401.1,
+          "min_value_eur": 234.91,
+          "final_value_eur": 392.07,
+          "max_dd_pct": -41.44,
+          "final_pnl_pct": -2.25
+        },
+        "APP": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 795.0,
+          "min_value_eur": 638.9,
+          "final_value_eur": 784.89,
+          "max_dd_pct": -19.63,
+          "final_pnl_pct": -1.27
+        },
+        "BESI": {
+          "proxy_used": null,
+          "initial_value_eur": 1685.6,
+          "min_value_eur": 1405.7,
+          "final_value_eur": 2345.8,
+          "max_dd_pct": -16.61,
+          "final_pnl_pct": 39.17
+        },
+        "BILI": {
+          "proxy_used": null,
+          "initial_value_eur": 114.33,
+          "min_value_eur": 95.39,
+          "final_value_eur": 138.99,
+          "max_dd_pct": -16.56,
+          "final_pnl_pct": 21.57
+        },
+        "CAT": {
+          "proxy_used": null,
+          "initial_value_eur": 697.01,
+          "min_value_eur": 498.04,
+          "final_value_eur": 619.62,
+          "max_dd_pct": -28.55,
+          "final_pnl_pct": -11.1
+        },
+        "COIN": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 147.75,
+          "min_value_eur": 118.74,
+          "final_value_eur": 145.87,
+          "max_dd_pct": -19.63,
+          "final_pnl_pct": -1.27
+        },
+        "ENR": {
+          "proxy_used": "^GDAXI",
+          "initial_value_eur": 2739.6,
+          "min_value_eur": 2322.84,
+          "final_value_eur": 2670.48,
+          "max_dd_pct": -15.21,
+          "final_pnl_pct": -2.52
+        },
+        "FFAI": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 556.58,
+          "min_value_eur": 447.3,
+          "final_value_eur": 549.5,
+          "max_dd_pct": -19.63,
+          "final_pnl_pct": -1.27
+        },
+        "FIG": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 46.75,
+          "min_value_eur": 37.57,
+          "final_value_eur": 46.16,
+          "max_dd_pct": -19.63,
+          "final_pnl_pct": -1.27
+        },
+        "HOOD": {
+          "proxy_used": "IAI",
+          "initial_value_eur": 978.0,
+          "min_value_eur": 821.8,
+          "final_value_eur": 959.08,
+          "max_dd_pct": -15.97,
+          "final_pnl_pct": -1.93
+        },
+        "IFX": {
+          "proxy_used": null,
+          "initial_value_eur": 2218.4,
+          "min_value_eur": 1776.92,
+          "final_value_eur": 2245.39,
+          "max_dd_pct": -19.9,
+          "final_pnl_pct": 1.22
+        },
+        "IONQ": {
+          "proxy_used": "ARKQ",
+          "initial_value_eur": 106.37,
+          "min_value_eur": 85.03,
+          "final_value_eur": 107.13,
+          "max_dd_pct": -20.06,
+          "final_pnl_pct": 0.71
+        },
+        "IS0E": {
+          "proxy_used": null,
+          "initial_value_eur": 751.35,
+          "min_value_eur": 726.66,
+          "final_value_eur": 922.54,
+          "max_dd_pct": -3.29,
+          "final_pnl_pct": 22.78
+        },
+        "LRCX": {
+          "proxy_used": null,
+          "initial_value_eur": 531.87,
+          "min_value_eur": 433.85,
+          "final_value_eur": 677.4,
+          "max_dd_pct": -18.43,
+          "final_pnl_pct": 27.36
+        },
+        "MSTR": {
+          "proxy_used": "^IXIC",
+          "initial_value_eur": 385.67,
+          "min_value_eur": 297.62,
+          "final_value_eur": 381.93,
+          "max_dd_pct": -22.83,
+          "final_pnl_pct": -0.97
+        },
+        "NNE": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 78.01,
+          "min_value_eur": 62.69,
+          "final_value_eur": 77.01,
+          "max_dd_pct": -19.63,
+          "final_pnl_pct": -1.27
+        },
+        "NOK": {
+          "proxy_used": null,
+          "initial_value_eur": 43.2,
+          "min_value_eur": 40.67,
+          "final_value_eur": 46.36,
+          "max_dd_pct": -5.85,
+          "final_pnl_pct": 7.31
+        },
+        "NVTS": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 556.15,
+          "min_value_eur": 446.95,
+          "final_value_eur": 549.08,
+          "max_dd_pct": -19.63,
+          "final_pnl_pct": -1.27
+        },
+        "R3NK": {
+          "proxy_used": "^GDAXI",
+          "initial_value_eur": 96.32,
+          "min_value_eur": 81.67,
+          "final_value_eur": 93.89,
+          "max_dd_pct": -15.21,
+          "final_pnl_pct": -2.52
+        },
+        "RGTI": {
+          "proxy_used": "ARKQ",
+          "initial_value_eur": 274.86,
+          "min_value_eur": 219.72,
+          "final_value_eur": 276.83,
+          "max_dd_pct": -20.06,
+          "final_pnl_pct": 0.71
+        },
+        "RHM": {
+          "proxy_used": null,
+          "initial_value_eur": 1157.4,
+          "min_value_eur": 939.86,
+          "final_value_eur": 1268.16,
+          "max_dd_pct": -18.8,
+          "final_pnl_pct": 9.57
+        },
+        "SMCI": {
+          "proxy_used": null,
+          "initial_value_eur": 31.32,
+          "min_value_eur": 17.05,
+          "final_value_eur": 32.2,
+          "max_dd_pct": -45.56,
+          "final_pnl_pct": 2.8
+        },
+        "SNDK": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 1364.53,
+          "min_value_eur": 1096.61,
+          "final_value_eur": 1347.18,
+          "max_dd_pct": -19.63,
+          "final_pnl_pct": -1.27
+        },
+        "SRT3": {
+          "proxy_used": null,
+          "initial_value_eur": 247.7,
+          "min_value_eur": 187.49,
+          "final_value_eur": 289.26,
+          "max_dd_pct": -24.31,
+          "final_pnl_pct": 16.78
+        },
+        "VETO": {
+          "proxy_used": null,
+          "initial_value_eur": 71.0,
+          "min_value_eur": 63.14,
+          "final_value_eur": 82.23,
+          "max_dd_pct": -11.07,
+          "final_pnl_pct": 15.81
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "label": "Aug_2024_flash_crash",
+      "start_date": "2024-07-31",
+      "end_dd_date": "2024-08-05",
+      "end_recovery_date": "2024-08-26",
+      "context": "Yen carry unwind → S&P -6% en 3 sessions, recovery 3 semaines",
+      "severity": "mild",
+      "coverage_pct": 100.0,
+      "coverage_note": null,
+      "portfolio_initial_eur": 32409.29,
+      "portfolio_min_eur": 16554.96,
+      "portfolio_final_eur": 32123.49,
+      "max_dd_panel_pct": -48.92,
+      "final_pnl_pct": -0.88,
+      "recovery_sessions": 17,
+      "recovered_within_window": false,
+      "pct_time_in_drawdown": 94.4,
+      "best_ticker": "RHM",
+      "worst_ticker": "FFAI",
+      "proxies_used": [
+        {
+          "original": "FIG",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        },
+        {
+          "original": "SNDK",
+          "proxy": "^GSPC",
+          "reason": "aucun historique sur la periode — remplace par l'indice de sa place (approximation assumee)"
+        }
+      ],
+      "fetch_errors": [],
+      "tickers_perf": {
+        "000660": {
+          "proxy_used": null,
+          "initial_value_eur": 4192.92,
+          "min_value_eur": 3363.39,
+          "final_value_eur": 3996.85,
+          "max_dd_pct": -19.78,
+          "final_pnl_pct": -4.68
+        },
+        "005380": {
+          "proxy_used": null,
+          "initial_value_eur": 2295.07,
+          "min_value_eur": 2064.64,
+          "final_value_eur": 2327.33,
+          "max_dd_pct": -10.04,
+          "final_pnl_pct": 1.41
+        },
+        "005930": {
+          "proxy_used": null,
+          "initial_value_eur": 4009.02,
+          "min_value_eur": 3411.73,
+          "final_value_eur": 3712.76,
+          "max_dd_pct": -14.9,
+          "final_pnl_pct": -7.39
+        },
+        "012450": {
+          "proxy_used": null,
+          "initial_value_eur": 713.53,
+          "min_value_eur": 654.07,
+          "final_value_eur": 682.56,
+          "max_dd_pct": -8.33,
+          "final_pnl_pct": -4.34
+        },
+        "042660": {
+          "proxy_used": null,
+          "initial_value_eur": 2283.67,
+          "min_value_eur": 2014.56,
+          "final_value_eur": 2478.03,
+          "max_dd_pct": -11.78,
+          "final_pnl_pct": 8.51
+        },
+        "196170": {
+          "proxy_used": null,
+          "initial_value_eur": 818.97,
+          "min_value_eur": 679.87,
+          "final_value_eur": 818.97,
+          "max_dd_pct": -16.98,
+          "final_pnl_pct": 0.0
+        },
+        "207940": {
+          "proxy_used": null,
+          "initial_value_eur": 957.51,
+          "min_value_eur": 908.51,
+          "final_value_eur": 976.9,
+          "max_dd_pct": -5.12,
+          "final_pnl_pct": 2.03
+        },
+        "AL2SI": {
+          "proxy_used": null,
+          "initial_value_eur": 514.98,
+          "min_value_eur": 433.85,
+          "final_value_eur": 485.59,
+          "max_dd_pct": -15.75,
+          "final_pnl_pct": -5.71
+        },
+        "ALCPB": {
+          "proxy_used": null,
+          "initial_value_eur": 547.76,
+          "min_value_eur": 483.62,
+          "final_value_eur": 876.42,
+          "max_dd_pct": -11.71,
+          "final_pnl_pct": 60.0
+        },
+        "AMD": {
+          "proxy_used": null,
+          "initial_value_eur": 401.1,
+          "min_value_eur": 357.21,
+          "final_value_eur": 430.25,
+          "max_dd_pct": -10.94,
+          "final_pnl_pct": 7.27
+        },
+        "APP": {
+          "proxy_used": null,
+          "initial_value_eur": 795.0,
+          "min_value_eur": 692.3,
+          "final_value_eur": 930.07,
+          "max_dd_pct": -12.92,
+          "final_pnl_pct": 16.99
+        },
+        "BESI": {
+          "proxy_used": null,
+          "initial_value_eur": 1685.6,
+          "min_value_eur": 1476.93,
+          "final_value_eur": 1691.26,
+          "max_dd_pct": -12.38,
+          "final_pnl_pct": 0.34
+        },
+        "BILI": {
+          "proxy_used": null,
+          "initial_value_eur": 114.33,
+          "min_value_eur": 97.8,
+          "final_value_eur": 112.74,
+          "max_dd_pct": -14.46,
+          "final_pnl_pct": -1.39
+        },
+        "CAT": {
+          "proxy_used": null,
+          "initial_value_eur": 697.01,
+          "min_value_eur": 637.81,
+          "final_value_eur": 701.46,
+          "max_dd_pct": -8.49,
+          "final_pnl_pct": 0.64
+        },
+        "COIN": {
+          "proxy_used": null,
+          "initial_value_eur": 147.75,
+          "min_value_eur": 117.82,
+          "final_value_eur": 139.22,
+          "max_dd_pct": -20.26,
+          "final_pnl_pct": -5.78
+        },
+        "ENR": {
+          "proxy_used": null,
+          "initial_value_eur": 2739.6,
+          "min_value_eur": 2409.75,
+          "final_value_eur": 2621.5,
+          "max_dd_pct": -12.04,
+          "final_pnl_pct": -4.31
+        },
+        "FFAI": {
+          "proxy_used": null,
+          "initial_value_eur": 556.58,
+          "min_value_eur": 119.27,
+          "final_value_eur": 287.43,
+          "max_dd_pct": -78.57,
+          "final_pnl_pct": -48.36
+        },
+        "FIG": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 46.75,
+          "min_value_eur": 43.91,
+          "final_value_eur": 47.7,
+          "max_dd_pct": -6.08,
+          "final_pnl_pct": 2.03
+        },
+        "HOOD": {
+          "proxy_used": null,
+          "initial_value_eur": 978.0,
+          "min_value_eur": 780.69,
+          "final_value_eur": 1004.15,
+          "max_dd_pct": -20.18,
+          "final_pnl_pct": 2.67
+        },
+        "IFX": {
+          "proxy_used": null,
+          "initial_value_eur": 2218.4,
+          "min_value_eur": 2043.97,
+          "final_value_eur": 2228.78,
+          "max_dd_pct": -7.86,
+          "final_pnl_pct": 0.47
+        },
+        "IONQ": {
+          "proxy_used": null,
+          "initial_value_eur": 106.37,
+          "min_value_eur": 85.75,
+          "final_value_eur": 96.32,
+          "max_dd_pct": -19.39,
+          "final_pnl_pct": -9.45
+        },
+        "IS0E": {
+          "proxy_used": null,
+          "initial_value_eur": 751.35,
+          "min_value_eur": 696.27,
+          "final_value_eur": 760.58,
+          "max_dd_pct": -7.33,
+          "final_pnl_pct": 1.23
+        },
+        "LRCX": {
+          "proxy_used": null,
+          "initial_value_eur": 531.87,
+          "min_value_eur": 431.88,
+          "final_value_eur": 489.22,
+          "max_dd_pct": -18.8,
+          "final_pnl_pct": -8.02
+        },
+        "MSTR": {
+          "proxy_used": null,
+          "initial_value_eur": 385.67,
+          "min_value_eur": 297.85,
+          "final_value_eur": 358.35,
+          "max_dd_pct": -22.77,
+          "final_pnl_pct": -7.08
+        },
+        "NNE": {
+          "proxy_used": null,
+          "initial_value_eur": 78.01,
+          "min_value_eur": 43.92,
+          "final_value_eur": 67.37,
+          "max_dd_pct": -43.69,
+          "final_pnl_pct": -13.63
+        },
+        "NOK": {
+          "proxy_used": null,
+          "initial_value_eur": 43.2,
+          "min_value_eur": 40.88,
+          "final_value_eur": 45.95,
+          "max_dd_pct": -5.36,
+          "final_pnl_pct": 6.38
+        },
+        "NVTS": {
+          "proxy_used": null,
+          "initial_value_eur": 556.15,
+          "min_value_eur": 430.23,
+          "final_value_eur": 463.21,
+          "max_dd_pct": -22.64,
+          "final_pnl_pct": -16.71
+        },
+        "R3NK": {
+          "proxy_used": null,
+          "initial_value_eur": 96.32,
+          "min_value_eur": 88.75,
+          "final_value_eur": 91.51,
+          "max_dd_pct": -7.86,
+          "final_pnl_pct": -5.0
+        },
+        "RGTI": {
+          "proxy_used": null,
+          "initial_value_eur": 274.86,
+          "min_value_eur": 207.62,
+          "final_value_eur": 257.78,
+          "max_dd_pct": -24.47,
+          "final_pnl_pct": -6.21
+        },
+        "RHM": {
+          "proxy_used": null,
+          "initial_value_eur": 1157.4,
+          "min_value_eur": 1102.95,
+          "final_value_eur": 1230.0,
+          "max_dd_pct": -4.7,
+          "final_pnl_pct": 6.27
+        },
+        "SMCI": {
+          "proxy_used": null,
+          "initial_value_eur": 31.32,
+          "min_value_eur": 21.99,
+          "final_value_eur": 27.38,
+          "max_dd_pct": -29.78,
+          "final_pnl_pct": -12.6
+        },
+        "SNDK": {
+          "proxy_used": "^GSPC",
+          "initial_value_eur": 1364.53,
+          "min_value_eur": 1281.51,
+          "final_value_eur": 1392.28,
+          "max_dd_pct": -6.08,
+          "final_pnl_pct": 2.03
+        },
+        "SRT3": {
+          "proxy_used": null,
+          "initial_value_eur": 247.7,
+          "min_value_eur": 221.96,
+          "final_value_eur": 227.14,
+          "max_dd_pct": -10.39,
+          "final_pnl_pct": -8.3
+        },
+        "VETO": {
+          "proxy_used": null,
+          "initial_value_eur": 71.0,
+          "min_value_eur": 66.0,
+          "final_value_eur": 66.42,
+          "max_dd_pct": -7.04,
+          "final_pnl_pct": -6.45
+        }
+      }
+    }
+  ],
+  "panel_summary": {
+    "n_periods_ok": 5,
+    "n_periods_total": 5,
+    "coverage_min_pct": 30.6,
+    "periods_low_coverage": [
+      "Lehman_2008",
+      "2022_selloff",
+      "Q4_2018_Powell_pivot"
+    ],
+    "coverage_caveat": "certaines periodes n'ouvrent qu'avec une partie du notionnel : les lignes dont la serie debute plus tard rejoignent le panier en cours de periode, ce qui DEFORME le drawdown (mesure contre la valeur initiale). Ces periodes ne decrivent pas le portefeuille actuel et la moyenne en herite. A remplacer par `portfolio_stress()` (chantier B2) : propager un choc par les betas plutot que rejouer les prix ligne a ligne rend le probleme sans objet.",
+    "max_dd_avg_pct": -60.89,
+    "max_dd_median_pct": -76.2,
+    "max_dd_worst_pct": -82.56,
+    "recovery_sessions_avg": 26,
+    "recovery_sessions_median": 2,
+    "recovery_sessions_worst": 97,
+    "n_recovered_within_window": 4,
+    "prob_severe_event_5y_base_rate": 0.35,
+    "resilience_score": 3.59
+  },
+  "proxies_legend": {
+    "IONQ": "ARKQ (used for periods before 2021-10-01)",
+    "RGTI": "ARKQ (used for periods before 2022-03-01)",
+    "HOOD": "IAI (used for periods before 2021-07-29)",
+    "SMCI": "SOXX (used for periods before 2007-03-30)",
+    "MSTR": "^IXIC (used for periods before 2020-08-11)",
+    "ENR": "^GDAXI (used for periods before 2020-09-28)",
+    "SRT3": "^GDAXI (used for periods before 2007-01-01)",
+    "RHM": "^GDAXI (used for periods before 2009-01-01)",
+    "AL2SI": "^FCHI (used for periods before 2018-06-14)",
+    "000660": "^KS11 (used for periods before 1996-12-26)",
+    "005930": "^KS11 (used for periods before 1975-06-11)",
+    "012450": "^KS11 (used for periods before 2000-01-04)",
+    "207940": "^KS11 (used for periods before 2016-11-11)"
+  },
+  "note": "Backtest avec ETF proxies pour tickers IPO post-période. yfinance pull live — si offline ou erreur, ce ticker est skippé (fetch_errors loggé). Ne tient pas compte du sizing dynamique (hold-and-suffer constant). Stop loss non simulé."
+}

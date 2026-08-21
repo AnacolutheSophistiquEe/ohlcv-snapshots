@@ -1,0 +1,786 @@
+{
+  "available": true,
+  "generated_at": "2026-08-21T00:18:50.815764+00:00",
+  "ticker": "298040",
+  "spot": 2857000.0,
+  "atr_14": 222285.7143,
+  "target_pct_used": 4.083,
+  "target_source": "resistance a 4 touche(s), force strong (prix 3040348.8372, visee 2973663.1229 apres tampon)",
+  "target_anchor": {
+    "origin": "resistance",
+    "strength": "strong",
+    "anchor_price": 3040348.8372,
+    "aim_price": 2973663.1229
+  },
+  "target_note": "la cible sert a mesurer le R/R vs SPOT. Elle est prise sur une RESISTANCE reelle quand il en existe une au-dessus du spot — jamais sur la cible d'un plan d'entree sur repli, qui peut se situer SOUS le prix courant et rendrait tout R/R absurde.",
+  "doctrine": "la structure PROPOSE les candidats, la statistique ARBITRE entre eux et oppose un VETO chiffre. Aucun stop n'est invente entre deux niveaux : tout stop propose est adosse a un niveau technique reel, avec un tampon de 0.30 ATR sous l'ancre (une meche perce toujours un support).",
+  "constraints": {
+    "p_stop_ceiling": 0.55,
+    "rr_min_vs_spot": 1.6,
+    "cvar95_budget_pct": 12.0,
+    "anchor_buffer_atr": 0.3,
+    "note": "le CVaR n'est pas un critere concurrent du cout espere : c'est la contrainte qui empeche l'optimum en esperance de deriver vers des stops trop larges. Une moyenne sous-pondere les queues par construction, or la queue est precisement l'objet de la demande."
+  },
+  "candidates": [
+    {
+      "anchor_price": 2671000.0,
+      "stop_price": 2604314.2857,
+      "origin": "support",
+      "strength": "weak",
+      "touches": 1,
+      "touch_weight": 1.0,
+      "why": "support a 1 touche(s), force weak",
+      "level_distance_atr": 0.84,
+      "anchor_distance_atr": 0.84,
+      "anchor_quality": "faible",
+      "anchor_quality_basis": "level_distance_atr",
+      "anchor_warning": "support DETECTE a 0.84 ATR du spot, sous le seuil de 1 ATR : mesure a 51 % de casse (pile ou face, IC clusterise [0,474 ; 0,545] sur 940 touches) contre ~35 % au-dela. L'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.",
+      "distance_pct": 8.844,
+      "p_stop_first": 0.2503,
+      "p_target_first": 0.7319,
+      "p_no_touch": 0.0178,
+      "p_stop_ci95": [
+        0.2068,
+        0.2979
+      ],
+      "p_stop_ci_width_pt": 9.1,
+      "prob_source": "calcul DIRECT sur 1208 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1208,
+      "n_eff": 345.6,
+      "grid_point": null,
+      "gap_overshoot_pt": 2.842,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 11.686,
+      "gain_if_tp_pct": 4.083,
+      "rr_vs_spot": 0.349,
+      "cvar95_pct": 8.846,
+      "var95_pct": 8.844,
+      "cost": 0.44739,
+      "ev_pct": 0.0543,
+      "ev_terms": {
+        "target": 2.9887,
+        "stop": -2.925,
+        "no_touch": -0.0094,
+        "pnl_no_touch_pct": -0.5256
+      },
+      "p_stop_upper": 0.2979,
+      "flags": [],
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.35 < plancher 1.60 (mesure vs SPOT, gap inclus)"
+      ]
+    },
+    {
+      "anchor_price": 2523571.4286,
+      "stop_price": 2523571.4286,
+      "origin": "atr_based",
+      "strength": "n/a",
+      "touches": null,
+      "touch_weight": null,
+      "why": "distance en ATR — PAS un niveau structurel, garde-fou de volatilite",
+      "anchor_distance_atr": 1.5,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
+      "distance_pct": 11.671,
+      "p_stop_first": 0.1987,
+      "p_target_first": 0.7689,
+      "p_no_touch": 0.0324,
+      "p_stop_ci95": [
+        0.1592,
+        0.2432
+      ],
+      "p_stop_ci_width_pt": 8.4,
+      "prob_source": "calcul DIRECT sur 1208 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1208,
+      "n_eff": 345.6,
+      "grid_point": null,
+      "gap_overshoot_pt": 0.015,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 11.686,
+      "gain_if_tp_pct": 4.083,
+      "rr_vs_spot": 0.349,
+      "cvar95_pct": 11.671,
+      "var95_pct": 11.671,
+      "cost": -0.41204,
+      "ev_pct": 0.7531,
+      "ev_terms": {
+        "target": 3.1397,
+        "stop": -2.322,
+        "no_touch": -0.0646,
+        "pnl_no_touch_pct": -1.9942
+      },
+      "p_stop_upper": 0.2432,
+      "flags": [],
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.35 < plancher 1.60 (mesure vs SPOT, gap inclus)"
+      ]
+    },
+    {
+      "anchor_price": 2400000.0,
+      "stop_price": 2333314.2857,
+      "origin": "support",
+      "strength": "medium",
+      "touches": 2,
+      "touch_weight": 2.0,
+      "why": "support a 2 touche(s), force medium",
+      "level_distance_atr": 1.89,
+      "anchor_distance_atr": 2.06,
+      "anchor_quality": "exploitable",
+      "anchor_quality_basis": "level_distance_atr",
+      "anchor_warning": null,
+      "distance_pct": 18.33,
+      "p_stop_first": 0.1057,
+      "p_target_first": 0.8036,
+      "p_no_touch": 0.0907,
+      "p_stop_ci95": [
+        0.0766,
+        0.1414
+      ],
+      "p_stop_ci_width_pt": 6.5,
+      "prob_source": "calcul DIRECT sur 1208 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1208,
+      "n_eff": 345.6,
+      "grid_point": null,
+      "gap_overshoot_pt": 0.0,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 18.33,
+      "gain_if_tp_pct": 4.083,
+      "rr_vs_spot": 0.223,
+      "cvar95_pct": 18.33,
+      "var95_pct": 18.33,
+      "cost": -1.12814,
+      "ev_pct": 0.7673,
+      "ev_terms": {
+        "target": 3.2814,
+        "stop": -1.9375,
+        "no_touch": -0.5766,
+        "pnl_no_touch_pct": -6.3576
+      },
+      "p_stop_upper": 0.1414,
+      "flags": [],
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.22 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 18.33 % > budget 12.0 %"
+      ]
+    },
+    {
+      "anchor_price": 2071121.2235,
+      "stop_price": 2004435.5092,
+      "origin": "support",
+      "strength": "medium",
+      "touches": 2,
+      "touch_weight": 2.3,
+      "why": "support a 2 touche(s), force medium",
+      "level_distance_atr": 3.39,
+      "anchor_distance_atr": 3.54,
+      "anchor_quality": "exploitable",
+      "anchor_quality_basis": "level_distance_atr",
+      "anchor_warning": null,
+      "distance_pct": 29.841,
+      "p_stop_first": 0.0114,
+      "p_target_first": 0.8193,
+      "p_no_touch": 0.1693,
+      "p_stop_ci95": [
+        0.0038,
+        0.027
+      ],
+      "p_stop_ci_width_pt": 2.3,
+      "prob_source": "calcul DIRECT sur 1208 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1208,
+      "n_eff": 345.6,
+      "grid_point": null,
+      "gap_overshoot_pt": 0.0,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 29.841,
+      "gain_if_tp_pct": 4.083,
+      "rr_vs_spot": 0.137,
+      "cvar95_pct": 29.841,
+      "var95_pct": 29.841,
+      "cost": -2.98208,
+      "ev_pct": 1.2881,
+      "ev_terms": {
+        "target": 3.3455,
+        "stop": -0.3402,
+        "no_touch": -1.7173,
+        "pnl_no_touch_pct": -10.1433
+      },
+      "p_stop_upper": 0.027,
+      "flags": [],
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.14 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 29.84 % > budget 12.0 %"
+      ]
+    },
+    {
+      "anchor_price": 1789542.8571,
+      "stop_price": 1722857.1428,
+      "origin": "swing_based",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "sous le dernier creux de swing — invalidation structurelle",
+      "anchor_distance_atr": 4.8,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
+      "distance_pct": 39.697,
+      "p_stop_first": 0.0,
+      "p_target_first": 0.8303,
+      "p_no_touch": 0.1697,
+      "p_stop_ci95": [
+        0.0,
+        0.0072
+      ],
+      "p_stop_ci_width_pt": 0.7,
+      "prob_source": "calcul DIRECT sur 1208 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1208,
+      "n_eff": 345.6,
+      "grid_point": null,
+      "gap_overshoot_pt": 0.0,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 39.697,
+      "gain_if_tp_pct": 4.083,
+      "rr_vs_spot": 0.103,
+      "cvar95_pct": 39.697,
+      "var95_pct": 39.697,
+      "cost": -3.39046,
+      "ev_pct": 1.6678,
+      "ev_terms": {
+        "target": 3.3905,
+        "stop": -0.0,
+        "no_touch": -1.7227,
+        "pnl_no_touch_pct": -10.1514
+      },
+      "p_stop_upper": 0.0072,
+      "flags": [],
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.10 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 39.70 % > budget 12.0 %"
+      ]
+    }
+  ],
+  "n_candidates": 5,
+  "n_feasible": 0,
+  "n_rejected": 5,
+  "targets_considered": [
+    {
+      "pct": 4.083,
+      "origin": "resistance",
+      "why": "resistance a 4 touche(s), force strong (prix 3040348.8372, visee 2973663.1229 apres tampon)"
+    },
+    {
+      "pct": 6.742,
+      "origin": "plan_t1",
+      "why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))"
+    },
+    {
+      "pct": 17.066,
+      "origin": "plan_t2",
+      "why": "cible t2 du plan (band 95% (atteignable) · touche hist. 15% (sans stop))"
+    },
+    {
+      "pct": 27.389,
+      "origin": "plan_t3",
+      "why": "cible t3 du plan (plafond band 95% · touche hist. 15% (sans stop))"
+    },
+    {
+      "pct": 42.118,
+      "origin": "resistance",
+      "why": "resistance a 2 touche(s), force medium (prix 4127000.0000, visee 4060314.2857 apres tampon)"
+    }
+  ],
+  "pairs": [
+    {
+      "stop_price": 1722857.1428,
+      "stop_origin": "swing_based",
+      "stop_distance_pct": 39.697,
+      "target_pct": 17.066,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 15% (sans stop))",
+      "rr_vs_spot": 0.43,
+      "p_stop_first": 0.0,
+      "cvar95_pct": 39.697,
+      "cost": -5.87908,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.43 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 39.70 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 1722857.1428,
+      "stop_origin": "swing_based",
+      "stop_distance_pct": 39.697,
+      "target_pct": 6.742,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.17,
+      "p_stop_first": 0.0,
+      "cvar95_pct": 39.697,
+      "cost": -4.75274,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.17 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 39.70 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 2004435.5092,
+      "stop_origin": "support",
+      "stop_distance_pct": 29.841,
+      "target_pct": 17.066,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 15% (sans stop))",
+      "rr_vs_spot": 0.572,
+      "p_stop_first": 0.0444,
+      "cvar95_pct": 29.841,
+      "cost": -4.17528,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.57 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 29.84 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 2004435.5092,
+      "stop_origin": "support",
+      "stop_distance_pct": 29.841,
+      "target_pct": 6.742,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.226,
+      "p_stop_first": 0.0329,
+      "cvar95_pct": 29.841,
+      "cost": -3.58589,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.23 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 29.84 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 1722857.1428,
+      "stop_origin": "swing_based",
+      "stop_distance_pct": 39.697,
+      "target_pct": 4.083,
+      "target_origin": "resistance",
+      "target_why": "resistance a 4 touche(s), force strong (prix 3040348.8372, visee 2973663.1229 apres tampon)",
+      "rr_vs_spot": 0.103,
+      "p_stop_first": 0.0,
+      "cvar95_pct": 39.697,
+      "cost": -3.39046,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.10 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 39.70 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 1722857.1428,
+      "stop_origin": "swing_based",
+      "stop_distance_pct": 39.697,
+      "target_pct": 27.389,
+      "target_origin": "plan_t3",
+      "target_why": "cible t3 du plan (plafond band 95% · touche hist. 15% (sans stop))",
+      "rr_vs_spot": 0.69,
+      "p_stop_first": 0.0,
+      "cvar95_pct": 39.697,
+      "cost": -3.18804,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 11.6 % du temps (< 15 %) meme a 10 seances : le R/R de 0.69 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 0.69 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 39.70 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 2004435.5092,
+      "stop_origin": "support",
+      "stop_distance_pct": 29.841,
+      "target_pct": 4.083,
+      "target_origin": "resistance",
+      "target_why": "resistance a 4 touche(s), force strong (prix 3040348.8372, visee 2973663.1229 apres tampon)",
+      "rr_vs_spot": 0.137,
+      "p_stop_first": 0.0114,
+      "cvar95_pct": 29.841,
+      "cost": -2.98208,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.14 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 29.84 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 1722857.1428,
+      "stop_origin": "swing_based",
+      "stop_distance_pct": 39.697,
+      "target_pct": 42.118,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 4127000.0000, visee 4060314.2857 apres tampon)",
+      "rr_vs_spot": 1.061,
+      "p_stop_first": 0.0,
+      "cvar95_pct": 39.697,
+      "cost": -1.40253,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 3.3 % du temps (< 15 %) meme a 10 seances : le R/R de 1.06 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.06 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 39.70 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 2333314.2857,
+      "stop_origin": "support",
+      "stop_distance_pct": 18.33,
+      "target_pct": 6.742,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.368,
+      "p_stop_first": 0.151,
+      "cvar95_pct": 18.33,
+      "cost": -1.32685,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.37 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 18.33 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 2004435.5092,
+      "stop_origin": "support",
+      "stop_distance_pct": 29.841,
+      "target_pct": 27.389,
+      "target_origin": "plan_t3",
+      "target_why": "cible t3 du plan (plafond band 95% · touche hist. 15% (sans stop))",
+      "rr_vs_spot": 0.918,
+      "p_stop_first": 0.0447,
+      "cvar95_pct": 29.841,
+      "cost": -1.24201,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 11.6 % du temps (< 15 %) meme a 10 seances : le R/R de 0.92 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 0.92 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 29.84 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 2333314.2857,
+      "stop_origin": "support",
+      "stop_distance_pct": 18.33,
+      "target_pct": 4.083,
+      "target_origin": "resistance",
+      "target_why": "resistance a 4 touche(s), force strong (prix 3040348.8372, visee 2973663.1229 apres tampon)",
+      "rr_vs_spot": 0.223,
+      "p_stop_first": 0.1057,
+      "cvar95_pct": 18.33,
+      "cost": -1.12814,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.22 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 18.33 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 2523571.4286,
+      "stop_origin": "atr_based",
+      "stop_distance_pct": 11.671,
+      "target_pct": 6.742,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.577,
+      "p_stop_first": 0.2601,
+      "cvar95_pct": 11.671,
+      "cost": -0.53632,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.58 < plancher 1.60 (mesure vs SPOT, gap inclus)"
+      ]
+    },
+    {
+      "stop_price": 2523571.4286,
+      "stop_origin": "atr_based",
+      "stop_distance_pct": 11.671,
+      "target_pct": 4.083,
+      "target_origin": "resistance",
+      "target_why": "resistance a 4 touche(s), force strong (prix 3040348.8372, visee 2973663.1229 apres tampon)",
+      "rr_vs_spot": 0.349,
+      "p_stop_first": 0.1987,
+      "cvar95_pct": 11.671,
+      "cost": -0.41204,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.35 < plancher 1.60 (mesure vs SPOT, gap inclus)"
+      ]
+    },
+    {
+      "stop_price": 2333314.2857,
+      "stop_origin": "support",
+      "stop_distance_pct": 18.33,
+      "target_pct": 17.066,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 15% (sans stop))",
+      "rr_vs_spot": 0.931,
+      "p_stop_first": 0.2193,
+      "cvar95_pct": 18.33,
+      "cost": 0.20306,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.93 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 18.33 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 2604314.2857,
+      "stop_origin": "support",
+      "stop_distance_pct": 8.844,
+      "target_pct": 4.083,
+      "target_origin": "resistance",
+      "target_why": "resistance a 4 touche(s), force strong (prix 3040348.8372, visee 2973663.1229 apres tampon)",
+      "rr_vs_spot": 0.349,
+      "p_stop_first": 0.2503,
+      "cvar95_pct": 8.846,
+      "cost": 0.44739,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.35 < plancher 1.60 (mesure vs SPOT, gap inclus)"
+      ]
+    },
+    {
+      "stop_price": 2604314.2857,
+      "stop_origin": "support",
+      "stop_distance_pct": 8.844,
+      "target_pct": 6.742,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.577,
+      "p_stop_first": 0.3193,
+      "cvar95_pct": 8.846,
+      "cost": 0.53711,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.58 < plancher 1.60 (mesure vs SPOT, gap inclus)"
+      ]
+    },
+    {
+      "stop_price": 2004435.5092,
+      "stop_origin": "support",
+      "stop_distance_pct": 29.841,
+      "target_pct": 42.118,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 4127000.0000, visee 4060314.2857 apres tampon)",
+      "rr_vs_spot": 1.411,
+      "p_stop_first": 0.0447,
+      "cvar95_pct": 29.841,
+      "cost": 0.8727,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 3.3 % du temps (< 15 %) meme a 10 seances : le R/R de 1.41 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.41 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 29.84 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 2523571.4286,
+      "stop_origin": "atr_based",
+      "stop_distance_pct": 11.671,
+      "target_pct": 17.066,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 15% (sans stop))",
+      "rr_vs_spot": 1.46,
+      "p_stop_first": 0.3641,
+      "cvar95_pct": 11.671,
+      "cost": 1.68736,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 1.46 < plancher 1.60 (mesure vs SPOT, gap inclus)"
+      ]
+    },
+    {
+      "stop_price": 2604314.2857,
+      "stop_origin": "support",
+      "stop_distance_pct": 8.844,
+      "target_pct": 17.066,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 15% (sans stop))",
+      "rr_vs_spot": 1.46,
+      "p_stop_first": 0.4452,
+      "cvar95_pct": 8.846,
+      "cost": 3.49264,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 1.46 < plancher 1.60 (mesure vs SPOT, gap inclus)"
+      ]
+    },
+    {
+      "stop_price": 2333314.2857,
+      "stop_origin": "support",
+      "stop_distance_pct": 18.33,
+      "target_pct": 27.389,
+      "target_origin": "plan_t3",
+      "target_why": "cible t3 du plan (plafond band 95% · touche hist. 15% (sans stop))",
+      "rr_vs_spot": 1.494,
+      "p_stop_first": 0.2246,
+      "cvar95_pct": 18.33,
+      "cost": 4.158,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 11.1 % du temps (< 15 %) meme a 10 seances : le R/R de 1.49 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.49 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 18.33 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 2523571.4286,
+      "stop_origin": "atr_based",
+      "stop_distance_pct": 11.671,
+      "target_pct": 27.389,
+      "target_origin": "plan_t3",
+      "target_why": "cible t3 du plan (plafond band 95% · touche hist. 15% (sans stop))",
+      "rr_vs_spot": 2.344,
+      "p_stop_first": 0.3786,
+      "cvar95_pct": 11.671,
+      "cost": 6.57707,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 11.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.34 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible"
+      ]
+    },
+    {
+      "stop_price": 2333314.2857,
+      "stop_origin": "support",
+      "stop_distance_pct": 18.33,
+      "target_pct": 42.118,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 4127000.0000, visee 4060314.2857 apres tampon)",
+      "rr_vs_spot": 2.298,
+      "p_stop_first": 0.2246,
+      "cvar95_pct": 18.33,
+      "cost": 7.44425,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 3.3 % du temps (< 15 %) meme a 10 seances : le R/R de 2.30 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "CVaR 95 % 18.33 % > budget 12.0 %"
+      ]
+    },
+    {
+      "stop_price": 2604314.2857,
+      "stop_origin": "support",
+      "stop_distance_pct": 8.844,
+      "target_pct": 27.389,
+      "target_origin": "plan_t3",
+      "target_why": "cible t3 du plan (plafond band 95% · touche hist. 15% (sans stop))",
+      "rr_vs_spot": 2.344,
+      "p_stop_first": 0.4583,
+      "cvar95_pct": 8.846,
+      "cost": 8.61631,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 11.0 % du temps (< 15 %) meme a 10 seances : le R/R de 2.34 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible"
+      ]
+    },
+    {
+      "stop_price": 2523571.4286,
+      "stop_origin": "atr_based",
+      "stop_distance_pct": 11.671,
+      "target_pct": 42.118,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 4127000.0000, visee 4060314.2857 apres tampon)",
+      "rr_vs_spot": 3.604,
+      "p_stop_first": 0.3786,
+      "cvar95_pct": 11.671,
+      "cost": 10.99474,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 3.3 % du temps (< 15 %) meme a 10 seances : le R/R de 3.60 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible"
+      ]
+    }
+  ],
+  "best_pair": null,
+  "min_target_for_rr": [
+    {
+      "stop_price": 2604314.2857,
+      "stop_origin": "support",
+      "stop_distance_pct": 8.844,
+      "min_target_pct_for_rr": 18.698,
+      "note": "avec le surcout de gap inclus, ce stop coute 11.69 % ; il faut donc viser au moins 18.70 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 2523571.4286,
+      "stop_origin": "atr_based",
+      "stop_distance_pct": 11.671,
+      "min_target_pct_for_rr": 18.698,
+      "note": "avec le surcout de gap inclus, ce stop coute 11.69 % ; il faut donc viser au moins 18.70 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 2333314.2857,
+      "stop_origin": "support",
+      "stop_distance_pct": 18.33,
+      "min_target_pct_for_rr": 29.328,
+      "note": "avec le surcout de gap inclus, ce stop coute 18.33 % ; il faut donc viser au moins 29.33 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 2004435.5092,
+      "stop_origin": "support",
+      "stop_distance_pct": 29.841,
+      "min_target_pct_for_rr": 47.746,
+      "note": "avec le surcout de gap inclus, ce stop coute 29.84 % ; il faut donc viser au moins 47.75 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 1722857.1428,
+      "stop_origin": "swing_based",
+      "stop_distance_pct": 39.697,
+      "min_target_pct_for_rr": 63.515,
+      "note": "avec le surcout de gap inclus, ce stop coute 39.70 % ; il faut donc viser au moins 63.52 % pour tenir le plancher de R/R 1.6"
+    }
+  ],
+  "verdict": "AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : cela veut dire que la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier n'est alors PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable.",
+  "recommended": null,
+  "indistinguishable": [],
+  "tie_rule": "les candidats dont les couts different de moins que l'incertitude statistique combinee ne sont PAS departageables (intervalle sur p_stop_first : 18 points en mediane sur la grille, mesure T12). Le depart se fait alors sur la FORCE STRUCTURELLE du niveau.",
+  "regret_sensitivity": {
+    "grid": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "per_regret": {
+      "0.0": {
+        "ranked": [],
+        "chosen_stop_price": null,
+        "n_tied": 0
+      },
+      "0.5": {
+        "ranked": [],
+        "chosen_stop_price": null,
+        "n_tied": 0
+      },
+      "1.0": {
+        "ranked": [],
+        "chosen_stop_price": null,
+        "n_tied": 0
+      }
+    },
+    "winner_is_robust": true,
+    "reading": "le terme de cout de sortie prematuree est INCONNU du systeme. Plutot que d'en inventer une valeur, on refait le classement sur toute sa plage plausible. Le gagnant NE CHANGE PAS : l'inconnue est sans effet sur cette ligne."
+  },
+  "caveats": [
+    "LECTURE SEULE : aucun ordre pose, modifie ou annule.",
+    "La perte si stop inclut le surcout de gap (T1) : un optimiseur qui l'ignore choisit des stops trop serres sur les titres gap-prone.",
+    "Le R/R est mesure vs SPOT, jamais vs PRU — le PRU est un cout coule.",
+    "Les probabilites viennent de la GRILLE (80 seances, non ponderee), plus precise que l'estimation propre au plan ; elle repond a une question legerement differente (depuis l'ouverture).",
+    "Le dimensionnement n'est PAS ici : ce module dit OU couper, pas COMBIEN mettre. La taille se deduit ensuite de budget_de_risque / distance_stop (etage portefeuille)."
+  ]
+}
