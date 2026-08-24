@@ -1,0 +1,2472 @@
+{
+  "available": true,
+  "generated_at": "2026-08-22T18:40:56.875806+00:00",
+  "ticker": "COIN",
+  "spot": 186.49,
+  "atr_14": 8.7011,
+  "target_pct_used": 38.541,
+  "target_source": "resistance a 2 touche(s), force medium (prix 260.9750, visee 258.3647 apres tampon)",
+  "target_anchor": {
+    "origin": "resistance",
+    "strength": "medium",
+    "anchor_price": 260.975,
+    "aim_price": 258.3647
+  },
+  "target_note": "la cible sert a mesurer le R/R vs SPOT. Elle est prise sur une RESISTANCE reelle quand il en existe une au-dessus du spot — jamais sur la cible d'un plan d'entree sur repli, qui peut se situer SOUS le prix courant et rendrait tout R/R absurde.",
+  "anchor_evidence": {
+    "source": "registre point-in-time",
+    "measured_at": "2026-08-21T21:45:41.215688+00:00",
+    "stale": false,
+    "generated_at": "2026-08-21T21:45:41.215688+00:00",
+    "buckets": [
+      {
+        "bucket": "<1",
+        "dist_atr_range": [
+          0.0,
+          1.0
+        ],
+        "n": 1127,
+        "n_tickers": 58,
+        "p_break": 0.5102,
+        "ci95": [
+          0.4783,
+          0.5413
+        ],
+        "coinflip": true,
+        "usable": true
+      },
+      {
+        "bucket": "1-3",
+        "dist_atr_range": [
+          1.0,
+          3.0
+        ],
+        "n": 1157,
+        "n_tickers": 58,
+        "p_break": 0.3647,
+        "ci95": [
+          0.3328,
+          0.3986
+        ],
+        "coinflip": false,
+        "usable": true
+      },
+      {
+        "bucket": "3-6",
+        "dist_atr_range": [
+          3.0,
+          6.0
+        ],
+        "n": 385,
+        "n_tickers": 58,
+        "p_break": 0.3299,
+        "ci95": [
+          0.2808,
+          0.3785
+        ],
+        "coinflip": false,
+        "usable": true
+      },
+      {
+        "bucket": ">=6",
+        "dist_atr_range": [
+          6.0,
+          null
+        ],
+        "n": 49,
+        "n_tickers": 26,
+        "p_break": 0.3061,
+        "ci95": [
+          0.1739,
+          0.4364
+        ],
+        "coinflip": false,
+        "usable": true
+      }
+    ]
+  },
+  "doctrine": "la structure PROPOSE les candidats, la statistique ARBITRE entre eux et oppose un VETO chiffre. Aucun stop n'est invente entre deux niveaux : tout stop propose est adosse a un niveau technique reel, avec un tampon MESURE sous l'ancre. Le tampon est le quantile 90 %% de la profondeur des incursions sur les supports QUI ONT TENU, conditionne par l'ATR du titre. ⚠ La formule ancienne « une meche perce TOUJOURS un support » est refutee : 70,3 %% des tenues ne penetrent pas du tout.",
+  "constraints": {
+    "p_stop_ceiling": 0.55,
+    "rr_min_vs_spot": 1.6,
+    "cvar95_budget_pct": 4.35,
+    "cvar95_budget_source": "allocation d'Euler (contrainte jointe)",
+    "cvar95_budget_stale": false,
+    "cvar95_budget_measured_at": "2026-08-21T22:46:37.395058+00:00",
+    "cvar95_budget_default_witness": 12.0,
+    "anchor_buffer_atr": 0.525,
+    "anchor_buffer_source": {
+      "source": "registre point-in-time, quantile 90 % par classe d'ATR",
+      "stale": false,
+      "level_type": "support",
+      "class": "atr_moyen",
+      "atr_pct_range": [
+        4.113,
+        6.779
+      ],
+      "n": 521,
+      "ci95": [
+        0.459,
+        0.615
+      ],
+      "survival_at_0_30": 0.8292,
+      "measured_at": "2026-08-21T21:45:41.215688+00:00"
+    },
+    "target_buffer_atr": 0.3,
+    "anchor_buffer_default_witness": 0.3,
+    "note": "le CVaR n'est pas un critere concurrent du cout espere : c'est la contrainte qui empeche l'optimum en esperance de deriver vers des stops trop larges. Une moyenne sous-pondere les queues par construction, or la queue est precisement l'objet de la demande."
+  },
+  "risk_budget": {
+    "pct": 4.35,
+    "source": "allocation d'Euler (contrainte jointe)",
+    "stale": false,
+    "generated_at": "2026-08-21T22:46:37.395058+00:00",
+    "price_of_risk": 0.212,
+    "rationing_factor": 0.549,
+    "budget_exhausted_by_core": false,
+    "budget_degenerate": false,
+    "degenerate_reading": null,
+    "permanent_core_share_pct": 42.8,
+    "line": {
+      "symbol": "COIN",
+      "currency": "USD",
+      "market_value_eur": 794.52,
+      "permanent_core": false,
+      "tail_share_measured": 0.0394,
+      "tail_share_ci95": [
+        0.0207,
+        0.0626
+      ],
+      "tail_role_established": true,
+      "tail_share_shrunk": 0.0385,
+      "share_of_notional": 0.0263,
+      "allocation_share": 0.0375,
+      "n_tail_windows": 99,
+      "contribution_eur": 163.23,
+      "budget_eur": 34.57,
+      "cvar_budget_pct_raw": 4.35,
+      "cvar_budget_pct_applied": 4.35,
+      "clamped": false,
+      "delta_vs_default_pt": -7.65,
+      "basis": "contribution conditionnelle a la queue, retrecie vers le notionnel, renormalisee au budget restant"
+    }
+  },
+  "composition": {
+    "method": "enumeration EXACTE des compositions entieres sur les ancres reelles. Espace petit : pas d'optimiseur continu, pas de descente de gradient, auditabilite totale.",
+    "cost_basis": "cout espere issu du SOCLE DE 104 FENETRES (2000-2026, declencheur exogene a 2 ATR), interpole en distance et lineaire en fraction — la linearite est MESUREE. ⚠ FOURCHETTE et non valeur ponctuelle : le jackknife montre qu'une seule ligne porte 60 % de l'amplitude, donc lire ces chiffres a un facteur deux pres.",
+    "fees": "1.30 par execution (?). Chaque tranche sort EXACTEMENT une fois en OCO, donc K tranches coutent K executions.",
+    "no_market_sale": "aucune vente au marche parmi les candidats — directive operateur du 21/08/2026. Le calculateur place des protections, il ne dimensionne pas.",
+    "coverage_rule": "une tranche compte comme protection si sa distance est inferieure a 15.87 pourcent. Ce seuil est celui de LA LIGNE : une ligne de beta b est a -b*x quand le livre est a -x, donc son stop utile va jusqu'a b*x. Avant le 22/08 on comparait la distance de ligne au repli du LIVRE en supposant beta = 1, ce qui se trompait DANS LES DEUX SENS.",
+    "coverage_threshold_pct": 15.87,
+    "coverage_threshold_source": "beta de la ligne x profondeur cible du livre (exigence de portefeuille)",
+    "tie_break_rule": "l'esperance ne departage qu'au-dela de 0.10 point annualise — elle n'est fiable qu'a un facteur deux pres. En deca, on prend la plus grande LIBERTE (stops les plus profonds en moyenne ponderee, donc des runners qui respirent) puis MOINS de frais.",
+    "n_tranches_requested": null,
+    "n_tranches_honoured": null,
+    "n_tranches_note": "nombre de tranches libre. ⚠ L'objectif etant LINEAIRE en les fractions, son optimum est un SOMMET : une seule tranche, SAUF si une contrainte mord (couverture F* ou budget de queue). Une tranche unique n'est donc pas un defaut, c'est la solution exacte quand aucune contrainte n'est active.",
+    "tightness": "neutre",
+    "tightness_lambda": 0.25,
+    "tightness_meaning": "lambda = combien de points de rendement ORDINAIRE on accepte d'abandonner pour epargner UN point de perte en KRACH. 0 = indifferent au krach (le plus large que les contraintes autorisent), eleve = on serre. Choix d'OPERATEUR : la frontiere etant monotone, il n'y a pas d'optimum a calculer, seulement un point a choisir.",
+    "frontier_used": true,
+    "tail_budget_scale_M_over_N": 1.0,
+    "tail_budget_effective_pct": 4.35,
+    "position_shares_total": null,
+    "q_max_within_tail_budget": null,
+    "size_note": "taille de position inconnue — q_max non calculable",
+    "candidate_pool_pruning": {
+      "pool_before": 14,
+      "pool_after": 9,
+      "dropped": 5,
+      "rule": "meilleurs au score de frontiere (lambda courant) DE CHAQUE COTE du seuil de couverture, plus les deux extremes de chaque cote. L'objectif etant lineaire, un candidat mal classe ne peut entrer dans un optimum que par une contrainte, et les extremes couvrent ce cas.",
+      "why": "la densification a porte les candidats de 5 a 14 ; sans reduction l'enumeration atteignait 142 461 compositions a 50 titres."
+    },
+    "tranche_floor_atr": 1.0,
+    "tranche_floor_pct": 4.666,
+    "candidates_below_noise_floor": [],
+    "tranche_floor_rule": "un stop a moins de 1.0 ATR n'est pas une protection mais une sortie programmee sur le bruit (doctrine inscrite le 21/08, appliquee par le compositeur le 22/08). 0 candidat(s) ecarte(s).",
+    "depth_rule": "budget de queue HORS DE PORTEE : la profondeur est choisie par la PLUS PETITE CVaR d'echelle compatible avec l'exigence du livre. Mesure du 22/08 sur ENR (995 fenetres) : desserrer le runner gagne +1,4 point en moyenne et en coute 3,6 sous le seuil et 9,0 en krach, les trois etablis.",
+    "tail_budget_pct": 4.35,
+    "tail_budget_reachable": false,
+    "tail_budget_rule": "⚠ BUDGET DE QUEUE INATTEIGNABLE (4.35 %) : AUCUNE echelle n'y entre, meme la plus serree. La position consomme plus de queue que sa part du budget du livre — c'est un signal de TAILLE, et la reponse de fond est de reduire la position, pas de rapprocher les stops. Le compositeur, lui, ne peut pas redimensionner : il retient donc la PLUS PETITE queue compatible avec l'exigence, et signale le depassement au lieu de le masquer.",
+    "coverage_contract": "LES 12 TITRES SONT PROTEGES, sans exception — c'est le contrat de `/warden SYM N`. Le compositeur arbitre la REPARTITION et les EMPLACEMENTS, jamais le fait de couvrir. Le « runner » est la tranche au stop le PLUS PROFOND, pas une part decouverte.",
+    "requirement_rule": "le livre exige que 26.9 % de la ligne soit protege dans ce seuil, pas la totalite. Au-dela, proteger davantage ne sert plus le livre et coute des runners : le classement passe alors a l'esperance nette.",
+    "position_value": 2237.88,
+    "n_compositions": 5025,
+    "enumeration_resolution": "grille de 1/20 de la position (pas de 5 %), COMPLETEE par l'enumeration entiere exacte jusqu'a 30 titres. L'espace est donc BORNE independamment de la quantite (20 / 190 / 1140 repartitions pour 1 / 2 / 3 tranches) et EXACT la ou la contrainte d'integralite mord. Aucune troncature silencieuse : la version precedente coupait 74,8 % de l'espace a 50 titres et 99,8 % a 300, sans le dire.",
+    "ranking_robustness": {
+      "sans_esperance": false,
+      "liberte_maximale": false,
+      "esperance_seule": false
+    },
+    "coverage_degenerate": false,
+    "degenerate_reading": null,
+    "ranking_reading": "le CHOIX est porte par la COUVERTURE et il resiste au retrait de l'esperance (⚠ NON verifie ici). Le PRIX affiche, lui, en depend et se lit a un facteur deux pres — jackknife : une seule ligne porte 60 % de l'amplitude. Le tri « esperance seule » diverge : il elit le stop le plus large, qui ne couvre rien.",
+    "top": [
+      {
+        "n_tranches": 1,
+        "full_coverage": true,
+        "liberty_mean_distance_pct": 7.31,
+        "frontier_score": -0.0154,
+        "runner_tranche_qty": 12,
+        "runner_tranche_distance_pct": 7.31,
+        "runner_qty": 0,
+        "naked_qty": 0,
+        "runner_frac": 0.0,
+        "tranches": [
+          {
+            "qty": 12,
+            "stop_price": 172.8578,
+            "distance_pct": 7.31,
+            "distance_atr": 1.04,
+            "origin": "sr_based",
+            "anchor_quality": "non mesure",
+            "p_stop_first": 0.5984,
+            "p_stop_ci95": [
+              0.5461,
+              0.6491
+            ],
+            "target_pct": 38.541,
+            "rr_vs_spot": 3.246,
+            "cvar95_pct": 7.383,
+            "violates": [
+              "cible atteinte seulement 1.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+              "p_stop_first 0.598, borne haute 0.649 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
+              "CVaR 95 % 7.38 % > budget 4.35 %"
+            ]
+          }
+        ],
+        "ev_per_stress_window_pct": -0.3748,
+        "ev_if_deep_drawdown_pct": 1.9268,
+        "ev_annualised_pct": -1.462,
+        "fee_eur": 1.3,
+        "fee_pct_of_position": 0.0581,
+        "net_ev_annualised_pct": -1.52,
+        "cvar95_weighted_pct": 7.383,
+        "p_stop_upper_worst": 0.6491,
+        "violation_severity_weighted": 0.8774,
+        "protected_frac": 1.0,
+        "covering_frac": 1.0,
+        "call_drawdown_pct": 9.75,
+        "within_tail_budget": false,
+        "tail_budget_excess_ratio": 0.6972,
+        "required_protected_frac": 0.2694,
+        "meets_requirement": true,
+        "coverage_surplus": 0.7306,
+        "ev_undecidable": false
+      },
+      {
+        "n_tranches": 2,
+        "full_coverage": true,
+        "liberty_mean_distance_pct": 7.504,
+        "frontier_score": -0.0589,
+        "runner_tranche_qty": 1,
+        "runner_tranche_distance_pct": 9.635,
+        "runner_qty": 0,
+        "naked_qty": 0,
+        "runner_frac": 0.0,
+        "tranches": [
+          {
+            "qty": 11,
+            "stop_price": 172.8578,
+            "distance_pct": 7.31,
+            "distance_atr": 1.04,
+            "origin": "sr_based",
+            "anchor_quality": "non mesure",
+            "p_stop_first": 0.5984,
+            "p_stop_ci95": [
+              0.5461,
+              0.6491
+            ],
+            "target_pct": 38.541,
+            "rr_vs_spot": 3.246,
+            "cvar95_pct": 7.383,
+            "violates": [
+              "cible atteinte seulement 1.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+              "p_stop_first 0.598, borne haute 0.649 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
+              "CVaR 95 % 7.38 % > budget 4.35 %"
+            ]
+          },
+          {
+            "qty": 1,
+            "stop_price": 168.5219,
+            "distance_pct": 9.635,
+            "distance_atr": 1.54,
+            "origin": "support",
+            "anchor_quality": "faible",
+            "p_stop_first": 0.4764,
+            "p_stop_ci95": [
+              0.4241,
+              0.5291
+            ],
+            "target_pct": 38.541,
+            "rr_vs_spot": 2.246,
+            "cvar95_pct": 9.683,
+            "violates": [
+              "cible atteinte seulement 1.3 % du temps (< 15 %) meme a 10 seances : le R/R de 2.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+              "CVaR 95 % 9.68 % > budget 4.35 %"
+            ]
+          }
+        ],
+        "ev_per_stress_window_pct": -0.3745,
+        "ev_if_deep_drawdown_pct": 1.9223,
+        "ev_annualised_pct": -1.46,
+        "fee_eur": 2.6,
+        "fee_pct_of_position": 0.1162,
+        "net_ev_annualised_pct": -1.577,
+        "cvar95_weighted_pct": 7.575,
+        "p_stop_upper_worst": 0.6491,
+        "violation_severity_weighted": 0.9064,
+        "protected_frac": 1.0,
+        "covering_frac": 1.0,
+        "call_drawdown_pct": 9.75,
+        "within_tail_budget": false,
+        "tail_budget_excess_ratio": 0.7414,
+        "required_protected_frac": 0.2694,
+        "meets_requirement": true,
+        "coverage_surplus": 0.7306,
+        "ev_undecidable": false
+      },
+      {
+        "n_tranches": 2,
+        "full_coverage": true,
+        "liberty_mean_distance_pct": 7.697,
+        "frontier_score": -0.1025,
+        "runner_tranche_qty": 2,
+        "runner_tranche_distance_pct": 9.635,
+        "runner_qty": 0,
+        "naked_qty": 0,
+        "runner_frac": 0.0,
+        "tranches": [
+          {
+            "qty": 10,
+            "stop_price": 172.8578,
+            "distance_pct": 7.31,
+            "distance_atr": 1.04,
+            "origin": "sr_based",
+            "anchor_quality": "non mesure",
+            "p_stop_first": 0.5984,
+            "p_stop_ci95": [
+              0.5461,
+              0.6491
+            ],
+            "target_pct": 38.541,
+            "rr_vs_spot": 3.246,
+            "cvar95_pct": 7.383,
+            "violates": [
+              "cible atteinte seulement 1.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+              "p_stop_first 0.598, borne haute 0.649 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
+              "CVaR 95 % 7.38 % > budget 4.35 %"
+            ]
+          },
+          {
+            "qty": 2,
+            "stop_price": 168.5219,
+            "distance_pct": 9.635,
+            "distance_atr": 1.54,
+            "origin": "support",
+            "anchor_quality": "faible",
+            "p_stop_first": 0.4764,
+            "p_stop_ci95": [
+              0.4241,
+              0.5291
+            ],
+            "target_pct": 38.541,
+            "rr_vs_spot": 2.246,
+            "cvar95_pct": 9.683,
+            "violates": [
+              "cible atteinte seulement 1.3 % du temps (< 15 %) meme a 10 seances : le R/R de 2.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+              "CVaR 95 % 9.68 % > budget 4.35 %"
+            ]
+          }
+        ],
+        "ev_per_stress_window_pct": -0.3741,
+        "ev_if_deep_drawdown_pct": 1.9179,
+        "ev_annualised_pct": -1.459,
+        "fee_eur": 2.6,
+        "fee_pct_of_position": 0.1162,
+        "net_ev_annualised_pct": -1.575,
+        "cvar95_weighted_pct": 7.766,
+        "p_stop_upper_worst": 0.6491,
+        "violation_severity_weighted": 0.9355,
+        "protected_frac": 1.0,
+        "covering_frac": 1.0,
+        "call_drawdown_pct": 9.75,
+        "within_tail_budget": false,
+        "tail_budget_excess_ratio": 0.7853,
+        "required_protected_frac": 0.2694,
+        "meets_requirement": true,
+        "coverage_surplus": 0.7306,
+        "ev_undecidable": false
+      },
+      {
+        "n_tranches": 2,
+        "full_coverage": true,
+        "liberty_mean_distance_pct": 9.228,
+        "frontier_score": -0.1132,
+        "runner_tranche_qty": 1,
+        "runner_tranche_distance_pct": 30.327,
+        "runner_qty": 0,
+        "naked_qty": 0,
+        "runner_frac": 0.0,
+        "tranches": [
+          {
+            "qty": 11,
+            "stop_price": 172.8578,
+            "distance_pct": 7.31,
+            "distance_atr": 1.04,
+            "origin": "sr_based",
+            "anchor_quality": "non mesure",
+            "p_stop_first": 0.5984,
+            "p_stop_ci95": [
+              0.5461,
+              0.6491
+            ],
+            "target_pct": 38.541,
+            "rr_vs_spot": 3.246,
+            "cvar95_pct": 7.383,
+            "violates": [
+              "cible atteinte seulement 1.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+              "p_stop_first 0.598, borne haute 0.649 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
+              "CVaR 95 % 7.38 % > budget 4.35 %"
+            ]
+          },
+          {
+            "qty": 1,
+            "stop_price": 129.9331,
+            "distance_pct": 30.327,
+            "distance_atr": 6.5,
+            "origin": "atr_grid",
+            "anchor_quality": "non mesure",
+            "p_stop_first": 0.0132,
+            "p_stop_ci95": [
+              0.0048,
+              0.0296
+            ],
+            "target_pct": 38.541,
+            "rr_vs_spot": 1.271,
+            "cvar95_pct": 30.327,
+            "violates": [
+              "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.27 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+              "R/R 1.27 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+              "CVaR 95 % 30.33 % > budget 4.35 %"
+            ]
+          }
+        ],
+        "ev_per_stress_window_pct": -0.3408,
+        "ev_if_deep_drawdown_pct": 1.8012,
+        "ev_annualised_pct": -1.329,
+        "fee_eur": 2.6,
+        "fee_pct_of_position": 0.1162,
+        "net_ev_annualised_pct": -1.445,
+        "cvar95_weighted_pct": 9.295,
+        "p_stop_upper_worst": 0.6491,
+        "violation_severity_weighted": 1.3019,
+        "protected_frac": 1.0,
+        "covering_frac": 0.9167,
+        "call_drawdown_pct": 9.75,
+        "within_tail_budget": false,
+        "tail_budget_excess_ratio": 1.1368,
+        "required_protected_frac": 0.2694,
+        "meets_requirement": true,
+        "coverage_surplus": 0.6473,
+        "ev_undecidable": false
+      },
+      {
+        "n_tranches": 2,
+        "full_coverage": true,
+        "liberty_mean_distance_pct": 9.422,
+        "frontier_score": -0.1132,
+        "runner_tranche_qty": 1,
+        "runner_tranche_distance_pct": 32.66,
+        "runner_qty": 0,
+        "naked_qty": 0,
+        "runner_frac": 0.0,
+        "tranches": [
+          {
+            "qty": 11,
+            "stop_price": 172.8578,
+            "distance_pct": 7.31,
+            "distance_atr": 1.04,
+            "origin": "sr_based",
+            "anchor_quality": "non mesure",
+            "p_stop_first": 0.5984,
+            "p_stop_ci95": [
+              0.5461,
+              0.6491
+            ],
+            "target_pct": 38.541,
+            "rr_vs_spot": 3.246,
+            "cvar95_pct": 7.383,
+            "violates": [
+              "cible atteinte seulement 1.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+              "p_stop_first 0.598, borne haute 0.649 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
+              "CVaR 95 % 7.38 % > budget 4.35 %"
+            ]
+          },
+          {
+            "qty": 1,
+            "stop_price": 125.5825,
+            "distance_pct": 32.66,
+            "distance_atr": 7.0,
+            "origin": "atr_grid",
+            "anchor_quality": "non mesure",
+            "p_stop_first": 0.0042,
+            "p_stop_ci95": [
+              0.0007,
+              0.0158
+            ],
+            "target_pct": 38.541,
+            "rr_vs_spot": 1.18,
+            "cvar95_pct": 32.66,
+            "violates": [
+              "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.18 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+              "R/R 1.18 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+              "CVaR 95 % 32.66 % > budget 4.35 %"
+            ]
+          }
+        ],
+        "ev_per_stress_window_pct": -0.3408,
+        "ev_if_deep_drawdown_pct": 1.8012,
+        "ev_annualised_pct": -1.329,
+        "fee_eur": 2.6,
+        "fee_pct_of_position": 0.1162,
+        "net_ev_annualised_pct": -1.445,
+        "cvar95_weighted_pct": 9.489,
+        "p_stop_upper_worst": 0.6491,
+        "violation_severity_weighted": 1.3466,
+        "protected_frac": 1.0,
+        "covering_frac": 0.9167,
+        "call_drawdown_pct": 9.75,
+        "within_tail_budget": false,
+        "tail_budget_excess_ratio": 1.1814,
+        "required_protected_frac": 0.2694,
+        "meets_requirement": true,
+        "coverage_surplus": 0.6473,
+        "ev_undecidable": false
+      }
+    ]
+  },
+  "required_protection": {
+    "available": true,
+    "protectable": true,
+    "contributive": true,
+    "stop_distance_max_pct": 15.87,
+    "required_protected_frac": 0.2694,
+    "beta_down_book": 1.058,
+    "beta_measured": true,
+    "atr_pct": 4.67,
+    "noise_floor_pct": 4.67,
+    "weight_pct": 2.63,
+    "target_drawdown_pct": 15.0,
+    "target_rationale": "profondeur ou la protection a ete MESUREE payante sur le socle des 104 fenetres (au-dela de -15 % du livre), plancher au repli d'appel de marge durci (9.75 %) qui n'est pas negociable. Reglable par --protection-target-pct.",
+    "book_required_frac_of_gross": 0.123,
+    "generated_at": "2026-08-21T22:46:37.395058+00:00",
+    "source": "exigence du livre : proteger 26.9 % de la ligne dans les 15.87 % sous le spot (beta 1.06 x cible 15.0 %)"
+  },
+  "candidates": [
+    {
+      "anchor_price": 177.4259,
+      "stop_price": 172.8578,
+      "origin": "sr_based",
+      "strength": "strong",
+      "touches": null,
+      "touch_weight": null,
+      "why": "sous le S/R le plus proche",
+      "anchor_distance_atr": 1.04,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
+      "distance_pct": 7.31,
+      "p_stop_first": 0.5984,
+      "p_target_first": 0.0114,
+      "p_no_touch": 0.3903,
+      "p_stop_ci95": [
+        0.5461,
+        0.6491
+      ],
+      "p_stop_ci_width_pt": 10.3,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 4.562,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 11.872,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 3.246,
+      "cvar95_pct": 7.383,
+      "var95_pct": 7.31,
+      "cvar95_budget_pct": 4.35,
+      "cost": 3.57596,
+      "ev_pct": -3.576,
+      "ev_terms": {
+        "target": 0.4394,
+        "stop": -7.1042,
+        "no_touch": 3.0889,
+        "pnl_no_touch_pct": 7.9141
+      },
+      "p_stop_upper": 0.6491,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-3.58 %) : P(cible) 1.1 % x 38.54 % + P(rien) 39.0 % x 7.91 % ne couvrent pas P(stop) 59.8 % x 11.87 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "p_stop_first 0.598, borne haute 0.649 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
+        "CVaR 95 % 7.38 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "p_stop_first_upper",
+          "value": 0.6491,
+          "limit": 0.55,
+          "excess_ratio": 0.1802
+        },
+        {
+          "constraint": "cvar95",
+          "value": 7.3828,
+          "limit": 4.35,
+          "excess_ratio": 0.6972
+        }
+      ],
+      "violation_severity": 0.8774
+    },
+    {
+      "anchor_price": 173.09,
+      "stop_price": 168.5219,
+      "origin": "support",
+      "strength": "strong",
+      "touches": 5,
+      "touch_weight": 5.0,
+      "why": "support a 5 touche(s), force strong",
+      "level_distance_atr": 0.94,
+      "anchor_distance_atr": 1.54,
+      "anchor_quality": "faible",
+      "anchor_quality_basis": "level_distance_atr",
+      "anchor_measure": {
+        "bucket": "<1",
+        "p_break": 0.5102,
+        "ci95": [
+          0.4783,
+          0.5413
+        ],
+        "n": 1127,
+        "source": "registre point-in-time",
+        "measured_at": "2026-08-21T21:45:41.215688+00:00"
+      },
+      "anchor_warning": "support DETECTE a 0.94 ATR du spot — compartiment <1, mesure a 51.0 % de casse (IC clusterise [0.478 ; 0.541] sur 1127 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.",
+      "distance_pct": 9.635,
+      "p_stop_first": 0.4764,
+      "p_target_first": 0.0126,
+      "p_no_touch": 0.511,
+      "p_stop_ci95": [
+        0.4241,
+        0.5291
+      ],
+      "p_stop_ci_width_pt": 10.5,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 7.522,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 17.157,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 2.246,
+      "cvar95_pct": 9.683,
+      "var95_pct": 9.635,
+      "cvar95_budget_pct": 4.35,
+      "cost": 4.4372,
+      "ev_pct": -4.4372,
+      "ev_terms": {
+        "target": 0.4856,
+        "stop": -8.1736,
+        "no_touch": 3.2508,
+        "pnl_no_touch_pct": 6.3616
+      },
+      "p_stop_upper": 0.5291,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-4.44 %) : P(cible) 1.3 % x 38.54 % + P(rien) 51.1 % x 6.36 % ne couvrent pas P(stop) 47.6 % x 17.16 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.3 % du temps (< 15 %) meme a 10 seances : le R/R de 2.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "CVaR 95 % 9.68 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 9.683,
+          "limit": 4.35,
+          "excess_ratio": 1.226
+        }
+      ],
+      "violation_severity": 1.226
+    },
+    {
+      "anchor_price": 144.2798,
+      "stop_price": 139.7117,
+      "origin": "swing_based",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "sous le dernier creux de swing — invalidation structurelle",
+      "anchor_distance_atr": 4.85,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
+      "distance_pct": 25.084,
+      "p_stop_first": 0.0512,
+      "p_target_first": 0.0143,
+      "p_no_touch": 0.9345,
+      "p_stop_ci95": [
+        0.0316,
+        0.0783
+      ],
+      "p_stop_ci_width_pt": 4.7,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 0.0,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 25.084,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.536,
+      "cvar95_pct": 25.084,
+      "var95_pct": 25.084,
+      "cvar95_budget_pct": 4.35,
+      "cost": 0.94044,
+      "ev_pct": -0.9404,
+      "ev_terms": {
+        "target": 0.5511,
+        "stop": -1.2843,
+        "no_touch": -0.2073,
+        "pnl_no_touch_pct": -0.2218
+      },
+      "p_stop_upper": 0.0783,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-0.94 %) : P(cible) 1.4 % x 38.54 % + P(rien) 93.5 % x -0.22 % ne couvrent pas P(stop) 5.1 % x 25.08 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.54 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.54 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 25.08 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 25.084,
+          "limit": 4.35,
+          "excess_ratio": 4.7664
+        }
+      ],
+      "violation_severity": 4.7664
+    },
+    {
+      "anchor_price": 139.11,
+      "stop_price": 134.5419,
+      "origin": "support",
+      "strength": "strong",
+      "touches": 8,
+      "touch_weight": 8.3,
+      "why": "support a 8 touche(s), force strong",
+      "level_distance_atr": 4.12,
+      "anchor_distance_atr": 5.45,
+      "anchor_quality": "exploitable",
+      "anchor_quality_basis": "level_distance_atr",
+      "anchor_measure": {
+        "bucket": "3-6",
+        "p_break": 0.3299,
+        "ci95": [
+          0.2808,
+          0.3785
+        ],
+        "n": 385,
+        "source": "registre point-in-time",
+        "measured_at": "2026-08-21T21:45:41.215688+00:00"
+      },
+      "anchor_warning": null,
+      "distance_pct": 27.856,
+      "p_stop_first": 0.0272,
+      "p_target_first": 0.0143,
+      "p_no_touch": 0.9585,
+      "p_stop_ci95": [
+        0.0138,
+        0.0485
+      ],
+      "p_stop_ci_width_pt": 3.5,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 0.0,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 27.856,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.384,
+      "cvar95_pct": 27.856,
+      "var95_pct": 27.856,
+      "cvar95_budget_pct": 4.35,
+      "cost": 0.86743,
+      "ev_pct": -0.8674,
+      "ev_terms": {
+        "target": 0.5511,
+        "stop": -0.7577,
+        "no_touch": -0.6609,
+        "pnl_no_touch_pct": -0.6895
+      },
+      "p_stop_upper": 0.0485,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-0.87 %) : P(cible) 1.4 % x 38.54 % + P(rien) 95.9 % x -0.69 % ne couvrent pas P(stop) 2.7 % x 27.86 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.38 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.38 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 27.86 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 27.856,
+          "limit": 4.35,
+          "excess_ratio": 5.4037
+        }
+      ],
+      "violation_severity": 5.4037
+    },
+    {
+      "anchor_price": 164.7373,
+      "stop_price": 164.7373,
+      "origin": "atr_grid",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "point de grille a 2.50 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
+      "anchor_distance_atr": 2.5,
+      "distance_pct": 11.664,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
+      "p_stop_first": 0.3883,
+      "p_target_first": 0.0129,
+      "p_no_touch": 0.5988,
+      "p_stop_ci95": [
+        0.338,
+        0.4404
+      ],
+      "p_stop_ci_width_pt": 10.2,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 9.645,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 21.309,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.809,
+      "cvar95_pct": 11.702,
+      "var95_pct": 11.664,
+      "cvar95_budget_pct": 4.35,
+      "cost": 4.74592,
+      "ev_pct": -4.7459,
+      "ev_terms": {
+        "target": 0.4972,
+        "stop": -8.2743,
+        "no_touch": 3.0312,
+        "pnl_no_touch_pct": 5.0621
+      },
+      "p_stop_upper": 0.4404,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-4.75 %) : P(cible) 1.3 % x 38.54 % + P(rien) 59.9 % x 5.06 % ne couvrent pas P(stop) 38.8 % x 21.31 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.3 % du temps (< 15 %) meme a 10 seances : le R/R de 1.81 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "CVaR 95 % 11.70 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 11.7025,
+          "limit": 4.35,
+          "excess_ratio": 1.6902
+        }
+      ],
+      "violation_severity": 1.6902
+    },
+    {
+      "anchor_price": 162.5621,
+      "stop_price": 162.5621,
+      "origin": "atr_grid",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "point de grille a 2.75 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
+      "anchor_distance_atr": 2.75,
+      "distance_pct": 12.831,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
+      "p_stop_first": 0.3416,
+      "p_target_first": 0.0129,
+      "p_no_touch": 0.6455,
+      "p_stop_ci95": [
+        0.2931,
+        0.3927
+      ],
+      "p_stop_ci_width_pt": 10.0,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 8.478,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 21.309,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.809,
+      "cvar95_pct": 12.865,
+      "var95_pct": 12.831,
+      "cvar95_budget_pct": 4.35,
+      "cost": 4.0151,
+      "ev_pct": -4.0151,
+      "ev_terms": {
+        "target": 0.4972,
+        "stop": -7.2792,
+        "no_touch": 2.7669,
+        "pnl_no_touch_pct": 4.2864
+      },
+      "p_stop_upper": 0.3927,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-4.02 %) : P(cible) 1.3 % x 38.54 % + P(rien) 64.5 % x 4.29 % ne couvrent pas P(stop) 34.2 % x 21.31 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.3 % du temps (< 15 %) meme a 10 seances : le R/R de 1.81 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "CVaR 95 % 12.86 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 12.8648,
+          "limit": 4.35,
+          "excess_ratio": 1.9574
+        }
+      ],
+      "violation_severity": 1.9574
+    },
+    {
+      "anchor_price": 160.3868,
+      "stop_price": 160.3868,
+      "origin": "atr_grid",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "point de grille a 3.00 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
+      "anchor_distance_atr": 3.0,
+      "distance_pct": 13.997,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
+      "p_stop_first": 0.2911,
+      "p_target_first": 0.0133,
+      "p_no_touch": 0.6955,
+      "p_stop_ci95": [
+        0.2451,
+        0.3406
+      ],
+      "p_stop_ci_width_pt": 9.5,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 7.312,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 21.309,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.809,
+      "cvar95_pct": 14.026,
+      "var95_pct": 13.997,
+      "cvar95_budget_pct": 4.35,
+      "cost": 3.19194,
+      "ev_pct": -3.1919,
+      "ev_terms": {
+        "target": 0.5126,
+        "stop": -6.203,
+        "no_touch": 2.4985,
+        "pnl_no_touch_pct": 3.5924
+      },
+      "p_stop_upper": 0.3406,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-3.19 %) : P(cible) 1.3 % x 38.54 % + P(rien) 69.5 % x 3.59 % ne couvrent pas P(stop) 29.1 % x 21.31 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.3 % du temps (< 15 %) meme a 10 seances : le R/R de 1.81 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "CVaR 95 % 14.03 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 14.0262,
+          "limit": 4.35,
+          "excess_ratio": 2.2244
+        }
+      ],
+      "violation_severity": 2.2244
+    },
+    {
+      "anchor_price": 156.0363,
+      "stop_price": 156.0363,
+      "origin": "atr_grid",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "point de grille a 3.50 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
+      "anchor_distance_atr": 3.5,
+      "distance_pct": 16.33,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
+      "p_stop_first": 0.2022,
+      "p_target_first": 0.0134,
+      "p_no_touch": 0.7844,
+      "p_stop_ci95": [
+        0.1624,
+        0.2469
+      ],
+      "p_stop_ci_width_pt": 8.4,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 4.979,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 21.309,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.809,
+      "cvar95_pct": 16.35,
+      "var95_pct": 16.33,
+      "cvar95_budget_pct": 4.35,
+      "cost": 2.00709,
+      "ev_pct": -2.0071,
+      "ev_terms": {
+        "target": 0.5164,
+        "stop": -4.3087,
+        "no_touch": 1.7851,
+        "pnl_no_touch_pct": 2.2758
+      },
+      "p_stop_upper": 0.2469,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-2.01 %) : P(cible) 1.3 % x 38.54 % + P(rien) 78.4 % x 2.28 % ne couvrent pas P(stop) 20.2 % x 21.31 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.3 % du temps (< 15 %) meme a 10 seances : le R/R de 1.81 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "CVaR 95 % 16.35 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 16.3499,
+          "limit": 4.35,
+          "excess_ratio": 2.7586
+        }
+      ],
+      "violation_severity": 2.7586
+    },
+    {
+      "anchor_price": 151.6857,
+      "stop_price": 151.6857,
+      "origin": "atr_grid",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "point de grille a 4.00 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
+      "anchor_distance_atr": 4.0,
+      "distance_pct": 18.663,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
+      "p_stop_first": 0.1409,
+      "p_target_first": 0.0139,
+      "p_no_touch": 0.8453,
+      "p_stop_ci95": [
+        0.1073,
+        0.1805
+      ],
+      "p_stop_ci_width_pt": 7.3,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 2.646,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 21.309,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.809,
+      "cvar95_pct": 18.674,
+      "var95_pct": 18.663,
+      "cvar95_budget_pct": 4.35,
+      "cost": 1.25659,
+      "ev_pct": -1.2566,
+      "ev_terms": {
+        "target": 0.5357,
+        "stop": -3.0024,
+        "no_touch": 1.2101,
+        "pnl_no_touch_pct": 1.4316
+      },
+      "p_stop_upper": 0.1805,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-1.26 %) : P(cible) 1.4 % x 38.54 % + P(rien) 84.5 % x 1.43 % ne couvrent pas P(stop) 14.1 % x 21.31 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.81 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "CVaR 95 % 18.67 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 18.6736,
+          "limit": 4.35,
+          "excess_ratio": 3.2928
+        }
+      ],
+      "violation_severity": 3.2928
+    },
+    {
+      "anchor_price": 147.3352,
+      "stop_price": 147.3352,
+      "origin": "atr_grid",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "point de grille a 4.50 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
+      "anchor_distance_atr": 4.5,
+      "distance_pct": 20.996,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
+      "p_stop_first": 0.0913,
+      "p_target_first": 0.0143,
+      "p_no_touch": 0.8944,
+      "p_stop_ci95": [
+        0.0643,
+        0.1251
+      ],
+      "p_stop_ci_width_pt": 6.1,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 2.101,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 23.097,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.669,
+      "cvar95_pct": 20.999,
+      "var95_pct": 20.996,
+      "cvar95_budget_pct": 4.35,
+      "cost": 1.06677,
+      "ev_pct": -1.0668,
+      "ev_terms": {
+        "target": 0.5511,
+        "stop": -2.1088,
+        "no_touch": 0.4908,
+        "pnl_no_touch_pct": 0.5488
+      },
+      "p_stop_upper": 0.1251,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-1.07 %) : P(cible) 1.4 % x 38.54 % + P(rien) 89.4 % x 0.55 % ne couvrent pas P(stop) 9.1 % x 23.10 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.67 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "CVaR 95 % 21.00 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 20.9994,
+          "limit": 4.35,
+          "excess_ratio": 3.8274
+        }
+      ],
+      "violation_severity": 3.8274
+    },
+    {
+      "anchor_price": 129.9331,
+      "stop_price": 129.9331,
+      "origin": "atr_grid",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "point de grille a 6.50 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
+      "anchor_distance_atr": 6.5,
+      "distance_pct": 30.327,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
+      "p_stop_first": 0.0132,
+      "p_target_first": 0.0143,
+      "p_no_touch": 0.9724,
+      "p_stop_ci95": [
+        0.0048,
+        0.0296
+      ],
+      "p_stop_ci_width_pt": 2.5,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 0.0,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 30.327,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.271,
+      "cvar95_pct": 30.327,
+      "var95_pct": 30.327,
+      "cvar95_budget_pct": 4.35,
+      "cost": 0.87253,
+      "ev_pct": -0.8725,
+      "ev_terms": {
+        "target": 0.5511,
+        "stop": -0.4003,
+        "no_touch": -1.0234,
+        "pnl_no_touch_pct": -1.0524
+      },
+      "p_stop_upper": 0.0296,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-0.87 %) : P(cible) 1.4 % x 38.54 % + P(rien) 97.2 % x -1.05 % ne couvrent pas P(stop) 1.3 % x 30.33 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.27 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.27 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 30.33 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 30.327,
+          "limit": 4.35,
+          "excess_ratio": 5.9717
+        }
+      ],
+      "violation_severity": 5.9717
+    },
+    {
+      "anchor_price": 125.5825,
+      "stop_price": 125.5825,
+      "origin": "atr_grid",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "point de grille a 7.00 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
+      "anchor_distance_atr": 7.0,
+      "distance_pct": 32.66,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
+      "p_stop_first": 0.0042,
+      "p_target_first": 0.0143,
+      "p_no_touch": 0.9815,
+      "p_stop_ci95": [
+        0.0007,
+        0.0158
+      ],
+      "p_stop_ci_width_pt": 1.5,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 0.0,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 32.66,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.18,
+      "cvar95_pct": 32.66,
+      "var95_pct": 32.66,
+      "cvar95_budget_pct": 4.35,
+      "cost": 0.81026,
+      "ev_pct": -0.8103,
+      "ev_terms": {
+        "target": 0.5511,
+        "stop": -0.1372,
+        "no_touch": -1.2242,
+        "pnl_no_touch_pct": -1.2473
+      },
+      "p_stop_upper": 0.0158,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-0.81 %) : P(cible) 1.4 % x 38.54 % + P(rien) 98.2 % x -1.25 % ne couvrent pas P(stop) 0.4 % x 32.66 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.18 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.18 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 32.66 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 32.66,
+          "limit": 4.35,
+          "excess_ratio": 6.508
+        }
+      ],
+      "violation_severity": 6.508
+    },
+    {
+      "anchor_price": 121.232,
+      "stop_price": 121.232,
+      "origin": "atr_grid",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "point de grille a 7.50 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
+      "anchor_distance_atr": 7.5,
+      "distance_pct": 34.993,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
+      "p_stop_first": 0.0012,
+      "p_target_first": 0.0143,
+      "p_no_touch": 0.9845,
+      "p_stop_ci95": [
+        0.0,
+        0.0101
+      ],
+      "p_stop_ci_width_pt": 1.0,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 0.0,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 34.993,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.101,
+      "cvar95_pct": 34.993,
+      "var95_pct": 34.993,
+      "cvar95_budget_pct": 4.35,
+      "cost": 0.81402,
+      "ev_pct": -0.814,
+      "ev_terms": {
+        "target": 0.5511,
+        "stop": -0.042,
+        "no_touch": -1.3232,
+        "pnl_no_touch_pct": -1.344
+      },
+      "p_stop_upper": 0.0101,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-0.81 %) : P(cible) 1.4 % x 38.54 % + P(rien) 98.5 % x -1.34 % ne couvrent pas P(stop) 0.1 % x 34.99 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.10 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.10 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 34.99 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 34.993,
+          "limit": 4.35,
+          "excess_ratio": 7.0444
+        }
+      ],
+      "violation_severity": 7.0444
+    },
+    {
+      "anchor_price": 116.8815,
+      "stop_price": 116.8815,
+      "origin": "atr_grid",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "point de grille a 8.00 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
+      "anchor_distance_atr": 8.0,
+      "distance_pct": 37.326,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
+      "p_stop_first": 0.0008,
+      "p_target_first": 0.0143,
+      "p_no_touch": 0.9848,
+      "p_stop_ci95": [
+        0.0,
+        0.0092
+      ],
+      "p_stop_ci_width_pt": 0.9,
+      "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1245,
+      "n_eff": 345.7,
+      "grid_point": null,
+      "gap_overshoot_pt": 0.0,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 37.326,
+      "gain_if_tp_pct": 38.541,
+      "rr_vs_spot": 1.033,
+      "cvar95_pct": 37.326,
+      "var95_pct": 37.326,
+      "cvar95_budget_pct": 4.35,
+      "cost": 0.80998,
+      "ev_pct": -0.81,
+      "ev_terms": {
+        "target": 0.5511,
+        "stop": -0.0299,
+        "no_touch": -1.3313,
+        "pnl_no_touch_pct": -1.3518
+      },
+      "p_stop_upper": 0.0092,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-0.81 %) : P(cible) 1.4 % x 38.54 % + P(rien) 98.5 % x -1.35 % ne couvrent pas P(stop) 0.1 % x 37.33 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.03 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.03 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 37.33 % > budget 4.35 %"
+      ],
+      "violations": [
+        {
+          "constraint": "cvar95",
+          "value": 37.326,
+          "limit": 4.35,
+          "excess_ratio": 7.5807
+        }
+      ],
+      "violation_severity": 7.5807
+    }
+  ],
+  "n_candidates": 14,
+  "n_feasible": 0,
+  "n_rejected": 14,
+  "candidate_grid": {
+    "added": 10,
+    "snapped_to_levels": 6,
+    "step_atr": 0.25,
+    "step_far_atr": 0.5,
+    "fine_until_atr": 3.0,
+    "max_atr": 8.0,
+    "floor_atr": 1.0,
+    "why": "densification pour la RESOLUTION du reglage `tightness`, pas pour decouvrir un optimum — la frontiere est monotone. Sans elle, `neutre` et `serre` rendaient la meme echelle faute de candidat intermediaire.",
+    "levels_remain_anchors": "un point de grille proche d'un support est ramene SOUS ce support, moins le tampon mesure. `origin` distingue grid_snapped de atr_grid."
+  },
+  "target_selection": {
+    "rule": "aucune cible n'admet de candidat faisable ; on CONSERVE la cible doctrinale (la plus lointaine retenue par build_targets) et on le declare. Rapprocher la cible pour satisfaire un veto degradait le resultat de 1,23 point par fenetre sur ENR, etabli.",
+    "chosen_pct": 38.541,
+    "doctrinal_first_pct": 38.541,
+    "changed": true,
+    "p_target_floor": 0.15,
+    "horizon_used": "auto",
+    "scan": [
+      {
+        "pct": 38.541,
+        "origin": "resistance",
+        "atr": 8.26,
+        "n_feasible": 0,
+        "p_target_max": 0.0143,
+        "rr_max": 3.246,
+        "min_severity": 0.877,
+        "below_doctrine_floor": false,
+        "why": "resistance a 2 touche(s), force medium (prix 260.9750, visee 258.3647 apres tampon)"
+      },
+      {
+        "pct": 53.381,
+        "origin": "resistance",
+        "atr": 11.44,
+        "n_feasible": 0,
+        "p_target_max": 0.0067,
+        "rr_max": 4.496,
+        "min_severity": 0.877,
+        "below_doctrine_floor": false,
+        "why": "resistance a 2 touche(s), force medium (prix 288.6500, visee 286.0397 apres tampon)"
+      },
+      {
+        "pct": 3.483,
+        "origin": "plan_t1",
+        "atr": 0.75,
+        "n_feasible": 0,
+        "p_target_max": 0.7661,
+        "rr_max": 0.293,
+        "min_severity": 0.697,
+        "below_doctrine_floor": true,
+        "why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))"
+      },
+      {
+        "pct": 9.383,
+        "origin": "plan_t2",
+        "atr": 2.01,
+        "n_feasible": 0,
+        "p_target_max": 0.4386,
+        "rr_max": 0.79,
+        "min_severity": 0.783,
+        "below_doctrine_floor": true,
+        "why": "cible t2 du plan (band 95% (atteignable) · touche hist. 14% (sans stop))"
+      },
+      {
+        "pct": 15.283,
+        "origin": "plan_t3",
+        "atr": 3.28,
+        "n_feasible": 0,
+        "p_target_max": 0.2244,
+        "rr_max": 1.287,
+        "min_severity": 0.875,
+        "below_doctrine_floor": true,
+        "why": "cible t3 du plan (plafond band 95% · touche hist. 14% (sans stop))"
+      },
+      {
+        "pct": 16.749,
+        "origin": "resistance",
+        "atr": 3.59,
+        "n_feasible": 0,
+        "p_target_max": 0.1794,
+        "rr_max": 1.411,
+        "min_severity": 0.876,
+        "below_doctrine_floor": true,
+        "why": "resistance a 6 touche(s), force strong (prix 220.3350, visee 217.7247 apres tampon)"
+      }
+    ],
+    "why_closed_loop": "le veto p_cible etait cable sur les CANDIDATS et ne pouvait donc pas refuser la CIBLE : il se declenchait sur tous, ne discriminait rien, et laissait le compositeur en best_effort permanent. Ferme le 22/08."
+  },
+  "target_value_measured": {
+    "available": true,
+    "n_windows": 975,
+    "horizon_sessions": 20,
+    "stop_atr_tested": 1.5,
+    "target_pct_tested": 38.541,
+    "gain_of_removing_target_pct": 0.3912,
+    "ci95": [
+      0.0211,
+      0.7783
+    ],
+    "established": true,
+    "target_pays": false,
+    "target_costs": true,
+    "recommendation": "PAS DE CIBLE — la retirer gagne 0.39 point par fenetre (etabli). Une cible qui se remplit PLAFONNE la position.",
+    "method": "comparaison APPARIEE sur les memes fenetres, meme stop (1.50 ATR), horizon 20 seances, intervalles groupes par date. `simulate_ladder` reutilise."
+  },
+  "distance_frontier": {
+    "available": true,
+    "n_windows": 975,
+    "horizon_sessions": 20,
+    "crash_threshold_pct": -25.0,
+    "n_crash_windows": 188,
+    "target_pct_used": null,
+    "rows": [
+      {
+        "k_atr": 1.0,
+        "distance_pct": 4.666,
+        "ordinary_pct": 2.1927,
+        "crash_pct": -7.1969,
+        "cash_released_in_crash_pct": 95.334,
+        "exit_rate_in_crash_pct": 100.0,
+        "n_crash": 188,
+        "exit_rate_pct": 73.74
+      },
+      {
+        "k_atr": 1.25,
+        "distance_pct": 5.832,
+        "ordinary_pct": 2.7537,
+        "crash_pct": -9.0757,
+        "cash_released_in_crash_pct": 94.168,
+        "exit_rate_in_crash_pct": 100.0,
+        "n_crash": 188,
+        "exit_rate_pct": 65.95
+      },
+      {
+        "k_atr": 1.5,
+        "distance_pct": 6.999,
+        "ordinary_pct": 2.7765,
+        "crash_pct": -11.0571,
+        "cash_released_in_crash_pct": 92.507,
+        "exit_rate_in_crash_pct": 99.47,
+        "n_crash": 188,
+        "exit_rate_pct": 59.38
+      },
+      {
+        "k_atr": 1.75,
+        "distance_pct": 8.165,
+        "ordinary_pct": 3.179,
+        "crash_pct": -13.0807,
+        "cash_released_in_crash_pct": 91.347,
+        "exit_rate_in_crash_pct": 99.47,
+        "n_crash": 188,
+        "exit_rate_pct": 52.92
+      },
+      {
+        "k_atr": 2.0,
+        "distance_pct": 9.331,
+        "ordinary_pct": 3.2904,
+        "crash_pct": -14.8732,
+        "cash_released_in_crash_pct": 88.739,
+        "exit_rate_in_crash_pct": 97.87,
+        "n_crash": 188,
+        "exit_rate_pct": 46.97
+      },
+      {
+        "k_atr": 2.5,
+        "distance_pct": 11.664,
+        "ordinary_pct": 3.2678,
+        "crash_pct": -18.1761,
+        "cash_released_in_crash_pct": 81.758,
+        "exit_rate_in_crash_pct": 92.55,
+        "n_crash": 188,
+        "exit_rate_pct": 36.21
+      },
+      {
+        "k_atr": 3.0,
+        "distance_pct": 13.997,
+        "ordinary_pct": 3.9462,
+        "crash_pct": -20.7166,
+        "cash_released_in_crash_pct": 75.024,
+        "exit_rate_in_crash_pct": 87.23,
+        "n_crash": 188,
+        "exit_rate_pct": 24.72
+      },
+      {
+        "k_atr": 4.0,
+        "distance_pct": 18.663,
+        "ordinary_pct": 4.3079,
+        "crash_pct": -22.3705,
+        "cash_released_in_crash_pct": 48.024,
+        "exit_rate_in_crash_pct": 59.04,
+        "n_crash": 188,
+        "exit_rate_pct": 12.62
+      },
+      {
+        "k_atr": 5.0,
+        "distance_pct": 23.329,
+        "ordinary_pct": 4.3293,
+        "crash_pct": -22.5494,
+        "cash_released_in_crash_pct": 29.364,
+        "exit_rate_in_crash_pct": 38.3,
+        "n_crash": 188,
+        "exit_rate_pct": 7.38
+      },
+      {
+        "k_atr": 6.0,
+        "distance_pct": 27.994,
+        "ordinary_pct": 4.3807,
+        "crash_pct": -22.2828,
+        "cash_released_in_crash_pct": 15.32,
+        "exit_rate_in_crash_pct": 21.28,
+        "n_crash": 188,
+        "exit_rate_pct": 4.1
+      }
+    ],
+    "axes": "trois axes, et ils ne pointent PAS dans le meme sens : `ordinary_pct` (rendement en regime normal), `crash_pct` (perte quand le titre plonge) et `cash_released_in_crash_pct` (capacite d'achat rendue au pire moment). Serrer degrade le premier, ameliore les deux autres. Aucun choix ne domine — d'ou le bouton.",
+    "shape": "MONOTONE dans les deux sens sur tous les titres testes le 22/08 : plus loin gagne en ordinaire et perd en krach, sans retournement. Il n'y a donc pas d'optimum a extraire — seulement une frontiere sur laquelle l'operateur choisit un point.",
+    "method": "simulate_ladder sur les barres reelles, meme fenetres pour toutes les distances, sortie stop a min(ouverture, stop). Aucun modele."
+  },
+  "target_recommended_pct": null,
+  "target_recommendation": "PAS DE CIBLE — la retirer gagne 0.39 point par fenetre (etabli). Une cible qui se remplit PLAFONNE la position.",
+  "targets_considered": [
+    {
+      "pct": 38.541,
+      "origin": "resistance",
+      "why": "resistance a 2 touche(s), force medium (prix 260.9750, visee 258.3647 apres tampon)"
+    },
+    {
+      "pct": 53.381,
+      "origin": "resistance",
+      "why": "resistance a 2 touche(s), force medium (prix 288.6500, visee 286.0397 apres tampon)"
+    },
+    {
+      "pct": 3.483,
+      "origin": "plan_t1",
+      "why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))"
+    },
+    {
+      "pct": 9.383,
+      "origin": "plan_t2",
+      "why": "cible t2 du plan (band 95% (atteignable) · touche hist. 14% (sans stop))"
+    },
+    {
+      "pct": 15.283,
+      "origin": "plan_t3",
+      "why": "cible t3 du plan (plafond band 95% · touche hist. 14% (sans stop))"
+    },
+    {
+      "pct": 16.749,
+      "origin": "resistance",
+      "why": "resistance a 6 touche(s), force strong (prix 220.3350, visee 217.7247 apres tampon)"
+    }
+  ],
+  "pairs": [
+    {
+      "stop_price": 125.5825,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 32.66,
+      "target_pct": 3.483,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.107,
+      "p_stop_first": 0.0037,
+      "cvar95_pct": 32.66,
+      "cost": 0.23317,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.11 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 32.66 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 116.8815,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 37.326,
+      "target_pct": 3.483,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.093,
+      "p_stop_first": 0.0007,
+      "cvar95_pct": 37.326,
+      "cost": 0.23726,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.09 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 37.33 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 121.232,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 34.993,
+      "target_pct": 3.483,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.1,
+      "p_stop_first": 0.0011,
+      "cvar95_pct": 34.993,
+      "cost": 0.24271,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.10 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 34.99 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 134.5419,
+      "stop_origin": "support",
+      "stop_distance_pct": 27.856,
+      "target_pct": 3.483,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.125,
+      "p_stop_first": 0.0264,
+      "cvar95_pct": 27.856,
+      "cost": 0.29327,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.13 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 27.86 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 129.9331,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 30.327,
+      "target_pct": 3.483,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.115,
+      "p_stop_first": 0.0124,
+      "cvar95_pct": 30.327,
+      "cost": 0.29557,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.11 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 30.33 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 139.7117,
+      "stop_origin": "swing_based",
+      "stop_distance_pct": 25.084,
+      "target_pct": 3.483,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.139,
+      "p_stop_first": 0.0475,
+      "cvar95_pct": 25.084,
+      "cost": 0.35808,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.14 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 25.08 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 147.3352,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 20.996,
+      "target_pct": 3.483,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.151,
+      "p_stop_first": 0.082,
+      "cvar95_pct": 20.999,
+      "cost": 0.47271,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.15 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 21.00 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 116.8815,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 37.326,
+      "target_pct": 9.383,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 14% (sans stop))",
+      "rr_vs_spot": 0.251,
+      "p_stop_first": 0.0008,
+      "cvar95_pct": 37.326,
+      "cost": 0.50974,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.25 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 37.33 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 125.5825,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 32.66,
+      "target_pct": 9.383,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 14% (sans stop))",
+      "rr_vs_spot": 0.287,
+      "p_stop_first": 0.0042,
+      "cvar95_pct": 32.66,
+      "cost": 0.51053,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.29 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 32.66 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 121.232,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 34.993,
+      "target_pct": 9.383,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 14% (sans stop))",
+      "rr_vs_spot": 0.268,
+      "p_stop_first": 0.0012,
+      "cvar95_pct": 34.993,
+      "cost": 0.51426,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.27 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 34.99 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 134.5419,
+      "stop_origin": "support",
+      "stop_distance_pct": 27.856,
+      "target_pct": 9.383,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 14% (sans stop))",
+      "rr_vs_spot": 0.337,
+      "p_stop_first": 0.0272,
+      "cvar95_pct": 27.856,
+      "cost": 0.56881,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.34 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 27.86 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 129.9331,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 30.327,
+      "target_pct": 9.383,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 14% (sans stop))",
+      "rr_vs_spot": 0.309,
+      "p_stop_first": 0.0132,
+      "cvar95_pct": 30.327,
+      "cost": 0.57415,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.31 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 30.33 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 151.6857,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 18.663,
+      "target_pct": 3.483,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.163,
+      "p_stop_first": 0.1165,
+      "cvar95_pct": 18.674,
+      "cost": 0.58815,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.16 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 18.67 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 139.7117,
+      "stop_origin": "swing_based",
+      "stop_distance_pct": 25.084,
+      "target_pct": 9.383,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 14% (sans stop))",
+      "rr_vs_spot": 0.374,
+      "p_stop_first": 0.051,
+      "cvar95_pct": 25.084,
+      "cost": 0.6367,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.37 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 25.08 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 116.8815,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 37.326,
+      "target_pct": 53.381,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 288.6500, visee 286.0397 apres tampon)",
+      "rr_vs_spot": 1.43,
+      "p_stop_first": 0.0008,
+      "cvar95_pct": 37.326,
+      "cost": 0.72347,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 0.7 % du temps (< 15 %) meme a 10 seances : le R/R de 1.43 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.43 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 37.33 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 125.5825,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 32.66,
+      "target_pct": 53.381,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 288.6500, visee 286.0397 apres tampon)",
+      "rr_vs_spot": 1.634,
+      "p_stop_first": 0.0042,
+      "cvar95_pct": 32.66,
+      "cost": 0.72362,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 0.7 % du temps (< 15 %) meme a 10 seances : le R/R de 1.63 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "CVaR 95 % 32.66 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 121.232,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 34.993,
+      "target_pct": 53.381,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 288.6500, visee 286.0397 apres tampon)",
+      "rr_vs_spot": 1.525,
+      "p_stop_first": 0.0012,
+      "cvar95_pct": 34.993,
+      "cost": 0.72743,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 0.7 % du temps (< 15 %) meme a 10 seances : le R/R de 1.53 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.53 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 34.99 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 147.3352,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 20.996,
+      "target_pct": 9.383,
+      "target_origin": "plan_t2",
+      "target_why": "cible t2 du plan (band 95% (atteignable) · touche hist. 14% (sans stop))",
+      "rr_vs_spot": 0.406,
+      "p_stop_first": 0.0903,
+      "cvar95_pct": 20.999,
+      "cost": 0.76057,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.41 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 21.00 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 156.0363,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 16.33,
+      "target_pct": 3.483,
+      "target_origin": "plan_t1",
+      "target_why": "cible t1 du plan (band 95% (atteignable) · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.163,
+      "p_stop_first": 0.1326,
+      "cvar95_pct": 16.35,
+      "cost": 0.77918,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.16 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 16.35 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 134.5419,
+      "stop_origin": "support",
+      "stop_distance_pct": 27.856,
+      "target_pct": 53.381,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 288.6500, visee 286.0397 apres tampon)",
+      "rr_vs_spot": 1.916,
+      "p_stop_first": 0.0272,
+      "cvar95_pct": 27.856,
+      "cost": 0.78116,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 0.7 % du temps (< 15 %) meme a 10 seances : le R/R de 1.92 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "CVaR 95 % 27.86 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 129.9331,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 30.327,
+      "target_pct": 53.381,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 288.6500, visee 286.0397 apres tampon)",
+      "rr_vs_spot": 1.76,
+      "p_stop_first": 0.0132,
+      "cvar95_pct": 30.327,
+      "cost": 0.78627,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 0.7 % du temps (< 15 %) meme a 10 seances : le R/R de 1.76 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "CVaR 95 % 30.33 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 116.8815,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 37.326,
+      "target_pct": 38.541,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 260.9750, visee 258.3647 apres tampon)",
+      "rr_vs_spot": 1.033,
+      "p_stop_first": 0.0008,
+      "cvar95_pct": 37.326,
+      "cost": 0.80998,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.03 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.03 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 37.33 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 125.5825,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 32.66,
+      "target_pct": 38.541,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 260.9750, visee 258.3647 apres tampon)",
+      "rr_vs_spot": 1.18,
+      "p_stop_first": 0.0042,
+      "cvar95_pct": 32.66,
+      "cost": 0.81026,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.18 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.18 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 32.66 % > budget 4.35 %"
+      ]
+    },
+    {
+      "stop_price": 121.232,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 34.993,
+      "target_pct": 38.541,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 260.9750, visee 258.3647 apres tampon)",
+      "rr_vs_spot": 1.101,
+      "p_stop_first": 0.0012,
+      "cvar95_pct": 34.993,
+      "cost": 0.81403,
+      "feasible": false,
+      "rejected_because": [
+        "cible atteinte seulement 1.4 % du temps (< 15 %) meme a 10 seances : le R/R de 1.10 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 1.10 < plancher 1.60 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 34.99 % > budget 4.35 %"
+      ]
+    }
+  ],
+  "best_pair": null,
+  "min_target_for_rr": [
+    {
+      "stop_price": 172.8578,
+      "stop_origin": "sr_based",
+      "stop_distance_pct": 7.31,
+      "min_target_pct_for_rr": 18.995,
+      "note": "avec le surcout de gap inclus, ce stop coute 11.87 % ; il faut donc viser au moins 19.00 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 168.5219,
+      "stop_origin": "support",
+      "stop_distance_pct": 9.635,
+      "min_target_pct_for_rr": 27.451,
+      "note": "avec le surcout de gap inclus, ce stop coute 17.16 % ; il faut donc viser au moins 27.45 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 164.7373,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 11.664,
+      "min_target_pct_for_rr": 34.094,
+      "note": "avec le surcout de gap inclus, ce stop coute 21.31 % ; il faut donc viser au moins 34.09 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 162.5621,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 12.831,
+      "min_target_pct_for_rr": 34.094,
+      "note": "avec le surcout de gap inclus, ce stop coute 21.31 % ; il faut donc viser au moins 34.09 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 160.3868,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 13.997,
+      "min_target_pct_for_rr": 34.094,
+      "note": "avec le surcout de gap inclus, ce stop coute 21.31 % ; il faut donc viser au moins 34.09 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 156.0363,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 16.33,
+      "min_target_pct_for_rr": 34.094,
+      "note": "avec le surcout de gap inclus, ce stop coute 21.31 % ; il faut donc viser au moins 34.09 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 151.6857,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 18.663,
+      "min_target_pct_for_rr": 34.094,
+      "note": "avec le surcout de gap inclus, ce stop coute 21.31 % ; il faut donc viser au moins 34.09 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 147.3352,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 20.996,
+      "min_target_pct_for_rr": 36.955,
+      "note": "avec le surcout de gap inclus, ce stop coute 23.10 % ; il faut donc viser au moins 36.96 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 139.7117,
+      "stop_origin": "swing_based",
+      "stop_distance_pct": 25.084,
+      "min_target_pct_for_rr": 40.134,
+      "note": "avec le surcout de gap inclus, ce stop coute 25.08 % ; il faut donc viser au moins 40.13 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 134.5419,
+      "stop_origin": "support",
+      "stop_distance_pct": 27.856,
+      "min_target_pct_for_rr": 44.57,
+      "note": "avec le surcout de gap inclus, ce stop coute 27.86 % ; il faut donc viser au moins 44.57 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 129.9331,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 30.327,
+      "min_target_pct_for_rr": 48.523,
+      "note": "avec le surcout de gap inclus, ce stop coute 30.33 % ; il faut donc viser au moins 48.52 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 125.5825,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 32.66,
+      "min_target_pct_for_rr": 52.256,
+      "note": "avec le surcout de gap inclus, ce stop coute 32.66 % ; il faut donc viser au moins 52.26 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 121.232,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 34.993,
+      "min_target_pct_for_rr": 55.989,
+      "note": "avec le surcout de gap inclus, ce stop coute 34.99 % ; il faut donc viser au moins 55.99 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 116.8815,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 37.326,
+      "min_target_pct_for_rr": 59.722,
+      "note": "avec le surcout de gap inclus, ce stop coute 37.33 % ; il faut donc viser au moins 59.72 % pour tenir le plancher de R/R 1.6"
+    }
+  ],
+  "verdict": "AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — la perte y est non bornee.",
+  "recommended": {
+    "anchor_price": 177.4259,
+    "stop_price": 172.8578,
+    "origin": "sr_based",
+    "strength": "strong",
+    "touches": null,
+    "touch_weight": null,
+    "why": "sous le S/R le plus proche",
+    "anchor_distance_atr": 1.04,
+    "anchor_quality": "non mesure",
+    "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
+    "distance_pct": 7.31,
+    "p_stop_first": 0.5984,
+    "p_target_first": 0.0114,
+    "p_no_touch": 0.3903,
+    "p_stop_ci95": [
+      0.5461,
+      0.6491
+    ],
+    "p_stop_ci_width_pt": 10.3,
+    "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+    "horizon_used": "deep",
+    "horizon_sessions": 10,
+    "n_windows": 1245,
+    "n_eff": 345.7,
+    "grid_point": null,
+    "gap_overshoot_pt": 4.562,
+    "gap_overshoot_note": "surcout moyen mesure a cette distance",
+    "loss_if_stop_pct": 11.872,
+    "gain_if_tp_pct": 38.541,
+    "rr_vs_spot": 3.246,
+    "cvar95_pct": 7.383,
+    "var95_pct": 7.31,
+    "cvar95_budget_pct": 4.35,
+    "cost": 3.57596,
+    "ev_pct": -3.576,
+    "ev_terms": {
+      "target": 0.4394,
+      "stop": -7.1042,
+      "no_touch": 3.0889,
+      "pnl_no_touch_pct": 7.9141
+    },
+    "p_stop_upper": 0.6491,
+    "flags": [
+      {
+        "flag": "LIGNE_EV_NEGATIVE",
+        "detail": "le meilleur bracket disponible perd de l'argent en esperance (-3.58 %) : P(cible) 1.1 % x 38.54 % + P(rien) 39.0 % x 7.91 % ne couvrent pas P(stop) 59.8 % x 11.87 %.",
+        "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+      }
+    ],
+    "feasible": false,
+    "rejected_because": [
+      "cible atteinte seulement 1.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+      "p_stop_first 0.598, borne haute 0.649 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
+      "CVaR 95 % 7.38 % > budget 4.35 %"
+    ],
+    "violations": [
+      {
+        "constraint": "p_stop_first_upper",
+        "value": 0.6491,
+        "limit": 0.55,
+        "excess_ratio": 0.1802
+      },
+      {
+        "constraint": "cvar95",
+        "value": 7.3828,
+        "limit": 4.35,
+        "excess_ratio": 0.6972
+      }
+    ],
+    "violation_severity": 0.8774,
+    "is_best_effort": true,
+    "best_effort_note": "AUCUN couple ne tient les contraintes. Celui-ci est le MOINS MAUVAIS au sens de la SEVERITE des violations (somme des depassements relatifs a chaque seuil), l'esperance ne departageant qu'a severites egales. Compter les violations ne suffisait pas : un depassement de budget de 1,5 point comptait comme un depassement de 13, et le classement retombait sur l'esperance, qui elit toujours le stop le plus large. Il n'est pas conforme et ne doit pas etre presente comme tel — mais laisser la ligne NUE est pire : la perte y est non bornee, alors qu'ici elle est bornee par le stop plus le surcout de gap. Poser, dire ce qui est viole, et remonter le probleme de fond a l'etage portefeuille."
+  },
+  "recommendation_is_compliant": false,
+  "best_effort": {
+    "anchor_price": 177.4259,
+    "stop_price": 172.8578,
+    "origin": "sr_based",
+    "strength": "strong",
+    "touches": null,
+    "touch_weight": null,
+    "why": "sous le S/R le plus proche",
+    "anchor_distance_atr": 1.04,
+    "anchor_quality": "non mesure",
+    "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
+    "distance_pct": 7.31,
+    "p_stop_first": 0.5984,
+    "p_target_first": 0.0114,
+    "p_no_touch": 0.3903,
+    "p_stop_ci95": [
+      0.5461,
+      0.6491
+    ],
+    "p_stop_ci_width_pt": 10.3,
+    "prob_source": "calcul DIRECT sur 1245 seances daily, horizon deep (10 j)",
+    "horizon_used": "deep",
+    "horizon_sessions": 10,
+    "n_windows": 1245,
+    "n_eff": 345.7,
+    "grid_point": null,
+    "gap_overshoot_pt": 4.562,
+    "gap_overshoot_note": "surcout moyen mesure a cette distance",
+    "loss_if_stop_pct": 11.872,
+    "gain_if_tp_pct": 38.541,
+    "rr_vs_spot": 3.246,
+    "cvar95_pct": 7.383,
+    "var95_pct": 7.31,
+    "cvar95_budget_pct": 4.35,
+    "cost": 3.57596,
+    "ev_pct": -3.576,
+    "ev_terms": {
+      "target": 0.4394,
+      "stop": -7.1042,
+      "no_touch": 3.0889,
+      "pnl_no_touch_pct": 7.9141
+    },
+    "p_stop_upper": 0.6491,
+    "flags": [
+      {
+        "flag": "LIGNE_EV_NEGATIVE",
+        "detail": "le meilleur bracket disponible perd de l'argent en esperance (-3.58 %) : P(cible) 1.1 % x 38.54 % + P(rien) 39.0 % x 7.91 % ne couvrent pas P(stop) 59.8 % x 11.87 %.",
+        "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+      }
+    ],
+    "feasible": false,
+    "rejected_because": [
+      "cible atteinte seulement 1.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+      "p_stop_first 0.598, borne haute 0.649 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
+      "CVaR 95 % 7.38 % > budget 4.35 %"
+    ],
+    "violations": [
+      {
+        "constraint": "p_stop_first_upper",
+        "value": 0.6491,
+        "limit": 0.55,
+        "excess_ratio": 0.1802
+      },
+      {
+        "constraint": "cvar95",
+        "value": 7.3828,
+        "limit": 4.35,
+        "excess_ratio": 0.6972
+      }
+    ],
+    "violation_severity": 0.8774,
+    "is_best_effort": true,
+    "best_effort_note": "AUCUN couple ne tient les contraintes. Celui-ci est le MOINS MAUVAIS au sens de la SEVERITE des violations (somme des depassements relatifs a chaque seuil), l'esperance ne departageant qu'a severites egales. Compter les violations ne suffisait pas : un depassement de budget de 1,5 point comptait comme un depassement de 13, et le classement retombait sur l'esperance, qui elit toujours le stop le plus large. Il n'est pas conforme et ne doit pas etre presente comme tel — mais laisser la ligne NUE est pire : la perte y est non bornee, alors qu'ici elle est bornee par le stop plus le surcout de gap. Poser, dire ce qui est viole, et remonter le probleme de fond a l'etage portefeuille."
+  },
+  "indistinguishable": [],
+  "tie_rule": "les candidats dont les couts different de moins que l'incertitude statistique combinee ne sont PAS departageables (intervalle sur p_stop_first : 18 points en mediane sur la grille, mesure T12). Le depart se fait alors sur la FORCE STRUCTURELLE du niveau.",
+  "regret_sensitivity": {
+    "grid": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "per_regret": {
+      "0.0": {
+        "ranked": [],
+        "chosen_stop_price": null,
+        "n_tied": 0
+      },
+      "0.5": {
+        "ranked": [],
+        "chosen_stop_price": null,
+        "n_tied": 0
+      },
+      "1.0": {
+        "ranked": [],
+        "chosen_stop_price": null,
+        "n_tied": 0
+      }
+    },
+    "winner_is_robust": true,
+    "reading": "le terme de cout de sortie prematuree est INCONNU du systeme. Plutot que d'en inventer une valeur, on refait le classement sur toute sa plage plausible. Le gagnant NE CHANGE PAS : l'inconnue est sans effet sur cette ligne."
+  },
+  "caveats": [
+    "LECTURE SEULE : aucun ordre pose, modifie ou annule.",
+    "La perte si stop inclut le surcout de gap (T1) : un optimiseur qui l'ignore choisit des stops trop serres sur les titres gap-prone.",
+    "Le R/R est mesure vs SPOT, jamais vs PRU — le PRU est un cout coule.",
+    "Les probabilites viennent de la GRILLE (80 seances, non ponderee), plus precise que l'estimation propre au plan ; elle repond a une question legerement differente (depuis l'ouverture).",
+    "Le dimensionnement n'est PAS ici : ce module dit OU couper, pas COMBIEN mettre. La taille se deduit ensuite de budget_de_risque / distance_stop (etage portefeuille)."
+  ]
+}
