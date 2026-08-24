@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-08-21T22:05:30Z",
+    "generated_at": "2026-08-24T00:35:24Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-08-24T08:00:00Z",
-    "valid_until": "2026-08-24T21:00:00Z",
+    "valid_from": "2026-08-25T08:00:00Z",
+    "valid_until": "2026-08-25T21:00:00Z",
     "source_precomputed": "005930_precomputed.json"
   },
   "context": {
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 17500.0,
     "atr_pct_daily": null,
-    "beta_60d": 1.3134,
+    "beta_60d": 1.3174,
     "beta_benchmark": "KS11",
-    "beta_corr_60d": 0.9587,
+    "beta_corr_60d": 0.9581,
     "btc_corr_high": null,
     "candlestick": {
       "name": "hammer",
@@ -76,7 +76,7 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 259506.9798,
+        "min": 259506.9768,
         "max": 262931.8221
       },
       "stop": {
@@ -88,13 +88,13 @@
         {
           "level": 1,
           "price": 298291.7206,
-          "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
+          "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
           "rr": 4.99
         },
         {
           "level": 2,
           "price": 325295.9391,
-          "basis": "band 95% (atteignable) · touche hist. 15% (sans stop)",
+          "basis": "band 95% (atteignable) · touche hist. 14% (sans stop)",
           "rr": 8.62
         },
         {
@@ -132,7 +132,7 @@
         },
         {
           "level": 2,
-          "price": 302869.4874,
+          "price": 302869.4857,
           "basis": "fib_786",
           "rr": 1.46
         },
@@ -154,11 +154,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 198592.9811,
+        "min": 198592.9763,
         "max": 208548.6865
       },
       "stop": {
-        "price": 190649.2619,
+        "price": 190649.2572,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -6.35
       },
@@ -166,13 +166,13 @@
         {
           "level": 1,
           "price": 298291.7206,
-          "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
+          "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
           "rr": 7.33
         },
         {
           "level": 2,
           "price": 325295.9391,
-          "basis": "band 95% (atteignable) · touche hist. 15% (sans stop)",
+          "basis": "band 95% (atteignable) · touche hist. 14% (sans stop)",
           "rr": 9.42
         },
         {
@@ -192,7 +192,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 188742.7693,
+    "price": 188742.7646,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
