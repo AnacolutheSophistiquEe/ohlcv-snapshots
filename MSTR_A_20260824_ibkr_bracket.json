@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-24T00:23:08.324559+00:00",
+  "generated_at": "2026-08-24T21:59:20.529063+00:00",
   "prediction_id": "MSTR_A_20260824",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "MSTR",
@@ -9,8 +9,8 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 118.65,
-    "quantity": 2,
+    "limit_price": 122.02,
+    "quantity": 3,
     "tif": "DAY"
   },
   "children": [
@@ -25,16 +25,24 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 137.41,
+      "limit_price": 137.97,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 139.69,
+      "quantity": 1,
+      "tif": "GTC",
+      "tag": "T3"
+    },
+    {
+      "action": "SELL",
       "order_type": "STP",
-      "stop_price": 108.96,
-      "quantity": 2,
+      "stop_price": 111.51,
+      "quantity": 3,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -76,7 +84,7 @@
       },
       {
         "tag": "T3",
-        "qty": 0
+        "qty": 1
       }
     ]
   },
@@ -84,15 +92,15 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 7.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0508,
+    "ev_pct_risk": -0.0544,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.4716,
-      "T2": 0.15,
+      "T1": 0.6021,
+      "T2": 0.1689,
       "T3": 0.15
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
@@ -100,8 +108,8 @@
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 238.5,
-    "hold_tolerance_breach_price": 89.4375,
+    "notional_eur": 367.89,
+    "hold_tolerance_breach_price": 91.9725,
     "hold_fallback_active": true,
     "prediction_id": "MSTR_A_20260824"
   },
