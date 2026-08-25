@@ -6,7 +6,7 @@
     "exchange": "NYSE",
     "currency": "USD",
     "isin": "US46222L1089",
-    "generated_at": "2026-08-24T22:04:11.907719+00:00",
+    "generated_at": "2026-08-25T00:27:37.322026+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1787,7 +1787,7 @@
           "rr": 3.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4263,
+          "p_touch": 0.4262,
           "distance_pct": 6.5
         },
         "t3": {
@@ -1796,7 +1796,7 @@
           "rr": 4.5,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1171,
+          "p_touch": 0.117,
           "distance_pct": 9.75
         }
       }
@@ -1822,7 +1822,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.1418,
+          "p_touch": 0.1417,
           "distance_pct": 21.76
         },
         "t2": {
@@ -1831,7 +1831,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1418,
+          "p_touch": 0.1417,
           "distance_pct": 21.78
         },
         "t3": {
@@ -1840,7 +1840,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1418,
+          "p_touch": 0.1417,
           "distance_pct": 21.8
         }
       }
@@ -2179,7 +2179,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-24T22:03:48.058179+00:00",
+    "generated_at": "2026-08-25T00:27:08.402095+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7652,7 +7652,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-24T22:03:36.567202+00:00",
+    "generated_at": "2026-08-25T00:26:58.165053+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7881,7 +7881,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-24T22:03:58.522238+00:00",
+    "generated_at": "2026-08-25T00:27:25.341444+00:00",
     "ticker": "IONQ",
     "horizons_days": {
       "intraday": 2,
@@ -8016,57 +8016,57 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-24T22:03:51.948942+00:00",
+    "generated_at": "2026-08-25T00:27:11.882806+00:00",
     "ticker": "IONQ",
     "spot_price": 41.06,
     "expiries_available": [
       {
         "date": "2026-08-28",
-        "days_to_exp": 4
+        "days_to_exp": 3
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 11
+        "days_to_exp": 10
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 18
+        "days_to_exp": 17
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 25
+        "days_to_exp": 24
       },
       {
         "date": "2026-09-25",
-        "days_to_exp": 32
+        "days_to_exp": 31
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7673,
-      "iv_atm_90d": 0.7712,
+      "iv_atm_30d": 0.7816,
+      "iv_atm_90d": 0.7832,
       "rv_20d_annualized": 0.9409,
-      "iv_rv_ratio": 0.815,
+      "iv_rv_ratio": 0.831,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -6.836,
+      "skew_25_delta_vol_pts": -6.934,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-28",
-      "m1_days_to_exp": 4,
-      "m1_iv_atm": 0.7466,
+      "m1_days_to_exp": 3,
+      "m1_iv_atm": 0.835,
       "m3_expiry": "2026-09-25",
-      "m3_days_to_exp": 32,
-      "m3_iv_atm": 0.7712,
-      "ratio_m1_m3": 0.968,
-      "label": "contango_leger"
+      "m3_days_to_exp": 31,
+      "m3_iv_atm": 0.7832,
+      "ratio_m1_m3": 1.0661,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-28",
-      "days_to_exp": 4,
+      "days_to_exp": 3,
       "put_call_ratio": 1.046,
       "total_oi_m1": 48742,
       "largest_call_strike_oi": {
@@ -8079,7 +8079,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 185449750.0,
+      "gex_total_usd_per_point": 184734567.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -8093,8 +8093,8 @@
       "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-6.8 pts) — peu de demande de protection",
-        "GEX positif (185.4M$/pt) = MM long gamma stabilisateur"
+        "skew faible (-6.9 pts) — peu de demande de protection",
+        "GEX positif (184.7M$/pt) = MM long gamma stabilisateur"
       ]
     },
     "liquidity_stats": {
@@ -8103,29 +8103,29 @@
       "max_bidask_spread_pct": 0.3,
       "per_expiry": {
         "2026-08-28": {
-          "total_strikes": 109,
+          "total_strikes": 120,
           "liquid_strikes": 40,
-          "filter_ratio_pct": 36.7
+          "filter_ratio_pct": 33.3
         },
         "2026-09-04": {
-          "total_strikes": 104,
+          "total_strikes": 107,
           "liquid_strikes": 31,
-          "filter_ratio_pct": 29.8
+          "filter_ratio_pct": 29.0
         },
         "2026-09-11": {
-          "total_strikes": 63,
+          "total_strikes": 76,
           "liquid_strikes": 25,
-          "filter_ratio_pct": 39.7
+          "filter_ratio_pct": 32.9
         },
         "2026-09-18": {
-          "total_strikes": 58,
+          "total_strikes": 97,
           "liquid_strikes": 16,
-          "filter_ratio_pct": 27.6
+          "filter_ratio_pct": 16.5
         },
         "2026-09-25": {
-          "total_strikes": 54,
+          "total_strikes": 57,
           "liquid_strikes": 16,
-          "filter_ratio_pct": 29.6
+          "filter_ratio_pct": 28.1
         }
       }
     },
@@ -8133,7 +8133,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-24T22:03:57.636623+00:00",
+    "generated_at": "2026-08-25T00:27:24.489648+00:00",
     "ticker": "IONQ",
     "short_interest": {
       "status": "ok",
@@ -8147,7 +8147,7 @@
       "float_shares": 378201947,
       "delta_shares_short_mom_pct": 13.91,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-24T22:03:53.070394+00:00"
+      "fetched_at": "2026-08-25T00:27:13.157635+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -8216,7 +8216,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 3,
-      "fetched_at": "2026-08-24T22:03:57.635760+00:00"
+      "fetched_at": "2026-08-25T00:27:24.488813+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -8326,7 +8326,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-08-24T22:03:34.848396+00:00",
+    "generated_at": "2026-08-25T00:26:56.681859+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/IONQ_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -8562,7 +8562,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-08-24T22:03:36.366131+00:00",
+    "generated_at": "2026-08-25T00:26:58.005512+00:00",
     "ticker": "IONQ",
     "source_csv": "IONQ_daily_long.csv",
     "n_sessions": 1254,
@@ -32641,7 +32641,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-24T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -32686,7 +32686,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-24T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -32731,7 +32731,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-24T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

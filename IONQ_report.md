@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-08-24T22:04:11.907719+00:00  
+**Generated** : 2026-08-25T00:27:37.322026+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.9 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Pass  
@@ -59,60 +59,60 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass'.
 ## Echelle Warden — OU poser le stop
 
 - **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — la perte y est non bornee.**
-- **Couple retenu** : stop 37.1491 sur support (1.05 ATR, 9.525 %) — p(stop avant cible) 0.5852 [0.53 ; 0.64], R/R 2.132, perte reelle 13.966 % (gap inclus), CVaR 9.539 %, EV -1.4838 % — **NON CONFORME (best_effort — proposition de derniere main)**
-   - severite des violations : 1.0419 (somme des depassements RELATIFS a chaque seuil ; c'est elle qui a departage, l'esperance ne tranchant qu'a severites egales)
-   - viole : p_stop_first 0.585, borne haute 0.636 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-   - viole : CVaR 95 % 9.54 % > budget 5.06 %
-- Budget de queue : **5.06 %** du notionnel (temoin fige : 12.0 %) — DERIVE de la contrainte JOINTE d'appel de marge par allocation d'Euler : c'est la part de CETTE ligne dans la queue du portefeuille, pas un pourcentage choisi.
-   - prix du risque 0.212 : chaque ligne protegeable doit ramener sa perte de queue a ce multiple de ce qu'elle coute aujourd'hui — le noyau permanent preleve 42.8 % de la queue AVANT le partage, ce qui durcit le budget de toutes les autres.
+- **Couple retenu** : stop 35.9431 sur atr_grid (1.75 ATR, 12.462 %) — p(stop avant cible) 0.4587 [0.41 ; 0.51], R/R 1.362, perte reelle 21.859 % (gap inclus), CVaR 12.469 %, EV -3.1465 % — **NON CONFORME (best_effort — proposition de derniere main)**
+   - severite des violations : 0.0391 (somme des depassements RELATIFS a chaque seuil ; c'est elle qui a departage, l'esperance ne tranchant qu'a severites egales)
+   - viole : R/R 1.36 < plancher 1.60 (mesure vs SPOT, gap inclus)
+   - viole : CVaR 95 % 12.47 % > budget 12.00 %
+- Budget de queue : **12.0 %** du notionnel (temoin fige) — ⚠ le budget DERIVE a bien ete calcule, et **il ne differencie plus rien** : 23 des 23 lignes protegeables butent sur une borne. Il est donc CITE mais ne dimensionne pas — une mesure inutilisable ne dimensionne jamais.
+   - le noyau permanent preleve 51.1 % de la queue et il ne reste que 2.34 EUR a partager. Prix du risque 0.001 : chaque ligne devrait ramener sa perte de queue a ce multiple — autant dire que c'est hors d'atteinte.
+   - **Le geste n'est pas de resserrer les stops, c'est de reduire la TAILLE.** Proposer des stops tres serres ici reviendrait a s'appuyer sur un chiffre qui dit precisement que le probleme est ailleurs.
 - Candidats (la structure propose, la statistique elimine) :
    - 🔴 support a 1.05 ATR (stop 9.525 %) — p(stop avant cible) 0.5852 [0.53 ; 0.64], R/R 2.132, perte reelle 13.966 % (gap inclus), EV -1.4838 % — **REFUSE**
       - refuse : p_stop_first 0.585, borne haute 0.636 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-      - refuse : CVaR 95 % 9.54 % > budget 5.06 %
       - ⚠ support DETECTE a 0.74 ATR du spot — compartiment <1, mesure a 47.2 % de casse (IC clusterise [0.436 ; 0.506] sur 1081 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.48 %) : P(cible) 15.7 % x 29.77 % + P(rien) 25.8 % x 7.84 % ne couvrent pas P(stop) 58.5 % x 13.97 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
    - 🟢 support a 2.35 ATR (stop 18.828 %) — p(stop avant cible) 0.2418 [0.20 ; 0.29], R/R 1.362, perte reelle 21.859 % (gap inclus), EV 0.5988 % — **REFUSE**
       - refuse : R/R 1.36 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 18.83 % > budget 5.06 %
+      - refuse : CVaR 95 % 18.83 % > budget 12.00 %
    - ⚪ swing_based a 3.36 ATR (stop 26.025 %) — p(stop avant cible) 0.0997 [0.07 ; 0.13], R/R 1.144, perte reelle 26.025 % (gap inclus), EV 1.4223 % — **REFUSE**
       - refuse : R/R 1.14 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 26.02 % > budget 5.06 %
+      - refuse : CVaR 95 % 26.02 % > budget 12.00 %
    - 🟢 support a 3.79 ATR (stop 29.033 %) — p(stop avant cible) 0.0748 [0.05 ; 0.11], R/R 1.026, perte reelle 29.033 % (gap inclus), EV 1.2847 % — **REFUSE**
       - refuse : R/R 1.03 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 29.03 % > budget 5.06 %
+      - refuse : CVaR 95 % 29.03 % > budget 12.00 %
    - ⚪ atr_grid a 1.75 ATR (stop 12.462 %) — p(stop avant cible) 0.4587 [0.41 ; 0.51], R/R 1.362, perte reelle 21.859 % (gap inclus), EV -3.1465 % — **REFUSE**
       - refuse : R/R 1.36 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 12.47 % > budget 5.06 %
+      - refuse : CVaR 95 % 12.47 % > budget 12.00 %
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-3.15 %) : P(cible) 16.9 % x 29.77 % + P(rien) 37.3 % x 5.00 % ne couvrent pas P(stop) 45.9 % x 21.86 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
    - ⚪ atr_grid a 3.0 ATR (stop 21.363 %) — p(stop avant cible) 0.1909 [0.15 ; 0.23], R/R 1.362, perte reelle 21.859 % (gap inclus), EV 1.2809 % — **REFUSE**
       - refuse : R/R 1.36 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 21.36 % > budget 5.06 %
+      - refuse : CVaR 95 % 21.36 % > budget 12.00 %
    - ⚪ atr_grid a 4.5 ATR (stop 32.045 %) — p(stop avant cible) 0.0436 [0.03 ; 0.07], R/R 0.929, perte reelle 32.045 % (gap inclus), EV 1.32 % — **REFUSE**
       - refuse : R/R 0.93 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 32.05 % > budget 5.06 %
+      - refuse : CVaR 95 % 32.05 % > budget 12.00 %
    - ⚪ atr_grid a 5.0 ATR (stop 35.606 %) — p(stop avant cible) 0.0163 [0.01 ; 0.03], R/R 0.836, perte reelle 35.606 % (gap inclus), EV 1.4209 % — **REFUSE**
       - refuse : R/R 0.84 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 35.61 % > budget 5.06 %
+      - refuse : CVaR 95 % 35.61 % > budget 12.00 %
    - ⚪ atr_grid a 5.5 ATR (stop 39.166 %) — p(stop avant cible) 0.0075 [0.00 ; 0.02], R/R 0.76, perte reelle 39.166 % (gap inclus), EV 1.4216 % — **REFUSE**
       - refuse : R/R 0.76 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 39.17 % > budget 5.06 %
+      - refuse : CVaR 95 % 39.17 % > budget 12.00 %
    - ⚪ atr_grid a 6.0 ATR (stop 42.727 %) — p(stop avant cible) 0.0018 [0.00 ; 0.01], R/R 0.697, perte reelle 42.727 % (gap inclus), EV 1.4569 % — **REFUSE**
       - refuse : R/R 0.70 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 42.73 % > budget 5.06 %
+      - refuse : CVaR 95 % 42.73 % > budget 12.00 %
    - ⚪ atr_grid a 6.5 ATR (stop 46.287 %) — p(stop avant cible) 0.0012 [0.00 ; 0.01], R/R 0.643, perte reelle 46.287 % (gap inclus), EV 1.4543 % — **REFUSE**
       - refuse : R/R 0.64 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 46.29 % > budget 5.06 %
+      - refuse : CVaR 95 % 46.29 % > budget 12.00 %
    - ⚪ atr_grid a 7.0 ATR (stop 49.848 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.597, perte reelle 49.848 % (gap inclus), EV 1.4943 % — **REFUSE**
       - refuse : R/R 0.60 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 49.85 % > budget 5.06 %
+      - refuse : CVaR 95 % 49.85 % > budget 12.00 %
    - ⚪ atr_grid a 7.5 ATR (stop 53.408 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.558, perte reelle 53.408 % (gap inclus), EV 1.4943 % — **REFUSE**
       - refuse : R/R 0.56 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 53.41 % > budget 5.06 %
+      - refuse : CVaR 95 % 53.41 % > budget 12.00 %
    - ⚪ atr_grid a 8.0 ATR (stop 56.969 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.523, perte reelle 56.969 % (gap inclus), EV 1.4943 % — **REFUSE**
       - refuse : R/R 0.52 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 56.97 % > budget 5.06 %
+      - refuse : CVaR 95 % 56.97 % > budget 12.00 %
 - ⚠ **Un ancrage marque `faible` est un support DETECTE a moins de 1 ATR du spot : mesure a 51 % de casse (pile ou face, IC clusterise [0,474 ; 0,545]) contre ~35 % au-dela. Il est GARDE comme candidat, jamais refuse en silence — mais si c est le seul disponible, la ligne n est pas ancrable et le levier redevient la TAILLE.**
 - ⚠ `anchor_quality: non mesure` ne veut PAS dire mauvais : la mesure porte sur les supports DETECTES, pas sur un multiple d ATR ni sur un bas de canal.
 
@@ -252,5 +252,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (829018 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (806879 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

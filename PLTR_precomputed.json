@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US69608A1088",
-    "generated_at": "2026-08-24T22:02:38.759129+00:00",
+    "generated_at": "2026-08-25T00:26:07.293534+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1844,7 +1844,7 @@
           "rr": 4.06,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1171,
+          "p_touch": 0.117,
           "distance_pct": 10.9
         }
       }
@@ -1870,7 +1870,7 @@
           "rr": 2.2,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.1418,
+          "p_touch": 0.1417,
           "distance_pct": 20.5
         },
         "t2": {
@@ -1879,7 +1879,7 @@
           "rr": 2.41,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1418,
+          "p_touch": 0.1417,
           "distance_pct": 22.44
         },
         "t3": {
@@ -1888,7 +1888,7 @@
           "rr": 2.62,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1418,
+          "p_touch": 0.1417,
           "distance_pct": 24.38
         }
       }
@@ -2227,7 +2227,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-24T22:02:13.956956+00:00",
+    "generated_at": "2026-08-25T00:25:41.796300+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7559,7 +7559,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-24T22:02:02.566071+00:00",
+    "generated_at": "2026-08-25T00:25:31.865270+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7788,7 +7788,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-24T22:02:25.112259+00:00",
+    "generated_at": "2026-08-25T00:25:54.755861+00:00",
     "ticker": "PLTR",
     "horizons_days": {
       "intraday": 2,
@@ -7923,36 +7923,36 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-24T22:02:17.905111+00:00",
+    "generated_at": "2026-08-25T00:25:45.411749+00:00",
     "ticker": "PLTR",
     "spot_price": 175.89,
     "expiries_available": [
       {
         "date": "2026-08-28",
-        "days_to_exp": 4
+        "days_to_exp": 3
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 11
+        "days_to_exp": 10
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 18
+        "days_to_exp": 17
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 25
+        "days_to_exp": 24
       },
       {
         "date": "2026-09-25",
-        "days_to_exp": 32
+        "days_to_exp": 31
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.4683,
-      "iv_atm_90d": 0.4693,
+      "iv_atm_30d": 0.4763,
+      "iv_atm_90d": 0.4766,
       "rv_20d_annualized": 1.0522,
-      "iv_rv_ratio": 0.445,
+      "iv_rv_ratio": 0.453,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -7963,17 +7963,17 @@
     },
     "term_structure": {
       "m1_expiry": "2026-08-28",
-      "m1_days_to_exp": 4,
-      "m1_iv_atm": 0.4895,
+      "m1_days_to_exp": 3,
+      "m1_iv_atm": 0.5387,
       "m3_expiry": "2026-09-25",
-      "m3_days_to_exp": 32,
-      "m3_iv_atm": 0.4693,
-      "ratio_m1_m3": 1.043,
-      "label": "flat"
+      "m3_days_to_exp": 31,
+      "m3_iv_atm": 0.4766,
+      "ratio_m1_m3": 1.1303,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-28",
-      "days_to_exp": 4,
+      "days_to_exp": 3,
       "put_call_ratio": 0.798,
       "total_oi_m1": 231946,
       "largest_call_strike_oi": {
@@ -7986,7 +7986,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 9078709405.0,
+      "gex_total_usd_per_point": 9132812444.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -8001,7 +8001,7 @@
       "bearish_signals": 0,
       "notes": [
         "skew faible (0.3 pts) — peu de demande de protection",
-        "GEX positif (9078.7M$/pt) = MM long gamma stabilisateur"
+        "GEX positif (9132.8M$/pt) = MM long gamma stabilisateur"
       ]
     },
     "liquidity_stats": {
@@ -8015,9 +8015,9 @@
           "filter_ratio_pct": 47.4
         },
         "2026-09-04": {
-          "total_strikes": 173,
+          "total_strikes": 174,
           "liquid_strikes": 70,
-          "filter_ratio_pct": 40.5
+          "filter_ratio_pct": 40.2
         },
         "2026-09-11": {
           "total_strikes": 157,
@@ -8025,9 +8025,9 @@
           "filter_ratio_pct": 31.8
         },
         "2026-09-18": {
-          "total_strikes": 111,
+          "total_strikes": 131,
           "liquid_strikes": 68,
-          "filter_ratio_pct": 61.3
+          "filter_ratio_pct": 51.9
         },
         "2026-09-25": {
           "total_strikes": 107,
@@ -8040,7 +8040,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-24T22:02:24.212621+00:00",
+    "generated_at": "2026-08-25T00:25:53.878167+00:00",
     "ticker": "PLTR",
     "short_interest": {
       "status": "ok",
@@ -8054,7 +8054,7 @@
       "float_shares": 2110414018,
       "delta_shares_short_mom_pct": -22.0,
       "squeeze_potential": "low",
-      "fetched_at": "2026-08-24T22:02:19.025388+00:00"
+      "fetched_at": "2026-08-25T00:25:46.447690+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -8063,19 +8063,32 @@
       "cik": "0001321655",
       "lookback_days": 90,
       "n_filings_total": 20,
-      "n_filings_in_window": 14,
+      "n_filings_in_window": 16,
       "n_fetch_errors": 0,
       "summary": {
         "total_buy_count": 0,
         "total_buy_value_usd": 0,
-        "total_sell_count": 24,
-        "total_sell_value_usd": 37763144.83,
+        "total_sell_count": 40,
+        "total_sell_value_usd": 124397751.58,
         "vesting_exercise_count": 0,
-        "net_flow_usd": -37763144.83,
+        "net_flow_usd": -124397751.58,
         "net_flow_label": "sell_bias_strong"
       },
       "top_buys": [],
       "top_sells": [
+        {
+          "date": "2026-08-20",
+          "insider_name": "Karp Alexander C.",
+          "role": "See Remarks",
+          "is_officer": true,
+          "is_director": true,
+          "action": "sell",
+          "transaction_code": "S",
+          "tag": "open_market_sale",
+          "shares": 306544,
+          "price": 174.8455,
+          "notional_usd": 53597838.95
+        },
         {
           "date": "2026-07-02",
           "insider_name": "Sankar Shyam",
@@ -8090,30 +8103,17 @@
           "notional_usd": 19500000.0
         },
         {
-          "date": "2026-07-02",
-          "insider_name": "Sankar Shyam",
+          "date": "2026-08-20",
+          "insider_name": "Karp Alexander C.",
           "role": "See Remarks",
           "is_officer": true,
-          "is_director": false,
+          "is_director": true,
           "action": "sell",
           "transaction_code": "S",
           "tag": "open_market_sale",
-          "shares": 35000,
-          "price": 130.0,
-          "notional_usd": 4550000.0
-        },
-        {
-          "date": "2026-08-06",
-          "insider_name": "Sankar Shyam",
-          "role": "See Remarks",
-          "is_officer": true,
-          "is_director": false,
-          "action": "sell",
-          "transaction_code": "S",
-          "tag": "open_market_sale",
-          "shares": 16063,
-          "price": 155.7404,
-          "notional_usd": 2501658.05
+          "shares": 63629,
+          "price": 175.4185,
+          "notional_usd": 11161703.74
         }
       ],
       "flags": {
@@ -8122,13 +8122,13 @@
         "insider_selling_no_buys": true,
         "vesting_exercises_dominant": false
       },
-      "all_transactions_count": 28,
-      "fetched_at": "2026-08-24T22:02:24.211448+00:00"
+      "all_transactions_count": 46,
+      "fetched_at": "2026-08-25T00:25:53.877149+00:00"
     },
     "data_quality": {
       "short_data_available": true,
       "insider_data_available": true,
-      "insider_n_transactions": 28
+      "insider_n_transactions": 46
     }
   },
   "volatility_regime": {
@@ -8233,7 +8233,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-08-24T22:02:00.813810+00:00",
+    "generated_at": "2026-08-25T00:25:30.369807+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/PLTR_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -8469,7 +8469,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-08-24T22:02:02.370018+00:00",
+    "generated_at": "2026-08-25T00:25:31.700047+00:00",
     "ticker": "PLTR",
     "source_csv": "PLTR_daily_long.csv",
     "n_sessions": 1254,
@@ -32327,7 +32327,7 @@
     "recent_252d": {
       "beta_up_days": 0.7714,
       "beta_down_days": 1.3749,
-      "beta_asymmetry": 1.7823,
+      "beta_asymmetry": 1.7824,
       "n_up_days": 141,
       "n_down_days": 109,
       "window_days": 250
@@ -32567,7 +32567,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-24T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -32621,7 +32621,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-24T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -32668,7 +32668,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-24T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

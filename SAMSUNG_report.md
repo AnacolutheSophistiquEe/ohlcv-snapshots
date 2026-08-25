@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-08-24T21:50:41.983881+00:00  
+**Generated** : 2026-08-25T00:15:23.286143+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 8.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 8/10 — **Rating** : Pass (negative EV)  
@@ -20,7 +20,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## ⚠ Contradictions techniques
 
-- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.080 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
+- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.100 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
   - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
   - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
   - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
@@ -45,15 +45,15 @@ Plan privilegie B (swing), composite 8/10, conviction 'Pass (negative EV)'.
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
-- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=3.69 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (17.1 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
+- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=3.70 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
+- **Au stop du plan (17.1 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1217).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 17.1 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -2.355 % | p01 -4.951 % | pire -10.942 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -2.357 % | p01 -4.952 % | pire -10.942 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.2008** [0.1464 ; 0.2651] _(largeur 11.9 pt, n_eff 173.1)_
    - swing : **0.3094** [0.2624 ; 0.3596] _(largeur 9.7 pt, n_eff 345.6)_
    - deep : **0.3594** [0.3102 ; 0.411] _(largeur 10.1 pt, n_eff 345.6)_
@@ -62,8 +62,8 @@ Plan privilegie B (swing), composite 8/10, conviction 'Pass (negative EV)'.
    - _fenêtre arrêtée : rupture de regime a 180 seances en arriere (volatilite 3.12 % contre 6.13 % aujourd'hui, rapport 0.51)_
    - ⚠ le regime n'est homogene que sur 120 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -6.32 % vs -6.93 % si l'on extrapolait par √5 _(rapport 0.912 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.1611** (β de hausse 1.338, asymétrie 0.8677) vs KS11 — 553 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -6.32 % vs -6.94 % si l'on extrapolait par √5 _(rapport 0.912 ; < 1 = le √5 surestime)_
+- **β de baisse : 1.1611** (β de hausse 1.3379, asymétrie 0.8678) vs KS11 — 553 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -180,8 +180,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 4980.6  _(pas de croisement recent)_
 - **BB** : %B 0.62 · largeur 34.7%
 - **ATR** : 17642.86 (72.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF -0.084  _(distribution)_
-- **Vol ratio** : 0.67  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF -0.097  _(distribution)_
+- **Vol ratio** : 1.05  _(volume normal)_
 - **Choppiness** : 53.3  _(transition)_
 - **MA** : MA20 246600.0 · MA50 281036.99 · MA200 204388.37  _(prix > MA20)_
 - **Dist MA** : MA20 +4.2% · MA50 -8.6% · MA200 +25.7%
@@ -189,5 +189,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (764726 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (743088 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

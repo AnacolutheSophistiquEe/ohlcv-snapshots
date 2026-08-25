@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-24T22:01:06.187419+00:00",
+  "generated_at": "2026-08-25T00:24:41.781204+00:00",
   "ticker": "SMCI",
   "spot": 35.17,
   "atr_14": 2.545,
@@ -91,10 +91,10 @@
   "constraints": {
     "p_stop_ceiling": 0.55,
     "rr_min_vs_spot": 1.6,
-    "cvar95_budget_pct": 3.07,
-    "cvar95_budget_source": "allocation d'Euler (contrainte jointe)",
-    "cvar95_budget_stale": false,
-    "cvar95_budget_measured_at": "2026-08-24T00:35:58.775096+00:00",
+    "cvar95_budget_pct": 12.0,
+    "cvar95_budget_source": "budget DEGENERE — repli sur le temoin fige pour le veto ; le budget derive est publie mais ne dimensionne pas",
+    "cvar95_budget_stale": true,
+    "cvar95_budget_measured_at": "2026-08-24T23:21:10.995986+00:00",
     "cvar95_budget_default_witness": 12.0,
     "anchor_buffer_atr": 0.291,
     "anchor_buffer_source": {
@@ -119,37 +119,38 @@
     "note": "le CVaR n'est pas un critere concurrent du cout espere : c'est la contrainte qui empeche l'optimum en esperance de deriver vers des stops trop larges. Une moyenne sous-pondere les queues par construction, or la queue est precisement l'objet de la demande."
   },
   "risk_budget": {
-    "pct": 3.07,
-    "source": "allocation d'Euler (contrainte jointe)",
-    "stale": false,
-    "generated_at": "2026-08-24T00:35:58.775096+00:00",
-    "price_of_risk": 0.212,
-    "rationing_factor": 0.549,
-    "budget_exhausted_by_core": false,
-    "budget_degenerate": false,
-    "degenerate_reading": null,
-    "permanent_core_share_pct": 42.8,
+    "pct": 12.0,
+    "source": "budget DEGENERE — repli sur le temoin fige pour le veto ; le budget derive est publie mais ne dimensionne pas",
+    "stale": true,
+    "generated_at": "2026-08-24T23:21:10.995986+00:00",
+    "budget_degenerate": true,
+    "degenerate_reading": "AU MOINS 80 %% des lignes protegeables butent sur une borne : le budget ne DIFFERENCIE plus rien et vaut une constante, ce qu'il etait cense remplacer. Ne le presente pas comme une mesure. Cause la plus probable : le budget tolerable est trop petit pour le livre (part d'excedent consommee trop basse, ou coussin de marge deja entame). Le geste n'est pas de relever les bornes mais de reduire la TAILLE.",
+    "price_of_risk": 0.001,
+    "rationing_factor": 0.512,
+    "permanent_core_share_pct": 51.1,
+    "budget_available_to_protectable_eur": 2.34,
+    "why": "23 des 23 lignes protegeables butent sur une borne : le budget ne differencie plus rien. Le geste n'est pas de resserrer les stops, c'est de reduire la TAILLE.",
     "line": {
       "symbol": "SMCI",
       "currency": "USD",
-      "market_value_eur": 31.6,
+      "market_value_eur": 30.15,
       "permanent_core": false,
-      "tail_share_measured": 0.0011,
+      "tail_share_measured": 0.0012,
       "tail_share_ci95": [
-        0.0005,
-        0.0015
+        0.001,
+        0.0016
       ],
       "tail_role_established": true,
-      "tail_share_shrunk": 0.0011,
-      "share_of_notional": 0.001,
-      "allocation_share": 0.0011,
-      "n_tail_windows": 99,
-      "contribution_eur": 4.58,
-      "budget_eur": 0.97,
-      "cvar_budget_pct_raw": 3.07,
-      "cvar_budget_pct_applied": 3.07,
-      "clamped": false,
-      "delta_vs_default_pt": -8.93,
+      "tail_share_shrunk": 0.0012,
+      "share_of_notional": 0.0011,
+      "allocation_share": 0.0012,
+      "n_tail_windows": 98,
+      "contribution_eur": 4.89,
+      "budget_eur": 0.01,
+      "cvar_budget_pct_raw": 0.02,
+      "cvar_budget_pct_applied": 3.0,
+      "clamped": true,
+      "delta_vs_default_pt": -9.0,
       "basis": "contribution conditionnelle a la queue, retrecie vers le notionnel, renormalisee au budget restant"
     }
   },
@@ -158,18 +159,18 @@
     "available": true,
     "protectable": true,
     "contributive": true,
-    "stop_distance_max_pct": 16.6,
-    "required_protected_frac": 0.3479,
-    "beta_down_book": 1.004,
+    "stop_distance_max_pct": 17.1,
+    "required_protected_frac": 0.3617,
+    "beta_down_book": 1.022,
     "beta_measured": true,
-    "atr_pct": 6.84,
-    "noise_floor_pct": 6.84,
-    "weight_pct": 0.1,
-    "target_drawdown_pct": 16.54,
-    "target_rationale": "x_p90 MESURE sur l'enveloppe de repli du livre (fenetre 20 seances, repli depuis le debut), plancher au seuil d'appel durci — plancher au repli d'appel de marge durci (9.75 %), qui n'est pas negociable. Reglable par --protection-target-pct et --protection-horizon.",
-    "book_required_frac_of_gross": 0.1739,
-    "generated_at": "2026-08-24T00:35:58.775096+00:00",
-    "source": "exigence du livre : proteger 34.8 % de la ligne dans les 16.60 % sous le spot (beta 1.00 x cible 16.5 %)"
+    "atr_pct": 7.24,
+    "noise_floor_pct": 7.24,
+    "weight_pct": 0.11,
+    "target_drawdown_pct": 16.74,
+    "target_rationale": "x_p90 MESURE sur l'enveloppe de repli du livre (fenetre 20 seances, repli depuis le debut), plancher au seuil d'appel durci — plancher au repli d'appel de marge durci (10.0 %), qui n'est pas negociable. Reglable par --protection-target-pct et --protection-horizon.",
+    "book_required_frac_of_gross": 0.163,
+    "generated_at": "2026-08-24T23:21:10.995986+00:00",
+    "source": "exigence du livre : proteger 36.2 % de la ligne dans les 17.10 % sous le spot (beta 1.02 x cible 16.7 %)"
   },
   "candidates": [
     {
@@ -205,7 +206,7 @@
       "rr_vs_spot": 0.947,
       "cvar95_pct": 10.916,
       "var95_pct": 10.854,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": 1.24966,
       "ev_pct": -1.2497,
       "ev_terms": {
@@ -224,18 +225,10 @@
       ],
       "feasible": false,
       "rejected_because": [
-        "R/R 0.95 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 10.92 % > budget 3.07 %"
+        "R/R 0.95 < plancher 1.60 (mesure vs SPOT, gap inclus)"
       ],
-      "violations": [
-        {
-          "constraint": "cvar95",
-          "value": 10.9165,
-          "limit": 3.07,
-          "excess_ratio": 2.5559
-        }
-      ],
-      "violation_severity": 2.5559
+      "violations": null,
+      "violation_severity": 0.0
     },
     {
       "anchor_price": 31.3827,
@@ -270,7 +263,7 @@
       "rr_vs_spot": 0.832,
       "cvar95_pct": 12.92,
       "var95_pct": 12.874,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": 0.66753,
       "ev_pct": -0.6675,
       "ev_terms": {
@@ -290,17 +283,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.83 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 12.92 % > budget 3.07 %"
+        "CVaR 95 % 12.92 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 12.9196,
-          "limit": 3.07,
-          "excess_ratio": 3.2083
+          "limit": 12.0,
+          "excess_ratio": 0.0766
         }
       ],
-      "violation_severity": 3.2083
+      "violation_severity": 0.0766
     },
     {
       "anchor_price": 27.71,
@@ -348,7 +341,7 @@
       "rr_vs_spot": 0.595,
       "cvar95_pct": 23.325,
       "var95_pct": 23.317,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": -0.86137,
       "ev_pct": 0.8614,
       "ev_terms": {
@@ -362,17 +355,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.60 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 23.33 % > budget 3.07 %"
+        "CVaR 95 % 23.33 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 23.3255,
-          "limit": 3.07,
-          "excess_ratio": 6.5979
+          "limit": 12.0,
+          "excess_ratio": 0.9438
         }
       ],
-      "violation_severity": 6.5979
+      "violation_severity": 0.9438
     },
     {
       "anchor_price": 25.41,
@@ -420,7 +413,7 @@
       "rr_vs_spot": 0.535,
       "cvar95_pct": 29.857,
       "var95_pct": 29.857,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": -0.88564,
       "ev_pct": 0.8856,
       "ev_terms": {
@@ -434,17 +427,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.54 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 29.86 % > budget 3.07 %"
+        "CVaR 95 % 29.86 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 29.857,
-          "limit": 3.07,
-          "excess_ratio": 8.7254
+          "limit": 12.0,
+          "excess_ratio": 1.4881
         }
       ],
-      "violation_severity": 8.7254
+      "violation_severity": 1.4881
     },
     {
       "anchor_price": 23.38,
@@ -492,7 +485,7 @@
       "rr_vs_spot": 0.449,
       "cvar95_pct": 35.629,
       "var95_pct": 35.629,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": -0.54975,
       "ev_pct": 0.5498,
       "ev_terms": {
@@ -506,17 +499,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.45 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 35.63 % > budget 3.07 %"
+        "CVaR 95 % 35.63 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 35.629,
-          "limit": 3.07,
-          "excess_ratio": 10.6055
+          "limit": 12.0,
+          "excess_ratio": 1.9691
         }
       ],
-      "violation_severity": 10.6055
+      "violation_severity": 1.9691
     },
     {
       "anchor_price": 32.625,
@@ -551,7 +544,7 @@
       "rr_vs_spot": 1.18,
       "cvar95_pct": 7.347,
       "var95_pct": 7.236,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": 2.89392,
       "ev_pct": -2.8939,
       "ev_terms": {
@@ -571,8 +564,7 @@
       "feasible": false,
       "rejected_because": [
         "p_stop_first 0.563, borne haute 0.614 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
-        "R/R 1.18 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 7.35 % > budget 3.07 %"
+        "R/R 1.18 < plancher 1.60 (mesure vs SPOT, gap inclus)"
       ],
       "violations": [
         {
@@ -580,15 +572,9 @@
           "value": 0.6143,
           "limit": 0.55,
           "excess_ratio": 0.1169
-        },
-        {
-          "constraint": "cvar95",
-          "value": 7.3468,
-          "limit": 3.07,
-          "excess_ratio": 1.3931
         }
       ],
-      "violation_severity": 1.51
+      "violation_severity": 0.1169
     },
     {
       "anchor_price": 29.4437,
@@ -623,7 +609,7 @@
       "rr_vs_spot": 0.683,
       "cvar95_pct": 16.31,
       "var95_pct": 16.282,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": 0.2034,
       "ev_pct": -0.2034,
       "ev_terms": {
@@ -643,17 +629,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.68 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 16.31 % > budget 3.07 %"
+        "CVaR 95 % 16.31 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 16.3104,
-          "limit": 3.07,
-          "excess_ratio": 4.3128
+          "limit": 12.0,
+          "excess_ratio": 0.3592
         }
       ],
-      "violation_severity": 4.3128
+      "violation_severity": 0.3592
     },
     {
       "anchor_price": 26.2625,
@@ -688,7 +674,7 @@
       "rr_vs_spot": 0.572,
       "cvar95_pct": 25.331,
       "var95_pct": 25.327,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": -0.9723,
       "ev_pct": 0.9723,
       "ev_terms": {
@@ -702,17 +688,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.57 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 25.33 % > budget 3.07 %"
+        "CVaR 95 % 25.33 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 25.3312,
-          "limit": 3.07,
-          "excess_ratio": 7.2512
+          "limit": 12.0,
+          "excess_ratio": 1.1109
         }
       ],
-      "violation_severity": 7.2512
+      "violation_severity": 1.1109
     },
     {
       "anchor_price": 21.1725,
@@ -747,7 +733,7 @@
       "rr_vs_spot": 0.402,
       "cvar95_pct": 39.8,
       "var95_pct": 39.8,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": -0.79469,
       "ev_pct": 0.7947,
       "ev_terms": {
@@ -761,17 +747,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.40 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 39.80 % > budget 3.07 %"
+        "CVaR 95 % 39.80 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 39.8,
-          "limit": 3.07,
-          "excess_ratio": 11.9642
+          "limit": 12.0,
+          "excess_ratio": 2.3167
         }
       ],
-      "violation_severity": 11.9642
+      "violation_severity": 2.3167
     },
     {
       "anchor_price": 19.9,
@@ -806,7 +792,7 @@
       "rr_vs_spot": 0.368,
       "cvar95_pct": 43.418,
       "var95_pct": 43.418,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": -0.82387,
       "ev_pct": 0.8239,
       "ev_terms": {
@@ -820,17 +806,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.37 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 43.42 % > budget 3.07 %"
+        "CVaR 95 % 43.42 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 43.418,
-          "limit": 3.07,
-          "excess_ratio": 13.1427
+          "limit": 12.0,
+          "excess_ratio": 2.6182
         }
       ],
-      "violation_severity": 13.1427
+      "violation_severity": 2.6182
     },
     {
       "anchor_price": 18.6275,
@@ -865,7 +851,7 @@
       "rr_vs_spot": 0.34,
       "cvar95_pct": 47.036,
       "var95_pct": 47.036,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": -0.8159,
       "ev_pct": 0.8159,
       "ev_terms": {
@@ -879,17 +865,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.34 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 47.04 % > budget 3.07 %"
+        "CVaR 95 % 47.04 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 47.036,
-          "limit": 3.07,
-          "excess_ratio": 14.3212
+          "limit": 12.0,
+          "excess_ratio": 2.9197
         }
       ],
-      "violation_severity": 14.3212
+      "violation_severity": 2.9197
     },
     {
       "anchor_price": 17.355,
@@ -924,7 +910,7 @@
       "rr_vs_spot": 0.316,
       "cvar95_pct": 50.654,
       "var95_pct": 50.654,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": -0.81027,
       "ev_pct": 0.8103,
       "ev_terms": {
@@ -938,17 +924,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.32 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 50.65 % > budget 3.07 %"
+        "CVaR 95 % 50.65 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 50.654,
-          "limit": 3.07,
-          "excess_ratio": 15.4997
+          "limit": 12.0,
+          "excess_ratio": 3.2212
         }
       ],
-      "violation_severity": 15.4997
+      "violation_severity": 3.2212
     },
     {
       "anchor_price": 16.0825,
@@ -983,7 +969,7 @@
       "rr_vs_spot": 0.294,
       "cvar95_pct": 54.272,
       "var95_pct": 54.272,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": -0.80376,
       "ev_pct": 0.8038,
       "ev_terms": {
@@ -997,17 +983,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.29 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 54.27 % > budget 3.07 %"
+        "CVaR 95 % 54.27 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 54.272,
-          "limit": 3.07,
-          "excess_ratio": 16.6782
+          "limit": 12.0,
+          "excess_ratio": 3.5227
         }
       ],
-      "violation_severity": 16.6782
+      "violation_severity": 3.5227
     },
     {
       "anchor_price": 14.81,
@@ -1042,7 +1028,7 @@
       "rr_vs_spot": 0.276,
       "cvar95_pct": 57.89,
       "var95_pct": 57.89,
-      "cvar95_budget_pct": 3.07,
+      "cvar95_budget_pct": 12.0,
       "cost": -0.81507,
       "ev_pct": 0.8151,
       "ev_terms": {
@@ -1056,17 +1042,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.28 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 57.89 % > budget 3.07 %"
+        "CVaR 95 % 57.89 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
           "value": 57.89,
-          "limit": 3.07,
-          "excess_ratio": 17.8567
+          "limit": 12.0,
+          "excess_ratio": 3.8242
         }
       ],
-      "violation_severity": 17.8567
+      "violation_severity": 3.8242
     }
   ],
   "n_candidates": 14,
@@ -1098,7 +1084,7 @@
         "n_feasible": 0,
         "p_target_max": 0.3454,
         "rr_max": 1.18,
-        "min_severity": 1.51,
+        "min_severity": 0.077,
         "below_doctrine_floor": true,
         "why": "cible t3 du plan (plafond band 95% · touche hist. 14% (sans stop))"
       },
@@ -1109,7 +1095,7 @@
         "n_feasible": 0,
         "p_target_max": 0.5384,
         "rr_max": 0.651,
-        "min_severity": 1.399,
+        "min_severity": 0.006,
         "below_doctrine_floor": true,
         "why": "cible t2 du plan (band 95% (atteignable) · touche hist. 44% (sans stop))"
       },
@@ -1120,7 +1106,7 @@
         "n_feasible": 0,
         "p_target_max": 0.9071,
         "rr_max": 0.121,
-        "min_severity": 1.393,
+        "min_severity": 0.077,
         "below_doctrine_floor": true,
         "why": "cible t1 du plan (band 95% (atteignable) · touche hist. 91% (sans stop))"
       }
@@ -1291,7 +1277,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.57 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 25.33 % > budget 3.07 %"
+        "CVaR 95 % 25.33 % > budget 12.00 %"
       ]
     },
     {
@@ -1308,7 +1294,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.54 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 29.86 % > budget 3.07 %"
+        "CVaR 95 % 29.86 % > budget 12.00 %"
       ]
     },
     {
@@ -1325,7 +1311,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.60 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 23.33 % > budget 3.07 %"
+        "CVaR 95 % 23.33 % > budget 12.00 %"
       ]
     },
     {
@@ -1342,7 +1328,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.37 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 43.42 % > budget 3.07 %"
+        "CVaR 95 % 43.42 % > budget 12.00 %"
       ]
     },
     {
@@ -1359,7 +1345,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.34 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 47.04 % > budget 3.07 %"
+        "CVaR 95 % 47.04 % > budget 12.00 %"
       ]
     },
     {
@@ -1376,7 +1362,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.28 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 57.89 % > budget 3.07 %"
+        "CVaR 95 % 57.89 % > budget 12.00 %"
       ]
     },
     {
@@ -1393,7 +1379,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.32 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 50.65 % > budget 3.07 %"
+        "CVaR 95 % 50.65 % > budget 12.00 %"
       ]
     },
     {
@@ -1410,7 +1396,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.29 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 54.27 % > budget 3.07 %"
+        "CVaR 95 % 54.27 % > budget 12.00 %"
       ]
     },
     {
@@ -1427,7 +1413,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.40 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 39.80 % > budget 3.07 %"
+        "CVaR 95 % 39.80 % > budget 12.00 %"
       ]
     },
     {
@@ -1444,7 +1430,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.45 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 35.63 % > budget 3.07 %"
+        "CVaR 95 % 35.63 % > budget 12.00 %"
       ]
     },
     {
@@ -1461,7 +1447,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.32 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 25.33 % > budget 3.07 %"
+        "CVaR 95 % 25.33 % > budget 12.00 %"
       ]
     },
     {
@@ -1478,7 +1464,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.30 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 29.86 % > budget 3.07 %"
+        "CVaR 95 % 29.86 % > budget 12.00 %"
       ]
     },
     {
@@ -1495,7 +1481,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.33 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 23.33 % > budget 3.07 %"
+        "CVaR 95 % 23.33 % > budget 12.00 %"
       ]
     },
     {
@@ -1512,7 +1498,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.20 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 43.42 % > budget 3.07 %"
+        "CVaR 95 % 43.42 % > budget 12.00 %"
       ]
     },
     {
@@ -1529,7 +1515,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.15 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 57.89 % > budget 3.07 %"
+        "CVaR 95 % 57.89 % > budget 12.00 %"
       ]
     },
     {
@@ -1546,7 +1532,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.19 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 47.04 % > budget 3.07 %"
+        "CVaR 95 % 47.04 % > budget 12.00 %"
       ]
     },
     {
@@ -1563,7 +1549,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.17 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 50.65 % > budget 3.07 %"
+        "CVaR 95 % 50.65 % > budget 12.00 %"
       ]
     },
     {
@@ -1580,7 +1566,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.16 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 54.27 % > budget 3.07 %"
+        "CVaR 95 % 54.27 % > budget 12.00 %"
       ]
     },
     {
@@ -1597,7 +1583,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.22 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 39.80 % > budget 3.07 %"
+        "CVaR 95 % 39.80 % > budget 12.00 %"
       ]
     },
     {
@@ -1614,7 +1600,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.06 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 25.33 % > budget 3.07 %"
+        "CVaR 95 % 25.33 % > budget 12.00 %"
       ]
     },
     {
@@ -1631,7 +1617,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.06 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 29.86 % > budget 3.07 %"
+        "CVaR 95 % 29.86 % > budget 12.00 %"
       ]
     },
     {
@@ -1648,7 +1634,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.04 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 39.80 % > budget 3.07 %"
+        "CVaR 95 % 39.80 % > budget 12.00 %"
       ]
     },
     {
@@ -1665,7 +1651,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.04 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 43.42 % > budget 3.07 %"
+        "CVaR 95 % 43.42 % > budget 12.00 %"
       ]
     },
     {
@@ -1682,7 +1668,7 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.03 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 47.04 % > budget 3.07 %"
+        "CVaR 95 % 47.04 % > budget 12.00 %"
       ]
     }
   ],
@@ -1789,151 +1775,121 @@
   ],
   "verdict": "AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — la perte y est non bornee.",
   "recommended": {
-    "anchor_price": 32.625,
-    "stop_price": 32.625,
-    "origin": "atr_grid",
-    "strength": null,
+    "anchor_price": 31.3525,
+    "stop_price": 31.3525,
+    "origin": "atr_based",
+    "strength": "n/a",
     "touches": null,
     "touch_weight": null,
-    "why": "point de grille a 1.00 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
-    "anchor_distance_atr": 1.0,
-    "distance_pct": 7.236,
+    "why": "distance en ATR — PAS un niveau structurel, garde-fou de volatilite",
+    "anchor_distance_atr": 1.5,
     "anchor_quality": "non mesure",
-    "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
-    "p_stop_first": 0.5627,
-    "p_target_first": 0.267,
-    "p_no_touch": 0.1703,
+    "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
+    "distance_pct": 10.854,
+    "p_stop_first": 0.3992,
+    "p_target_first": 0.3191,
+    "p_no_touch": 0.2816,
     "p_stop_ci95": [
-      0.5101,
-      0.6143
+      0.3486,
+      0.4515
     ],
-    "p_stop_ci_width_pt": 10.4,
+    "p_stop_ci_width_pt": 10.3,
     "prob_source": "calcul DIRECT sur 1244 seances daily, horizon deep (10 j)",
     "horizon_used": "deep",
     "horizon_sessions": 10,
     "n_windows": 1244,
     "n_eff": 345.7,
     "grid_point": null,
-    "gap_overshoot_pt": 6.313,
+    "gap_overshoot_pt": 6.021,
     "gap_overshoot_note": "surcout moyen mesure a cette distance",
-    "loss_if_stop_pct": 13.549,
+    "loss_if_stop_pct": 16.875,
     "gain_if_tp_pct": 15.983,
-    "rr_vs_spot": 1.18,
-    "cvar95_pct": 7.347,
-    "var95_pct": 7.236,
-    "cvar95_budget_pct": 3.07,
-    "cost": 2.89392,
-    "ev_pct": -2.8939,
+    "rr_vs_spot": 0.947,
+    "cvar95_pct": 10.916,
+    "var95_pct": 10.854,
+    "cvar95_budget_pct": 12.0,
+    "cost": 1.24966,
+    "ev_pct": -1.2497,
     "ev_terms": {
-      "target": 4.2675,
-      "stop": -7.624,
-      "no_touch": 0.4626,
-      "pnl_no_touch_pct": 2.7166
+      "target": 5.1002,
+      "stop": -6.7365,
+      "no_touch": 0.3867,
+      "pnl_no_touch_pct": 1.3731
     },
-    "p_stop_upper": 0.6143,
+    "p_stop_upper": 0.4515,
     "flags": [
       {
         "flag": "LIGNE_EV_NEGATIVE",
-        "detail": "le meilleur bracket disponible perd de l'argent en esperance (-2.89 %) : P(cible) 26.7 % x 15.98 % + P(rien) 17.0 % x 2.72 % ne couvrent pas P(stop) 56.3 % x 13.55 %.",
+        "detail": "le meilleur bracket disponible perd de l'argent en esperance (-1.25 %) : P(cible) 31.9 % x 15.98 % + P(rien) 28.2 % x 1.37 % ne couvrent pas P(stop) 39.9 % x 16.88 %.",
         "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
       }
     ],
     "feasible": false,
     "rejected_because": [
-      "p_stop_first 0.563, borne haute 0.614 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
-      "R/R 1.18 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-      "CVaR 95 % 7.35 % > budget 3.07 %"
+      "R/R 0.95 < plancher 1.60 (mesure vs SPOT, gap inclus)"
     ],
-    "violations": [
-      {
-        "constraint": "p_stop_first_upper",
-        "value": 0.6143,
-        "limit": 0.55,
-        "excess_ratio": 0.1169
-      },
-      {
-        "constraint": "cvar95",
-        "value": 7.3468,
-        "limit": 3.07,
-        "excess_ratio": 1.3931
-      }
-    ],
-    "violation_severity": 1.51,
+    "violations": null,
+    "violation_severity": 0.0,
     "is_best_effort": true,
     "best_effort_note": "AUCUN couple ne tient les contraintes. Celui-ci est le MOINS MAUVAIS au sens de la SEVERITE des violations (somme des depassements relatifs a chaque seuil), l'esperance ne departageant qu'a severites egales. Compter les violations ne suffisait pas : un depassement de budget de 1,5 point comptait comme un depassement de 13, et le classement retombait sur l'esperance, qui elit toujours le stop le plus large. Il n'est pas conforme et ne doit pas etre presente comme tel — mais laisser la ligne NUE est pire : la perte y est non bornee, alors qu'ici elle est bornee par le stop plus le surcout de gap. Poser, dire ce qui est viole, et remonter le probleme de fond a l'etage portefeuille."
   },
   "recommendation_is_compliant": false,
   "best_effort": {
-    "anchor_price": 32.625,
-    "stop_price": 32.625,
-    "origin": "atr_grid",
-    "strength": null,
+    "anchor_price": 31.3525,
+    "stop_price": 31.3525,
+    "origin": "atr_based",
+    "strength": "n/a",
     "touches": null,
     "touch_weight": null,
-    "why": "point de grille a 1.00 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
-    "anchor_distance_atr": 1.0,
-    "distance_pct": 7.236,
+    "why": "distance en ATR — PAS un niveau structurel, garde-fou de volatilite",
+    "anchor_distance_atr": 1.5,
     "anchor_quality": "non mesure",
-    "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
-    "p_stop_first": 0.5627,
-    "p_target_first": 0.267,
-    "p_no_touch": 0.1703,
+    "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
+    "distance_pct": 10.854,
+    "p_stop_first": 0.3992,
+    "p_target_first": 0.3191,
+    "p_no_touch": 0.2816,
     "p_stop_ci95": [
-      0.5101,
-      0.6143
+      0.3486,
+      0.4515
     ],
-    "p_stop_ci_width_pt": 10.4,
+    "p_stop_ci_width_pt": 10.3,
     "prob_source": "calcul DIRECT sur 1244 seances daily, horizon deep (10 j)",
     "horizon_used": "deep",
     "horizon_sessions": 10,
     "n_windows": 1244,
     "n_eff": 345.7,
     "grid_point": null,
-    "gap_overshoot_pt": 6.313,
+    "gap_overshoot_pt": 6.021,
     "gap_overshoot_note": "surcout moyen mesure a cette distance",
-    "loss_if_stop_pct": 13.549,
+    "loss_if_stop_pct": 16.875,
     "gain_if_tp_pct": 15.983,
-    "rr_vs_spot": 1.18,
-    "cvar95_pct": 7.347,
-    "var95_pct": 7.236,
-    "cvar95_budget_pct": 3.07,
-    "cost": 2.89392,
-    "ev_pct": -2.8939,
+    "rr_vs_spot": 0.947,
+    "cvar95_pct": 10.916,
+    "var95_pct": 10.854,
+    "cvar95_budget_pct": 12.0,
+    "cost": 1.24966,
+    "ev_pct": -1.2497,
     "ev_terms": {
-      "target": 4.2675,
-      "stop": -7.624,
-      "no_touch": 0.4626,
-      "pnl_no_touch_pct": 2.7166
+      "target": 5.1002,
+      "stop": -6.7365,
+      "no_touch": 0.3867,
+      "pnl_no_touch_pct": 1.3731
     },
-    "p_stop_upper": 0.6143,
+    "p_stop_upper": 0.4515,
     "flags": [
       {
         "flag": "LIGNE_EV_NEGATIVE",
-        "detail": "le meilleur bracket disponible perd de l'argent en esperance (-2.89 %) : P(cible) 26.7 % x 15.98 % + P(rien) 17.0 % x 2.72 % ne couvrent pas P(stop) 56.3 % x 13.55 %.",
+        "detail": "le meilleur bracket disponible perd de l'argent en esperance (-1.25 %) : P(cible) 31.9 % x 15.98 % + P(rien) 28.2 % x 1.37 % ne couvrent pas P(stop) 39.9 % x 16.88 %.",
         "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
       }
     ],
     "feasible": false,
     "rejected_because": [
-      "p_stop_first 0.563, borne haute 0.614 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
-      "R/R 1.18 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-      "CVaR 95 % 7.35 % > budget 3.07 %"
+      "R/R 0.95 < plancher 1.60 (mesure vs SPOT, gap inclus)"
     ],
-    "violations": [
-      {
-        "constraint": "p_stop_first_upper",
-        "value": 0.6143,
-        "limit": 0.55,
-        "excess_ratio": 0.1169
-      },
-      {
-        "constraint": "cvar95",
-        "value": 7.3468,
-        "limit": 3.07,
-        "excess_ratio": 1.3931
-      }
-    ],
-    "violation_severity": 1.51,
+    "violations": null,
+    "violation_severity": 0.0,
     "is_best_effort": true,
     "best_effort_note": "AUCUN couple ne tient les contraintes. Celui-ci est le MOINS MAUVAIS au sens de la SEVERITE des violations (somme des depassements relatifs a chaque seuil), l'esperance ne departageant qu'a severites egales. Compter les violations ne suffisait pas : un depassement de budget de 1,5 point comptait comme un depassement de 13, et le classement retombait sur l'esperance, qui elit toujours le stop le plus large. Il n'est pas conforme et ne doit pas etre presente comme tel — mais laisser la ligne NUE est pire : la perte y est non bornee, alors qu'ici elle est bornee par le stop plus le surcout de gap. Poser, dire ce qui est viole, et remonter le probleme de fond a l'etage portefeuille."
   },
