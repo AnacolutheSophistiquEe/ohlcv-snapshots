@@ -1,6 +1,6 @@
 # RHM
 
-**Generated** : 2026-08-25T00:02:16.442295+00:00  
+**Generated** : 2026-08-25T18:05:29.727513+00:00  
 **Santé technique** : 2/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · €1128.60  
@@ -61,25 +61,20 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Pass'.
    - viole : cible atteinte seulement 0.2 % du temps (< 15 %) meme a 10 seances : le R/R de 2.36 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
 - Budget de queue : **12.0 %** du notionnel — ⚠ VALEUR FIGEE (valeur de repli (ligne absente de l'allocation)), PAS une mesure. L'allocation derivee de la contrainte du compte n'etait pas disponible.
 - Candidats (la structure propose, la statistique elimine) :
-   - ⚪ swing_based a 0.37 ATR (stop 3.542 %) — p(stop avant cible) 0.6855 [0.64 ; 0.73], R/R 6.309, perte reelle 5.656 % (gap inclus), EV -1.1493 % — **REFUSE**
+   - ⚪ swing_based a 0.37 ATR (stop 3.486 %) — p(stop avant cible) 0.6928 [0.64 ; 0.74], R/R 6.309, perte reelle 5.656 % (gap inclus), EV -1.2163 % — **REFUSE**
       - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 6.31 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : p_stop_first 0.685, borne haute 0.733 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.15 %) : P(cible) 0.1 % x 35.69 % + P(rien) 31.4 % x 8.61 % ne couvrent pas P(stop) 68.5 % x 5.66 %.
+      - refuse : p_stop_first 0.693, borne haute 0.740 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.22 %) : P(cible) 0.1 % x 35.69 % + P(rien) 30.6 % x 8.73 % ne couvrent pas P(stop) 69.3 % x 5.66 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
    - ⚪ atr_based a 1.5 ATR (stop 6.419 %) — p(stop avant cible) 0.4798 [0.43 ; 0.53], R/R 2.357, perte reelle 15.141 % (gap inclus), EV -4.1244 % — **REFUSE**
       - refuse : cible atteinte seulement 0.2 % du temps (< 15 %) meme a 10 seances : le R/R de 2.36 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-4.12 %) : P(cible) 0.2 % x 35.69 % + P(rien) 51.8 % x 5.91 % ne couvrent pas P(stop) 48.0 % x 15.14 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - 🟢 support a 4.14 ATR (stop 19.681 %) — p(stop avant cible) 0.0597 [0.04 ; 0.09], R/R 1.591, perte reelle 22.429 % (gap inclus), EV -0.5378 % — **REFUSE**
+   - 🟢 support a 4.14 ATR (stop 19.625 %) — p(stop avant cible) 0.0597 [0.04 ; 0.09], R/R 1.591, perte reelle 22.429 % (gap inclus), EV -0.5378 % — **REFUSE**
       - refuse : cible atteinte seulement 0.2 % du temps (< 15 %) meme a 10 seances : le R/R de 1.59 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.59 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 19.68 % > budget 12.00 %
+      - refuse : CVaR 95 % 19.63 % > budget 12.00 %
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.54 %) : P(cible) 0.2 % x 35.69 % + P(rien) 93.8 % x 0.77 % ne couvrent pas P(stop) 6.0 % x 22.43 %.
-        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 1.0 ATR (stop 4.28 %) — p(stop avant cible) 0.6284 [0.58 ; 0.68], R/R 5.048, perte reelle 7.069 % (gap inclus), EV -1.4705 % — **REFUSE**
-      - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 5.05 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : p_stop_first 0.628, borne haute 0.678 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.47 %) : P(cible) 0.1 % x 35.69 % + P(rien) 37.1 % x 7.94 % ne couvrent pas P(stop) 62.8 % x 7.07 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
    - ⚪ atr_grid a 1.75 ATR (stop 7.489 %) — p(stop avant cible) 0.4042 [0.35 ; 0.46], R/R 2.357, perte reelle 15.141 % (gap inclus), EV -3.0322 % — **REFUSE**
       - refuse : cible atteinte seulement 0.2 % du temps (< 15 %) meme a 10 seances : le R/R de 2.36 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
@@ -147,6 +142,49 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Pass'.
       - refuse : CVaR 95 % 34.24 % > budget 12.00 %
 - ⚠ **Un ancrage marque `faible` est un support DETECTE a moins de 1 ATR du spot : mesure a 51 % de casse (pile ou face, IC clusterise [0,474 ; 0,545]) contre ~35 % au-dela. Il est GARDE comme candidat, jamais refuse en silence — mais si c est le seul disponible, la ligne n est pas ancrable et le levier redevient la TAILLE.**
 - ⚠ `anchor_quality: non mesure` ne veut PAS dire mauvais : la mesure porte sur les supports DETECTES, pas sur un multiple d ATR ni sur un bas de canal.
+
+
+## Distances ATR x horizon — p(touche) a 1 / 5 / 20 seances
+
+- Reference : spot 1128.6, ATR14 48.3 (4.28 % du cours). **Les prix ci-dessous sont ancres sur ce spot de cloture : les REANCRER sur le prix vivant avant de poser.**
+- **Horizon = consigne operateur.** intraday -> 1 seance ; SANS PRECISION -> swing, 5 seances ; positionnel/long -> 20.
+
+| distance | % du cours | prix (spot ref) | p(touche) 1s | p(touche) 5s | p(touche) 20s |
+|---|---|---|---|---|---|
+| 0.05 ATR | 0.214 % | 1126.185 | 89.25 % | 94.55 % | 97.69 % |
+| 0.1 ATR | 0.428 % | 1123.77 | 83.23 % | 91.39 % | 96.28 % |
+| 0.15 ATR | 0.642 % | 1121.355 | 76.13 % | 88.22 % | 94.77 % |
+| 0.2 ATR | 0.856 % | 1118.94 | 69.63 % | 85.15 % | 93.27 % |
+| 0.25 ATR | 1.07 % | 1116.525 | 62.43 % | 80.99 % | 91.46 % |
+| 0.35 ATR | 1.498 % | 1111.695 | 53.94 % | 76.63 % | 89.35 % |
+| 0.5 ATR | 2.14 % | 1104.45 | 40.34 % | 68.81 % | 83.72 % |
+| 0.75 ATR | 3.21 % | 1092.375 | 23.67 % | 57.23 % | 77.09 % |
+| 1.0 ATR | 4.28 % | 1080.3 | 13.02 % | 48.12 % | 70.55 % |
+| 1.25 ATR | 5.35 % | 1068.225 | 7.5 % | 38.81 % | 64.22 % |
+| 1.5 ATR | 6.419 % | 1056.15 | 3.94 % | 31.49 % | 56.88 % |
+| 2.0 ATR | 8.559 % | 1032.0 | 1.78 % | 20.79 % | 47.14 % |
+| 2.5 ATR | 10.699 % | 1007.85 | 0.49 % | 12.77 % | 37.89 % |
+| 3.0 ATR | 12.839 % | 983.7 | 0.1 % | 7.72 % | 31.26 % |
+| 4.0 ATR | 17.119 % | 935.4 | 0.0 % | 3.27 % | 20.1 % |
+| 6.0 ATR | 25.678 % | 838.7999 | 0.0 % | 0.2 % | 3.52 % |
+
+**A quelle distance poser pour n'etre sorti que p % du temps** (lecture INVERSE — c'est elle qui sert a arbitrer) :
+
+| horizon | p=50 % | p=33 % | p=25 % | p=20 % | p=10 % | p=5 % |
+|---|---|---|---|---|---|---|
+| **1 s.** | 0.39 ATR | 0.61 ATR | 0.73 ATR | 0.84 ATR | 1.14 ATR | 1.43 ATR |
+| **5 s.** | 0.95 ATR | 1.45 ATR | 1.80 ATR | 2.05 ATR | 2.77 ATR | 3.61 ATR |
+| **20 s.** | 1.85 ATR | 2.87 ATR | 3.56 ATR | 4.01 ATR | 5.22 ATR | 5.82 ATR |
+
+**Distance optimale par horizon** (plage utile mesuree, puis meilleur point unique de cette plage) :
+- **1 seance(s)** : plage utile 0.05–0.35 ATR — optimum 0.05 ATR (0.214 %, prix 1126.1848), p(touche) 89.25 % (en stress 99.02 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 45.8 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
+- **5 seance(s)** : plage utile 0.05–1.5 ATR — optimum 0.15 ATR (0.642 %, prix 1121.3544), p(touche) 88.22 % (en stress 99.01 %)  ✅ optimum identifie (86.8 % des re-echantillons)
+- **20 seance(s)** : plage utile 0.05–3.0 ATR — optimum 0.15 ATR (0.642 %, prix 1121.3544), p(touche) 94.77 % (en stress 100.0 %)  ✅ optimum identifie (99.4 % des re-echantillons)
+
+- p(touche) = part des fenetres de N seances ou le prix est venu chercher un stop pose a cette distance SOUS le prix d'entree de la fenetre. Mesure sur les barres reelles du titre, pas modelisee.
+
+- **Ce que la mesure permet** : CE QUE LA MESURE PERMET, ET CE QU'ELLE NE PERMET PAS. Un bootstrap par blocs (800 re-echantillons, blocs de 20 seances) demande si l'optimum de croissance survit au re-echantillonnage. Resultat du 26/08 : A 1 SEANCE, NON — sur RHM le vainqueur ne gagne que 45,8 % des re-echantillons, sur MSTR 31,6 %. Il n'existe donc PAS d'arbitrage purement calculatoire de la distance intraday : le rendement ne distingue pas les distances proches. C'est un resultat, pas une lacune — il dit que d'autres criteres (tolerance de sortie via `inverse_by_horizon`, niveau structurel, marge) peuvent trancher SANS RIEN COUTER en rendement mesure. A 5 et 20 seances sur RHM l'optimum EST identifie, et il est au maximum de la grille : le rendement pur veut le stop le plus large, et ce qui l'en empeche est le PORTEFEUILLE (cash rendu, marge), pas la ligne.
+- **Comment choisir** : LE CHOIX DE LA DISTANCE EST UN ARBITRAGE, PAS UNE LECTURE. 1) L'horizon vient de la consigne. 2) Fixer une TOLERANCE DE SORTIE — combien de fois sur dix accepte-t-on d'etre stoppe a cet horizon ? 3) Lire `inverse_by_horizon[<H>].p<XX>` : c'est la distance qui realise cette tolerance SUR CE TITRE. 4) Croiser avec la plage utile (`optimal_by_horizon[<H>].range_atr`) et avec `ordinary_pct`, qui dit ce que la distance rapporte. 5) Si `best_is_corner` est vrai, ne PAS citer `best_atr` comme un optimum : l'objectif est monotone, il n'y a pas de point interieur, et c'est la tolerance qui doit trancher. 6) Annoncer la distance retenue AVEC sa p(touche) : c'est le seul chiffre qui permet a l'operateur de contester le choix.
 
 
 ## Edge, scénarios & sizing
@@ -272,5 +310,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (813485 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (974183 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

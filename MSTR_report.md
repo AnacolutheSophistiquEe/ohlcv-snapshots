@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-08-25T17:48:25.217276+00:00  
+**Generated** : 2026-08-25T18:07:20.352695+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $122.63  
@@ -165,7 +165,12 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass'.
 
 | distance | % du cours | prix (spot ref) | p(touche) 1s | p(touche) 5s | p(touche) 20s |
 |---|---|---|---|---|---|
+| 0.05 ATR | 0.261 % | 122.3102 | 94.26 % | 97.67 % | 98.67 % |
+| 0.1 ATR | 0.522 % | 121.9904 | 88.32 % | 94.84 % | 97.33 % |
+| 0.15 ATR | 0.782 % | 121.6705 | 81.37 % | 91.71 % | 95.59 % |
+| 0.2 ATR | 1.043 % | 121.3507 | 73.72 % | 88.07 % | 93.84 % |
 | 0.25 ATR | 1.304 % | 121.0309 | 67.88 % | 86.15 % | 92.3 % |
+| 0.35 ATR | 1.826 % | 120.3912 | 55.19 % | 80.89 % | 89.63 % |
 | 0.5 ATR | 2.608 % | 119.4318 | 38.27 % | 71.28 % | 84.91 % |
 | 0.75 ATR | 3.912 % | 117.8327 | 19.23 % | 58.34 % | 77.62 % |
 | 1.0 ATR | 5.216 % | 116.2336 | 9.37 % | 46.81 % | 70.53 % |
@@ -177,12 +182,23 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass'.
 | 4.0 ATR | 20.864 % | 97.0443 | 0.0 % | 0.81 % | 18.17 % |
 | 6.0 ATR | 31.296 % | 84.2514 | 0.0 % | 0.0 % | 4.41 % |
 
+**A quelle distance poser pour n'etre sorti que p % du temps** (lecture INVERSE — c'est elle qui sert a arbitrer) :
+
+| horizon | p=50 % | p=33 % | p=25 % | p=20 % | p=10 % | p=5 % |
+|---|---|---|---|---|---|---|
+| **1 s.** | 0.40 ATR | 0.57 ATR | 0.67 ATR | 0.74 ATR | 0.98 ATR | 1.21 ATR |
+| **5 s.** | 0.93 ATR | 1.37 ATR | 1.67 ATR | 1.86 ATR | 2.42 ATR | 2.96 ATR |
+| **20 s.** | 1.88 ATR | 2.75 ATR | 3.32 ATR | 3.82 ATR | 5.19 ATR | 5.91 ATR |
+
 **Distance optimale par horizon** (plage utile mesuree, puis meilleur point unique de cette plage) :
-- **1 seance(s)** : plage utile 0.25–0.5 ATR — optimum 0.25 ATR (1.304 %, prix 121.0309), p(touche) 67.88 % (en stress 94.0 %)
-- **5 seance(s)** : plage utile 0.25–1.5 ATR — optimum 0.25 ATR (1.304 %, prix 121.0309), p(touche) 86.15 % (en stress 100.0 %)
-- **20 seance(s)** : plage utile 0.25–3.0 ATR — optimum 1.5 ATR (7.824 %, prix 113.0354), p(touche) 57.6 % (en stress 100.0 %)
+- **1 seance(s)** : plage utile 0.05–0.5 ATR — optimum 0.05 ATR (0.261 %, prix 122.3099), p(touche) 94.26 % (en stress 100.0 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 31.6 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
+- **5 seance(s)** : plage utile 0.05–1.5 ATR — optimum 0.05 ATR (0.261 %, prix 122.3099), p(touche) 97.67 % (en stress 100.0 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 27.5 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
+- **20 seance(s)** : plage utile 0.05–3.0 ATR — optimum 1.5 ATR (7.824 %, prix 113.0354), p(touche) 57.6 % (en stress 100.0 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 41.8 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 
 - p(touche) = part des fenetres de N seances ou le prix est venu chercher un stop pose a cette distance SOUS le prix d'entree de la fenetre. Mesure sur les barres reelles du titre, pas modelisee.
+
+- **Ce que la mesure permet** : CE QUE LA MESURE PERMET, ET CE QU'ELLE NE PERMET PAS. Un bootstrap par blocs (800 re-echantillons, blocs de 20 seances) demande si l'optimum de croissance survit au re-echantillonnage. Resultat du 26/08 : A 1 SEANCE, NON — sur RHM le vainqueur ne gagne que 45,8 % des re-echantillons, sur MSTR 31,6 %. Il n'existe donc PAS d'arbitrage purement calculatoire de la distance intraday : le rendement ne distingue pas les distances proches. C'est un resultat, pas une lacune — il dit que d'autres criteres (tolerance de sortie via `inverse_by_horizon`, niveau structurel, marge) peuvent trancher SANS RIEN COUTER en rendement mesure. A 5 et 20 seances sur RHM l'optimum EST identifie, et il est au maximum de la grille : le rendement pur veut le stop le plus large, et ce qui l'en empeche est le PORTEFEUILLE (cash rendu, marge), pas la ligne.
+- **Comment choisir** : LE CHOIX DE LA DISTANCE EST UN ARBITRAGE, PAS UNE LECTURE. 1) L'horizon vient de la consigne. 2) Fixer une TOLERANCE DE SORTIE — combien de fois sur dix accepte-t-on d'etre stoppe a cet horizon ? 3) Lire `inverse_by_horizon[<H>].p<XX>` : c'est la distance qui realise cette tolerance SUR CE TITRE. 4) Croiser avec la plage utile (`optimal_by_horizon[<H>].range_atr`) et avec `ordinary_pct`, qui dit ce que la distance rapporte. 5) Si `best_is_corner` est vrai, ne PAS citer `best_atr` comme un optimum : l'objectif est monotone, il n'y a pas de point interieur, et c'est la tolerance qui doit trancher. 6) Annoncer la distance retenue AVEC sa p(touche) : c'est le seul chiffre qui permet a l'operateur de contester le choix.
 
 
 ## Edge, scénarios & sizing
@@ -320,5 +336,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (882255 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (982381 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
