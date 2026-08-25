@@ -1,53 +1,37 @@
 {
   "available": true,
-  "generated_at": "2026-08-25T20:02:51.861256+00:00",
-  "prediction_id": "MSTR_A_20260825",
+  "generated_at": "2026-08-25T21:45:36.892614+00:00",
+  "prediction_id": "SOI_A_20260825",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "MSTR",
-  "exchange": "SMART",
-  "currency": "USD",
+  "symbol": "SOI",
+  "exchange": "SBF",
+  "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 122.02,
-    "quantity": 3,
+    "limit_price": 108.45,
+    "quantity": 1,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 136.25,
+      "limit_price": 128.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1"
     },
     {
       "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 137.97,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T2"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 139.69,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T3"
-    },
-    {
-      "action": "SELL",
       "order_type": "STP",
-      "stop_price": 111.51,
-      "quantity": 3,
+      "stop_price": 97.7,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "MSTR_A_intraday_20260825",
+  "oca_group": "SOI_A_intraday_20260825",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -61,7 +45,7 @@
     "order_validity": {
       "type": "DAY",
       "offset_sessions": 0,
-      "good_till_date": "2026-08-25T22:00:00+00:00"
+      "good_till_date": "2026-08-25T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -80,11 +64,11 @@
       },
       {
         "tag": "T2",
-        "qty": 1
+        "qty": 0
       },
       {
         "tag": "T3",
-        "qty": 1
+        "qty": 0
       }
     ]
   },
@@ -92,33 +76,33 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 6.0,
+    "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0534,
+    "ev_pct_risk": -0.0143,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.6021,
-      "T2": 0.1689,
-      "T3": 0.15
+      "T1": 0.3375,
+      "T2": 0.3375,
+      "T3": 0.3375
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 367.89,
-    "hold_tolerance_breach_price": 91.9725,
+    "notional_eur": 109.0,
+    "hold_tolerance_breach_price": null,
     "hold_fallback_active": true,
-    "prediction_id": "MSTR_A_20260825"
+    "prediction_id": "SOI_A_20260825"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.01,
+    "tick_size_used": 0.05,
     "qty_total_positive": true
   }
 }
