@@ -2,17 +2,17 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SRT3",
-    "generated_at": "2026-08-24T22:05:07Z",
+    "generated_at": "2026-08-25T00:35:52Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-08-25T08:00:00Z",
-    "valid_until": "2026-08-25T21:00:00Z",
+    "valid_from": "2026-08-26T08:00:00Z",
+    "valid_until": "2026-08-26T21:00:00Z",
     "source_precomputed": "SRT3_precomputed.json"
   },
   "context": {
-    "last_price": 243.1,
+    "last_price": 244.5,
     "ta_score": {
-      "value": 7,
+      "value": 8,
       "max": 10,
       "label": "bullish"
     },
@@ -31,20 +31,20 @@
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_60-70_dist_ma20_+2_+5",
-      "win_rate": 0.7,
-      "sample_size": 10,
-      "median_bounce_pct": 1.07,
+      "setup": "rsi_60-70_dist_ma20_+5_+10",
+      "win_rate": 0.77,
+      "sample_size": 22,
+      "median_bounce_pct": 4.83,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 7/10 (bullish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (5b/2s/8n)."
+    "narrative_short": "TA score 8/10 (bullish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (5b/2s/8n)."
   },
   "notes": {
-    "atr_daily": 7.55,
+    "atr_daily": 7.5357,
     "atr_pct_daily": null,
-    "beta_60d": 0.6834,
+    "beta_60d": 0.6793,
     "beta_benchmark": "GDAXI",
-    "beta_corr_60d": 0.2157,
+    "beta_corr_60d": 0.2154,
     "btc_corr_high": null,
     "candlestick": {
       "name": "hammer",
@@ -53,7 +53,7 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -8.05,
+      "current_dd_pct": -7.52,
       "ath_price": 264.389,
       "ath_date": "2026-01-08",
       "max_dd_1y_pct": -22.5,
@@ -79,21 +79,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 238.8705,
+          "price": 239.4413,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 1.16
+          "rr": 1.2
         },
         {
           "level": 2,
-          "price": 244.996,
+          "price": 245.5077,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 1.65
+          "rr": 1.69
         },
         {
           "level": 3,
-          "price": 251.1216,
-          "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 2.14
+          "price": 251.5741,
+          "basis": "plafond band 95% · touche hist. 72% (sans stop)",
+          "rr": 2.17
         }
       ],
       "preferred_target": 1,
@@ -150,32 +150,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 215.5082,
-        "max": 219.8839
+        "min": 216.7493,
+        "max": 221.1502
       },
       "stop": {
-        "price": 207.465,
+        "price": 208.7464,
         "basis": "fallback_psych_-10pct",
-        "distance_pct": -4.7
+        "distance_pct": -4.66
       },
       "targets": [
         {
           "level": 1,
-          "price": 238.8705,
+          "price": 239.4413,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 2.07
+          "rr": 2.01
         },
         {
           "level": 2,
-          "price": 244.996,
+          "price": 245.5077,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 2.67
+          "rr": 2.6
         },
         {
           "level": 3,
-          "price": 251.1216,
-          "basis": "plafond band 95% · touche hist. 44% (sans stop)",
-          "rr": 3.27
+          "price": 251.5741,
+          "basis": "plafond band 95% · touche hist. 72% (sans stop)",
+          "rr": 3.2
         }
       ],
       "preferred_target": 1,
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 205.3904,
+    "price": 206.6589,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

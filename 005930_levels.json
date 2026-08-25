@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-08-24T22:05:07Z",
+    "generated_at": "2026-08-25T00:35:52Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-08-25T08:00:00Z",
-    "valid_until": "2026-08-25T21:00:00Z",
+    "valid_from": "2026-08-26T08:00:00Z",
+    "valid_until": "2026-08-26T21:00:00Z",
     "source_precomputed": "005930_precomputed.json"
   },
   "context": {
@@ -76,38 +76,38 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 254675.345,
-        "max": 256207.995
+        "min": 229931.4083,
+        "max": 235421.8621
       },
       "stop": {
-        "price": 230535.7143,
-        "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -9.75
+        "price": 213058.8016,
+        "basis": "swing_plan_below_confluence_support",
+        "distance_pct": -8.43
       },
       "targets": [
         {
           "level": 1,
           "price": 302166.7696,
           "basis": "résistance (medium) · touche hist. 14% (sans stop)",
-          "rr": 1.88
+          "rr": 3.54
         },
         {
           "level": 2,
           "price": 308591.3945,
           "basis": "band 95% (atteignable) · touche hist. 14% (sans stop)",
-          "rr": 2.13
+          "rr": 3.87
         },
         {
           "level": 3,
           "price": 315016.0195,
           "basis": "plafond band 95% · touche hist. 14% (sans stop)",
-          "rr": 2.39
+          "rr": 4.2
         }
       ],
       "preferred_target": 1,
       "conditions": [],
       "max_budget_pct": 50,
-      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_s1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+      "rationale": "Confluence support S/R_support + FIB_50 + VPVR_VAL (strength 15.0). Bounce mecanique."
     },
     {
       "id": "B",
@@ -115,8 +115,8 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 263224.4828,
-        "max": 264276.3289
+        "min": 263224.4798,
+        "max": 264276.3259
       },
       "stop": {
         "price": 261617.163,
@@ -138,7 +138,7 @@
         },
         {
           "level": 3,
-          "price": 306561.9786,
+          "price": 306561.9769,
           "basis": "fib_786",
           "rr": 20.07
         }
@@ -154,45 +154,45 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 201713.2599,
-        "max": 209009.3695
+        "min": 201713.2551,
+        "max": 208338.5426
       },
       "stop": {
-        "price": 193644.7295,
+        "price": 193644.7249,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -5.71
+        "distance_pct": -5.55
       },
       "targets": [
         {
           "level": 1,
           "price": 302166.7696,
           "basis": "résistance (medium) · touche hist. 14% (sans stop)",
-          "rr": 8.26
+          "rr": 8.54
         },
         {
           "level": 2,
           "price": 308591.3945,
           "basis": "band 95% (atteignable) · touche hist. 14% (sans stop)",
-          "rr": 8.81
+          "rr": 9.1
         },
         {
           "level": 3,
           "price": 315016.0195,
           "basis": "plafond band 95% · touche hist. 14% (sans stop)",
-          "rr": 9.36
+          "rr": 9.66
         }
       ],
       "preferred_target": 1,
       "conditions": [],
       "max_budget_pct": 35,
-      "rationale": "Deep value mecanique : entree sur confluence support basse FIB_382 + BB_LOWER + MA200 + S/R_support + VPVR_VAL (strength 30.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+      "rationale": "Deep value mecanique : entree sur confluence support basse FIB_382 + BB_LOWER + MA200 + S/R_support (strength 18.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
     }
   ],
   "bot_actionable": true,
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 191708.2822,
+    "price": 191708.2777,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
