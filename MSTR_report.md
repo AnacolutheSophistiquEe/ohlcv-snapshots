@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-08-25T17:44:13.422692+00:00  
+**Generated** : 2026-08-25T17:48:25.217276+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $122.63  
@@ -11,7 +11,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 > ↳ stop −4.0% cohérent avec le bruit 5 s (EV-optimal ≈ −4.0%)  
 
 > ⚠ **QA flags (2, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §12 Options — Max-pain gap affiché -13.6 % ≠ (strike 110.0 − spot 122.63)/spot = -10.3 %. Probable spot d'options périmé vs spot courant.
+>   - **[MEDIUM]** §12 Options — Max-pain gap affiché -13.8 % ≠ (strike 110.0 − spot 122.63)/spot = -10.3 %. Probable spot d'options périmé vs spot courant.
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -5905 % hors [0,100] (R² max 0.84). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
