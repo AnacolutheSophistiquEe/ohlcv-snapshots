@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US5949724083",
-    "generated_at": "2026-08-25T00:23:10.964512+00:00",
+    "generated_at": "2026-08-25T17:44:13.422692+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1839,7 +1839,7 @@
           "rr": 0.45,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.7953,
+          "p_touch": 0.7954,
           "distance_pct": 1.8
         },
         "t2": {
@@ -1857,7 +1857,7 @@
           "rr": 1.86,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.117,
+          "p_touch": 0.1171,
           "distance_pct": 7.44
         }
       }
@@ -1927,7 +1927,7 @@
           "rr": 0.97,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8044,
+          "p_touch": 0.8045,
           "distance_pct": 7.85
         },
         "t2": {
@@ -1936,7 +1936,7 @@
           "rr": 1.93,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2778,
+          "p_touch": 0.2779,
           "distance_pct": 15.69
         },
         "t3": {
@@ -1945,7 +1945,7 @@
           "rr": 2.9,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2778,
+          "p_touch": 0.2779,
           "distance_pct": 23.54
         }
       }
@@ -2240,7 +2240,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-25T00:22:45.461115+00:00",
+    "generated_at": "2026-08-25T17:43:41.376279+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7713,7 +7713,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-25T00:22:35.141638+00:00",
+    "generated_at": "2026-08-25T17:43:28.620748+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7942,7 +7942,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-25T00:22:58.690895+00:00",
+    "generated_at": "2026-08-25T17:43:57.921616+00:00",
     "ticker": "MSTR",
     "horizons_days": {
       "intraday": 2,
@@ -8077,9 +8077,9 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-25T00:22:49.611143+00:00",
+    "generated_at": "2026-08-25T17:43:46.243998+00:00",
     "ticker": "MSTR",
-    "spot_price": 122.63,
+    "spot_price": 127.28,
     "expiries_available": [
       {
         "date": "2026-08-28",
@@ -8103,60 +8103,60 @@
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7759,
-      "iv_atm_90d": 0.7768,
+      "iv_atm_30d": 0.7232,
+      "iv_atm_90d": 0.7228,
       "rv_20d_annualized": 0.7184,
-      "iv_rv_ratio": 1.08,
+      "iv_rv_ratio": 1.007,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -9.448,
+      "skew_25_delta_vol_pts": -8.081,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-28",
       "m1_days_to_exp": 3,
-      "m1_iv_atm": 0.931,
+      "m1_iv_atm": 0.7887,
       "m3_expiry": "2026-09-25",
       "m3_days_to_exp": 31,
-      "m3_iv_atm": 0.7768,
-      "ratio_m1_m3": 1.1986,
+      "m3_iv_atm": 0.7228,
+      "ratio_m1_m3": 1.0912,
       "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-28",
       "days_to_exp": 3,
-      "put_call_ratio": 0.774,
-      "total_oi_m1": 434188,
+      "put_call_ratio": 0.795,
+      "total_oi_m1": 466055,
       "largest_call_strike_oi": {
         "strike": 130.0,
-        "oi": 21642
+        "oi": 21826
       },
       "largest_put_strike_oi": {
         "strike": 60.0,
-        "oi": 27189
+        "oi": 27399
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 10528629707.0,
+      "gex_total_usd_per_point": 11231031478.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 107.0,
+      "strike": 110.0,
       "expiry": "2026-08-28",
-      "gap_vs_spot_pct": -12.75
+      "gap_vs_spot_pct": -13.58
     },
     "verdict": {
       "label": "bullish",
       "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-9.4 pts) — peu de demande de protection",
-        "GEX positif (10528.6M$/pt) = MM long gamma stabilisateur",
-        "max pain 107.00 vs spot 122.63 (-12.7%)"
+        "skew faible (-8.1 pts) — peu de demande de protection",
+        "GEX positif (11231.0M$/pt) = MM long gamma stabilisateur",
+        "max pain 110.00 vs spot 127.28 (-13.6%)"
       ]
     },
     "liquidity_stats": {
@@ -8166,28 +8166,28 @@
       "per_expiry": {
         "2026-08-28": {
           "total_strikes": 173,
-          "liquid_strikes": 94,
-          "filter_ratio_pct": 54.3
+          "liquid_strikes": 104,
+          "filter_ratio_pct": 60.1
         },
         "2026-09-04": {
           "total_strikes": 171,
-          "liquid_strikes": 85,
-          "filter_ratio_pct": 49.7
+          "liquid_strikes": 100,
+          "filter_ratio_pct": 58.5
         },
         "2026-09-11": {
           "total_strikes": 148,
-          "liquid_strikes": 62,
-          "filter_ratio_pct": 41.9
+          "liquid_strikes": 72,
+          "filter_ratio_pct": 48.6
         },
         "2026-09-18": {
           "total_strikes": 264,
-          "liquid_strikes": 58,
-          "filter_ratio_pct": 22.0
+          "liquid_strikes": 67,
+          "filter_ratio_pct": 25.4
         },
         "2026-09-25": {
           "total_strikes": 148,
-          "liquid_strikes": 47,
-          "filter_ratio_pct": 31.8
+          "liquid_strikes": 59,
+          "filter_ratio_pct": 39.9
         }
       }
     },
@@ -8195,7 +8195,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-25T00:22:57.653302+00:00",
+    "generated_at": "2026-08-25T17:43:56.918131+00:00",
     "ticker": "MSTR",
     "short_interest": {
       "status": "ok",
@@ -8205,11 +8205,11 @@
       "short_pct_float": 0.0892,
       "short_pct_outstanding": 0.0845,
       "days_to_cover": 1.75,
-      "avg_daily_volume": 22096295,
+      "avg_daily_volume": 22406280,
       "float_shares": 363654304,
       "delta_shares_short_mom_pct": -24.07,
       "squeeze_potential": "low",
-      "fetched_at": "2026-08-25T00:22:50.676589+00:00"
+      "fetched_at": "2026-08-25T17:43:47.448104+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -8318,7 +8318,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 64,
-      "fetched_at": "2026-08-25T00:22:57.652322+00:00"
+      "fetched_at": "2026-08-25T17:43:56.916724+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -8428,7 +8428,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-08-25T00:22:33.683845+00:00",
+    "generated_at": "2026-08-25T17:43:26.759684+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/MSTR_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -8664,7 +8664,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-08-25T00:22:34.973344+00:00",
+    "generated_at": "2026-08-25T17:43:28.410546+00:00",
     "ticker": "MSTR",
     "source_csv": "MSTR_daily_long.csv",
     "n_sessions": 1254,
@@ -32880,7 +32880,7 @@
   },
   "qa_flags": {
     "available": true,
-    "n_flags": 1,
+    "n_flags": 2,
     "n_high": 0,
     "checks_run": [
       "dist_ma200",
@@ -32892,6 +32892,14 @@
       "currency"
     ],
     "flags": [
+      {
+        "id": "max_pain_gap",
+        "severity": "medium",
+        "section": "§12 Options",
+        "message": "Max-pain gap affiché -13.6 % ≠ (strike 110.0 − spot 122.63)/spot = -10.3 %. Probable spot d'options périmé vs spot courant.",
+        "expected": -10.2993,
+        "actual": -13.58
+      },
       {
         "id": "channel_position_oob",
         "severity": "medium",
