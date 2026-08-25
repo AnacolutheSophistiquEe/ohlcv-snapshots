@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-08-25T20:00:15.353647+00:00  
+**Generated** : 2026-08-25T20:02:51.464049+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $122.63  
@@ -224,11 +224,11 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass'.
 
 **A quelle distance poser pour n'etre sorti que p % du temps** (lecture INVERSE — c'est elle qui sert a arbitrer) :
 
-| horizon | p=50 % | p=33 % | p=25 % | p=20 % | p=10 % | p=5 % |
-|---|---|---|---|---|---|---|
-| **1 s.** | 0.40 ATR | 0.57 ATR | 0.67 ATR | 0.74 ATR | 0.98 ATR | 1.21 ATR |
-| **5 s.** | 0.93 ATR | 1.37 ATR | 1.67 ATR | 1.86 ATR | 2.42 ATR | 2.96 ATR |
-| **20 s.** | 1.88 ATR | 2.75 ATR | 3.32 ATR | 3.82 ATR | 5.19 ATR | 5.91 ATR |
+| horizon | p=75 % | p=50 % | p=45 % | p=33 % | p=25 % | p=20 % | p=10 % | p=5 % |
+|---|---|---|---|---|---|---|---|---|
+| **1 s.** | 0.19 ATR | 0.40 ATR | 0.44 ATR | 0.57 ATR | 0.67 ATR | 0.74 ATR | 0.98 ATR | 1.21 ATR |
+| **5 s.** | 0.44 ATR | 0.93 ATR | 1.04 ATR | 1.37 ATR | 1.67 ATR | 1.86 ATR | 2.42 ATR | 2.96 ATR |
+| **20 s.** | 0.84 ATR | 1.88 ATR | 2.13 ATR | 2.75 ATR | 3.32 ATR | 3.82 ATR | 5.19 ATR | 5.91 ATR |
 
 **Distance optimale par horizon** (plage utile mesuree, puis meilleur point unique de cette plage) :
 - **1 seance(s)** : plage utile 0.44–0.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.5 ATR (2.608 %, prix 119.4318), p(touche) 38.27 % (en stress 87.0 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 31.6 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
@@ -348,7 +348,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Positioning & factor
 
 **Factor** : attribution factorielle indisponible
-**Short/Insider** : SI —% | insider — | verdict neutral
+**Short/Insider** : SI —% | insider — | verdict sell_bias_strong
 **Options** : bullish
 
 
@@ -376,5 +376,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (775754 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (775785 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
