@@ -1,6 +1,6 @@
 # SOI
 
-**Generated** : 2026-08-25T21:45:36.518310+00:00  
+**Generated** : 2026-08-25T22:49:50.041514+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.4 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
@@ -66,24 +66,25 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Pass (negative EV)'.
    - viole : R/R 1.23 < plancher 1.60 (mesure vs SPOT, gap inclus)
 - Budget de queue : **12.0 %** du notionnel — ⚠ VALEUR FIGEE (valeur de repli (ligne absente de l'allocation)), PAS une mesure. L'allocation derivee de la contrainte du compte n'etait pas disponible.
 - Candidats (la structure propose, la statistique elimine) :
-   - 🔴 support a 0.51 ATR (stop 6.012 %) — p(stop avant cible) 0.6161 [0.56 ; 0.67], R/R 1.718, perte reelle 13.196 % (gap inclus), EV -2.7066 % — **REFUSE**
+   - 🔴 support a 0.51 ATR (stop 6.043 %) — p(stop avant cible) 0.6159 [0.56 ; 0.67], R/R 1.718, perte reelle 13.196 % (gap inclus), EV -2.7033 % — **REFUSE**
       - refuse : p_stop_first 0.616, borne haute 0.666 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-      - ⚠ support DETECTE a 0.25 ATR du spot — compartiment <1, mesure a 47.2 % de casse (IC clusterise [0.438 ; 0.506] sur 1074 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-2.71 %) : P(cible) 17.8 % x 22.67 % + P(rien) 20.6 % x 6.73 % ne couvrent pas P(stop) 61.6 % x 13.20 %.
+      - ⚠ support DETECTE a 0.25 ATR du spot — compartiment <1, mesure a 47.7 % de casse (IC clusterise [0.443 ; 0.512] sur 1016 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-2.70 %) : P(cible) 17.8 % x 22.67 % + P(rien) 20.6 % x 6.73 % ne couvrent pas P(stop) 61.6 % x 13.20 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
    - ⚪ atr_based a 1.5 ATR (stop 9.358 %) — p(stop avant cible) 0.4827 [0.43 ; 0.54], R/R 1.229, perte reelle 18.446 % (gap inclus), EV -2.9275 % — **REFUSE**
       - refuse : R/R 1.23 < plancher 1.60 (mesure vs SPOT, gap inclus)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-2.93 %) : P(cible) 20.8 % x 22.67 % + P(rien) 30.9 % x 4.05 % ne couvrent pas P(stop) 48.3 % x 18.45 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ swing_based a 2.49 ATR (stop 18.342 %) — p(stop avant cible) 0.1893 [0.15 ; 0.23], R/R 0.944, perte reelle 24.006 % (gap inclus), EV 1.0766 % — **REFUSE**
+   - ⚪ swing_based a 2.49 ATR (stop 18.374 %) — p(stop avant cible) 0.1893 [0.15 ; 0.23], R/R 0.944, perte reelle 24.006 % (gap inclus), EV 1.0766 % — **REFUSE**
       - refuse : R/R 0.94 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 18.35 % > budget 12.00 %
-   - 🟢 support a 4.02 ATR (stop 27.884 %) — p(stop avant cible) 0.049 [0.03 ; 0.08], R/R 0.774, perte reelle 29.294 % (gap inclus), EV 2.4371 % — **REFUSE**
+      - refuse : CVaR 95 % 18.38 % > budget 12.00 %
+   - 🟢 support a 4.02 ATR (stop 27.915 %) — p(stop avant cible) 0.049 [0.03 ; 0.08], R/R 0.774, perte reelle 29.294 % (gap inclus), EV 2.4371 % — **REFUSE**
       - refuse : R/R 0.77 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 27.89 % > budget 12.00 %
-   - 🟢 support a 6.45 ATR (stop 43.021 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.527, perte reelle 43.021 % (gap inclus), EV 2.5182 % — **REFUSE**
+      - refuse : CVaR 95 % 27.92 % > budget 12.00 %
+   - 🔴 support a 6.45 ATR (stop 43.052 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.527, perte reelle 43.052 % (gap inclus), EV 2.5182 % — **REFUSE**
       - refuse : R/R 0.53 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 43.02 % > budget 12.00 %
+      - refuse : CVaR 95 % 43.05 % > budget 12.00 %
+      - ⚠ support DETECTE a 6.45 ATR du spot — compartiment >=6, mesure a 46.5 % de casse (IC clusterise [0.333 ; 0.591] sur 43 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
    - ⚪ atr_grid a 0.25 ATR (stop 1.56 %) — p(stop avant cible) 0.8708 [0.83 ; 0.90], R/R 6.765, perte reelle 3.351 % (gap inclus), EV -0.6494 % — **REFUSE**
       - refuse : cible atteinte seulement 7.6 % du temps (< 15 %) meme a 10 seances : le R/R de 6.77 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.871, borne haute 0.903 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
@@ -125,7 +126,7 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Pass (negative EV)'.
    - ⚪ atr_grid a 6.0 ATR (stop 37.431 %) — p(stop avant cible) 0.016 [0.01 ; 0.03], R/R 0.606, perte reelle 37.431 % (gap inclus), EV 2.4475 % — **REFUSE**
       - refuse : R/R 0.61 < plancher 1.60 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 37.43 % > budget 12.00 %
-   - 🟢 grid_snapped a 6.45 ATR (stop 42.092 %) — p(stop avant cible) 0.002 [0.00 ; 0.01], R/R 0.539, perte reelle 42.092 % (gap inclus), EV 2.4979 % — **REFUSE**
+   - 🔴 grid_snapped a 6.45 ATR (stop 42.092 %) — p(stop avant cible) 0.002 [0.00 ; 0.01], R/R 0.539, perte reelle 42.092 % (gap inclus), EV 2.4979 % — **REFUSE**
       - refuse : R/R 0.54 < plancher 1.60 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 42.09 % > budget 12.00 %
    - ⚪ atr_grid a 7.5 ATR (stop 46.789 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.485, perte reelle 46.789 % (gap inclus), EV 2.5182 % — **REFUSE**
@@ -323,5 +324,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (826150 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (817466 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

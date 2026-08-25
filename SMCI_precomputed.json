@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US86800U1043",
-    "generated_at": "2026-08-25T22:02:21.868785+00:00",
+    "generated_at": "2026-08-25T23:05:36.436201+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1920,7 +1920,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7214,
+          "p_touch": 0.7215,
           "distance_pct": 15.45
         },
         "t3": {
@@ -2268,7 +2268,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-25T22:01:52.384246+00:00",
+    "generated_at": "2026-08-25T23:05:06.448062+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7677,7 +7677,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-25T22:01:40.597083+00:00",
+    "generated_at": "2026-08-25T23:04:55.473322+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7906,7 +7906,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-25T22:02:08.127832+00:00",
+    "generated_at": "2026-08-25T23:05:23.429373+00:00",
     "ticker": "SMCI",
     "horizons_days": {
       "intraday": 2,
@@ -8041,7 +8041,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-25T22:01:57.262140+00:00",
+    "generated_at": "2026-08-25T23:05:11.183540+00:00",
     "ticker": "SMCI",
     "spot_price": 38.46,
     "expiries_available": [
@@ -8160,7 +8160,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-25T22:02:07.200868+00:00",
+    "generated_at": "2026-08-25T23:05:22.566029+00:00",
     "ticker": "SMCI",
     "short_interest": {
       "status": "ok",
@@ -8174,41 +8174,16 @@
       "float_shares": 519081082,
       "delta_shares_short_mom_pct": -11.4,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-25T22:01:58.794161+00:00"
+      "fetched_at": "2026-08-25T23:05:12.372911+00:00"
     },
     "insider_transactions_90d": {
-      "status": "ok",
-      "source": "sec_edgar_form_4",
-      "ticker": "SMCI",
-      "cik": "0001375365",
-      "lookback_days": 90,
-      "n_filings_total": 20,
-      "n_filings_in_window": 20,
-      "n_fetch_errors": 0,
-      "summary": {
-        "total_buy_count": 0,
-        "total_buy_value_usd": 0,
-        "total_sell_count": 0,
-        "total_sell_value_usd": 0,
-        "vesting_exercise_count": 19,
-        "net_flow_usd": 0,
-        "net_flow_label": "neutral"
-      },
-      "top_buys": [],
-      "top_sells": [],
-      "flags": {
-        "ceo_or_cfo_concentrated_sells": false,
-        "insider_buying_no_offsetting_sells": false,
-        "insider_selling_no_buys": false,
-        "vesting_exercises_dominant": true
-      },
-      "all_transactions_count": 19,
-      "fetched_at": "2026-08-25T22:02:07.198945+00:00"
+      "status": "no_filings_found",
+      "cik": "0001375365"
     },
     "data_quality": {
       "short_data_available": true,
-      "insider_data_available": true,
-      "insider_n_transactions": 19
+      "insider_data_available": false,
+      "insider_n_transactions": 0
     }
   },
   "volatility_regime": {
@@ -8313,7 +8288,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-08-25T22:01:39.167933+00:00",
+    "generated_at": "2026-08-25T23:04:54.236096+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/SMCI_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -8721,7 +8696,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-08-25T22:01:40.351100+00:00",
+    "generated_at": "2026-08-25T23:04:55.296185+00:00",
     "ticker": "SMCI",
     "source_csv": "SMCI_daily_long.csv",
     "n_sessions": 1254,

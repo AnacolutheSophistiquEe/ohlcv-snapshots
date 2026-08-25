@@ -1,6 +1,6 @@
 # PRY
 
-**Generated** : 2026-08-25T21:48:45.421287+00:00  
+**Generated** : 2026-08-25T22:52:44.482264+00:00  
 **Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · €121.00  
@@ -320,5 +320,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (810865 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (817921 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

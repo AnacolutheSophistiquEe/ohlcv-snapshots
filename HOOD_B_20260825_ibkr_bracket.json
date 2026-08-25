@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-25T00:33:28.347964+00:00",
+  "generated_at": "2026-08-25T23:14:47.050126+00:00",
   "prediction_id": "HOOD_B_20260825",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "HOOD",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 103.62,
+    "limit_price": 112.09,
     "quantity": 5,
     "tif": "GTD",
     "gtd": "2026-08-30T22:00:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 115.41,
+      "limit_price": 115.09,
       "quantity": 3,
       "tif": "GTC",
       "tag": "T1"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 117.2,
+      "limit_price": 121.68,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 118.99,
+      "limit_price": 124.87,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -42,7 +42,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 96.68,
+      "stop_price": 101.48,
       "quantity": 5,
       "tif": "GTC",
       "tag": "SL"
@@ -95,22 +95,22 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 8.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.0066,
+    "ev_pct_risk": 0.012,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.177,
-      "T2": 0.1485,
-      "T3": 0.1279
+      "T1": 0.3489,
+      "T2": 0.1572,
+      "T3": 0.1215
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 518.1,
-    "hold_tolerance_breach_price": 77.715,
+    "notional_eur": 560.45,
+    "hold_tolerance_breach_price": 84.0675,
     "hold_fallback_active": true,
     "prediction_id": "HOOD_B_20260825"
   },

@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-25T21:37:47.829794+00:00",
+  "generated_at": "2026-08-25T22:42:46.535786+00:00",
   "ticker": "SRT3",
   "spot": 246.5,
   "atr_14": 7.3214,
@@ -17,9 +17,9 @@
   "target_note": "la cible sert a mesurer le R/R vs SPOT. Elle est prise sur une RESISTANCE reelle quand il en existe une au-dessus du spot — jamais sur la cible d'un plan d'entree sur repli, qui peut se situer SOUS le prix courant et rendrait tout R/R absurde.",
   "anchor_evidence": {
     "source": "registre point-in-time",
-    "measured_at": "2026-08-25T00:36:55.029560+00:00",
+    "measured_at": "2026-08-25T21:46:43.814595+00:00",
     "stale": false,
-    "generated_at": "2026-08-25T00:36:55.029560+00:00",
+    "generated_at": "2026-08-25T21:46:43.814595+00:00",
     "buckets": [
       {
         "bucket": "<1",
@@ -27,12 +27,12 @@
           0.0,
           1.0
         ],
-        "n": 1074,
-        "n_tickers": 56,
-        "p_break": 0.4721,
+        "n": 1016,
+        "n_tickers": 58,
+        "p_break": 0.4774,
         "ci95": [
-          0.4383,
-          0.5059
+          0.4431,
+          0.512
         ],
         "coinflip": true,
         "usable": true
@@ -43,12 +43,12 @@
           1.0,
           3.0
         ],
-        "n": 1244,
+        "n": 1201,
         "n_tickers": 58,
-        "p_break": 0.3818,
+        "p_break": 0.3497,
         "ci95": [
-          0.3499,
-          0.4139
+          0.3168,
+          0.3817
         ],
         "coinflip": false,
         "usable": true
@@ -59,12 +59,12 @@
           3.0,
           6.0
         ],
-        "n": 353,
+        "n": 349,
         "n_tickers": 57,
-        "p_break": 0.3314,
+        "p_break": 0.3324,
         "ci95": [
-          0.28,
-          0.381
+          0.2802,
+          0.3855
         ],
         "coinflip": false,
         "usable": true
@@ -75,14 +75,14 @@
           6.0,
           null
         ],
-        "n": 46,
-        "n_tickers": 27,
-        "p_break": 0.413,
+        "n": 43,
+        "n_tickers": 24,
+        "p_break": 0.4651,
         "ci95": [
-          0.2745,
-          0.5581
+          0.3333,
+          0.5909
         ],
-        "coinflip": false,
+        "coinflip": true,
         "usable": true
       }
     ]
@@ -96,7 +96,7 @@
     "cvar95_budget_stale": true,
     "cvar95_budget_measured_at": null,
     "cvar95_budget_default_witness": 12.0,
-    "anchor_buffer_atr": 0.608,
+    "anchor_buffer_atr": 0.621,
     "anchor_buffer_source": {
       "source": "registre point-in-time, quantile 90 % par classe d'ATR",
       "stale": false,
@@ -104,15 +104,15 @@
       "class": "atr_faible",
       "atr_pct_range": [
         0.0,
-        4.116
+        4.105
       ],
-      "n": 528,
+      "n": 518,
       "ci95": [
-        0.49,
-        0.727
+        0.485,
+        0.735
       ],
-      "survival_at_0_30": 0.8125,
-      "measured_at": "2026-08-25T00:36:55.029560+00:00"
+      "survival_at_0_30": 0.8127,
+      "measured_at": "2026-08-25T21:46:43.814595+00:00"
     },
     "target_buffer_atr": 0.3,
     "anchor_buffer_default_witness": 0.3,
@@ -191,7 +191,7 @@
     },
     {
       "anchor_price": 224.4357,
-      "stop_price": 219.9843,
+      "stop_price": 219.8891,
       "origin": "swing_based",
       "strength": null,
       "touches": null,
@@ -200,42 +200,42 @@
       "anchor_distance_atr": 3.01,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
-      "distance_pct": 10.757,
-      "p_stop_first": 0.117,
+      "distance_pct": 10.795,
+      "p_stop_first": 0.1124,
       "p_target_first": 0.7716,
-      "p_no_touch": 0.1114,
+      "p_no_touch": 0.116,
       "p_stop_ci95": [
-        0.0863,
-        0.154
+        0.0824,
+        0.1489
       ],
-      "p_stop_ci_width_pt": 6.8,
+      "p_stop_ci_width_pt": 6.7,
       "prob_source": "calcul DIRECT sur 1265 seances daily, horizon deep (10 j)",
       "horizon_used": "deep",
       "horizon_sessions": 10,
       "n_windows": 1265,
       "n_eff": 345.8,
       "grid_point": null,
-      "gap_overshoot_pt": 3.448,
+      "gap_overshoot_pt": 3.41,
       "gap_overshoot_note": "surcout moyen mesure a cette distance",
       "loss_if_stop_pct": 14.205,
       "gain_if_tp_pct": 2.14,
       "rr_vs_spot": 0.151,
-      "cvar95_pct": 10.76,
-      "var95_pct": 10.757,
+      "cvar95_pct": 10.798,
+      "var95_pct": 10.795,
       "cvar95_budget_pct": 12.0,
-      "cost": 0.44041,
-      "ev_pct": -0.4404,
+      "cost": 0.38062,
+      "ev_pct": -0.3806,
       "ev_terms": {
         "target": 1.6512,
-        "stop": -1.662,
-        "no_touch": -0.4296,
-        "pnl_no_touch_pct": -3.8568
+        "stop": -1.5966,
+        "no_touch": -0.4352,
+        "pnl_no_touch_pct": -3.7517
       },
-      "p_stop_upper": 0.154,
+      "p_stop_upper": 0.1489,
       "flags": [
         {
           "flag": "LIGNE_EV_NEGATIVE",
-          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-0.44 %) : P(cible) 77.2 % x 2.14 % + P(rien) 11.1 % x -3.86 % ne couvrent pas P(stop) 11.7 % x 14.21 %.",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-0.38 %) : P(cible) 77.2 % x 2.14 % + P(rien) 11.6 % x -3.75 % ne couvrent pas P(stop) 11.2 % x 14.21 %.",
           "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
         }
       ],
@@ -248,7 +248,7 @@
     },
     {
       "anchor_price": 186.6568,
-      "stop_price": 182.2054,
+      "stop_price": 182.1102,
       "origin": "support",
       "strength": "strong",
       "touches": 29,
@@ -260,17 +260,17 @@
       "anchor_quality_basis": "level_distance_atr",
       "anchor_measure": {
         "bucket": "3-6",
-        "p_break": 0.3314,
+        "p_break": 0.3324,
         "ci95": [
-          0.28,
-          0.381
+          0.2802,
+          0.3855
         ],
-        "n": 353,
+        "n": 349,
         "source": "registre point-in-time",
-        "measured_at": "2026-08-25T00:36:55.029560+00:00"
+        "measured_at": "2026-08-25T21:46:43.814595+00:00"
       },
       "anchor_warning": null,
-      "distance_pct": 26.083,
+      "distance_pct": 26.122,
       "p_stop_first": 0.0018,
       "p_target_first": 0.7745,
       "p_no_touch": 0.2237,
@@ -287,17 +287,17 @@
       "grid_point": null,
       "gap_overshoot_pt": 0.0,
       "gap_overshoot_note": "surcout moyen mesure a cette distance",
-      "loss_if_stop_pct": 26.083,
+      "loss_if_stop_pct": 26.122,
       "gain_if_tp_pct": 2.14,
       "rr_vs_spot": 0.082,
-      "cvar95_pct": 26.083,
-      "var95_pct": 26.083,
+      "cvar95_pct": 26.122,
+      "var95_pct": 26.122,
       "cvar95_budget_pct": 12.0,
-      "cost": -0.12833,
+      "cost": -0.12826,
       "ev_pct": 0.1283,
       "ev_terms": {
         "target": 1.6574,
-        "stop": -0.0469,
+        "stop": -0.047,
         "no_touch": -1.4821,
         "pnl_no_touch_pct": -6.6256
       },
@@ -306,17 +306,17 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.08 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 26.08 % > budget 12.00 %"
+        "CVaR 95 % 26.12 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
-          "value": 26.083,
+          "value": 26.122,
           "limit": 12.0,
-          "excess_ratio": 1.1736
+          "excess_ratio": 1.1768
         }
       ],
-      "violation_severity": 1.1736
+      "violation_severity": 1.1768
     },
     {
       "anchor_price": 244.6696,
@@ -962,6 +962,63 @@
       "violation_severity": 0.0
     },
     {
+      "anchor_price": 220.875,
+      "stop_price": 220.875,
+      "origin": "atr_grid",
+      "strength": null,
+      "touches": null,
+      "touch_weight": null,
+      "why": "point de grille a 3.50 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
+      "anchor_distance_atr": 3.5,
+      "distance_pct": 10.396,
+      "anchor_quality": "non mesure",
+      "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
+      "p_stop_first": 0.1245,
+      "p_target_first": 0.7716,
+      "p_no_touch": 0.104,
+      "p_stop_ci95": [
+        0.0929,
+        0.1624
+      ],
+      "p_stop_ci_width_pt": 7.0,
+      "prob_source": "calcul DIRECT sur 1265 seances daily, horizon deep (10 j)",
+      "horizon_used": "deep",
+      "horizon_sessions": 10,
+      "n_windows": 1265,
+      "n_eff": 345.8,
+      "grid_point": null,
+      "gap_overshoot_pt": 3.809,
+      "gap_overshoot_note": "surcout moyen mesure a cette distance",
+      "loss_if_stop_pct": 14.205,
+      "gain_if_tp_pct": 2.14,
+      "rr_vs_spot": 0.151,
+      "cvar95_pct": 10.399,
+      "var95_pct": 10.396,
+      "cvar95_budget_pct": 12.0,
+      "cost": 0.51125,
+      "ev_pct": -0.5113,
+      "ev_terms": {
+        "target": 1.6512,
+        "stop": -1.7685,
+        "no_touch": -0.394,
+        "pnl_no_touch_pct": -3.788
+      },
+      "p_stop_upper": 0.1624,
+      "flags": [
+        {
+          "flag": "LIGNE_EV_NEGATIVE",
+          "detail": "le meilleur bracket disponible perd de l'argent en esperance (-0.51 %) : P(cible) 77.2 % x 2.14 % + P(rien) 10.4 % x -3.79 % ne couvrent pas P(stop) 12.4 % x 14.21 %.",
+          "reading": "l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes."
+        }
+      ],
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.15 < plancher 1.60 (mesure vs SPOT, gap inclus)"
+      ],
+      "violations": null,
+      "violation_severity": 0.0
+    },
+    {
       "anchor_price": 217.2143,
       "stop_price": 217.2143,
       "origin": "atr_grid",
@@ -1497,11 +1554,11 @@
       "violation_severity": 1.0973
     }
   ],
-  "n_candidates": 23,
+  "n_candidates": 24,
   "n_feasible": 0,
-  "n_rejected": 23,
+  "n_rejected": 24,
   "candidate_grid": {
-    "added": 20,
+    "added": 21,
     "snapped_to_levels": 2,
     "dedup_tol_atr": 0.125,
     "self_annihilating": false,
@@ -3372,7 +3429,8 @@
         "regret_when_stopped_pct": 2.4956
       }
     ],
-    "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix final plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+    "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+    "regret_definition": "⚠ TROIS PRECISIONS SANS LESQUELLES LE CHIFFRE N'EST PAS LISIBLE (audit externe 26/08, B.6 — la note le definissait comme « l'ecart au MEILLEUR prix atteint ENSUITE », sans borne de fenetre : c'est faux deux fois). (1) BORNE : le prix de comparaison est la CLOTURE DE LA DERNIERE SEANCE DE LA FENETRE, soit s+H-1 — pas la fin de l'historique, pas la fin d'un horizon plus long. Le chiffre est donc indexe sur H et n'est PAS comparable d'un horizon a l'autre. (2) CLOTURE, PAS MAXIMUM : c'est le prix ou l'on serait encore, pas le meilleur qu'on aurait pu prendre. Un maximum mesurerait un regret que personne n'aurait su capturer. (3) TRANCHE 1 SEULEMENT, au prorata de sa fraction, et uniquement quand elle sort AU STOP (une sortie a la cible est comptee a part, `tp_left_on_table_pct`) et que le prix a effectivement remonte — sinon zero. `regret_pct` moyenne sur TOUTES les fenetres, `regret_when_stopped_pct` sur les seules fenetres ou la sortie a eu lieu.",
     "axes": "trois axes, et ils ne pointent PAS dans le meme sens : `ordinary_pct` (rendement en regime normal), `crash_pct` (perte quand le titre plonge) et `cash_released_in_crash_pct` (capacite d'achat rendue au pire moment). Serrer degrade le premier, ameliore les deux autres. Aucun choix ne domine — d'ou le bouton.",
     "shape": "MONOTONE dans les deux sens sur tous les titres testes le 22/08 : plus loin gagne en ordinaire et perd en krach, sans retournement. Il n'y a donc pas d'optimum a extraire — seulement une frontiere sur laquelle l'operateur choisit un point.",
     "argmax_bootstrap": {
@@ -5237,7 +5295,8 @@
           "regret_when_stopped_pct": null
         }
       ],
-      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix final plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_definition": "⚠ TROIS PRECISIONS SANS LESQUELLES LE CHIFFRE N'EST PAS LISIBLE (audit externe 26/08, B.6 — la note le definissait comme « l'ecart au MEILLEUR prix atteint ENSUITE », sans borne de fenetre : c'est faux deux fois). (1) BORNE : le prix de comparaison est la CLOTURE DE LA DERNIERE SEANCE DE LA FENETRE, soit s+H-1 — pas la fin de l'historique, pas la fin d'un horizon plus long. Le chiffre est donc indexe sur H et n'est PAS comparable d'un horizon a l'autre. (2) CLOTURE, PAS MAXIMUM : c'est le prix ou l'on serait encore, pas le meilleur qu'on aurait pu prendre. Un maximum mesurerait un regret que personne n'aurait su capturer. (3) TRANCHE 1 SEULEMENT, au prorata de sa fraction, et uniquement quand elle sort AU STOP (une sortie a la cible est comptee a part, `tp_left_on_table_pct`) et que le prix a effectivement remonte — sinon zero. `regret_pct` moyenne sur TOUTES les fenetres, `regret_when_stopped_pct` sur les seules fenetres ou la sortie a eu lieu.",
       "axes": "trois axes, et ils ne pointent PAS dans le meme sens : `ordinary_pct` (rendement en regime normal), `crash_pct` (perte quand le titre plonge) et `cash_released_in_crash_pct` (capacite d'achat rendue au pire moment). Serrer degrade le premier, ameliore les deux autres. Aucun choix ne domine — d'ou le bouton.",
       "shape": "MONOTONE dans les deux sens sur tous les titres testes le 22/08 : plus loin gagne en ordinaire et perd en krach, sans retournement. Il n'y a donc pas d'optimum a extraire — seulement une frontiere sur laquelle l'operateur choisit un point.",
       "argmax_bootstrap": {
@@ -7097,7 +7156,8 @@
           "regret_when_stopped_pct": null
         }
       ],
-      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix final plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_definition": "⚠ TROIS PRECISIONS SANS LESQUELLES LE CHIFFRE N'EST PAS LISIBLE (audit externe 26/08, B.6 — la note le definissait comme « l'ecart au MEILLEUR prix atteint ENSUITE », sans borne de fenetre : c'est faux deux fois). (1) BORNE : le prix de comparaison est la CLOTURE DE LA DERNIERE SEANCE DE LA FENETRE, soit s+H-1 — pas la fin de l'historique, pas la fin d'un horizon plus long. Le chiffre est donc indexe sur H et n'est PAS comparable d'un horizon a l'autre. (2) CLOTURE, PAS MAXIMUM : c'est le prix ou l'on serait encore, pas le meilleur qu'on aurait pu prendre. Un maximum mesurerait un regret que personne n'aurait su capturer. (3) TRANCHE 1 SEULEMENT, au prorata de sa fraction, et uniquement quand elle sort AU STOP (une sortie a la cible est comptee a part, `tp_left_on_table_pct`) et que le prix a effectivement remonte — sinon zero. `regret_pct` moyenne sur TOUTES les fenetres, `regret_when_stopped_pct` sur les seules fenetres ou la sortie a eu lieu.",
       "axes": "trois axes, et ils ne pointent PAS dans le meme sens : `ordinary_pct` (rendement en regime normal), `crash_pct` (perte quand le titre plonge) et `cash_released_in_crash_pct` (capacite d'achat rendue au pire moment). Serrer degrade le premier, ameliore les deux autres. Aucun choix ne domine — d'ou le bouton.",
       "shape": "MONOTONE dans les deux sens sur tous les titres testes le 22/08 : plus loin gagne en ordinaire et perd en krach, sans retournement. Il n'y a donc pas d'optimum a extraire — seulement une frontiere sur laquelle l'operateur choisit un point.",
       "argmax_bootstrap": {
@@ -8960,7 +9020,8 @@
           "regret_when_stopped_pct": null
         }
       ],
-      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix final plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_definition": "⚠ TROIS PRECISIONS SANS LESQUELLES LE CHIFFRE N'EST PAS LISIBLE (audit externe 26/08, B.6 — la note le definissait comme « l'ecart au MEILLEUR prix atteint ENSUITE », sans borne de fenetre : c'est faux deux fois). (1) BORNE : le prix de comparaison est la CLOTURE DE LA DERNIERE SEANCE DE LA FENETRE, soit s+H-1 — pas la fin de l'historique, pas la fin d'un horizon plus long. Le chiffre est donc indexe sur H et n'est PAS comparable d'un horizon a l'autre. (2) CLOTURE, PAS MAXIMUM : c'est le prix ou l'on serait encore, pas le meilleur qu'on aurait pu prendre. Un maximum mesurerait un regret que personne n'aurait su capturer. (3) TRANCHE 1 SEULEMENT, au prorata de sa fraction, et uniquement quand elle sort AU STOP (une sortie a la cible est comptee a part, `tp_left_on_table_pct`) et que le prix a effectivement remonte — sinon zero. `regret_pct` moyenne sur TOUTES les fenetres, `regret_when_stopped_pct` sur les seules fenetres ou la sortie a eu lieu.",
       "axes": "trois axes, et ils ne pointent PAS dans le meme sens : `ordinary_pct` (rendement en regime normal), `crash_pct` (perte quand le titre plonge) et `cash_released_in_crash_pct` (capacite d'achat rendue au pire moment). Serrer degrade le premier, ameliore les deux autres. Aucun choix ne domine — d'ou le bouton.",
       "shape": "MONOTONE dans les deux sens sur tous les titres testes le 22/08 : plus loin gagne en ordinaire et perd en krach, sans retournement. Il n'y a donc pas d'optimum a extraire — seulement une frontiere sur laquelle l'operateur choisit un point.",
       "argmax_bootstrap": {
@@ -10823,7 +10884,8 @@
           "regret_when_stopped_pct": 2.4956
         }
       ],
-      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix final plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_definition": "⚠ TROIS PRECISIONS SANS LESQUELLES LE CHIFFRE N'EST PAS LISIBLE (audit externe 26/08, B.6 — la note le definissait comme « l'ecart au MEILLEUR prix atteint ENSUITE », sans borne de fenetre : c'est faux deux fois). (1) BORNE : le prix de comparaison est la CLOTURE DE LA DERNIERE SEANCE DE LA FENETRE, soit s+H-1 — pas la fin de l'historique, pas la fin d'un horizon plus long. Le chiffre est donc indexe sur H et n'est PAS comparable d'un horizon a l'autre. (2) CLOTURE, PAS MAXIMUM : c'est le prix ou l'on serait encore, pas le meilleur qu'on aurait pu prendre. Un maximum mesurerait un regret que personne n'aurait su capturer. (3) TRANCHE 1 SEULEMENT, au prorata de sa fraction, et uniquement quand elle sort AU STOP (une sortie a la cible est comptee a part, `tp_left_on_table_pct`) et que le prix a effectivement remonte — sinon zero. `regret_pct` moyenne sur TOUTES les fenetres, `regret_when_stopped_pct` sur les seules fenetres ou la sortie a eu lieu.",
       "axes": "trois axes, et ils ne pointent PAS dans le meme sens : `ordinary_pct` (rendement en regime normal), `crash_pct` (perte quand le titre plonge) et `cash_released_in_crash_pct` (capacite d'achat rendue au pire moment). Serrer degrade le premier, ameliore les deux autres. Aucun choix ne domine — d'ou le bouton.",
       "shape": "MONOTONE dans les deux sens sur tous les titres testes le 22/08 : plus loin gagne en ordinaire et perd en krach, sans retournement. Il n'y a donc pas d'optimum a extraire — seulement une frontiere sur laquelle l'operateur choisit un point.",
       "argmax_bootstrap": {
@@ -12687,7 +12749,8 @@
           "regret_when_stopped_pct": 3.9557
         }
       ],
-      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix final plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_definition": "⚠ TROIS PRECISIONS SANS LESQUELLES LE CHIFFRE N'EST PAS LISIBLE (audit externe 26/08, B.6 — la note le definissait comme « l'ecart au MEILLEUR prix atteint ENSUITE », sans borne de fenetre : c'est faux deux fois). (1) BORNE : le prix de comparaison est la CLOTURE DE LA DERNIERE SEANCE DE LA FENETRE, soit s+H-1 — pas la fin de l'historique, pas la fin d'un horizon plus long. Le chiffre est donc indexe sur H et n'est PAS comparable d'un horizon a l'autre. (2) CLOTURE, PAS MAXIMUM : c'est le prix ou l'on serait encore, pas le meilleur qu'on aurait pu prendre. Un maximum mesurerait un regret que personne n'aurait su capturer. (3) TRANCHE 1 SEULEMENT, au prorata de sa fraction, et uniquement quand elle sort AU STOP (une sortie a la cible est comptee a part, `tp_left_on_table_pct`) et que le prix a effectivement remonte — sinon zero. `regret_pct` moyenne sur TOUTES les fenetres, `regret_when_stopped_pct` sur les seules fenetres ou la sortie a eu lieu.",
       "axes": "trois axes, et ils ne pointent PAS dans le meme sens : `ordinary_pct` (rendement en regime normal), `crash_pct` (perte quand le titre plonge) et `cash_released_in_crash_pct` (capacite d'achat rendue au pire moment). Serrer degrade le premier, ameliore les deux autres. Aucun choix ne domine — d'ou le bouton.",
       "shape": "MONOTONE dans les deux sens sur tous les titres testes le 22/08 : plus loin gagne en ordinaire et perd en krach, sans retournement. Il n'y a donc pas d'optimum a extraire — seulement une frontiere sur laquelle l'operateur choisit un point.",
       "argmax_bootstrap": {
@@ -14549,7 +14612,8 @@
           "regret_when_stopped_pct": 6.1845
         }
       ],
-      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix final plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_note": "`regret_pct` = ce que la position a laisse sur la table en sortant : sortie au stop puis prix plus haut. C'est la FRUSTRATION, mesuree. ⚠ Elle est DEJA comptee dans `ordinary_pct` — sortir puis voir remonter fait baisser l'esperance. Elle est publiee comme DIAGNOSTIC, jamais ajoutee a l'objectif : ce serait la compter deux fois.",
+      "regret_definition": "⚠ TROIS PRECISIONS SANS LESQUELLES LE CHIFFRE N'EST PAS LISIBLE (audit externe 26/08, B.6 — la note le definissait comme « l'ecart au MEILLEUR prix atteint ENSUITE », sans borne de fenetre : c'est faux deux fois). (1) BORNE : le prix de comparaison est la CLOTURE DE LA DERNIERE SEANCE DE LA FENETRE, soit s+H-1 — pas la fin de l'historique, pas la fin d'un horizon plus long. Le chiffre est donc indexe sur H et n'est PAS comparable d'un horizon a l'autre. (2) CLOTURE, PAS MAXIMUM : c'est le prix ou l'on serait encore, pas le meilleur qu'on aurait pu prendre. Un maximum mesurerait un regret que personne n'aurait su capturer. (3) TRANCHE 1 SEULEMENT, au prorata de sa fraction, et uniquement quand elle sort AU STOP (une sortie a la cible est comptee a part, `tp_left_on_table_pct`) et que le prix a effectivement remonte — sinon zero. `regret_pct` moyenne sur TOUTES les fenetres, `regret_when_stopped_pct` sur les seules fenetres ou la sortie a eu lieu.",
       "axes": "trois axes, et ils ne pointent PAS dans le meme sens : `ordinary_pct` (rendement en regime normal), `crash_pct` (perte quand le titre plonge) et `cash_released_in_crash_pct` (capacite d'achat rendue au pire moment). Serrer degrade le premier, ameliore les deux autres. Aucun choix ne domine — d'ou le bouton.",
       "shape": "MONOTONE dans les deux sens sur tous les titres testes le 22/08 : plus loin gagne en ordinaire et perd en krach, sans retournement. Il n'y a donc pas d'optimum a extraire — seulement une frontiere sur laquelle l'operateur choisit un point.",
       "argmax_bootstrap": {
@@ -15739,20 +15803,20 @@
       ]
     },
     {
-      "stop_price": 182.2054,
+      "stop_price": 182.1102,
       "stop_origin": "support",
-      "stop_distance_pct": 26.083,
+      "stop_distance_pct": 26.122,
       "target_pct": 2.14,
       "target_origin": "plan_t3",
       "target_why": "cible t3 du plan (plafond band 95% · touche hist. 72% (sans stop))",
       "rr_vs_spot": 0.082,
       "p_stop_first": 0.0018,
-      "cvar95_pct": 26.083,
-      "cost": -0.12859,
+      "cvar95_pct": 26.122,
+      "cost": -0.12852,
       "feasible": false,
       "rejected_because": [
         "R/R 0.08 < plancher 1.60 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 26.08 % > budget 12.00 %"
+        "CVaR 95 % 26.12 % > budget 12.00 %"
       ]
     },
     {
@@ -15907,6 +15971,22 @@
       ]
     },
     {
+      "stop_price": 219.8891,
+      "stop_origin": "swing_based",
+      "stop_distance_pct": 10.795,
+      "target_pct": 2.14,
+      "target_origin": "plan_t3",
+      "target_why": "cible t3 du plan (plafond band 95% · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.151,
+      "p_stop_first": 0.1124,
+      "cvar95_pct": 10.798,
+      "cost": 0.38036,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.15 < plancher 1.60 (mesure vs SPOT, gap inclus)"
+      ]
+    },
+    {
       "stop_price": 226.3661,
       "stop_origin": "atr_grid",
       "stop_distance_pct": 8.168,
@@ -15920,22 +16000,6 @@
       "feasible": false,
       "rejected_because": [
         "R/R 0.21 < plancher 1.60 (mesure vs SPOT, gap inclus)"
-      ]
-    },
-    {
-      "stop_price": 219.9843,
-      "stop_origin": "swing_based",
-      "stop_distance_pct": 10.757,
-      "target_pct": 2.14,
-      "target_origin": "plan_t3",
-      "target_why": "cible t3 du plan (plafond band 95% · touche hist. 72% (sans stop))",
-      "rr_vs_spot": 0.151,
-      "p_stop_first": 0.117,
-      "cvar95_pct": 10.76,
-      "cost": 0.44016,
-      "feasible": false,
-      "rejected_because": [
-        "R/R 0.15 < plancher 1.60 (mesure vs SPOT, gap inclus)"
       ]
     },
     {
@@ -15953,6 +16017,22 @@
       "rejected_because": [
         "p_stop_first 0.678, borne haute 0.726 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
         "R/R 1.28 < plancher 1.60 (mesure vs SPOT, gap inclus)"
+      ]
+    },
+    {
+      "stop_price": 220.875,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 10.396,
+      "target_pct": 2.14,
+      "target_origin": "plan_t3",
+      "target_why": "cible t3 du plan (plafond band 95% · touche hist. 72% (sans stop))",
+      "rr_vs_spot": 0.151,
+      "p_stop_first": 0.1245,
+      "cvar95_pct": 10.399,
+      "cost": 0.511,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.15 < plancher 1.60 (mesure vs SPOT, gap inclus)"
       ]
     },
     {
@@ -16188,9 +16268,16 @@
       "note": "avec le surcout de gap inclus, ce stop coute 12.09 % ; il faut donc viser au moins 19.34 % pour tenir le plancher de R/R 1.6"
     },
     {
-      "stop_price": 219.9843,
+      "stop_price": 219.8891,
       "stop_origin": "swing_based",
-      "stop_distance_pct": 10.757,
+      "stop_distance_pct": 10.795,
+      "min_target_pct_for_rr": 22.728,
+      "note": "avec le surcout de gap inclus, ce stop coute 14.21 % ; il faut donc viser au moins 22.73 % pour tenir le plancher de R/R 1.6"
+    },
+    {
+      "stop_price": 220.875,
+      "stop_origin": "atr_grid",
+      "stop_distance_pct": 10.396,
       "min_target_pct_for_rr": 22.728,
       "note": "avec le surcout de gap inclus, ce stop coute 14.21 % ; il faut donc viser au moins 22.73 % pour tenir le plancher de R/R 1.6"
     },
@@ -16258,11 +16345,11 @@
       "note": "avec le surcout de gap inclus, ce stop coute 25.17 % ; il faut donc viser au moins 40.27 % pour tenir le plancher de R/R 1.6"
     },
     {
-      "stop_price": 182.2054,
+      "stop_price": 182.1102,
       "stop_origin": "support",
-      "stop_distance_pct": 26.083,
-      "min_target_pct_for_rr": 41.733,
-      "note": "avec le surcout de gap inclus, ce stop coute 26.08 % ; il faut donc viser au moins 41.73 % pour tenir le plancher de R/R 1.6"
+      "stop_distance_pct": 26.122,
+      "min_target_pct_for_rr": 41.795,
+      "note": "avec le surcout de gap inclus, ce stop coute 26.12 % ; il faut donc viser au moins 41.80 % pour tenir le plancher de R/R 1.6"
     }
   ],
   "verdict": "AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — la perte y est non bornee.",

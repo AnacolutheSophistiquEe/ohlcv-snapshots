@@ -1,6 +1,6 @@
 # NEX
 
-**Generated** : 2026-08-25T21:44:00.619321+00:00  
+**Generated** : 2026-08-25T22:48:22.585049+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite normal · €140.80  
@@ -76,18 +76,18 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass'.
       - refuse : p_stop_first 0.529, borne haute 0.581 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.01 %) : P(cible) 5.2 % x 16.23 % + P(rien) 41.9 % x 4.03 % ne couvrent pas P(stop) 52.9 % x 6.71 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ swing_based a 1.32 ATR (stop 5.5 %) — p(stop avant cible) 0.4321 [0.38 ; 0.48], R/R 1.998, perte reelle 8.124 % (gap inclus), EV -0.8308 % — **REFUSE**
+   - ⚪ swing_based a 1.32 ATR (stop 5.537 %) — p(stop avant cible) 0.4277 [0.38 ; 0.48], R/R 1.998, perte reelle 8.124 % (gap inclus), EV -0.7962 % — **REFUSE**
       - refuse : cible atteinte seulement 5.2 % du temps (< 15 %) meme a 10 seances : le R/R de 2.00 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.83 %) : P(cible) 5.2 % x 16.23 % + P(rien) 51.6 % x 3.55 % ne couvrent pas P(stop) 43.2 % x 8.12 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.80 %) : P(cible) 5.2 % x 16.23 % + P(rien) 52.0 % x 3.52 % ne couvrent pas P(stop) 42.8 % x 8.12 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ sr_based a 3.87 ATR (stop 12.781 %) — p(stop avant cible) 0.0605 [0.04 ; 0.09], R/R 1.27, perte reelle 12.781 % (gap inclus), EV 0.6235 % — **REFUSE**
+   - ⚪ sr_based a 3.87 ATR (stop 12.818 %) — p(stop avant cible) 0.0605 [0.04 ; 0.09], R/R 1.266, perte reelle 12.818 % (gap inclus), EV 0.6212 % — **REFUSE**
       - refuse : cible atteinte seulement 5.2 % du temps (< 15 %) meme a 10 seances : le R/R de 1.27 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.27 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 12.78 % > budget 12.00 %
-   - 🟢 support a 8.24 ATR (stop 25.221 %) — p(stop avant cible) 0.0008 [0.00 ; 0.01], R/R 0.643, perte reelle 25.221 % (gap inclus), EV 0.7389 % — **REFUSE**
+      - refuse : CVaR 95 % 12.82 % > budget 12.00 %
+   - 🟢 support a 8.24 ATR (stop 25.259 %) — p(stop avant cible) 0.0008 [0.00 ; 0.01], R/R 0.643, perte reelle 25.259 % (gap inclus), EV 0.7389 % — **REFUSE**
       - refuse : cible atteinte seulement 5.2 % du temps (< 15 %) meme a 10 seances : le R/R de 0.64 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.64 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 25.22 % > budget 12.00 %
+      - refuse : CVaR 95 % 25.26 % > budget 12.00 %
    - ⚪ atr_grid a 0.25 ATR (stop 0.713 %) — p(stop avant cible) 0.9075 [0.87 ; 0.93], R/R 9.524, perte reelle 1.704 % (gap inclus), EV -0.8115 % — **REFUSE**
       - refuse : cible atteinte seulement 1.2 % du temps (< 15 %) meme a 10 seances : le R/R de 9.52 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.907, borne haute 0.935 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
@@ -332,5 +332,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (824239 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (815212 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

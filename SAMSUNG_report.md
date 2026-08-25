@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-08-25T21:51:46.331356+00:00  
+**Generated** : 2026-08-25T22:55:32.124315+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 8.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 8/10 — **Rating** : Pass (negative EV)  

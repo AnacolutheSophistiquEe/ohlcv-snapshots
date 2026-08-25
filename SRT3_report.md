@@ -1,6 +1,6 @@
 # SRT3
 
-**Generated** : 2026-08-25T21:37:43.953117+00:00  
+**Generated** : 2026-08-25T22:42:42.955101+00:00  
 **Santé technique** : 7/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €246.50  
@@ -74,13 +74,13 @@ Plan privilegie B (swing), composite 7/10, conviction 'Neutral'.
       - refuse : R/R 0.28 < plancher 1.60 (mesure vs SPOT, gap inclus)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.17 %) : P(cible) 65.8 % x 2.14 % + P(rien) 0.7 % x -0.90 % ne couvrent pas P(stop) 33.6 % x 7.67 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ swing_based a 3.01 ATR (stop 10.757 %) — p(stop avant cible) 0.117 [0.09 ; 0.15], R/R 0.151, perte reelle 14.205 % (gap inclus), EV -0.4404 % — **REFUSE**
+   - ⚪ swing_based a 3.01 ATR (stop 10.795 %) — p(stop avant cible) 0.1124 [0.08 ; 0.15], R/R 0.151, perte reelle 14.205 % (gap inclus), EV -0.3806 % — **REFUSE**
       - refuse : R/R 0.15 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.44 %) : P(cible) 77.2 % x 2.14 % + P(rien) 11.1 % x -3.86 % ne couvrent pas P(stop) 11.7 % x 14.21 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.38 %) : P(cible) 77.2 % x 2.14 % + P(rien) 11.6 % x -3.75 % ne couvrent pas P(stop) 11.2 % x 14.21 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - 🟢 support a 8.17 ATR (stop 26.083 %) — p(stop avant cible) 0.0018 [0.00 ; 0.01], R/R 0.082, perte reelle 26.083 % (gap inclus), EV 0.1283 % — **REFUSE**
+   - 🟢 support a 8.17 ATR (stop 26.122 %) — p(stop avant cible) 0.0018 [0.00 ; 0.01], R/R 0.082, perte reelle 26.122 % (gap inclus), EV 0.1283 % — **REFUSE**
       - refuse : R/R 0.08 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 26.08 % > budget 12.00 %
+      - refuse : CVaR 95 % 26.12 % > budget 12.00 %
    - ⚪ atr_grid a 0.25 ATR (stop 0.743 %) — p(stop avant cible) 0.678 [0.63 ; 0.73], R/R 1.279, perte reelle 1.673 % (gap inclus), EV -0.4452 % — **REFUSE**
       - refuse : p_stop_first 0.678, borne haute 0.726 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
       - refuse : R/R 1.28 < plancher 1.60 (mesure vs SPOT, gap inclus)
@@ -126,6 +126,10 @@ Plan privilegie B (swing), composite 7/10, conviction 'Neutral'.
    - ⚪ grid_snapped a 3.01 ATR (stop 9.842 %) — p(stop avant cible) 0.1349 [0.10 ; 0.17], R/R 0.177, perte reelle 12.088 % (gap inclus), EV -0.3171 % — **REFUSE**
       - refuse : R/R 0.18 < plancher 1.60 (mesure vs SPOT, gap inclus)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.32 %) : P(cible) 76.9 % x 2.14 % + P(rien) 9.6 % x -3.47 % ne couvrent pas P(stop) 13.5 % x 12.09 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+   - ⚪ atr_grid a 3.5 ATR (stop 10.396 %) — p(stop avant cible) 0.1245 [0.09 ; 0.16], R/R 0.151, perte reelle 14.205 % (gap inclus), EV -0.5113 % — **REFUSE**
+      - refuse : R/R 0.15 < plancher 1.60 (mesure vs SPOT, gap inclus)
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.51 %) : P(cible) 77.2 % x 2.14 % + P(rien) 10.4 % x -3.79 % ne couvrent pas P(stop) 12.4 % x 14.21 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
    - ⚪ atr_grid a 4.0 ATR (stop 11.881 %) — p(stop avant cible) 0.0959 [0.07 ; 0.13], R/R 0.151, perte reelle 14.205 % (gap inclus), EV -0.2553 % — **REFUSE**
       - refuse : R/R 0.15 < plancher 1.60 (mesure vs SPOT, gap inclus)
@@ -334,5 +338,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (826081 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (819474 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

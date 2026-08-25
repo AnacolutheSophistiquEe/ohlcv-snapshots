@@ -1,6 +1,6 @@
 # SAF
 
-**Generated** : 2026-08-25T21:42:25.227976+00:00  
+**Generated** : 2026-08-25T22:46:57.190312+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €343.80  
@@ -66,12 +66,13 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
       - refuse : R/R 1.08 < plancher 1.60 (mesure vs SPOT, gap inclus)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.13 %) : P(cible) 35.0 % x 5.17 % + P(rien) 19.6 % x 1.21 % ne couvrent pas P(stop) 45.4 % x 4.81 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ sr_based a 7.47 ATR (stop 16.168 %) — p(stop avant cible) 0.0102 [0.00 ; 0.03], R/R 0.32, perte reelle 16.168 % (gap inclus), EV 0.7523 % — **REFUSE**
+   - ⚪ sr_based a 7.47 ATR (stop 16.194 %) — p(stop avant cible) 0.0102 [0.00 ; 0.03], R/R 0.319, perte reelle 16.194 % (gap inclus), EV 0.752 % — **REFUSE**
       - refuse : R/R 0.32 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 16.17 % > budget 12.00 %
-   - 🟢 support a 12.23 ATR (stop 25.684 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.201, perte reelle 25.684 % (gap inclus), EV 0.7831 % — **REFUSE**
+      - refuse : CVaR 95 % 16.19 % > budget 12.00 %
+   - 🔴 support a 12.23 ATR (stop 25.71 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.201, perte reelle 25.71 % (gap inclus), EV 0.7831 % — **REFUSE**
       - refuse : R/R 0.20 < plancher 1.60 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 25.68 % > budget 12.00 %
+      - refuse : CVaR 95 % 25.71 % > budget 12.00 %
+      - ⚠ support DETECTE a 7.37 ATR du spot — compartiment >=6, mesure a 46.5 % de casse (IC clusterise [0.333 ; 0.591] sur 43 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
    - ⚪ atr_grid a 0.25 ATR (stop 0.5 %) — p(stop avant cible) 0.875 [0.84 ; 0.91], R/R 4.247, perte reelle 1.218 % (gap inclus), EV -0.4661 % — **REFUSE**
       - refuse : cible atteinte seulement 10.9 % du temps (< 15 %) meme a 10 seances : le R/R de 4.25 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.875, borne haute 0.907 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
@@ -307,5 +308,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (817087 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (808409 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

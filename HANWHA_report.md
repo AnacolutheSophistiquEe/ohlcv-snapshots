@@ -1,6 +1,6 @@
 # 012450
 
-**Generated** : 2026-08-25T21:56:11.374671+00:00  
+**Generated** : 2026-08-25T22:59:38.288911+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩1094000.00  
