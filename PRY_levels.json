@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PRY",
-    "generated_at": "2026-08-26T00:35:16Z",
+    "generated_at": "2026-08-26T22:05:30Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-08-27T08:00:00Z",
@@ -10,17 +10,17 @@
     "source_precomputed": "PRY_precomputed.json"
   },
   "context": {
-    "last_price": 120.7,
+    "last_price": 121.65,
     "ta_score": {
-      "value": 2,
+      "value": 3,
       "max": 10,
       "label": "bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.6708,
-      "expected_duration_days": 3.04
+      "probability": 0.5309,
+      "expected_duration_days": 2.13
     },
     "volatility_regime": "normal",
     "signals_counter": {
@@ -37,35 +37,27 @@
       "median_bounce_pct": 5.39,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM bull (0.67), vol normal, signals strong_sell (1b/7s/7n)."
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM bull (0.53), vol normal, signals strong_sell (1b/7s/7n)."
   },
   "notes": {
-    "atr_daily": 4.9286,
+    "atr_daily": 4.5857,
     "atr_pct_daily": null,
-    "beta_60d": 1.7139,
+    "beta_60d": 1.7757,
     "beta_benchmark": "FTSEMIB",
-    "beta_corr_60d": 0.5333,
+    "beta_corr_60d": 0.5421,
     "btc_corr_high": null,
     "candlestick": {
       "name": "shooting_star",
-      "date": "2026-08-25",
-      "confidence": 0.779
+      "date": "2026-08-26",
+      "confidence": 0.616
     },
-    "divergences": [
-      {
-        "indicator": "macd_hist",
-        "type": "bullish",
-        "confidence": 0.55,
-        "bars_ago": 19,
-        "at_price": null
-      }
-    ],
+    "divergences": [],
     "drawdown": {
-      "current_dd_pct": -23.07,
+      "current_dd_pct": -22.47,
       "ath_price": 156.9,
       "ath_date": "2026-05-11",
       "max_dd_1y_pct": -26.9,
-      "days_in_dd": 106,
+      "days_in_dd": 107,
       "median_recovery_days": null
     }
   },
@@ -76,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 113.5373,
-        "max": 119.0838
+        "min": 116.3518,
+        "max": 116.5563
       },
       "stop": {
-        "price": 109.3346,
+        "price": 110.105,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -6.0
+        "distance_pct": -5.45
       },
       "targets": [
         {
           "level": 1,
-          "price": 117.8535,
+          "price": 118.2507,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 0.22
+          "rr": 0.28
         },
         {
           "level": 2,
-          "price": 121.4438,
+          "price": 121.8106,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 0.74
+          "rr": 0.84
         },
         {
           "level": 3,
-          "price": 125.0342,
+          "price": 125.3706,
           "basis": "plafond band 95% · touche hist. 72% (sans stop)",
-          "rr": 1.25
+          "rr": 1.4
         }
       ],
       "preferred_target": 1,
@@ -109,7 +101,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support MA200 + BB_LOWER + VPVR_POC + VPVR_VAL + FIB_50 (strength 32.5). Bounce mecanique."
+      "rationale": "Confluence support BB_LOWER + VPVR_VAL (strength 5.0). Bounce mecanique."
     },
     {
       "id": "B",
@@ -117,32 +109,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 124.0189,
-        "max": 124.5145
+        "min": 127.4916,
+        "max": 128.001
       },
       "stop": {
         "price": 122.584,
         "basis": "below_broken_resistance",
-        "distance_pct": -1.35
+        "distance_pct": -4.04
       },
       "targets": [
         {
           "level": 1,
-          "price": 127.4774,
-          "basis": "fib_618",
-          "rr": 1.91
+          "price": 131.695,
+          "basis": "next_confluence_resistance",
+          "rr": 0.76
         },
         {
           "level": 2,
-          "price": 132.176,
-          "basis": "next_confluence_resistance",
-          "rr": 4.7
-        },
-        {
-          "level": 3,
-          "price": 139.4276,
+          "price": 139.3862,
           "basis": "fib_786",
-          "rr": 9.01
+          "rr": 2.25
         }
       ],
       "preferred_target": 1,
@@ -150,7 +136,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance S/R_resistance + MA20 (strength 4.0)."
+      "rationale": "Breakout au-dessus confluence resistance S/R_resistance + MA20 + VPVR_POC + FIB_618 (strength 20.0)."
     },
     {
       "id": "C",
@@ -159,31 +145,31 @@
       "side": "long",
       "entry_zone": {
         "min": 108.9967,
-        "max": 110.6901
+        "max": 110.4761
       },
       "stop": {
         "price": 104.6368,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -4.74
+        "distance_pct": -4.65
       },
       "targets": [
         {
           "level": 1,
-          "price": 117.8535,
+          "price": 118.2507,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 1.54
+          "rr": 1.67
         },
         {
           "level": 2,
-          "price": 121.4438,
+          "price": 121.8106,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 2.23
+          "rr": 2.37
         },
         {
           "level": 3,
-          "price": 125.0342,
+          "price": 125.3706,
           "basis": "plafond band 95% · touche hist. 72% (sans stop)",
-          "rr": 2.92
+          "rr": 3.07
         }
       ],
       "preferred_target": 1,
@@ -195,7 +181,7 @@
     }
   ],
   "bot_actionable": false,
-  "bot_actionable_reason": "ta_score=2<4",
+  "bot_actionable_reason": "ta_score=3<4",
   "global_conditions": [
     {
       "id": "session_eu_paris_open",

@@ -1,0 +1,79 @@
+{
+ "available": true,
+ "generated_at": "2026-08-26T22:04:02.072281+00:00",
+ "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
+ "min_neff": 30.0,
+ "halflife_sessions": 500.0,
+ "cost_pct_per_leg": 0.08,
+ "by_horizon": {
+  "intraday": {
+   "available": true,
+   "ev_pct_risk": 0.1057,
+   "p_target_first": 0.3755,
+   "n_episodes": 50,
+   "n_eff_weighted": 49.6,
+   "fill_rate": 0.2016,
+   "ci95_block_bootstrap": [
+    -0.2256,
+    0.4798
+   ],
+   "plan_pct": {
+    "dip": 4.253,
+    "stop": 2.5,
+    "targets": [
+     4.552,
+     7.549,
+     10.545
+    ]
+   },
+   "horizon_sessions": 1,
+   "n_bars": 251
+  },
+  "swing": {
+   "available": true,
+   "ev_pct_risk": 0.0108,
+   "p_target_first": 0.0642,
+   "n_episodes": 53,
+   "n_eff_weighted": 52.7,
+   "fill_rate": 0.2208,
+   "ci95_block_bootstrap": [
+    -0.3664,
+    0.1934
+   ],
+   "plan_pct": {
+    "dip": 9.357,
+    "stop": 9.593,
+    "targets": [
+     19.959,
+     21.77,
+     23.58
+    ]
+   },
+   "horizon_sessions": 5,
+   "n_bars": 251
+  },
+  "deep": {
+   "available": true,
+   "ev_pct_risk": 0.4688,
+   "p_target_first": 0.5808,
+   "n_episodes": 40,
+   "n_eff_weighted": 39.8,
+   "fill_rate": 0.1739,
+   "ci95_block_bootstrap": [
+    -0.0042,
+    0.7877
+   ],
+   "plan_pct": {
+    "dip": 14.461,
+    "stop": 7.624,
+    "targets": [
+     11.116,
+     22.232,
+     33.348
+    ]
+   },
+   "horizon_sessions": 10,
+   "n_bars": 251
+  }
+ }
+}
