@@ -1,24 +1,23 @@
 {
   "available": true,
-  "generated_at": "2026-08-17T21:59:08.262331+00:00",
-  "prediction_id": "SMCI_B_20260817",
+  "generated_at": "2026-08-26T00:31:20.065077+00:00",
+  "prediction_id": "SMR_A_20260826",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "SMCI",
+  "symbol": "SMR",
   "exchange": "SMART",
   "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 38.28,
+    "limit_price": 9.76,
     "quantity": 16,
-    "tif": "GTD",
-    "gtd": "2026-08-22T22:00:00+00:00"
+    "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 40.89,
+      "limit_price": 10.97,
       "quantity": 8,
       "tif": "GTC",
       "tag": "T1"
@@ -26,7 +25,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 42.32,
+      "limit_price": 11.15,
       "quantity": 5,
       "tif": "GTC",
       "tag": "T2"
@@ -34,7 +33,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 43.74,
+      "limit_price": 11.33,
       "quantity": 3,
       "tif": "GTC",
       "tag": "T3"
@@ -42,27 +41,27 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 31.49,
+      "stop_price": 8.54,
       "quantity": 16,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "SMCI_B_swing_20260817",
+  "oca_group": "SMR_A_intraday_20260826",
   "oca_type": 1,
   "execution_rules": {
-    "stop_mode": "breakeven_after_T1",
-    "stop_mode_description": "SL → prix d'entrée après hit T1",
+    "stop_mode": "fixed",
+    "stop_mode_description": "SL hard statique, pas de trailing",
     "trail_distance_atr": null,
     "time_stop": {
       "enabled": true,
-      "max_holding_sessions": 5,
-      "exit_mode": "market_close_at_breakeven"
+      "max_holding_sessions": 1,
+      "exit_mode": "market_close_unconditional"
     },
     "order_validity": {
-      "type": "GTD",
-      "offset_sessions": 5,
-      "good_till_date": "2026-08-22T22:00:00+00:00"
+      "type": "DAY",
+      "offset_sessions": 0,
+      "good_till_date": "2026-08-26T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -90,29 +89,29 @@
     ]
   },
   "bracket_metadata": {
-    "plan_id": "B",
-    "horizon": "swing",
-    "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 9.0,
-    "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.1825,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
+    "plan_id": "A",
+    "horizon": "intraday",
+    "horizon_label_long": "intraday",
+    "composite_score": 7.0,
+    "composite_score_source": "horizon_ta_score.plan_a.score",
+    "ev_pct_risk": 0.0711,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.1827,
-      "T2": 0.1545,
-      "T3": 0.1138
+      "T1": 0.4376,
+      "T2": 0.308,
+      "T3": 0.308
     },
-    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
+    "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 612.48,
-    "hold_tolerance_breach_price": 28.71,
+    "notional_eur": 156.96,
+    "hold_tolerance_breach_price": 7.3575,
     "hold_fallback_active": true,
-    "prediction_id": "SMCI_B_20260817"
+    "prediction_id": "SMR_A_20260826"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,

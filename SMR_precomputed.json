@@ -6,7 +6,7 @@
     "exchange": "NYSE",
     "currency": "USD",
     "isin": "US67079K1051",
-    "generated_at": "2026-08-25T23:13:18.810859+00:00",
+    "generated_at": "2026-08-26T00:31:19.733015+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1821,7 +1821,7 @@
           "rr": 2.0,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.4416,
+          "p_touch": 0.4415,
           "distance_pct": 17.36
         },
         "t2": {
@@ -1830,7 +1830,7 @@
           "rr": 2.22,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4416,
+          "p_touch": 0.4415,
           "distance_pct": 19.28
         },
         "t3": {
@@ -1839,7 +1839,7 @@
           "rr": 2.44,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1419,
+          "p_touch": 0.1417,
           "distance_pct": 21.19
         }
       }
@@ -1874,7 +1874,7 @@
           "rr": 1.8,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5881,
+          "p_touch": 0.588,
           "distance_pct": 19.98
         },
         "t3": {
@@ -1883,7 +1883,7 @@
           "rr": 2.7,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.278,
+          "p_touch": 0.2779,
           "distance_pct": 29.97
         }
       }
@@ -2178,7 +2178,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-25T23:12:54.343395+00:00",
+    "generated_at": "2026-08-26T00:30:51.522352+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7361,7 +7361,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-25T23:12:43.577839+00:00",
+    "generated_at": "2026-08-26T00:30:41.290762+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7590,7 +7590,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-25T23:13:06.355720+00:00",
+    "generated_at": "2026-08-26T00:31:07.610071+00:00",
     "ticker": "SMR",
     "horizons_days": {
       "intraday": 2,
@@ -7725,36 +7725,36 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-25T23:12:58.393139+00:00",
+    "generated_at": "2026-08-26T00:30:55.458048+00:00",
     "ticker": "SMR",
     "spot_price": 9.81,
     "expiries_available": [
       {
         "date": "2026-08-28",
-        "days_to_exp": 3
+        "days_to_exp": 2
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 10
+        "days_to_exp": 9
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 17
+        "days_to_exp": 16
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 24
+        "days_to_exp": 23
       },
       {
         "date": "2026-09-25",
-        "days_to_exp": 31
+        "days_to_exp": 30
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.8284,
-      "iv_atm_90d": 0.8262,
+      "iv_atm_30d": 0.8398,
+      "iv_atm_90d": 0.8398,
       "rv_20d_annualized": 0.9144,
-      "iv_rv_ratio": 0.906,
+      "iv_rv_ratio": 0.918,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -7765,17 +7765,17 @@
     },
     "term_structure": {
       "m1_expiry": "2026-08-28",
-      "m1_days_to_exp": 3,
-      "m1_iv_atm": 0.9258,
+      "m1_days_to_exp": 2,
+      "m1_iv_atm": 1.0684,
       "m3_expiry": "2026-09-25",
-      "m3_days_to_exp": 31,
-      "m3_iv_atm": 0.8262,
-      "ratio_m1_m3": 1.1206,
+      "m3_days_to_exp": 30,
+      "m3_iv_atm": 0.8398,
+      "ratio_m1_m3": 1.2721,
       "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-28",
-      "days_to_exp": 3,
+      "days_to_exp": 2,
       "put_call_ratio": 0.739,
       "total_oi_m1": 40922,
       "largest_call_strike_oi": {
@@ -7788,7 +7788,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 69629304.0,
+      "gex_total_usd_per_point": 71126002.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -7803,7 +7803,7 @@
       "bearish_signals": 0,
       "notes": [
         "skew faible (-4.9 pts) — peu de demande de protection",
-        "GEX positif (69.6M$/pt) = MM long gamma stabilisateur"
+        "GEX positif (71.1M$/pt) = MM long gamma stabilisateur"
       ]
     },
     "liquidity_stats": {
@@ -7842,7 +7842,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-25T23:13:05.459222+00:00",
+    "generated_at": "2026-08-26T00:31:06.777955+00:00",
     "ticker": "SMR",
     "short_interest": {
       "status": "ok",
@@ -7856,81 +7856,16 @@
       "float_shares": 403609887,
       "delta_shares_short_mom_pct": -0.87,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-25T23:12:59.549817+00:00"
+      "fetched_at": "2026-08-26T00:30:56.587501+00:00"
     },
     "insider_transactions_90d": {
-      "status": "ok",
-      "source": "sec_edgar_form_4",
-      "ticker": "SMR",
-      "cik": "0001822966",
-      "lookback_days": 90,
-      "n_filings_total": 20,
-      "n_filings_in_window": 16,
-      "n_fetch_errors": 0,
-      "summary": {
-        "total_buy_count": 0,
-        "total_buy_value_usd": 0,
-        "total_sell_count": 4,
-        "total_sell_value_usd": 555694.1,
-        "vesting_exercise_count": 3,
-        "net_flow_usd": -555694.1,
-        "net_flow_label": "sell_bias_strong"
-      },
-      "top_buys": [],
-      "top_sells": [
-        {
-          "date": "2026-06-30",
-          "insider_name": "Hamady Robert Ramsey",
-          "role": "Chief Financial Officer",
-          "is_officer": true,
-          "is_director": false,
-          "action": "sell",
-          "transaction_code": "S",
-          "tag": "open_market_sale",
-          "shares": 20000,
-          "price": 10.14,
-          "notional_usd": 202800.0
-        },
-        {
-          "date": "2026-08-18",
-          "insider_name": "Fujino Shinji",
-          "role": "Director",
-          "is_officer": false,
-          "is_director": true,
-          "action": "sell",
-          "transaction_code": "S",
-          "tag": "open_market_sale",
-          "shares": 20000,
-          "price": 8.858,
-          "notional_usd": 177160.0
-        },
-        {
-          "date": "2026-08-05",
-          "insider_name": "Fisher Carl M.",
-          "role": "Chief Operating Officer",
-          "is_officer": true,
-          "is_director": false,
-          "action": "sell",
-          "transaction_code": "S",
-          "tag": "open_market_sale",
-          "shares": 18771,
-          "price": 9.362,
-          "notional_usd": 175734.1
-        }
-      ],
-      "flags": {
-        "ceo_or_cfo_concentrated_sells": false,
-        "insider_buying_no_offsetting_sells": false,
-        "insider_selling_no_buys": true,
-        "vesting_exercises_dominant": false
-      },
-      "all_transactions_count": 7,
-      "fetched_at": "2026-08-25T23:13:05.458299+00:00"
+      "status": "no_filings_found",
+      "cik": "0001822966"
     },
     "data_quality": {
       "short_data_available": true,
-      "insider_data_available": true,
-      "insider_n_transactions": 7
+      "insider_data_available": false,
+      "insider_n_transactions": 0
     }
   },
   "volatility_regime": {
@@ -8035,7 +7970,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-08-25T23:12:42.269033+00:00",
+    "generated_at": "2026-08-26T00:30:40.105406+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/SMR_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1125,
@@ -8443,7 +8378,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-08-25T23:12:43.397103+00:00",
+    "generated_at": "2026-08-26T00:30:41.119215+00:00",
     "ticker": "SMR",
     "source_csv": "SMR_daily_long.csv",
     "n_sessions": 1126,
@@ -20852,7 +20787,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-25T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -20897,7 +20832,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-25T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -20942,7 +20877,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-25T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

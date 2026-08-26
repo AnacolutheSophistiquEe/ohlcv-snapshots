@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-08-25T23:07:13.615515+00:00  
+**Generated** : 2026-08-26T00:25:31.585662+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.4 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass  
@@ -54,7 +54,7 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass'.
    - _fenêtre arrêtée : historique epuise — le regime est homogene sur toute la profondeur_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -13.44 % vs -13.82 % si l'on extrapolait par √5 _(rapport 0.972 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.7038** (β de hausse 1.4149, asymétrie 1.2042) vs IWM — 601 séances de repli, historique complet
+- **β de baisse : 1.7039** (β de hausse 1.4149, asymétrie 1.2042) vs IWM — 601 séances de repli, historique complet
 
 
 ## Echelle Warden — OU poser le stop
@@ -296,7 +296,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Positioning & factor
 
 **Factor** : attribution factorielle indisponible
-**Short/Insider** : SI —% | insider — | verdict neutral
+**Short/Insider** : SI —% | insider — | verdict sell_bias_strong
 **Options** : bullish
 
 
@@ -324,5 +324,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (810993 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (811034 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

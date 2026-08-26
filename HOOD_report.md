@@ -1,6 +1,6 @@
 # HOOD
 
-**Generated** : 2026-08-25T23:14:46.700279+00:00  
+**Generated** : 2026-08-26T00:32:47.612978+00:00  
 **Santé technique** : 8/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $112.09  
@@ -343,5 +343,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (818193 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (818202 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

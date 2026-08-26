@@ -1,6 +1,6 @@
 # SOFI
 
-**Generated** : 2026-08-25T23:16:22.688572+00:00  
+**Generated** : 2026-08-26T00:34:15.804284+00:00  
 **Santé technique** : 7/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · $19.00  
@@ -320,5 +320,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (809311 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (809312 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

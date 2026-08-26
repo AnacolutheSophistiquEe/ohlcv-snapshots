@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-08-25T23:03:59.133986+00:00  
+**Generated** : 2026-08-26T00:22:26.028662+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · $126.83  
@@ -389,5 +389,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (832156 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (832165 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
