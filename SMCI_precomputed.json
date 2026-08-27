@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US86800U1043",
-    "generated_at": "2026-08-26T22:02:59.606921+00:00",
+    "generated_at": "2026-08-27T00:26:40.511835+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1877,7 +1877,7 @@
           "rr": 1.43,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7953,
+          "p_touch": 0.7952,
           "distance_pct": 3.17
         },
         "t2": {
@@ -1886,7 +1886,7 @@
           "rr": 2.86,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7953,
+          "p_touch": 0.7952,
           "distance_pct": 6.33
         },
         "t3": {
@@ -1895,7 +1895,7 @@
           "rr": 4.29,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4262,
+          "p_touch": 0.4261,
           "distance_pct": 9.5
         }
       }
@@ -1939,7 +1939,7 @@
           "rr": 2.74,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4415,
+          "p_touch": 0.4416,
           "distance_pct": 21.25
         }
       }
@@ -1983,7 +1983,7 @@
           "rr": 2.45,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.588,
+          "p_touch": 0.5881,
           "distance_pct": 30.05
         }
       }
@@ -2278,7 +2278,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-26T22:02:28.206583+00:00",
+    "generated_at": "2026-08-27T00:26:12.203534+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7713,7 +7713,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-26T22:02:16.667987+00:00",
+    "generated_at": "2026-08-27T00:26:01.649857+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7942,15 +7942,30 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-26T22:02:45.506460+00:00",
+    "generated_at": "2026-08-27T00:26:27.957180+00:00",
     "ticker": "SMCI",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 0,
-    "events": [],
+    "n_events": 1,
+    "events": [
+      {
+        "date": "2026-09-10",
+        "type": "macro",
+        "label": "ECB Monetary Policy Decision",
+        "importance": "high",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      }
+    ],
     "earnings_in_swing": false,
     "warnings": {
       "macro": null,
@@ -8077,36 +8092,36 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-26T22:02:33.014092+00:00",
+    "generated_at": "2026-08-27T00:26:16.856899+00:00",
     "ticker": "SMCI",
     "spot_price": 37.39,
     "expiries_available": [
       {
         "date": "2026-08-28",
-        "days_to_exp": 2
+        "days_to_exp": 1
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 9
+        "days_to_exp": 8
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 16
+        "days_to_exp": 15
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 23
+        "days_to_exp": 22
       },
       {
         "date": "2026-09-25",
-        "days_to_exp": 30
+        "days_to_exp": 29
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7156,
-      "iv_atm_90d": 0.7156,
+      "iv_atm_30d": 0.7273,
+      "iv_atm_90d": 0.7273,
       "rv_20d_annualized": 0.917,
-      "iv_rv_ratio": 0.78,
+      "iv_rv_ratio": 0.793,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -8117,17 +8132,17 @@
     },
     "term_structure": {
       "m1_expiry": "2026-08-28",
-      "m1_days_to_exp": 2,
-      "m1_iv_atm": 0.7231,
+      "m1_days_to_exp": 1,
+      "m1_iv_atm": 0.8857,
       "m3_expiry": "2026-09-25",
-      "m3_days_to_exp": 30,
-      "m3_iv_atm": 0.7156,
-      "ratio_m1_m3": 1.0106,
-      "label": "flat"
+      "m3_days_to_exp": 29,
+      "m3_iv_atm": 0.7273,
+      "ratio_m1_m3": 1.2179,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-28",
-      "days_to_exp": 2,
+      "days_to_exp": 1,
       "put_call_ratio": 0.319,
       "total_oi_m1": 234081,
       "largest_call_strike_oi": {
@@ -8140,7 +8155,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 2731746835.0,
+      "gex_total_usd_per_point": 2730301684.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -8155,7 +8170,7 @@
       "bearish_signals": 0,
       "notes": [
         "skew faible (-3.1 pts) — peu de demande de protection",
-        "GEX positif (2731.7M$/pt) = MM long gamma stabilisateur",
+        "GEX positif (2730.3M$/pt) = MM long gamma stabilisateur",
         "P/C ratio bas (0.32) — biais call dominant"
       ]
     },
@@ -8166,8 +8181,8 @@
       "per_expiry": {
         "2026-08-28": {
           "total_strikes": 125,
-          "liquid_strikes": 48,
-          "filter_ratio_pct": 38.4
+          "liquid_strikes": 47,
+          "filter_ratio_pct": 37.6
         },
         "2026-09-04": {
           "total_strikes": 112,
@@ -8195,7 +8210,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-26T22:02:44.478188+00:00",
+    "generated_at": "2026-08-27T00:26:27.146968+00:00",
     "ticker": "SMCI",
     "short_interest": {
       "status": "ok",
@@ -8209,16 +8224,41 @@
       "float_shares": 519081082,
       "delta_shares_short_mom_pct": -6.1,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-26T22:02:34.375673+00:00"
+      "fetched_at": "2026-08-27T00:26:17.968191+00:00"
     },
     "insider_transactions_90d": {
-      "status": "no_filings_found",
-      "cik": "0001375365"
+      "status": "ok",
+      "source": "sec_edgar_form_4",
+      "ticker": "SMCI",
+      "cik": "0001375365",
+      "lookback_days": 90,
+      "n_filings_total": 20,
+      "n_filings_in_window": 20,
+      "n_fetch_errors": 0,
+      "summary": {
+        "total_buy_count": 0,
+        "total_buy_value_usd": 0,
+        "total_sell_count": 0,
+        "total_sell_value_usd": 0,
+        "vesting_exercise_count": 19,
+        "net_flow_usd": 0,
+        "net_flow_label": "neutral"
+      },
+      "top_buys": [],
+      "top_sells": [],
+      "flags": {
+        "ceo_or_cfo_concentrated_sells": false,
+        "insider_buying_no_offsetting_sells": false,
+        "insider_selling_no_buys": false,
+        "vesting_exercises_dominant": true
+      },
+      "all_transactions_count": 19,
+      "fetched_at": "2026-08-27T00:26:27.145831+00:00"
     },
     "data_quality": {
       "short_data_available": true,
-      "insider_data_available": false,
-      "insider_n_transactions": 0
+      "insider_data_available": true,
+      "insider_n_transactions": 19
     }
   },
   "volatility_regime": {
@@ -8323,7 +8363,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-08-26T22:02:15.305581+00:00",
+    "generated_at": "2026-08-27T00:26:00.373008+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/SMCI_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -8731,7 +8771,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-08-26T22:02:16.471802+00:00",
+    "generated_at": "2026-08-27T00:26:01.456552+00:00",
     "ticker": "SMCI",
     "source_csv": "SMCI_daily_long.csv",
     "n_sessions": 1254,
@@ -20898,7 +20938,7 @@
     "window_mode": "historique complet",
     "recent_252d": {
       "beta_up_days": 1.7106,
-      "beta_down_days": 2.9426,
+      "beta_down_days": 2.9427,
       "beta_asymmetry": 1.7203,
       "n_up_days": 140,
       "n_down_days": 110,
@@ -21144,7 +21184,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-26T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -21189,7 +21229,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-26T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -21242,7 +21282,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-26T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

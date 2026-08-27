@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US5949724083",
-    "generated_at": "2026-08-26T22:01:13.183470+00:00",
+    "generated_at": "2026-08-27T00:25:05.964875+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1831,7 +1831,7 @@
           "rr": 0.61,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7953,
+          "p_touch": 0.7952,
           "distance_pct": 2.45
         },
         "t2": {
@@ -1840,7 +1840,7 @@
           "rr": 1.22,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4262,
+          "p_touch": 0.4261,
           "distance_pct": 4.9
         },
         "t3": {
@@ -1884,7 +1884,7 @@
           "rr": 1.85,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4415,
+          "p_touch": 0.4416,
           "distance_pct": 10.95
         },
         "t3": {
@@ -1928,7 +1928,7 @@
           "rr": 1.71,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.588,
+          "p_touch": 0.5881,
           "distance_pct": 15.48
         },
         "t3": {
@@ -2232,7 +2232,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-26T22:00:42.817416+00:00",
+    "generated_at": "2026-08-27T00:24:39.891852+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7716,7 +7716,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-26T22:00:30.542940+00:00",
+    "generated_at": "2026-08-27T00:24:29.592626+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7945,15 +7945,30 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-26T22:00:58.049190+00:00",
+    "generated_at": "2026-08-27T00:24:53.212802+00:00",
     "ticker": "MSTR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 0,
-    "events": [],
+    "n_events": 1,
+    "events": [
+      {
+        "date": "2026-09-10",
+        "type": "macro",
+        "label": "ECB Monetary Policy Decision",
+        "importance": "high",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+      }
+    ],
     "earnings_in_swing": false,
     "warnings": {
       "macro": null,
@@ -8080,57 +8095,57 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-26T22:00:48.022972+00:00",
+    "generated_at": "2026-08-27T00:24:44.283147+00:00",
     "ticker": "MSTR",
     "spot_price": 123.19,
     "expiries_available": [
       {
         "date": "2026-08-28",
-        "days_to_exp": 2
+        "days_to_exp": 1
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 9
+        "days_to_exp": 8
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 16
+        "days_to_exp": 15
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 23
+        "days_to_exp": 22
       },
       {
         "date": "2026-09-25",
-        "days_to_exp": 30
+        "days_to_exp": 29
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.6864,
-      "iv_atm_90d": 0.6864,
+      "iv_atm_30d": 0.6978,
+      "iv_atm_90d": 0.6978,
       "rv_20d_annualized": 0.7086,
-      "iv_rv_ratio": 0.969,
+      "iv_rv_ratio": 0.985,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -6.934,
+      "skew_25_delta_vol_pts": -7.031,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-28",
-      "m1_days_to_exp": 2,
-      "m1_iv_atm": 0.6804,
+      "m1_days_to_exp": 1,
+      "m1_iv_atm": 0.8335,
       "m3_expiry": "2026-09-25",
-      "m3_days_to_exp": 30,
-      "m3_iv_atm": 0.6864,
-      "ratio_m1_m3": 0.9913,
-      "label": "contango_leger"
+      "m3_days_to_exp": 29,
+      "m3_iv_atm": 0.6978,
+      "ratio_m1_m3": 1.1945,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-08-28",
-      "days_to_exp": 2,
+      "days_to_exp": 1,
       "put_call_ratio": 0.859,
       "total_oi_m1": 480920,
       "largest_call_strike_oi": {
@@ -8143,7 +8158,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 12088586547.0,
+      "gex_total_usd_per_point": 12782443928.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -8157,8 +8172,8 @@
       "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-6.9 pts) — peu de demande de protection",
-        "GEX positif (12088.6M$/pt) = MM long gamma stabilisateur",
+        "skew faible (-7.0 pts) — peu de demande de protection",
+        "GEX positif (12782.4M$/pt) = MM long gamma stabilisateur",
         "max pain 113.00 vs spot 123.19 (-8.3%)"
       ]
     },
@@ -8198,7 +8213,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-26T22:00:57.039378+00:00",
+    "generated_at": "2026-08-27T00:24:52.381488+00:00",
     "ticker": "MSTR",
     "short_interest": {
       "status": "ok",
@@ -8212,7 +8227,7 @@
       "float_shares": 363654304,
       "delta_shares_short_mom_pct": -20.85,
       "squeeze_potential": "low",
-      "fetched_at": "2026-08-26T22:00:49.239669+00:00"
+      "fetched_at": "2026-08-27T00:24:45.403266+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -8321,7 +8336,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 71,
-      "fetched_at": "2026-08-26T22:00:57.038302+00:00"
+      "fetched_at": "2026-08-27T00:24:52.380546+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -8431,7 +8446,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-08-26T22:00:29.036603+00:00",
+    "generated_at": "2026-08-27T00:24:28.351173+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/MSTR_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -8839,7 +8854,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-08-26T22:00:30.312782+00:00",
+    "generated_at": "2026-08-27T00:24:29.398608+00:00",
     "ticker": "MSTR",
     "source_csv": "MSTR_daily_long.csv",
     "n_sessions": 1254,
@@ -21253,7 +21268,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-26T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -21304,7 +21319,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-26T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -21355,7 +21370,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-26T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

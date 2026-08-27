@@ -1,6 +1,6 @@
 # SMCI
 
-**Generated** : 2026-08-26T22:02:59.606921+00:00  
+**Generated** : 2026-08-27T00:26:40.511835+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.8 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Neutral  
@@ -325,5 +325,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (808090 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (808253 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
