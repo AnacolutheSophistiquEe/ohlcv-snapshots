@@ -1,16 +1,16 @@
 {
   "available": true,
-  "generated_at": "2026-08-28T21:43:44.821686+00:00",
-  "prediction_id": "NEX_B_20260828",
+  "generated_at": "2026-08-28T21:48:32.937534+00:00",
+  "prediction_id": "PRY_B_20260828",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "NEX",
-  "exchange": "SBF",
+  "symbol": "PRY",
+  "exchange": "BVME",
   "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 142.6,
-    "quantity": 3,
+    "limit_price": 122.1,
+    "quantity": 1,
     "tif": "GTD",
     "gtd": "2026-09-02T16:30:00+00:00"
   },
@@ -18,21 +18,21 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 143.6,
-      "quantity": 3,
+      "limit_price": 125.0,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 129.7,
-      "quantity": 3,
+      "stop_price": 110.3,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "NEX_B_swing_20260828",
+  "oca_group": "PRY_B_swing_20260828",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "breakeven_after_T1",
@@ -59,7 +59,7 @@
     "qty_split": [
       {
         "tag": "T3",
-        "qty": 3
+        "qty": 1
       }
     ]
   },
@@ -67,26 +67,26 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 7.0,
+    "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0212,
+    "ev_pct_risk": -0.0341,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "below_threshold",
+    "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.5327,
-      "T2": 0.2649,
-      "T3": 0.102
+      "T1": 0.541,
+      "T2": 0.2561,
+      "T3": 0.0977
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 427.8,
-    "hold_tolerance_breach_price": 106.95,
+    "notional_eur": 122.05,
+    "hold_tolerance_breach_price": 91.5375,
     "hold_fallback_active": true,
-    "prediction_id": "NEX_B_20260828"
+    "prediction_id": "PRY_B_20260828"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
