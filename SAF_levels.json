@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SAF",
-    "generated_at": "2026-08-27T22:05:22Z",
+    "generated_at": "2026-08-28T00:36:42Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-08-28T08:00:00Z",
-    "valid_until": "2026-08-28T21:00:00Z",
+    "valid_from": "2026-08-31T08:00:00Z",
+    "valid_until": "2026-08-31T21:00:00Z",
     "source_precomputed": "SAF_precomputed.json"
   },
   "context": {
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 7.4214,
     "atr_pct_daily": null,
-    "beta_60d": 1.7542,
+    "beta_60d": 1.7966,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.7197,
+    "beta_corr_60d": 0.7187,
     "btc_corr_high": null,
     "candlestick": {
       "name": "shooting_star",
@@ -104,9 +104,50 @@
       "rationale": "Confluence support MA200 + FIB_50 (strength 5.0). Bounce mecanique."
     },
     {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 364.0136,
+        "max": 365.4682
+      },
+      "stop": {
+        "price": 358.237,
+        "basis": "below_broken_resistance",
+        "distance_pct": -1.78
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 371.2449,
+          "basis": "r_multiple_1",
+          "rr": 1.0
+        },
+        {
+          "level": 2,
+          "price": 377.7488,
+          "basis": "r_multiple_2",
+          "rr": 2.0
+        },
+        {
+          "level": 3,
+          "price": 384.2528,
+          "basis": "r_multiple_3",
+          "rr": 3.0
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance VPVR_VAH + S/R_resistance (strength 7.0)."
+    },
+    {
       "id": "C",
       "type": "deep_retracement",
-      "priority": 2,
+      "priority": 3,
       "side": "long",
       "entry_zone": {
         "min": 293.0852,
