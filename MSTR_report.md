@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-08-27T22:00:20.646221+00:00  
+**Generated** : 2026-08-28T00:24:04.617489+00:00  
 **Santé technique** : 8/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : strong_trend · volatilite low · $137.40  
@@ -63,7 +63,7 @@ Plan privilegie A (intraday), composite 8/10, conviction 'Pass'.
    - _fenêtre arrêtée : rupture de regime a 660 seances en arriere (volatilite 8.45 % contre 4.79 % aujourd'hui, rapport 1.76)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -16.99 % vs -17.77 % si l'on extrapolait par √5 _(rapport 0.956 ; < 1 = le √5 surestime)_
-- **β de baisse : 2.3288** (β de hausse 1.8577, asymétrie 1.2536) vs IWM — 601 séances de repli, historique complet
+- **β de baisse : 2.3288** (β de hausse 1.8576, asymétrie 1.2536) vs IWM — 601 séances de repli, historique complet
 
 
 ## Echelle Warden — OU poser le stop
@@ -386,5 +386,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (860037 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (860334 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

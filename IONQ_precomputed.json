@@ -6,7 +6,7 @@
     "exchange": "NYSE",
     "currency": "USD",
     "isin": "US46222L1089",
-    "generated_at": "2026-08-27T22:05:15.414465+00:00",
+    "generated_at": "2026-08-28T00:28:28.053952+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1851,7 +1851,7 @@
           "rr": 2.89,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.1418,
+          "p_touch": 0.1419,
           "distance_pct": 19.51
         }
       }
@@ -1877,7 +1877,7 @@
           "rr": 0.88,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9322,
+          "p_touch": 0.9321,
           "distance_pct": 9.2
         },
         "t2": {
@@ -1886,7 +1886,7 @@
           "rr": 1.77,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5882,
+          "p_touch": 0.5881,
           "distance_pct": 18.39
         },
         "t3": {
@@ -2190,7 +2190,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-08-27T22:04:49.653850+00:00",
+    "generated_at": "2026-08-28T00:28:04.764843+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7674,7 +7674,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-08-27T22:04:38.326337+00:00",
+    "generated_at": "2026-08-28T00:27:54.615822+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7892,19 +7892,47 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-08-27T22:05:01.990798+00:00",
+    "generated_at": "2026-08-28T00:28:16.323467+00:00",
     "ticker": "IONQ",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 1,
+    "n_events": 3,
     "events": [
       {
         "date": "2026-09-10",
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
+        "importance": "high",
+        "sessions_to_event": 9,
+        "calendar_days": 13,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+      },
+      {
+        "date": "2026-09-11",
+        "type": "macro",
+        "label": "US CPI (headline)",
+        "importance": "high",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+      },
+      {
+        "date": "2026-09-11",
+        "type": "macro",
+        "label": "US Core CPI (ex food & energy)",
         "importance": "high",
         "sessions_to_event": 10,
         "calendar_days": 14,
@@ -8042,7 +8070,7 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-08-27T22:04:54.272056+00:00",
+    "generated_at": "2026-08-28T00:28:08.816862+00:00",
     "ticker": "IONQ",
     "spot_price": 42.46,
     "expiries_available": [
@@ -8052,43 +8080,43 @@
       },
       {
         "date": "2026-09-04",
-        "days_to_exp": 8
+        "days_to_exp": 7
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 15
+        "days_to_exp": 14
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 22
+        "days_to_exp": 21
       },
       {
         "date": "2026-09-25",
-        "days_to_exp": 29
+        "days_to_exp": 28
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.7473,
-      "iv_atm_90d": 0.7473,
+      "iv_atm_30d": 0.7603,
+      "iv_atm_90d": 0.7603,
       "rv_20d_annualized": 0.842,
-      "iv_rv_ratio": 0.888,
+      "iv_rv_ratio": 0.903,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -6.592,
+      "skew_25_delta_vol_pts": -6.738,
       "label": "low"
     },
     "term_structure": {
       "m1_expiry": "2026-08-28",
       "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.54,
+      "m1_iv_atm": 0.7637,
       "m3_expiry": "2026-09-25",
-      "m3_days_to_exp": 29,
-      "m3_iv_atm": 0.7473,
-      "ratio_m1_m3": 0.7226,
-      "label": "contango_fort"
+      "m3_days_to_exp": 28,
+      "m3_iv_atm": 0.7603,
+      "ratio_m1_m3": 1.0045,
+      "label": "flat"
     },
     "open_interest_m1": {
       "expiry": "2026-08-28",
@@ -8105,7 +8133,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 457976143.0,
+      "gex_total_usd_per_point": 448312314.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -8119,8 +8147,8 @@
       "bullish_signals": 2,
       "bearish_signals": 0,
       "notes": [
-        "skew faible (-6.6 pts) — peu de demande de protection",
-        "GEX positif (458.0M$/pt) = MM long gamma stabilisateur"
+        "skew faible (-6.7 pts) — peu de demande de protection",
+        "GEX positif (448.3M$/pt) = MM long gamma stabilisateur"
       ]
     },
     "liquidity_stats": {
@@ -8159,7 +8187,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-08-27T22:05:01.053989+00:00",
+    "generated_at": "2026-08-28T00:28:15.494160+00:00",
     "ticker": "IONQ",
     "short_interest": {
       "status": "ok",
@@ -8173,7 +8201,7 @@
       "float_shares": 378201947,
       "delta_shares_short_mom_pct": -9.95,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-08-27T22:04:55.630647+00:00"
+      "fetched_at": "2026-08-28T00:28:09.930156+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -8242,7 +8270,7 @@
         "vesting_exercises_dominant": false
       },
       "all_transactions_count": 3,
-      "fetched_at": "2026-08-27T22:05:01.053196+00:00"
+      "fetched_at": "2026-08-28T00:28:15.493363+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -8352,7 +8380,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-08-27T22:04:37.059347+00:00",
+    "generated_at": "2026-08-28T00:27:53.436053+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/IONQ_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -8760,7 +8788,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-08-27T22:04:38.147485+00:00",
+    "generated_at": "2026-08-28T00:27:54.453398+00:00",
     "ticker": "IONQ",
     "source_csv": "IONQ_daily_long.csv",
     "n_sessions": 1254,
@@ -21155,7 +21183,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-27T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -21200,7 +21228,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-27T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -21245,7 +21273,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-08-27T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

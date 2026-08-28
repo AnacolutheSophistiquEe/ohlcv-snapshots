@@ -1,6 +1,6 @@
 # 326030
 
-**Generated** : 2026-08-27T21:58:47.588997+00:00  
+**Generated** : 2026-08-28T00:22:40.750316+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩88000.00  
@@ -35,14 +35,14 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
-- 🟢 **Régime de gap : gap_calme** — p_breach(-3 %)=0.98 % < 1 % et 83 % des franchissements viennent des 4 pires jours/an — la queue est TOUT, l'ordinaire est sans risque de gap
-- **Au stop du plan (8.52 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
+- 🟢 **Régime de gap : gap_calme** — p_breach(-3 %)=0.99 % < 1 % et 83 % des franchissements viennent des 4 pires jours/an — la queue est TOUT, l'ordinaire est sans risque de gap
+- **Au stop du plan (8.52 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1217).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 8.52 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
-- Chocs d'ouverture : p05 -1.59 % | p01 -2.833 % | pire -5.539 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -1.591 % | p01 -2.834 % | pire -5.539 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.4242** [0.3523 ; 0.4986] _(largeur 14.6 pt, n_eff 173.1)_
    - swing : **0.3592** [0.31 ; 0.4108] _(largeur 10.1 pt, n_eff 345.6)_
    - deep : **0.3633** [0.3139 ; 0.415] _(largeur 10.1 pt, n_eff 345.6)_
@@ -50,8 +50,8 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
 - **VaR/CVaR à 1 j (fenêtre adaptative, 540 séances)** : VaR **-4.18 %** | CVaR **-6.25 %** | vol 2.95 %/j
    - _fenêtre arrêtée : rupture de regime a 600 seances en arriere (volatilite 1.78 % contre 3.37 % aujourd'hui, rapport 0.53)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -8.37 % vs -8.65 % si l'on extrapolait par √5 _(rapport 0.967 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.6034** (β de hausse 0.4576, asymétrie 1.3185) vs KS11 — 553 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -8.37 % vs -8.66 % si l'on extrapolait par √5 _(rapport 0.966 ; < 1 = le √5 surestime)_
+- **β de baisse : 0.6034** (β de hausse 0.4573, asymétrie 1.3193) vs KS11 — 553 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -167,7 +167,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 15.9  _(pas de tendance nette)_
 - **MACD** : hist 369.115  _(pas de croisement recent)_
 - **BB** : %B 0.69 · largeur 18.6%
-- **ATR** : 3992.86 (40.0e pct 1a)  _(volatilite normale)_
+- **ATR** : 3992.86 (39.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV rising · CMF 0.15  _(accumulation)_
 - **Vol ratio** : 1.08  _(volume normal)_
 - **Choppiness** : 55.6  _(transition)_
@@ -177,5 +177,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (564649 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (564951 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
