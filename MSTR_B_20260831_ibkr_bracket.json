@@ -1,46 +1,54 @@
 {
   "available": true,
-  "generated_at": "2026-08-20T21:46:38.614378+00:00",
-  "prediction_id": "AL2SI_B_20260820",
+  "generated_at": "2026-08-31T00:23:41.347756+00:00",
+  "prediction_id": "MSTR_B_20260831",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "AL2SI",
-  "exchange": "SBF",
-  "currency": "EUR",
+  "symbol": "MSTR",
+  "exchange": "SMART",
+  "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 25.78,
-    "quantity": 6,
+    "limit_price": 127.31,
+    "quantity": 4,
     "tif": "GTD",
-    "gtd": "2026-08-25T16:30:00+00:00"
+    "gtd": "2026-09-05T22:00:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 27.04,
-      "quantity": 4,
+      "limit_price": 129.55,
+      "quantity": 2,
+      "tif": "GTC",
+      "tag": "T1"
+    },
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 137.23,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 28.43,
-      "quantity": 2,
+      "limit_price": 144.92,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 22.69,
-      "quantity": 6,
+      "stop_price": 113.71,
+      "quantity": 4,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "AL2SI_B_swing_20260820",
+  "oca_group": "MSTR_B_swing_20260831",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "breakeven_after_T1",
@@ -54,7 +62,7 @@
     "order_validity": {
       "type": "GTD",
       "offset_sessions": 5,
-      "good_till_date": "2026-08-25T16:30:00+00:00"
+      "good_till_date": "2026-09-05T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -62,17 +70,22 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.6,
-      0.4
+      0.5,
+      0.3,
+      0.2
     ],
     "qty_split": [
       {
+        "tag": "T1",
+        "qty": 2
+      },
+      {
         "tag": "T2",
-        "qty": 4
+        "qty": 1
       },
       {
         "tag": "T3",
-        "qty": 2
+        "qty": 1
       }
     ]
   },
@@ -80,26 +93,26 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 4.0,
+    "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.137,
+    "ev_pct_risk": -0.0589,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "below_threshold",
+    "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.556,
-      "T2": 0.35,
-      "T3": 0.2407
+      "T1": 0.4621,
+      "T2": 0.1762,
+      "T3": 0.0883
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 154.68,
-    "hold_tolerance_breach_price": 19.335,
+    "notional_eur": 509.24,
+    "hold_tolerance_breach_price": 95.4825,
     "hold_fallback_active": true,
-    "prediction_id": "AL2SI_B_20260820"
+    "prediction_id": "MSTR_B_20260831"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,

@@ -1,38 +1,46 @@
 {
   "available": true,
-  "generated_at": "2026-08-20T00:05:06.608959+00:00",
-  "prediction_id": "NEX_B_20260820",
+  "generated_at": "2026-08-31T00:25:07.854276+00:00",
+  "prediction_id": "SMCI_B_20260831",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "NEX",
-  "exchange": "SBF",
-  "currency": "EUR",
+  "symbol": "SMCI",
+  "exchange": "SMART",
+  "currency": "USD",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 138.3,
-    "quantity": 2,
+    "limit_price": 37.08,
+    "quantity": 16,
     "tif": "GTD",
-    "gtd": "2026-08-25T16:30:00+00:00"
+    "gtd": "2026-09-05T22:00:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 141.7,
-      "quantity": 2,
+      "limit_price": 38.89,
+      "quantity": 10,
+      "tif": "GTC",
+      "tag": "T2"
+    },
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 41.29,
+      "quantity": 6,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 125.9,
-      "quantity": 2,
+      "stop_price": 31.43,
+      "quantity": 16,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "NEX_B_swing_20260820",
+  "oca_group": "SMCI_B_swing_20260831",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "breakeven_after_T1",
@@ -46,7 +54,7 @@
     "order_validity": {
       "type": "GTD",
       "offset_sessions": 5,
-      "good_till_date": "2026-08-25T16:30:00+00:00"
+      "good_till_date": "2026-09-05T22:00:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -54,12 +62,17 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      1.0
+      0.6,
+      0.4
     ],
     "qty_split": [
       {
+        "tag": "T2",
+        "qty": 10
+      },
+      {
         "tag": "T3",
-        "qty": 2
+        "qty": 6
       }
     ]
   },
@@ -67,33 +80,33 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 5.0,
+    "composite_score": 8.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.0197,
+    "ev_pct_risk": 0.0219,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.5004,
-      "T2": 0.224,
-      "T3": 0.0902
+      "T1": 0.4096,
+      "T2": 0.2319,
+      "T3": 0.1541
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 276.6,
-    "hold_tolerance_breach_price": 103.725,
+    "notional_eur": 593.28,
+    "hold_tolerance_breach_price": 27.81,
     "hold_fallback_active": true,
-    "prediction_id": "NEX_B_20260820"
+    "prediction_id": "SMCI_B_20260831"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.1,
+    "tick_size_used": 0.01,
     "qty_total_positive": true
   }
 }
