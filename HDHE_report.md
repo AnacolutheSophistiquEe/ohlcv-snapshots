@@ -1,84 +1,79 @@
 # 267260
 
-**Generated** : 2026-08-31T00:17:07.956251+00:00  
-> ⚠️ **Données suspectes** : volatilité réalisée 5.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
-
-**Santé technique** : 7/10 — **Rating** : Pass  
+**Generated** : 2026-08-31T21:52:45.971905+00:00  
+**Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · ₩814000.00  
+**Subtitle** : indeterminate · volatilite normal · ₩777000.00  
 
-> 🟡 **WAIT-FOR-DIP** — spot +2.3 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot ₩814000.00 (+2.3% vs entrée) · entrée ₩795348.65 · stop ₩731720.75 · T1 ₩835016.44 · R/R 0.62  
-> ↳ P(T1 av. stop) 22 % _(réel 5 s)_ · EV/risk 0.047 _(réel 5 s)_ (GBM -0.197) · ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
+> ↳ spot ₩777000.00 (+1.2% vs entrée) · entrée ₩767598.65 · stop ₩706190.75 · T1 ₩785201.65 · R/R 0.29  
+> ↳ P(T1 av. stop) 50 % _(réel 5 s)_ · EV/risk -0.013 _(réel 5 s)_ (GBM -0.181) · ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
-
-> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 146 % hors [0,100] (R² max 0.93). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
-
 
 ## Régime & alignement multi-TF
 
 - **Daily** : range (trend-range)  
-- **H4** : range | **H1** : up  
+- **H4** : range | **H1** : down  
 - **Flag multi-TF** : mixed (score 2)
 
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
+Plan privilegie A (intraday), composite 4/10, conviction 'Pass (negative EV)'.
 
 
 ## Niveaux clés & plan principal
 
 **Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : ₩790780.40–₩799916.90 (mid ₩795348.65)
-- Spot actuel : ₩814000.00 (+2.3% au-dessus de la zone — repli à attendre)
-- Stop : ₩731720.75 (stop swing_plan-based (-10.46%))
-- Targets : T1 ₩835016.44 · R/R 0.62 | T2 ₩849340.60 · R/R 0.85 | T3 ₩863664.76 · R/R 1.07
+- Entry (zone de repli) : ₩764078.05–₩771119.25 (mid ₩767598.65)
+- Spot actuel : ₩777000.00 (+1.2% au-dessus de la zone — repli à attendre)
+- Stop : ₩706190.75 (stop swing_plan-based (-8.41%))
+- Targets : T1 ₩785201.65 · R/R 0.29 | T2 ₩802804.65 · R/R 0.57 | T3 ₩820407.65 · R/R 0.86
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩731720.75
+- Invalidation : close sous ₩706190.75
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=3.94 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (10.46 %)** : le gap seul le franchit 0.082 % des séances (1 fois sur 1217).
-   - exécution **1.255 pt plus bas** dans le cas TYPIQUE (médiane), 1.255 au p90, **1.255 au pire**
-   - perte réelle **11.715 %** en moyenne _(tirée par la queue)_, jusqu'à **11.715 %** — au lieu des 10.46 % annoncés par la distance
-   - coût AMORTI sur toutes les séances : 0.001 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+- **Au stop du plan (8.41 %)** : le gap seul le franchit 0.082 % des séances (1 fois sur 1218).
+   - exécution **3.305 pt plus bas** dans le cas TYPIQUE (médiane), 3.305 au p90, **3.305 au pire**
+   - perte réelle **11.715 %** en moyenne _(tirée par la queue)_, jusqu'à **11.715 %** — au lieu des 8.41 % annoncés par la distance
+   - coût AMORTI sur toutes les séances : 0.0027 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 1 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -2.639 % | p01 -4.805 % | pire -11.715 % _(sur 1217 séances)_
-- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
-   - intraday : **0.086** [0.051 ; 0.1347] _(largeur 8.4 pt, n_eff 173.1)_
-   - swing : **0.4385** [0.3869 ; 0.4911] _(largeur 10.4 pt, n_eff 345.6)_
-   - deep : **0.4076** [0.3567 ; 0.46] _(largeur 10.3 pt, n_eff 345.6)_
-- ⚠ 5 s / deep : probabilite(s) EXACTEMENT nulle(s) : p_no_touch. Ce n'est PAS « jamais » — c'est « aucune occurrence sur 25.6 observations effectives », dont la borne haute a 95 % vaut environ 11.7 %.
-- ⚠ **5 s — échantillon insuffisant sur : intraday (27.9 pt), swing (38.9 pt), deep (37.0 pt).** Ces chiffres peuvent être CITÉS, jamais servir à dimensionner ni à arbitrer entre deux plans.
-- **VaR/CVaR à 1 j (fenêtre adaptative, 250 séances)** : VaR **-6.59 %** | CVaR **-8.78 %** | vol 4.42 %/j
-   - _fenêtre arrêtée : rupture de regime a 300 seances en arriere (volatilite 2.99 % contre 5.00 % aujourd'hui, rapport 0.60)_
+- Chocs d'ouverture : p05 -2.638 % | p01 -4.805 % | pire -11.715 % _(sur 1218 séances)_
+- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+   - intraday : **0.0816** [0.0477 ; 0.1294] _(largeur 8.2 pt, n_eff 173.1)_
+   - swing : **0.3957** [0.3452 ; 0.4479] _(largeur 10.3 pt, n_eff 345.6)_
+   - deep : **0.3726** [0.3229 ; 0.4245] _(largeur 10.2 pt, n_eff 345.6)_
+- ⚠ 5 s / swing : probabilite(s) EXACTEMENT nulle(s) : p_no_touch. Ce n'est PAS « jamais » — c'est « aucune occurrence sur 36.9 observations effectives », dont la borne haute a 95 % vaut environ 8.1 %.
+- ⚠ 5 s / deep : probabilite(s) EXACTEMENT nulle(s) : p_no_touch. Ce n'est PAS « jamais » — c'est « aucune occurrence sur 30.4 observations effectives », dont la borne haute a 95 % vaut environ 9.9 %.
+- ⚠ **5 s — échantillon insuffisant sur : intraday (30.5 pt), swing (31.1 pt), deep (33.1 pt).** Ces chiffres peuvent être CITÉS, jamais servir à dimensionner ni à arbitrer entre deux plans.
+- **VaR/CVaR à 1 j (fenêtre adaptative, 250 séances)** : VaR **-6.59 %** | CVaR **-8.78 %** | vol 4.43 %/j
+   - _fenêtre arrêtée : rupture de regime a 300 seances en arriere (volatilite 2.98 % contre 5.02 % aujourd'hui, rapport 0.59)_
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -10.73 % vs -11.9 % si l'on extrapolait par √5 _(rapport 0.902 ; < 1 = le √5 surestime)_
+- 5 jours **mesuré** : VaR -10.73 % vs -11.89 % si l'on extrapolait par √5 _(rapport 0.902 ; < 1 = le √5 surestime)_
 - **β de baisse : 1.0381** (β de hausse 0.8313, asymétrie 1.2488) vs KS11 — 554 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.197 | EV/share : ₩-12557.923 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 13 % | T2 12 % | T3 12 %
+- EV/risk : -0.181 | EV/share : ₩-11088.918 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 39 % | T2 17 % | T3 12 %
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, intraday) : bull 85.6 | bear 7.1 | side 7.3  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Régime probabiliste (posterior HMM, intraday) : bull 85.6 | bear 7.0 | side 7.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 160.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −2.293% → cible +4.987% / stop −8.0%, p_fill 75%, n_eff≈35.8) : P(cible|rempli) **22%** · **EV/risk +0.047** (×p_fill ; si rempli +0.50% du capital)
-  - **swing** (entrée dip −5.04% → cible +6.402% / stop −5.707%, p_fill 55%, n_eff≈22.9) : P(cible|rempli) **46%** · **EV/risk -0.030** (×p_fill ; si rempli -0.31% du capital)
-  - **deep** (entrée dip −7.79% → cible +9.054% / stop −8.816%, p_fill 52%, n_eff≈25.6) : P(cible|rempli) **48%** · **EV/risk -0.047** (×p_fill ; si rempli -0.79% du capital)
+  - **intraday** (entrée dip −1.207% → cible +2.293% / stop −8.0%, p_fill 93%, n_eff≈38.9) : P(cible|rempli) **50%** · **EV/risk -0.013** (×p_fill ; si rempli -0.11% du capital)
+  - **swing** (entrée dip −2.658% → cible +5.128% / stop −5.909%, p_fill 91%, n_eff≈36.9) : P(cible|rempli) **54%** · **EV/risk -0.050** (×p_fill ; si rempli -0.33% du capital)
+  - **deep** (entrée dip −4.112% → cible +7.252% / stop −8.998%, p_fill 67%, n_eff≈30.4) : P(cible|rempli) **37%** · **EV/risk -0.251** (×p_fill ; si rempli -3.35% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→78% · +1.0%→66% · +2.0%→42% · +3.0%→35% · +5.0%→12% · +8.0%→4%
 - Range intraday médian 6.79% (p90 10.49%) · excursion haute méd. +1.58% / basse méd. −4.07%
 - Profil de vol intra : ouverture 4.485% vs midi 1.221% vs clôture 1.294% _(ouverture ~3.7× plus volatile → privilégier/éviter selon le setup)_
@@ -151,7 +146,7 @@ _Trop peu de séances trend-up (2) pour des stats fiables : 1.3% des séances se
 ## Timing d'entrée (observe-only)
 
 - **Verdict timing** : neutre
-- Proximité zone : 0.75/2 | R/R T1 : 0.5 | extension : normal
+- Proximité zone : 0.5/2 | R/R T1 : 2.0 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -172,19 +167,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 59.3  _(momentum haussier)_
-- **ADX** : 17.2  _(pas de tendance nette)_
-- **MACD** : hist 12356.66  _(pas de croisement recent)_
-- **BB** : %B 0.88 · largeur 21.6%
-- **ATR** : 44116.69 (35.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF 0.265  _(accumulation)_
-- **Vol ratio** : 1.55  _(volume au-dessus de la moyenne)_
-- **Choppiness** : 46.5  _(transition)_
-- **MA** : MA20 752013.37 · MA50 818722.56 · MA200 921183.99  _(prix > MA20)_
-- **Dist MA** : MA20 +8.2% · MA50 -0.6% · MA200 -11.6%
+- **RSI** : 52.2  _(neutre)_
+- **ADX** : 16.2  _(pas de tendance nette)_
+- **MACD** : hist 11274.917  _(pas de croisement recent)_
+- **BB** : %B 0.64 · largeur 19.8%
+- **ATR** : 44692.86 (35.0e pct 1a)  _(volatilite normale)_
+- **OBV/CMF** : OBV falling · CMF 0.221  _(accumulation)_
+- **Vol ratio** : 0.47  _(volume atone)_
+- **Choppiness** : 47.0  _(transition)_
+- **MA** : MA20 756721.57 · MA50 812559.55 · MA200 920761.64  _(prix > MA20)_
+- **Dist MA** : MA20 +2.7% · MA50 -4.4% · MA200 -15.6%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (618715 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (506541 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

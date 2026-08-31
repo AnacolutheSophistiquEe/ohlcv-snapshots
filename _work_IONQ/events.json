@@ -1,0 +1,61 @@
+{
+  "available": true,
+  "generated_at": "2026-08-31T22:05:17.769245+00:00",
+  "ticker": "IONQ",
+  "horizons_days": {
+    "intraday": 2,
+    "swing": 7,
+    "deep": 14
+  },
+  "n_events": 3,
+  "events": [
+    {
+      "date": "2026-09-10",
+      "type": "macro",
+      "label": "ECB Monetary Policy Decision",
+      "importance": "high",
+      "sessions_to_event": 7,
+      "calendar_days": 10,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+    },
+    {
+      "date": "2026-09-11",
+      "type": "macro",
+      "label": "US CPI (headline)",
+      "importance": "high",
+      "sessions_to_event": 8,
+      "calendar_days": 11,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+    },
+    {
+      "date": "2026-09-11",
+      "type": "macro",
+      "label": "US Core CPI (ex food & energy)",
+      "importance": "high",
+      "sessions_to_event": 8,
+      "calendar_days": 11,
+      "in_plan_horizon": [
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+    }
+  ],
+  "earnings_in_swing": false,
+  "warnings": {
+    "macro": null,
+    "corporate": null
+  },
+  "note": "réutilise data/macro_calendar.json (collecte = Claude/VPS, PAS reconstruite ici) + earnings/ex-div yfinance best-effort. Impact/reco mécaniques, observe-only."
+}

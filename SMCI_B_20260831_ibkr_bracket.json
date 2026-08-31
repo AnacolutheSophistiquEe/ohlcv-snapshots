@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-08-31T00:25:07.854276+00:00",
+  "generated_at": "2026-08-31T22:01:52.231077+00:00",
   "prediction_id": "SMCI_B_20260831",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SMCI",
@@ -9,8 +9,8 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 37.08,
-    "quantity": 16,
+    "limit_price": 37.28,
+    "quantity": 13,
     "tif": "GTD",
     "gtd": "2026-09-05T22:00:00+00:00"
   },
@@ -18,24 +18,24 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 38.89,
-      "quantity": 10,
+      "limit_price": 39.07,
+      "quantity": 8,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 41.29,
-      "quantity": 6,
+      "limit_price": 41.49,
+      "quantity": 5,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 31.43,
-      "quantity": 16,
+      "stop_price": 31.59,
+      "quantity": 13,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -68,11 +68,11 @@
     "qty_split": [
       {
         "tag": "T2",
-        "qty": 10
+        "qty": 8
       },
       {
         "tag": "T3",
-        "qty": 6
+        "qty": 5
       }
     ]
   },
@@ -80,24 +80,24 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 8.0,
+    "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0219,
+    "ev_pct_risk": 0.0307,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.4096,
-      "T2": 0.2319,
-      "T3": 0.1541
+      "T1": 0.4147,
+      "T2": 0.2307,
+      "T3": 0.1533
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 593.28,
-    "hold_tolerance_breach_price": 27.81,
+    "notional_eur": 484.64,
+    "hold_tolerance_breach_price": 27.96,
     "hold_fallback_active": true,
     "prediction_id": "SMCI_B_20260831"
   },
