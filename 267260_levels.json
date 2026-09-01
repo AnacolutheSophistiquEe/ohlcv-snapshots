@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "267260",
-    "generated_at": "2026-08-31T22:05:30Z",
+    "generated_at": "2026-09-01T00:36:04Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-09-01T08:00:00Z",
-    "valid_until": "2026-09-01T21:00:00Z",
+    "valid_from": "2026-09-02T08:00:00Z",
+    "valid_until": "2026-09-02T21:00:00Z",
     "source_precomputed": "267260_precomputed.json"
   },
   "context": {
@@ -69,7 +69,7 @@
     ],
     "drawdown": {
       "current_dd_pct": -45.14,
-      "ath_price": 1416230.75,
+      "ath_price": 1416230.625,
       "ath_date": "2026-05-07",
       "max_dd_1y_pct": -58.9,
       "days_in_dd": 116,
@@ -84,7 +84,7 @@
       "side": "long",
       "entry_zone": {
         "min": 739394.5842,
-        "max": 774883.189
+        "max": 774883.2185
       },
       "stop": {
         "price": 711624.1642,
@@ -122,8 +122,8 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 835851.4685,
-        "max": 839191.5343
+        "min": 835851.4605,
+        "max": 839191.5263
       },
       "stop": {
         "price": 808496.7547,
@@ -133,19 +133,19 @@
       "targets": [
         {
           "level": 1,
-          "price": 894204.2805,
+          "price": 894204.3283,
           "basis": "fib_382",
           "rr": 1.95
         },
         {
           "level": 2,
-          "price": 985779.0244,
+          "price": 985779.0078,
           "basis": "next_confluence_resistance",
           "rr": 5.11
         },
         {
           "level": 3,
-          "price": 990641.875,
+          "price": 990641.9375,
           "basis": "fib_50",
           "rr": 5.28
         }
@@ -161,11 +161,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 538727.8012,
-        "max": 549666.4368
+        "min": 538727.7708,
+        "max": 549666.4057
       },
       "stop": {
-        "price": 479892.4922,
+        "price": 479892.4613,
         "basis": "fallback_sr_support",
         "distance_pct": -11.82
       },
@@ -199,7 +199,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 475093.5673,
+    "price": 475093.5367,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
