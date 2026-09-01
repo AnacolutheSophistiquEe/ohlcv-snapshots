@@ -1,6 +1,6 @@
 # 207940
 
-**Generated** : 2026-08-31T21:57:06.471976+00:00  
+**Generated** : 2026-09-01T00:20:55.376010+00:00  
 **Santé technique** : 4/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩1507000.00  
@@ -35,13 +35,13 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass (negative EV)'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟢 **Régime de gap : gap_calme** — p_breach(-3 %)=0.57 % < 1 % et 100 % des franchissements viennent des 4 pires jours/an — la queue est TOUT, l'ordinaire est sans risque de gap
-- **Au stop du plan (12.21 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
+- **Au stop du plan (12.21 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1217).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 12.21 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
-- Chocs d'ouverture : p05 -1.282 % | p01 -2.672 % | pire -5.458 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -1.283 % | p01 -2.673 % | pire -5.458 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0049** [0.0004 ; 0.025] _(largeur 2.5 pt, n_eff 173.1)_
    - swing : **0.3343** [0.2861 ; 0.3853] _(largeur 9.9 pt, n_eff 345.6)_
    - deep : **0.3214** [0.2738 ; 0.372] _(largeur 9.8 pt, n_eff 345.6)_
@@ -49,8 +49,8 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass (negative EV)'.
    - _fenêtre arrêtée : rupture de regime a 300 seances en arriere (volatilite 1.58 % contre 2.82 % aujourd'hui, rapport 0.56)_
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -5.62 % vs -6.24 % si l'on extrapolait par √5 _(rapport 0.9 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.3213** (β de hausse 0.2186, asymétrie 1.4698) vs KS11 — 554 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -5.62 % vs -6.25 % si l'on extrapolait par √5 _(rapport 0.9 ; < 1 = le √5 surestime)_
+- **β de baisse : 0.3213** (β de hausse 0.2181, asymétrie 1.473) vs KS11 — 554 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -176,5 +176,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (502363 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (502365 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

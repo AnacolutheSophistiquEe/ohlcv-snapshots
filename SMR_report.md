@@ -1,15 +1,14 @@
 # SMR
 
-**Generated** : 2026-08-31T00:32:05.900052+00:00  
-> ⚠️ **Données suspectes** : volatilité réalisée 5.1 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
-
+**Generated** : 2026-09-01T00:32:08.618791+00:00  
 **Santé technique** : 4/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : range · volatilite low · $9.29  
+**Subtitle** : range · volatilite low · $9.27  
 
-> 🟡 **WAIT-FOR-DIP** — spot +2.7 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot $9.29 (+2.7% vs entrée) · entrée $9.05 · stop $8.35 · T1 $10.13 · R/R 1.54  
-> ↳ P(T1 av. stop) 32 % _(réel 5 s)_ · EV/risk 0.076 _(réel 5 s)_ (GBM -0.109) · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈214) · non recalibrée track-record (n=0)_  
+> 🟡 **WAIT-FOR-DIP** — spot +1.1 % au-dessus de la zone d'entrée — attendre le repli  
+> ↳ spot $9.27 (+1.1% vs entrée) · entrée $9.17 · stop $8.92 · T1 $9.66 · R/R 1.96  
+> ↳ P(T1 av. stop) 24 % _(réel 5 s)_ · EV/risk 0.057 _(réel 5 s)_ (GBM 0.087) · ¼-Kelly 0.026 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
+> ↳ stop −2.71% cohérent avec le bruit 5 s (EV-optimal ≈ −2.5%)  
 
 ## Régime & alignement multi-TF
 
@@ -20,142 +19,142 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie B (swing), composite 4/10, conviction 'Pass'.
+Plan privilegie A (intraday), composite 4/10, conviction 'Pass'.
 
 
 ## Niveaux clés & plan principal
 
-**Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : $8.94–$9.17 (mid $9.05)
-- Spot actuel : $9.29 (+2.7% au-dessus de la zone — repli à attendre)
-- Stop : $8.35 (stop swing_plan-based (-10.07%))
-- Targets : T1 $10.13 · R/R 1.54 | T2 $10.45 · R/R 2.0 | T3 $10.76 · R/R 2.44
+**Plan A — intraday** (order_type LMT)
+- Entry (zone de repli) : $9.12–$9.22 (mid $9.17)
+- Spot actuel : $9.27 (+1.1% au-dessus de la zone — repli à attendre)
+- Stop : $8.92 (stop swing_plan-based (-9.61%))
+- Targets : T1 $9.66 · R/R 1.96 | T2 $9.79 · R/R 2.48 | T3 $9.91 · R/R 2.96
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $8.35
+- Invalidation : close sous $8.92
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=6.29 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (10.07 %)** : le gap seul le franchit 0.532 % des séances (6 fois sur 1128).
-   - exécution **4.104 pt plus bas** dans le cas TYPIQUE (médiane), 13.708 au p90, **20.253 au pire**
-   - perte réelle **16.461 %** en moyenne _(tirée par la queue)_, jusqu'à **30.323 %** — au lieu des 10.07 % annoncés par la distance
-   - coût AMORTI sur toutes les séances : 0.034 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
-   - ⚠ seulement 6 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
+- **Au stop du plan (9.61 %)** : le gap seul le franchit 0.62 % des séances (7 fois sur 1129).
+   - exécution **3.954 pt plus bas** dans le cas TYPIQUE (médiane), 12.859 au p90, **20.713 au pire**
+   - perte réelle **15.541 %** en moyenne _(tirée par la queue)_, jusqu'à **30.323 %** — au lieu des 9.61 % annoncés par la distance
+   - coût AMORTI sur toutes les séances : 0.0368 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+   - ⚠ seulement 7 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -3.429 % | p01 -6.962 % | pire -30.323 % _(sur 1128 séances)_
-- **P(stop avant cible)** _(source : daily, 1129 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
-   - intraday : **0.5754** [0.501 ; 0.6473] _(largeur 14.6 pt, n_eff 173.1)_
-   - swing : **0.5279** [0.4752 ; 0.5801] _(largeur 10.5 pt, n_eff 345.2)_
-   - deep : **0.5498** [0.4971 ; 0.6017] _(largeur 10.5 pt, n_eff 345.2)_
-- ⚠ **5 s — échantillon insuffisant sur : intraday (32.2 pt), swing (34.5 pt), deep (35.0 pt).** Ces chiffres peuvent être CITÉS, jamais servir à dimensionner ni à arbitrer entre deux plans.
-- **VaR/CVaR à 1 j (fenêtre adaptative, 600 séances)** : VaR **-9.4 %** | CVaR **-11.92 %** | vol 6.94 %/j
-   - _fenêtre arrêtée : rupture de regime a 660 seances en arriere (volatilite 11.02 % contre 5.92 % aujourd'hui, rapport 1.86)_
+- Chocs d'ouverture : p05 -3.428 % | p01 -6.962 % | pire -30.323 % _(sur 1129 séances)_
+- **P(stop avant cible)** _(source : daily, 1130 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+   - intraday : **0.5698** [0.4954 ; 0.6419] _(largeur 14.6 pt, n_eff 173.1)_
+   - swing : **0.5404** [0.4877 ; 0.5925] _(largeur 10.5 pt, n_eff 345.2)_
+   - deep : **0.5513** [0.4986 ; 0.6032] _(largeur 10.5 pt, n_eff 345.2)_
+- ⚠ **5 s — échantillon insuffisant sur : intraday (32.2 pt), swing (33.8 pt), deep (35.0 pt).** Ces chiffres peuvent être CITÉS, jamais servir à dimensionner ni à arbitrer entre deux plans.
+- **VaR/CVaR à 1 j (fenêtre adaptative, 600 séances)** : VaR **-9.4 %** | CVaR **-11.92 %** | vol 6.93 %/j
+   - _fenêtre arrêtée : rupture de regime a 660 seances en arriere (volatilite 11.00 % contre 5.92 % aujourd'hui, rapport 1.86)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -18.96 % vs -18.67 % si l'on extrapolait par √5 _(rapport 1.016 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.6018** (β de hausse 1.3622, asymétrie 1.1759) vs IWM — 535 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 2.022× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 1.6029** (β de hausse 1.3622, asymétrie 1.1767) vs IWM — 536 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 1.982× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
 
 - **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — la perte y est non bornee.**
-- **Couple retenu** : stop 8.065 sur atr_grid (1.75 ATR, 13.186 %) — p(stop avant cible) 0.462 [0.41 ; 0.51], R/R 0.832, perte reelle 18.976 % (gap inclus), CVaR 13.207 %, EV -3.6411 % — **NON CONFORME (best_effort — proposition de derniere main)**
-   - severite des violations : 0.1005 (somme des depassements RELATIFS a chaque seuil ; c'est elle qui a departage, l'esperance ne tranchant qu'a severites egales)
-   - viole : R/R 0.83 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - viole : CVaR 95 % 13.21 % > budget 12.00 %
+- **Couple retenu** : stop 8.1025 sur atr_grid (1.75 ATR, 12.594 %) — p(stop avant cible) 0.4865 [0.43 ; 0.54], R/R 0.855, perte reelle 18.976 % (gap inclus), CVaR 12.617 %, EV -4.1048 % — **NON CONFORME (best_effort — proposition de derniere main)**
+   - severite des violations : 0.0514 (somme des depassements RELATIFS a chaque seuil ; c'est elle qui a departage, l'esperance ne tranchant qu'a severites egales)
+   - viole : R/R 0.85 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - viole : CVaR 95 % 12.62 % > budget 12.00 %
 - Budget de queue : **12.0 %** du notionnel — ⚠ VALEUR FIGEE (valeur de repli (ligne absente de l'allocation)), PAS une mesure. L'allocation derivee de la contrainte du compte n'etait pas disponible.
 - Candidats (la structure propose, la statistique elimine) :
-   - ⚪ sr_based a 0.71 ATR (stop 7.842 %) — p(stop avant cible) 0.6819 [0.63 ; 0.73], R/R 1.17, perte reelle 13.499 % (gap inclus), EV -4.9038 % — **REFUSE**
-      - refuse : p_stop_first 0.682, borne haute 0.729 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-      - refuse : R/R 1.17 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-4.90 %) : P(cible) 26.6 % x 15.79 % + P(rien) 5.2 % x 1.95 % ne couvrent pas P(stop) 68.2 % x 13.50 %.
+   - ⚪ sr_based a 0.71 ATR (stop 7.995 %) — p(stop avant cible) 0.6727 [0.62 ; 0.72], R/R 1.201, perte reelle 13.499 % (gap inclus), EV -4.714 % — **REFUSE**
+      - refuse : p_stop_first 0.673, borne haute 0.721 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
+      - refuse : R/R 1.20 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-4.71 %) : P(cible) 26.2 % x 16.21 % + P(rien) 6.5 % x 1.72 % ne couvrent pas P(stop) 67.3 % x 13.50 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - 🔴 support a 1.09 ATR (stop 10.667 %) — p(stop avant cible) 0.5634 [0.51 ; 0.61], R/R 0.894, perte reelle 17.667 % (gap inclus), EV -5.1108 % — **REFUSE**
-      - refuse : p_stop_first 0.563, borne haute 0.615 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-      - refuse : R/R 0.89 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - ⚠ support DETECTE a 0.61 ATR du spot — compartiment <1, mesure a 45.9 % de casse (IC clusterise [0.428 ; 0.490] sur 1144 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-5.11 %) : P(cible) 31.3 % x 15.79 % + P(rien) 12.4 % x -0.75 % ne couvrent pas P(stop) 56.3 % x 17.67 %.
+   - 🔴 support a 1.11 ATR (stop 10.862 %) — p(stop avant cible) 0.5479 [0.50 ; 0.60], R/R 0.918, perte reelle 17.667 % (gap inclus), EV -4.7445 % — **REFUSE**
+      - refuse : p_stop_first 0.548, borne haute 0.600 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
+      - refuse : R/R 0.92 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - ⚠ support DETECTE a 0.61 ATR du spot — compartiment <1, mesure a 46.4 % de casse (IC clusterise [0.430 ; 0.496] sur 1146 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-4.74 %) : P(cible) 31.0 % x 16.21 % + P(rien) 14.2 % x -0.60 % ne couvrent pas P(stop) 54.8 % x 17.67 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - 🟢 support a 2.97 ATR (stop 24.876 %) — p(stop avant cible) 0.1307 [0.10 ; 0.17], R/R 0.521, perte reelle 30.323 % (gap inclus), EV -1.3486 % — **REFUSE**
-      - refuse : R/R 0.52 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 24.88 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.35 %) : P(cible) 36.1 % x 15.79 % + P(rien) 50.8 % x -6.07 % ne couvrent pas P(stop) 13.1 % x 30.32 %.
+   - 🟢 support a 3.09 ATR (stop 25.101 %) — p(stop avant cible) 0.1199 [0.09 ; 0.16], R/R 0.535, perte reelle 30.323 % (gap inclus), EV -1.0767 % — **REFUSE**
+      - refuse : R/R 0.53 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 25.11 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.08 %) : P(cible) 35.1 % x 16.21 % + P(rien) 52.9 % x -5.93 % ne couvrent pas P(stop) 12.0 % x 30.32 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 0.25 ATR (stop 1.884 %) — p(stop avant cible) 0.8998 [0.86 ; 0.93], R/R 4.067, perte reelle 3.882 % (gap inclus), EV -2.0566 % — **REFUSE**
-      - refuse : cible atteinte seulement 9.1 % du temps (< 15 %) meme a 10 seances : le R/R de 4.07 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : p_stop_first 0.900, borne haute 0.928 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-2.06 %) : P(cible) 9.1 % x 15.79 % + P(rien) 0.9 % x 0.48 % ne couvrent pas P(stop) 90.0 % x 3.88 %.
+   - ⚪ atr_grid a 0.25 ATR (stop 1.799 %) — p(stop avant cible) 0.9112 [0.88 ; 0.94], R/R 4.334, perte reelle 3.741 % (gap inclus), EV -2.0775 % — **REFUSE**
+      - refuse : cible atteinte seulement 8.2 % du temps (< 15 %) meme a 10 seances : le R/R de 4.33 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : p_stop_first 0.911, borne haute 0.938 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-2.08 %) : P(cible) 8.2 % x 16.21 % + P(rien) 0.7 % x 1.13 % ne couvrent pas P(stop) 91.1 % x 3.74 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 1.75 ATR (stop 13.186 %) — p(stop avant cible) 0.462 [0.41 ; 0.51], R/R 0.832, perte reelle 18.976 % (gap inclus), EV -3.6411 % — **REFUSE**
-      - refuse : R/R 0.83 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 13.21 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-3.64 %) : P(cible) 34.0 % x 15.79 % + P(rien) 19.8 % x -1.19 % ne couvrent pas P(stop) 46.2 % x 18.98 %.
+   - ⚪ atr_grid a 1.75 ATR (stop 12.594 %) — p(stop avant cible) 0.4865 [0.43 ; 0.54], R/R 0.855, perte reelle 18.976 % (gap inclus), EV -4.1048 % — **REFUSE**
+      - refuse : R/R 0.85 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 12.62 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-4.10 %) : P(cible) 32.9 % x 16.21 % + P(rien) 18.5 % x -1.09 % ne couvrent pas P(stop) 48.6 % x 18.98 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 2.0 ATR (stop 15.07 %) — p(stop avant cible) 0.4011 [0.35 ; 0.45], R/R 0.664, perte reelle 23.778 % (gap inclus), EV -4.5024 % — **REFUSE**
-      - refuse : R/R 0.66 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 15.09 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-4.50 %) : P(cible) 34.9 % x 15.79 % + P(rien) 24.9 % x -1.94 % ne couvrent pas P(stop) 40.1 % x 23.78 %.
+   - ⚪ atr_grid a 2.0 ATR (stop 14.394 %) — p(stop avant cible) 0.4226 [0.37 ; 0.48], R/R 0.78, perte reelle 20.78 % (gap inclus), EV -3.4988 % — **REFUSE**
+      - refuse : R/R 0.78 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 14.41 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-3.50 %) : P(cible) 33.8 % x 16.21 % + P(rien) 23.9 % x -0.82 % ne couvrent pas P(stop) 42.3 % x 20.78 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 2.25 ATR (stop 16.954 %) — p(stop avant cible) 0.3234 [0.28 ; 0.37], R/R 0.664, perte reelle 23.778 % (gap inclus), EV -2.9912 % — **REFUSE**
-      - refuse : R/R 0.66 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 16.97 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-2.99 %) : P(cible) 35.5 % x 15.79 % + P(rien) 32.1 % x -2.84 % ne couvrent pas P(stop) 32.3 % x 23.78 %.
+   - ⚪ atr_grid a 2.25 ATR (stop 16.193 %) — p(stop avant cible) 0.3519 [0.30 ; 0.40], R/R 0.682, perte reelle 23.778 % (gap inclus), EV -3.4601 % — **REFUSE**
+      - refuse : R/R 0.68 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 16.21 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-3.46 %) : P(cible) 34.6 % x 16.21 % + P(rien) 30.2 % x -2.30 % ne couvrent pas P(stop) 35.2 % x 23.78 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 2.5 ATR (stop 18.837 %) — p(stop avant cible) 0.2547 [0.21 ; 0.30], R/R 0.521, perte reelle 30.323 % (gap inclus), EV -3.5517 % — **REFUSE**
-      - refuse : R/R 0.52 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 18.85 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-3.55 %) : P(cible) 35.8 % x 15.79 % + P(rien) 38.7 % x -3.84 % ne couvrent pas P(stop) 25.5 % x 30.32 %.
+   - ⚪ atr_grid a 2.5 ATR (stop 17.992 %) — p(stop avant cible) 0.2965 [0.25 ; 0.35], R/R 0.535, perte reelle 30.323 % (gap inclus), EV -4.3823 % — **REFUSE**
+      - refuse : R/R 0.53 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 18.00 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-4.38 %) : P(cible) 34.9 % x 16.21 % + P(rien) 35.5 % x -2.95 % ne couvrent pas P(stop) 29.6 % x 30.32 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 3.5 ATR (stop 26.372 %) — p(stop avant cible) 0.0906 [0.06 ; 0.12], R/R 0.521, perte reelle 30.323 % (gap inclus), EV -0.754 % — **REFUSE**
-      - refuse : R/R 0.52 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 26.38 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.75 %) : P(cible) 36.1 % x 15.79 % + P(rien) 54.8 % x -6.76 % ne couvrent pas P(stop) 9.1 % x 30.32 %.
+   - ⚪ atr_grid a 2.75 ATR (stop 19.791 %) — p(stop avant cible) 0.2299 [0.19 ; 0.28], R/R 0.535, perte reelle 30.323 % (gap inclus), EV -3.0102 % — **REFUSE**
+      - refuse : R/R 0.53 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 19.80 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-3.01 %) : P(cible) 35.0 % x 16.21 % + P(rien) 42.0 % x -4.09 % ne couvrent pas P(stop) 23.0 % x 30.32 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 4.0 ATR (stop 30.14 %) — p(stop avant cible) 0.0547 [0.03 ; 0.08], R/R 0.521, perte reelle 30.323 % (gap inclus), EV -0.4413 % — **REFUSE**
-      - refuse : R/R 0.52 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 30.14 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.44 %) : P(cible) 36.1 % x 15.79 % + P(rien) 58.4 % x -7.68 % ne couvrent pas P(stop) 5.5 % x 30.32 %.
+   - ⚪ atr_grid a 4.0 ATR (stop 28.787 %) — p(stop avant cible) 0.0705 [0.05 ; 0.10], R/R 0.535, perte reelle 30.323 % (gap inclus), EV -0.4703 % — **REFUSE**
+      - refuse : R/R 0.53 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 28.79 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.47 %) : P(cible) 35.1 % x 16.21 % + P(rien) 57.8 % x -6.97 % ne couvrent pas P(stop) 7.0 % x 30.32 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 4.5 ATR (stop 33.907 %) — p(stop avant cible) 0.0356 [0.02 ; 0.06], R/R 0.466, perte reelle 33.907 % (gap inclus), EV -0.4268 % — **REFUSE**
-      - refuse : R/R 0.47 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 33.91 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.43 %) : P(cible) 36.1 % x 15.79 % + P(rien) 60.3 % x -8.16 % ne couvrent pas P(stop) 3.6 % x 33.91 %.
+   - ⚪ atr_grid a 4.5 ATR (stop 32.386 %) — p(stop avant cible) 0.0409 [0.02 ; 0.07], R/R 0.501, perte reelle 32.386 % (gap inclus), EV -0.3509 % — **REFUSE**
+      - refuse : R/R 0.50 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 32.39 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.35 %) : P(cible) 35.1 % x 16.21 % + P(rien) 60.8 % x -7.78 % ne couvrent pas P(stop) 4.1 % x 32.39 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 5.0 ATR (stop 37.675 %) — p(stop avant cible) 0.0235 [0.01 ; 0.04], R/R 0.419, perte reelle 37.675 % (gap inclus), EV -0.478 % — **REFUSE**
-      - refuse : R/R 0.42 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 37.68 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.48 %) : P(cible) 36.1 % x 15.79 % + P(rien) 61.5 % x -8.61 % ne couvrent pas P(stop) 2.4 % x 37.67 %.
+   - ⚪ atr_grid a 5.0 ATR (stop 35.984 %) — p(stop avant cible) 0.0297 [0.02 ; 0.05], R/R 0.451, perte reelle 35.984 % (gap inclus), EV -0.3732 % — **REFUSE**
+      - refuse : R/R 0.45 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 35.98 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.37 %) : P(cible) 35.1 % x 16.21 % + P(rien) 61.9 % x -8.09 % ne couvrent pas P(stop) 3.0 % x 35.98 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 5.5 ATR (stop 41.442 %) — p(stop avant cible) 0.0162 [0.01 ; 0.03], R/R 0.381, perte reelle 41.442 % (gap inclus), EV -0.4984 % — **REFUSE**
+   - ⚪ atr_grid a 5.5 ATR (stop 39.582 %) — p(stop avant cible) 0.0188 [0.01 ; 0.04], R/R 0.41, perte reelle 39.582 % (gap inclus), EV -0.422 % — **REFUSE**
+      - refuse : R/R 0.41 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 39.58 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.42 %) : P(cible) 35.1 % x 16.21 % + P(rien) 63.0 % x -8.54 % ne couvrent pas P(stop) 1.9 % x 39.58 %.
+        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
+   - ⚪ atr_grid a 6.0 ATR (stop 43.181 %) — p(stop avant cible) 0.0128 [0.00 ; 0.03], R/R 0.376, perte reelle 43.181 % (gap inclus), EV -0.397 % — **REFUSE**
       - refuse : R/R 0.38 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 41.44 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.50 %) : P(cible) 36.1 % x 15.79 % + P(rien) 62.3 % x -8.89 % ne couvrent pas P(stop) 1.6 % x 41.44 %.
+      - refuse : CVaR 95 % 43.18 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.40 %) : P(cible) 35.1 % x 16.21 % + P(rien) 63.6 % x -8.72 % ne couvrent pas P(stop) 1.3 % x 43.18 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 6.0 ATR (stop 45.21 %) — p(stop avant cible) 0.0104 [0.00 ; 0.03], R/R 0.349, perte reelle 45.21 % (gap inclus), EV -0.4848 % — **REFUSE**
+   - ⚪ atr_grid a 6.5 ATR (stop 46.779 %) — p(stop avant cible) 0.0081 [0.00 ; 0.02], R/R 0.347, perte reelle 46.779 % (gap inclus), EV -0.4189 % — **REFUSE**
       - refuse : R/R 0.35 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 45.21 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.48 %) : P(cible) 36.1 % x 15.79 % + P(rien) 62.8 % x -9.10 % ne couvrent pas P(stop) 1.0 % x 45.21 %.
+      - refuse : CVaR 95 % 46.78 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.42 %) : P(cible) 35.1 % x 16.21 % + P(rien) 64.0 % x -8.96 % ne couvrent pas P(stop) 0.8 % x 46.78 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 6.5 ATR (stop 48.977 %) — p(stop avant cible) 0.0022 [0.00 ; 0.01], R/R 0.322, perte reelle 48.977 % (gap inclus), EV -0.4868 % — **REFUSE**
+   - ⚪ atr_grid a 7.0 ATR (stop 50.378 %) — p(stop avant cible) 0.002 [0.00 ; 0.01], R/R 0.322, perte reelle 50.378 % (gap inclus), EV -0.4115 % — **REFUSE**
       - refuse : R/R 0.32 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 48.98 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.49 %) : P(cible) 36.1 % x 15.79 % + P(rien) 63.6 % x -9.56 % ne couvrent pas P(stop) 0.2 % x 48.98 %.
+      - refuse : CVaR 95 % 50.38 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.41 %) : P(cible) 35.1 % x 16.21 % + P(rien) 64.6 % x -9.30 % ne couvrent pas P(stop) 0.2 % x 50.38 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 7.0 ATR (stop 52.745 %) — p(stop avant cible) 0.0002 [0.00 ; 0.01], R/R 0.299, perte reelle 52.745 % (gap inclus), EV -0.4846 % — **REFUSE**
+   - ⚪ atr_grid a 7.5 ATR (stop 53.976 %) — p(stop avant cible) 0.0002 [0.00 ; 0.01], R/R 0.3, perte reelle 53.976 % (gap inclus), EV -0.4115 % — **REFUSE**
       - refuse : R/R 0.30 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 52.74 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.48 %) : P(cible) 36.1 % x 15.79 % + P(rien) 63.8 % x -9.68 % ne couvrent pas P(stop) 0.0 % x 52.74 %.
+      - refuse : CVaR 95 % 53.98 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.41 %) : P(cible) 35.1 % x 16.21 % + P(rien) 64.8 % x -9.41 % ne couvrent pas P(stop) 0.0 % x 53.98 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 7.5 ATR (stop 56.512 %) — p(stop avant cible) 0.0002 [0.00 ; 0.01], R/R 0.279, perte reelle 56.512 % (gap inclus), EV -0.4854 % — **REFUSE**
+   - ⚪ atr_grid a 8.0 ATR (stop 57.574 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.282, perte reelle 57.574 % (gap inclus), EV -0.407 % — **REFUSE**
       - refuse : R/R 0.28 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 56.51 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.49 %) : P(cible) 36.1 % x 15.79 % + P(rien) 63.8 % x -9.68 % ne couvrent pas P(stop) 0.0 % x 56.51 %.
-        -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 8.0 ATR (stop 60.28 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.262, perte reelle 60.28 % (gap inclus), EV -0.4803 % — **REFUSE**
-      - refuse : R/R 0.26 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 60.28 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.48 %) : P(cible) 36.1 % x 15.79 % + P(rien) 63.9 % x -9.68 % ne couvrent pas P(stop) 0.0 % x 60.28 %.
+      - refuse : CVaR 95 % 57.57 % > budget 12.00 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.41 %) : P(cible) 35.1 % x 16.21 % + P(rien) 64.8 % x -9.42 % ne couvrent pas P(stop) 0.0 % x 57.57 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
 - ⚠ **Un ancrage marque `faible` est un support DETECTE a moins de 1 ATR du spot : mesure a 51 % de casse (pile ou face, IC clusterise [0,474 ; 0,545]) contre ~35 % au-dela. Il est GARDE comme candidat, jamais refuse en silence — mais si c est le seul disponible, la ligne n est pas ancrable et le levier redevient la TAILLE.**
 - ⚠ `anchor_quality: non mesure` ne veut PAS dire mauvais : la mesure porte sur les supports DETECTES, pas sur un multiple d ATR ni sur un bas de canal.
@@ -163,47 +162,47 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass'.
 
 ## Distances ATR x horizon — p(touche) a 1 / 5 / 20 seances
 
-- Reference : spot 9.29, ATR14 0.7 (7.535 % du cours). **Les prix ci-dessous sont ancres sur ce spot de cloture : les REANCRER sur le prix vivant avant de poser.**
+- Reference : spot 9.27, ATR14 0.6671 (7.197 % du cours). **Les prix ci-dessous sont ancres sur ce spot de cloture : les REANCRER sur le prix vivant avant de poser.**
 - **Horizon = consigne operateur.** intraday -> 1 seance ; SANS PRECISION -> swing, 5 seances ; positionnel/long -> 20.
-- **Bornes appliquees d'office par le calculateur** : aucune tranche touchee plus de **45.0 %** du temps a l'horizon retenu ; aucune sous le **bruit journalier** du titre (0.429 ATR = 3.233 % du cours, soit l'excursion adverse mediane d'une seance) ; deux tranches jamais separees par moins que ce bruit. Ce sont des DEFAUTS DU MODULE : ils cedent avant toute consigne, et le rapport le dit.
+- **Bornes appliquees d'office par le calculateur** : aucune tranche touchee plus de **45.0 %** du temps a l'horizon retenu ; aucune sous le **bruit journalier** du titre (0.429 ATR = 3.087 % du cours, soit l'excursion adverse mediane d'une seance) ; deux tranches jamais separees par moins que ce bruit. Ce sont des DEFAUTS DU MODULE : ils cedent avant toute consigne, et le rapport le dit.
 
 | distance | % du cours | prix (spot ref) | p(touche) 1s | p(touche) 2s | p(touche) 3s | p(touche) 5s | p(touche) 10s | p(touche) 20s |
 |---|---|---|---|---|---|---|---|---|
-| 0.05 ATR | 0.377 % | 9.255 | 92.63 % | 95.16 % | 96.42 % | 97.11 % | 97.9 % | 98.35 % |
-| 0.1 ATR | 0.753 % | 9.22 | 86.98 % | 91.35 % | 93.3 % | 94.68 % | 96.16 % | 97.41 % |
-| 0.15 ATR | 1.13 % | 9.185 | 80.99 % | 87.08 % | 89.72 % | 91.67 % | 93.83 % | 96.0 % |
-| 0.2 ATR | 1.507 % | 9.15 | 75.46 % | 82.81 % | 86.49 % | 89.24 % | 92.2 % | 94.94 % |
-| 0.25 ATR | 1.884 % | 9.115 | 70.16 % | 79.7 % | 83.83 % | 87.04 % | 90.57 % | 93.76 % |
-| 0.35 ATR | 2.637 % | 9.045 | 58.41 % | 72.09 % | 77.37 % | 82.87 % | 87.54 % | 91.4 % |
-| 0.5 ATR | 3.767 % | 8.94 | 42.4 % | 59.17 % | 67.21 % | 74.31 % | 83.0 % | 88.34 % |
-| 0.75 ATR | 5.651 % | 8.765 | 20.74 % | 37.49 % | 47.81 % | 59.72 % | 72.41 % | 80.68 % |
-| 1.0 ATR | 7.535 % | 8.59 | 11.41 % | 25.95 % | 35.91 % | 49.31 % | 64.49 % | 75.03 % |
-| 1.25 ATR | 9.419 % | 8.415 | 4.72 % | 16.03 % | 25.29 % | 38.66 % | 54.95 % | 68.67 % |
-| 1.5 ATR | 11.302 % | 8.24 | 2.3 % | 9.8 % | 16.28 % | 28.36 % | 45.52 % | 61.96 % |
-| 2.0 ATR | 15.07 % | 7.89 | 0.35 % | 3.23 % | 6.47 % | 14.58 % | 31.43 % | 49.71 % |
-| 2.5 ATR | 18.837 % | 7.54 | 0.12 % | 1.27 % | 2.77 % | 6.83 % | 20.61 % | 38.87 % |
-| 3.0 ATR | 22.605 % | 7.19 | 0.12 % | 0.58 % | 1.73 % | 3.7 % | 11.87 % | 28.86 % |
-| 4.0 ATR | 30.14 % | 6.49 | 0.0 % | 0.23 % | 0.35 % | 1.04 % | 4.54 % | 13.9 % |
-| 6.0 ATR | 45.21 % | 5.09 | 0.0 % | 0.0 % | 0.0 % | 0.0 % | 0.35 % | 1.65 % |
+| 0.05 ATR | 0.36 % | 9.2366 | 92.64 % | 95.16 % | 96.42 % | 97.11 % | 97.91 % | 98.35 % |
+| 0.1 ATR | 0.72 % | 9.2033 | 87.0 % | 91.36 % | 93.31 % | 94.68 % | 96.16 % | 97.41 % |
+| 0.15 ATR | 1.08 % | 9.1699 | 81.01 % | 87.1 % | 89.73 % | 91.68 % | 93.84 % | 96.0 % |
+| 0.2 ATR | 1.439 % | 9.1366 | 75.49 % | 82.83 % | 86.51 % | 89.25 % | 92.21 % | 94.94 % |
+| 0.25 ATR | 1.799 % | 9.1032 | 70.2 % | 79.72 % | 83.85 % | 87.05 % | 90.58 % | 93.76 % |
+| 0.35 ATR | 2.519 % | 9.0365 | 58.46 % | 72.12 % | 77.39 % | 82.89 % | 87.56 % | 91.29 % |
+| 0.5 ATR | 3.598 % | 8.9364 | 42.46 % | 59.1 % | 67.24 % | 74.34 % | 83.02 % | 88.24 % |
+| 0.75 ATR | 5.398 % | 8.7696 | 20.71 % | 37.44 % | 47.87 % | 59.65 % | 72.44 % | 80.59 % |
+| 1.0 ATR | 7.197 % | 8.6029 | 11.39 % | 25.92 % | 35.99 % | 49.25 % | 64.53 % | 74.94 % |
+| 1.25 ATR | 8.996 % | 8.4361 | 4.72 % | 16.01 % | 25.26 % | 38.61 % | 55.0 % | 68.59 % |
+| 1.5 ATR | 10.795 % | 8.2693 | 2.3 % | 9.79 % | 16.26 % | 28.32 % | 45.47 % | 61.88 % |
+| 2.0 ATR | 14.394 % | 7.9357 | 0.35 % | 3.23 % | 6.46 % | 14.57 % | 31.4 % | 49.65 % |
+| 2.5 ATR | 17.992 % | 7.6021 | 0.12 % | 1.27 % | 2.77 % | 6.82 % | 20.58 % | 38.82 % |
+| 3.0 ATR | 21.59 % | 7.2686 | 0.12 % | 0.58 % | 1.73 % | 3.7 % | 11.86 % | 28.82 % |
+| 4.0 ATR | 28.787 % | 6.6014 | 0.0 % | 0.23 % | 0.35 % | 1.04 % | 4.53 % | 13.88 % |
+| 6.0 ATR | 43.181 % | 5.2671 | 0.0 % | 0.0 % | 0.0 % | 0.0 % | 0.35 % | 1.65 % |
 
 **A quelle distance poser pour n'etre sorti que p % du temps** (lecture INVERSE — c'est elle qui sert a arbitrer) :
 
 | horizon | p=75 % | p=50 % | p=45 % | p=33 % | p=25 % | p=20 % | p=10 % | p=5 % |
 |---|---|---|---|---|---|---|---|---|
 | **1 s.** | 0.20 ATR | 0.43 ATR | 0.48 ATR | 0.61 ATR | 0.70 ATR | 0.77 ATR | 1.05 ATR | 1.24 ATR |
-| **2 s.** | 0.31 ATR | 0.61 ATR | 0.66 ATR | 0.85 ATR | 1.02 ATR | 1.15 ATR | 1.49 ATR | 1.86 ATR |
+| **2 s.** | 0.31 ATR | 0.60 ATR | 0.66 ATR | 0.85 ATR | 1.02 ATR | 1.15 ATR | 1.49 ATR | 1.86 ATR |
 | **3 s.** | 0.39 ATR | 0.72 ATR | 0.81 ATR | 1.07 ATR | 1.26 ATR | 1.40 ATR | 1.82 ATR | 2.20 ATR |
 | **5 s.** | 0.49 ATR | 0.98 ATR | 1.10 ATR | 1.39 ATR | 1.62 ATR | 1.80 ATR | 2.29 ATR | 2.79 ATR |
-| **10 s.** | 0.69 ATR | 1.38 ATR | 1.52 ATR | 1.94 ATR | 2.30 ATR | 2.54 ATR | 3.25 ATR | 3.94 ATR |
-| **20 s.** | 1.00 ATR | 1.99 ATR | 2.22 ATR | 2.79 ATR | 3.26 ATR | 3.59 ATR | 4.64 ATR | 5.45 ATR |
+| **10 s.** | 0.69 ATR | 1.38 ATR | 1.52 ATR | 1.94 ATR | 2.30 ATR | 2.53 ATR | 3.25 ATR | 3.94 ATR |
+| **20 s.** | 1.00 ATR | 1.99 ATR | 2.21 ATR | 2.79 ATR | 3.26 ATR | 3.59 ATR | 4.63 ATR | 5.45 ATR |
 
 **Distance optimale par horizon** (plage utile mesuree, puis meilleur point unique de cette plage) :
-- **1 seance(s)** : plage utile 0.476–0.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.5 ATR (3.767 %, prix 8.94), p(touche) 42.4 % (en stress 81.61 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 57.8 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
-- **2 seance(s)** : plage utile 0.663–0.75 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (5.651 %, prix 8.765), p(touche) 37.49 % (en stress 88.51 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ✅ optimum identifie (65.8 % des re-echantillons)
-- **3 seance(s)** : plage utile 0.809–1.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (7.535 %, prix 8.59), p(touche) 35.91 % (en stress 89.66 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 48.9 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
-- **5 seance(s)** : plage utile 1.101–1.25 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.25 ATR (9.419 %, prix 8.415), p(touche) 38.66 % (en stress 95.4 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 38.6 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
-- **10 seance(s)** : plage utile 1.518–2.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (15.07 %, prix 7.89), p(touche) 31.43 % (en stress 96.51 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 36.2 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
-- **20 seance(s)** : plage utile 2.217–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (18.837 %, prix 7.54), p(touche) 38.87 % (en stress 98.82 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 32.5 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
+- **1 seance(s)** : plage utile 0.476–0.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.5 ATR (3.598 %, prix 8.9365), p(touche) 42.46 % (en stress 81.61 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 58.2 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
+- **2 seance(s)** : plage utile 0.663–0.75 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (5.398 %, prix 8.7696), p(touche) 37.44 % (en stress 88.51 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ✅ optimum identifie (65.8 % des re-echantillons)
+- **3 seance(s)** : plage utile 0.81–1.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (7.197 %, prix 8.6028), p(touche) 35.99 % (en stress 89.66 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 49.1 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
+- **5 seance(s)** : plage utile 1.1–1.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.25 ATR (8.996 %, prix 8.4361), p(touche) 38.61 % (en stress 95.4 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 36.9 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
+- **10 seance(s)** : plage utile 1.517–2.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (14.394 %, prix 7.9357), p(touche) 31.4 % (en stress 96.51 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 39.2 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
+- **20 seance(s)** : plage utile 2.215–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (17.992 %, prix 7.6021), p(touche) 38.82 % (en stress 98.82 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 31.9 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 
 - p(touche) = part des fenetres de N seances ou le prix est venu chercher un stop pose a cette distance SOUS le prix d'entree de la fenetre. Mesure sur les barres reelles du titre, pas modelisee.
 
@@ -213,20 +212,20 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : -0.109 | EV/share : $-0.076 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 27 % | T2 21 % | T3 14 %
-- Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈214) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 78.4 | bear 8.5 | side 13.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional réel 158.0 (= 17 part(s) × prix) · cible 160.0
+- EV/risk : 0.087 | EV/share : $0.022 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 34 % | T2 34 % | T3 34 %
+- Kelly (position) : f* 0.105 | ¼-Kelly 0.026 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
+- Régime probabiliste (posterior HMM, intraday) : bull 83.9 | bear 7.1 | side 9.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈15.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −1.147% → cible +5.248% / stop −2.623%, p_fill 86%, n_eff≈34.6) : P(cible|rempli) **24%** · **EV/risk +0.061** (×p_fill ; si rempli +0.19% du capital)
-  - **swing** (entrée dip −2.535% → cible +11.928% / stop −7.731%, p_fill 74%, n_eff≈29.1) : P(cible|rempli) **32%** · **EV/risk +0.076** (×p_fill ; si rempli +0.79% du capital)
-  - **deep** (entrée dip −3.907% → cible +22.928% / stop −11.763%, p_fill 70%, n_eff≈28.4) : P(cible|rempli) **12%** · **EV/risk +0.033** (×p_fill ; si rempli +0.55% du capital)
+  - **intraday** (entrée dip −1.1% → cible +5.42% / stop −2.709%, p_fill 86%, n_eff≈34.6) : P(cible|rempli) **24%** · **EV/risk +0.057** (×p_fill ; si rempli +0.18% du capital)
+  - **swing** (entrée dip −2.412% → cible +12.04% / stop −7.376%, p_fill 76%, n_eff≈30.6) : P(cible|rempli) **33%** · **EV/risk +0.107** (×p_fill ; si rempli +1.03% du capital)
+  - **deep** (entrée dip −3.735% → cible +22.969% / stop −11.484%, p_fill 70%, n_eff≈28.4) : P(cible|rempli) **12%** · **EV/risk +0.023** (×p_fill ; si rempli +0.38% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→90% · +1.0%→80% · +2.0%→69% · +3.0%→62% · +5.0%→39% · +8.0%→11%
 - Range intraday médian 7.24% (p90 12.17%) · excursion haute méd. +3.65% / basse méd. −3.24%
 - Profil de vol intra : ouverture 4.755% vs midi 1.485% vs clôture 1.763% _(ouverture ~3.2× plus volatile → privilégier/éviter selon le setup)_
@@ -299,7 +298,7 @@ _Trop peu de séances trend-up (7) pour des stats fiables : 4.4% des séances se
 ## Timing d'entrée (observe-only)
 
 - **Verdict timing** : neutre
-- Proximité zone : 0.5/2 | R/R T1 : 0.5 | extension : normal
+- Proximité zone : 0.5/2 | R/R T1 : 2.0 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -320,19 +319,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 50.9  _(neutre)_
-- **ADX** : 14.3  _(pas de tendance nette)_
-- **MACD** : hist 0.029  _(pas de croisement recent)_
-- **BB** : %B 0.42 · largeur 14.0%
-- **ATR** : 0.7 (13.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV falling · CMF 0.057  _(accumulation)_
-- **Vol ratio** : 1.1  _(volume normal)_
-- **Choppiness** : 65.8  _(marche en range (choppy))_
-- **MA** : MA20 9.39 · MA50 9.24 · MA200 13.37  _(prix < MA20)_
-- **Dist MA** : MA20 -1.1% · MA50 +0.6% · MA200 -30.5%
+- **RSI** : 44.4  _(momentum baissier)_
+- **ADX** : 14.5  _(pas de tendance nette)_
+- **MACD** : hist 0.014  _(pas de croisement recent)_
+- **BB** : %B 0.39 · largeur 13.5%
+- **ATR** : 0.67 (4.0e pct 1a)  _(volatilite basse)_
+- **OBV/CMF** : OBV falling · CMF 0.024  _(neutre)_
+- **Vol ratio** : 0.68  _(volume normal)_
+- **Choppiness** : 64.0  _(marche en range (choppy))_
+- **MA** : MA20 9.4 · MA50 9.19 · MA200 13.29  _(prix < MA20)_
+- **Dist MA** : MA20 -1.4% · MA50 +0.9% · MA200 -30.2%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (891662 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (777590 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-08-31T22:00:09.590510+00:00  
+**Generated** : 2026-09-01T00:23:35.034922+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass  
@@ -337,7 +337,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Positioning & factor
 
 **Factor** : attribution factorielle indisponible
-**Short/Insider** : SI —% | insider — | verdict sell_bias_strong
+**Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : bullish
 
 
@@ -365,5 +365,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (792295 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (792272 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
