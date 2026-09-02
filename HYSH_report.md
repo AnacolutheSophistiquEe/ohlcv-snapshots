@@ -1,6 +1,6 @@
 # 298040
 
-**Generated** : 2026-09-01T21:54:25.897589+00:00  
+**Generated** : 2026-09-02T00:17:58.692931+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
@@ -9,7 +9,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot ₩2916000.00 (+7.7% vs entrée) · entrée ₩2706780.12 · stop ₩2541422.97 · T1 ₩2879602.26 · R/R 1.05  
-> ↳ P(T1 av. stop) 23 % _(réel 5 s)_ · EV/risk -0.092 _(réel 5 s)_ (GBM 0.144) · ¼-Kelly 0.02 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 23 % _(réel 5 s)_ · EV/risk -0.092 _(réel 5 s)_ (GBM 0.144) · ¼-Kelly 0.02 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -37,32 +37,32 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass (negative EV)'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=3.12 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (12.85 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
+- **Au stop du plan (12.85 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1217).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 12.85 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -2.449 % | p01 -4.603 % | pire -11.686 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -2.45 % | p01 -4.607 % | pire -11.686 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0859** [0.0509 ; 0.1345] _(largeur 8.4 pt, n_eff 173.1)_
    - swing : **0.432** [0.3805 ; 0.4846] _(largeur 10.4 pt, n_eff 345.6)_
-   - deep : **0.356** [0.3069 ; 0.4075] _(largeur 10.1 pt, n_eff 345.6)_
+   - deep : **0.3561** [0.307 ; 0.4076] _(largeur 10.1 pt, n_eff 345.6)_
 - ⚠ **5 s — échantillon insuffisant sur : swing (44.2 pt), deep (40.5 pt).** Ces chiffres peuvent être CITÉS, jamais servir à dimensionner ni à arbitrer entre deux plans.
 - **VaR/CVaR à 1 j (fenêtre adaptative, 250 séances)** : VaR **-6.93 %** | CVaR **-9.26 %** | vol 4.95 %/j
    - _fenêtre arrêtée : rupture de regime a 300 seances en arriere (volatilite 3.60 % contre 5.93 % aujourd'hui, rapport 0.61)_
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -11.9 % vs -12.6 % si l'on extrapolait par √5 _(rapport 0.944 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0751** (β de hausse 0.9866, asymétrie 1.0897) vs KS11 — 554 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -11.91 % vs -12.61 % si l'on extrapolait par √5 _(rapport 0.944 ; < 1 = le √5 surestime)_
+- **β de baisse : 1.0756** (β de hausse 0.9866, asymétrie 1.0902) vs KS11 — 553 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.144 | EV/share : ₩23792.270 | p_fill : —
+- EV/risk : 0.144 | EV/share : ₩23899.958 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 52 % | T2 28 % | T3 13 %
 - Kelly (position) : f* 0.08 | ¼-Kelly 0.02 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 78.2 | bear 16.4 | side 5.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 512.0
 
@@ -181,7 +181,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 9.6  _(pas de tendance nette)_
 - **MACD** : hist 25834.818  _(pas de croisement recent)_
 - **BB** : %B 0.56 · largeur 17.8%
-- **ATR** : 165357.14 (46.0e pct 1a)  _(volatilite normale)_
+- **ATR** : 165357.14 (45.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV rising · CMF 0.086  _(accumulation)_
 - **Vol ratio** : 0.64  _(volume normal)_
 - **Choppiness** : 47.2  _(transition)_
@@ -191,5 +191,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (505127 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (505285 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

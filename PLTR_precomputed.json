@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US69608A1088",
-    "generated_at": "2026-09-01T22:03:39.183842+00:00",
+    "generated_at": "2026-09-02T00:26:05.835182+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1868,7 +1868,7 @@
           "rr": 1.2,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4261,
+          "p_touch": 0.4262,
           "distance_pct": 1.8
         },
         "t2": {
@@ -1912,7 +1912,7 @@
           "rr": 0.96,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4417,
+          "p_touch": 0.4416,
           "distance_pct": 4.03
         },
         "t2": {
@@ -1965,7 +1965,7 @@
           "rr": 1.7,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5882,
+          "p_touch": 0.5881,
           "distance_pct": 11.4
         },
         "t3": {
@@ -1974,7 +1974,7 @@
           "rr": 2.55,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9321,
+          "p_touch": 0.9322,
           "distance_pct": 17.1
         }
       }
@@ -2269,7 +2269,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-09-01T22:03:09.658236+00:00",
+    "generated_at": "2026-09-02T00:25:37.007791+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7612,7 +7612,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-09-01T22:02:58.578355+00:00",
+    "generated_at": "2026-09-02T00:25:27.302170+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7838,19 +7838,33 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-09-01T22:03:26.279602+00:00",
+    "generated_at": "2026-09-02T00:25:53.636512+00:00",
     "ticker": "PLTR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 3,
+    "n_events": 4,
     "events": [
       {
         "date": "2026-09-10",
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
+        "importance": "high",
+        "sessions_to_event": 6,
+        "calendar_days": 8,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+      },
+      {
+        "date": "2026-09-11",
+        "type": "macro",
+        "label": "US CPI (headline)",
         "importance": "high",
         "sessions_to_event": 6,
         "calendar_days": 9,
@@ -7864,10 +7878,10 @@
       {
         "date": "2026-09-11",
         "type": "macro",
-        "label": "US CPI (headline)",
+        "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 7,
-        "calendar_days": 10,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7876,12 +7890,12 @@
         "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
       },
       {
-        "date": "2026-09-11",
+        "date": "2026-09-16",
         "type": "macro",
-        "label": "US Core CPI (ex food & energy)",
+        "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 7,
-        "calendar_days": 10,
+        "sessions_to_event": 10,
+        "calendar_days": 14,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8013,36 +8027,36 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-09-01T22:03:14.027951+00:00",
+    "generated_at": "2026-09-02T00:25:41.359293+00:00",
     "ticker": "PLTR",
     "spot_price": 179.92,
     "expiries_available": [
       {
         "date": "2026-09-04",
-        "days_to_exp": 3
+        "days_to_exp": 2
       },
       {
         "date": "2026-09-11",
-        "days_to_exp": 10
+        "days_to_exp": 9
       },
       {
         "date": "2026-09-18",
-        "days_to_exp": 17
+        "days_to_exp": 16
       },
       {
         "date": "2026-09-25",
-        "days_to_exp": 24
+        "days_to_exp": 23
       },
       {
         "date": "2026-10-02",
-        "days_to_exp": 31
+        "days_to_exp": 30
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.4547,
-      "iv_atm_90d": 0.4555,
+      "iv_atm_30d": 0.4627,
+      "iv_atm_90d": 0.4627,
       "rv_20d_annualized": 0.522,
-      "iv_rv_ratio": 0.871,
+      "iv_rv_ratio": 0.887,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -8053,17 +8067,17 @@
     },
     "term_structure": {
       "m1_expiry": "2026-09-04",
-      "m1_days_to_exp": 3,
-      "m1_iv_atm": 0.4757,
+      "m1_days_to_exp": 2,
+      "m1_iv_atm": 0.5416,
       "m3_expiry": "2026-10-02",
-      "m3_days_to_exp": 31,
-      "m3_iv_atm": 0.4555,
-      "ratio_m1_m3": 1.0444,
-      "label": "flat"
+      "m3_days_to_exp": 30,
+      "m3_iv_atm": 0.4627,
+      "ratio_m1_m3": 1.1705,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-09-04",
-      "days_to_exp": 3,
+      "days_to_exp": 2,
       "put_call_ratio": 0.823,
       "total_oi_m1": 263298,
       "largest_call_strike_oi": {
@@ -8076,7 +8090,7 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 5817973201.0,
+      "gex_total_usd_per_point": 5496512195.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
@@ -8091,7 +8105,7 @@
       "bearish_signals": 0,
       "notes": [
         "skew faible (0.5 pts) — peu de demande de protection",
-        "GEX positif (5818.0M$/pt) = MM long gamma stabilisateur"
+        "GEX positif (5496.5M$/pt) = MM long gamma stabilisateur"
       ]
     },
     "liquidity_stats": {
@@ -8130,7 +8144,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-09-01T22:03:25.386682+00:00",
+    "generated_at": "2026-09-02T00:25:52.796233+00:00",
     "ticker": "PLTR",
     "short_interest": {
       "status": "ok",
@@ -8144,7 +8158,7 @@
       "float_shares": 2109933407,
       "delta_shares_short_mom_pct": -12.33,
       "squeeze_potential": "low",
-      "fetched_at": "2026-09-01T22:03:15.204710+00:00"
+      "fetched_at": "2026-09-02T00:25:42.615815+00:00"
     },
     "insider_transactions_90d": {
       "status": "no_filings_found",
@@ -8258,7 +8272,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-09-01T22:02:57.264794+00:00",
+    "generated_at": "2026-09-02T00:25:26.185475+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/PLTR_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -8632,7 +8646,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-09-01T22:02:58.401187+00:00",
+    "generated_at": "2026-09-02T00:25:27.145089+00:00",
     "ticker": "PLTR",
     "source_csv": "PLTR_daily_long.csv",
     "n_sessions": 1254,
@@ -21072,7 +21086,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-01T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -21120,7 +21134,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-01T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -21165,7 +21179,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-01T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
