@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-09-02T00:23:08.826166+00:00",
+  "generated_at": "2026-09-02T22:00:26.469077+00:00",
   "prediction_id": "MSTR_B_20260902",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "MSTR",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 124.88,
+    "limit_price": 123.19,
     "quantity": 4,
     "tif": "GTD",
     "gtd": "2026-09-07T22:00:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 128.86,
+      "limit_price": 136.25,
       "quantity": 2,
       "tif": "GTC",
       "tag": "T1"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 136.95,
+      "limit_price": 140.26,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 145.05,
+      "limit_price": 144.27,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -42,7 +42,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 111.93,
+      "stop_price": 111.25,
       "quantity": 4,
       "tif": "GTC",
       "tag": "SL"
@@ -95,22 +95,22 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.0557,
+    "ev_pct_risk": -0.0796,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.4544,
-      "T2": 0.1523,
-      "T3": 0.0872
+      "T1": 0.1515,
+      "T2": 0.1148,
+      "T3": 0.0867
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 499.52,
-    "hold_tolerance_breach_price": 93.66,
+    "notional_eur": 492.76,
+    "hold_tolerance_breach_price": 92.3925,
     "hold_fallback_active": true,
     "prediction_id": "MSTR_B_20260902"
   },
