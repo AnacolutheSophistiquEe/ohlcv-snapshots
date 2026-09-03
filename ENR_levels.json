@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "ENR",
-    "generated_at": "2026-09-03T00:36:02Z",
+    "generated_at": "2026-09-03T22:05:30Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-09-04T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "ENR_precomputed.json"
   },
   "context": {
-    "last_price": 142.24,
+    "last_price": 145.4,
     "ta_score": {
       "value": 2,
       "max": 10,
@@ -18,33 +18,33 @@
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
-      "state": "sideways",
+      "state": "bull",
       "probability": 0.9,
       "expected_duration_days": 30.0
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 4,
+      "buy": 2,
       "sell": 6,
-      "neutral": 5,
+      "neutral": 7,
       "total": 15,
-      "verdict": "sell"
+      "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_<30_dist_ma20_-10_-5",
-      "win_rate": 1.0,
-      "sample_size": 2,
-      "median_bounce_pct": 12.54,
+      "setup": "rsi_<30_dist_ma20_-5_-2",
+      "win_rate": 0.0,
+      "sample_size": 0,
+      "median_bounce_pct": 0.0,
       "confidence": "very_low"
     },
-    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM sideways (0.90), vol normal, signals sell (4b/6s/5n)."
+    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bull (0.90), vol normal, signals neutral (2b/6s/7n)."
   },
   "notes": {
-    "atr_daily": 5.2843,
+    "atr_daily": 5.3529,
     "atr_pct_daily": null,
-    "beta_60d": 2.125,
+    "beta_60d": 2.0008,
     "beta_benchmark": "GDAXI",
-    "beta_corr_60d": 0.5475,
+    "beta_corr_60d": 0.5457,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -53,11 +53,11 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -24.19,
+      "current_dd_pct": -22.5,
       "ath_price": 187.62,
       "ath_date": "2026-04-24",
       "max_dd_1y_pct": -27.95,
-      "days_in_dd": 131,
+      "days_in_dd": 132,
       "median_recovery_days": null
     }
   },
@@ -68,20 +68,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 140.4299,
-        "max": 143.4285
+        "min": 139.5781,
+        "max": 141.8674
       },
       "stop": {
-        "price": 128.8841,
+        "price": 130.2376,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -9.19
+        "distance_pct": -7.45
       },
       "targets": [
         {
+          "level": 2,
+          "price": 142.9255,
+          "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
+          "rr": 0.21
+        },
+        {
           "level": 3,
-          "price": 144.9613,
-          "basis": "plafond band 95% · touche hist. 72% (sans stop)",
-          "rr": 0.23
+          "price": 146.593,
+          "basis": "plafond band 95% · touche hist. 91% (sans stop)",
+          "rr": 0.56
         }
       ],
       "preferred_target": 1,
@@ -89,7 +95,7 @@
         "session_eu_xetra_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support BB_LOWER + VPVR_VAL + FIB_382 (strength 12.0). Bounce mecanique."
+      "rationale": "Confluence support BB_LOWER + VPVR_VAL (strength 5.0). Bounce mecanique."
     },
     {
       "id": "B",
@@ -97,32 +103,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 153.4541,
-        "max": 154.0673
+        "min": 153.4098,
+        "max": 154.0228
       },
       "stop": {
-        "price": 149.336,
+        "price": 149.4934,
         "basis": "below_broken_resistance",
-        "distance_pct": -2.88
+        "distance_pct": -2.75
       },
       "targets": [
         {
           "level": 1,
-          "price": 158.4636,
+          "price": 161.3663,
           "basis": "fib_618",
-          "rr": 1.06
+          "rr": 1.81
         },
         {
           "level": 2,
-          "price": 165.4621,
+          "price": 161.3663,
           "basis": "next_confluence_resistance",
-          "rr": 2.64
+          "rr": 1.81
         },
         {
           "level": 3,
-          "price": 169.1665,
+          "price": 172.9124,
           "basis": "fib_786",
-          "rr": 3.48
+          "rr": 4.55
         }
       ],
       "preferred_target": 1,
@@ -130,7 +136,7 @@
         "session_eu_xetra_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance MA200 + FIB_50 + S/R_resistance + VPVR_POC + MA20 + MA50 (strength 42.0)."
+      "rationale": "Breakout au-dessus confluence resistance MA200 + VPVR_POC + MA20 + MA50 + FIB_50 (strength 30.0)."
     },
     {
       "id": "C",
@@ -142,28 +148,28 @@
         "max": 95.567
       },
       "stop": {
-        "price": 87.1651,
+        "price": 87.0622,
         "basis": "fallback_sr_support",
-        "distance_pct": -7.87
+        "distance_pct": -7.98
       },
       "targets": [
         {
           "level": 1,
-          "price": 137.7661,
-          "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 5.79
+          "price": 139.258,
+          "basis": "band 95% (atteignable) · touche hist. 44% (sans stop)",
+          "rr": 5.91
         },
         {
           "level": 2,
-          "price": 141.3637,
+          "price": 142.9255,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 6.27
+          "rr": 6.4
         },
         {
           "level": 3,
-          "price": 144.9613,
-          "basis": "plafond band 95% · touche hist. 72% (sans stop)",
-          "rr": 6.76
+          "price": 146.593,
+          "basis": "plafond band 95% · touche hist. 91% (sans stop)",
+          "rr": 6.88
         }
       ],
       "preferred_target": 1,
@@ -187,7 +193,7 @@
     }
   ],
   "invalidation": {
-    "price": 86.2934,
+    "price": 86.1916,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
