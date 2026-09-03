@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "NEX",
-    "generated_at": "2026-09-02T22:05:30Z",
+    "generated_at": "2026-09-03T00:36:02Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-09-03T08:00:00Z",
-    "valid_until": "2026-09-03T21:00:00Z",
+    "valid_from": "2026-09-04T08:00:00Z",
+    "valid_until": "2026-09-04T21:00:00Z",
     "source_precomputed": "NEX_precomputed.json"
   },
   "context": {
-    "last_price": 137.7,
+    "last_price": 137.6,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -25,8 +25,8 @@
     "volatility_regime": "normal",
     "signals_counter": {
       "buy": 2,
-      "sell": 4,
-      "neutral": 9,
+      "sell": 5,
+      "neutral": 8,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,19 +37,19 @@
       "median_bounce_pct": 5.57,
       "confidence": "high"
     },
-    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM bear (0.90), vol normal, signals neutral (2b/4s/9n)."
+    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM bear (0.90), vol normal, signals neutral (2b/5s/8n)."
   },
   "notes": {
     "atr_daily": 3.7143,
     "atr_pct_daily": null,
-    "beta_60d": 0.3794,
+    "beta_60d": 0.4217,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.1297,
+    "beta_corr_60d": 0.1429,
     "btc_corr_high": null,
     "candlestick": {
       "name": "shooting_star",
-      "date": "2026-08-28",
-      "confidence": 0.917
+      "date": "2026-09-02",
+      "confidence": 0.778
     },
     "divergences": [
       {
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -16.49,
+      "current_dd_pct": -16.55,
       "ath_price": 164.8832,
       "ath_date": "2026-05-14",
       "max_dd_1y_pct": -24.73,
@@ -80,28 +80,28 @@
         "max": 131.2993
       },
       "stop": {
-        "price": 127.6531,
+        "price": 127.6081,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -2.21
+        "distance_pct": -2.25
       },
       "targets": [
         {
           "level": 1,
-          "price": 134.3146,
+          "price": 134.2682,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 1.31
+          "rr": 1.27
         },
         {
           "level": 2,
-          "price": 137.2619,
+          "price": 137.2141,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 2.33
+          "rr": 2.28
         },
         {
           "level": 3,
-          "price": 140.2092,
+          "price": 140.1599,
           "basis": "plafond band 95% · touche hist. 72% (sans stop)",
-          "rr": 3.35
+          "rr": 3.28
         }
       ],
       "preferred_target": 1,
@@ -117,20 +117,20 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 144.3512,
-        "max": 144.928
+        "min": 144.3581,
+        "max": 144.935
       },
       "stop": {
         "price": 142.536,
         "basis": "below_broken_resistance",
-        "distance_pct": -1.45
+        "distance_pct": -1.46
       },
       "targets": [
         {
           "level": 1,
           "price": 151.7613,
           "basis": "fib_786",
-          "rr": 3.39
+          "rr": 3.37
         }
       ],
       "preferred_target": 1,
@@ -157,21 +157,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 134.3146,
+          "price": 134.2682,
           "basis": "band 95% (atteignable) · touche hist. 72% (sans stop)",
-          "rr": 2.23
+          "rr": 2.22
         },
         {
           "level": 2,
-          "price": 137.2619,
+          "price": 137.2141,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 2.82
+          "rr": 2.81
         },
         {
           "level": 3,
-          "price": 140.2092,
+          "price": 140.1599,
           "basis": "plafond band 95% · touche hist. 72% (sans stop)",
-          "rr": 3.42
+          "rr": 3.41
         }
       ],
       "preferred_target": 1,

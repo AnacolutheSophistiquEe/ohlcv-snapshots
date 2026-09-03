@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "207940",
-    "generated_at": "2026-09-02T22:05:30Z",
+    "generated_at": "2026-09-03T00:36:02Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-09-03T08:00:00Z",
-    "valid_until": "2026-09-03T21:00:00Z",
+    "valid_from": "2026-09-04T08:00:00Z",
+    "valid_until": "2026-09-04T21:00:00Z",
     "source_precomputed": "207940_precomputed.json"
   },
   "context": {
@@ -110,32 +110,38 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 1586585.0,
-        "max": 1592925.0
+        "min": 1559542.5471,
+        "max": 1565774.4853
       },
       "stop": {
         "price": 1541056.0,
         "basis": "below_broken_resistance",
-        "distance_pct": -3.06
+        "distance_pct": -1.38
       },
       "targets": [
         {
           "level": 1,
-          "price": 1665712.0,
-          "basis": "fib_618",
-          "rr": 1.56
+          "price": 1584801.5688,
+          "basis": "next_confluence_resistance",
+          "rr": 1.03
         },
         {
           "level": 2,
-          "price": 1780624.0,
-          "basis": "fib_786",
-          "rr": 3.92
+          "price": 1585000.0,
+          "basis": "fib_50",
+          "rr": 1.03
+        },
+        {
+          "level": 3,
+          "price": 1665712.0,
+          "basis": "fib_618",
+          "rr": 4.77
         }
       ],
       "preferred_target": 1,
       "conditions": [],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance MA20 + VPVR_VAH + S/R_resistance + MA200 + FIB_50 (strength 40.0)."
+      "rationale": "Breakout au-dessus confluence resistance MA20 + VPVR_VAH + S/R_resistance (strength 16.5)."
     },
     {
       "id": "C",
