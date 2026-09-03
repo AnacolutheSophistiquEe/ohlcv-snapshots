@@ -1,15 +1,15 @@
 # 298040
 
-**Generated** : 2026-09-02T21:54:27.438102+00:00  
+**Generated** : 2026-09-03T00:18:09.294987+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩2765000.00  
 
-> 🟡 **WAIT-FOR-DIP** — spot +4.8 % au-dessus de la zone d'entrée — attendre le repli  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)  
 > ↳ spot ₩2765000.00 (+4.8% vs entrée) · entrée ₩2638830.12 · stop ₩2471401.54 · T1 ₩2807472.55 · R/R 1.01  
-> ↳ P(T1 av. stop) 53 % _(réel 5 s)_ · EV/risk 0.047 _(réel 5 s)_ (GBM 0.178) · ¼-Kelly 0.025 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 53 % _(réel 5 s)_ · EV/risk 0.047 _(réel 5 s)_ (GBM 0.178) · ¼-Kelly 0.025 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -36,15 +36,15 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass'.
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
-- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=3.20 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (10.62 %)** : le gap seul le franchit 0.082 % des séances (1 fois sur 1218).
+- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=3.21 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
+- **Au stop du plan (10.62 %)** : le gap seul le franchit 0.082 % des séances (1 fois sur 1217).
    - exécution **1.066 pt plus bas** dans le cas TYPIQUE (médiane), 1.066 au p90, **1.066 au pire**
    - perte réelle **11.686 %** en moyenne _(tirée par la queue)_, jusqu'à **11.686 %** — au lieu des 10.62 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0009 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 1 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -2.466 % | p01 -4.657 % | pire -11.686 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -2.467 % | p01 -4.658 % | pire -11.686 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0769** [0.0441 ; 0.1237] _(largeur 8.0 pt, n_eff 173.1)_
    - swing : **0.3993** [0.3487 ; 0.4516] _(largeur 10.3 pt, n_eff 345.6)_
    - deep : **0.3479** [0.2991 ; 0.3992] _(largeur 10.0 pt, n_eff 345.6)_
@@ -53,16 +53,16 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass'.
    - _fenêtre arrêtée : rupture de regime a 300 seances en arriere (volatilite 3.65 % contre 5.92 % aujourd'hui, rapport 0.62)_
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -11.9 % vs -12.6 % si l'on extrapolait par √5 _(rapport 0.944 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0756** (β de hausse 0.9882, asymétrie 1.0885) vs KS11 — 553 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -11.91 % vs -12.61 % si l'on extrapolait par √5 _(rapport 0.944 ; < 1 = le √5 surestime)_
+- **β de baisse : 1.0756** (β de hausse 0.9884, asymétrie 1.0882) vs KS11 — 553 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.178 | EV/share : ₩29759.603 | p_fill : —
+- EV/risk : 0.178 | EV/share : ₩29741.625 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 54 % | T2 29 % | T3 13 %
 - Kelly (position) : f* 0.102 | ¼-Kelly 0.025 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 80.8 | bear 13.9 | side 5.3  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 512.0
 
@@ -171,8 +171,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -191,5 +191,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (218218 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (218687 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

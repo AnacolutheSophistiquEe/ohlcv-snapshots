@@ -1,12 +1,12 @@
 # 267260
 
-**Generated** : 2026-09-02T21:52:57.611124+00:00  
+**Generated** : 2026-09-03T00:16:53.639487+00:00  
 **Santé technique** : 3/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩711000.00  
 
 > 🟡 **WAIT-FOR-DIP** — spot +1.4 % au-dessus de la zone d'entrée — attendre le repli  
-> ↳ spot ₩711000.00 (+1.4% vs entrée) · entrée ₩701500.00 · stop ₩645380.00 · T1 ₩739394.55 · R/R 0.68  
+> ↳ spot ₩711000.00 (+1.4% vs entrée) · entrée ₩701500.00 · stop ₩645380.00 · T1 ₩739394.58 · R/R 0.68  
 > ↳ P(T1 av. stop) 10 % _(réel 5 s)_ · EV/risk 0.002 _(réel 5 s)_ (GBM -0.197) · ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
 
@@ -28,22 +28,22 @@ Plan privilegie A (intraday), composite 3/10, conviction 'Pass'.
 - Entry (zone de repli) : ₩698145.55–₩704854.45 (mid ₩701500.00)
 - Spot actuel : ₩711000.00 (+1.4% au-dessus de la zone — repli à attendre)
 - Stop : ₩645380.00 (stop swing_plan-based (-9.47%))
-- Targets : T1 ₩739394.55 · R/R 0.68 | T2 ₩745529.43 · R/R 0.78 | T3 ₩751664.30 · R/R 0.89
+- Targets : T1 ₩739394.58 · R/R 0.68 | T2 ₩745529.44 · R/R 0.78 | T3 ₩751664.30 · R/R 0.89
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩645380.00
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
-- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=4.02 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (9.47 %)** : le gap seul le franchit 0.082 % des séances (1 fois sur 1218).
+- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=4.03 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
+- **Au stop du plan (9.47 %)** : le gap seul le franchit 0.082 % des séances (1 fois sur 1217).
    - exécution **2.245 pt plus bas** dans le cas TYPIQUE (médiane), 2.245 au p90, **2.245 au pire**
    - perte réelle **11.715 %** en moyenne _(tirée par la queue)_, jusqu'à **11.715 %** — au lieu des 9.47 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0018 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 1 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -2.659 % | p01 -4.805 % | pire -11.715 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -2.659 % | p01 -4.805 % | pire -11.715 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0831** [0.0488 ; 0.1312] _(largeur 8.2 pt, n_eff 173.1)_
    - swing : **0.3488** [0.3 ; 0.4001] _(largeur 10.0 pt, n_eff 345.6)_
    - deep : **0.3243** [0.2766 ; 0.375] _(largeur 9.8 pt, n_eff 345.6)_
@@ -55,7 +55,7 @@ Plan privilegie A (intraday), composite 3/10, conviction 'Pass'.
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -10.73 % vs -11.99 % si l'on extrapolait par √5 _(rapport 0.895 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.038** (β de hausse 0.8337, asymétrie 1.2451) vs KS11 — 553 séances de repli, historique complet
+- **β de baisse : 1.038** (β de hausse 0.8333, asymétrie 1.2456) vs KS11 — 553 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -161,8 +161,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -181,5 +181,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (214343 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (214600 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

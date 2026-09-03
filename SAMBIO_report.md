@@ -1,6 +1,6 @@
 # 207940
 
-**Generated** : 2026-09-02T21:57:21.271544+00:00  
+**Generated** : 2026-09-03T00:20:36.970299+00:00  
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩1501000.00  
@@ -36,22 +36,22 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Pass (negative EV)'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟢 **Régime de gap : gap_calme** — p_breach(-3 %)=0.57 % < 1 % et 100 % des franchissements viennent des 4 pires jours/an — la queue est TOUT, l'ordinaire est sans risque de gap
-- **Au stop du plan (11.67 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
+- **Au stop du plan (11.67 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1217).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 11.67 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
-- Chocs d'ouverture : p05 -1.297 % | p01 -2.672 % | pire -5.458 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -1.298 % | p01 -2.673 % | pire -5.458 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.2489** [0.189 ; 0.3171] _(largeur 12.8 pt, n_eff 173.1)_
-   - swing : **0.3532** [0.3042 ; 0.4046] _(largeur 10.0 pt, n_eff 345.6)_
+   - swing : **0.3533** [0.3043 ; 0.4048] _(largeur 10.0 pt, n_eff 345.6)_
    - deep : **0.3505** [0.3016 ; 0.4019] _(largeur 10.0 pt, n_eff 345.6)_
 - **VaR/CVaR à 1 j (fenêtre adaptative, 250 séances)** : VaR **-4.06 %** | CVaR **-5.87 %** | vol 2.54 %/j
    - _fenêtre arrêtée : rupture de regime a 300 seances en arriere (volatilite 1.59 % contre 2.80 % aujourd'hui, rapport 0.57)_
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -5.65 % vs -6.24 % si l'on extrapolait par √5 _(rapport 0.905 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.3214** (β de hausse 0.2173, asymétrie 1.4788) vs KS11 — 553 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -5.65 % vs -6.25 % si l'on extrapolait par √5 _(rapport 0.904 ; < 1 = le √5 surestime)_
+- **β de baisse : 0.3214** (β de hausse 0.2173, asymétrie 1.4791) vs KS11 — 553 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -142,7 +142,7 @@ _Trop peu de séances trend-up (1) pour des stats fiables : 0.6% des séances se
 ## Timing d'entrée (observe-only)
 
 - **Verdict timing** : neutre
-- Proximité zone : 0.5/2 | R/R T1 : 2.0 | extension : normal
+- Proximité zone : 0.5/2 | R/R T1 : 1.0 | extension : normal
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
@@ -157,8 +157,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -177,5 +177,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (211001 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (211255 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

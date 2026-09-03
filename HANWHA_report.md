@@ -1,13 +1,13 @@
 # 012450
 
-**Generated** : 2026-09-02T21:55:55.951025+00:00  
+**Generated** : 2026-09-03T00:19:23.690805+00:00  
 **Santé technique** : 4/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩1025000.00  
 
-> 🟡 **WAIT-FOR-DIP** — spot +7.9 % au-dessus de la zone d'entrée — attendre le repli  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)  
 > ↳ spot ₩1025000.00 (+7.9% vs entrée) · entrée ₩949684.26 · stop ₩885969.98 · T1 ₩993660.96 · R/R 0.69  
-> ↳ P(T1 av. stop) 61 % _(réel 5 s)_ · EV/risk 0.037 _(réel 5 s)_ (GBM 0.012) · ¼-Kelly 0.009 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 61 % _(réel 5 s)_ · EV/risk 0.037 _(réel 5 s)_ (GBM 0.012) · ¼-Kelly 0.009 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -35,13 +35,13 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟠 **Régime de gap : intermediaire** — p_breach(-3 %)=1.48 % — entre les deux regimes ; ni queue pure ni franchissement ordinaire
-- **Au stop du plan (13.56 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
+- **Au stop du plan (13.56 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1217).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 13.56 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
-- Chocs d'ouverture : p05 -1.81 % | p01 -3.827 % | pire -13.219 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -1.81 % | p01 -3.828 % | pire -13.219 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0648** [0.0351 ; 0.1088] _(largeur 7.4 pt, n_eff 173.1)_
    - swing : **0.3756** [0.3258 ; 0.4275] _(largeur 10.2 pt, n_eff 345.6)_
    - deep : **0.3225** [0.2749 ; 0.3731] _(largeur 9.8 pt, n_eff 345.6)_
@@ -49,18 +49,18 @@ Plan privilegie B (swing), composite 4/10, conviction 'Pass'.
 - **VaR/CVaR à 1 j (fenêtre adaptative, 1020 séances)** : VaR **-5.4 %** | CVaR **-7.32 %** | vol 3.74 %/j
    - _fenêtre arrêtée : rupture de regime a 1080 seances en arriere (volatilite 2.48 % contre 4.06 % aujourd'hui, rapport 0.61)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -10.29 % vs -12.01 % si l'on extrapolait par √5 _(rapport 0.857 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.5205** (β de hausse 0.3041, asymétrie 1.7113) vs KS11 — 553 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -10.3 % vs -12.01 % si l'on extrapolait par √5 _(rapport 0.858 ; < 1 = le √5 surestime)_
+- **β de baisse : 0.5205** (β de hausse 0.3035, asymétrie 1.7148) vs KS11 — 553 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 0.308× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.012 | EV/share : ₩766.691 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 57 % | T2 31 % | T3 19 %
-- Kelly (position) : f* 0.034 | ¼-Kelly 0.009 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 26.6 | bear 68.4 | side 5.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- EV/risk : 0.012 | EV/share : ₩744.838 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 58 % | T2 31 % | T3 19 %
+- Kelly (position) : f* 0.035 | ¼-Kelly 0.009 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
+- Régime probabiliste (posterior HMM, swing) : bull 26.7 | bear 68.3 | side 5.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 160.0
 
 
@@ -157,8 +157,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -177,5 +177,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (212790 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (213282 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

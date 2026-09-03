@@ -1,15 +1,15 @@
 # 000660
 
-**Generated** : 2026-09-02T21:50:00.403925+00:00  
+**Generated** : 2026-09-03T00:14:22.675245+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite normal · ₩1613000.00  
 
-> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)  
 > ↳ spot ₩1613000.00 (+8.9% vs entrée) · entrée ₩1480836.32 · stop ₩1364669.13 · T1 ₩1580226.03 · R/R 0.86  
-> ↳ P(T1 av. stop) 45 % _(réel 5 s)_ · EV/risk -0.031 _(réel 5 s)_ (GBM 0.266) · ¼-Kelly 0.037 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 45 % _(réel 5 s)_ · EV/risk -0.031 _(réel 5 s)_ (GBM 0.264) · ¼-Kelly 0.037 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -45,17 +45,17 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass (negative EV)'.
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
-- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=6.32 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (15.4 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
+- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=6.33 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
+- **Au stop du plan (15.4 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1217).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 15.4 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -3.366 % | p01 -6.997 % | pire -10.86 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -3.367 % | p01 -7.0 % | pire -10.86 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0657** [0.0358 ; 0.1099] _(largeur 7.4 pt, n_eff 173.1)_
-   - swing : **0.2934** [0.2473 ; 0.343] _(largeur 9.6 pt, n_eff 345.6)_
+   - swing : **0.2935** [0.2474 ; 0.3431] _(largeur 9.6 pt, n_eff 345.6)_
    - deep : **0.2594** [0.2153 ; 0.3075] _(largeur 9.2 pt, n_eff 345.6)_
 - ⚠ **5 s — échantillon insuffisant sur : intraday (25.9 pt), swing (43.2 pt), deep (42.5 pt).** Ces chiffres peuvent être CITÉS, jamais servir à dimensionner ni à arbitrer entre deux plans.
 - **VaR/CVaR à 1 j (fenêtre adaptative, 250 séances)** : VaR **-8.77 %** | CVaR **-11.36 %** | vol 5.71 %/j
@@ -63,15 +63,15 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass (negative EV)'.
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -9.4 % vs -10.52 % si l'on extrapolait par √5 _(rapport 0.893 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.4107** (β de hausse 1.6107, asymétrie 0.8759) vs KS11 — 553 séances de repli, historique complet
+- **β de baisse : 1.4107** (β de hausse 1.6104, asymétrie 0.876) vs KS11 — 553 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.266 | EV/share : ₩30909.108 | p_fill : —
+- EV/risk : 0.264 | EV/share : ₩30713.305 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 59 % | T2 34 % | T3 16 %
 - Kelly (position) : f* 0.149 | ¼-Kelly 0.037 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 22.2 | bear 7.0 | side 70.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 400.0
 
@@ -179,8 +179,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -199,5 +199,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (219586 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (219946 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,15 +1,19 @@
 # SMCI
 
-**Generated** : 2026-09-02T22:02:05.863689+00:00  
+**Generated** : 2026-09-03T00:24:44.238344+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $37.00  
 
-> 🟡 **WAIT-FOR-DIP** — spot +8.4 % au-dessus de la zone d'entrée — attendre le repli  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)  
 > ↳ spot $37.00 (+8.4% vs entrée) · entrée $34.12 · stop $32.00 · T1 $36.32 · R/R 1.04  
 > ↳ P(T1 av. stop) 60 % · EV/risk 0.171 · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈214) · non recalibrée track-record (n=0)_  
+
+> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+>   - **[MEDIUM]** §12 Options — Max-pain gap affiché -4.7 % ≠ (strike 35.0 − spot 37.00)/spot = -5.4 %. Probable spot d'options périmé vs spot courant.
+
 
 ## Régime & alignement multi-TF
 
@@ -300,8 +304,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -311,8 +315,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.207  _(bearish_recent)_
 - **BB** : %B 0.57 · largeur 32.3%
 - **ATR** : 2.12 (42.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.006  _(neutre)_
-- **Vol ratio** : 0.62  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.005  _(neutre)_
+- **Vol ratio** : 0.56  _(volume atone)_
 - **Choppiness** : 57.6  _(transition)_
 - **MA** : MA20 36.19 · MA50 31.44 · MA200 31.33  _(prix > MA20)_
 - **Dist MA** : MA20 +2.2% · MA50 +17.7% · MA200 +18.1%
@@ -320,5 +324,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (488367 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (489112 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

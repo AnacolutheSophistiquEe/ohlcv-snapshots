@@ -1,13 +1,17 @@
 # PLTR
 
-**Generated** : 2026-09-02T22:03:42.969399+00:00  
+**Generated** : 2026-09-03T00:26:16.019498+00:00  
 **Santé technique** : 7/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · $169.46  
 
-> 🟡 **WAIT-FOR-DIP** — spot +2.7 % au-dessus de la zone d'entrée — attendre le repli  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)  
 > ↳ spot $169.46 (+2.7% vs entrée) · entrée $164.94 · stop $157.76 · T1 $172.09 · R/R 1.0  
 > ↳ P(T1 av. stop) 62 % _(réel 5 s)_ · EV/risk 0.2 _(réel 5 s)_ (GBM -0.024) · ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈214) · non recalibrée track-record (n=0)_  
+
+> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+>   - **[MEDIUM]** §12 Options — Max-pain gap affiché +0.0 % ≠ (strike 180.0 − spot 169.46)/spot = +6.2 %. Probable spot d'options périmé vs spot courant.
+
 
 ## Régime & alignement multi-TF
 
@@ -290,16 +294,16 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Positioning & factor
 
 **Factor** : attribution factorielle indisponible
-**Short/Insider** : SI —% | insider — | verdict sell_bias_strong
-**Options** : neutral_cautious
+**Short/Insider** : SI —% | insider — | verdict neutral
+**Options** : bullish
 
 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -309,8 +313,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -1.474  _(bearish_recent)_
 - **BB** : %B 0.28 · largeur 15.6%
 - **ATR** : 7.18 (51.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.113  _(accumulation)_
-- **Vol ratio** : 1.11  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.116  _(accumulation)_
+- **Vol ratio** : 1.01  _(volume normal)_
 - **Choppiness** : 56.4  _(transition)_
 - **MA** : MA20 175.47 · MA50 147.17 · MA200 151.31  _(prix < MA20)_
 - **Dist MA** : MA20 -3.4% · MA50 +15.1% · MA200 +12.0%
@@ -318,5 +322,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (486909 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (487624 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
