@@ -1,6 +1,6 @@
 # SMCI
 
-**Generated** : 2026-09-03T22:02:47.177741+00:00  
+**Generated** : 2026-09-04T00:26:41.526634+00:00  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.2 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Pass  
@@ -12,7 +12,8 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 > ↳ P(T1 av. stop) 46 % _(réel 5 s)_ · EV/risk 0.032 _(réel 5 s)_ (GBM 0.056) · ¼-Kelly 0.012 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.0% cohérent avec le bruit 5 s (EV-optimal ≈ −2.0%)  
 
-> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+> ⚠ **QA flags (2, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+>   - **[MEDIUM]** §12 Options — Max-pain gap affiché -5.4 % ≠ (strike 35.0 − spot 37.87)/spot = -7.6 %. Probable spot d'options périmé vs spot courant.
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 240 % hors [0,100] (R² max 0.88). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
@@ -59,7 +60,7 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
    - ⚠ le regime n'est homogene que sur 120 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -16.69 % vs -16.05 % si l'on extrapolait par √5 _(rapport 1.04 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.5394** (β de hausse 1.2424, asymétrie 1.2391) vs IWM — 602 séances de repli, historique complet
+- **β de baisse : 1.5394** (β de hausse 1.2423, asymétrie 1.2391) vs IWM — 602 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 1.968× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
@@ -297,8 +298,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-5 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -308,8 +309,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.193  _(bearish_recent)_
 - **BB** : %B 0.63 · largeur 26.9%
 - **ATR** : 2.17 (44.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF 0.052  _(accumulation)_
-- **Vol ratio** : 0.64  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.051  _(accumulation)_
+- **Vol ratio** : 0.6  _(volume atone)_
 - **Choppiness** : 65.3  _(marche en range (choppy))_
 - **MA** : MA20 36.61 · MA50 31.55 · MA200 31.34  _(prix > MA20)_
 - **Dist MA** : MA20 +3.4% · MA50 +20.0% · MA200 +20.8%
@@ -317,5 +318,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (750702 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (750974 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
