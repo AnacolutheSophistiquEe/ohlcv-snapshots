@@ -10,8 +10,8 @@
     "n_neutral": 0,
     "n_with_plan_role": 0,
     "plans_detected": [],
-    "generated_at": "2026-09-04T21:41:36.103026+00:00",
-    "source_precomputed_at": "2026-09-04T21:40:43.951368+00:00",
+    "generated_at": "2026-09-07T00:09:57.138346+00:00",
+    "source_precomputed_at": "2026-09-07T00:08:52.470700+00:00",
     "calibration_lookup": "v1.0_strict_2closes_0.5atr",
     "calibration_method": "rolling_daily_long_strict_break",
     "confluence_band_atr": 0.5,
@@ -716,7 +716,7 @@
       "source": "anchored_vwap.anchors[2026-09-02]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 2,
+      "age_days": 5,
       "raw_meta": {
         "anchor_date": "2026-09-02",
         "anchor_event": "swing_low",
@@ -736,12 +736,12 @@
         "CAM_S1",
         "CAM_S2"
       ],
-      "robustness_score": 100.0,
+      "robustness_score": 99.9,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 25,
-        "age_decay": -0.0
+        "age_decay": -0.1
       },
       "probabilities": {
         "available": true,
@@ -1745,7 +1745,7 @@
       "source": "anchored_vwap.anchors[2026-07-30]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 36,
+      "age_days": 39,
       "raw_meta": {
         "anchor_date": "2026-07-30",
         "anchor_event": "swing_low",
@@ -1765,12 +1765,12 @@
         "MA20",
         "MA50"
       ],
-      "robustness_score": 99.4,
+      "robustness_score": 99.3,
       "robustness_components": {
         "base_from_source": 75.0,
         "touches_boost": 0,
         "confluence_boost": 25,
-        "age_decay": -0.6
+        "age_decay": -0.7
       },
       "probabilities": {
         "available": true,
@@ -1816,14 +1816,14 @@
       }
     },
     {
-      "price": 151.7466,
+      "price": 151.7465,
       "type": "anchored_vwap",
       "subtype": "AVWAP_swing_high",
       "side": "resistance",
       "source": "anchored_vwap.anchors[2026-08-12]",
       "source_weight": 0.75,
       "touches": null,
-      "age_days": 23,
+      "age_days": 26,
       "raw_meta": {
         "anchor_date": "2026-08-12",
         "anchor_event": "swing_high",

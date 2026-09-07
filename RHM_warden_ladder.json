@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-09-04T21:35:56.411070+00:00",
+  "generated_at": "2026-09-07T00:02:50.350695+00:00",
   "ticker": "RHM",
   "spot": 1034.0,
   "atr_14": 36.2143,
@@ -15,9 +15,9 @@
   "target_note": "la cible sert a mesurer le R/R vs SPOT. Elle est prise sur une RESISTANCE reelle quand il en existe une au-dessus du spot — jamais sur la cible d'un plan d'entree sur repli, qui peut se situer SOUS le prix courant et rendrait tout R/R absurde.",
   "anchor_evidence": {
     "source": "registre point-in-time",
-    "measured_at": "2026-09-04T00:39:14.390876+00:00",
+    "measured_at": "2026-09-04T21:46:44.415853+00:00",
     "stale": false,
-    "generated_at": "2026-09-04T00:39:14.390876+00:00",
+    "generated_at": "2026-09-04T21:46:44.415853+00:00",
     "buckets": [
       {
         "bucket": "<1",
@@ -25,12 +25,12 @@
           0.0,
           1.0
         ],
-        "n": 1211,
+        "n": 1207,
         "n_tickers": 60,
-        "p_break": 0.4451,
+        "p_break": 0.4441,
         "ci95": [
-          0.4111,
-          0.4789
+          0.4112,
+          0.477
         ],
         "coinflip": false,
         "usable": true
@@ -41,12 +41,12 @@
           1.0,
           3.0
         ],
-        "n": 1186,
+        "n": 1177,
         "n_tickers": 60,
-        "p_break": 0.3524,
+        "p_break": 0.3585,
         "ci95": [
-          0.3225,
-          0.3831
+          0.3288,
+          0.3892
         ],
         "coinflip": false,
         "usable": true
@@ -57,28 +57,12 @@
           3.0,
           6.0
         ],
-        "n": 335,
-        "n_tickers": 59,
-        "p_break": 0.3045,
+        "n": 314,
+        "n_tickers": 58,
+        "p_break": 0.3153,
         "ci95": [
-          0.2515,
-          0.3571
-        ],
-        "coinflip": false,
-        "usable": true
-      },
-      {
-        "bucket": ">=6",
-        "dist_atr_range": [
-          6.0,
-          null
-        ],
-        "n": 40,
-        "n_tickers": 23,
-        "p_break": 0.4,
-        "ci95": [
-          0.2683,
-          0.55
+          0.2603,
+          0.3704
         ],
         "coinflip": false,
         "usable": true
@@ -94,7 +78,7 @@
     "cvar95_budget_stale": true,
     "cvar95_budget_measured_at": "2026-09-04T00:38:43.541141+00:00",
     "cvar95_budget_default_witness": 12.0,
-    "anchor_buffer_atr": 0.586,
+    "anchor_buffer_atr": 0.618,
     "anchor_buffer_source": {
       "source": "registre point-in-time, quantile 90 % par classe d'ATR",
       "stale": false,
@@ -102,15 +86,15 @@
       "class": "atr_faible",
       "atr_pct_range": [
         0.0,
-        4.001
+        4.033
       ],
-      "n": 559,
+      "n": 549,
       "ci95": [
-        0.475,
-        0.737
+        0.494,
+        0.731
       ],
-      "survival_at_0_30": 0.7889,
-      "measured_at": "2026-09-04T00:39:14.390876+00:00"
+      "survival_at_0_30": 0.7978,
+      "measured_at": "2026-09-04T21:46:44.415853+00:00"
     },
     "target_buffer_atr": 0.3,
     "anchor_buffer_default_witness": 0.3,
@@ -236,7 +220,7 @@
     },
     {
       "anchor_price": 928.8,
-      "stop_price": 907.5784,
+      "stop_price": 906.4196,
       "origin": "support",
       "strength": "medium",
       "touches": 2,
@@ -248,23 +232,23 @@
       "anchor_quality_basis": "level_distance_atr",
       "anchor_measure": {
         "bucket": "1-3",
-        "p_break": 0.3524,
+        "p_break": 0.3585,
         "ci95": [
-          0.3225,
-          0.3831
+          0.3288,
+          0.3892
         ],
-        "n": 1186,
+        "n": 1177,
         "source": "registre point-in-time",
-        "measured_at": "2026-09-04T00:39:14.390876+00:00"
+        "measured_at": "2026-09-04T21:46:44.415853+00:00"
       },
       "anchor_warning": null,
-      "distance_pct": 12.226,
-      "p_stop_first": 0.2001,
+      "distance_pct": 12.339,
+      "p_stop_first": 0.1999,
       "p_target_first": 0.0008,
-      "p_no_touch": 0.799,
+      "p_no_touch": 0.7993,
       "p_stop_ci95": [
-        0.1605,
-        0.2447
+        0.1604,
+        0.2444
       ],
       "p_stop_ci_width_pt": 8.4,
       "prob_source": "calcul DIRECT sur 1265 seances daily, horizon deep (10 j)",
@@ -273,23 +257,23 @@
       "n_windows": 1265,
       "n_eff": 345.8,
       "grid_point": null,
-      "gap_overshoot_pt": 10.203,
+      "gap_overshoot_pt": 10.09,
       "gap_overshoot_note": "surcout moyen mesure a cette distance",
       "loss_if_stop_pct": 22.429,
       "gain_if_tp_pct": 48.449,
       "rr_vs_spot": 2.16,
-      "cvar95_pct": 12.234,
-      "var95_pct": 12.226,
+      "cvar95_pct": 12.347,
+      "var95_pct": 12.339,
       "cvar95_budget_pct": 12.0,
-      "cost": 2.52313,
-      "ev_pct": -2.5231,
+      "cost": 2.52,
+      "ev_pct": -2.52,
       "ev_terms": {
         "target": 0.0388,
-        "stop": -4.488,
-        "no_touch": 1.9261,
-        "pnl_no_touch_pct": 2.4107
+        "stop": -4.4836,
+        "no_touch": 1.9248,
+        "pnl_no_touch_pct": 2.4081
       },
-      "p_stop_upper": 0.2447,
+      "p_stop_upper": 0.2444,
       "flags": [
         {
           "flag": "LIGNE_EV_NEGATIVE",
@@ -301,17 +285,17 @@
       "rejected_because": [
         "cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.16 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
         "R/R 2.16 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 12.23 % > budget 12.00 %"
+        "CVaR 95 % 12.35 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "cvar95",
-          "value": 12.234,
+          "value": 12.3469,
           "limit": 12.0,
-          "excess_ratio": 0.0195
+          "excess_ratio": 0.0289
         }
       ],
-      "violation_severity": 0.0195
+      "violation_severity": 0.0289
     },
     {
       "anchor_price": 1024.9464,
@@ -1562,7 +1546,7 @@
         "n_feasible": 0,
         "p_target_max": 0.0008,
         "rr_max": 22.389,
-        "min_severity": 0.019,
+        "min_severity": 0.029,
         "below_doctrine_floor": false,
         "why": "resistance a 15 touche(s), force strong (prix 1545.8284, visee 1534.9641 apres tampon)"
       },
@@ -1573,7 +1557,7 @@
         "n_feasible": 0,
         "p_target_max": 0.8074,
         "rr_max": 0.872,
-        "min_severity": 0.019,
+        "min_severity": 0.029,
         "below_doctrine_floor": true,
         "why": "cible t3 du plan (plafond band 95% · touche hist. 72% (sans stop))"
       },
@@ -1584,7 +1568,7 @@
         "n_feasible": 0,
         "p_target_max": 0.1674,
         "rr_max": 6.002,
-        "min_severity": 0.019,
+        "min_severity": 0.021,
         "below_doctrine_floor": true,
         "why": "resistance a 10 touche(s), force strong (prix 1179.1600, visee 1168.2957 apres tampon)"
       },
@@ -1595,7 +1579,7 @@
         "n_feasible": 0,
         "p_target_max": 0.0207,
         "rr_max": 11.773,
-        "min_severity": 0.019,
+        "min_severity": 0.029,
         "below_doctrine_floor": true,
         "why": "resistance a 3 touche(s), force medium (prix 1308.3034, visee 1297.4391 apres tampon)"
       }
@@ -2395,7 +2379,7 @@
           2.65,
           2.8912,
           3.0558,
-          3.2007,
+          3.2006,
           3.596,
           3.9581,
           4.2083,
@@ -2715,7 +2699,7 @@
           1.3066,
           1.4893,
           1.6451,
-          1.8227,
+          1.8226,
           2.0399,
           2.1334,
           2.35,
@@ -2858,7 +2842,7 @@
           7.1828,
           7.7685,
           8.1891,
-          8.9147,
+          8.9148,
           9.3072,
           10.5901,
           11.4845,
@@ -3020,7 +3004,7 @@
           -3.2103,
           -3.0283,
           -2.8265,
-          -2.6757,
+          -2.6758,
           -2.5692,
           -2.3759,
           -2.2328,
@@ -3043,7 +3027,7 @@
           0.4062,
           0.519,
           0.6914,
-          0.9184,
+          0.9183,
           1.0121,
           1.0776,
           1.1583,
@@ -6359,7 +6343,7 @@
             4.5899,
             4.8701,
             5.1524,
-            5.4962,
+            5.4961,
             6.1881,
             6.6889,
             7.9555,
@@ -6421,7 +6405,7 @@
             -0.3487,
             -0.2684,
             -0.2272,
-            -0.1476,
+            -0.1477,
             -0.1104,
             -0.0363,
             0.042,
@@ -6455,7 +6439,7 @@
             1.9487,
             2.0577,
             2.2411,
-            2.3295,
+            2.3294,
             2.4663,
             2.552,
             2.6091,
@@ -6472,7 +6456,7 @@
             4.5899,
             4.8701,
             5.1524,
-            5.4962,
+            5.4961,
             6.1881,
             6.6889,
             7.9555,
@@ -6585,7 +6569,7 @@
             4.5899,
             4.8701,
             5.1524,
-            5.4962,
+            5.4961,
             6.1881,
             6.6889,
             7.9555,
@@ -6631,7 +6615,7 @@
             -1.5598,
             -1.4591,
             -1.394,
-            -1.3243,
+            -1.3244,
             -1.2216,
             -1.1114,
             -1.0032,
@@ -6698,7 +6682,7 @@
             4.5899,
             4.8701,
             5.1524,
-            5.4962,
+            5.4961,
             6.1881,
             6.6889,
             7.9555,
@@ -6811,7 +6795,7 @@
             4.5899,
             4.8701,
             5.1524,
-            5.4962,
+            5.4961,
             6.1881,
             6.6889,
             7.9555,
@@ -6924,7 +6908,7 @@
             4.5899,
             4.8701,
             5.1524,
-            5.4962,
+            5.4961,
             6.1881,
             6.6889,
             7.9555,
@@ -7037,7 +7021,7 @@
             4.5899,
             4.8701,
             5.1524,
-            5.4962,
+            5.4961,
             6.1881,
             6.6889,
             7.9555,
@@ -7150,7 +7134,7 @@
             4.5899,
             4.8701,
             5.1524,
-            5.4962,
+            5.4961,
             6.1881,
             6.6889,
             7.9555,
@@ -7963,7 +7947,7 @@
             -0.8497,
             -0.6844,
             -0.241,
-            0.0606,
+            0.0607,
             0.3843,
             0.5548,
             0.7191,
@@ -8195,7 +8179,7 @@
             1.8602,
             1.977,
             2.0707,
-            2.2001,
+            2.2,
             2.2913,
             2.4768,
             2.5388,
@@ -8318,7 +8302,7 @@
             3.1027,
             3.2318,
             3.3603,
-            3.5299,
+            3.5298,
             3.7516,
             4.0211,
             4.2017,
@@ -8593,7 +8577,7 @@
             -4.0754,
             -3.8857,
             -3.7539,
-            -3.6306,
+            -3.6307,
             -3.4169,
             -3.2263,
             -3.0498,
@@ -8819,7 +8803,7 @@
             -3.85,
             -3.7579,
             -3.6385,
-            -3.465,
+            -3.4649,
             -3.3514,
             -3.0872,
             -2.8663,
@@ -9843,7 +9827,7 @@
             2.65,
             2.8912,
             3.0558,
-            3.2007,
+            3.2006,
             3.596,
             3.9581,
             4.2083,
@@ -10163,7 +10147,7 @@
             1.3066,
             1.4893,
             1.6451,
-            1.8227,
+            1.8226,
             2.0399,
             2.1334,
             2.35,
@@ -10306,7 +10290,7 @@
             7.1828,
             7.7685,
             8.1891,
-            8.9147,
+            8.9148,
             9.3072,
             10.5901,
             11.4845,
@@ -10468,7 +10452,7 @@
             -3.2103,
             -3.0283,
             -2.8265,
-            -2.6757,
+            -2.6758,
             -2.5692,
             -2.3759,
             -2.2328,
@@ -10491,7 +10475,7 @@
             0.4062,
             0.519,
             0.6914,
-            0.9184,
+            0.9183,
             1.0121,
             1.0776,
             1.1583,
@@ -12047,7 +12031,7 @@
             6.8879,
             7.1337,
             7.3891,
-            7.6467,
+            7.6466,
             7.9587,
             8.2581,
             8.6515,
@@ -12583,7 +12567,7 @@
             0.9098,
             1.0263,
             1.1145,
-            1.2494,
+            1.2495,
             1.4167,
             1.6653,
             1.9621,
@@ -12732,7 +12716,7 @@
             10.572,
             11.241,
             11.6492,
-            12.3112,
+            12.3111,
             12.8452,
             13.5126,
             14.1865,
@@ -13972,7 +13956,7 @@
             -4.1826,
             -4.1393,
             -4.0919,
-            -4.046,
+            -4.0459,
             -3.9983,
             -3.9448,
             -3.8859,
@@ -14165,7 +14149,7 @@
             -11.4213,
             -10.9052,
             -10.5147,
-            -10.2473,
+            -10.2472,
             -10.0658,
             -9.7832,
             -9.4393,
@@ -14236,7 +14220,7 @@
             10.6261,
             11.126,
             11.6074,
-            12.7719,
+            12.772,
             13.2636,
             13.857,
             14.7989,
@@ -14347,7 +14331,7 @@
             10.1461,
             10.6521,
             11.1725,
-            11.6114,
+            11.6115,
             12.7432,
             13.2552,
             13.8399,
@@ -14415,7 +14399,7 @@
             -4.3677,
             -4.0099,
             -3.4978,
-            -2.9978,
+            -2.9979,
             -2.7683,
             -2.4967,
             -2.2706,
@@ -14442,7 +14426,7 @@
             4.0103,
             4.3038,
             4.6352,
-            4.9086,
+            4.9087,
             5.2746,
             5.7285,
             6.0851,
@@ -16241,9 +16225,9 @@
       "note": "avec le surcout de gap inclus, ce stop coute 15.14 % ; il faut donc viser au moins 45.42 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 907.5784,
+      "stop_price": 906.4196,
       "stop_origin": "support",
-      "stop_distance_pct": 12.226,
+      "stop_distance_pct": 12.339,
       "min_target_pct_for_rr": 67.287,
       "note": "avec le surcout de gap inclus, ce stop coute 22.43 % ; il faut donc viser au moins 67.29 % pour tenir le plancher de R/R 3.0"
     },
