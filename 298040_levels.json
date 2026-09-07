@@ -2,17 +2,17 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "298040",
-    "generated_at": "2026-09-04T22:05:08Z",
+    "generated_at": "2026-09-07T22:05:30Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-09-07T08:00:00Z",
-    "valid_until": "2026-09-07T21:00:00Z",
+    "valid_from": "2026-09-08T08:00:00Z",
+    "valid_until": "2026-09-08T21:00:00Z",
     "source_precomputed": "298040_precomputed.json"
   },
   "context": {
     "last_price": 2732000.0,
     "ta_score": {
-      "value": 4,
+      "value": 3,
       "max": 10,
       "label": "bearish"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 12.26,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM bull (0.89), vol normal, signals neutral (1b/5s/9n)."
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM bull (0.89), vol normal, signals neutral (1b/5s/9n)."
   },
   "notes": {
     "atr_daily": 164000.0,
     "atr_pct_daily": null,
-    "beta_60d": 0.9928,
+    "beta_60d": 1.0028,
     "beta_benchmark": "KS11",
-    "beta_corr_60d": 0.6934,
+    "beta_corr_60d": 0.6963,
     "btc_corr_high": null,
     "candlestick": {
       "name": "shooting_star",
@@ -195,8 +195,8 @@
       "rationale": "Fallback (aucune confluence qualifiante) — niveau reel sr_support. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
     }
   ],
-  "bot_actionable": true,
-  "bot_actionable_reason": "ok",
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=3<4",
   "global_conditions": [],
   "invalidation": {
     "price": 1838955.657,

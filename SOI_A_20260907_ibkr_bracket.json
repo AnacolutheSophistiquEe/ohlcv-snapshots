@@ -1,31 +1,39 @@
 {
   "available": true,
-  "generated_at": "2026-09-07T21:59:15.083472+00:00",
-  "prediction_id": "PRY_A_20260907",
+  "generated_at": "2026-09-07T21:53:55.604612+00:00",
+  "prediction_id": "SOI_A_20260907",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "PRY",
-  "exchange": "BVME",
+  "symbol": "SOI",
+  "exchange": "SBF",
   "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 124.9,
-    "quantity": 3,
+    "limit_price": 142.65,
+    "quantity": 4,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 126.7,
+      "limit_price": 149.1,
       "quantity": 2,
+      "tif": "GTC",
+      "tag": "T1"
+    },
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 159.05,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 130.3,
+      "limit_price": 168.95,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -33,13 +41,13 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 115.5,
-      "quantity": 3,
+      "stop_price": 131.75,
+      "quantity": 4,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "PRY_A_intraday_20260907",
+  "oca_group": "SOI_A_intraday_20260907",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -61,13 +69,18 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.6,
-      0.4
+      0.5,
+      0.3,
+      0.2
     ],
     "qty_split": [
       {
-        "tag": "T2",
+        "tag": "T1",
         "qty": 2
+      },
+      {
+        "tag": "T2",
+        "qty": 1
       },
       {
         "tag": "T3",
@@ -79,33 +92,33 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 7.0,
+    "composite_score": 9.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0715,
+    "ev_pct_risk": 0.178,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.5156,
-      "T2": 0.291,
-      "T3": 0.1117
+      "T1": 0.4637,
+      "T2": 0.3,
+      "T3": 0.3
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 376.5,
-    "hold_tolerance_breach_price": 94.125,
+    "notional_eur": 573.4,
+    "hold_tolerance_breach_price": 107.5125,
     "hold_fallback_active": true,
-    "prediction_id": "PRY_A_20260907"
+    "prediction_id": "SOI_A_20260907"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.1,
+    "tick_size_used": 0.05,
     "qty_total_positive": true
   }
 }
