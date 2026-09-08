@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-09-07T22:05:30Z",
+    "generated_at": "2026-09-08T22:05:30Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-09-08T08:00:00Z",
-    "valid_until": "2026-09-08T21:00:00Z",
+    "valid_from": "2026-09-09T08:00:00Z",
+    "valid_until": "2026-09-09T21:00:00Z",
     "source_precomputed": "005930_precomputed.json"
   },
   "context": {
@@ -115,8 +115,8 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 305169.2133,
-        "max": 306388.6707
+        "min": 305169.2117,
+        "max": 306388.6691
       },
       "stop": {
         "price": 296384.4401,
@@ -126,19 +126,19 @@
       "targets": [
         {
           "level": 1,
-          "price": 315173.444,
+          "price": 315173.4408,
           "basis": "r_multiple_1",
           "rr": 1.0
         },
         {
           "level": 2,
-          "price": 324567.946,
+          "price": 324567.9412,
           "basis": "r_multiple_2",
           "rr": 2.0
         },
         {
           "level": 3,
-          "price": 333962.448,
+          "price": 333962.4416,
           "basis": "r_multiple_3",
           "rr": 3.0
         }
@@ -154,11 +154,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 231040.8984,
+        "min": 231040.8945,
         "max": 234856.097
       },
       "stop": {
-        "price": 221799.2625,
+        "price": 221799.2587,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -4.79
       },
@@ -192,7 +192,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 219581.2699,
+    "price": 219581.2661,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

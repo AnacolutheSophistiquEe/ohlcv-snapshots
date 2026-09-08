@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-09-08T00:13:21.584347+00:00",
+  "generated_at": "2026-09-08T21:52:26.119897+00:00",
   "prediction_id": "NEX_A_20260908",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "NEX",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 137.9,
+    "limit_price": 140.6,
     "quantity": 2,
     "tif": "DAY"
   },
@@ -17,23 +17,15 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 138.0,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T2"
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 141.0,
-      "quantity": 1,
+      "limit_price": 142.9,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 128.3,
+      "stop_price": 129.4,
       "quantity": 2,
       "tif": "GTC",
       "tag": "SL"
@@ -61,17 +53,12 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.6,
-      0.4
+      1.0
     ],
     "qty_split": [
       {
-        "tag": "T2",
-        "qty": 1
-      },
-      {
         "tag": "T3",
-        "qty": 1
+        "qty": 2
       }
     ]
   },
@@ -79,24 +66,24 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 5.0,
+    "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.074,
+    "ev_pct_risk": -0.0746,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.512,
-      "T2": 0.2246,
-      "T3": 0.0997
+      "T1": 0.4896,
+      "T2": 0.2039,
+      "T3": 0.0841
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 277.2,
-    "hold_tolerance_breach_price": 103.95,
+    "notional_eur": 282.6,
+    "hold_tolerance_breach_price": 105.975,
     "hold_fallback_active": true,
     "prediction_id": "NEX_A_20260908"
   },
