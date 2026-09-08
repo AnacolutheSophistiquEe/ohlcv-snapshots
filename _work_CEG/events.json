@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-09-07T00:45:40.171965+00:00",
+  "generated_at": "2026-09-08T00:45:29.690943+00:00",
   "ticker": "CEG",
   "horizons_days": {
     "intraday": 2,
@@ -13,6 +13,22 @@
       "date": "2026-09-10",
       "type": "macro",
       "label": "ECB Monetary Policy Decision",
+      "importance": "high",
+      "sessions_to_event": 1,
+      "calendar_days": 2,
+      "in_plan_horizon": [
+        "intraday",
+        "swing",
+        "deep"
+      ],
+      "impact": "rates_sensitive",
+      "ticker_specific": false,
+      "recommendation": null
+    },
+    {
+      "date": "2026-09-11",
+      "type": "macro",
+      "label": "US CPI (headline)",
       "importance": "high",
       "sessions_to_event": 2,
       "calendar_days": 3,
@@ -27,25 +43,10 @@
     {
       "date": "2026-09-11",
       "type": "macro",
-      "label": "US CPI (headline)",
-      "importance": "high",
-      "sessions_to_event": 3,
-      "calendar_days": 4,
-      "in_plan_horizon": [
-        "swing",
-        "deep"
-      ],
-      "impact": "rates_sensitive",
-      "ticker_specific": false,
-      "recommendation": null
-    },
-    {
-      "date": "2026-09-11",
-      "type": "macro",
       "label": "US Core CPI (ex food & energy)",
       "importance": "high",
-      "sessions_to_event": 3,
-      "calendar_days": 4,
+      "sessions_to_event": 2,
+      "calendar_days": 3,
       "in_plan_horizon": [
         "swing",
         "deep"
@@ -60,7 +61,7 @@
       "label": "US FOMC Rate Decision",
       "importance": "high",
       "sessions_to_event": 6,
-      "calendar_days": 9,
+      "calendar_days": 8,
       "in_plan_horizon": [
         "deep"
       ],

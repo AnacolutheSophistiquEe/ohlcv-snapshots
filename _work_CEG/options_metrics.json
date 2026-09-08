@@ -1,35 +1,35 @@
 {
   "available": true,
-  "generated_at": "2026-09-07T00:45:34.397376+00:00",
+  "generated_at": "2026-09-08T00:45:23.407436+00:00",
   "ticker": "CEG",
   "spot_price": 298.96,
   "expiries_available": [
     {
       "date": "2026-09-11",
-      "days_to_exp": 4
+      "days_to_exp": 3
     },
     {
       "date": "2026-09-18",
-      "days_to_exp": 11
+      "days_to_exp": 10
     },
     {
       "date": "2026-09-25",
-      "days_to_exp": 18
+      "days_to_exp": 17
     },
     {
       "date": "2026-10-02",
-      "days_to_exp": 25
+      "days_to_exp": 24
     },
     {
       "date": "2026-10-09",
-      "days_to_exp": 32
+      "days_to_exp": 31
     }
   ],
   "iv_metrics": {
-    "iv_atm_30d": 0.4984,
-    "iv_atm_90d": 0.4984,
+    "iv_atm_30d": 0.5205,
+    "iv_atm_90d": 0.5205,
     "rv_20d_annualized": 0.3287,
-    "iv_rv_ratio": 1.516,
+    "iv_rv_ratio": 1.583,
     "iv_rank_1y": null,
     "iv_percentile_1y": null,
     "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -40,17 +40,17 @@
   },
   "term_structure": {
     "m1_expiry": "2026-09-11",
-    "m1_days_to_exp": 4,
-    "m1_iv_atm": 0.5155,
+    "m1_days_to_exp": 3,
+    "m1_iv_atm": 0.5203,
     "m3_expiry": "2026-10-09",
-    "m3_days_to_exp": 32,
-    "m3_iv_atm": 0.4746,
-    "ratio_m1_m3": 1.0862,
+    "m3_days_to_exp": 31,
+    "m3_iv_atm": 0.482,
+    "ratio_m1_m3": 1.0794,
     "label": "backwardation"
   },
   "open_interest_m1": {
     "expiry": "2026-09-11",
-    "days_to_exp": 4,
+    "days_to_exp": 3,
     "put_call_ratio": 0.941,
     "total_oi_m1": 3381,
     "largest_call_strike_oi": {
@@ -63,7 +63,7 @@
     }
   },
   "gex": {
-    "gex_total_usd_per_point": 985878755.0,
+    "gex_total_usd_per_point": 1037028337.0,
     "gex_label": "positive_stabilizing",
     "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
   },
@@ -77,7 +77,7 @@
     "bullish_signals": 1,
     "bearish_signals": 0,
     "notes": [
-      "GEX positif (985.9M$/pt) = MM long gamma stabilisateur",
+      "GEX positif (1037.0M$/pt) = MM long gamma stabilisateur",
       "max pain 280.00 vs spot 298.96 (-6.3%)"
     ]
   },
