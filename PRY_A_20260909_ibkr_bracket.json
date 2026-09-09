@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-09-09T00:19:28.351182+00:00",
+  "generated_at": "2026-09-09T21:59:04.718260+00:00",
   "prediction_id": "PRY_A_20260909",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "PRY",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 128.1,
+    "limit_price": 126.3,
     "quantity": 3,
     "tif": "DAY"
   },
@@ -17,7 +17,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 128.4,
+      "limit_price": 128.0,
       "quantity": 2,
       "tif": "GTC",
       "tag": "T2"
@@ -25,7 +25,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 132.1,
+      "limit_price": 131.9,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -33,7 +33,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 116.9,
+      "stop_price": 116.0,
       "quantity": 3,
       "tif": "GTC",
       "tag": "SL"
@@ -79,24 +79,24 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 7.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0724,
+    "ev_pct_risk": -0.0749,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.505,
-      "T2": 0.2844,
-      "T3": 0.1037
+      "T1": 0.4753,
+      "T2": 0.2658,
+      "T3": 0.0815
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 386.1,
-    "hold_tolerance_breach_price": 96.525,
+    "notional_eur": 380.85,
+    "hold_tolerance_breach_price": 95.2125,
     "hold_fallback_active": true,
     "prediction_id": "PRY_A_20260909"
   },
