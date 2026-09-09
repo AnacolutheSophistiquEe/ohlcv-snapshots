@@ -1,35 +1,35 @@
 {
   "available": true,
-  "generated_at": "2026-09-08T00:45:23.407436+00:00",
+  "generated_at": "2026-09-09T00:45:24.297950+00:00",
   "ticker": "CEG",
   "spot_price": 298.96,
   "expiries_available": [
     {
       "date": "2026-09-11",
-      "days_to_exp": 3
+      "days_to_exp": 2
     },
     {
       "date": "2026-09-18",
-      "days_to_exp": 10
+      "days_to_exp": 9
     },
     {
       "date": "2026-09-25",
-      "days_to_exp": 17
+      "days_to_exp": 16
     },
     {
       "date": "2026-10-02",
-      "days_to_exp": 24
+      "days_to_exp": 23
     },
     {
       "date": "2026-10-09",
-      "days_to_exp": 31
+      "days_to_exp": 30
     }
   ],
   "iv_metrics": {
-    "iv_atm_30d": 0.5205,
-    "iv_atm_90d": 0.5205,
-    "rv_20d_annualized": 0.3287,
-    "iv_rv_ratio": 1.583,
+    "iv_atm_30d": 0.4908,
+    "iv_atm_90d": 0.4908,
+    "rv_20d_annualized": 0.329,
+    "iv_rv_ratio": 1.491,
     "iv_rank_1y": null,
     "iv_percentile_1y": null,
     "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -40,45 +40,45 @@
   },
   "term_structure": {
     "m1_expiry": "2026-09-11",
-    "m1_days_to_exp": 3,
-    "m1_iv_atm": 0.5203,
+    "m1_days_to_exp": 2,
+    "m1_iv_atm": 0.5824,
     "m3_expiry": "2026-10-09",
-    "m3_days_to_exp": 31,
-    "m3_iv_atm": 0.482,
-    "ratio_m1_m3": 1.0794,
-    "label": "backwardation"
+    "m3_days_to_exp": 30,
+    "m3_iv_atm": null,
+    "ratio_m1_m3": null,
+    "label": "insufficient_liquid_atm_options",
+    "note": "Pas assez d'options ATM liquides (OI>=50 + IV plausible) pour calculer la term structure."
   },
   "open_interest_m1": {
     "expiry": "2026-09-11",
-    "days_to_exp": 3,
-    "put_call_ratio": 0.941,
-    "total_oi_m1": 3381,
+    "days_to_exp": 2,
+    "put_call_ratio": 0.769,
+    "total_oi_m1": 4549,
     "largest_call_strike_oi": {
       "strike": 300.0,
-      "oi": 245
+      "oi": 440
     },
     "largest_put_strike_oi": {
       "strike": 265.0,
-      "oi": 260
+      "oi": 272
     }
   },
   "gex": {
-    "gex_total_usd_per_point": 1037028337.0,
+    "gex_total_usd_per_point": 1341110552.0,
     "gex_label": "positive_stabilizing",
     "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
   },
   "max_pain": {
-    "strike": 280.0,
+    "strike": 285.0,
     "expiry": "2026-09-11",
-    "gap_vs_spot_pct": -6.34
+    "gap_vs_spot_pct": -4.67
   },
   "verdict": {
     "label": "favorable",
     "bullish_signals": 1,
     "bearish_signals": 0,
     "notes": [
-      "GEX positif (1037.0M$/pt) = MM long gamma stabilisateur",
-      "max pain 280.00 vs spot 298.96 (-6.3%)"
+      "GEX positif (1341.1M$/pt) = MM long gamma stabilisateur"
     ]
   },
   "liquidity_stats": {
@@ -88,13 +88,13 @@
     "per_expiry": {
       "2026-09-11": {
         "total_strikes": 74,
-        "liquid_strikes": 6,
-        "filter_ratio_pct": 8.1
+        "liquid_strikes": 4,
+        "filter_ratio_pct": 5.4
       },
       "2026-09-18": {
         "total_strikes": 126,
-        "liquid_strikes": 19,
-        "filter_ratio_pct": 15.1
+        "liquid_strikes": 17,
+        "filter_ratio_pct": 13.5
       },
       "2026-09-25": {
         "total_strikes": 50,
@@ -108,8 +108,8 @@
       },
       "2026-10-09": {
         "total_strikes": 32,
-        "liquid_strikes": 1,
-        "filter_ratio_pct": 3.1
+        "liquid_strikes": 0,
+        "filter_ratio_pct": 0.0
       }
     }
   },

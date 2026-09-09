@@ -1,14 +1,14 @@
 {
   "available": true,
   "probabilities": {
-    "bull": 0.85,
+    "bull": 0.1225,
     "bear": 0.05,
-    "sideways": 0.1
+    "sideways": 0.8275
   },
   "probabilities_raw_hmm": {
-    "bull": 0.9,
+    "bull": 0.1258,
     "bear": 0.0,
-    "sideways": 0.1
+    "sideways": 0.8742
   },
   "probabilities_source": "hmm_regime CLAMP [0.05, 0.85] + renormalisation (fix audit 2026-05-23)",
   "probabilities_clamp_range": [
@@ -17,43 +17,43 @@
   ],
   "probabilities_mode": "markov_horizon_projection",
   "stationary_distribution": {
-    "bull": 0.5457,
-    "bear": 0.087,
-    "sideways": 0.3673
+    "bull": 0.43,
+    "bear": 0.0757,
+    "sideways": 0.4942
   },
   "transition_matrix_available": true,
   "drift_source": "hmm_drift_by_state",
-  "sigma_daily_pct": 2.0707,
-  "mu_cap_pct_daily": 1.0354,
-  "regime_duration_sessions": 30.0,
-  "long_run_drift_pct_daily": 0.1,
+  "sigma_daily_pct": 2.0728,
+  "mu_cap_pct_daily": 1.0364,
+  "regime_duration_sessions": 8.0,
+  "long_run_drift_pct_daily": 0.0652,
   "by_horizon": {
     "intraday": {
       "horizon_sessions": 1,
       "move_band_95_pct": 3.41,
       "sessions_in_regime": 1.0,
       "sessions_post_regime": 0.0,
-      "long_run_drift_pct_daily": 0.1,
+      "long_run_drift_pct_daily": 0.0652,
       "probabilities_horizon": {
-        "bull": 0.7966,
+        "bull": 0.1796,
         "bear": 0.05,
-        "sideways": 0.1534
+        "sideways": 0.7704
       },
       "scenarios": {
         "bull": {
-          "probability": 0.7966,
-          "expected_return_pct": 0.26,
-          "drift_regime_pct_daily": 0.2572
+          "probability": 0.1796,
+          "expected_return_pct": 0.21,
+          "drift_regime_pct_daily": 0.2093
         },
         "bear": {
           "probability": 0.05,
-          "expected_return_pct": -0.72,
-          "drift_regime_pct_daily": -0.7181
+          "expected_return_pct": -0.2,
+          "drift_regime_pct_daily": -0.1962
         },
         "sideways": {
-          "probability": 0.1534,
-          "expected_return_pct": -0.02,
-          "drift_regime_pct_daily": -0.0172
+          "probability": 0.7704,
+          "expected_return_pct": 0.04,
+          "drift_regime_pct_daily": 0.0445
         }
       }
     },
@@ -62,56 +62,56 @@
       "move_band_95_pct": 7.62,
       "sessions_in_regime": 5.0,
       "sessions_post_regime": 0.0,
-      "long_run_drift_pct_daily": 0.1,
+      "long_run_drift_pct_daily": 0.0652,
       "probabilities_horizon": {
-        "bull": 0.7317,
+        "bull": 0.2496,
         "bear": 0.05,
-        "sideways": 0.2183
+        "sideways": 0.7004
       },
       "scenarios": {
         "bull": {
-          "probability": 0.7317,
-          "expected_return_pct": 1.29,
-          "drift_regime_pct_daily": 0.2572
+          "probability": 0.2496,
+          "expected_return_pct": 1.05,
+          "drift_regime_pct_daily": 0.2093
         },
         "bear": {
           "probability": 0.05,
-          "expected_return_pct": -3.54,
-          "drift_regime_pct_daily": -0.7181
+          "expected_return_pct": -0.98,
+          "drift_regime_pct_daily": -0.1962
         },
         "sideways": {
-          "probability": 0.2183,
-          "expected_return_pct": -0.09,
-          "drift_regime_pct_daily": -0.0172
+          "probability": 0.7004,
+          "expected_return_pct": 0.22,
+          "drift_regime_pct_daily": 0.0445
         }
       }
     },
     "deep": {
       "horizon_sessions": 10,
-      "move_band_95_pct": 10.77,
-      "sessions_in_regime": 10.0,
-      "sessions_post_regime": 0.0,
-      "long_run_drift_pct_daily": 0.1,
+      "move_band_95_pct": 10.78,
+      "sessions_in_regime": 8.0,
+      "sessions_post_regime": 2.0,
+      "long_run_drift_pct_daily": 0.0652,
       "probabilities_horizon": {
-        "bull": 0.6831,
-        "bear": 0.0539,
-        "sideways": 0.263
+        "bull": 0.3013,
+        "bear": 0.05,
+        "sideways": 0.6487
       },
       "scenarios": {
         "bull": {
-          "probability": 0.6831,
-          "expected_return_pct": 2.6,
-          "drift_regime_pct_daily": 0.2572
+          "probability": 0.3013,
+          "expected_return_pct": 1.81,
+          "drift_regime_pct_daily": 0.2093
         },
         "bear": {
-          "probability": 0.0539,
-          "expected_return_pct": -6.95,
-          "drift_regime_pct_daily": -0.7181
+          "probability": 0.05,
+          "expected_return_pct": -1.42,
+          "drift_regime_pct_daily": -0.1962
         },
         "sideways": {
-          "probability": 0.263,
-          "expected_return_pct": -0.17,
-          "drift_regime_pct_daily": -0.0172
+          "probability": 0.6487,
+          "expected_return_pct": 0.49,
+          "drift_regime_pct_daily": 0.0445
         }
       }
     }
