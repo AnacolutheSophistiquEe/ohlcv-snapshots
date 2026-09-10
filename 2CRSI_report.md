@@ -1,11 +1,11 @@
 # AL2SI
 
-**Generated** : 2026-09-09T21:56:20.440386+00:00  
+**Generated** : 2026-09-10T00:17:05.503566+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €28.44  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-11 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot €28.44 (+0.7% vs entrée) · entrée €28.25 · stop €26.80 · T1 €29.41 · R/R 0.8  
 > ↳ P(T1 av. stop) 43 % _(réel 5 s)_ · EV/risk -0.217 _(réel 5 s)_ (GBM 0.08) · ¼-Kelly 0.014 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
@@ -54,8 +54,8 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass (negative EV)'.
    - _fenêtre arrêtée : rupture de regime a 420 seances en arriere (volatilite 4.30 % contre 7.25 % aujourd'hui, rapport 0.59)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -14.77 % vs -13.9 % si l'on extrapolait par √5 _(rapport 1.062 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.2142** (β de hausse 0.9468, asymétrie 1.2824) vs FCHI — 619 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 1.883× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 1.2196** (β de hausse 0.9468, asymétrie 1.2882) vs FCHI — 618 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 1.952× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
@@ -305,9 +305,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-09-10 — ECB Monetary Policy Decision (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-09-11 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-11 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-11 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -317,8 +317,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.357  _(pas de croisement recent)_
 - **BB** : %B 0.84 · largeur 14.0%
 - **ATR** : 1.45 (47.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.148  _(distribution)_
-- **Vol ratio** : 1.09  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.147  _(distribution)_
+- **Vol ratio** : 0.79  _(volume normal)_
 - **Choppiness** : 56.4  _(transition)_
 - **MA** : MA20 27.16 · MA50 28.29 · MA200 26.68  _(prix > MA20)_
 - **Dist MA** : MA20 +4.7% · MA50 +0.5% · MA200 +6.6%
@@ -326,5 +326,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (764942 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (764820 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
