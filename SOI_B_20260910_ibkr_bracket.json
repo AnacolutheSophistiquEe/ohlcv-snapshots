@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-09-10T00:15:07.086210+00:00",
+  "generated_at": "2026-09-10T21:51:30.534297+00:00",
   "prediction_id": "SOI_B_20260910",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SOI",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 143.55,
+    "limit_price": 136.55,
     "quantity": 4,
     "tif": "GTD",
     "gtd": "2026-09-15T16:30:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 149.6,
+      "limit_price": 145.25,
       "quantity": 2,
       "tif": "GTC",
       "tag": "T1"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 159.95,
+      "limit_price": 155.2,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 170.3,
+      "limit_price": 165.15,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -42,7 +42,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 131.4,
+      "stop_price": 127.0,
       "quantity": 4,
       "tif": "GTC",
       "tag": "SL"
@@ -93,24 +93,24 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 9.0,
+    "composite_score": 10.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.293,
+    "ev_pct_risk": 0.2714,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.5089,
-      "T2": 0.2621,
-      "T3": 0.1438
+      "T1": 0.5212,
+      "T2": 0.2738,
+      "T3": 0.154
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 574.2,
-    "hold_tolerance_breach_price": 107.6625,
+    "notional_eur": 546.2,
+    "hold_tolerance_breach_price": 102.4125,
     "hold_fallback_active": true,
     "prediction_id": "SOI_B_20260910"
   },
