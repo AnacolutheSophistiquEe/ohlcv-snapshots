@@ -1,0 +1,161 @@
+{
+  "daily": {
+    "completeness": {
+      "n_bars": 243,
+      "expected_bars_daily": 262,
+      "completeness_pct": 92.74809160305344,
+      "missing_dates": [
+        "2025-09-19T00:00:00",
+        "2025-10-03T00:00:00",
+        "2025-10-06T00:00:00",
+        "2025-10-07T00:00:00",
+        "2025-10-08T00:00:00",
+        "2025-10-09T00:00:00",
+        "2025-12-25T00:00:00",
+        "2025-12-31T00:00:00",
+        "2026-01-01T00:00:00",
+        "2026-02-16T00:00:00"
+      ],
+      "missing_dates_total": 19
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 6,
+      "outliers_recent_30d": [
+        {
+          "date": "2026-07-31T00:00:00",
+          "return_pct": 17.32418197000729,
+          "sigma_distance": 3.827198248016496
+        }
+      ]
+    },
+    "gaps": {
+      "n_gaps_up": 20,
+      "n_gaps_down": 12,
+      "last_significant_gap": {
+        "date": "2026-08-27T00:00:00",
+        "type": "up",
+        "magnitude_pct": 5.277401894451961
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 158818.23333333334,
+      "median_volume_60d": 144503.0,
+      "volume_consistency_score": 0.5256389093245799
+    },
+    "liquidity": {
+      "liquidity_score": 98682583160.39166,
+      "liquidity_classification": "very_high"
+    },
+    "freshness": {
+      "last_bar_date": "2026-09-11T00:00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 85.04554867615181,
+      "overall_label": "excellent",
+      "warnings": [
+        "7.3% des bars manquantes (daily)"
+      ]
+    }
+  },
+  "h4": {
+    "completeness": {
+      "n_bars": 128,
+      "expected_bars_daily": null,
+      "expected_bars_h4": 128,
+      "bars_per_day_typical": 2,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_bars_intraday": 0
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 2,
+      "outliers_recent_30d": []
+    },
+    "gaps": {
+      "n_gaps_up": 11,
+      "n_gaps_down": 4,
+      "last_significant_gap": {
+        "date": "2026-09-11T00:00:00+00:00",
+        "type": "down",
+        "magnitude_pct": 3.2345013477088957
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 48865.13333333333,
+      "median_volume_60d": 40643.5,
+      "volume_consistency_score": 0.39519266346270676
+    },
+    "liquidity": {
+      "liquidity_score": 35881626816.666664,
+      "liquidity_classification": "very_high"
+    },
+    "freshness": {
+      "last_bar_date": "2026-09-11T04:00:00+00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 87.8028899519406,
+      "overall_label": "excellent",
+      "warnings": []
+    }
+  },
+  "h1": {
+    "completeness": {
+      "n_bars": 132,
+      "expected_bars_daily": null,
+      "expected_bars_h1": 132,
+      "bars_per_day_typical": 6,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_bars_intraday": 0
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 1,
+      "outliers_recent_30d": []
+    },
+    "gaps": {
+      "n_gaps_up": 1,
+      "n_gaps_down": 3,
+      "last_significant_gap": {
+        "date": "2026-09-11T00:00:00+00:00",
+        "type": "down",
+        "magnitude_pct": 3.8821954484605126
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 5,
+      "mean_volume_60d": 13918.5,
+      "median_volume_60d": 12583.0,
+      "volume_consistency_score": 0.38300374940809934
+    },
+    "liquidity": {
+      "liquidity_score": 8335265233.333333,
+      "liquidity_classification": "very_high"
+    },
+    "freshness": {
+      "last_bar_date": "2026-09-11T05:00:00+00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 89.22990472596997,
+      "overall_label": "excellent",
+      "warnings": [
+        "5 bar(s) à volume zéro (h1)"
+      ]
+    }
+  },
+  "summary": {
+    "worst_tf_quality_score": 85.04554867615181,
+    "worst_tf": "daily",
+    "recommendation": "use_as_is"
+  }
+}
