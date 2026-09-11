@@ -1,0 +1,164 @@
+{
+  "daily": {
+    "completeness": {
+      "n_bars": 251,
+      "expected_bars_daily": 261,
+      "completeness_pct": 96.16858237547893,
+      "missing_dates": [
+        "2025-11-27T00:00:00",
+        "2025-12-25T00:00:00",
+        "2026-01-01T00:00:00",
+        "2026-01-19T00:00:00",
+        "2026-02-16T00:00:00",
+        "2026-04-03T00:00:00",
+        "2026-05-25T00:00:00",
+        "2026-06-19T00:00:00",
+        "2026-07-03T00:00:00",
+        "2026-09-07T00:00:00"
+      ]
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 0,
+      "outliers_recent_30d": []
+    },
+    "gaps": {
+      "n_gaps_up": 10,
+      "n_gaps_down": 13,
+      "last_significant_gap": {
+        "date": "2026-09-10T00:00:00",
+        "type": "down",
+        "magnitude_pct": 2.418606780296151
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 31697506.05,
+      "median_volume_60d": 30279050.0,
+      "volume_consistency_score": 0.6835355935634108
+    },
+    "liquidity": {
+      "liquidity_score": 307539108.51864606,
+      "liquidity_classification": "high"
+    },
+    "freshness": {
+      "last_bar_date": "2026-09-10T00:00:00",
+      "days_since_last_bar": 1,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 91.47046685364273,
+      "overall_label": "excellent",
+      "warnings": []
+    }
+  },
+  "h4": {
+    "completeness": {
+      "n_bars": 126,
+      "expected_bars_daily": null,
+      "expected_bars_h4": 126,
+      "bars_per_day_typical": 2,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_bars_intraday": 0
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 1,
+      "outliers_recent_30d": [
+        {
+          "date": "2026-09-08T12:00:00+00:00",
+          "return_pct": 15.00773563183111,
+          "sigma_distance": 3.9242791037558313
+        }
+      ]
+    },
+    "gaps": {
+      "n_gaps_up": 3,
+      "n_gaps_down": 4,
+      "last_significant_gap": {
+        "date": "2026-09-10T12:00:00+00:00",
+        "type": "down",
+        "magnitude_pct": 2.509297881229966
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 14634959.15,
+      "median_volume_60d": 14307090.0,
+      "volume_consistency_score": 0.6473292925751591
+    },
+    "liquidity": {
+      "liquidity_score": 152049306.2790697,
+      "liquidity_classification": "high"
+    },
+    "freshness": {
+      "last_bar_date": "2026-09-10T16:00:00+00:00",
+      "days_since_last_bar": 1,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 90.87263780132581,
+      "overall_label": "excellent",
+      "warnings": []
+    }
+  },
+  "h1": {
+    "completeness": {
+      "n_bars": 154,
+      "expected_bars_daily": null,
+      "expected_bars_h1": 154,
+      "bars_per_day_typical": 7,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_bars_intraday": 0
+    },
+    "outliers": {
+      "n_outliers_5sigma": 1,
+      "n_outliers_3sigma": 1,
+      "outliers_recent_30d": [
+        {
+          "date": "2026-09-08T13:30:00+00:00",
+          "return_pct": 10.624040423594705,
+          "sigma_distance": 6.045298315627148
+        }
+      ]
+    },
+    "gaps": {
+      "n_gaps_up": 1,
+      "n_gaps_down": 3,
+      "last_significant_gap": {
+        "date": "2026-09-10T13:30:00+00:00",
+        "type": "down",
+        "magnitude_pct": 2.509297881229966
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 3427012.6166666667,
+      "median_volume_60d": 2753255.5,
+      "volume_consistency_score": 0.3530420644622594
+    },
+    "liquidity": {
+      "liquidity_score": 38634855.8989632,
+      "liquidity_classification": "medium"
+    },
+    "freshness": {
+      "last_bar_date": "2026-09-10T19:30:00+00:00",
+      "days_since_last_bar": 1,
+      "freshness_status": "fresh"
+    },
+    "overall": {
+      "overall_quality_score": 83.7469296682326,
+      "overall_label": "good",
+      "warnings": [
+        "outlier de 6.0σ le 2026-09-08 non expliqué (h1)"
+      ]
+    }
+  },
+  "summary": {
+    "worst_tf_quality_score": 83.7469296682326,
+    "worst_tf": "h1",
+    "recommendation": "review_outliers"
+  }
+}
