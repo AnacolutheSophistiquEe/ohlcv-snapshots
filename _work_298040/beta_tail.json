@@ -1,0 +1,26 @@
+{
+  "available": true,
+  "benchmark": "KS11",
+  "benchmark_synchronous": true,
+  "asset_market": "KR",
+  "benchmark_market": "KR",
+  "beta_up_days": 0.999,
+  "beta_down_days": 1.0759,
+  "beta_asymmetry": 1.077,
+  "n_up_days": 663,
+  "n_down_days": 554,
+  "interpretation": "balanced",
+  "window_days": 1217,
+  "window_mode": "historique complet",
+  "recent_252d": {
+    "beta_up_days": 1.1713,
+    "beta_down_days": 0.9477,
+    "beta_asymmetry": 0.8091,
+    "n_up_days": 152,
+    "n_down_days": 88,
+    "window_days": 240
+  },
+  "beta_down_shift_ratio": 0.881,
+  "beta_down_shift_note": "rapport entre le beta de baisse RECENT (252 seances) et celui de l'historique complet. Loin de 1 = le titre a change de sensibilite au marche ; c'est une information, pas une erreur.",
+  "window_choice_note": "fenetre longue retenue apres mesure hors echantillon (18 couples, 878 points) : au-dela de 252 seances le gain est reel mais non significatif, tandis que RACCOURCIR degrade significativement. Le beta n'est pas une grandeur de regime rapide, contrairement a la volatilite."
+}
