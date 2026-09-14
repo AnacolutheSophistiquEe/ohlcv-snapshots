@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE000ENER6Y0",
-    "generated_at": "2026-09-11T21:44:14.937456+00:00",
+    "generated_at": "2026-09-14T00:08:23.681882+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -428,7 +428,7 @@
           144.52,
           141.32,
           144.26,
-          1543028
+          1543162
         ]
       ],
       "h4": [
@@ -1255,8 +1255,8 @@
       "macd_hist": -0.4766114937023538,
       "macd_signal_cross": null,
       "obv_trend": "rising",
-      "mfi_14": 46.30222689663852,
-      "cmf_20": -0.20097092790672574,
+      "mfi_14": 46.30253102645878,
+      "cmf_20": -0.20096667146630937,
       "adl_trend": "falling",
       "adx_14": 11.640432571462359,
       "plus_di_14": 18.716421620710914,
@@ -1264,7 +1264,7 @@
       "di_spread_14": -6.692736037637051,
       "choppiness_14": 52.519146524330594,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 0.9439644023596357,
+      "volume_ratio_ma20": 0.944042508897569,
       "distance_ma20_pct": -3.4119861232635724,
       "distance_ma50_pct": -4.67367628869266,
       "distance_ma200_pct": -4.594793774972775
@@ -1757,7 +1757,7 @@
           "rr": 0.16,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7948,
+          "p_touch": 0.7949,
           "distance_pct": 1.27
         },
         "t2": {
@@ -1766,7 +1766,7 @@
           "rr": 0.32,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7948,
+          "p_touch": 0.7949,
           "distance_pct": 2.54
         },
         "t3": {
@@ -1775,7 +1775,7 @@
           "rr": 0.48,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7948,
+          "p_touch": 0.7949,
           "distance_pct": 3.8
         }
       }
@@ -1801,7 +1801,7 @@
           "rr": 0.76,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.722,
+          "p_touch": 0.7219,
           "distance_pct": 2.83
         },
         "t2": {
@@ -1819,7 +1819,7 @@
           "rr": 2.29,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.722,
+          "p_touch": 0.7219,
           "distance_pct": 8.5
         }
       }
@@ -1845,12 +1845,12 @@
           "rr": 0.7,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5884,
+          "p_touch": 0.5885,
           "distance_pct": 4.01
         },
         "t2": {
           "price": 141.3409,
-          "basis": "band 95% (atteignable) · touche hist. 81% (sans stop)",
+          "basis": "band 95% (atteignable) · touche hist. 80% (sans stop)",
           "rr": 1.39,
           "rr_basis": "entry_mid",
           "capped": true,
@@ -2158,7 +2158,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-09-11T21:43:40.313290+00:00",
+    "generated_at": "2026-09-14T00:07:59.932754+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -8264,7 +8264,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-09-11T21:43:17.533430+00:00",
+    "generated_at": "2026-09-14T00:07:45.520153+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8482,55 +8482,24 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-09-11T21:43:48.899650+00:00",
+    "generated_at": "2026-09-14T00:08:06.604354+00:00",
     "ticker": "ENR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 3,
+    "n_events": 1,
     "events": [
-      {
-        "date": "2026-09-11",
-        "type": "macro",
-        "label": "US CPI (headline)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-11",
-        "type": "macro",
-        "label": "US Core CPI (ex food & energy)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-09-16",
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8677,7 +8646,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-09-11T21:43:46.899814+00:00",
+    "generated_at": "2026-09-14T00:08:05.170090+00:00",
     "ticker": "ENR",
     "yahoo": "ENR.DE",
     "source": "yfinance.Ticker.info",
@@ -8704,9 +8673,9 @@
       "shares_outstanding": 850848567.0,
       "float_shares": 777430232.0,
       "free_float_pct": 91.4,
-      "avg_volume_3m": 2134358.0,
+      "avg_volume_3m": 2108199.0,
       "adv_str": "2.1 M titres",
-      "avg_volume_10d": 1628796.0,
+      "avg_volume_10d": 1642539.0,
       "archetype_suggested": null,
       "archetype_basis": "aucune regle ne tranche — a l'appreciation du /full_brief",
       "business_summary_raw": "Siemens Energy AG operates as an energy technology company worldwide. It operates through Gas Services, Grid Technologies, Transformation of Industry, and Siemens Gamesa segments. The company provides gas and steam turbines, generators, and heat pumps, as well as performance enhancement, maintenance, digitalization, and consulting services for central and distributed power generation; and high voltage direct current transmission systems, offshore wind farm grid connections, transformers, flexible alternating current transmission systems, high voltage substations, air and gas-insulated switchgears, circuit breakers, capacitor, digital grid solutions and components, components and cyber security, and transformers and storage solutions. It also offers electrolyzers, industrial steam turbines, industrial generators, turbo and reciprocating compressors, drive systems and solutions, batteries and fuel cells, and other systems and solutions, as well as service and digital offerings; onshore and onshore wind turbines; design, engineering, manufacturing, and installation solutions for onshore markets; offshore wind turbine equipment design, manufacturing, and installation solutions; and management, operation and maintenance services for wind farms. The company serves utilities, independent power producers, project developers, municipal energy producers, engineering, procurement, and construction companies, oil and gas, transmission and distribution system operators, and industrial and infrastructure customers. Siemens Energy AG was founded in 1866 and is based in Munich, Germany."
@@ -8734,11 +8703,11 @@
       "debt_to_equity": 26.5,
       "current_ratio": 0.9,
       "quick_ratio": 0.57,
-      "eps_trailing": 3.08,
-      "eps_str": "3.08 EUR",
+      "eps_trailing": 3.09,
+      "eps_str": "3.09 EUR",
       "eps_forward": 6.21,
       "eps_growth_pct": 80.0,
-      "dividend_yield_pct": 0.5,
+      "dividend_yield_pct": 0.49,
       "dividend_yield_note": null,
       "dividend_rate": 0.7,
       "payout_ratio_pct": 22.65,
@@ -8759,9 +8728,9 @@
       "ev_ebitda_ttm": 24.91,
       "ev_revenue_ttm": 2.74,
       "ps_ttm": 2.93,
-      "pe_trailing": 46.84,
+      "pe_trailing": 46.69,
       "pe_fwd": 23.23,
-      "peg": 0.52,
+      "peg": 0.4,
       "price_to_book": 11.44,
       "fcf_yield_pct": 5.05,
       "ev_ebitda_fwd": null,
@@ -8780,14 +8749,14 @@
     },
     "ownership": {
       "insiders_pct": 12.07,
-      "institutions_pct": 56.76,
+      "institutions_pct": 56.81,
       "short_pct_float": null,
       "short_ratio_days": null
     },
     "market": {
       "beta": 1.868,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": 51.16,
+      "change_52w_pct": 50.68,
       "low_52w": 90.3,
       "high_52w": 191.66
     },
@@ -8942,7 +8911,7 @@
       },
       {
         "field": "financials.eps_str",
-        "value": "3.08 EUR",
+        "value": "3.09 EUR",
         "from": "fundamentals.financials.eps_str"
       },
       {
@@ -8952,7 +8921,7 @@
       },
       {
         "field": "financials.dividend_yield_pct",
-        "value": 0.5,
+        "value": 0.49,
         "from": "fundamentals.financials.dividend_yield_pct"
       },
       {
@@ -8967,7 +8936,7 @@
       },
       {
         "field": "valuation.peg",
-        "value": 0.52,
+        "value": 0.4,
         "from": "fundamentals.valuation.peg"
       },
       {
@@ -9017,7 +8986,7 @@
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 56.76,
+        "value": 56.81,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -9179,7 +9148,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-09-11T21:43:14.884068+00:00",
+    "generated_at": "2026-09-14T00:07:43.739402+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/ENR_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1273,
@@ -9566,10 +9535,10 @@
       "gap_best": 16.64
     },
     "asymmetry": {
-      "n_down": 568,
-      "n_up": 704,
-      "mean_down_pct": -1.137,
-      "mean_up_pct": 1.129,
+      "n_down": 569,
+      "n_up": 703,
+      "mean_down_pct": -1.135,
+      "mean_up_pct": 1.131,
       "worst_down_pct": -35.757,
       "best_up_pct": 16.64,
       "downside_heavier": true
@@ -9587,7 +9556,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-09-11T21:43:17.159320+00:00",
+    "generated_at": "2026-09-14T00:07:45.255562+00:00",
     "ticker": "ENR",
     "source_csv": "ENR_daily_long.csv",
     "n_sessions": 1274,
@@ -13712,7 +13681,7 @@
         "anchor_date": "2026-08-12",
         "anchor_event": "swing_high",
         "anchor_price": 165.86,
-        "vwap_today": 150.7054,
+        "vwap_today": 150.7053,
         "distance_from_close_pct": -4.28,
         "bars_since_anchor": 21
       },
@@ -18629,8 +18598,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": -1168659.817335092,
-        "signal_line": -2886209.988048372,
+        "value": -1168580.0915853386,
+        "signal_line": -2886198.5986555503,
         "signal": "neutral"
       }
     },
@@ -20163,7 +20132,7 @@
         -1363962.9312944142,
         -1689931.3142778808,
         -2319199.4713614015,
-        -1168659.817335092
+        -1168580.0915853386
       ],
       "klinger_signal": [
         0.0,
@@ -20418,7 +20387,7 @@
         -3585471.2487962474,
         -3314679.829579338,
         -3172468.3498339183,
-        -2886209.988048372
+        -2886198.5986555503
       ]
     }
   },
@@ -20426,22 +20395,22 @@
     "available": true,
     "latest": {
       "close": 144.25999450683594,
-      "vwap": 149.44767818654879,
+      "vwap": 149.44765326181584,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": -3.471237387333175,
+        "distance_from_close_pct": -3.4712212883608817,
         "position": "below_vwap"
       },
-      "force_index": -1128011.14266657,
+      "force_index": -1127945.2914833599,
       "force_index_meta": {
         "signal": "neutral"
       },
-      "chaikin_oscillator": -867415.7255121209,
+      "chaikin_oscillator": -867380.0178244151,
       "chaikin_oscillator_meta": {
         "cross_recent": null,
         "signal": "neutral"
       },
-      "vroc_14": 19.4301512702865,
+      "vroc_14": 19.440522851534684,
       "vroc_14_meta": {
         "signal": "normal"
       }
@@ -20955,7 +20924,7 @@
         151.89623268590427,
         151.39405720408888,
         150.28790186539706,
-        149.44767818654879
+        149.44765326181584
       ],
       "force_index": [
         null,
@@ -21210,7 +21179,7 @@
         -844323.0259906723,
         -1541902.1821941882,
         -2200679.0901809037,
-        -1128011.14266657
+        -1127945.2914833599
       ],
       "chaikin_oscillator": [
         0.0,
@@ -21465,7 +21434,7 @@
         -702848.9653794914,
         -832987.6912783682,
         -1228481.6977088004,
-        -867415.7255121209
+        -867380.0178244151
       ],
       "vroc_14": [
         null,
@@ -21720,7 +21689,7 @@
         -59.796566999915214,
         -15.844608314981254,
         39.978851640128035,
-        19.4301512702865
+        19.440522851534684
       ]
     }
   },
@@ -21752,7 +21721,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": -0.5281,
+      "value": -0.528,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -22012,22 +21981,22 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 2090502.2833333334,
+        "mean_volume_60d": 2090504.5166666666,
         "median_volume_60d": 1875062.0,
-        "volume_consistency_score": 0.580966124878999
+        "volume_consistency_score": 0.5809672514547264
       },
       "liquidity": {
-        "liquidity_score": 267224574.45624134,
+        "liquidity_score": 267225218.81755015,
         "liquidity_classification": "high"
       },
       "freshness": {
         "last_bar_date": "2026-09-11T00:00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 87.71890456968198,
-        "overall_label": "excellent",
+        "overall_quality_score": 83.71892146831789,
+        "overall_label": "good",
         "warnings": []
       }
     },
@@ -22067,11 +22036,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-11T12:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 80.82010057315145,
+        "overall_quality_score": 76.82010057315145,
         "overall_label": "good",
         "warnings": [
           "65 bar(s) à volume zéro (h4)"
@@ -22114,11 +22083,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-11T15:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 80.31481763786849,
+        "overall_quality_score": 76.31481763786849,
         "overall_label": "good",
         "warnings": [
           "23 bar(s) à volume zéro (h1)"
@@ -22126,7 +22095,7 @@
       }
     },
     "summary": {
-      "worst_tf_quality_score": 80.31481763786849,
+      "worst_tf_quality_score": 76.31481763786849,
       "worst_tf": "h1",
       "recommendation": "review_outliers"
     }

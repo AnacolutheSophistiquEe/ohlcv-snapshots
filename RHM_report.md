@@ -1,11 +1,11 @@
 # RHM
 
-**Generated** : 2026-09-11T21:36:19.974975+00:00  
+**Generated** : 2026-09-14T00:02:41.634449+00:00  
 **Santé technique** : 1/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €990.60  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-11 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)  
 > ↳ spot €990.60 (+1.5% vs entrée) · entrée €976.08 · stop €956.55 · T1 €988.01 · R/R 0.61  
 > ↳ P(T1 av. stop) 25 % _(réel 5 s)_ · EV/risk -0.148 _(réel 5 s)_ (GBM 0.061) · ¼-Kelly 0.029 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.0% cohérent avec le bruit 5 s (EV-optimal ≈ −2.0%)  
@@ -70,10 +70,10 @@ Plan privilegie A (intraday), composite 1/10, conviction 'Strong Pass (negative 
       - refuse : p_stop_first 0.533, borne haute 0.585 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-3.54 %) : P(cible) 0.0 % x 54.85 % + P(rien) 46.7 % x 6.23 % ne couvrent pas P(stop) 53.3 % x 12.11 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - 🟢 support a 1.57 ATR (stop 8.199 %) — p(stop avant cible) 0.4026 [0.35 ; 0.45], R/R 2.446, perte reelle 22.429 % (gap inclus), EV -6.2675 % — **REFUSE**
+   - 🟢 support a 1.57 ATR (stop 8.777 %) — p(stop avant cible) 0.3754 [0.33 ; 0.43], R/R 2.446, perte reelle 22.429 % (gap inclus), EV -5.7287 % — **REFUSE**
       - refuse : cible atteinte seulement 0.0 % du temps (< 15 %) meme a 10 seances : le R/R de 2.45 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 2.45 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-6.27 %) : P(cible) 0.0 % x 54.85 % + P(rien) 59.7 % x 4.61 % ne couvrent pas P(stop) 40.3 % x 22.43 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-5.73 %) : P(cible) 0.0 % x 54.85 % + P(rien) 62.5 % x 4.30 % ne couvrent pas P(stop) 37.5 % x 22.43 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
    - ⚪ atr_grid a 0.25 ATR (stop 0.996 %) — p(stop avant cible) 0.9194 [0.89 ; 0.94], R/R 23.522, perte reelle 2.332 % (gap inclus), EV -1.2562 % — **REFUSE**
       - refuse : cible atteinte seulement 0.0 % du temps (< 15 %) meme a 10 seances : le R/R de 23.52 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
@@ -104,10 +104,10 @@ Plan privilegie A (intraday), composite 1/10, conviction 'Strong Pass (negative 
       - refuse : cible atteinte seulement 0.0 % du temps (< 15 %) meme a 10 seances : le R/R de 3.62 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-3.66 %) : P(cible) 0.0 % x 54.85 % + P(rien) 57.1 % x 4.94 % ne couvrent pas P(stop) 42.9 % x 15.14 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ atr_grid a 2.25 ATR (stop 8.967 %) — p(stop avant cible) 0.3628 [0.31 ; 0.41], R/R 2.446, perte reelle 22.429 % (gap inclus), EV -5.4696 % — **REFUSE**
+   - ⚪ atr_grid a 2.0 ATR (stop 7.971 %) — p(stop avant cible) 0.4176 [0.37 ; 0.47], R/R 2.446, perte reelle 22.429 % (gap inclus), EV -6.5332 % — **REFUSE**
       - refuse : cible atteinte seulement 0.0 % du temps (< 15 %) meme a 10 seances : le R/R de 2.45 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 2.45 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-5.47 %) : P(cible) 0.0 % x 54.85 % + P(rien) 63.7 % x 4.18 % ne couvrent pas P(stop) 36.3 % x 22.43 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-6.53 %) : P(cible) 0.0 % x 54.85 % + P(rien) 58.2 % x 4.86 % ne couvrent pas P(stop) 41.8 % x 22.43 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
    - ⚪ atr_grid a 2.5 ATR (stop 9.963 %) — p(stop avant cible) 0.2999 [0.25 ; 0.35], R/R 2.446, perte reelle 22.429 % (gap inclus), EV -4.3643 % — **REFUSE**
       - refuse : cible atteinte seulement 0.0 % du temps (< 15 %) meme a 10 seances : le R/R de 2.45 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
@@ -340,9 +340,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-09-11 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -361,5 +361,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (769829 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (767512 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

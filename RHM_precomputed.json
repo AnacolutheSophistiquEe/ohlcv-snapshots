@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE0007030009",
-    "generated_at": "2026-09-11T21:36:19.974975+00:00",
+    "generated_at": "2026-09-14T00:02:41.634449+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -428,7 +428,7 @@
           1030.6,
           976.0,
           990.6,
-          193914
+          194359
         ]
       ],
       "h4": [
@@ -1255,8 +1255,8 @@
       "macd_hist": -17.285039228007633,
       "macd_signal_cross": null,
       "obv_trend": "falling",
-      "mfi_14": 19.79014378883639,
-      "cmf_20": -0.1741774865768811,
+      "mfi_14": 19.786414801154464,
+      "cmf_20": -0.17421747978360883,
       "adl_trend": "falling",
       "adx_14": 21.99182126846047,
       "plus_di_14": 13.147313710635581,
@@ -1264,7 +1264,7 @@
       "di_spread_14": -17.832261466997956,
       "choppiness_14": 36.77711224525748,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 1.1978303478275372,
+      "volume_ratio_ma20": 1.2004141808455873,
       "distance_ma20_pct": -11.127461915931008,
       "distance_ma50_pct": -9.438973784450507,
       "distance_ma200_pct": -28.061226951054717
@@ -1775,7 +1775,7 @@
           "rr": 0.61,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7948,
+          "p_touch": 0.7949,
           "distance_pct": 1.22
         },
         "t2": {
@@ -1784,7 +1784,7 @@
           "rr": 1.22,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7948,
+          "p_touch": 0.7949,
           "distance_pct": 2.45
         },
         "t3": {
@@ -2176,7 +2176,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-09-11T21:35:46.961640+00:00",
+    "generated_at": "2026-09-14T00:02:17.421390+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -8007,7 +8007,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-09-11T21:35:28.032519+00:00",
+    "generated_at": "2026-09-14T00:02:02.750104+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8225,55 +8225,24 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-09-11T21:35:56.084460+00:00",
+    "generated_at": "2026-09-14T00:02:24.466564+00:00",
     "ticker": "RHM",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 3,
+    "n_events": 1,
     "events": [
-      {
-        "date": "2026-09-11",
-        "type": "macro",
-        "label": "US CPI (headline)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-11",
-        "type": "macro",
-        "label": "US Core CPI (ex food & energy)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-09-16",
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8420,7 +8389,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-09-11T21:35:53.957729+00:00",
+    "generated_at": "2026-09-14T00:02:22.690151+00:00",
     "ticker": "RHM",
     "yahoo": "RHM.DE",
     "source": "yfinance.Ticker.info",
@@ -8443,13 +8412,13 @@
       "quote_type": "EQUITY",
       "market_cap": 46229381120.0,
       "market_cap_str": "46.23 Md EUR",
-      "enterprise_value": 50953420800.0,
+      "enterprise_value": 49749385216.0,
       "shares_outstanding": 46668063.0,
       "float_shares": 46668063.0,
       "free_float_pct": 100.0,
-      "avg_volume_3m": 230783.0,
-      "adv_str": "230.8 k titres",
-      "avg_volume_10d": 162673.0,
+      "avg_volume_3m": 230940.0,
+      "adv_str": "230.9 k titres",
+      "avg_volume_10d": 170909.0,
       "archetype_suggested": null,
       "archetype_basis": "aucune regle ne tranche — a l'appreciation du /full_brief",
       "business_summary_raw": "Rheinmetall AG provides mobility and security technologies in Germany, Rest of Europe, North, Middle, and South America, Asia and the Near East, and internationally. The company operates through the Vehicle Systems, Weapon and Ammunition, and Electronic Solutions segments. Its Vehicle Systems segment offers combat, logistics, support, and special vehicles, including armored tracked vehicles, CBRN protection systems, artillery, turret systems, and wheeled logistics and tactical vehicles. The Weapon and Ammunition segment provides firepower and protection solutions, such as weapons and ammunition, protection systems, propellants, and international projects and services. Its Electronic Solutions segment offers a chain of systems network, such as sensors, networking platforms, automated connected effectors for soldiers, cyberspace protection solutions, and training and simulation solutions. The company's products include air defense, soldier, and fire control systems; radar technology; and command, control and reconnaissance systems, as well as simulations for the army, air force, navy, and civil applications. It also engages in the aftermarket activities. The company was formerly known as Rheinmetall Berlin AG and changed its name to Rheinmetall AG in 1996. Rheinmetall AG was founded in 1889 and is headquartered in Düsseldorf, Germany."
@@ -8473,15 +8442,15 @@
       "net_debt": 2722999872.0,
       "net_debt_str": "2.72 Md EUR",
       "net_debt_ebitda": 1.18,
-      "ebitda_implied": 2309974648.6535497,
+      "ebitda_implied": 2309949631.6107163,
       "debt_to_equity": 51.6,
       "current_ratio": 1.0,
       "quick_ratio": 0.35,
-      "eps_trailing": 26.02,
-      "eps_str": "26.02 EUR",
+      "eps_trailing": 26.05,
+      "eps_str": "26.05 EUR",
       "eps_forward": 53.51,
       "eps_growth_pct": -5.7,
-      "dividend_yield_pct": 1.13,
+      "dividend_yield_pct": 1.16,
       "dividend_yield_note": null,
       "dividend_rate": 11.5,
       "payout_ratio_pct": 44.13,
@@ -8499,12 +8468,12 @@
       "statements_note": "3 champs repris des etats financiers (exercice clos 2025-12-31), `.info` ne les publiant pas pour cette place"
     },
     "valuation": {
-      "ev_ebitda_ttm": 22.06,
-      "ev_revenue_ttm": 4.46,
+      "ev_ebitda_ttm": 21.54,
+      "ev_revenue_ttm": 4.36,
       "ps_ttm": 4.05,
-      "pe_trailing": 38.07,
+      "pe_trailing": 38.03,
       "pe_fwd": 18.51,
-      "peg": 0.35,
+      "peg": 0.34,
       "price_to_book": 9.3,
       "fcf_yield_pct": 1.39,
       "ev_ebitda_fwd": null,
@@ -8523,14 +8492,14 @@
     },
     "ownership": {
       "insiders_pct": 1.65,
-      "institutions_pct": 46.01,
+      "institutions_pct": 45.94,
       "short_pct_float": null,
       "short_ratio_days": null
     },
     "market": {
       "beta": 0.431,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": -46.41,
+      "change_52w_pct": -49.2,
       "low_52w": 928.8,
       "high_52w": 2008.0
     },
@@ -8620,7 +8589,7 @@
       },
       {
         "field": "identity.adv_str",
-        "value": "230.8 k titres",
+        "value": "230.9 k titres",
         "from": "fundamentals.identity.adv_str"
       },
       {
@@ -8685,7 +8654,7 @@
       },
       {
         "field": "financials.eps_str",
-        "value": "26.02 EUR",
+        "value": "26.05 EUR",
         "from": "fundamentals.financials.eps_str"
       },
       {
@@ -8695,7 +8664,7 @@
       },
       {
         "field": "financials.dividend_yield_pct",
-        "value": 1.13,
+        "value": 1.16,
         "from": "fundamentals.financials.dividend_yield_pct"
       },
       {
@@ -8710,7 +8679,7 @@
       },
       {
         "field": "valuation.peg",
-        "value": 0.35,
+        "value": 0.34,
         "from": "fundamentals.valuation.peg"
       },
       {
@@ -8760,7 +8729,7 @@
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 46.01,
+        "value": 45.94,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -8922,7 +8891,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-09-11T21:35:25.405184+00:00",
+    "generated_at": "2026-09-14T00:02:00.971975+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/RHM_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1273,
@@ -9309,10 +9278,10 @@
       "gap_best": 49.463
     },
     "asymmetry": {
-      "n_down": 489,
-      "n_up": 779,
-      "mean_down_pct": -0.8,
-      "mean_up_pct": 0.829,
+      "n_down": 490,
+      "n_up": 778,
+      "mean_down_pct": -0.798,
+      "mean_up_pct": 0.83,
       "worst_down_pct": -22.429,
       "best_up_pct": 49.463,
       "downside_heavier": false
@@ -9330,7 +9299,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-09-11T21:35:27.703131+00:00",
+    "generated_at": "2026-09-14T00:02:02.491277+00:00",
     "ticker": "RHM",
     "source_csv": "RHM_daily_long.csv",
     "n_sessions": 1274,
@@ -9596,10 +9565,10 @@
         "n_eff": 345.8,
         "n_ambiguous": 43,
         "ambiguous_pct": 4.154,
-        "p_stop_first_lo": 0.2229,
-        "p_stop_first_hi": 0.2644,
-        "p_target_first_lo": 0.7356,
-        "p_target_first_hi": 0.7771,
+        "p_stop_first_lo": 0.2228,
+        "p_stop_first_hi": 0.2643,
+        "p_target_first_lo": 0.7357,
+        "p_target_first_hi": 0.7772,
         "p_no_touch": 0.0,
         "p_stop_first": 0.2436,
         "p_target_first": 0.7564,
@@ -9897,12 +9866,12 @@
         "n_ambiguous": 26,
         "ambiguous_pct": 2.335,
         "p_stop_first_lo": 0.2734,
-        "p_stop_first_hi": 0.2968,
-        "p_target_first_lo": 0.7032,
+        "p_stop_first_hi": 0.2967,
+        "p_target_first_lo": 0.7033,
         "p_target_first_hi": 0.7266,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.2851,
-        "p_target_first": 0.7149,
+        "p_stop_first": 0.285,
+        "p_target_first": 0.715,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -9910,11 +9879,11 @@
         "stop_pct": 4.0,
         "target_pct": 1.5,
         "p_stop_first_ci95": [
-          0.2395,
-          0.3343
+          0.2394,
+          0.3342
         ],
         "ci_width_pt": 9.5,
-        "bound_spread_pt": 2.34
+        "bound_spread_pt": 2.33
       },
       {
         "n_windows": 1254,
@@ -9926,8 +9895,8 @@
         "p_target_first_lo": 0.7369,
         "p_target_first_hi": 0.758,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.2525,
-        "p_target_first": 0.7475,
+        "p_stop_first": 0.2526,
+        "p_target_first": 0.7474,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -9935,8 +9904,8 @@
         "stop_pct": 5.0,
         "target_pct": 1.5,
         "p_stop_first_ci95": [
-          0.2089,
-          0.3002
+          0.209,
+          0.3003
         ],
         "ci_width_pt": 9.1,
         "bound_spread_pt": 2.11
@@ -10196,13 +10165,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 24,
         "ambiguous_pct": 2.746,
-        "p_stop_first_lo": 0.3114,
+        "p_stop_first_lo": 0.3113,
         "p_stop_first_hi": 0.3388,
         "p_target_first_lo": 0.6612,
-        "p_target_first_hi": 0.6886,
+        "p_target_first_hi": 0.6887,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.3251,
-        "p_target_first": 0.6749,
+        "p_stop_first": 0.325,
+        "p_target_first": 0.675,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -10211,10 +10180,10 @@
         "target_pct": 2.0,
         "p_stop_first_ci95": [
           0.2773,
-          0.3758
+          0.3757
         ],
         "ci_width_pt": 9.8,
-        "bound_spread_pt": 2.74
+        "bound_spread_pt": 2.75
       },
       {
         "n_windows": 1254,
@@ -10496,13 +10465,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 14,
         "ambiguous_pct": 1.017,
-        "p_stop_first_lo": 0.4042,
-        "p_stop_first_hi": 0.4144,
-        "p_target_first_lo": 0.5854,
+        "p_stop_first_lo": 0.4041,
+        "p_stop_first_hi": 0.4143,
+        "p_target_first_lo": 0.5855,
         "p_target_first_hi": 0.5956,
         "p_no_touch": 0.0002,
-        "p_stop_first": 0.4093,
-        "p_target_first": 0.5905,
+        "p_stop_first": 0.4092,
+        "p_target_first": 0.5906,
         "pnl_no_touch_pct": 0.5838,
         "pnl_no_touch_median_pct": 0.5833,
         "horizon": "extended",
@@ -10510,8 +10479,8 @@
         "stop_pct": 4.0,
         "target_pct": 3.0,
         "p_stop_first_ci95": [
-          0.3584,
-          0.4617
+          0.3583,
+          0.4616
         ],
         "ci_width_pt": 10.3,
         "bound_spread_pt": 1.02
@@ -10527,7 +10496,7 @@
         "p_target_first_hi": 0.6318,
         "p_no_touch": 0.0004,
         "p_stop_first": 0.3718,
-        "p_target_first": 0.6278,
+        "p_target_first": 0.6277,
         "pnl_no_touch_pct": 0.1315,
         "pnl_no_touch_median_pct": 0.3506,
         "horizon": "extended",
@@ -10796,13 +10765,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 7,
         "ambiguous_pct": 0.502,
-        "p_stop_first_lo": 0.4763,
-        "p_stop_first_hi": 0.4813,
-        "p_target_first_lo": 0.5181,
+        "p_stop_first_lo": 0.4762,
+        "p_stop_first_hi": 0.4812,
+        "p_target_first_lo": 0.5182,
         "p_target_first_hi": 0.5232,
         "p_no_touch": 0.0006,
-        "p_stop_first": 0.4788,
-        "p_target_first": 0.5206,
+        "p_stop_first": 0.4787,
+        "p_target_first": 0.5207,
         "pnl_no_touch_pct": 0.2764,
         "pnl_no_touch_median_pct": 0.5833,
         "horizon": "extended",
@@ -10810,8 +10779,8 @@
         "stop_pct": 4.0,
         "target_pct": 4.0,
         "p_stop_first_ci95": [
-          0.4265,
-          0.5314
+          0.4264,
+          0.5313
         ],
         "ci_width_pt": 10.5,
         "bound_spread_pt": 0.5
@@ -10822,7 +10791,7 @@
         "n_ambiguous": 6,
         "ambiguous_pct": 0.452,
         "p_stop_first_lo": 0.4474,
-        "p_stop_first_hi": 0.4519,
+        "p_stop_first_hi": 0.452,
         "p_target_first_lo": 0.5472,
         "p_target_first_hi": 0.5517,
         "p_no_touch": 0.0009,
@@ -10839,7 +10808,7 @@
           0.5024
         ],
         "ci_width_pt": 10.5,
-        "bound_spread_pt": 0.45
+        "bound_spread_pt": 0.46
       },
       {
         "n_windows": 1254,
@@ -11099,7 +11068,7 @@
         "p_stop_first_lo": 0.5515,
         "p_stop_first_hi": 0.5535,
         "p_target_first_lo": 0.4453,
-        "p_target_first_hi": 0.4472,
+        "p_target_first_hi": 0.4473,
         "p_no_touch": 0.0012,
         "p_stop_first": 0.5525,
         "p_target_first": 0.4463,
@@ -11124,11 +11093,11 @@
         "p_stop_first_lo": 0.5219,
         "p_stop_first_hi": 0.5241,
         "p_target_first_lo": 0.4744,
-        "p_target_first_hi": 0.4766,
+        "p_target_first_hi": 0.4765,
         "p_no_touch": 0.0015,
         "p_stop_first": 0.523,
         "p_target_first": 0.4755,
-        "pnl_no_touch_pct": 0.6839,
+        "pnl_no_touch_pct": 0.684,
         "pnl_no_touch_median_pct": 0.4701,
         "horizon": "extended",
         "horizon_sessions": 20,
@@ -11397,12 +11366,12 @@
         "n_ambiguous": 5,
         "ambiguous_pct": 0.153,
         "p_stop_first_lo": 0.5867,
-        "p_stop_first_hi": 0.5883,
+        "p_stop_first_hi": 0.5882,
         "p_target_first_lo": 0.4072,
-        "p_target_first_hi": 0.4087,
+        "p_target_first_hi": 0.4088,
         "p_no_touch": 0.0046,
-        "p_stop_first": 0.5875,
-        "p_target_first": 0.4079,
+        "p_stop_first": 0.5874,
+        "p_target_first": 0.408,
         "pnl_no_touch_pct": 0.8295,
         "pnl_no_touch_median_pct": 1.4902,
         "horizon": "extended",
@@ -11410,11 +11379,11 @@
         "stop_pct": 4.0,
         "target_pct": 6.0,
         "p_stop_first_ci95": [
-          0.5351,
-          0.6385
+          0.535,
+          0.6384
         ],
         "ci_width_pt": 10.3,
-        "bound_spread_pt": 0.16
+        "bound_spread_pt": 0.15
       },
       {
         "n_windows": 1254,
@@ -11473,7 +11442,7 @@
         "ambiguous_pct": 0.018,
         "p_stop_first_lo": 0.4707,
         "p_stop_first_hi": 0.4709,
-        "p_target_first_lo": 0.4938,
+        "p_target_first_lo": 0.4939,
         "p_target_first_hi": 0.494,
         "p_no_touch": 0.0352,
         "p_stop_first": 0.4708,
@@ -11521,12 +11490,12 @@
         "n_eff": 345.8,
         "n_ambiguous": 0,
         "ambiguous_pct": 0.0,
-        "p_stop_first_lo": 0.3768,
-        "p_stop_first_hi": 0.3768,
+        "p_stop_first_lo": 0.3767,
+        "p_stop_first_hi": 0.3767,
         "p_target_first_lo": 0.5396,
         "p_target_first_hi": 0.5396,
         "p_no_touch": 0.0836,
-        "p_stop_first": 0.3768,
+        "p_stop_first": 0.3767,
         "p_target_first": 0.5396,
         "pnl_no_touch_pct": -4.663,
         "pnl_no_touch_median_pct": -1.9432,
@@ -11535,8 +11504,8 @@
         "stop_pct": 12.0,
         "target_pct": 6.0,
         "p_stop_first_ci95": [
-          0.3269,
-          0.4287
+          0.3268,
+          0.4286
         ],
         "ci_width_pt": 10.2,
         "bound_spread_pt": 0.0
@@ -11553,8 +11522,8 @@
         "p_no_touch": 0.1368,
         "p_stop_first": 0.3081,
         "p_target_first": 0.5552,
-        "pnl_no_touch_pct": -5.8147,
-        "pnl_no_touch_median_pct": -2.9565,
+        "pnl_no_touch_pct": -5.8149,
+        "pnl_no_touch_median_pct": -2.973,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -11578,7 +11547,7 @@
         "p_no_touch": 0.0004,
         "p_stop_first": 0.8922,
         "p_target_first": 0.1075,
-        "pnl_no_touch_pct": 4.0212,
+        "pnl_no_touch_pct": 4.0211,
         "pnl_no_touch_median_pct": 2.9624,
         "horizon": "extended",
         "horizon_sessions": 20,
@@ -11721,7 +11690,7 @@
         "n_eff": 345.8,
         "n_ambiguous": 3,
         "ambiguous_pct": 0.116,
-        "p_stop_first_lo": 0.6592,
+        "p_stop_first_lo": 0.6593,
         "p_stop_first_hi": 0.6604,
         "p_target_first_lo": 0.3042,
         "p_target_first_hi": 0.3053,
@@ -11739,7 +11708,7 @@
           0.7082
         ],
         "ci_width_pt": 10.0,
-        "bound_spread_pt": 0.12
+        "bound_spread_pt": 0.11
       },
       {
         "n_windows": 1254,
@@ -11846,22 +11815,22 @@
         "n_eff": 345.8,
         "n_ambiguous": 0,
         "ambiguous_pct": 0.0,
-        "p_stop_first_lo": 0.3355,
-        "p_stop_first_hi": 0.3355,
+        "p_stop_first_lo": 0.3354,
+        "p_stop_first_hi": 0.3354,
         "p_target_first_lo": 0.4048,
         "p_target_first_hi": 0.4048,
         "p_no_touch": 0.2597,
-        "p_stop_first": 0.3355,
+        "p_stop_first": 0.3354,
         "p_target_first": 0.4048,
-        "pnl_no_touch_pct": -4.6667,
-        "pnl_no_touch_median_pct": -1.7167,
+        "pnl_no_touch_pct": -4.6668,
+        "pnl_no_touch_median_pct": -1.7201,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
         "target_pct": 8.0,
         "p_stop_first_ci95": [
-          0.2873,
-          0.3865
+          0.2872,
+          0.3864
         ],
         "ci_width_pt": 9.9,
         "bound_spread_pt": 0.0
@@ -11953,7 +11922,7 @@
         "p_no_touch": 0.0094,
         "p_stop_first": 0.8041,
         "p_target_first": 0.1865,
-        "pnl_no_touch_pct": 3.4507,
+        "pnl_no_touch_pct": 3.4506,
         "pnl_no_touch_median_pct": 4.4866,
         "horizon": "extended",
         "horizon_sessions": 20,
@@ -12104,7 +12073,7 @@
         "p_stop_first": 0.4993,
         "p_target_first": 0.3297,
         "pnl_no_touch_pct": -1.4377,
-        "pnl_no_touch_median_pct": 0.667,
+        "pnl_no_touch_median_pct": 0.6671,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 10.0,
@@ -12153,8 +12122,8 @@
         "p_no_touch": 0.3157,
         "p_stop_first": 0.3362,
         "p_target_first": 0.3481,
-        "pnl_no_touch_pct": -3.8657,
-        "pnl_no_touch_median_pct": -0.5551,
+        "pnl_no_touch_pct": -3.8659,
+        "pnl_no_touch_median_pct": -0.56,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -12453,8 +12422,8 @@
         "p_no_touch": 0.3537,
         "p_stop_first": 0.3452,
         "p_target_first": 0.3011,
-        "pnl_no_touch_pct": -3.1924,
-        "pnl_no_touch_median_pct": -0.1194,
+        "pnl_no_touch_pct": -3.1925,
+        "pnl_no_touch_median_pct": -0.1214,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -12753,8 +12722,8 @@
         "p_no_touch": 0.4098,
         "p_stop_first": 0.3467,
         "p_target_first": 0.2435,
-        "pnl_no_touch_pct": -1.8941,
-        "pnl_no_touch_median_pct": 0.6238,
+        "pnl_no_touch_pct": -1.8943,
+        "pnl_no_touch_median_pct": 0.5906,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -12804,7 +12773,7 @@
         "p_stop_first": 0.8928,
         "p_target_first": 0.0691,
         "pnl_no_touch_pct": 7.7037,
-        "pnl_no_touch_median_pct": 8.3415,
+        "pnl_no_touch_median_pct": 8.3414,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 1.5,
@@ -12928,8 +12897,8 @@
         "p_no_touch": 0.1648,
         "p_stop_first": 0.7012,
         "p_target_first": 0.134,
-        "pnl_no_touch_pct": 5.1676,
-        "pnl_no_touch_median_pct": 5.8526,
+        "pnl_no_touch_pct": 5.1673,
+        "pnl_no_touch_median_pct": 5.8505,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 5.0,
@@ -13053,8 +13022,8 @@
         "p_no_touch": 0.4837,
         "p_stop_first": 0.3467,
         "p_target_first": 0.1696,
-        "pnl_no_touch_pct": 0.096,
-        "pnl_no_touch_median_pct": 2.0287,
+        "pnl_no_touch_pct": 0.0958,
+        "pnl_no_touch_median_pct": 2.0278,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -13225,11 +13194,11 @@
         "p_stop_first_hi": 0.7016,
         "p_target_first_lo": 0.0747,
         "p_target_first_hi": 0.0755,
-        "p_no_touch": 0.2238,
+        "p_no_touch": 0.2237,
         "p_stop_first": 0.7012,
         "p_target_first": 0.0751,
-        "pnl_no_touch_pct": 8.0194,
-        "pnl_no_touch_median_pct": 6.7246,
+        "pnl_no_touch_pct": 8.0193,
+        "pnl_no_touch_median_pct": 6.6786,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 5.0,
@@ -13353,8 +13322,8 @@
         "p_no_touch": 0.5638,
         "p_stop_first": 0.3467,
         "p_target_first": 0.0895,
-        "pnl_no_touch_pct": 2.3762,
-        "pnl_no_touch_median_pct": 3.028,
+        "pnl_no_touch_pct": 2.3759,
+        "pnl_no_touch_median_pct": 3.0189,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -13473,7 +13442,7 @@
         "anchor_date": "2026-08-06",
         "anchor_event": "swing_high",
         "anchor_price": 1238.0,
-        "vwap_today": 1130.3005,
+        "vwap_today": 1130.2881,
         "distance_from_close_pct": -12.36,
         "bars_since_anchor": 25
       },
@@ -13481,7 +13450,7 @@
         "anchor_date": "2026-07-15",
         "anchor_event": "swing_low",
         "anchor_price": 936.2,
-        "vwap_today": 1109.8514,
+        "vwap_today": 1109.8452,
         "distance_from_close_pct": -10.74,
         "bars_since_anchor": 41
       },
@@ -13489,7 +13458,7 @@
         "anchor_date": "2026-06-26",
         "anchor_event": "swing_low",
         "anchor_price": 928.8,
-        "vwap_today": 1084.8306,
+        "vwap_today": 1084.8273,
         "distance_from_close_pct": -8.69,
         "bars_since_anchor": 54
       }
@@ -14225,7 +14194,7 @@
         "day": "Tuesday",
         "avg_return_pct": 0.255,
         "std_return_pct": 2.577,
-        "p_value": 0.1142,
+        "p_value": 0.1141,
         "n_samples": 258
       },
       {
@@ -18398,8 +18367,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": -1438463.8407596475,
-        "signal_line": -583592.1153577582,
+        "value": -1439032.7427416793,
+        "signal_line": -583673.3870694771,
         "signal": "neutral"
       }
     },
@@ -19932,7 +19901,7 @@
         -781235.5751505469,
         -1052245.2202055792,
         -1265706.5891260677,
-        -1438463.8407596475
+        -1439032.7427416793
       ],
       "klinger_signal": [
         0.0,
@@ -20187,7 +20156,7 @@
         -178920.66064718814,
         -303681.3120126726,
         -441113.49445744336,
-        -583592.1153577582
+        -583673.3870694771
       ]
     }
   },
@@ -20195,22 +20164,22 @@
     "available": true,
     "latest": {
       "close": 990.5999755859376,
-      "vwap": 1115.3514226093102,
+      "vwap": 1115.335442515549,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": -11.184945344985772,
+        "distance_from_close_pct": -11.183672837319737,
         "position": "below_vwap"
       },
-      "force_index": -2442372.003342255,
+      "force_index": -2444012.1493034717,
       "force_index_meta": {
         "signal": "sell"
       },
-      "chaikin_oscillator": -93549.4813822303,
+      "chaikin_oscillator": -93615.34977336228,
       "chaikin_oscillator_meta": {
         "cross_recent": null,
         "signal": "neutral"
       },
-      "vroc_14": 64.85080336648814,
+      "vroc_14": 65.229108220692,
       "vroc_14_meta": {
         "signal": "high_activity"
       }
@@ -20724,7 +20693,7 @@
         1143.2719922444044,
         1134.1225772355633,
         1125.0274598847059,
-        1115.3514226093102
+        1115.335442515549
       ],
       "force_index": [
         null,
@@ -20979,7 +20948,7 @@
         -1325957.179440683,
         -2466229.2634603214,
         -2015602.2258231328,
-        -2442372.003342255
+        -2444012.1493034717
       ],
       "chaikin_oscillator": [
         0.0,
@@ -21234,7 +21203,7 @@
         -120058.05369187705,
         -129333.62111901725,
         -89331.9569900264,
-        -93549.4813822303
+        -93615.34977336228
       ],
       "vroc_14": [
         null,
@@ -21489,7 +21458,7 @@
         -1.059714045416316,
         56.68587877139806,
         30.529127023869133,
-        64.85080336648814
+        65.229108220692
       ]
     }
   },
@@ -21521,7 +21490,7 @@
       "classification": "low"
     },
     "volume_zscore": {
-      "value": -0.2921,
+      "value": -0.2888,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -21781,21 +21750,21 @@
       },
       "volume": {
         "n_zero_volume_bars": 1,
-        "mean_volume_60d": 232943.03333333333,
-        "median_volume_60d": 194103.5,
-        "volume_consistency_score": 0.183817646277305
+        "mean_volume_60d": 232950.45,
+        "median_volume_60d": 194326.0,
+        "volume_consistency_score": 0.1838502411592995
       },
       "liquidity": {
-        "liquidity_score": 208511677.6619059,
+        "liquidity_score": 208526371.5615438,
         "liquidity_classification": "high"
       },
       "freshness": {
         "last_bar_date": "2026-09-11T00:00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 80.97116355666448,
+        "overall_quality_score": 76.9716524798944,
         "overall_label": "good",
         "warnings": [
           "1 bar(s) à volume zéro (daily)"
@@ -21838,11 +21807,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-11T12:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 81.57320181508132,
+        "overall_quality_score": 77.57320181508132,
         "overall_label": "good",
         "warnings": [
           "64 bar(s) à volume zéro (h4)"
@@ -21887,11 +21856,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-11T15:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 82.60910031169354,
+        "overall_quality_score": 78.60910031169354,
         "overall_label": "good",
         "warnings": [
           "23 bar(s) à volume zéro (h1)"
@@ -21899,7 +21868,7 @@
       }
     },
     "summary": {
-      "worst_tf_quality_score": 80.97116355666448,
+      "worst_tf_quality_score": 76.9716524798944,
       "worst_tf": "daily",
       "recommendation": "review_outliers"
     }

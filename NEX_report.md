@@ -1,11 +1,11 @@
 # NEX
 
-**Generated** : 2026-09-11T21:49:45.997624+00:00  
+**Generated** : 2026-09-14T00:12:11.969091+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite normal · €142.20  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-11 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)  
 > ↳ spot €142.20 (+2.7% vs entrée) · entrée €138.43 · stop €127.36 · T1 €142.45 · R/R 0.36  
 > ↳ P(T1 av. stop) 53 % · EV/risk 0.068 · ¼-Kelly 0.027 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -185,13 +185,13 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
 | 0.5 ATR | 1.514 % | 140.0464 | 34.74 % | 52.75 % | 61.55 % | 70.84 % | 80.3 % | 87.3 % |
 | 0.75 ATR | 2.272 % | 138.9696 | 20.51 % | 36.74 % | 47.59 % | 59.01 % | 70.2 % | 80.7 % |
 | 1.0 ATR | 3.029 % | 137.8929 | 10.6 % | 24.36 % | 34.91 % | 48.77 % | 61.49 % | 74.0 % |
-| 1.25 ATR | 3.786 % | 136.8161 | 4.81 % | 16.21 % | 24.98 % | 39.7 % | 54.36 % | 67.5 % |
-| 1.5 ATR | 4.543 % | 135.7393 | 2.36 % | 11.0 % | 18.39 % | 30.64 % | 46.63 % | 60.0 % |
+| 1.25 ATR | 3.786 % | 136.8161 | 4.81 % | 16.21 % | 24.98 % | 39.7 % | 54.36 % | 67.6 % |
+| 1.5 ATR | 4.543 % | 135.7393 | 2.36 % | 10.9 % | 18.39 % | 30.64 % | 46.63 % | 60.0 % |
 | 2.0 ATR | 6.058 % | 133.5857 | 0.79 % | 5.11 % | 9.83 % | 19.11 % | 35.25 % | 50.7 % |
 | 2.5 ATR | 7.572 % | 131.4321 | 0.49 % | 2.65 % | 5.6 % | 11.33 % | 24.75 % | 38.9 % |
 | 3.0 ATR | 9.087 % | 129.2786 | 0.2 % | 1.67 % | 3.24 % | 7.09 % | 17.52 % | 30.4 % |
 | 4.0 ATR | 12.116 % | 124.9714 | 0.1 % | 0.49 % | 0.88 % | 1.87 % | 7.52 % | 17.9 % |
-| 6.0 ATR | 18.174 % | 116.3571 | 0.0 % | 0.0 % | 0.0 % | 0.2 % | 1.39 % | 4.4 % |
+| 6.0 ATR | 18.174 % | 116.3571 | 0.0 % | 0.0 % | 0.0 % | 0.2 % | 1.29 % | 4.3 % |
 
 **A quelle distance poser pour n'etre sorti que p % du temps** (lecture INVERSE — c'est elle qui sert a arbitrer) :
 
@@ -201,16 +201,16 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
 | **2 s.** | 0.24 ATR | 0.54 ATR | 0.62 ATR | 0.83 ATR | 0.99 ATR | 1.13 ATR | 1.58 ATR | 2.02 ATR |
 | **3 s.** | 0.31 ATR | 0.71 ATR | 0.80 ATR | 1.05 ATR | 1.25 ATR | 1.44 ATR | 1.99 ATR | 2.63 ATR |
 | **5 s.** | 0.42 ATR | 0.97 ATR | 1.10 ATR | 1.44 ATR | 1.75 ATR | 1.96 ATR | 2.66 ATR | 3.40 ATR |
-| **10 s.** | 0.63 ATR | 1.39 ATR | 1.57 ATR | 2.11 ATR | 2.49 ATR | 2.83 ATR | 3.75 ATR | 4.82 ATR |
-| **20 s.** | 0.96 ATR | 2.03 ATR | 2.24 ATR | 2.85 ATR | 3.43 ATR | 3.83 ATR | 5.17 ATR | 5.91 ATR |
+| **10 s.** | 0.63 ATR | 1.39 ATR | 1.57 ATR | 2.11 ATR | 2.49 ATR | 2.83 ATR | 3.75 ATR | 4.81 ATR |
+| **20 s.** | 0.96 ATR | 2.03 ATR | 2.24 ATR | 2.85 ATR | 3.43 ATR | 3.83 ATR | 5.16 ATR | 5.90 ATR |
 
 **Distance optimale par horizon** (plage utile mesuree, puis meilleur point unique de cette plage) :
 - **1 seance(s)** : plage utile 0.398–0.35 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ✅ optimum identifie (78.1 % des re-echantillons)
 - **2 seance(s)** : plage utile 0.621–0.75 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (2.272 %, prix 138.9692), p(touche) 36.74 % (en stress 88.24 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 49.6 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **3 seance(s)** : plage utile 0.801–1.25 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (3.029 %, prix 137.8928), p(touche) 34.91 % (en stress 85.29 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 41.9 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **5 seance(s)** : plage utile 1.104–1.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.25 ATR (3.786 %, prix 136.8163), p(touche) 39.7 % (en stress 93.14 %)  ✅ optimum identifie (62.0 % des re-echantillons)
-- **10 seance(s)** : plage utile 1.572–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (6.058 %, prix 133.5855), p(touche) 35.25 % (en stress 98.02 %)  ✅ optimum identifie (72.5 % des re-echantillons)
-- **20 seance(s)** : plage utile 2.242–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (7.572 %, prix 131.4326), p(touche) 38.9 % (en stress 98.0 %)  ✅ optimum identifie (70.0 % des re-echantillons)
+- **10 seance(s)** : plage utile 1.572–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (6.058 %, prix 133.5855), p(touche) 35.25 % (en stress 98.02 %)  ✅ optimum identifie (72.8 % des re-echantillons)
+- **20 seance(s)** : plage utile 2.242–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (7.572 %, prix 131.4326), p(touche) 38.9 % (en stress 98.0 %)  ✅ optimum identifie (70.4 % des re-echantillons)
 
 - p(touche) = part des fenetres de N seances ou le prix est venu chercher un stop pose a cette distance SOUS le prix d'entree de la fenetre. Mesure sur les barres reelles du titre, pas modelisee.
 
@@ -320,9 +320,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-09-11 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -341,5 +341,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (760827 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (760468 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

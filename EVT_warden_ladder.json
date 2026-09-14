@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-09-11T21:41:41.404962+00:00",
+  "generated_at": "2026-09-14T00:06:33.284217+00:00",
   "ticker": "EVT",
   "spot": 2.968,
   "atr_14": 0.1083,
@@ -15,9 +15,9 @@
   "target_note": "la cible sert a mesurer le R/R vs SPOT. Elle est prise sur une RESISTANCE reelle quand il en existe une au-dessus du spot — jamais sur la cible d'un plan d'entree sur repli, qui peut se situer SOUS le prix courant et rendrait tout R/R absurde.",
   "anchor_evidence": {
     "source": "registre point-in-time",
-    "measured_at": "2026-09-10T21:47:09.598993+00:00",
+    "measured_at": "2026-09-11T21:46:44.340781+00:00",
     "stale": false,
-    "generated_at": "2026-09-10T21:47:09.598993+00:00",
+    "generated_at": "2026-09-11T21:46:44.340781+00:00",
     "buckets": [
       {
         "bucket": "<1",
@@ -25,14 +25,14 @@
           0.0,
           1.0
         ],
-        "n": 1176,
-        "n_tickers": 59,
-        "p_break": 0.4481,
+        "n": 1185,
+        "n_tickers": 60,
+        "p_break": 0.4641,
         "ci95": [
-          0.4194,
-          0.4789
+          0.4337,
+          0.4939
         ],
-        "coinflip": false,
+        "coinflip": true,
         "usable": true
       },
       {
@@ -41,12 +41,12 @@
           1.0,
           3.0
         ],
-        "n": 1211,
-        "n_tickers": 60,
-        "p_break": 0.3782,
+        "n": 1221,
+        "n_tickers": 61,
+        "p_break": 0.3767,
         "ci95": [
-          0.3496,
-          0.4086
+          0.3471,
+          0.4089
         ],
         "coinflip": false,
         "usable": true
@@ -57,28 +57,12 @@
           3.0,
           6.0
         ],
-        "n": 337,
+        "n": 333,
         "n_tickers": 58,
-        "p_break": 0.3383,
+        "p_break": 0.3243,
         "ci95": [
-          0.2865,
-          0.3913
-        ],
-        "coinflip": false,
-        "usable": true
-      },
-      {
-        "bucket": ">=6",
-        "dist_atr_range": [
-          6.0,
-          null
-        ],
-        "n": 40,
-        "n_tickers": 22,
-        "p_break": 0.25,
-        "ci95": [
-          0.1249,
-          0.3902
+          0.272,
+          0.3788
         ],
         "coinflip": false,
         "usable": true
@@ -94,7 +78,7 @@
     "cvar95_budget_stale": true,
     "cvar95_budget_measured_at": null,
     "cvar95_budget_default_witness": 12.0,
-    "anchor_buffer_atr": 0.566,
+    "anchor_buffer_atr": 0.637,
     "anchor_buffer_source": {
       "source": "registre point-in-time, quantile 90 % par classe d'ATR",
       "stale": false,
@@ -102,15 +86,15 @@
       "class": "atr_faible",
       "atr_pct_range": [
         0.0,
-        3.908
+        3.991
       ],
-      "n": 545,
+      "n": 542,
       "ci95": [
-        0.478,
-        0.744
+        0.492,
+        0.748
       ],
-      "survival_at_0_30": 0.8037,
-      "measured_at": "2026-09-10T21:47:09.598993+00:00"
+      "survival_at_0_30": 0.7878,
+      "measured_at": "2026-09-11T21:46:44.340781+00:00"
     },
     "target_buffer_atr": 0.3,
     "anchor_buffer_default_witness": 0.3,

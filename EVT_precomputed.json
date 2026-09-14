@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE0005664809",
-    "generated_at": "2026-09-11T21:41:35.172467+00:00",
+    "generated_at": "2026-09-14T00:06:28.659240+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -428,7 +428,7 @@
           3.056,
           2.966,
           2.968,
-          1198528
+          1201293
         ]
       ],
       "h4": [
@@ -1255,8 +1255,8 @@
       "macd_hist": -0.007087091019902403,
       "macd_signal_cross": "bearish_recent",
       "obv_trend": "falling",
-      "mfi_14": 24.428247177581042,
-      "cmf_20": -0.3888431332587084,
+      "mfi_14": 24.42259494932817,
+      "cmf_20": -0.38894458473252336,
       "adl_trend": "falling",
       "adx_14": 32.65023507894791,
       "plus_di_14": 12.508419618649343,
@@ -1264,7 +1264,7 @@
       "di_spread_14": -21.85485134550818,
       "choppiness_14": 46.1921492347694,
       "regime_label": "trending",
-      "volume_ratio_ma20": 1.5522225533380294,
+      "volume_ratio_ma20": 1.5555250108785739,
       "distance_ma20_pct": -9.274318420957115,
       "distance_ma50_pct": -18.20807488392298,
       "distance_ma200_pct": -39.27682672951875
@@ -1710,7 +1710,7 @@
           "rr": 0.61,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7948,
+          "p_touch": 0.7949,
           "distance_pct": 2.45
         },
         "t3": {
@@ -1719,7 +1719,7 @@
           "rr": 0.92,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7948,
+          "p_touch": 0.7949,
           "distance_pct": 3.68
         }
       }
@@ -1754,7 +1754,7 @@
           "rr": 1.39,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.722,
+          "p_touch": 0.7219,
           "distance_pct": 5.48
         },
         "t3": {
@@ -1789,7 +1789,7 @@
           "rr": 0.63,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2782,
+          "p_touch": 0.2783,
           "distance_pct": 3.87
         },
         "t2": {
@@ -1798,7 +1798,7 @@
           "rr": 1.26,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5884,
+          "p_touch": 0.5885,
           "distance_pct": 7.75
         },
         "t3": {
@@ -2102,7 +2102,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-09-11T21:41:02.848320+00:00",
+    "generated_at": "2026-09-14T00:06:05.535949+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7792,7 +7792,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-09-11T21:40:42.723686+00:00",
+    "generated_at": "2026-09-14T00:05:51.164253+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8010,55 +8010,24 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-09-11T21:41:10.915509+00:00",
+    "generated_at": "2026-09-14T00:06:11.815745+00:00",
     "ticker": "EVT",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 4,
+    "n_events": 2,
     "events": [
-      {
-        "date": "2026-09-11",
-        "type": "macro",
-        "label": "US CPI (headline)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-11",
-        "type": "macro",
-        "label": "US Core CPI (ex food & energy)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-09-15",
         "type": "ex_dividend",
         "label": "EVT ex-dividend",
         "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8071,9 +8040,10 @@
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8220,7 +8190,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-09-11T21:41:09.274039+00:00",
+    "generated_at": "2026-09-14T00:06:10.385472+00:00",
     "ticker": "EVT",
     "yahoo": "EVT.DE",
     "source": "yfinance.Ticker.info",
@@ -8247,9 +8217,9 @@
       "shares_outstanding": 177694559.0,
       "float_shares": 135385632.0,
       "free_float_pct": 76.2,
-      "avg_volume_3m": 838740.0,
-      "adv_str": "838.7 k titres",
-      "avg_volume_10d": 725175.0,
+      "avg_volume_3m": 849322.0,
+      "adv_str": "849.3 k titres",
+      "avg_volume_10d": 802901.0,
       "archetype_suggested": "turnaround",
       "archetype_basis": "marge nette -27.5 % < 0, croissance faible ou inconnue",
       "business_summary_raw": "Evotec SE operates as a drug discovery and development company in the United States, Germany, France, the United Kingdom, Switzerland, and internationally. It operates in two segments, Shared R&D and Just  Evotec Biologics. The company is developing pharmaceutical products in various therapeutic areas, such as oncology, autoimmune, cancer, diabetes, heart failure, immunology, pain and inflammation, infectious, kidney, liver, respiratory, fibrotic and metabolic diseases, and rare diseases. It is also developingcentral nervous system (CNS) and cardiometabolic diseases; and animal and women health. The company has collaboration agreements with Mass General Brigham and Joslin Diabetes Center focusing on cardiometabolic diseases; BMS antiviral; Novo Nordisk cell therapy; University of Oxford; German Cancer Research Center; University Hospital in Hamburg; University of Toronto, Harvard, and Yale; Johns Hopkins University; Ospedale San Raffaele (OSR); and National University of Singapore. In addition, it has a partnership with LAB282, LAB150, beLAB2122, beLAB1407, LAB eN², Danube Labs, VC Amplitude Ventures, LaB eN2, and 65LAB. Further, the company serves pharma and biotechnology companies, academic institutions, patient advocacy groups, and venture capital. Evotec SE has strategic collaboration with Almirall, S.A. for the development of novel therapeutics for severe skin diseases, including a range of immune-mediated inflammatory conditions. The company collaborate with Odyssey Therapeutics, Inc. to designs and develops AI based discovery platform to discover new treatments in autoimmune and inflammatory diseases. The company was formerly known as Evotec AG and changed its name to Evotec SE in April 2019. Evotec SE was incorporated in 1993 and is headquartered in Hamburg, Germany."
@@ -8324,14 +8294,14 @@
     },
     "ownership": {
       "insiders_pct": 9.97,
-      "institutions_pct": 62.17,
+      "institutions_pct": 62.12,
       "short_pct_float": null,
       "short_ratio_days": null
     },
     "market": {
       "beta": 1.26,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": -47.68,
+      "change_52w_pct": -50.1,
       "low_52w": 2.97,
       "high_52w": 7.3
     },
@@ -8421,7 +8391,7 @@
       },
       {
         "field": "identity.adv_str",
-        "value": "838.7 k titres",
+        "value": "849.3 k titres",
         "from": "fundamentals.identity.adv_str"
       },
       {
@@ -8561,7 +8531,7 @@
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 62.17,
+        "value": 62.12,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -8718,7 +8688,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-09-11T21:40:40.652268+00:00",
+    "generated_at": "2026-09-14T00:05:49.406861+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/EVT_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1273,
@@ -9126,7 +9096,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-09-11T21:40:42.436731+00:00",
+    "generated_at": "2026-09-14T00:05:50.889729+00:00",
     "ticker": "EVT",
     "source_csv": "EVT_daily_long.csv",
     "n_sessions": 1274,
@@ -13243,7 +13213,7 @@
         "anchor_date": "2026-08-13",
         "anchor_event": "swing_high",
         "anchor_price": 3.88,
-        "vwap_today": 3.304,
+        "vwap_today": 3.3039,
         "distance_from_close_pct": -10.17,
         "bars_since_anchor": 20
       },
@@ -13259,7 +13229,7 @@
         "anchor_date": "2026-07-01",
         "anchor_event": "swing_high",
         "anchor_price": 5.23,
-        "vwap_today": 3.5754,
+        "vwap_today": 3.5753,
         "distance_from_close_pct": -16.99,
         "bars_since_anchor": 51
       }
@@ -18168,8 +18138,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": -2071597.6687219646,
-        "signal_line": -783164.7445191487,
+        "value": -2075696.4721793607,
+        "signal_line": -783750.2878702052,
         "signal": "sell"
       }
     },
@@ -19702,7 +19672,7 @@
         272014.2875211034,
         -306333.7594993692,
         -586528.6341403108,
-        -2071597.6687219646
+        -2075696.4721793607
       ],
       "klinger_signal": [
         0.0,
@@ -19957,7 +19927,7 @@
         -608587.9797538028,
         -565408.8054317408,
         -568425.9238186794,
-        -783164.7445191487
+        -783750.2878702052
       ]
     }
   },
@@ -19965,22 +19935,22 @@
     "available": true,
     "latest": {
       "close": 2.9679999351501465,
-      "vwap": 3.2688007192988646,
+      "vwap": 3.268752002799207,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": -9.202175659495017,
+        "distance_from_close_pct": -9.200822435948357,
         "position": "below_vwap"
       },
-      "force_index": -38161.573947322446,
+      "force_index": -38191.59393752821,
       "force_index_meta": {
         "signal": "sell"
       },
-      "chaikin_oscillator": -1319240.1011722889,
+      "chaikin_oscillator": -1320080.775686184,
       "chaikin_oscillator_meta": {
         "cross_recent": null,
         "signal": "neutral"
       },
-      "vroc_14": 279.80865823089675,
+      "vroc_14": 280.68487550742964,
       "vroc_14_meta": {
         "signal": "high_activity"
       }
@@ -20494,7 +20464,7 @@
         3.3825399802755025,
         3.36123460130662,
         3.327212714449284,
-        3.2688007192988646
+        3.268752002799207
       ],
       "force_index": [
         null,
@@ -20749,7 +20719,7 @@
         -23149.910787171517,
         -21768.723582903312,
         -29340.48655823279,
-        -38161.573947322446
+        -38191.59393752821
       ],
       "chaikin_oscillator": [
         0.0,
@@ -21004,7 +20974,7 @@
         -922866.3386626691,
         -1009619.2539027557,
         -1037689.9385704193,
-        -1319240.1011722889
+        -1320080.775686184
       ],
       "vroc_14": [
         null,
@@ -21259,7 +21229,7 @@
         1.151120888940692,
         -18.50822918404503,
         25.82011100899872,
-        279.80865823089675
+        280.68487550742964
       ]
     }
   },
@@ -21291,7 +21261,7 @@
       "classification": "low"
     },
     "volume_zscore": {
-      "value": 0.4203,
+      "value": 0.4237,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -21551,22 +21521,22 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 876976.5666666667,
+        "mean_volume_60d": 877022.65,
         "median_volume_60d": 708029.5,
         "volume_consistency_score": 0.0
       },
       "liquidity": {
-        "liquidity_score": 2709018.4768334944,
+        "liquidity_score": 2709292.027494184,
         "liquidity_classification": "low"
       },
       "freshness": {
         "last_bar_date": "2026-09-11T00:00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 71.4638988625049,
-        "overall_label": "good",
+        "overall_quality_score": 67.4638988625049,
+        "overall_label": "acceptable",
         "warnings": [
           "liquidité faible (low, daily)",
           "gap down de 20.4% le 2026-07-14 (daily)"
@@ -21609,12 +21579,12 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-11T12:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 71.23989898989899,
-        "overall_label": "good",
+        "overall_quality_score": 67.23989898989899,
+        "overall_label": "acceptable",
         "warnings": [
           "64 bar(s) à volume zéro (h4)",
           "liquidité faible (very_low, h4)",
@@ -21654,12 +21624,12 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-11T15:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 71.28381642512078,
-        "overall_label": "good",
+        "overall_quality_score": 67.28381642512078,
+        "overall_label": "acceptable",
         "warnings": [
           "23 bar(s) à volume zéro (h1)",
           "liquidité faible (very_low, h1)"
@@ -21667,9 +21637,9 @@
       }
     },
     "summary": {
-      "worst_tf_quality_score": 71.23989898989899,
+      "worst_tf_quality_score": 67.23989898989899,
       "worst_tf": "h4",
-      "recommendation": "review_outliers"
+      "recommendation": "fetch_again"
     }
   },
   "qa_flags": {

@@ -1,11 +1,11 @@
 # EVT
 
-**Generated** : 2026-09-11T21:41:35.172467+00:00  
+**Generated** : 2026-09-14T00:06:28.659240+00:00  
 **Santé technique** : 1/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite low · €2.97  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-11 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)  
 > ↳ spot €2.97 (+3.8% vs entrée) · entrée €2.86 · stop €2.75 · T1 €2.89 · R/R 0.27  
 > ↳ P(T1 av. stop) 76 % · EV/risk 0.057 · ¼-Kelly 0.062 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −4.0% cohérent avec le bruit 5 s (EV-optimal ≈ −4.0%)  
@@ -340,9 +340,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-09-11 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -353,7 +353,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B -0.09 · largeur 15.6%
 - **ATR** : 0.11 (1.0e pct 1a)  _(volatilite basse)_
 - **OBV/CMF** : OBV falling · CMF -0.389  _(distribution)_
-- **Vol ratio** : 1.55  _(volume au-dessus de la moyenne)_
+- **Vol ratio** : 1.56  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 46.2  _(transition)_
 - **MA** : MA20 3.27 · MA50 3.63 · MA200 4.89  _(prix < MA20)_
 - **Dist MA** : MA20 -9.3% · MA50 -18.2% · MA200 -39.3%
@@ -361,5 +361,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (763470 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (761177 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,11 +1,11 @@
 # SRT3
 
-**Generated** : 2026-09-11T21:38:57.073157+00:00  
+**Generated** : 2026-09-14T00:04:35.555538+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €232.90  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-11 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)  
 > ↳ spot €232.90 (+0.5% vs entrée) · entrée €231.73 · stop €228.25 · T1 €234.39 · R/R 0.76  
 > ↳ P(T1 av. stop) 51 % _(réel 5 s)_ · EV/risk -0.021 _(réel 5 s)_ (GBM 0.061) · ¼-Kelly 0.034 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −1.5% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
@@ -63,14 +63,15 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
    - viole : R/R 0.54 < plancher 3.00 (mesure vs SPOT, gap inclus)
 - Budget de queue : **12.0 %** du notionnel — ⚠ VALEUR FIGEE (valeur de repli (ligne absente de l'allocation)), PAS une mesure. L'allocation derivee de la contrainte du compte n'etait pas disponible.
 - Candidats (la structure propose, la statistique elimine) :
-   - ⚪ sr_based a 0.82 ATR (stop 3.877 %) — p(stop avant cible) 0.5564 [0.50 ; 0.61], R/R 0.849, perte reelle 7.669 % (gap inclus), EV -1.951 % — **REFUSE**
-      - refuse : p_stop_first 0.556, borne haute 0.608 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
+   - ⚪ sr_based a 0.82 ATR (stop 4.076 %) — p(stop avant cible) 0.5383 [0.49 ; 0.59], R/R 0.849, perte reelle 7.669 % (gap inclus), EV -1.7688 % — **REFUSE**
+      - refuse : p_stop_first 0.538, borne haute 0.590 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
       - refuse : R/R 0.85 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.95 %) : P(cible) 33.9 % x 6.51 % + P(rien) 10.5 % x 1.04 % ne couvrent pas P(stop) 55.6 % x 7.67 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.77 %) : P(cible) 34.4 % x 6.51 % + P(rien) 11.8 % x 1.01 % ne couvrent pas P(stop) 53.8 % x 7.67 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - 🟢 support a 6.7 ATR (stop 20.326 %) — p(stop avant cible) 0.0099 [0.00 ; 0.02], R/R 0.32, perte reelle 20.326 % (gap inclus), EV 0.6735 % — **REFUSE**
+   - 🔴 support a 6.7 ATR (stop 20.525 %) — p(stop avant cible) 0.0099 [0.00 ; 0.02], R/R 0.317, perte reelle 20.525 % (gap inclus), EV 0.6715 % — **REFUSE**
       - refuse : R/R 0.32 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 20.33 % > budget 12.00 %
+      - refuse : CVaR 95 % 20.53 % > budget 12.00 %
+      - ⚠ support DETECTE a 0.72 ATR du spot — compartiment <1, mesure a 46.4 % de casse (IC clusterise [0.434 ; 0.494] sur 1185 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
    - ⚪ atr_grid a 0.25 ATR (stop 0.699 %) — p(stop avant cible) 0.8897 [0.85 ; 0.92], R/R 4.098, perte reelle 1.589 % (gap inclus), EV -0.7317 % — **REFUSE**
       - refuse : cible atteinte seulement 10.3 % du temps (< 15 %) meme a 10 seances : le R/R de 4.10 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.890, borne haute 0.919 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
@@ -132,7 +133,7 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
    - ⚪ atr_grid a 6.0 ATR (stop 16.782 %) — p(stop avant cible) 0.0143 [0.01 ; 0.03], R/R 0.388, perte reelle 16.782 % (gap inclus), EV 0.6951 % — **REFUSE**
       - refuse : R/R 0.39 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 16.78 % > budget 12.00 %
-   - 🟢 grid_snapped a 6.7 ATR (stop 19.582 %) — p(stop avant cible) 0.0124 [0.00 ; 0.03], R/R 0.333, perte reelle 19.582 % (gap inclus), EV 0.6661 % — **REFUSE**
+   - 🔴 grid_snapped a 6.7 ATR (stop 19.582 %) — p(stop avant cible) 0.0124 [0.00 ; 0.03], R/R 0.333, perte reelle 19.582 % (gap inclus), EV 0.6661 % — **REFUSE**
       - refuse : R/R 0.33 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 19.58 % > budget 12.00 %
    - ⚪ atr_grid a 7.5 ATR (stop 20.978 %) — p(stop avant cible) 0.0097 [0.00 ; 0.02], R/R 0.31, perte reelle 20.978 % (gap inclus), EV 0.6684 % — **REFUSE**
@@ -297,9 +298,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-09-11 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -318,5 +319,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (758222 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (756272 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

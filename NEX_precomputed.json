@@ -6,7 +6,7 @@
     "exchange": "Euronext Paris",
     "currency": "EUR",
     "isin": "FR0000044448",
-    "generated_at": "2026-09-11T21:49:45.997624+00:00",
+    "generated_at": "2026-09-14T00:12:11.969091+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1423,9 +1423,9 @@
         "confidence_is_fit_not_probability": true,
         "historical_stats": {
           "available": true,
-          "n_samples": 28,
+          "n_samples": 29,
           "completion_rate": 1.0,
-          "avg_post_completion_return_pct": -4.44,
+          "avg_post_completion_return_pct": -4.3,
           "horizon_bars": 20,
           "low_sample": false,
           "confidence_is_fit_not_probability": true,
@@ -1777,7 +1777,7 @@
           "rr": 0.36,
           "rr_basis": "entry_mid",
           "capped": false,
-          "p_touch": 0.7948,
+          "p_touch": 0.7949,
           "distance_pct": 2.9
         },
         "t2": {
@@ -1786,7 +1786,7 @@
           "rr": 0.37,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7948,
+          "p_touch": 0.7949,
           "distance_pct": 2.93
         },
         "t3": {
@@ -1795,7 +1795,7 @@
           "rr": 0.37,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7948,
+          "p_touch": 0.7949,
           "distance_pct": 2.96
         }
       }
@@ -1865,7 +1865,7 @@
           "rr": 0.62,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2782,
+          "p_touch": 0.2783,
           "distance_pct": 3.12
         },
         "t2": {
@@ -1874,7 +1874,7 @@
           "rr": 1.25,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5884,
+          "p_touch": 0.5885,
           "distance_pct": 6.24
         },
         "t3": {
@@ -2178,7 +2178,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-09-11T21:49:13.154125+00:00",
+    "generated_at": "2026-09-14T00:11:46.974268+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7919,7 +7919,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-09-11T21:48:51.485345+00:00",
+    "generated_at": "2026-09-14T00:11:32.862948+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8148,55 +8148,24 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-09-11T21:49:22.985687+00:00",
+    "generated_at": "2026-09-14T00:11:54.879791+00:00",
     "ticker": "NEX",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 3,
+    "n_events": 1,
     "events": [
-      {
-        "date": "2026-09-11",
-        "type": "macro",
-        "label": "US CPI (headline)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-11",
-        "type": "macro",
-        "label": "US Core CPI (ex food & energy)",
-        "importance": "high",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-09-16",
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8341,7 +8310,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-09-11T21:49:20.681221+00:00",
+    "generated_at": "2026-09-14T00:11:53.030227+00:00",
     "ticker": "NEX",
     "yahoo": "NEX.PA",
     "source": "yfinance.Ticker.info",
@@ -8368,9 +8337,9 @@
       "shares_outstanding": 43663474.0,
       "float_shares": 37904927.0,
       "free_float_pct": 86.8,
-      "avg_volume_3m": 162881.0,
-      "adv_str": "162.9 k titres",
-      "avg_volume_10d": 123449.0,
+      "avg_volume_3m": 163917.0,
+      "adv_str": "163.9 k titres",
+      "avg_volume_10d": 131568.0,
       "archetype_suggested": null,
       "archetype_basis": "aucune regle ne tranche — a l'appreciation du /full_brief",
       "business_summary_raw": "Nexans S.A. manufactures and sells cables in France, Canada, Norway, Italy, and internationally. It operates through PWR-Grid & Connect, PWR-Transmission, and Other segments. The company provides cables for the energy distribution networks, as well as equipment cables for buildings. It also offers design, engineering, financing, asset management, and systems management solutions for offshore wind farms, subsea interconnections, onshore high voltage, and subsea data transmissions; and smart solutions for the oil and gas sector. In addition, the company offers wire rods and electrical wires; and engages in winding wire production operations. The company was formerly known as Atalec and changed its name to Nexans S.A. in October 2000. The company was incorporated in 1994 and is headquartered in Courbevoie, France."
@@ -8398,11 +8367,11 @@
       "debt_to_equity": 115.8,
       "current_ratio": 1.04,
       "quick_ratio": 0.6,
-      "eps_trailing": 4.27,
-      "eps_str": "4.27 EUR",
+      "eps_trailing": 4.28,
+      "eps_str": "4.28 EUR",
       "eps_forward": 9.19,
       "eps_growth_pct": -72.3,
-      "dividend_yield_pct": 2.08,
+      "dividend_yield_pct": 2.04,
       "dividend_yield_note": null,
       "dividend_rate": 2.9,
       "payout_ratio_pct": 67.76,
@@ -8423,7 +8392,7 @@
       "ev_ebitda_ttm": 9.77,
       "ev_revenue_ttm": 0.85,
       "ps_ttm": 0.72,
-      "pe_trailing": 33.3,
+      "pe_trailing": 33.22,
       "pe_fwd": 15.48,
       "peg": 0.41,
       "price_to_book": 2.92,
@@ -8444,14 +8413,14 @@
     },
     "ownership": {
       "insiders_pct": 8.09,
-      "institutions_pct": 65.29,
+      "institutions_pct": 65.28,
       "short_pct_float": null,
       "short_ratio_days": null
     },
     "market": {
       "beta": 0.943,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": 4.11,
+      "change_52w_pct": 6.12,
       "low_52w": 109.7,
       "high_52w": 169.0
     },
@@ -8541,7 +8510,7 @@
       },
       {
         "field": "identity.adv_str",
-        "value": "162.9 k titres",
+        "value": "163.9 k titres",
         "from": "fundamentals.identity.adv_str"
       },
       {
@@ -8606,7 +8575,7 @@
       },
       {
         "field": "financials.eps_str",
-        "value": "4.27 EUR",
+        "value": "4.28 EUR",
         "from": "fundamentals.financials.eps_str"
       },
       {
@@ -8616,7 +8585,7 @@
       },
       {
         "field": "financials.dividend_yield_pct",
-        "value": 2.08,
+        "value": 2.04,
         "from": "fundamentals.financials.dividend_yield_pct"
       },
       {
@@ -8676,7 +8645,7 @@
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 65.29,
+        "value": 65.28,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -8838,7 +8807,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-09-11T21:48:49.477420+00:00",
+    "generated_at": "2026-09-14T00:11:31.267684+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/NEX_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1279,
@@ -9225,10 +9194,10 @@
       "gap_best": 15.284
     },
     "asymmetry": {
-      "n_down": 591,
-      "n_up": 681,
-      "mean_down_pct": -0.742,
-      "mean_up_pct": 0.716,
+      "n_down": 595,
+      "n_up": 677,
+      "mean_down_pct": -0.737,
+      "mean_up_pct": 0.721,
       "worst_down_pct": -9.596,
       "best_up_pct": 15.284,
       "downside_heavier": false
@@ -9246,7 +9215,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-09-11T21:48:51.141126+00:00",
+    "generated_at": "2026-09-14T00:11:32.618623+00:00",
     "ticker": "NEX",
     "source_csv": "NEX_daily_long.csv",
     "n_sessions": 1280,
@@ -9835,8 +9804,8 @@
       {
         "n_windows": 1260,
         "n_eff": 345.8,
-        "n_ambiguous": 6,
-        "ambiguous_pct": 0.399,
+        "n_ambiguous": 5,
+        "ambiguous_pct": 0.398,
         "p_stop_first_lo": 0.2628,
         "p_stop_first_hi": 0.2668,
         "p_target_first_lo": 0.7332,
@@ -10135,7 +10104,7 @@
       {
         "n_windows": 1260,
         "n_eff": 345.8,
-        "n_ambiguous": 3,
+        "n_ambiguous": 2,
         "ambiguous_pct": 0.072,
         "p_stop_first_lo": 0.3066,
         "p_stop_first_hi": 0.3074,
@@ -10435,8 +10404,8 @@
       {
         "n_windows": 1260,
         "n_eff": 345.8,
-        "n_ambiguous": 2,
-        "ambiguous_pct": 0.007,
+        "n_ambiguous": 1,
+        "ambiguous_pct": 0.006,
         "p_stop_first_lo": 0.3749,
         "p_stop_first_hi": 0.375,
         "p_target_first_lo": 0.6187,
@@ -10495,7 +10464,7 @@
         "p_stop_first": 0.2469,
         "p_target_first": 0.7289,
         "pnl_no_touch_pct": -3.5797,
-        "pnl_no_touch_median_pct": -3.1033,
+        "pnl_no_touch_median_pct": -3.1032,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 8.0,
@@ -11869,8 +11838,8 @@
         "p_no_touch": 0.0359,
         "p_stop_first": 0.7849,
         "p_target_first": 0.1791,
-        "pnl_no_touch_pct": 2.6011,
-        "pnl_no_touch_median_pct": 3.12,
+        "pnl_no_touch_pct": 2.6015,
+        "pnl_no_touch_median_pct": 3.2472,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 2.5,
@@ -11894,8 +11863,8 @@
         "p_no_touch": 0.0647,
         "p_stop_first": 0.7352,
         "p_target_first": 0.2,
-        "pnl_no_touch_pct": 1.6555,
-        "pnl_no_touch_median_pct": 2.6077,
+        "pnl_no_touch_pct": 1.6557,
+        "pnl_no_touch_median_pct": 2.6112,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 3.0,
@@ -11919,8 +11888,8 @@
         "p_no_touch": 0.1094,
         "p_stop_first": 0.6552,
         "p_target_first": 0.2353,
-        "pnl_no_touch_pct": 1.584,
-        "pnl_no_touch_median_pct": 2.3727,
+        "pnl_no_touch_pct": 1.5841,
+        "pnl_no_touch_median_pct": 2.381,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 4.0,
@@ -11945,7 +11914,7 @@
         "p_stop_first": 0.5655,
         "p_target_first": 0.2594,
         "pnl_no_touch_pct": 1.9309,
-        "pnl_no_touch_median_pct": 2.204,
+        "pnl_no_touch_median_pct": 2.2086,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 5.0,
@@ -11970,7 +11939,7 @@
         "p_stop_first": 0.5183,
         "p_target_first": 0.2709,
         "pnl_no_touch_pct": 1.725,
-        "pnl_no_touch_median_pct": 2.1395,
+        "pnl_no_touch_median_pct": 2.1399,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 6.0,
@@ -11995,7 +11964,7 @@
         "p_stop_first": 0.3679,
         "p_target_first": 0.3072,
         "pnl_no_touch_pct": 1.7782,
-        "pnl_no_touch_median_pct": 1.7163,
+        "pnl_no_touch_median_pct": 1.7298,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 8.0,
@@ -12020,7 +11989,7 @@
         "p_stop_first": 0.2692,
         "p_target_first": 0.3081,
         "pnl_no_touch_pct": 0.8557,
-        "pnl_no_touch_median_pct": 0.7468,
+        "pnl_no_touch_median_pct": 0.7737,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 10.0,
@@ -12045,7 +12014,7 @@
         "p_stop_first": 0.1739,
         "p_target_first": 0.3089,
         "pnl_no_touch_pct": -0.418,
-        "pnl_no_touch_median_pct": -0.3209,
+        "pnl_no_touch_median_pct": -0.3269,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 12.0,
@@ -12069,8 +12038,8 @@
         "p_no_touch": 0.6094,
         "p_stop_first": 0.0817,
         "p_target_first": 0.3089,
-        "pnl_no_touch_pct": -1.7619,
-        "pnl_no_touch_median_pct": -1.6761,
+        "pnl_no_touch_pct": -1.762,
+        "pnl_no_touch_median_pct": -1.6768,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -12170,7 +12139,7 @@
         "p_stop_first": 0.8095,
         "p_target_first": 0.139,
         "pnl_no_touch_pct": 3.3175,
-        "pnl_no_touch_median_pct": 3.8794,
+        "pnl_no_touch_median_pct": 3.8793,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 2.5,
@@ -12220,7 +12189,7 @@
         "p_stop_first": 0.6819,
         "p_target_first": 0.1817,
         "pnl_no_touch_pct": 2.4171,
-        "pnl_no_touch_median_pct": 2.8682,
+        "pnl_no_touch_median_pct": 2.8683,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 4.0,
@@ -12795,7 +12764,7 @@
         "p_stop_first": 0.7706,
         "p_target_first": 0.0821,
         "pnl_no_touch_pct": 5.9553,
-        "pnl_no_touch_median_pct": 5.8634,
+        "pnl_no_touch_median_pct": 5.8635,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 3.0,
@@ -13120,7 +13089,7 @@
         "p_stop_first": 0.6909,
         "p_target_first": 0.05,
         "pnl_no_touch_pct": 7.4741,
-        "pnl_no_touch_median_pct": 6.0513,
+        "pnl_no_touch_median_pct": 6.0514,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 4.0,
@@ -13220,7 +13189,7 @@
         "p_stop_first": 0.2923,
         "p_target_first": 0.0501,
         "pnl_no_touch_pct": 4.4615,
-        "pnl_no_touch_median_pct": 3.2237,
+        "pnl_no_touch_median_pct": 3.2238,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 10.0,
@@ -21586,7 +21555,7 @@
   },
   "harmonic_patterns": {
     "available": true,
-    "n_swings_detected": 138,
+    "n_swings_detected": 136,
     "n_patterns_found": 0,
     "tolerance": 0.05,
     "lookback_bars": 1260,
@@ -21739,12 +21708,12 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-11T00:00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 85.45731816011894,
-        "overall_label": "excellent",
+        "overall_quality_score": 81.45731816011894,
+        "overall_label": "good",
         "warnings": []
       }
     },
@@ -21784,11 +21753,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-11T12:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 75.8163351024186,
+        "overall_quality_score": 71.8163351024186,
         "overall_label": "good",
         "warnings": [
           "65 bar(s) à volume zéro (h4)",
@@ -21834,11 +21803,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-11T15:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 69.23671497584542,
+        "overall_quality_score": 65.23671497584542,
         "overall_label": "acceptable",
         "warnings": [
           "23 bar(s) à volume zéro (h1)",
@@ -21847,7 +21816,7 @@
       }
     },
     "summary": {
-      "worst_tf_quality_score": 69.23671497584542,
+      "worst_tf_quality_score": 65.23671497584542,
       "worst_tf": "h1",
       "recommendation": "fetch_again"
     }
