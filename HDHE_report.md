@@ -1,11 +1,11 @@
 # 267260
 
-**Generated** : 2026-09-15T22:03:06.347015+00:00  
+**Generated** : 2026-09-16T00:22:42.141145+00:00  
 **Santé technique** : 2/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩700000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)  
 > ↳ spot ₩700000.00 (+0.6% vs entrée) · entrée ₩695500.00 · stop ₩639860.00 · T1 ₩739394.58 · R/R 0.79  
 > ↳ P(T1 av. stop) 7 % _(réel 5 s)_ · EV/risk -0.061 _(réel 5 s)_ (GBM -0.188) · ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -36,14 +36,14 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=4.11 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (7.81 %)** : le gap seul le franchit 0.082 % des séances (1 fois sur 1218).
+- **Au stop du plan (7.81 %)** : le gap seul le franchit 0.082 % des séances (1 fois sur 1217).
    - exécution **3.905 pt plus bas** dans le cas TYPIQUE (médiane), 3.905 au p90, **3.905 au pire**
    - perte réelle **11.715 %** en moyenne _(tirée par la queue)_, jusqu'à **11.715 %** — au lieu des 7.81 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0032 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 1 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -2.671 % | p01 -4.805 % | pire -11.715 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -2.672 % | p01 -4.805 % | pire -11.715 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0749** [0.0426 ; 0.1212] _(largeur 7.9 pt, n_eff 173.1)_
    - swing : **0.3731** [0.3233 ; 0.425] _(largeur 10.2 pt, n_eff 345.6)_
    - deep : **0.3399** [0.2915 ; 0.391] _(largeur 10.0 pt, n_eff 345.6)_
@@ -53,8 +53,8 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Strong Pass (negative 
    - _fenêtre arrêtée : rupture de regime a 300 seances en arriere (volatilite 2.99 % contre 5.05 % aujourd'hui, rapport 0.59)_
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -10.97 % vs -11.99 % si l'on extrapolait par √5 _(rapport 0.915 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0376** (β de hausse 0.8397, asymétrie 1.2356) vs KS11 — 555 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -10.98 % vs -11.99 % si l'on extrapolait par √5 _(rapport 0.916 ; < 1 = le √5 surestime)_
+- **β de baisse : 1.0378** (β de hausse 0.8397, asymétrie 1.2358) vs KS11 — 554 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -159,9 +159,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -180,5 +180,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (479835 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (479604 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,15 +1,15 @@
 # 000660
 
-**Generated** : 2026-09-15T21:58:27.914558+00:00  
+**Generated** : 2026-09-16T00:19:03.108449+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩1690000.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)  
 > ↳ spot ₩1690000.00 (+0.8% vs entrée) · entrée ₩1677338.69 · stop ₩1585938.45 · T1 ₩1777840.09 · R/R 1.1  
-> ↳ P(T1 av. stop) 41 % _(réel 5 s)_ · EV/risk -0.198 _(réel 5 s)_ (GBM 0.34) · ¼-Kelly 0.04 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 41 % _(réel 5 s)_ · EV/risk -0.198 _(réel 5 s)_ (GBM 0.338) · ¼-Kelly 0.039 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -46,13 +46,13 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass (negative EV)'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=6.49 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (6.16 %)** : le gap seul le franchit 1.396 % des séances (17 fois sur 1218).
+- **Au stop du plan (6.16 %)** : le gap seul le franchit 1.397 % des séances (17 fois sur 1217).
    - exécution **1.74 pt plus bas** dans le cas TYPIQUE (médiane), 3.942 au p90, **4.7 au pire**
    - perte réelle **8.145 %** en moyenne _(tirée par la queue)_, jusqu'à **10.86 %** — au lieu des 6.16 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0277 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -3.444 % | p01 -6.997 % | pire -10.86 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -3.444 % | p01 -7.0 % | pire -10.86 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0592** [0.0311 ; 0.1018] _(largeur 7.1 pt, n_eff 173.1)_
    - swing : **0.3799** [0.3299 ; 0.4319] _(largeur 10.2 pt, n_eff 345.6)_
    - deep : **0.3406** [0.2921 ; 0.3917] _(largeur 10.0 pt, n_eff 345.6)_
@@ -61,16 +61,16 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass (negative EV)'.
    - _fenêtre arrêtée : rupture de regime a 240 seances en arriere (volatilite 4.22 % contre 6.83 % aujourd'hui, rapport 0.62)_
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -9.4 % vs -10.59 % si l'on extrapolait par √5 _(rapport 0.887 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.4117** (β de hausse 1.6146, asymétrie 0.8744) vs KS11 — 555 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -9.4 % vs -10.6 % si l'on extrapolait par √5 _(rapport 0.887 ; < 1 = le √5 surestime)_
+- **β de baisse : 1.4125** (β de hausse 1.6146, asymétrie 0.8749) vs KS11 — 554 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.34 | EV/share : ₩31111.370 | p_fill : —
+- EV/risk : 0.338 | EV/share : ₩30919.565 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 57 % | T2 36 % | T3 20 %
-- Kelly (position) : f* 0.158 | ¼-Kelly 0.04 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
+- Kelly (position) : f* 0.157 | ¼-Kelly 0.039 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 85.1 | bear 5.1 | side 9.7  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 400.0
 
@@ -177,9 +177,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -188,7 +188,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 11.8  _(pas de tendance nette)_
 - **MACD** : hist 12545.372  _(pas de croisement recent)_
 - **BB** : %B 0.46 · largeur 20.4%
-- **ATR** : 91400.24 (63.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
+- **ATR** : 91400.24 (62.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
 - **OBV/CMF** : OBV rising · CMF -0.044  _(neutre)_
 - **Vol ratio** : 0.76  _(volume normal)_
 - **Choppiness** : 51.1  _(transition)_
@@ -198,5 +198,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (485584 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (485592 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
