@@ -1,0 +1,287 @@
+{
+  "available": true,
+  "computed_at_generation_price": true,
+  "basis_source": "entry_mid_per_horizon",
+  "basis_used": 2696374.092,
+  "s0_used": 2861000.0,
+  "entry_used": null,
+  "stop_used": 2551374.092,
+  "per_horizon_stops": true,
+  "sigma_daily_pct": 4.2841,
+  "sigma_intraday_pct": 4.102,
+  "mu_daily_pct": 0.1,
+  "mu_daily_pct_raw": 0.9836,
+  "mu_cap_pct_daily": 0.1,
+  "mu_was_capped": true,
+  "drift_source": "hmm_mu_effective_capped",
+  "risk_per_share": 145000.0,
+  "cost_per_share": 2157.0993,
+  "n_paths": 20000,
+  "method": "empirical_first_passage_primary_gbm_fallback",
+  "empirical_halflife_sessions": 126.0,
+  "empirical_min_n_eff": 25.0,
+  "ev_pct_risk_threshold": 0.3,
+  "note": "drift HMM borné à ±0.1 %/j (§A1, cohérent compute_scenarios) — cf. mu_daily_pct_raw pour la valeur HMM brute ; barrière MC horizon fini, monitoring intra-séance (M sous-pas/j, σ/√M par sous-pas) → touch intrabar, pas clôture ; stops & cibles différenciés par horizon ; base = mid de la plage d'entrée PAR HORIZON (le dip de chaque plan, basis_used) — R/R/EV mesurés depuis l'entrée réelle, PAS le spot",
+  "by_horizon": {
+    "intraday": {
+      "horizon_sessions": 1,
+      "basis_used": 2786170.0418,
+      "stop_used": 2563276.4385,
+      "risk_per_share": 222893.6033,
+      "targets": {
+        "t1": {
+          "price": 2851621.0383,
+          "p_hit_upper": 0.4302,
+          "p_hit_lower_first": 0.0875,
+          "p_no_touch": 0.4823,
+          "ev_per_share_gross": -26435.953798,
+          "terminal_mean_no_touch": null,
+          "prob_method": "empirical_5s_intraday_real_path",
+          "n": 80,
+          "gbm_reference": {
+            "p_hit_upper": 0.4681,
+            "p_hit_lower_first": 0.0291,
+            "ev_per_share_gross": -6703.076259
+          },
+          "ev_per_share": -28664.8898,
+          "ev_pct_risk": -0.1286,
+          "status": "negative_ev",
+          "reward_risk": 0.2936,
+          "kelly_fraction": 0.1322,
+          "kelly_quarter": 0.033
+        },
+        "t2": {
+          "price": 2917072.0349,
+          "p_hit_upper": 0.2075,
+          "p_hit_lower_first": 0.1,
+          "p_no_touch": 0.6925,
+          "ev_per_share_gross": -28845.499726,
+          "terminal_mean_no_touch": null,
+          "prob_method": "empirical_5s_intraday_real_path",
+          "n": 80,
+          "gbm_reference": {
+            "p_hit_upper": 0.2041,
+            "p_hit_lower_first": 0.0293,
+            "ev_per_share_gross": -1047.841996
+          },
+          "ev_per_share": -31074.4358,
+          "ev_pct_risk": -0.1394,
+          "status": "negative_ev",
+          "reward_risk": 0.5873,
+          "kelly_fraction": 0.0372,
+          "kelly_quarter": 0.0093
+        },
+        "t3": {
+          "price": 2982523.0314,
+          "p_hit_upper": 0.2,
+          "p_hit_lower_first": 0.1,
+          "p_no_touch": 0.7,
+          "ev_per_share_gross": -27332.328108,
+          "terminal_mean_no_touch": null,
+          "prob_method": "empirical_5s_intraday_real_path",
+          "n": 80,
+          "gbm_reference": {
+            "p_hit_upper": 0.0704,
+            "p_hit_lower_first": 0.0293,
+            "ev_per_share_gross": 1423.43664
+          },
+          "ev_per_share": -29561.2641,
+          "ev_pct_risk": -0.1326,
+          "status": "negative_ev",
+          "reward_risk": 0.8809,
+          "kelly_fraction": 0.0865,
+          "kelly_quarter": 0.0216
+        }
+      },
+      "blended_scale_out": {
+        "weights": {
+          "t1": 0.5,
+          "t2": 0.3,
+          "t3": 0.2
+        },
+        "ev_per_share": -29567.0285,
+        "ev_pct_risk": -0.1327,
+        "kelly_fraction": 0.0946,
+        "kelly_quarter": 0.0237
+      },
+      "noise_aware_stop_5s": {
+        "current_stop_pct": 8.0,
+        "ev_optimal_stop_pct": 8.0,
+        "ev_optimal_ev_pct_risk": -0.1186,
+        "ev_optimal_p_target_first": 0.4302,
+        "current_stop_too_tight": false,
+        "note": "stop EV-optimal d'après first-passage 5 s réel (cible T1) ; un stop plus serré est mangé par le bruit intra-séance"
+      }
+    },
+    "swing": {
+      "horizon_sessions": 5,
+      "basis_used": 2696374.092,
+      "stop_used": 2551374.092,
+      "risk_per_share": 145000.0,
+      "targets": {
+        "t1": {
+          "price": 2838010.1375,
+          "ev_per_share_gross": 11127.080772,
+          "terminal_mean_no_touch": 2695127.5436,
+          "p_hit_upper": 0.5283,
+          "p_hit_lower_first": 0.4391,
+          "p_no_touch": 0.0326,
+          "n": 238,
+          "n_eff": 209.0,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.4843,
+            "p_hit_lower_first": 0.4592,
+            "ev_per_share_gross": 1678.260034
+          },
+          "ev_per_share": 8969.9815,
+          "ev_pct_risk": 0.0619,
+          "status": "below_threshold",
+          "reward_risk": 0.9768,
+          "kelly_fraction": 0.0788,
+          "kelly_quarter": 0.0197
+        },
+        "t2": {
+          "price": 2979646.1831,
+          "ev_per_share_gross": 26850.645775,
+          "terminal_mean_no_touch": 2758498.165,
+          "p_hit_upper": 0.3187,
+          "p_hit_lower_first": 0.5106,
+          "p_no_touch": 0.1708,
+          "n": 238,
+          "n_eff": 209.0,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.2492,
+            "p_hit_lower_first": 0.5156,
+            "ev_per_share_gross": 10306.422751
+          },
+          "ev_per_share": 24693.5465,
+          "ev_pct_risk": 0.1703,
+          "status": "below_threshold",
+          "reward_risk": 1.9536,
+          "kelly_fraction": 0.0573,
+          "kelly_quarter": 0.0143
+        },
+        "t3": {
+          "price": 3121282.2286,
+          "ev_per_share_gross": 30862.395715,
+          "terminal_mean_no_touch": 2806523.476,
+          "p_hit_upper": 0.1953,
+          "p_hit_lower_first": 0.5517,
+          "p_no_touch": 0.253,
+          "n": 238,
+          "n_eff": 209.0,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.1061,
+            "p_hit_lower_first": 0.5195,
+            "ev_per_share_gross": 14387.029286
+          },
+          "ev_per_share": 28705.2964,
+          "ev_pct_risk": 0.198,
+          "status": "below_threshold",
+          "reward_risk": 2.9304,
+          "kelly_fraction": 0.007,
+          "kelly_quarter": 0.0018
+        }
+      },
+      "blended_scale_out": {
+        "weights": {
+          "t1": 0.5,
+          "t2": 0.3,
+          "t3": 0.2
+        },
+        "ev_per_share": 17634.114,
+        "ev_pct_risk": 0.1216,
+        "kelly_fraction": 0.058,
+        "kelly_quarter": 0.0145
+      }
+    },
+    "deep": {
+      "horizon_sessions": 10,
+      "basis_used": 2606578.1421,
+      "stop_used": 2389078.1421,
+      "risk_per_share": 217500.0,
+      "targets": {
+        "t1": {
+          "price": 2800211.1511,
+          "ev_per_share_gross": 26588.812405,
+          "terminal_mean_no_touch": 2599391.9701,
+          "p_hit_upper": 0.5823,
+          "p_hit_lower_first": 0.3954,
+          "p_no_touch": 0.0224,
+          "n": 233,
+          "n_eff": 205.6,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.5191,
+            "p_hit_lower_first": 0.4179,
+            "ev_per_share_gross": 8309.84112
+          },
+          "ev_per_share": 24503.5499,
+          "ev_pct_risk": 0.1127,
+          "status": "below_threshold",
+          "reward_risk": 0.8903,
+          "kelly_fraction": 0.1382,
+          "kelly_quarter": 0.0345
+        },
+        "t2": {
+          "price": 2993844.16,
+          "ev_per_share_gross": 22293.923516,
+          "terminal_mean_no_touch": 2640650.9624,
+          "p_hit_upper": 0.3473,
+          "p_hit_lower_first": 0.5344,
+          "p_no_touch": 0.1184,
+          "n": 233,
+          "n_eff": 205.6,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.2679,
+            "p_hit_lower_first": 0.4782,
+            "ev_per_share_gross": 17499.00197
+          },
+          "ev_per_share": 20208.661,
+          "ev_pct_risk": 0.0929,
+          "status": "below_threshold",
+          "reward_risk": 1.7805,
+          "kelly_fraction": 0.0472,
+          "kelly_quarter": 0.0118
+        },
+        "t3": {
+          "price": 3187477.169,
+          "ev_per_share_gross": 28276.879378,
+          "terminal_mean_no_touch": 2736064.5521,
+          "p_hit_upper": 0.1976,
+          "p_hit_lower_first": 0.5487,
+          "p_no_touch": 0.2537,
+          "n": 233,
+          "n_eff": 205.6,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.1206,
+            "p_hit_lower_first": 0.4831,
+            "ev_per_share_gross": 22374.474954
+          },
+          "ev_per_share": 26191.6169,
+          "ev_pct_risk": 0.1204,
+          "status": "below_threshold",
+          "reward_risk": 2.6708,
+          "kelly_fraction": 0.0,
+          "kelly_quarter": 0.0
+        }
+      },
+      "blended_scale_out": {
+        "weights": {
+          "t1": 0.5,
+          "t2": 0.3,
+          "t3": 0.2
+        },
+        "ev_per_share": 23552.6966,
+        "ev_pct_risk": 0.1083,
+        "kelly_fraction": 0.0833,
+        "kelly_quarter": 0.0208
+      }
+    }
+  }
+}
