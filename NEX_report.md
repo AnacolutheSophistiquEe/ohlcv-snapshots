@@ -1,11 +1,11 @@
 # NEX
 
-**Generated** : 2026-09-16T21:49:06.450065+00:00  
+**Generated** : 2026-09-17T00:12:06.455364+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €136.60  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot €136.60 (+1.8% vs entrée) · entrée €134.23 · stop €123.49 · T1 €136.11 · R/R 0.18  
 > ↳ P(T1 av. stop) 33 % _(réel 5 s)_ · EV/risk -0.013 _(réel 5 s)_ (GBM -0.078) · ¼-Kelly 0.058 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -19,7 +19,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## ⚠ Contradictions techniques
 
-- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.200 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
+- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.240 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
   - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
   - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
   - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
@@ -61,7 +61,7 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
    - _fenêtre arrêtée : historique epuise — le regime est homogene sur toute la profondeur_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -7.51 % vs -7.85 % si l'on extrapolait par √5 _(rapport 0.957 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0101** (β de hausse 1.0936, asymétrie 0.9237) vs FCHI — 619 séances de repli, historique complet
+- **β de baisse : 1.0101** (β de hausse 1.0942, asymétrie 0.9231) vs FCHI — 619 séances de repli, historique complet
 
 
 ## Echelle Warden — OU poser le stop
@@ -165,16 +165,16 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
 | 0.2 ATR | 0.688 % | 135.66 | 68.69 % | 78.49 % | 83.28 % | 88.37 % | 92.67 % | 94.9 % |
 | 0.25 ATR | 0.86 % | 135.425 | 62.12 % | 73.77 % | 79.25 % | 85.22 % | 90.59 % | 93.7 % |
 | 0.35 ATR | 1.204 % | 134.955 | 49.75 % | 64.54 % | 71.98 % | 79.11 % | 86.63 % | 91.5 % |
-| 0.5 ATR | 1.72 % | 134.25 | 34.74 % | 52.75 % | 61.55 % | 70.84 % | 80.3 % | 87.3 % |
+| 0.5 ATR | 1.72 % | 134.25 | 34.84 % | 52.75 % | 61.55 % | 70.84 % | 80.3 % | 87.3 % |
 | 0.75 ATR | 2.581 % | 133.075 | 20.51 % | 36.74 % | 47.59 % | 59.01 % | 70.2 % | 80.7 % |
 | 1.0 ATR | 3.441 % | 131.9 | 10.7 % | 24.36 % | 34.81 % | 48.67 % | 61.49 % | 74.0 % |
-| 1.25 ATR | 4.301 % | 130.725 | 4.91 % | 16.21 % | 24.98 % | 39.61 % | 54.36 % | 67.6 % |
+| 1.25 ATR | 4.301 % | 130.725 | 4.91 % | 16.21 % | 24.98 % | 39.61 % | 54.36 % | 67.5 % |
 | 1.5 ATR | 5.161 % | 129.55 | 2.45 % | 11.1 % | 18.49 % | 30.64 % | 46.63 % | 59.9 % |
-| 2.0 ATR | 6.881 % | 127.2 | 0.79 % | 5.21 % | 9.83 % | 19.21 % | 35.15 % | 50.4 % |
+| 2.0 ATR | 6.881 % | 127.2 | 0.79 % | 5.21 % | 9.93 % | 19.21 % | 35.25 % | 50.4 % |
 | 2.5 ATR | 8.602 % | 124.85 | 0.49 % | 2.65 % | 5.6 % | 11.43 % | 24.55 % | 38.6 % |
 | 3.0 ATR | 10.322 % | 122.5 | 0.2 % | 1.67 % | 3.24 % | 7.09 % | 17.62 % | 30.2 % |
 | 4.0 ATR | 13.763 % | 117.8 | 0.1 % | 0.49 % | 0.88 % | 1.87 % | 7.52 % | 17.9 % |
-| 6.0 ATR | 20.644 % | 108.4 | 0.0 % | 0.0 % | 0.0 % | 0.2 % | 1.29 % | 4.3 % |
+| 6.0 ATR | 20.644 % | 108.4 | 0.0 % | 0.0 % | 0.0 % | 0.2 % | 1.39 % | 4.4 % |
 
 **A quelle distance poser pour n'etre sorti que p % du temps** (lecture INVERSE — c'est elle qui sert a arbitrer) :
 
@@ -182,18 +182,18 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
 |---|---|---|---|---|---|---|---|---|
 | **1 s.** | 0.15 ATR | 0.35 ATR | 0.40 ATR | 0.53 ATR | 0.67 ATR | 0.76 ATR | 1.03 ATR | 1.25 ATR |
 | **2 s.** | 0.24 ATR | 0.54 ATR | 0.62 ATR | 0.83 ATR | 0.99 ATR | 1.13 ATR | 1.59 ATR | 2.04 ATR |
-| **3 s.** | 0.31 ATR | 0.71 ATR | 0.80 ATR | 1.05 ATR | 1.25 ATR | 1.44 ATR | 1.99 ATR | 2.63 ATR |
+| **3 s.** | 0.31 ATR | 0.71 ATR | 0.80 ATR | 1.05 ATR | 1.25 ATR | 1.44 ATR | 2.00 ATR | 2.63 ATR |
 | **5 s.** | 0.42 ATR | 0.97 ATR | 1.10 ATR | 1.43 ATR | 1.75 ATR | 1.97 ATR | 2.67 ATR | 3.40 ATR |
-| **10 s.** | 0.63 ATR | 1.39 ATR | 1.57 ATR | 2.10 ATR | 2.48 ATR | 2.83 ATR | 3.75 ATR | 4.81 ATR |
-| **20 s.** | 0.96 ATR | 2.02 ATR | 2.23 ATR | 2.83 ATR | 3.42 ATR | 3.83 ATR | 5.16 ATR | 5.90 ATR |
+| **10 s.** | 0.63 ATR | 1.39 ATR | 1.57 ATR | 2.10 ATR | 2.48 ATR | 2.83 ATR | 3.75 ATR | 4.82 ATR |
+| **20 s.** | 0.96 ATR | 2.02 ATR | 2.23 ATR | 2.83 ATR | 3.42 ATR | 3.83 ATR | 5.17 ATR | 5.91 ATR |
 
 **Distance optimale par horizon** (plage utile mesuree, puis meilleur point unique de cette plage) :
-- **1 seance(s)** : plage utile 0.397–0.35 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ✅ optimum identifie (78.2 % des re-echantillons)
+- **1 seance(s)** : plage utile 0.398–0.35 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ✅ optimum identifie (78.2 % des re-echantillons)
 - **2 seance(s)** : plage utile 0.621–0.75 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (2.581 %, prix 133.0744), p(touche) 36.74 % (en stress 88.24 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 47.1 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **3 seance(s)** : plage utile 0.801–1.25 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (3.441 %, prix 131.8996), p(touche) 34.81 % (en stress 84.31 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 40.6 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **5 seance(s)** : plage utile 1.101–1.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.25 ATR (4.301 %, prix 130.7248), p(touche) 39.61 % (en stress 93.14 %)  ✅ optimum identifie (62.5 % des re-echantillons)
-- **10 seance(s)** : plage utile 1.571–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (6.881 %, prix 127.2006), p(touche) 35.15 % (en stress 98.02 %)  ✅ optimum identifie (71.9 % des re-echantillons)
-- **20 seance(s)** : plage utile 2.229–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (8.602 %, prix 124.8497), p(touche) 38.6 % (en stress 98.0 %)  ✅ optimum identifie (69.6 % des re-echantillons)
+- **10 seance(s)** : plage utile 1.572–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (6.881 %, prix 127.2006), p(touche) 35.25 % (en stress 99.01 %)  ✅ optimum identifie (71.5 % des re-echantillons)
+- **20 seance(s)** : plage utile 2.229–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (8.602 %, prix 124.8497), p(touche) 38.6 % (en stress 98.0 %)  ✅ optimum identifie (69.2 % des re-echantillons)
 
 - p(touche) = part des fenetres de N seances ou le prix est venu chercher un stop pose a cette distance SOUS le prix d'entree de la fenetre. Mesure sur les barres reelles du titre, pas modelisee.
 
@@ -303,9 +303,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -315,8 +315,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.609  _(pas de croisement recent)_
 - **BB** : %B 0.32 · largeur 8.5%
 - **ATR** : 4.7 (71.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF -0.202  _(distribution)_
-- **Vol ratio** : 1.11  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF -0.24  _(distribution)_
+- **Vol ratio** : 0.37  _(volume atone)_
 - **Choppiness** : 56.3  _(transition)_
 - **MA** : MA20 138.77 · MA50 136.51 · MA200 134.65  _(prix < MA20)_
 - **Dist MA** : MA20 -1.6% · MA50 +0.1% · MA200 +1.4%
@@ -324,5 +324,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (752474 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (751885 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -6,31 +6,31 @@
     "tf_fallback": false,
     "selectable": true,
     "score": 4,
-    "score_raw": 4.35,
+    "score_raw": 3.55,
     "score_type": "technical_health",
     "subscores": {
       "trend_structure": 1.25,
-      "momentum": 0.8,
+      "momentum": 0.0,
       "trend_quality": 0.3,
       "relative_strength": 2.0
     },
-    "label": "neutral"
+    "label": "bearish"
   },
   "plan_b": {
     "horizon": "swing",
     "tf": "daily",
     "tf_fallback": false,
     "selectable": true,
-    "score": 8,
-    "score_raw": 7.95,
+    "score": 6,
+    "score_raw": 5.65,
     "score_type": "technical_health",
     "subscores": {
-      "trend_structure": 3.0,
-      "momentum": 1.6,
-      "trend_quality": 1.35,
+      "trend_structure": 2.15,
+      "momentum": 0.5,
+      "trend_quality": 1.0,
       "relative_strength": 2.0
     },
-    "label": "bullish"
+    "label": "neutral"
   },
   "plan_c": {
     "horizon": "deep",
@@ -39,18 +39,18 @@
     "weekly_available": true,
     "selectable": false,
     "context_only": true,
-    "score": 8,
-    "score_raw": 7.75,
+    "score": 6,
+    "score_raw": 6.35,
     "score_type": "technical_health",
     "subscores": {
       "trend_structure": 1.75,
-      "momentum": 3.0,
+      "momentum": 1.6,
       "trend_quality": 1.0,
       "relative_strength": 2.0
     },
     "label": "bullish"
   },
-  "composite_score_max": 8,
+  "composite_score_max": 6,
   "composite_plan": "B",
   "selectable_plans": [
     "A",
@@ -58,7 +58,7 @@
   ],
   "score_type": "technical_health",
   "entry_timing": {
-    "setup_proximity": 0.75,
+    "setup_proximity": 0.25,
     "rr_t1": 0.5,
     "overextension": "normal",
     "penalty": 0.0,

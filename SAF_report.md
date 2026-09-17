@@ -1,11 +1,11 @@
 # SAF
 
-**Generated** : 2026-09-16T21:46:35.760388+00:00  
-**Santé technique** : 5/10 — **Rating** : Neutral  
+**Generated** : 2026-09-17T00:10:10.290407+00:00  
+**Santé technique** : 6/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €326.30  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)  
+> 🟡 **WAIT-FOR-DIP** — spot +2.5 % au-dessus de la zone d'entrée — attendre le repli  
 > ↳ spot €326.30 (+2.5% vs entrée) · entrée €318.41 · stop €312.04 · T1 €321.12 · R/R 0.43  
 > ↳ P(T1 av. stop) 87 % · EV/risk 0.184 · ¼-Kelly 0.021 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.0% cohérent avec le bruit 5 s (EV-optimal ≈ −2.0%)  
@@ -19,7 +19,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## Lecture chartiste
 
-Plan privilegie A (intraday), composite 5/10, conviction 'Neutral'.
+Plan privilegie A (intraday), composite 6/10, conviction 'Neutral'.
 
 
 ## Niveaux clés & plan principal
@@ -51,7 +51,7 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Neutral'.
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -5.66 % vs -6.07 % si l'on extrapolait par √5 _(rapport 0.933 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.3764** (β de hausse 1.3419, asymétrie 1.0257) vs FCHI — 619 séances de repli, historique complet
+- **β de baisse : 1.3764** (β de hausse 1.3421, asymétrie 1.0255) vs FCHI — 619 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 1.265× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
@@ -68,16 +68,16 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Neutral'.
       - refuse : R/R 2.03 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.01 %) : P(cible) 11.5 % x 10.78 % + P(rien) 41.4 % x 3.01 % ne couvrent pas P(stop) 47.1 % x 5.31 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ swing_based a 1.22 ATR (stop 4.212 %) — p(stop avant cible) 0.3671 [0.32 ; 0.42], R/R 1.749, perte reelle 6.163 % (gap inclus), EV 0.3706 % — **REFUSE**
+   - ⚪ swing_based a 1.22 ATR (stop 4.183 %) — p(stop avant cible) 0.3686 [0.32 ; 0.42], R/R 1.749, perte reelle 6.163 % (gap inclus), EV 0.3653 % — **REFUSE**
       - refuse : cible atteinte seulement 13.1 % du temps (< 15 %) meme a 10 seances : le R/R de 1.75 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.75 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ sr_based a 4.45 ATR (stop 11.397 %) — p(stop avant cible) 0.0591 [0.04 ; 0.09], R/R 0.946, perte reelle 11.397 % (gap inclus), EV 0.9329 % — **REFUSE**
+   - ⚪ sr_based a 4.45 ATR (stop 11.368 %) — p(stop avant cible) 0.0591 [0.04 ; 0.09], R/R 0.948, perte reelle 11.368 % (gap inclus), EV 0.9346 % — **REFUSE**
       - refuse : cible atteinte seulement 13.5 % du temps (< 15 %) meme a 10 seances : le R/R de 0.95 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.95 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - 🟢 support a 9.18 ATR (stop 21.915 %) — p(stop avant cible) 0.0035 [0.00 ; 0.01], R/R 0.492, perte reelle 21.915 % (gap inclus), EV 0.9284 % — **REFUSE**
+   - 🟢 support a 9.18 ATR (stop 21.886 %) — p(stop avant cible) 0.0035 [0.00 ; 0.01], R/R 0.493, perte reelle 21.886 % (gap inclus), EV 0.9285 % — **REFUSE**
       - refuse : cible atteinte seulement 13.5 % du temps (< 15 %) meme a 10 seances : le R/R de 0.49 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.49 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 21.91 % > budget 12.00 %
+      - refuse : CVaR 95 % 21.89 % > budget 12.00 %
    - ⚪ atr_grid a 0.25 ATR (stop 0.556 %) — p(stop avant cible) 0.8975 [0.86 ; 0.93], R/R 8.33, perte reelle 1.294 % (gap inclus), EV -0.4579 % — **REFUSE**
       - refuse : cible atteinte seulement 3.9 % du temps (< 15 %) meme a 10 seances : le R/R de 8.33 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.897, borne haute 0.926 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
@@ -202,7 +202,7 @@ Plan privilegie A (intraday), composite 5/10, conviction 'Neutral'.
 - Kelly (position) : f* 0.085 | ¼-Kelly 0.021 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, intraday) : bull 60.8 | bear 33.2 | side 6.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
+- Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 160.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
@@ -297,9 +297,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-09-16 — US FOMC Rate Decision (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -309,8 +309,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -1.447  _(pas de croisement recent)_
 - **BB** : %B 0.27 · largeur 11.2%
 - **ATR** : 7.26 (38.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.255  _(distribution)_
-- **Vol ratio** : 1.2  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.288  _(distribution)_
+- **Vol ratio** : 0.36  _(volume atone)_
 - **Choppiness** : 42.8  _(transition)_
 - **MA** : MA20 334.95 · MA50 339.51 · MA200 312.63  _(prix < MA20)_
 - **Dist MA** : MA20 -2.6% · MA50 -3.9% · MA200 +4.4%
@@ -318,5 +318,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (755329 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (753777 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

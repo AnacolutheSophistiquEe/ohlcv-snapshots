@@ -1,23 +1,11 @@
 {
-  "current_state": "bull",
+  "current_state": "bear",
   "current_state_instant": "bear",
   "current_state_persistence_pct": 90.0,
   "regime_timeline": {
     "window_bars": 132,
     "cluster_fit_bars": 110,
     "series": [
-      {
-        "d": "2026-03-05",
-        "s": "bear"
-      },
-      {
-        "d": "2026-03-06",
-        "s": "bear"
-      },
-      {
-        "d": "2026-03-09",
-        "s": "bear"
-      },
       {
         "d": "2026-03-10",
         "s": "bear"
@@ -220,7 +208,7 @@
       },
       {
         "d": "2026-05-20",
-        "s": "bear"
+        "s": "bull"
       },
       {
         "d": "2026-05-21",
@@ -264,7 +252,7 @@
       },
       {
         "d": "2026-06-05",
-        "s": "sideways"
+        "s": "bear"
       },
       {
         "d": "2026-06-08",
@@ -396,7 +384,7 @@
       },
       {
         "d": "2026-07-24",
-        "s": "sideways"
+        "s": "bear"
       },
       {
         "d": "2026-07-27",
@@ -472,7 +460,7 @@
       },
       {
         "d": "2026-08-20",
-        "s": "bear"
+        "s": "bull"
       },
       {
         "d": "2026-08-21",
@@ -533,71 +521,83 @@
       {
         "d": "2026-09-11",
         "s": "bear"
+      },
+      {
+        "d": "2026-09-14",
+        "s": "bear"
+      },
+      {
+        "d": "2026-09-15",
+        "s": "bear"
+      },
+      {
+        "d": "2026-09-16",
+        "s": "bear"
       }
     ]
   },
   "smoothing_bars": 5,
   "probabilities": {
-    "bull": 0.3918,
-    "bear": 0.25,
-    "sideways": 0.3582
+    "bull": 0.046,
+    "bear": 0.9,
+    "sideways": 0.054
   },
   "transition_matrix": {
     "bull": {
-      "bull": 0.3593,
-      "bear": 0.6407,
+      "bull": 0.5353,
+      "bear": 0.4647,
       "sideways": 0.0
     },
     "bear": {
-      "bull": 0.146,
-      "bear": 0.8158,
-      "sideways": 0.0382
+      "bull": 0.1692,
+      "bear": 0.784,
+      "sideways": 0.0468
     },
     "sideways": {
       "bull": 0.0,
-      "bear": 0.0821,
-      "sideways": 0.9179
+      "bear": 0.092,
+      "sideways": 0.908
     }
   },
   "stationary_distribution": {
-    "bull": 0.1346,
-    "bear": 0.5907,
-    "sideways": 0.2748
+    "bull": 0.1944,
+    "bear": 0.5339,
+    "sideways": 0.2718
   },
-  "transition_fitted_on_bars": 1242,
-  "expected_duration_days": 9.69,
+  "transition_fitted_on_bars": 1241,
+  "expected_duration_days": 13.1,
   "fitted_on_bars": 110,
   "drift_by_state_pct_daily": {
-    "bull": 4.3823,
-    "bear": -0.985,
-    "sideways": 0.5911
+    "bull": 4.2378,
+    "bear": -1.186,
+    "sideways": 0.6979
   },
-  "mu_effective_pct_daily": 1.6825,
-  "current_state_drift_pct_daily": 4.3823,
-  "directional_bias": "up",
+  "mu_effective_pct_daily": -0.8348,
+  "current_state_drift_pct_daily": -1.186,
+  "directional_bias": "down",
   "label_directional_mismatch": false,
   "cluster_means_return": [
-    -0.985,
-    0.5911,
-    4.3823
+    0.6979,
+    -1.186,
+    4.2378
   ],
   "cluster_means_atr_pct": [
-    5.8364,
-    7.0736,
-    5.2507
+    7.0763,
+    5.8726,
+    5.2552
   ],
   "cluster_labels": [
-    "bear",
     "sideways",
+    "bear",
     "bull"
   ],
   "sanity_capped_duration": false,
-  "sanity_reduced_probability": true,
-  "sanity_bear_reassigned": true,
-  "sanity_capped_probability": false,
-  "dist_ma200_pct_at_calc": 18.2969,
-  "recent_ret_pct_daily": 1.317,
-  "dd_from_ath_pct": -26.16,
+  "sanity_reduced_probability": false,
+  "sanity_bear_reassigned": false,
+  "sanity_capped_probability": true,
+  "dist_ma200_pct_at_calc": 9.9029,
+  "recent_ret_pct_daily": -0.3493,
+  "dd_from_ath_pct": -31.51,
   "fit_source": "long_csv",
-  "fit_n_bars": 1255
+  "fit_n_bars": 1254
 }
