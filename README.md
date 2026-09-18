@@ -1,6 +1,6 @@
 # OHLCV Snapshots
 
-Last update: `2026-09-18T05:48:49.727471+00:00`
+Last update: `2026-09-18T21:30:28.501088+00:00`
 
 Daily snapshots of OHLCV data for the trading universe of [Manuel's IBKR Dip Scalper](https://github.com/AnacolutheSophistiquEe).
 Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the only reliable network path from the claude.ai sandbox.
@@ -24,12 +24,48 @@ Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the o
 
 ## Tickers
 
-(18 assets covered)
+(62 assets covered)
 
 | Display | yfinance symbol |
 |---|---|
+| `RHM` | `RHM.DE` |
+| `SRT3` | `SRT3.DE` |
+| `EVT` | `EVT.DE` |
+| `ENR` | `ENR.DE` |
+| `SAF` | `SAF.PA` |
+| `NEX` | `NEX.PA` |
+| `SOI` | `SOI.PA` |
+| `AL2SI` | `AL2SI.PA` |
+| `PRY` | `PRY.MI` |
+| `000660` | `000660.KS` |
+| `005930` | `005930.KS` |
+| `267260` | `267260.KS` |
+| `298040` | `298040.KS` |
+| `012450` | `012450.KS` |
+| `207940` | `207940.KS` |
+| `326030` | `326030.KS` |
+| `MSTR` | `MSTR` |
+| `SMCI` | `SMCI` |
+| `PLTR` | `PLTR` |
+| `IONQ` | `IONQ` |
+| `RGTI` | `RGTI` |
+| `CEG` | `CEG` |
+| `SMR` | `SMR` |
 | `HOOD` | `HOOD` |
 | `SOFI` | `SOFI` |
+| `SPY` | `SPY` |
+| `QQQ` | `QQQ` |
+| `IWM` | `IWM` |
+| `EWG` | `EWG` |
+| `EWQ` | `EWQ` |
+| `EWY` | `EWY` |
+| `KS11` | `^KS11` |
+| `GDAXI` | `^GDAXI` |
+| `FCHI` | `^FCHI` |
+| `FTSEMIB` | `FTSEMIB.MI` |
+| `005380` | `005380.KS` |
+| `042660` | `042660.KS` |
+| `196170` | `196170.KQ` |
 | `ALCPB` | `ALCPB.PA` |
 | `BESI` | `BESI.AS` |
 | `IFX` | `IFX.DE` |
@@ -37,15 +73,23 @@ Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the o
 | `R3NK` | `R3NK.DE` |
 | `STLAP` | `STLAP.PA` |
 | `VETO` | `VETO.PA` |
+| `ALNY` | `ALNY` |
+| `CBRS` | `CBRS` |
+| `NVDA` | `NVDA` |
+| `AMD` | `AMD` |
 | `APP` | `APP` |
 | `BILI` | `BILI` |
+| `CAPR` | `CAPR` |
 | `CAT` | `CAT` |
 | `COIN` | `COIN` |
+| `FFAI` | `FFAI` |
 | `FIG` | `FIG` |
 | `LRCX` | `LRCX` |
+| `MU` | `MU` |
 | `NNE` | `NNE` |
 | `NOK` | `NOK` |
 | `NVTS` | `NVTS` |
+| `SNDK` | `SNDK` |
 
 ## Consumption
 
