@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-09-17T21:58:15.398974+00:00  
+**Generated** : 2026-09-18T00:20:04.041830+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
@@ -9,7 +9,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot ₩1745000.00 (+1.9% vs entrée) · entrée ₩1712906.27 · stop ₩1625263.42 · T1 ₩1784565.56 · R/R 0.82  
-> ↳ P(T1 av. stop) 38 % _(réel 5 s)_ · EV/risk -0.27 _(réel 5 s)_ (GBM 0.251) · ¼-Kelly 0.043 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 38 % _(réel 5 s)_ · EV/risk -0.27 _(réel 5 s)_ (GBM 0.249) · ¼-Kelly 0.043 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -37,14 +37,14 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass (negative EV)'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=6.49 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (6.86 %)** : le gap seul le franchit 1.067 % des séances (13 fois sur 1218).
+- **Au stop du plan (6.86 %)** : le gap seul le franchit 1.068 % des séances (13 fois sur 1217).
    - exécution **1.62 pt plus bas** dans le cas TYPIQUE (médiane), 3.4 au p90, **4.0 au pire**
    - perte réelle **8.648 %** en moyenne _(tirée par la queue)_, jusqu'à **10.86 %** — au lieu des 6.86 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0191 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 13 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -3.444 % | p01 -6.997 % | pire -10.86 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -3.444 % | p01 -7.0 % | pire -10.86 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0451** [0.0213 ; 0.0839] _(largeur 6.3 pt, n_eff 173.1)_
    - swing : **0.3594** [0.3102 ; 0.411] _(largeur 10.1 pt, n_eff 345.6)_
    - deep : **0.329** [0.281 ; 0.3798] _(largeur 9.9 pt, n_eff 345.6)_
@@ -55,16 +55,16 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass (negative EV)'.
    - _fenêtre arrêtée : rupture de regime a 240 seances en arriere (volatilite 4.21 % contre 6.83 % aujourd'hui, rapport 0.62)_
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -9.4 % vs -10.59 % si l'on extrapolait par √5 _(rapport 0.887 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.4127** (β de hausse 1.6163, asymétrie 0.874) vs KS11 — 555 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -9.4 % vs -10.6 % si l'on extrapolait par √5 _(rapport 0.887 ; < 1 = le √5 surestime)_
+- **β de baisse : 1.4133** (β de hausse 1.6163, asymétrie 0.8744) vs KS11 — 554 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.251 | EV/share : ₩21987.399 | p_fill : —
+- EV/risk : 0.249 | EV/share : ₩21825.683 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 62 % | T2 47 % | T3 34 %
-- Kelly (position) : f* 0.174 | ¼-Kelly 0.043 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
+- Kelly (position) : f* 0.172 | ¼-Kelly 0.043 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 85.1 | bear 5.1 | side 9.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 512.0
 
@@ -192,5 +192,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (484312 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (484317 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

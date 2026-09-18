@@ -1,60 +1,51 @@
 {
   "available": true,
-  "generated_at": "2026-09-09T21:50:51.633309+00:00",
-  "prediction_id": "NEX_B_20260909",
+  "generated_at": "2026-09-18T00:18:09.548035+00:00",
+  "prediction_id": "PRY_A_20260918",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "NEX",
-  "exchange": "SBF",
+  "symbol": "PRY",
+  "exchange": "BVME",
   "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 138.5,
-    "quantity": 2,
-    "tif": "GTD",
-    "gtd": "2026-09-14T16:30:00+00:00"
+    "limit_price": 121.3,
+    "quantity": 1,
+    "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 138.7,
+      "limit_price": 124.6,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 142.0,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T3"
-    },
-    {
-      "action": "SELL",
       "order_type": "STP",
-      "stop_price": 128.2,
-      "quantity": 2,
+      "stop_price": 111.5,
+      "quantity": 1,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "NEX_B_swing_20260909",
+  "oca_group": "PRY_A_intraday_20260918",
   "oca_type": 1,
   "execution_rules": {
-    "stop_mode": "breakeven_after_T1",
-    "stop_mode_description": "SL → prix d'entrée après hit T1",
+    "stop_mode": "fixed",
+    "stop_mode_description": "SL hard statique, pas de trailing",
     "trail_distance_atr": null,
     "time_stop": {
       "enabled": true,
-      "max_holding_sessions": 5,
-      "exit_mode": "market_close_at_breakeven"
+      "max_holding_sessions": 1,
+      "exit_mode": "market_close_unconditional"
     },
     "order_validity": {
-      "type": "GTD",
-      "offset_sessions": 5,
-      "good_till_date": "2026-09-14T16:30:00+00:00"
+      "type": "DAY",
+      "offset_sessions": 0,
+      "good_till_date": "2026-09-18T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -72,34 +63,34 @@
       },
       {
         "tag": "T3",
-        "qty": 1
+        "qty": 0
       }
     ]
   },
   "bracket_metadata": {
-    "plan_id": "B",
-    "horizon": "swing",
-    "horizon_label_long": "swing_court_~1_semaine",
+    "plan_id": "A",
+    "horizon": "intraday",
+    "horizon_label_long": "intraday",
     "composite_score": 5.0,
-    "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.013,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
+    "composite_score_source": "horizon_ta_score.plan_a.score",
+    "ev_pct_risk": -0.077,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "p_hit_upper": {
-      "T1": 0.5413,
-      "T2": 0.2685,
-      "T3": 0.1089
+      "T1": 0.4349,
+      "T2": 0.2078,
+      "T3": 0.0534
     },
-    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
+    "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 277.0,
-    "hold_tolerance_breach_price": 103.875,
+    "notional_eur": 121.95,
+    "hold_tolerance_breach_price": 91.4625,
     "hold_fallback_active": true,
-    "prediction_id": "NEX_B_20260909"
+    "prediction_id": "PRY_A_20260918"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,

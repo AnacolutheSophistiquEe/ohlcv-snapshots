@@ -32,72 +32,72 @@
     "intraday": {
       "plan_id": "A",
       "rating": "Pass",
-      "reason": "ev=0.065 ≥ 0 mais ne satisfait pas conditions Neutral/Buy/Strong Buy",
+      "reason": "ev=0.088 ≥ 0 mais ne satisfait pas conditions Neutral/Buy/Strong Buy",
       "inputs": {
-        "ev_pct_risk": 0.0648,
+        "ev_pct_risk": 0.0885,
         "ev_source": "empirical_5s",
-        "ev_pct_risk_gbm": 0.0398,
-        "ev_pct_risk_empirical_5s": 0.0648,
-        "n_eff_5s": 33.5,
-        "ev_pct_risk_empirical_daily": -0.2435,
-        "n_eff_daily": 186.2,
+        "ev_pct_risk_gbm": 0.0456,
+        "ev_pct_risk_empirical_5s": 0.0885,
+        "n_eff_5s": 26.4,
+        "ev_pct_risk_empirical_daily": -0.3194,
+        "n_eff_daily": 146.6,
         "ci95_empirical_daily": [
-          -0.4089,
-          -0.065
+          -0.5429,
+          -0.0922
         ],
-        "composite_score": 4.0,
-        "p_fill": 0.8106,
+        "composite_score": 6.0,
+        "p_fill": 0.6374,
         "p_fill_source": "empirical_5s"
       }
     },
     "swing": {
       "plan_id": "B",
       "rating": "Neutral",
-      "reason": "ev=0.198 ≥ 0.10, composite=6.0 ≥ 4",
+      "reason": "ev=0.210 ≥ 0.10, composite=6.0 ≥ 4",
       "inputs": {
-        "ev_pct_risk": 0.1978,
+        "ev_pct_risk": 0.2099,
         "ev_source": "empirical_5s",
-        "ev_pct_risk_gbm": 0.0292,
-        "ev_pct_risk_empirical_5s": 0.1978,
-        "n_eff_5s": 32.4,
-        "ev_pct_risk_empirical_daily": -0.1059,
-        "n_eff_daily": 199.2,
+        "ev_pct_risk_gbm": -0.009,
+        "ev_pct_risk_empirical_5s": 0.2099,
+        "n_eff_5s": 19.7,
+        "ev_pct_risk_empirical_daily": -0.1597,
+        "n_eff_daily": 157.7,
         "ci95_empirical_daily": [
-          -0.4736,
-          0.1055
+          -0.4986,
+          0.0011
         ],
         "composite_score": 6.0,
-        "p_fill": 0.795,
+        "p_fill": 0.4593,
         "p_fill_source": "empirical_5s"
       }
     },
     "deep": {
       "plan_id": "C",
-      "rating": "Buy",
-      "reason": "ev=0.484 ≥ 0.30, composite=6.0 ≥ 5, p_fill=0.81 ≥ 0.50",
+      "rating": "Neutral",
+      "reason": "ev=0.144 ≥ 0.10, composite=7.0 ≥ 4",
       "inputs": {
-        "ev_pct_risk": 0.4844,
+        "ev_pct_risk": 0.1442,
         "ev_source": "empirical_5s",
-        "ev_pct_risk_gbm": 0.1378,
-        "ev_pct_risk_empirical_5s": 0.4844,
-        "n_eff_5s": 32.5,
-        "ev_pct_risk_empirical_daily": -0.049,
-        "n_eff_daily": 200.4,
+        "ev_pct_risk_gbm": 0.1292,
+        "ev_pct_risk_empirical_5s": 0.1442,
+        "n_eff_5s": 17.0,
+        "ev_pct_risk_empirical_daily": -0.212,
+        "n_eff_daily": 148.9,
         "ci95_empirical_daily": [
-          -0.4875,
-          0.2795
+          -0.5469,
+          0.1193
         ],
-        "composite_score": 6.0,
-        "p_fill": 0.8062,
+        "composite_score": 7.0,
+        "p_fill": 0.3407,
         "p_fill_source": "empirical_5s"
       }
     }
   },
   "best_rating": {
-    "plan_id": "B",
-    "horizon": "swing",
-    "rating": "Neutral",
-    "reason": "ev=0.198 ≥ 0.10, composite=6.0 ≥ 4",
+    "plan_id": "A",
+    "horizon": "intraday",
+    "rating": "Pass",
+    "reason": "ev=0.088 ≥ 0 mais ne satisfait pas conditions Neutral/Buy/Strong Buy",
     "selected_by": "composite_plan (source unique §6)"
   }
 }

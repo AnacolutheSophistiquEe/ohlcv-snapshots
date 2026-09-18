@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-09-17T22:00:26.213484+00:00  
+**Generated** : 2026-09-18T00:21:50.896111+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩252500.00  
@@ -36,14 +36,14 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=4.11 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (7.58 %)** : le gap seul le franchit 0.246 % des séances (3 fois sur 1218).
+- **Au stop du plan (7.58 %)** : le gap seul le franchit 0.247 % des séances (3 fois sur 1217).
    - exécution **0.231 pt plus bas** dans le cas TYPIQUE (médiane), 2.736 au p90, **3.362 au pire**
    - perte réelle **8.848 %** en moyenne _(tirée par la queue)_, jusqu'à **10.942 %** — au lieu des 7.58 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0031 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 3 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -2.482 % | p01 -4.951 % | pire -10.942 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -2.483 % | p01 -4.952 % | pire -10.942 % _(sur 1217 séances)_
+- **P(stop avant cible)** _(source : daily, 1218 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0363** [0.0156 ; 0.0722] _(largeur 5.7 pt, n_eff 173.1)_
    - swing : **0.347** [0.2983 ; 0.3983] _(largeur 10.0 pt, n_eff 345.6)_
    - deep : **0.2904** [0.2444 ; 0.3399] _(largeur 9.5 pt, n_eff 345.6)_
@@ -53,8 +53,8 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
    - _fenêtre arrêtée : rupture de regime a 240 seances en arriere (volatilite 2.70 % contre 5.74 % aujourd'hui, rapport 0.47)_
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -6.44 % vs -7.31 % si l'on extrapolait par √5 _(rapport 0.882 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.1707** (β de hausse 1.3385, asymétrie 0.8746) vs KS11 — 555 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -6.45 % vs -7.31 % si l'on extrapolait par √5 _(rapport 0.882 ; < 1 = le √5 surestime)_
+- **β de baisse : 1.1702** (β de hausse 1.3385, asymétrie 0.8743) vs KS11 — 554 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -170,7 +170,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 9.0  _(pas de tendance nette)_
 - **MACD** : hist -1040.296  _(bearish_recent)_
 - **BB** : %B 0.29 · largeur 13.5%
-- **ATR** : 9821.43 (47.0e pct 1a)  _(volatilite normale)_
+- **ATR** : 9821.43 (46.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV falling · CMF 0.021  _(neutre)_
 - **Vol ratio** : 0.66  _(volume normal)_
 - **Choppiness** : 50.8  _(transition)_
@@ -180,5 +180,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (479929 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (479939 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

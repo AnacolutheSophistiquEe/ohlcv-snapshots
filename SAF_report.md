@@ -1,6 +1,6 @@
 # SAF
 
-**Generated** : 2026-09-17T21:46:08.184382+00:00  
+**Generated** : 2026-09-18T00:10:29.312356+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €331.60  
@@ -15,15 +15,6 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 - **Daily** : range (trend-range)  
 - **H4** : range | **H1** : up  
 - **Flag multi-TF** : mixed (score 2)
-
-
-## ⚠ Contradictions techniques
-
-- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.180 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
-  - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
-  - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
-  - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
-  - _Vraie incohérence (rare) : volume corrompu/dégradé (flux délayé, volume nul certains jours) fausserait l'un des deux — vérifier la qualité du volume si les valeurs semblent aberrantes._
 
 
 ## Lecture chartiste
@@ -60,7 +51,8 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -5.66 % vs -6.07 % si l'on extrapolait par √5 _(rapport 0.933 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.3765** (β de hausse 1.3414, asymétrie 1.0262) vs FCHI — 618 séances de repli, historique complet
+- **β de baisse : 1.3765** (β de hausse 1.3419, asymétrie 1.0258) vs FCHI — 618 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 1.265× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
@@ -75,16 +67,16 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
       - refuse : R/R 1.88 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.02 %) : P(cible) 14.3 % x 9.03 % + P(rien) 37.1 % x 2.75 % ne couvrent pas P(stop) 48.5 % x 4.81 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ swing_based a 2.0 ATR (stop 5.666 %) — p(stop avant cible) 0.2644 [0.22 ; 0.31], R/R 0.904, perte reelle 9.986 % (gap inclus), EV -0.1337 % — **REFUSE**
+   - ⚪ swing_based a 2.0 ATR (stop 5.773 %) — p(stop avant cible) 0.2629 [0.22 ; 0.31], R/R 0.904, perte reelle 9.986 % (gap inclus), EV -0.1173 % — **REFUSE**
       - refuse : R/R 0.90 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.13 %) : P(cible) 18.0 % x 9.03 % + P(rien) 55.6 % x 1.59 % ne couvrent pas P(stop) 26.4 % x 9.99 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.12 %) : P(cible) 18.0 % x 9.03 % + P(rien) 55.7 % x 1.59 % ne couvrent pas P(stop) 26.3 % x 9.99 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ sr_based a 5.17 ATR (stop 12.425 %) — p(stop avant cible) 0.0412 [0.02 ; 0.07], R/R 0.726, perte reelle 12.425 % (gap inclus), EV 0.7904 % — **REFUSE**
-      - refuse : R/R 0.73 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 12.42 % > budget 12.00 %
-   - 🟢 support a 10.17 ATR (stop 23.098 %) — p(stop avant cible) 0.0021 [0.00 ; 0.01], R/R 0.391, perte reelle 23.098 % (gap inclus), EV 0.7786 % — **REFUSE**
+   - ⚪ sr_based a 5.17 ATR (stop 12.532 %) — p(stop avant cible) 0.0412 [0.02 ; 0.07], R/R 0.72, perte reelle 12.532 % (gap inclus), EV 0.7858 % — **REFUSE**
+      - refuse : R/R 0.72 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 12.53 % > budget 12.00 %
+   - 🟢 support a 10.17 ATR (stop 23.204 %) — p(stop avant cible) 0.0014 [0.00 ; 0.01], R/R 0.389, perte reelle 23.204 % (gap inclus), EV 0.7813 % — **REFUSE**
       - refuse : R/R 0.39 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 23.10 % > budget 12.00 %
+      - refuse : CVaR 95 % 23.20 % > budget 12.00 %
    - ⚪ atr_grid a 0.25 ATR (stop 0.533 %) — p(stop avant cible) 0.8955 [0.86 ; 0.92], R/R 7.141, perte reelle 1.264 % (gap inclus), EV -0.4562 % — **REFUSE**
       - refuse : cible atteinte seulement 4.8 % du temps (< 15 %) meme a 10 seances : le R/R de 7.14 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.895, borne haute 0.924 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
@@ -126,9 +118,6 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
       - refuse : R/R 0.90 < plancher 3.00 (mesure vs SPOT, gap inclus)
    - ⚪ grid_snapped a 5.17 ATR (stop 11.655 %) — p(stop avant cible) 0.0532 [0.03 ; 0.08], R/R 0.774, perte reelle 11.655 % (gap inclus), EV 0.7834 % — **REFUSE**
       - refuse : R/R 0.77 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ atr_grid a 6.0 ATR (stop 12.795 %) — p(stop avant cible) 0.0411 [0.02 ; 0.07], R/R 0.705, perte reelle 12.795 % (gap inclus), EV 0.7762 % — **REFUSE**
-      - refuse : R/R 0.71 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 12.79 % > budget 12.00 %
    - ⚪ atr_grid a 6.5 ATR (stop 13.861 %) — p(stop avant cible) 0.0287 [0.01 ; 0.05], R/R 0.651, perte reelle 13.861 % (gap inclus), EV 0.7531 % — **REFUSE**
       - refuse : R/R 0.65 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 13.86 % > budget 12.00 %
@@ -202,7 +191,7 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
 - Kelly (position) : f* 0.088 | ¼-Kelly 0.022 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, intraday) : bull 57.5 | bear 36.6 | side 5.8  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 160.0
+- Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
 ## Microstructure intraday (5 s réel · 80 séances)
@@ -309,8 +298,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.681  _(pas de croisement recent)_
 - **BB** : %B 0.43 · largeur 10.5%
 - **ATR** : 7.07 (35.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV rising · CMF -0.184  _(distribution)_
-- **Vol ratio** : 1.24  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.203  _(distribution)_
+- **Vol ratio** : 0.33  _(volume atone)_
 - **Choppiness** : 46.5  _(transition)_
 - **MA** : MA20 334.07 · MA50 339.49 · MA200 312.85  _(prix < MA20)_
 - **Dist MA** : MA20 -0.7% · MA50 -2.3% · MA200 +6.0%
@@ -318,5 +307,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (750957 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (748631 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
