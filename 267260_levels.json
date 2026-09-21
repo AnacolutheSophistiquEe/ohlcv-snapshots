@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "267260",
-    "generated_at": "2026-09-18T22:05:22Z",
+    "generated_at": "2026-09-21T00:49:14Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-09-21T08:00:00Z",
-    "valid_until": "2026-09-21T21:00:00Z",
+    "valid_from": "2026-09-22T08:00:00Z",
+    "valid_until": "2026-09-22T21:00:00Z",
     "source_precomputed": "267260_precomputed.json"
   },
   "context": {
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 35642.8571,
     "atr_pct_daily": null,
-    "beta_60d": 0.9126,
+    "beta_60d": 0.9235,
     "beta_benchmark": "KS11",
-    "beta_corr_60d": 0.7507,
+    "beta_corr_60d": 0.7577,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -146,32 +146,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 538727.7708,
-        "max": 549666.4057
+        "min": 529028.2825,
+        "max": 539769.9736
       },
       "stop": {
-        "price": 493467.4613,
+        "price": 483620.2651,
         "basis": "fallback_sr_support",
-        "distance_pct": -9.32
+        "distance_pct": -9.5
       },
       "targets": [
         {
           "level": 1,
           "price": 737046.2805,
           "basis": "band 95% (atteignable) · touche hist. 91% (sans stop)",
-          "rr": 3.8
+          "rr": 3.99
         },
         {
           "level": 2,
           "price": 772742.561,
           "basis": "band 95% (atteignable) · touche hist. 44% (sans stop)",
-          "rr": 4.51
+          "rr": 4.69
         },
         {
           "level": 3,
           "price": 808438.8416,
           "basis": "plafond band 95% · touche hist. 14% (sans stop)",
-          "rr": 5.21
+          "rr": 5.4
         }
       ],
       "preferred_target": 1,
@@ -184,7 +184,7 @@
   "bot_actionable_reason": "ta_score=1<4",
   "global_conditions": [],
   "invalidation": {
-    "price": 488532.7867,
+    "price": 478784.0624,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
