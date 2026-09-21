@@ -1,12 +1,12 @@
 # 005930
 
-**Generated** : 2026-09-18T22:00:11.510782+00:00  
+**Generated** : 2026-09-21T00:21:36.158951+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩261000.00  
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
-> ↳ spot ₩261000.00 (+2.5% vs entrée) · entrée ₩254639.71 · stop ₩234268.54 · T1 ₩259131.26 · R/R 0.22  
+> ↳ spot ₩261000.00 (+2.5% vs entrée) · entrée ₩254639.71 · stop ₩234268.53 · T1 ₩259131.26 · R/R 0.22  
 > ↳ P(T1 av. stop) 39 % _(réel 5 s)_ · EV/risk -0.017 _(réel 5 s)_ (GBM -0.072) · ¼-Kelly 0.06 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=80 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
 
@@ -27,10 +27,10 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
 **Plan A — intraday** (order_type LMT)
 - Entry (zone de repli) : ₩253741.40–₩255538.02 (mid ₩254639.71)
 - Spot actuel : ₩261000.00 (+2.5% au-dessus de la zone — repli à attendre)
-- Stop : ₩234268.54 (stop swing_plan-based (-9.0%))
+- Stop : ₩234268.53 (stop swing_plan-based (-9.0%))
 - Targets : T1 ₩259131.26 · R/R 0.22 | T2 ₩263622.81 · R/R 0.44 | T3 ₩268114.36 · R/R 0.66
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩234268.54
+- Invalidation : close sous ₩234268.53
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
@@ -55,7 +55,7 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -6.44 % vs -7.31 % si l'on extrapolait par √5 _(rapport 0.882 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.1699** (β de hausse 1.3385, asymétrie 0.874) vs KS11 — 555 séances de repli, historique complet
+- **β de baisse : 1.1699** (β de hausse 1.3384, asymétrie 0.8741) vs KS11 — 555 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -181,5 +181,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (537769 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (537775 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

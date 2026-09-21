@@ -1,6 +1,6 @@
 # AL2SI
 
-**Generated** : 2026-09-18T21:53:14.352044+00:00  
+**Generated** : 2026-09-21T00:15:58.161094+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €28.36  

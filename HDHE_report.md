@@ -1,6 +1,6 @@
 # 267260
 
-**Generated** : 2026-09-18T22:02:24.913212+00:00  
+**Generated** : 2026-09-21T00:23:21.387481+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · ₩725000.00  
@@ -59,7 +59,7 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Pass (negative EV)'.
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -10.97 % vs -11.99 % si l'on extrapolait par √5 _(rapport 0.915 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0378** (β de hausse 0.8402, asymétrie 1.2352) vs KS11 — 555 séances de repli, historique complet
+- **β de baisse : 1.0378** (β de hausse 0.8392, asymétrie 1.2366) vs KS11 — 555 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -175,7 +175,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 11.5  _(pas de tendance nette)_
 - **MACD** : hist -882.849  _(bearish_recent)_
 - **BB** : %B 0.39 · largeur 18.7%
-- **ATR** : 35642.86 (11.0e pct 1a)  _(volatilite basse)_
+- **ATR** : 35642.86 (10.0e pct 1a)  _(volatilite basse)_
 - **OBV/CMF** : OBV falling · CMF 0.055  _(accumulation)_
 - **Vol ratio** : 1.02  _(volume normal)_
 - **Choppiness** : 65.8  _(marche en range (choppy))_
@@ -185,5 +185,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (536922 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (536910 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
