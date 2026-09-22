@@ -1,6 +1,6 @@
 # SRT3
 
-**Generated** : 2026-09-21T21:38:26.707708+00:00  
+**Generated** : 2026-09-22T00:03:53.230318+00:00  
 **Santé technique** : 8/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €248.70  
@@ -50,14 +50,14 @@ Plan privilegie B (swing), composite 8/10, conviction 'Pass'.
    - _fenêtre arrêtée : historique epuise — le regime est homogene sur toute la profondeur_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -10.0 % vs -9.2 % si l'on extrapolait par √5 _(rapport 1.087 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0722** (β de hausse 1.174, asymétrie 0.9133) vs GDAXI — 600 séances de repli, historique complet
+- **β de baisse : 1.0722** (β de hausse 1.1745, asymétrie 0.9129) vs GDAXI — 600 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 1.27× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
 
 - **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — la perte y est non bornee.**
-- **Couple retenu** : stop 220.0788 sur swing_based (3.33 ATR, 11.508 %) — p(stop avant cible) 0.0956 [0.07 ; 0.13], R/R 0.168, perte reelle 14.205 % (gap inclus), CVaR 11.51 %, EV -0.2601 % — **NON CONFORME (best_effort — proposition de derniere main)**
+- **Couple retenu** : stop 220.2155 sur swing_based (3.33 ATR, 11.453 %) — p(stop avant cible) 0.0991 [0.07 ; 0.13], R/R 0.168, perte reelle 14.205 % (gap inclus), CVaR 11.455 %, EV -0.287 % — **NON CONFORME (best_effort — proposition de derniere main)**
    - viole : R/R 0.17 < plancher 3.00 (mesure vs SPOT, gap inclus)
 - Budget de queue : **12.0 %** du notionnel — ⚠ VALEUR FIGEE (valeur de repli (ligne absente de l'allocation)), PAS une mesure. L'allocation derivee de la contrainte du compte n'etait pas disponible.
 - Candidats (la structure propose, la statistique elimine) :
@@ -65,17 +65,17 @@ Plan privilegie B (swing), composite 8/10, conviction 'Pass'.
       - refuse : R/R 0.31 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.44 %) : P(cible) 61.5 % x 2.38 % + P(rien) 0.7 % x -0.98 % ne couvrent pas P(stop) 37.9 % x 7.67 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ sr_based a 2.89 ATR (stop 10.229 %) — p(stop avant cible) 0.1215 [0.09 ; 0.16], R/R 0.168, perte reelle 14.205 % (gap inclus), EV -0.497 % — **REFUSE**
+   - ⚪ sr_based a 2.89 ATR (stop 10.174 %) — p(stop avant cible) 0.1235 [0.09 ; 0.16], R/R 0.168, perte reelle 14.205 % (gap inclus), EV -0.508 % — **REFUSE**
       - refuse : R/R 0.17 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.50 %) : P(cible) 74.4 % x 2.38 % + P(rien) 13.4 % x -4.07 % ne couvrent pas P(stop) 12.2 % x 14.20 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.51 %) : P(cible) 74.4 % x 2.38 % + P(rien) 13.2 % x -4.00 % ne couvrent pas P(stop) 12.3 % x 14.20 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ swing_based a 3.33 ATR (stop 11.508 %) — p(stop avant cible) 0.0956 [0.07 ; 0.13], R/R 0.168, perte reelle 14.205 % (gap inclus), EV -0.2601 % — **REFUSE**
+   - ⚪ swing_based a 3.33 ATR (stop 11.453 %) — p(stop avant cible) 0.0991 [0.07 ; 0.13], R/R 0.168, perte reelle 14.205 % (gap inclus), EV -0.287 % — **REFUSE**
       - refuse : R/R 0.17 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.26 %) : P(cible) 74.7 % x 2.38 % + P(rien) 15.7 % x -4.35 % ne couvrent pas P(stop) 9.6 % x 14.20 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.29 %) : P(cible) 74.7 % x 2.38 % + P(rien) 15.4 % x -4.30 % ne couvrent pas P(stop) 9.9 % x 14.20 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - 🟢 support a 8.27 ATR (stop 25.788 %) — p(stop avant cible) 0.0016 [0.00 ; 0.01], R/R 0.092, perte reelle 25.788 % (gap inclus), EV 0.1522 % — **REFUSE**
+   - 🟢 support a 8.27 ATR (stop 25.733 %) — p(stop avant cible) 0.0016 [0.00 ; 0.01], R/R 0.093, perte reelle 25.733 % (gap inclus), EV 0.1523 % — **REFUSE**
       - refuse : R/R 0.09 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 25.79 % > budget 12.00 %
+      - refuse : CVaR 95 % 25.73 % > budget 12.00 %
    - ⚪ atr_grid a 0.25 ATR (stop 0.723 %) — p(stop avant cible) 0.721 [0.67 ; 0.77], R/R 1.451, perte reelle 1.643 % (gap inclus), EV -0.5195 % — **REFUSE**
       - refuse : p_stop_first 0.721, borne haute 0.766 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
       - refuse : R/R 1.45 < plancher 3.00 (mesure vs SPOT, gap inclus)
@@ -313,8 +313,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.748  _(bullish_recent)_
 - **BB** : %B 0.72 · largeur 11.9%
 - **ATR** : 7.19 (20.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV rising · CMF 0.089  _(accumulation)_
-- **Vol ratio** : 1.3  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.1  _(accumulation)_
+- **Vol ratio** : 0.5  _(volume atone)_
 - **Choppiness** : 49.5  _(transition)_
 - **MA** : MA20 242.24 · MA50 236.38 · MA200 232.9  _(prix > MA20)_
 - **Dist MA** : MA20 +2.7% · MA50 +5.2% · MA200 +6.8%
@@ -322,5 +322,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (847018 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (816350 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

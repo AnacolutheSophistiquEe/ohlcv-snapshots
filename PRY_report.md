@@ -1,6 +1,6 @@
 # PRY
 
-**Generated** : 2026-09-21T21:54:25.871875+00:00  
+**Generated** : 2026-09-22T00:17:09.776717+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €126.10  
@@ -56,7 +56,7 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass (negative EV)'.
    - _fenêtre arrêtée : rupture de regime a 600 seances en arriere (volatilite 1.62 % contre 2.90 % aujourd'hui, rapport 0.56)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -6.49 % vs -7.5 % si l'on extrapolait par √5 _(rapport 0.865 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0367** (β de hausse 1.2291, asymétrie 0.8434) vs FTSEMIB — 564 séances de repli, historique complet
+- **β de baisse : 1.0367** (β de hausse 1.2291, asymétrie 0.8435) vs FTSEMIB — 564 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 1.484× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
@@ -318,8 +318,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.391  _(pas de croisement recent)_
 - **BB** : %B 0.79 · largeur 10.5%
 - **ATR** : 4.54 (54.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.13  _(distribution)_
-- **Vol ratio** : 0.82  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.145  _(distribution)_
+- **Vol ratio** : 0.52  _(volume atone)_
 - **Choppiness** : 60.2  _(transition)_
 - **MA** : MA20 122.37 · MA50 124.18 · MA200 117.26  _(prix > MA20)_
 - **Dist MA** : MA20 +3.0% · MA50 +1.5% · MA200 +7.5%
@@ -327,5 +327,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (819045 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (819065 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
