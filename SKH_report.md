@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-09-22T21:57:23.986226+00:00  
+**Generated** : 2026-09-23T00:19:24.811509+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
@@ -9,7 +9,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
 > ↳ spot ₩1840000.00 (+5.0% vs entrée) · entrée ₩1751914.39 · stop ₩1663057.24 · T1 ₩1828470.73 · R/R 0.86  
-> ↳ P(T1 av. stop) 38 % _(réel 5 s)_ · EV/risk -0.186 _(réel 5 s)_ (GBM 0.274) · ¼-Kelly 0.043 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 38 % _(réel 5 s)_ · EV/risk -0.186 _(réel 5 s)_ (GBM 0.277) · ¼-Kelly 0.044 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
 ## Régime & alignement multi-TF
 
@@ -61,9 +61,9 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass (negative EV)'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.274 | EV/share : ₩24370.436 | p_fill : —
+- EV/risk : 0.277 | EV/share : ₩24603.048 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 61 % | T2 45 % | T3 33 %
-- Kelly (position) : f* 0.172 | ¼-Kelly 0.043 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Kelly (position) : f* 0.174 | ¼-Kelly 0.044 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 85.5 | bear 6.7 | side 7.9  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 512.0
@@ -192,5 +192,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (573466 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (573618 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-09-22T21:59:29.998200+00:00  
+**Generated** : 2026-09-23T00:21:09.670496+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩276500.00  
@@ -40,7 +40,7 @@ Plan privilegie A (intraday), composite 7/10, conviction 'Pass'.
 - Entry (zone de repli) : ₩265910.57–₩267488.95 (mid ₩266699.76)
 - Spot actuel : ₩276500.00 (+3.7% au-dessus de la zone — repli à attendre)
 - Stop : ₩245363.78 (stop swing_plan-based (-11.32%))
-- Targets : T1 ₩270645.73 · R/R 0.18 | T2 ₩274591.69 · R/R 0.37 | T3 ₩278537.66 · R/R 0.55
+- Targets : T1 ₩270645.73 · R/R 0.18 | T2 ₩274591.70 · R/R 0.37 | T3 ₩278537.66 · R/R 0.55
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩245363.78
 
@@ -193,5 +193,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (571408 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (571553 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

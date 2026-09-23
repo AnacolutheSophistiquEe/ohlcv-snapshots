@@ -1,13 +1,13 @@
 # 267260
 
-**Generated** : 2026-09-22T22:01:41.360240+00:00  
+**Generated** : 2026-09-23T00:22:54.657273+00:00  
 **Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · ₩714000.00  
 
 > ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
-> ↳ spot ₩714000.00 (+0.7% vs entrée) · entrée ₩708752.23 · stop ₩676895.09 · T1 ₩744949.74 · R/R 1.14  
-> ↳ P(T1 av. stop) 42 % _(réel 5 s)_ · EV/risk -0.112 _(réel 5 s)_ (GBM 0.023) · ¼-Kelly 0.004 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ spot ₩714000.00 (+0.7% vs entrée) · entrée ₩708752.22 · stop ₩676895.08 · T1 ₩744949.74 · R/R 1.14  
+> ↳ P(T1 av. stop) 42 % _(réel 5 s)_ · EV/risk -0.112 _(réel 5 s)_ (GBM 0.022) · ¼-Kelly 0.004 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 423 % hors [0,100] (R² max 0.86). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
@@ -37,12 +37,12 @@ Plan privilegie B (swing), composite 3/10, conviction 'Strong Pass (negative EV)
 ## Niveaux clés & plan principal
 
 **Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : ₩703504.46–₩714000.00 (mid ₩708752.23)
+- Entry (zone de repli) : ₩703504.45–₩714000.00 (mid ₩708752.22)
 - Spot actuel : ₩714000.00 (+0.7% au-dessus de la zone — repli à attendre)
-- Stop : ₩676895.09 (stop swing_plan-based (-5.2%))
+- Stop : ₩676895.08 (stop swing_plan-based (-5.2%))
 - Targets : T1 ₩744949.74 · R/R 1.14 | T2 ₩781147.25 · R/R 2.27 | T3 ₩817344.76 · R/R 3.41
 - Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous ₩676895.09
+- Invalidation : close sous ₩676895.08
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
@@ -71,9 +71,9 @@ Plan privilegie B (swing), composite 3/10, conviction 'Strong Pass (negative EV)
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.023 | EV/share : ₩727.873 | p_fill : —
+- EV/risk : 0.022 | EV/share : ₩702.378 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 47 % | T2 23 % | T3 13 %
-- Kelly (position) : f* 0.015 | ¼-Kelly 0.004 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Kelly (position) : f* 0.014 | ¼-Kelly 0.004 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 85.7 | bear 7.0 | side 7.3  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
@@ -192,5 +192,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (569367 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (569527 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,45 +1,53 @@
 {
   "available": true,
-  "generated_at": "2026-09-14T00:17:56.319834+00:00",
-  "prediction_id": "PRY_A_20260914",
+  "generated_at": "2026-09-23T00:15:41.242402+00:00",
+  "prediction_id": "AL2SI_A_20260923",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "PRY",
-  "exchange": "BVME",
+  "symbol": "AL2SI",
+  "exchange": "SBF",
   "currency": "EUR",
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 126.6,
-    "quantity": 2,
+    "limit_price": 29.21,
+    "quantity": 13,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 128.3,
-      "quantity": 1,
+      "limit_price": 33.02,
+      "quantity": 6,
+      "tif": "GTC",
+      "tag": "T1"
+    },
+    {
+      "action": "SELL",
+      "order_type": "LMT",
+      "limit_price": 33.08,
+      "quantity": 4,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 132.3,
-      "quantity": 1,
+      "limit_price": 33.15,
+      "quantity": 3,
       "tif": "GTC",
       "tag": "T3"
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 115.9,
-      "quantity": 2,
+      "stop_price": 26.56,
+      "quantity": 13,
       "tif": "GTC",
       "tag": "SL"
     }
   ],
-  "oca_group": "PRY_A_intraday_20260914",
+  "oca_group": "AL2SI_A_intraday_20260923",
   "oca_type": 1,
   "execution_rules": {
     "stop_mode": "fixed",
@@ -53,7 +61,7 @@
     "order_validity": {
       "type": "DAY",
       "offset_sessions": 0,
-      "good_till_date": "2026-09-14T16:30:00+00:00"
+      "good_till_date": "2026-09-23T16:30:00+00:00"
     },
     "scale_out_weights": [
       0.5,
@@ -61,17 +69,22 @@
       0.2
     ],
     "scale_out_weights_normalized": [
-      0.6,
-      0.4
+      0.5,
+      0.3,
+      0.2
     ],
     "qty_split": [
       {
+        "tag": "T1",
+        "qty": 6
+      },
+      {
         "tag": "T2",
-        "qty": 1
+        "qty": 4
       },
       {
         "tag": "T3",
-        "qty": 1
+        "qty": 3
       }
     ]
   },
@@ -79,33 +92,33 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 5.0,
+    "composite_score": 8.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0761,
+    "ev_pct_risk": 0.0781,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.4621,
-      "T2": 0.2575,
-      "T3": 0.0715
+      "T1": 0.3216,
+      "T2": 0.3216,
+      "T3": 0.3216
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 254.5,
-    "hold_tolerance_breach_price": 95.4375,
+    "notional_eur": 381.68,
+    "hold_tolerance_breach_price": 22.02,
     "hold_fallback_active": true,
-    "prediction_id": "PRY_A_20260914"
+    "prediction_id": "AL2SI_A_20260923"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.1,
+    "tick_size_used": 0.01,
     "qty_total_positive": true
   }
 }

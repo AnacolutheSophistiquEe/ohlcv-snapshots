@@ -1,6 +1,6 @@
 # AL2SI
 
-**Generated** : 2026-09-22T21:52:54.123064+00:00  
+**Generated** : 2026-09-23T00:15:40.794696+00:00  
 **Santé technique** : 8/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite normal · €29.36  
@@ -56,8 +56,8 @@ Plan privilegie A (intraday), composite 8/10, conviction 'Pass (negative EV)'.
    - _fenêtre arrêtée : rupture de regime a 420 seances en arriere (volatilite 4.29 % contre 7.17 % aujourd'hui, rapport 0.60)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -14.76 % vs -13.9 % si l'on extrapolait par √5 _(rapport 1.062 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.2034** (β de hausse 0.9537, asymétrie 1.2618) vs FCHI — 618 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 1.879× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 1.2034** (β de hausse 0.9578, asymétrie 1.2564) vs FCHI — 618 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 1.872× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
@@ -163,7 +163,7 @@ Plan privilegie A (intraday), composite 8/10, conviction 'Pass (negative EV)'.
 | 0.15 ATR | 1.006 % | 29.0647 | 78.24 % | 83.22 % | 86.94 % | 88.78 % | 91.79 % | 94.71 % |
 | 0.2 ATR | 1.341 % | 28.9663 | 72.45 % | 79.1 % | 83.1 % | 85.63 % | 89.42 % | 92.51 % |
 | 0.25 ATR | 1.676 % | 28.8679 | 66.47 % | 74.48 % | 78.98 % | 82.28 % | 87.14 % | 90.91 % |
-| 0.35 ATR | 2.347 % | 28.671 | 54.71 % | 65.65 % | 70.83 % | 75.49 % | 82.2 % | 87.51 % |
+| 0.35 ATR | 2.347 % | 28.671 | 54.71 % | 65.55 % | 70.83 % | 75.49 % | 82.2 % | 87.51 % |
 | 0.5 ATR | 3.352 % | 28.3757 | 40.78 % | 53.88 % | 61.69 % | 68.5 % | 77.65 % | 85.01 % |
 | 0.75 ATR | 5.029 % | 27.8836 | 22.75 % | 37.49 % | 47.35 % | 55.61 % | 66.77 % | 76.22 % |
 | 1.0 ATR | 6.705 % | 27.3914 | 13.04 % | 25.02 % | 33.79 % | 44.29 % | 56.97 % | 67.83 % |
@@ -314,8 +314,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.128  _(pas de croisement recent)_
 - **BB** : %B 0.78 · largeur 16.6%
 - **ATR** : 1.97 (52.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.07  _(distribution)_
-- **Vol ratio** : 0.63  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.075  _(distribution)_
+- **Vol ratio** : 0.47  _(volume atone)_
 - **Choppiness** : 63.5  _(marche en range (choppy))_
 - **MA** : MA20 28.05 · MA50 27.22 · MA200 27.55  _(prix > MA20)_
 - **Dist MA** : MA20 +4.7% · MA50 +7.9% · MA200 +6.6%
@@ -323,5 +323,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (848034 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (848175 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

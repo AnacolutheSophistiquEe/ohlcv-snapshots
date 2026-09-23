@@ -1,13 +1,13 @@
 # 298040
 
-**Generated** : 2026-09-22T22:03:44.974472+00:00  
+**Generated** : 2026-09-23T00:24:42.777582+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · ₩2901000.00  
 
 > 🟡 **WAIT-FOR-DIP** — spot +6.5 % au-dessus de la zone d'entrée — attendre le repli  
 > ↳ spot ₩2901000.00 (+6.5% vs entrée) · entrée ₩2725220.08 · stop ₩2554028.75 · T1 ₩3067602.74 · R/R 2.0  
-> ↳ P(T1 av. stop) 29 % _(réel 5 s)_ · EV/risk 0.089 _(réel 5 s)_ (GBM 0.153) · ¼-Kelly 0.004 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ↳ P(T1 av. stop) 29 % _(réel 5 s)_ · EV/risk 0.089 _(réel 5 s)_ (GBM 0.156) · ¼-Kelly 0.005 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 164 % hors [0,100] (R² max 0.90). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
@@ -62,9 +62,9 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass'.
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.153 | EV/share : ₩26235.582 | p_fill : —
+- EV/risk : 0.156 | EV/share : ₩26640.634 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 27 % | T2 23 % | T3 20 %
-- Kelly (position) : f* 0.018 | ¼-Kelly 0.004 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Kelly (position) : f* 0.018 | ¼-Kelly 0.005 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 83.2 | bear 11.8 | side 5.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 512.0
@@ -184,7 +184,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 6.9  _(pas de tendance nette)_
 - **MACD** : hist 5928.334  _(bullish_recent)_
 - **BB** : %B 0.56 · largeur 16.0%
-- **ATR** : 130428.57 (24.0e pct 1a)  _(volatilite basse)_
+- **ATR** : 130428.57 (23.0e pct 1a)  _(volatilite basse)_
 - **OBV/CMF** : OBV rising · CMF 0.006  _(neutre)_
 - **Vol ratio** : 0.9  _(volume normal)_
 - **Choppiness** : 63.4  _(marche en range (choppy))_
@@ -194,5 +194,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (573238 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (573383 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
