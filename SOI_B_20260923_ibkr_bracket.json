@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-09-23T00:13:50.007173+00:00",
+  "generated_at": "2026-09-23T21:50:30.024404+00:00",
   "prediction_id": "SOI_B_20260923",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SOI",
@@ -9,7 +9,7 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 152.1,
+    "limit_price": 150.65,
     "quantity": 4,
     "tif": "GTD",
     "gtd": "2026-09-28T16:30:00+00:00"
@@ -18,7 +18,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 161.4,
+      "limit_price": 180.0,
       "quantity": 2,
       "tif": "GTC",
       "tag": "T1"
@@ -26,7 +26,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 172.75,
+      "limit_price": 181.4,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2"
@@ -34,7 +34,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 184.1,
+      "limit_price": 182.85,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3"
@@ -42,7 +42,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 138.05,
+      "stop_price": 133.5,
       "quantity": 4,
       "tif": "GTC",
       "tag": "SL"
@@ -95,22 +95,22 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 9.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.1733,
+    "ev_pct_risk": 0.2411,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.5207,
-      "T2": 0.2927,
-      "T3": 0.1603
+      "T1": 0.2107,
+      "T2": 0.1837,
+      "T3": 0.1763
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 608.4,
-    "hold_tolerance_breach_price": 114.075,
+    "notional_eur": 602.6,
+    "hold_tolerance_breach_price": 112.9875,
     "hold_fallback_active": true,
     "prediction_id": "SOI_B_20260923"
   },
