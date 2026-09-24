@@ -1,11 +1,11 @@
 # 267260
 
-**Generated** : 2026-09-24T00:23:23.699785+00:00  
+**Generated** : 2026-09-24T22:03:04.065027+00:00  
 **Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · ₩708000.00  
 
-> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)  
 > ↳ spot ₩708000.00 (+15.3% vs entrée) · entrée ₩613996.50 · stop ₩582996.50 · T1 ₩645183.68 · R/R 1.01  
 > ↳ P(T1 av. stop) 64 % · EV/risk -0.111 · ¼-Kelly 0.006 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
@@ -65,7 +65,7 @@ Plan privilegie B (swing), composite 3/10, conviction 'Strong Pass (negative EV)
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -10.95 % vs -11.99 % si l'on extrapolait par √5 _(rapport 0.913 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0378** (β de hausse 0.8383, asymétrie 1.2379) vs KS11 — 555 séances de repli, historique complet
+- **β de baisse : 1.0378** (β de hausse 0.8381, asymétrie 1.2383) vs KS11 — 555 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -171,8 +171,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -185,11 +185,11 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **OBV/CMF** : OBV rising · CMF -0.099  _(distribution)_
 - **Vol ratio** : 0.6  _(volume atone)_
 - **Choppiness** : 68.6  _(marche en range (choppy))_
-- **MA** : MA20 738500.0 · MA50 745035.93 · MA200 913827.65  _(prix < MA20)_
+- **MA** : MA20 738500.0 · MA50 745035.93 · MA200 913827.64  _(prix < MA20)_
 - **Dist MA** : MA20 -4.1% · MA50 -5.0% · MA200 -22.5%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (565387 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (588832 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

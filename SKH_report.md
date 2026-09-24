@@ -1,13 +1,13 @@
 # 000660
 
-**Generated** : 2026-09-24T00:19:51.002030+00:00  
+**Generated** : 2026-09-24T21:58:41.167244+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩1862000.00  
 
-> ⛔ **STAND-DOWN** — EV/risque ≤ 0 — pas d'engagement statistiquement justifié (vérité terrain 5 s)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)  
 > ↳ spot ₩1862000.00 (+0.7% vs entrée) · entrée ₩1848543.36 · stop ₩1761614.79 · T1 ₩1929404.70 · R/R 0.93  
 > ↳ P(T1 av. stop) 43 % _(réel 5 s)_ · EV/risk -0.205 _(réel 5 s)_ (GBM 0.317) · ¼-Kelly 0.047 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
@@ -58,12 +58,12 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass (negative EV)'.
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -9.39 % vs -10.57 % si l'on extrapolait par √5 _(rapport 0.889 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.4126** (β de hausse 1.6193, asymétrie 0.8723) vs KS11 — 555 séances de repli, historique complet
+- **β de baisse : 1.4126** (β de hausse 1.6181, asymétrie 0.873) vs KS11 — 555 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.317 | EV/share : ₩27585.969 | p_fill : —
+- EV/risk : 0.317 | EV/share : ₩27585.970 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 60 % | T2 45 % | T3 32 %
 - Kelly (position) : f* 0.186 | ¼-Kelly 0.047 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
@@ -174,8 +174,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -194,5 +194,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (571124 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (594579 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

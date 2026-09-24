@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-09-24T00:16:02.415889+00:00",
+  "generated_at": "2026-09-24T21:53:51.542548+00:00",
   "prediction_id": "AL2SI_A_20260924",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "AL2SI",
@@ -9,31 +9,31 @@
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 30.71,
-    "quantity": 16,
+    "limit_price": 29.95,
+    "quantity": 13,
     "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 30.91,
-      "quantity": 8,
+      "limit_price": 30.58,
+      "quantity": 6,
       "tif": "GTC",
       "tag": "T1"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 32.44,
-      "quantity": 5,
+      "limit_price": 32.11,
+      "quantity": 4,
       "tif": "GTC",
       "tag": "T2"
     },
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 33.96,
+      "limit_price": 33.64,
       "quantity": 3,
       "tif": "GTC",
       "tag": "T3"
@@ -41,8 +41,8 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 27.47,
-      "quantity": 16,
+      "stop_price": 27.11,
+      "quantity": 13,
       "tif": "GTC",
       "tag": "SL"
     }
@@ -76,11 +76,11 @@
     "qty_split": [
       {
         "tag": "T1",
-        "qty": 8
+        "qty": 6
       },
       {
         "tag": "T2",
-        "qty": 5
+        "qty": 4
       },
       {
         "tag": "T3",
@@ -92,24 +92,24 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 9.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.1308,
+    "ev_pct_risk": 0.1042,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "p_hit_upper": {
-      "T1": 0.3689,
-      "T2": 0.2905,
-      "T3": 0.2905
+      "T1": 0.3162,
+      "T2": 0.3162,
+      "T3": 0.3162
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_note": "skill must provide — le pipeline n'a pas la zone d'entrée pour calculer p_fill empirique",
     "rating": null,
     "rating_note": "compute_rating (Phase 1 C.5) à implémenter",
-    "notional_eur": 493.76,
-    "hold_tolerance_breach_price": 23.145,
+    "notional_eur": 391.3,
+    "hold_tolerance_breach_price": 22.575,
     "hold_fallback_active": true,
     "prediction_id": "AL2SI_A_20260924"
   },

@@ -6,7 +6,7 @@
     "exchange": "KRX (KOSPI)",
     "currency": "KRW",
     "isin": "KR7298040007",
-    "generated_at": "2026-09-24T00:25:11.007460+00:00",
+    "generated_at": "2026-09-24T22:05:14.886744+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1498,27 +1498,27 @@
     "benchmark": "KS11",
     "n_common_dates": 243,
     "relative_perf_pct": {
-      "1M": -1.09,
-      "3M": -5.48,
-      "6M": -15.56,
+      "1M": -2.01,
+      "3M": -6.22,
+      "6M": -16.6,
       "1Y": null
     },
     "perf_breakdown": {
       "1M": {
-        "asset": 3.9,
-        "benchmark": 5.0
+        "asset": 3.72,
+        "benchmark": 5.73
       },
       "3M": {
-        "asset": -19.77,
-        "benchmark": -14.29
+        "asset": -19.91,
+        "benchmark": -13.69
       },
       "6M": {
-        "asset": 6.07,
-        "benchmark": 21.63
+        "asset": 5.89,
+        "benchmark": 22.48
       },
       "1Y": null
     },
-    "z_score_1y_daily_relative": -0.27,
+    "z_score_1y_daily_relative": -0.52,
     "price_ratio_trend_60d": "rising",
     "interpretation": "ratio actif/benchmark en hausse 60d"
   },
@@ -1773,7 +1773,7 @@
           "rr": 0.28,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7947,
+          "p_touch": 0.7946,
           "distance_pct": 2.24
         },
         "t2": {
@@ -1782,7 +1782,7 @@
           "rr": 0.56,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7947,
+          "p_touch": 0.7946,
           "distance_pct": 4.48
         },
         "t3": {
@@ -1826,7 +1826,7 @@
           "rr": 2.15,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7218,
+          "p_touch": 0.7217,
           "distance_pct": 10.02
         },
         "t3": {
@@ -1835,7 +1835,7 @@
           "rr": 3.23,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4421,
+          "p_touch": 0.4419,
           "distance_pct": 15.04
         }
       }
@@ -1861,7 +1861,7 @@
           "rr": 0.98,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8047,
+          "p_touch": 0.8045,
           "distance_pct": 7.09
         },
         "t2": {
@@ -1870,7 +1870,7 @@
           "rr": 1.96,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.8047,
+          "p_touch": 0.8045,
           "distance_pct": 14.18
         },
         "t3": {
@@ -2174,7 +2174,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-09-24T00:24:46.889492+00:00",
+    "generated_at": "2026-09-24T22:04:44.875148+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7603,7 +7603,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-09-24T00:24:32.531697+00:00",
+    "generated_at": "2026-09-24T22:04:26.939971+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7825,15 +7825,394 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-09-24T00:24:54.282900+00:00",
+    "generated_at": "2026-09-24T22:04:53.204463+00:00",
     "ticker": "298040",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 1,
+    "n_events": 26,
     "events": [
+      {
+        "date": "2026-09-24",
+        "type": "macro",
+        "label": "US Initial Jobless Claims (weekly)",
+        "importance": "medium",
+        "sessions_to_event": 0,
+        "calendar_days": 0,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-24",
+        "type": "macro",
+        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
+        "importance": "low",
+        "sessions_to_event": 0,
+        "calendar_days": 0,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-24",
+        "type": "macro",
+        "label": "US New Home Sales",
+        "importance": "low",
+        "sessions_to_event": 0,
+        "calendar_days": 0,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-24",
+        "type": "macro",
+        "label": "German Ifo Business Climate Index",
+        "importance": "medium",
+        "sessions_to_event": 0,
+        "calendar_days": 0,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-24",
+        "type": "macro",
+        "label": "Costco (COST) Q4 FY2026 Earnings — 24/09/2026 (après clôture US)",
+        "importance": "medium",
+        "sessions_to_event": 0,
+        "calendar_days": 0,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-24",
+        "type": "macro",
+        "label": "SpaceX (SPCX) — lock-up expiration 328.4M shares — 24/09/2026",
+        "importance": "medium",
+        "sessions_to_event": 0,
+        "calendar_days": 0,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-25",
+        "type": "macro",
+        "label": "US Durable Goods Orders",
+        "importance": "low",
+        "sessions_to_event": 1,
+        "calendar_days": 1,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-25",
+        "type": "macro",
+        "label": "US University of Michigan Consumer Sentiment (prelim + final)",
+        "importance": "medium",
+        "sessions_to_event": 1,
+        "calendar_days": 1,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-29",
+        "type": "macro",
+        "label": "US Conference Board Consumer Confidence",
+        "importance": "medium",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-29",
+        "type": "macro",
+        "label": "US JOLTS (Job Openings and Labor Turnover)",
+        "importance": "medium",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-29",
+        "type": "macro",
+        "label": "Canada — tariff 50% sur importations US — effectif 29/09/2026",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "US PCE Price Index (headline) — Personal Income & Outlays",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "US Core PCE Price Index (ex food & energy)",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "US Personal Income & Spending",
+        "importance": "medium",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "US GDP (advance / second / third estimate)",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "US ADP National Employment Report",
+        "importance": "medium",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "German HICP Flash (inflation estimate)",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "Micron Technology (MU) earnings Q4 FY2026 — ~30/09/2026",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-01",
+        "type": "macro",
+        "label": "US Initial Jobless Claims (weekly)",
+        "importance": "medium",
+        "sessions_to_event": 5,
+        "calendar_days": 7,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-01",
+        "type": "macro",
+        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
+        "importance": "low",
+        "sessions_to_event": 5,
+        "calendar_days": 7,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-01",
+        "type": "macro",
+        "label": "US ISM Manufacturing PMI",
+        "importance": "medium",
+        "sessions_to_event": 5,
+        "calendar_days": 7,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-02",
+        "type": "macro",
+        "label": "US Employment Situation (NFP / unemployment / earnings)",
+        "importance": "high",
+        "sessions_to_event": 6,
+        "calendar_days": 8,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-05",
+        "type": "macro",
+        "label": "US ISM Services PMI",
+        "importance": "medium",
+        "sessions_to_event": 8,
+        "calendar_days": 11,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-06",
+        "type": "macro",
+        "label": "US International Trade Balance (goods & services)",
+        "importance": "low",
+        "sessions_to_event": 9,
+        "calendar_days": 12,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-07",
+        "type": "macro",
+        "label": "US Retail Sales (headline + control group)",
+        "importance": "medium",
+        "sessions_to_event": 9,
+        "calendar_days": 13,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
       {
         "date": "2026-10-07",
         "type": "macro",
@@ -7987,7 +8366,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-09-24T00:24:52.788692+00:00",
+    "generated_at": "2026-09-24T22:04:51.610327+00:00",
     "ticker": "298040",
     "yahoo": "298040.KS",
     "source": "yfinance.Ticker.info",
@@ -8014,9 +8393,9 @@
       "shares_outstanding": 9311741.0,
       "float_shares": 4277534.0,
       "free_float_pct": 45.9,
-      "avg_volume_3m": 48347.0,
-      "adv_str": "48.3 k titres",
-      "avg_volume_10d": 32722.0,
+      "avg_volume_3m": 47848.0,
+      "adv_str": "47.8 k titres",
+      "avg_volume_10d": 32502.0,
       "archetype_suggested": null,
       "archetype_basis": "aucune regle ne tranche — a l'appreciation du /full_brief",
       "business_summary_raw": "Hyosung Heavy Industries Corporation manufactures and sells heavy electrical equipment in South Korea. The company offers transmission and distribution products, such as power, oil-immersed distribution, cast-resin, and special transformers; shunt reactors, high voltage switchgears, medium/ low voltage switchgears, and high voltage direct current transmission systems; STATCOM, a power electronic based device to enhance the power system stability and quality; and turnkey solutions. It also provides system and engineering solutions, including condition monitoring systems; asset health management, power system maintenance, power automation, and process automation solutions; and renewable energy products comprising energy storage systems, solar inverters, and wind turbines, as well as engineering, procurement, and construction services for solar energy projects. In addition, the company offers high and low voltage motors, DC motors, general industrial and special-purpose motors, commercial generators, and emergency power generators; chemical equipment, filling stations, and industrial gas supplying systems; gear boxes, motors, and special gear units; and ARC, resistance, and special spot welding machines. Further, it undertakes various construction projects, including housing, redevelopment and reconstruction, business and commercial facilities, civil engineering and environment, and SOC. Additionally, the company provides power conditioning systems and power management systems. It also exports its products to North and Central America, Europe, Asia, and internationally. Hyosung Heavy Industries Corporation was founded in 1962 and is headquartered in Seoul, South Korea."
@@ -8091,14 +8470,14 @@
     },
     "ownership": {
       "insiders_pct": 43.99,
-      "institutions_pct": 31.42,
+      "institutions_pct": 31.36,
       "short_pct_float": null,
       "short_ratio_days": null
     },
     "market": {
       "beta": 2.172,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": 110.52,
+      "change_52w_pct": 114.04,
       "low_52w": 1315000.0,
       "high_52w": 4742000.0
     },
@@ -8117,8 +8496,8 @@
       "beta": 0.23,
       "beta_ref": "EWY",
       "beta_days": 469,
-      "correlation": 0.16,
-      "correlation_note": "correlation 0.16 avec EWY sur 469 seances"
+      "correlation": 0.15,
+      "correlation_note": "correlation 0.15 avec EWY sur 469 seances"
     },
     "serves": [
       {
@@ -8188,7 +8567,7 @@
       },
       {
         "field": "identity.adv_str",
-        "value": "48.3 k titres",
+        "value": "47.8 k titres",
         "from": "fundamentals.identity.adv_str"
       },
       {
@@ -8318,7 +8697,7 @@
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 31.42,
+        "value": 31.36,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -8368,7 +8747,7 @@
       },
       {
         "field": "portfolio_fit.correlation_note",
-        "value": "correlation 0.16 avec EWY sur 469 seances",
+        "value": "correlation 0.15 avec EWY sur 469 seances",
         "from": "fundamentals.portfolio_fit.correlation_note"
       }
     ],
@@ -8480,7 +8859,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-09-24T00:24:30.884324+00:00",
+    "generated_at": "2026-09-24T22:04:24.956410+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/298040_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1221,
@@ -8888,7 +9267,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-09-24T00:24:32.300271+00:00",
+    "generated_at": "2026-09-24T22:04:26.631559+00:00",
     "ticker": "298040",
     "source_csv": "298040_daily_long.csv",
     "n_sessions": 1222,
@@ -12939,10 +13318,10 @@
   },
   "beta_dynamic": {
     "available": true,
-    "beta_60d": 1.1227,
-    "beta_252d": 1.0283,
-    "correlation_60d": 0.7485,
-    "correlation_252d": 0.6977,
+    "beta_60d": 1.1209,
+    "beta_252d": 1.0278,
+    "correlation_60d": 0.7476,
+    "correlation_252d": 0.6974,
     "ratio_price_benchmark_trend_60d": "rising"
   },
   "streaks": {
@@ -20836,18 +21215,18 @@
     "benchmark_synchronous": true,
     "asset_market": "KR",
     "benchmark_market": "KR",
-    "beta_up_days": 0.9973,
+    "beta_up_days": 0.9967,
     "beta_down_days": 1.0757,
-    "beta_asymmetry": 1.0787,
+    "beta_asymmetry": 1.0793,
     "n_up_days": 665,
     "n_down_days": 555,
     "interpretation": "balanced",
     "window_days": 1220,
     "window_mode": "historique complet",
     "recent_252d": {
-      "beta_up_days": 1.1658,
+      "beta_up_days": 1.1667,
       "beta_down_days": 0.9442,
-      "beta_asymmetry": 0.8099,
+      "beta_asymmetry": 0.8093,
       "n_up_days": 152,
       "n_down_days": 90,
       "window_days": 242
