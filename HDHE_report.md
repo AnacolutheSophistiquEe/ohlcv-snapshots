@@ -1,6 +1,6 @@
 # 267260
 
-**Generated** : 2026-09-23T22:02:02.750298+00:00  
+**Generated** : 2026-09-24T00:23:23.699785+00:00  
 **Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · ₩708000.00  
@@ -70,7 +70,7 @@ Plan privilegie B (swing), composite 3/10, conviction 'Strong Pass (negative EV)
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.049 | EV/share : ₩1529.182 | p_fill : —
+- EV/risk : 0.049 | EV/share : ₩1529.181 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 49 % | T2 25 % | T3 14 %
 - Kelly (position) : f* 0.025 | ¼-Kelly 0.006 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
@@ -185,7 +185,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **OBV/CMF** : OBV rising · CMF -0.099  _(distribution)_
 - **Vol ratio** : 0.6  _(volume atone)_
 - **Choppiness** : 68.6  _(marche en range (choppy))_
-- **MA** : MA20 738500.0 · MA50 745035.93 · MA200 913827.64  _(prix < MA20)_
+- **MA** : MA20 738500.0 · MA50 745035.93 · MA200 913827.65  _(prix < MA20)_
 - **Dist MA** : MA20 -4.1% · MA50 -5.0% · MA200 -22.5%
 
 

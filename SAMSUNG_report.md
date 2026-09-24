@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-09-23T21:59:44.684601+00:00  
+**Generated** : 2026-09-24T00:21:36.576839+00:00  
 **Santé technique** : 9/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩285500.00  
@@ -191,5 +191,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (567645 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (567650 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

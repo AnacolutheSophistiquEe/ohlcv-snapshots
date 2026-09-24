@@ -1,6 +1,6 @@
 # 298040
 
-**Generated** : 2026-09-23T22:04:11.426513+00:00  
+**Generated** : 2026-09-24T00:25:11.007460+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · ₩2896000.00  
@@ -41,7 +41,7 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass'.
    - coût AMORTI sur toutes les séances : 0.0011 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 1 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -2.473 % | p01 -4.655 % | pire -11.686 % _(sur 1221 séances)_
+- Chocs d'ouverture : p05 -2.474 % | p01 -4.655 % | pire -11.686 % _(sur 1221 séances)_
 - **P(stop avant cible)** _(source : daily, 1222 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0646** [0.035 ; 0.1086] _(largeur 7.4 pt, n_eff 173.1)_
    - swing : **0.4587** [0.4067 ; 0.5114] _(largeur 10.5 pt, n_eff 345.6)_
@@ -191,5 +191,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (570811 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (570801 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
