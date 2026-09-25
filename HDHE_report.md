@@ -1,6 +1,6 @@
 # 267260
 
-**Generated** : 2026-09-25T00:23:18.078593+00:00  
+**Generated** : 2026-09-25T22:02:56.204557+00:00  
 **Santé technique** : 3/10 — **Rating** : Strong Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · ₩708000.00  
@@ -65,12 +65,12 @@ Plan privilegie B (swing), composite 3/10, conviction 'Strong Pass (negative EV)
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -10.95 % vs -11.99 % si l'on extrapolait par √5 _(rapport 0.913 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0378** (β de hausse 0.8381, asymétrie 1.2383) vs KS11 — 555 séances de repli, historique complet
+- **β de baisse : 1.0378** (β de hausse 0.8387, asymétrie 1.2374) vs KS11 — 555 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.049 | EV/share : ₩1529.182 | p_fill : —
+- EV/risk : 0.049 | EV/share : ₩1529.181 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 49 % | T2 25 % | T3 14 %
 - Kelly (position) : f* 0.025 | ¼-Kelly 0.006 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
@@ -185,11 +185,11 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **OBV/CMF** : OBV rising · CMF -0.099  _(distribution)_
 - **Vol ratio** : 0.6  _(volume atone)_
 - **Choppiness** : 68.6  _(marche en range (choppy))_
-- **MA** : MA20 738500.0 · MA50 745035.93 · MA200 913827.64  _(prix < MA20)_
+- **MA** : MA20 738500.0 · MA50 745035.93 · MA200 913827.65  _(prix < MA20)_
 - **Dist MA** : MA20 -4.1% · MA50 -5.0% · MA200 -22.5%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (588786 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (592928 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

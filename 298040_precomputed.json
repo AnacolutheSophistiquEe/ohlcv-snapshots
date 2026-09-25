@@ -6,7 +6,7 @@
     "exchange": "KRX (KOSPI)",
     "currency": "KRW",
     "isin": "KR7298040007",
-    "generated_at": "2026-09-25T00:25:06.858162+00:00",
+    "generated_at": "2026-09-25T22:05:11.091032+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1496,34 +1496,34 @@
   "relative_strength": {
     "ticker": "298040",
     "benchmark": "KS11",
-    "n_common_dates": 243,
+    "n_common_dates": 244,
     "relative_perf_pct": {
-      "1M": -2.01,
-      "3M": -6.22,
-      "6M": -16.6,
+      "1M": 0.1,
+      "3M": 2.78,
+      "6M": -19.13,
       "1Y": null
     },
     "perf_breakdown": {
       "1M": {
-        "asset": 3.72,
-        "benchmark": 5.73
+        "asset": 5.12,
+        "benchmark": 5.02
       },
       "3M": {
-        "asset": -19.91,
-        "benchmark": -13.69
+        "asset": -13.63,
+        "benchmark": -16.41
       },
       "6M": {
-        "asset": 5.89,
-        "benchmark": 22.48
+        "asset": 11.86,
+        "benchmark": 30.99
       },
       "1Y": null
     },
-    "z_score_1y_daily_relative": -0.52,
+    "z_score_1y_daily_relative": -0.32,
     "price_ratio_trend_60d": "rising",
     "interpretation": "ratio actif/benchmark en hausse 60d"
   },
   "ta_score": {
-    "score": 6,
+    "score": 8,
     "max": 10,
     "label": "bullish",
     "score_type": "technical_health",
@@ -1531,7 +1531,7 @@
       "trend_structure": 2.15,
       "momentum": 2.8,
       "trend_quality": 0.7,
-      "relative_strength": 0.6
+      "relative_strength": 2.0
     },
     "entry_timing": {
       "setup_proximity": 0.5,
@@ -1551,30 +1551,30 @@
       "tf": "h1",
       "tf_fallback": false,
       "selectable": true,
-      "score": 4,
-      "score_raw": 3.5,
+      "score": 5,
+      "score_raw": 4.9,
       "score_type": "technical_health",
       "subscores": {
         "trend_structure": 1.25,
         "momentum": 0.3,
         "trend_quality": 1.35,
-        "relative_strength": 0.6
+        "relative_strength": 2.0
       },
-      "label": "bearish"
+      "label": "neutral"
     },
     "plan_b": {
       "horizon": "swing",
       "tf": "daily",
       "tf_fallback": false,
       "selectable": true,
-      "score": 6,
-      "score_raw": 6.25,
+      "score": 8,
+      "score_raw": 7.65,
       "score_type": "technical_health",
       "subscores": {
         "trend_structure": 2.15,
         "momentum": 2.8,
         "trend_quality": 0.7,
-        "relative_strength": 0.6
+        "relative_strength": 2.0
       },
       "label": "bullish"
     },
@@ -1585,18 +1585,18 @@
       "weekly_available": true,
       "selectable": false,
       "context_only": true,
-      "score": 4,
-      "score_raw": 3.65,
+      "score": 5,
+      "score_raw": 5.05,
       "score_type": "technical_health",
       "subscores": {
         "trend_structure": 1.25,
         "momentum": 0.8,
         "trend_quality": 1.0,
-        "relative_strength": 0.6
+        "relative_strength": 2.0
       },
-      "label": "bearish"
+      "label": "neutral"
     },
-    "composite_score_max": 6,
+    "composite_score_max": 8,
     "composite_plan": "B",
     "selectable_plans": [
       "A",
@@ -1817,7 +1817,7 @@
           "rr": 1.08,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9052,
+          "p_touch": 0.9051,
           "distance_pct": 5.01
         },
         "t2": {
@@ -1826,7 +1826,7 @@
           "rr": 2.15,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7217,
+          "p_touch": 0.7215,
           "distance_pct": 10.02
         },
         "t3": {
@@ -1835,7 +1835,7 @@
           "rr": 3.23,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4419,
+          "p_touch": 0.4417,
           "distance_pct": 15.04
         }
       }
@@ -1879,7 +1879,7 @@
           "rr": 2.94,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.2781,
+          "p_touch": 0.278,
           "distance_pct": 21.26
         }
       }
@@ -2174,7 +2174,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-09-25T00:24:42.696928+00:00",
+    "generated_at": "2026-09-25T22:04:41.072923+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7603,7 +7603,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-09-25T00:24:27.761961+00:00",
+    "generated_at": "2026-09-25T22:04:22.607553+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7812,11 +7812,11 @@
       "min_position_eur": 120.0,
       "hold_tolerance_drawdown_pct": 25.0
     },
-    "composite_score_used": 6,
-    "allocation_pct_tradable": 25.0,
+    "composite_score_used": 8,
+    "allocation_pct_tradable": 38.0,
     "note": "ADVISORY observe-only : aucun ordre piloté. Grille = hypothèse jusqu'à recalibration M7. Capital 2000 € (réel). Le skill peut re-dériver avec un capital utilisateur.",
-    "allocation_pct_tradable_capped": 25.0,
-    "notional_target_eur": 400.0,
+    "allocation_pct_tradable_capped": 38.0,
+    "notional_target_eur": 608.0,
     "shares": 0,
     "notional_effective_eur": 0.0,
     "cash_locked_pct_total_capital": 0.0,
@@ -7825,14 +7825,14 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-09-25T00:24:49.501674+00:00",
+    "generated_at": "2026-09-25T22:04:49.138292+00:00",
     "ticker": "298040",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 20,
+    "n_events": 21,
     "events": [
       {
         "date": "2026-09-25",
@@ -7857,6 +7857,22 @@
         "importance": "medium",
         "sessions_to_event": 0,
         "calendar_days": 0,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-26",
+        "type": "macro",
+        "label": "Mirum Pharma (MIRM) PDUFA FDA — maralixibat (Livmarli) expansion — 26/09/2026",
+        "importance": "medium",
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -8176,7 +8192,7 @@
       "intraday": {
         "plan_id": "A",
         "rating": "Pass (negative EV)",
-        "reason": "ev=-0.007 < 0 mais santé 4.0 ≥ 4 (actif sain, entrée non favorable)",
+        "reason": "ev=-0.007 < 0 mais santé 5.0 ≥ 4 (actif sain, entrée non favorable)",
         "inputs": {
           "ev_pct_risk": -0.0072,
           "ev_source": "empirical_5s",
@@ -8189,7 +8205,7 @@
             -0.1676,
             0.0543
           ],
-          "composite_score": 4.0,
+          "composite_score": 5.0,
           "p_fill": 0.6375,
           "p_fill_source": "empirical_5s"
         }
@@ -8210,7 +8226,7 @@
             0.0036,
             0.5359
           ],
-          "composite_score": 6.0,
+          "composite_score": 8.0,
           "p_fill": 0.3831,
           "p_fill_source": "empirical_5s"
         }
@@ -8218,7 +8234,7 @@
       "deep": {
         "plan_id": "C",
         "rating": "Pass (negative EV)",
-        "reason": "ev=-0.008 < 0 mais santé 4.0 ≥ 4 (actif sain, entrée non favorable)",
+        "reason": "ev=-0.008 < 0 mais santé 5.0 ≥ 4 (actif sain, entrée non favorable)",
         "inputs": {
           "ev_pct_risk": -0.0076,
           "ev_source": "empirical_5s",
@@ -8231,7 +8247,7 @@
             -0.2665,
             0.5156
           ],
-          "composite_score": 4.0,
+          "composite_score": 5.0,
           "p_fill": 0.332,
           "p_fill_source": "empirical_5s"
         }
@@ -8271,11 +8287,11 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-09-25T00:24:47.920772+00:00",
+    "generated_at": "2026-09-25T22:04:47.508772+00:00",
     "ticker": "298040",
     "yahoo": "298040.KS",
     "source": "yfinance.Ticker.info",
-    "source_kind": "cache",
+    "source_kind": "yfinance",
     "source_caveat": "source scrapee, non contractuelle : les cles peuvent disparaitre d'une version a l'autre. Un champ absent vaut null — jamais une valeur reportee d'une nuit precedente.",
     "identity": {
       "legal_name": "Hyosung Heavy Industries Corporation",
@@ -8298,8 +8314,8 @@
       "shares_outstanding": 9311741.0,
       "float_shares": 4277534.0,
       "free_float_pct": 45.9,
-      "avg_volume_3m": 47848.0,
-      "adv_str": "47.8 k titres",
+      "avg_volume_3m": 47579.0,
+      "adv_str": "47.6 k titres",
       "avg_volume_10d": 32502.0,
       "archetype_suggested": null,
       "archetype_basis": "aucune regle ne tranche — a l'appreciation du /full_brief",
@@ -8375,14 +8391,14 @@
     },
     "ownership": {
       "insiders_pct": 43.99,
-      "institutions_pct": 31.36,
+      "institutions_pct": 31.38,
       "short_pct_float": null,
       "short_ratio_days": null
     },
     "market": {
       "beta": 2.172,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": 114.04,
+      "change_52w_pct": 118.07,
       "low_52w": 1315000.0,
       "high_52w": 4742000.0
     },
@@ -8400,9 +8416,9 @@
     "portfolio_fit": {
       "beta": 0.23,
       "beta_ref": "EWY",
-      "beta_days": 469,
+      "beta_days": 468,
       "correlation": 0.15,
-      "correlation_note": "correlation 0.15 avec EWY sur 469 seances"
+      "correlation_note": "correlation 0.15 avec EWY sur 468 seances"
     },
     "serves": [
       {
@@ -8472,7 +8488,7 @@
       },
       {
         "field": "identity.adv_str",
-        "value": "47.8 k titres",
+        "value": "47.6 k titres",
         "from": "fundamentals.identity.adv_str"
       },
       {
@@ -8602,7 +8618,7 @@
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 31.36,
+        "value": 31.38,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -8652,7 +8668,7 @@
       },
       {
         "field": "portfolio_fit.correlation_note",
-        "value": "correlation 0.15 avec EWY sur 469 seances",
+        "value": "correlation 0.15 avec EWY sur 468 seances",
         "from": "fundamentals.portfolio_fit.correlation_note"
       }
     ],
@@ -8764,7 +8780,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-09-25T00:24:26.021148+00:00",
+    "generated_at": "2026-09-25T22:04:20.383966+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/298040_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1221,
@@ -8784,7 +8800,7 @@
           11.957
         ],
         "overshoot_mean_pt": 1.383,
-        "overshoot_p50_pt": 0.973,
+        "overshoot_p50_pt": 0.974,
         "overshoot_p90_pt": 3.155,
         "overshoot_worst_pt": 10.186,
         "loss_if_breach_pct": 2.883,
@@ -9144,17 +9160,17 @@
     "shock_quantiles_pct": {
       "gap_p50": 0.177,
       "gap_p10": -1.522,
-      "gap_p05": -2.473,
+      "gap_p05": -2.474,
       "gap_p01": -4.655,
       "gap_worst": -11.686,
       "gap_p99_up": 6.96,
       "gap_best": 21.742
     },
     "asymmetry": {
-      "n_down": 497,
-      "n_up": 710,
-      "mean_down_pct": -1.135,
-      "mean_up_pct": 1.453,
+      "n_down": 493,
+      "n_up": 714,
+      "mean_down_pct": -1.145,
+      "mean_up_pct": 1.445,
       "worst_down_pct": -11.686,
       "best_up_pct": 21.742,
       "downside_heavier": false
@@ -9172,7 +9188,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-09-25T00:24:27.501579+00:00",
+    "generated_at": "2026-09-25T22:04:22.286839+00:00",
     "ticker": "298040",
     "source_csv": "298040_daily_long.csv",
     "n_sessions": 1222,
@@ -11895,8 +11911,8 @@
         "p_no_touch": 0.0005,
         "p_stop_first": 0.5703,
         "p_target_first": 0.4292,
-        "pnl_no_touch_pct": 2.4623,
-        "pnl_no_touch_median_pct": 2.3485,
+        "pnl_no_touch_pct": 2.4191,
+        "pnl_no_touch_median_pct": 2.1823,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 6.0,
@@ -11917,11 +11933,11 @@
         "p_stop_first_hi": 0.4612,
         "p_target_first_lo": 0.5353,
         "p_target_first_hi": 0.5353,
-        "p_no_touch": 0.0035,
+        "p_no_touch": 0.0034,
         "p_stop_first": 0.4612,
         "p_target_first": 0.5353,
-        "pnl_no_touch_pct": -2.176,
-        "pnl_no_touch_median_pct": 0.4348,
+        "pnl_no_touch_pct": -2.1962,
+        "pnl_no_touch_median_pct": 0.3919,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 8.0,
@@ -11942,11 +11958,11 @@
         "p_stop_first_hi": 0.4002,
         "p_target_first_lo": 0.5846,
         "p_target_first_hi": 0.5846,
-        "p_no_touch": 0.0153,
+        "p_no_touch": 0.0152,
         "p_stop_first": 0.4002,
         "p_target_first": 0.5846,
-        "pnl_no_touch_pct": -2.2884,
-        "pnl_no_touch_median_pct": -3.1311,
+        "pnl_no_touch_pct": -2.2931,
+        "pnl_no_touch_median_pct": -3.201,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 10.0,
@@ -11970,8 +11986,8 @@
         "p_no_touch": 0.0275,
         "p_stop_first": 0.3608,
         "p_target_first": 0.6117,
-        "pnl_no_touch_pct": -2.6632,
-        "pnl_no_touch_median_pct": -4.1254,
+        "pnl_no_touch_pct": -2.6659,
+        "pnl_no_touch_median_pct": -4.1317,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 12.0,
@@ -11995,8 +12011,8 @@
         "p_no_touch": 0.0625,
         "p_stop_first": 0.2829,
         "p_target_first": 0.6546,
-        "pnl_no_touch_pct": -3.2498,
-        "pnl_no_touch_median_pct": -4.5268,
+        "pnl_no_touch_pct": -3.2511,
+        "pnl_no_touch_median_pct": -4.5311,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -13223,10 +13239,10 @@
   },
   "beta_dynamic": {
     "available": true,
-    "beta_60d": 1.1209,
-    "beta_252d": 1.0278,
-    "correlation_60d": 0.7476,
-    "correlation_252d": 0.6974,
+    "beta_60d": 1.1216,
+    "beta_252d": 1.0273,
+    "correlation_60d": 0.7525,
+    "correlation_252d": 0.6977,
     "ratio_price_benchmark_trend_60d": "rising"
   },
   "streaks": {
@@ -21120,21 +21136,21 @@
     "benchmark_synchronous": true,
     "asset_market": "KR",
     "benchmark_market": "KR",
-    "beta_up_days": 0.9967,
+    "beta_up_days": 0.9976,
     "beta_down_days": 1.0757,
-    "beta_asymmetry": 1.0793,
-    "n_up_days": 665,
+    "beta_asymmetry": 1.0783,
+    "n_up_days": 666,
     "n_down_days": 555,
     "interpretation": "balanced",
-    "window_days": 1220,
+    "window_days": 1221,
     "window_mode": "historique complet",
     "recent_252d": {
-      "beta_up_days": 1.1667,
+      "beta_up_days": 1.1668,
       "beta_down_days": 0.9442,
-      "beta_asymmetry": 0.8093,
-      "n_up_days": 152,
+      "beta_asymmetry": 0.8092,
+      "n_up_days": 153,
       "n_down_days": 90,
-      "window_days": 242
+      "window_days": 243
     },
     "beta_down_shift_ratio": 0.878,
     "beta_down_shift_note": "rapport entre le beta de baisse RECENT (252 seances) et celui de l'historique complet. Loin de 1 = le titre a change de sensibilite au marche ; c'est une information, pas une erreur.",
@@ -21209,7 +21225,7 @@
   },
   "harmonic_patterns": {
     "available": true,
-    "n_swings_detected": 103,
+    "n_swings_detected": 105,
     "n_patterns_found": 0,
     "tolerance": 0.05,
     "lookback_bars": 1222,

@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-09-25T00:19:44.225621+00:00  
+**Generated** : 2026-09-25T21:58:27.868534+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
@@ -58,7 +58,7 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass (negative EV)'.
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -9.39 % vs -10.57 % si l'on extrapolait par √5 _(rapport 0.889 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.4126** (β de hausse 1.6181, asymétrie 0.873) vs KS11 — 555 séances de repli, historique complet
+- **β de baisse : 1.4126** (β de hausse 1.6194, asymétrie 0.8723) vs KS11 — 555 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -194,5 +194,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (594525 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (598660 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

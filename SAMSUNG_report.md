@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-09-25T00:21:31.085848+00:00  
+**Generated** : 2026-09-25T22:00:43.326853+00:00  
 **Santé technique** : 9/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · ₩285500.00  
@@ -65,7 +65,7 @@ Plan privilegie B (swing), composite 9/10, conviction 'Neutral'.
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -6.42 % vs -7.3 % si l'on extrapolait par √5 _(rapport 0.88 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.1699** (β de hausse 1.3393, asymétrie 0.8735) vs KS11 — 555 séances de repli, historique complet
+- **β de baisse : 1.1699** (β de hausse 1.3385, asymétrie 0.874) vs KS11 — 555 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -191,5 +191,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (591144 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (595281 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
