@@ -1,6 +1,6 @@
 # NEX
 
-**Generated** : 2026-09-24T21:48:49.594914+00:00  
+**Generated** : 2026-09-25T00:12:06.508957+00:00  
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €135.90  
@@ -18,7 +18,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## ⚠ Contradictions techniques
 
-- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.220 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
+- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.210 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
   - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
   - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
   - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
@@ -60,7 +60,7 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass'.
    - _fenêtre arrêtée : historique epuise — le regime est homogene sur toute la profondeur_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -7.51 % vs -7.88 % si l'on extrapolait par √5 _(rapport 0.953 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.003** (β de hausse 1.0926, asymétrie 0.9179) vs FCHI — 619 séances de repli, historique complet
+- **β de baisse : 1.005** (β de hausse 1.0926, asymétrie 0.9198) vs FCHI — 618 séances de repli, historique complet
 
 
 ## Echelle Warden — OU poser le stop
@@ -170,7 +170,7 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass'.
 | 0.2 ATR | 0.681 % | 134.9743 | 68.53 % | 78.21 % | 83.1 % | 88.19 % | 92.68 % | 94.91 % |
 | 0.25 ATR | 0.851 % | 134.7429 | 61.96 % | 73.5 % | 79.08 % | 85.04 % | 90.6 % | 93.71 % |
 | 0.35 ATR | 1.192 % | 134.28 | 49.51 % | 64.18 % | 71.61 % | 78.74 % | 86.65 % | 91.51 % |
-| 0.5 ATR | 1.703 % | 133.5857 | 34.51 % | 52.31 % | 61.1 % | 70.47 % | 80.32 % | 87.31 % |
+| 0.5 ATR | 1.703 % | 133.5857 | 34.41 % | 52.31 % | 61.1 % | 70.47 % | 80.32 % | 87.31 % |
 | 0.75 ATR | 2.554 % | 132.4286 | 20.29 % | 36.31 % | 47.15 % | 58.66 % | 70.23 % | 80.72 % |
 | 1.0 ATR | 3.406 % | 131.2714 | 10.69 % | 24.14 % | 34.58 % | 48.43 % | 61.62 % | 74.03 % |
 | 1.25 ATR | 4.257 % | 130.1143 | 4.9 % | 16.09 % | 24.95 % | 39.47 % | 54.5 % | 67.63 % |
@@ -179,7 +179,7 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass'.
 | 2.5 ATR | 8.515 % | 124.3286 | 0.49 % | 2.65 % | 5.6 % | 11.42 % | 24.43 % | 38.66 % |
 | 3.0 ATR | 10.218 % | 122.0143 | 0.2 % | 1.67 % | 3.24 % | 7.09 % | 17.51 % | 30.17 % |
 | 4.0 ATR | 13.623 % | 117.3857 | 0.1 % | 0.49 % | 0.88 % | 1.87 % | 7.52 % | 17.88 % |
-| 6.0 ATR | 20.435 % | 108.1286 | 0.0 % | 0.0 % | 0.0 % | 0.2 % | 1.38 % | 4.4 % |
+| 6.0 ATR | 20.435 % | 108.1286 | 0.0 % | 0.0 % | 0.0 % | 0.2 % | 1.29 % | 4.3 % |
 
 **A quelle distance poser pour n'etre sorti que p % du temps** (lecture INVERSE — c'est elle qui sert a arbitrer) :
 
@@ -189,16 +189,16 @@ Plan privilegie B (swing), composite 7/10, conviction 'Pass'.
 | **2 s.** | 0.23 ATR | 0.54 ATR | 0.61 ATR | 0.82 ATR | 0.98 ATR | 1.13 ATR | 1.59 ATR | 2.06 ATR |
 | **3 s.** | 0.30 ATR | 0.70 ATR | 0.79 ATR | 1.04 ATR | 1.25 ATR | 1.44 ATR | 2.00 ATR | 2.63 ATR |
 | **5 s.** | 0.42 ATR | 0.96 ATR | 1.10 ATR | 1.43 ATR | 1.75 ATR | 1.97 ATR | 2.66 ATR | 3.40 ATR |
-| **10 s.** | 0.63 ATR | 1.40 ATR | 1.57 ATR | 2.09 ATR | 2.47 ATR | 2.82 ATR | 3.75 ATR | 4.82 ATR |
-| **20 s.** | 0.96 ATR | 2.02 ATR | 2.23 ATR | 2.83 ATR | 3.42 ATR | 3.83 ATR | 5.17 ATR | 5.91 ATR |
+| **10 s.** | 0.63 ATR | 1.40 ATR | 1.57 ATR | 2.09 ATR | 2.47 ATR | 2.82 ATR | 3.75 ATR | 4.81 ATR |
+| **20 s.** | 0.96 ATR | 2.02 ATR | 2.23 ATR | 2.83 ATR | 3.42 ATR | 3.83 ATR | 5.16 ATR | 5.90 ATR |
 
 **Distance optimale par horizon** (plage utile mesuree, puis meilleur point unique de cette plage) :
-- **1 seance(s)** : plage utile 0.395–0.35 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ✅ optimum identifie (77.8 % des re-echantillons)
+- **1 seance(s)** : plage utile 0.395–0.35 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ✅ optimum identifie (77.4 % des re-echantillons)
 - **2 seance(s)** : plage utile 0.614–0.75 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (2.554 %, prix 132.4291), p(touche) 36.31 % (en stress 88.24 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 45.8 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **3 seance(s)** : plage utile 0.793–1.25 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (3.406 %, prix 131.2712), p(touche) 34.58 % (en stress 84.31 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 39.6 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **5 seance(s)** : plage utile 1.096–1.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.25 ATR (4.257 %, prix 130.1147), p(touche) 39.47 % (en stress 93.14 %)  ✅ optimum identifie (61.8 % des re-echantillons)
-- **10 seance(s)** : plage utile 1.575–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (6.812 %, prix 126.6425), p(touche) 34.92 % (en stress 98.04 %)  ✅ optimum identifie (70.1 % des re-echantillons)
-- **20 seance(s)** : plage utile 2.229–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (8.515 %, prix 124.3281), p(touche) 38.66 % (en stress 98.02 %)  ✅ optimum identifie (67.9 % des re-echantillons)
+- **10 seance(s)** : plage utile 1.575–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (6.812 %, prix 126.6425), p(touche) 34.92 % (en stress 98.04 %)  ✅ optimum identifie (70.2 % des re-echantillons)
+- **20 seance(s)** : plage utile 2.229–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (8.515 %, prix 124.3281), p(touche) 38.66 % (en stress 98.02 %)  ✅ optimum identifie (68.1 % des re-echantillons)
 
 - p(touche) = part des fenetres de N seances ou le prix est venu chercher un stop pose a cette distance SOUS le prix d'entree de la fenetre. Mesure sur les barres reelles du titre, pas modelisee.
 
@@ -320,8 +320,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.1  _(bullish_recent)_
 - **BB** : %B 0.28 · largeur 8.7%
 - **ATR** : 4.63 (69.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF -0.225  _(distribution)_
-- **Vol ratio** : 0.84  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF -0.211  _(distribution)_
+- **Vol ratio** : 0.43  _(volume atone)_
 - **Choppiness** : 56.2  _(transition)_
 - **MA** : MA20 138.51 · MA50 137.27 · MA200 135.12  _(prix < MA20)_
 - **Dist MA** : MA20 -1.9% · MA50 -1.0% · MA200 +0.6%
@@ -329,5 +329,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (866895 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (866847 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

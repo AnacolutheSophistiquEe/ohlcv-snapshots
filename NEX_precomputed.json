@@ -6,7 +6,7 @@
     "exchange": "Euronext Paris",
     "currency": "EUR",
     "isin": "FR0000044448",
-    "generated_at": "2026-09-24T21:48:49.594914+00:00",
+    "generated_at": "2026-09-25T00:12:06.508957+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -428,7 +428,7 @@
           141.0,
           135.5,
           135.9,
-          112299
+          56371
         ]
       ],
       "h4": [
@@ -1255,8 +1255,8 @@
       "macd_hist": 0.09996426468820573,
       "macd_signal_cross": "bullish_recent",
       "obv_trend": "rising",
-      "mfi_14": 64.82914832870267,
-      "cmf_20": -0.22470244385421442,
+      "mfi_14": 66.74566670789102,
+      "cmf_20": -0.21120673074229865,
       "adl_trend": "rising",
       "adx_14": 11.182881686079817,
       "plus_di_14": 23.042789703313602,
@@ -1264,7 +1264,7 @@
       "di_spread_14": -0.4611417965393443,
       "choppiness_14": 56.21162807401891,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 0.8424249903135266,
+      "volume_ratio_ma20": 0.4319350415549079,
       "distance_ma20_pct": -1.8808031500318685,
       "distance_ma50_pct": -0.9965955197117207,
       "distance_ma200_pct": 0.5800174414535942
@@ -1423,9 +1423,9 @@
         "confidence_is_fit_not_probability": true,
         "historical_stats": {
           "available": true,
-          "n_samples": 29,
+          "n_samples": 30,
           "completion_rate": 1.0,
-          "avg_post_completion_return_pct": -4.27,
+          "avg_post_completion_return_pct": -4.32,
           "horizon_bars": 20,
           "low_sample": false,
           "confidence_is_fit_not_probability": true,
@@ -1471,34 +1471,34 @@
   "relative_strength": {
     "ticker": "NEX",
     "benchmark": "FCHI",
-    "n_common_dates": 255,
+    "n_common_dates": 254,
     "relative_perf_pct": {
-      "1M": 0.76,
-      "3M": -0.07,
-      "6M": 15.08,
-      "1Y": 6.03
+      "1M": 6.59,
+      "3M": -0.16,
+      "6M": 16.82,
+      "1Y": 5.4
     },
     "perf_breakdown": {
       "1M": {
-        "asset": -3.48,
-        "benchmark": -4.24
+        "asset": 2.69,
+        "benchmark": -3.9
       },
       "3M": {
-        "asset": -3.69,
-        "benchmark": -3.62
+        "asset": -3.82,
+        "benchmark": -3.66
       },
       "6M": {
-        "asset": 19.09,
-        "benchmark": 4.02
+        "asset": 20.35,
+        "benchmark": 3.53
       },
       "1Y": {
-        "asset": 8.71,
-        "benchmark": 2.68
+        "asset": 9.6,
+        "benchmark": 4.21
       }
     },
-    "z_score_1y_daily_relative": -1.47,
+    "z_score_1y_daily_relative": 0.13,
     "price_ratio_trend_60d": "rising",
-    "interpretation": "ratio actif/benchmark en hausse 60d"
+    "interpretation": "outperform fort 1M (+6.6%); ratio actif/benchmark en hausse 60d"
   },
   "ta_score": {
     "score": 7,
@@ -1764,7 +1764,7 @@
           "rr": 0.18,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7947,
+          "p_touch": 0.7946,
           "distance_pct": 1.41
         },
         "t2": {
@@ -1773,7 +1773,7 @@
           "rr": 0.35,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7947,
+          "p_touch": 0.7946,
           "distance_pct": 2.81
         },
         "t3": {
@@ -1782,7 +1782,7 @@
           "rr": 0.53,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4261,
+          "p_touch": 0.4262,
           "distance_pct": 4.22
         }
       }
@@ -2165,7 +2165,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-09-24T21:48:16.733121+00:00",
+    "generated_at": "2026-09-25T00:11:42.195355+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7974,7 +7974,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-09-24T21:47:58.233198+00:00",
+    "generated_at": "2026-09-25T00:11:27.671655+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8203,118 +8203,22 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-09-24T21:48:26.637600+00:00",
+    "generated_at": "2026-09-25T00:11:49.462095+00:00",
     "ticker": "NEX",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 26,
+    "n_events": 20,
     "events": [
-      {
-        "date": "2026-09-24",
-        "type": "macro",
-        "label": "US Initial Jobless Claims (weekly)",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-24",
-        "type": "macro",
-        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
-        "importance": "low",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-24",
-        "type": "macro",
-        "label": "US New Home Sales",
-        "importance": "low",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-24",
-        "type": "macro",
-        "label": "German Ifo Business Climate Index",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-24",
-        "type": "macro",
-        "label": "Costco (COST) Q4 FY2026 Earnings — 24/09/2026 (après clôture US)",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-24",
-        "type": "macro",
-        "label": "SpaceX (SPCX) — lock-up expiration 328.4M shares — 24/09/2026",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-09-25",
         "type": "macro",
         "label": "US Durable Goods Orders",
         "importance": "low",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -8329,8 +8233,8 @@
         "type": "macro",
         "label": "US University of Michigan Consumer Sentiment (prelim + final)",
         "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -8345,8 +8249,8 @@
         "type": "macro",
         "label": "US Conference Board Consumer Confidence",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8360,8 +8264,8 @@
         "type": "macro",
         "label": "US JOLTS (Job Openings and Labor Turnover)",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8375,8 +8279,8 @@
         "type": "macro",
         "label": "Canada — tariff 50% sur importations US — effectif 29/09/2026",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8391,7 +8295,7 @@
         "label": "US PCE Price Index (headline) — Personal Income & Outlays",
         "importance": "high",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8406,7 +8310,7 @@
         "label": "US Core PCE Price Index (ex food & energy)",
         "importance": "high",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8421,7 +8325,7 @@
         "label": "US Personal Income & Spending",
         "importance": "medium",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8436,7 +8340,7 @@
         "label": "US GDP (advance / second / third estimate)",
         "importance": "high",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8451,7 +8355,7 @@
         "label": "US ADP National Employment Report",
         "importance": "medium",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8466,7 +8370,7 @@
         "label": "German HICP Flash (inflation estimate)",
         "importance": "high",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8481,7 +8385,7 @@
         "label": "Micron Technology (MU) earnings Q4 FY2026 — ~30/09/2026",
         "importance": "high",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8495,8 +8399,8 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8510,8 +8414,8 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8525,8 +8429,8 @@
         "type": "macro",
         "label": "US ISM Manufacturing PMI",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8540,9 +8444,10 @@
         "type": "macro",
         "label": "US Employment Situation (NFP / unemployment / earnings)",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -8554,8 +8459,8 @@
         "type": "macro",
         "label": "US ISM Services PMI",
         "importance": "medium",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8568,8 +8473,8 @@
         "type": "macro",
         "label": "US International Trade Balance (goods & services)",
         "importance": "low",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 8,
+        "calendar_days": 11,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8583,7 +8488,7 @@
         "label": "US Retail Sales (headline + control group)",
         "importance": "medium",
         "sessions_to_event": 9,
-        "calendar_days": 13,
+        "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8597,7 +8502,7 @@
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
         "sessions_to_event": 9,
-        "calendar_days": 13,
+        "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8744,7 +8649,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-09-24T21:48:25.038269+00:00",
+    "generated_at": "2026-09-25T00:11:48.071499+00:00",
     "ticker": "NEX",
     "yahoo": "NEX.PA",
     "source": "yfinance.Ticker.info",
@@ -8859,22 +8764,22 @@
       "high_52w": 169.0
     },
     "price_behaviour": {
-      "realized_vol_1y_pct": 37.3,
+      "realized_vol_1y_pct": 37.1,
       "realized_vol_window_d": 252,
       "worst_month_pct": -20.9,
       "worst_month_when": "2022-06",
       "best_month_pct": 37.6,
       "best_month_when": "2026-04",
       "months_measured": 60,
-      "neg_months_pct": 42.0,
+      "neg_months_pct": 40.0,
       "max_drawdown_1y_pct": -24.7
     },
     "portfolio_fit": {
       "beta": 0.68,
       "beta_ref": "EWQ",
-      "beta_days": 493,
+      "beta_days": 492,
       "correlation": 0.33,
-      "correlation_note": "correlation 0.33 avec EWQ sur 493 seances"
+      "correlation_note": "correlation 0.33 avec EWQ sur 492 seances"
     },
     "serves": [
       {
@@ -9089,7 +8994,7 @@
       },
       {
         "field": "price_behaviour.realized_vol_1y",
-        "value": 37.3,
+        "value": 37.1,
         "from": "fundamentals.price_behaviour.realized_vol_1y_pct"
       },
       {
@@ -9119,7 +9024,7 @@
       },
       {
         "field": "price_behaviour.neg_months_pct",
-        "value": 42.0,
+        "value": 40.0,
         "from": "fundamentals.price_behaviour.neg_months_pct"
       },
       {
@@ -9129,7 +9034,7 @@
       },
       {
         "field": "portfolio_fit.correlation_note",
-        "value": "correlation 0.33 avec EWQ sur 493 seances",
+        "value": "correlation 0.33 avec EWQ sur 492 seances",
         "from": "fundamentals.portfolio_fit.correlation_note"
       }
     ],
@@ -9241,7 +9146,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-09-24T21:47:56.018275+00:00",
+    "generated_at": "2026-09-25T00:11:25.934546+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/NEX_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1280,
@@ -9628,10 +9533,10 @@
       "gap_best": 15.284
     },
     "asymmetry": {
-      "n_down": 586,
-      "n_up": 687,
-      "mean_down_pct": -0.749,
-      "mean_up_pct": 0.708,
+      "n_down": 595,
+      "n_up": 678,
+      "mean_down_pct": -0.738,
+      "mean_up_pct": 0.718,
       "worst_down_pct": -9.596,
       "best_up_pct": 15.284,
       "downside_heavier": false
@@ -9649,7 +9554,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-09-24T21:47:57.905373+00:00",
+    "generated_at": "2026-09-25T00:11:27.396151+00:00",
     "ticker": "NEX",
     "source_csv": "NEX_daily_long.csv",
     "n_sessions": 1281,
@@ -10238,8 +10143,8 @@
       {
         "n_windows": 1261,
         "n_eff": 345.8,
-        "n_ambiguous": 6,
-        "ambiguous_pct": 0.377,
+        "n_ambiguous": 5,
+        "ambiguous_pct": 0.376,
         "p_stop_first_lo": 0.248,
         "p_stop_first_hi": 0.2518,
         "p_target_first_lo": 0.7482,
@@ -10373,7 +10278,7 @@
         "p_stop_first": 0.0342,
         "p_target_first": 0.8735,
         "pnl_no_touch_pct": -7.4874,
-        "pnl_no_touch_median_pct": -5.9068,
+        "pnl_no_touch_median_pct": -5.9067,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -10415,13 +10320,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 55,
         "ambiguous_pct": 3.861,
-        "p_stop_first_lo": 0.5455,
-        "p_stop_first_hi": 0.5841,
-        "p_target_first_lo": 0.4159,
-        "p_target_first_hi": 0.4545,
+        "p_stop_first_lo": 0.5459,
+        "p_stop_first_hi": 0.5845,
+        "p_target_first_lo": 0.4155,
+        "p_target_first_hi": 0.4541,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.5648,
-        "p_target_first": 0.4352,
+        "p_stop_first": 0.5652,
+        "p_target_first": 0.4348,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -10429,8 +10334,8 @@
         "stop_pct": 1.5,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.5122,
-          0.6163
+          0.5126,
+          0.6167
         ],
         "ci_width_pt": 10.4,
         "bound_spread_pt": 3.86
@@ -10440,13 +10345,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 39,
         "ambiguous_pct": 2.696,
-        "p_stop_first_lo": 0.4761,
-        "p_stop_first_hi": 0.5031,
-        "p_target_first_lo": 0.4969,
-        "p_target_first_hi": 0.5239,
+        "p_stop_first_lo": 0.4765,
+        "p_stop_first_hi": 0.5035,
+        "p_target_first_lo": 0.4965,
+        "p_target_first_hi": 0.5235,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.4896,
-        "p_target_first": 0.5104,
+        "p_stop_first": 0.49,
+        "p_target_first": 0.51,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -10454,8 +10359,8 @@
         "stop_pct": 2.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.4372,
-          0.5422
+          0.4376,
+          0.5426
         ],
         "ci_width_pt": 10.5,
         "bound_spread_pt": 2.7
@@ -10465,13 +10370,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 28,
         "ambiguous_pct": 0.999,
-        "p_stop_first_lo": 0.4422,
-        "p_stop_first_hi": 0.4522,
-        "p_target_first_lo": 0.5478,
-        "p_target_first_hi": 0.5578,
+        "p_stop_first_lo": 0.4426,
+        "p_stop_first_hi": 0.4526,
+        "p_target_first_lo": 0.5474,
+        "p_target_first_hi": 0.5574,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.4472,
-        "p_target_first": 0.5528,
+        "p_stop_first": 0.4476,
+        "p_target_first": 0.5524,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -10479,8 +10384,8 @@
         "stop_pct": 2.5,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.3954,
-          0.4999
+          0.3958,
+          0.5003
         ],
         "ci_width_pt": 10.4,
         "bound_spread_pt": 1.0
@@ -10490,13 +10395,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 22,
         "ambiguous_pct": 0.333,
-        "p_stop_first_lo": 0.4076,
-        "p_stop_first_hi": 0.4109,
-        "p_target_first_lo": 0.5891,
-        "p_target_first_hi": 0.5924,
+        "p_stop_first_lo": 0.408,
+        "p_stop_first_hi": 0.4113,
+        "p_target_first_lo": 0.5887,
+        "p_target_first_hi": 0.592,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.4093,
-        "p_target_first": 0.5907,
+        "p_stop_first": 0.4097,
+        "p_target_first": 0.5903,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -10504,8 +10409,8 @@
         "stop_pct": 3.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.3584,
-          0.4617
+          0.3588,
+          0.4621
         ],
         "ci_width_pt": 10.3,
         "bound_spread_pt": 0.33
@@ -10515,13 +10420,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 8,
         "ambiguous_pct": 0.081,
-        "p_stop_first_lo": 0.3403,
-        "p_stop_first_hi": 0.3411,
-        "p_target_first_lo": 0.6589,
-        "p_target_first_hi": 0.6597,
+        "p_stop_first_lo": 0.3407,
+        "p_stop_first_hi": 0.3415,
+        "p_target_first_lo": 0.6585,
+        "p_target_first_hi": 0.6593,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.3407,
-        "p_target_first": 0.6593,
+        "p_stop_first": 0.3411,
+        "p_target_first": 0.6589,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -10529,8 +10434,8 @@
         "stop_pct": 4.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.2922,
-          0.3918
+          0.2926,
+          0.3922
         ],
         "ci_width_pt": 10.0,
         "bound_spread_pt": 0.08
@@ -10538,15 +10443,15 @@
       {
         "n_windows": 1261,
         "n_eff": 345.8,
-        "n_ambiguous": 3,
+        "n_ambiguous": 2,
         "ambiguous_pct": 0.068,
-        "p_stop_first_lo": 0.289,
-        "p_stop_first_hi": 0.2897,
-        "p_target_first_lo": 0.71,
-        "p_target_first_hi": 0.7107,
+        "p_stop_first_lo": 0.2894,
+        "p_stop_first_hi": 0.2901,
+        "p_target_first_lo": 0.7096,
+        "p_target_first_hi": 0.7103,
         "p_no_touch": 0.0003,
-        "p_stop_first": 0.2893,
-        "p_target_first": 0.7103,
+        "p_stop_first": 0.2897,
+        "p_target_first": 0.7099,
         "pnl_no_touch_pct": -1.6116,
         "pnl_no_touch_median_pct": -1.6141,
         "horizon": "extended",
@@ -10554,8 +10459,8 @@
         "stop_pct": 5.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.2434,
-          0.3387
+          0.2438,
+          0.3391
         ],
         "ci_width_pt": 9.5,
         "bound_spread_pt": 0.07
@@ -10565,13 +10470,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 1,
         "ambiguous_pct": 0.062,
-        "p_stop_first_lo": 0.2617,
-        "p_stop_first_hi": 0.2624,
-        "p_target_first_lo": 0.7373,
-        "p_target_first_hi": 0.7379,
+        "p_stop_first_lo": 0.2621,
+        "p_stop_first_hi": 0.2628,
+        "p_target_first_lo": 0.7369,
+        "p_target_first_hi": 0.7375,
         "p_no_touch": 0.0003,
-        "p_stop_first": 0.262,
-        "p_target_first": 0.7376,
+        "p_stop_first": 0.2624,
+        "p_target_first": 0.7372,
         "pnl_no_touch_pct": -1.6654,
         "pnl_no_touch_median_pct": -2.4124,
         "horizon": "extended",
@@ -10579,8 +10484,8 @@
         "stop_pct": 6.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.2178,
-          0.3102
+          0.2181,
+          0.3106
         ],
         "ci_width_pt": 9.2,
         "bound_spread_pt": 0.07
@@ -10590,13 +10495,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 1,
         "ambiguous_pct": 0.062,
-        "p_stop_first_lo": 0.1963,
-        "p_stop_first_hi": 0.197,
-        "p_target_first_lo": 0.7963,
-        "p_target_first_hi": 0.7969,
+        "p_stop_first_lo": 0.1967,
+        "p_stop_first_hi": 0.1974,
+        "p_target_first_lo": 0.7959,
+        "p_target_first_hi": 0.7965,
         "p_no_touch": 0.0067,
-        "p_stop_first": 0.1966,
-        "p_target_first": 0.7966,
+        "p_stop_first": 0.197,
+        "p_target_first": 0.7962,
         "pnl_no_touch_pct": -4.5579,
         "pnl_no_touch_median_pct": -3.0958,
         "horizon": "extended",
@@ -10604,8 +10509,8 @@
         "stop_pct": 8.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.1573,
-          0.2409
+          0.1577,
+          0.2413
         ],
         "ci_width_pt": 8.4,
         "bound_spread_pt": 0.07
@@ -10615,13 +10520,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 0,
         "ambiguous_pct": 0.0,
-        "p_stop_first_lo": 0.1496,
-        "p_stop_first_hi": 0.1496,
-        "p_target_first_lo": 0.8305,
-        "p_target_first_hi": 0.8305,
+        "p_stop_first_lo": 0.15,
+        "p_stop_first_hi": 0.15,
+        "p_target_first_lo": 0.8301,
+        "p_target_first_hi": 0.8301,
         "p_no_touch": 0.0198,
-        "p_stop_first": 0.1496,
-        "p_target_first": 0.8305,
+        "p_stop_first": 0.15,
+        "p_target_first": 0.8301,
         "pnl_no_touch_pct": -4.2529,
         "pnl_no_touch_median_pct": -3.4652,
         "horizon": "extended",
@@ -10629,8 +10534,8 @@
         "stop_pct": 10.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.115,
-          0.19
+          0.1153,
+          0.1905
         ],
         "ci_width_pt": 7.5,
         "bound_spread_pt": 0.0
@@ -10640,13 +10545,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 0,
         "ambiguous_pct": 0.0,
-        "p_stop_first_lo": 0.0845,
-        "p_stop_first_hi": 0.0845,
-        "p_target_first_lo": 0.8481,
-        "p_target_first_hi": 0.8481,
+        "p_stop_first_lo": 0.0849,
+        "p_stop_first_hi": 0.0849,
+        "p_target_first_lo": 0.8477,
+        "p_target_first_hi": 0.8477,
         "p_no_touch": 0.0674,
-        "p_stop_first": 0.0845,
-        "p_target_first": 0.8481,
+        "p_stop_first": 0.0849,
+        "p_target_first": 0.8477,
         "pnl_no_touch_pct": -5.8465,
         "pnl_no_touch_median_pct": -4.6655,
         "horizon": "extended",
@@ -10654,8 +10559,8 @@
         "stop_pct": 12.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.0586,
-          0.1173
+          0.059,
+          0.1178
         ],
         "ci_width_pt": 5.9,
         "bound_spread_pt": 0.0
@@ -10665,13 +10570,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 0,
         "ambiguous_pct": 0.0,
-        "p_stop_first_lo": 0.0373,
-        "p_stop_first_hi": 0.0373,
-        "p_target_first_lo": 0.8482,
-        "p_target_first_hi": 0.8482,
+        "p_stop_first_lo": 0.0377,
+        "p_stop_first_hi": 0.0377,
+        "p_target_first_lo": 0.8478,
+        "p_target_first_hi": 0.8478,
         "p_no_touch": 0.1145,
-        "p_stop_first": 0.0373,
-        "p_target_first": 0.8482,
+        "p_stop_first": 0.0377,
+        "p_target_first": 0.8478,
         "pnl_no_touch_pct": -7.2421,
         "pnl_no_touch_median_pct": -5.6147,
         "horizon": "extended",
@@ -10679,8 +10584,8 @@
         "stop_pct": 15.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.021,
-          0.0613
+          0.0213,
+          0.0618
         ],
         "ci_width_pt": 4.0,
         "bound_spread_pt": 0.0
@@ -10838,8 +10743,8 @@
       {
         "n_windows": 1261,
         "n_eff": 345.8,
-        "n_ambiguous": 2,
-        "ambiguous_pct": 0.007,
+        "n_ambiguous": 1,
+        "ambiguous_pct": 0.006,
         "p_stop_first_lo": 0.3596,
         "p_stop_first_hi": 0.3597,
         "p_target_first_lo": 0.6289,
@@ -11923,7 +11828,7 @@
         "p_stop_first": 0.8541,
         "p_target_first": 0.1451,
         "pnl_no_touch_pct": 2.8706,
-        "pnl_no_touch_median_pct": 2.4631,
+        "pnl_no_touch_median_pct": 2.463,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 1.5,
@@ -12272,8 +12177,8 @@
         "p_no_touch": 0.0339,
         "p_stop_first": 0.797,
         "p_target_first": 0.1691,
-        "pnl_no_touch_pct": 2.2909,
-        "pnl_no_touch_median_pct": 3.12,
+        "pnl_no_touch_pct": 2.2913,
+        "pnl_no_touch_median_pct": 3.2472,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 2.5,
@@ -12297,8 +12202,8 @@
         "p_no_touch": 0.0611,
         "p_stop_first": 0.7501,
         "p_target_first": 0.1888,
-        "pnl_no_touch_pct": 1.6612,
-        "pnl_no_touch_median_pct": 2.6077,
+        "pnl_no_touch_pct": 1.6613,
+        "pnl_no_touch_median_pct": 2.6112,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 3.0,
@@ -12322,8 +12227,8 @@
         "p_no_touch": 0.1088,
         "p_stop_first": 0.6691,
         "p_target_first": 0.2221,
-        "pnl_no_touch_pct": 1.5573,
-        "pnl_no_touch_median_pct": 2.1834,
+        "pnl_no_touch_pct": 1.5574,
+        "pnl_no_touch_median_pct": 2.204,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 4.0,
@@ -12342,13 +12247,13 @@
         "ambiguous_pct": 0.0,
         "p_stop_first_lo": 0.5676,
         "p_stop_first_hi": 0.5676,
-        "p_target_first_lo": 0.2448,
-        "p_target_first_hi": 0.2448,
+        "p_target_first_lo": 0.2449,
+        "p_target_first_hi": 0.2449,
         "p_no_touch": 0.1875,
         "p_stop_first": 0.5676,
-        "p_target_first": 0.2448,
-        "pnl_no_touch_pct": 1.633,
-        "pnl_no_touch_median_pct": 2.1548,
+        "p_target_first": 0.2449,
+        "pnl_no_touch_pct": 1.6331,
+        "pnl_no_touch_median_pct": 2.1588,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 5.0,
@@ -12372,8 +12277,8 @@
         "p_no_touch": 0.2324,
         "p_stop_first": 0.5119,
         "p_target_first": 0.2557,
-        "pnl_no_touch_pct": 1.3895,
-        "pnl_no_touch_median_pct": 2.0954,
+        "pnl_no_touch_pct": 1.3896,
+        "pnl_no_touch_median_pct": 2.1019,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 6.0,
@@ -12392,13 +12297,13 @@
         "ambiguous_pct": 0.0,
         "p_stop_first_lo": 0.3472,
         "p_stop_first_hi": 0.3472,
-        "p_target_first_lo": 0.2899,
-        "p_target_first_hi": 0.2899,
+        "p_target_first_lo": 0.29,
+        "p_target_first_hi": 0.29,
         "p_no_touch": 0.3628,
         "p_stop_first": 0.3472,
-        "p_target_first": 0.2899,
+        "p_target_first": 0.29,
         "pnl_no_touch_pct": 1.3166,
-        "pnl_no_touch_median_pct": 1.617,
+        "pnl_no_touch_median_pct": 1.6289,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 8.0,
@@ -12423,7 +12328,7 @@
         "p_stop_first": 0.2541,
         "p_target_first": 0.2908,
         "pnl_no_touch_pct": 0.6016,
-        "pnl_no_touch_median_pct": 0.6933,
+        "pnl_no_touch_median_pct": 0.7018,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 10.0,
@@ -12448,7 +12353,7 @@
         "p_stop_first": 0.1641,
         "p_target_first": 0.2915,
         "pnl_no_touch_pct": -0.499,
-        "pnl_no_touch_median_pct": -0.3054,
+        "pnl_no_touch_median_pct": -0.3209,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 12.0,
@@ -12473,7 +12378,7 @@
         "p_stop_first": 0.0771,
         "p_target_first": 0.2916,
         "pnl_no_touch_pct": -1.7121,
-        "pnl_no_touch_median_pct": -1.6107,
+        "pnl_no_touch_median_pct": -1.6122,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -12573,7 +12478,7 @@
         "p_stop_first": 0.8202,
         "p_target_first": 0.1312,
         "pnl_no_touch_pct": 3.1011,
-        "pnl_no_touch_median_pct": 3.8794,
+        "pnl_no_touch_median_pct": 3.8793,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 2.5,
@@ -12598,7 +12503,7 @@
         "p_stop_first": 0.7711,
         "p_target_first": 0.151,
         "pnl_no_touch_pct": 2.3594,
-        "pnl_no_touch_median_pct": 3.0619,
+        "pnl_no_touch_median_pct": 3.0618,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 3.0,
@@ -12848,7 +12753,7 @@
         "p_stop_first": 0.8596,
         "p_target_first": 0.0858,
         "pnl_no_touch_pct": 4.4736,
-        "pnl_no_touch_median_pct": 5.6678,
+        "pnl_no_touch_median_pct": 5.6677,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 2.0,
@@ -13198,7 +13103,7 @@
         "p_stop_first": 0.7835,
         "p_target_first": 0.0775,
         "pnl_no_touch_pct": 5.9578,
-        "pnl_no_touch_median_pct": 5.8634,
+        "pnl_no_touch_median_pct": 5.8635,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 3.0,
@@ -13700,10 +13605,10 @@
   },
   "beta_dynamic": {
     "available": true,
-    "beta_60d": 0.7489,
-    "beta_252d": 1.05,
-    "correlation_60d": 0.2521,
-    "correlation_252d": 0.3953,
+    "beta_60d": 0.7685,
+    "beta_252d": 1.0226,
+    "correlation_60d": 0.2603,
+    "correlation_252d": 0.3863,
     "ratio_price_benchmark_trend_60d": "flat"
   },
   "streaks": {
@@ -13766,24 +13671,24 @@
         "anchor_date": "2026-09-15",
         "anchor_event": "swing_low",
         "anchor_price": 130.9,
-        "vwap_today": 137.9045,
-        "distance_from_close_pct": -1.45,
+        "vwap_today": 137.9298,
+        "distance_from_close_pct": -1.47,
         "bars_since_anchor": 7
       },
       {
         "anchor_date": "2026-09-11",
         "anchor_event": "swing_high",
         "anchor_price": 145.6,
-        "vwap_today": 137.9641,
-        "distance_from_close_pct": -1.5,
+        "vwap_today": 137.9843,
+        "distance_from_close_pct": -1.51,
         "bars_since_anchor": 9
       },
       {
         "anchor_date": "2026-08-27",
         "anchor_event": "swing_high",
         "anchor_price": 145.8,
-        "vwap_today": 138.9247,
-        "distance_from_close_pct": -2.18,
+        "vwap_today": 138.9544,
+        "distance_from_close_pct": -2.2,
         "bars_since_anchor": 20
       }
     ]
@@ -18742,8 +18647,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": 243588.30902022542,
-        "signal_line": 195135.80937142478,
+        "value": 257119.35525731067,
+        "signal_line": 197068.81597672266,
         "signal": "neutral"
       }
     },
@@ -20294,7 +20199,7 @@
         255802.9717976381,
         369965.76128611155,
         316879.53636913886,
-        243588.30902022542
+        257119.35525731067
       ],
       "klinger_signal": [
         0.0,
@@ -20552,7 +20457,7 @@
         131333.55341946203,
         165423.8688289834,
         187060.3927632913,
-        195135.80937142478
+        197068.81597672266
       ]
     }
   },
@@ -20560,24 +20465,24 @@
     "available": true,
     "latest": {
       "close": 135.89999389648438,
-      "vwap": 138.69071785239032,
+      "vwap": 138.71694567837537,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": -2.012192307545871,
+        "distance_from_close_pct": -2.0307192954077045,
         "position": "below_vwap"
       },
-      "force_index": -79818.4378285345,
+      "force_index": -39070.846206045666,
       "force_index_meta": {
         "signal": "sell"
       },
-      "chaikin_oscillator": -48127.61201194837,
+      "chaikin_oscillator": -32920.70309456065,
       "chaikin_oscillator_meta": {
         "cross_recent": null,
         "signal": "neutral"
       },
-      "vroc_14": -3.9473459123800403,
+      "vroc_14": -51.784217458986944,
       "vroc_14_meta": {
-        "signal": "normal"
+        "signal": "low_activity"
       }
     },
     "series": {
@@ -21095,7 +21000,7 @@
         138.8612491638341,
         138.96718310537247,
         138.98551009839508,
-        138.69071785239032
+        138.71694567837537
       ],
       "force_index": [
         null,
@@ -21353,7 +21258,7 @@
         -2869.4127385935717,
         40155.71234257548,
         2332.7534364932762,
-        -79818.4378285345
+        -39070.846206045666
       ],
       "chaikin_oscillator": [
         0.0,
@@ -21611,7 +21516,7 @@
         -39076.867221343564,
         -3982.296066388022,
         -14582.558074420784,
-        -48127.61201194837
+        -32920.70309456065
       ],
       "vroc_14": [
         null,
@@ -21869,7 +21774,7 @@
         -31.317692341228565,
         13.124321667724695,
         4.6341264572633145,
-        -3.9473459123800403
+        -51.784217458986944
       ]
     }
   },
@@ -21901,7 +21806,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": -0.5888,
+      "value": -1.4422,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -21928,63 +21833,63 @@
     "asset_market": "FR",
     "benchmark_market": "FR",
     "beta_up_days": 1.0926,
-    "beta_down_days": 1.003,
-    "beta_asymmetry": 0.9179,
+    "beta_down_days": 1.005,
+    "beta_asymmetry": 0.9198,
     "n_up_days": 660,
-    "n_down_days": 619,
+    "n_down_days": 618,
     "interpretation": "balanced",
-    "window_days": 1279,
+    "window_days": 1278,
     "window_mode": "historique complet",
     "recent_252d": {
-      "beta_up_days": 1.3396,
-      "beta_down_days": 1.1764,
-      "beta_asymmetry": 0.8782,
-      "n_up_days": 122,
-      "n_down_days": 130,
+      "beta_up_days": 1.3167,
+      "beta_down_days": 1.1829,
+      "beta_asymmetry": 0.8984,
+      "n_up_days": 123,
+      "n_down_days": 129,
       "window_days": 252
     },
-    "beta_down_shift_ratio": 1.173,
+    "beta_down_shift_ratio": 1.177,
     "beta_down_shift_note": "rapport entre le beta de baisse RECENT (252 seances) et celui de l'historique complet. Loin de 1 = le titre a change de sensibilite au marche ; c'est une information, pas une erreur.",
     "window_choice_note": "fenetre longue retenue apres mesure hors echantillon (18 couples, 878 points) : au-dela de 252 seances le gain est reel mais non significatif, tandis que RACCOURCIR degrade significativement. Le beta n'est pas une grandeur de regime rapide, contrairement a la volatilite."
   },
   "anomaly_detection": {
     "available": true,
-    "anomaly_score": -0.0304,
-    "is_anomaly": false,
-    "anomaly_percentile": 83.7,
+    "anomaly_score": 0.0243,
+    "is_anomaly": true,
+    "anomaly_percentile": 92.9,
     "recent_anomalies": [
       {
         "date": "2026-09-14T00:00:00",
         "bars_ago": 8,
-        "score": 0.2106,
+        "score": 0.2112,
         "context": "large return + wide range + strong body"
       },
       {
         "date": "2026-09-24T00:00:00",
         "bars_ago": 0,
-        "score": -0.0304,
+        "score": 0.0243,
         "context": "strong body"
       },
       {
         "date": "2026-08-17T00:00:00",
         "bars_ago": 28,
-        "score": -0.0457,
+        "score": -0.0507,
         "context": "multivariate outlier"
       },
       {
         "date": "2026-08-25T00:00:00",
         "bars_ago": 22,
-        "score": -0.0577,
+        "score": -0.0555,
         "context": "multivariate outlier"
       },
       {
         "date": "2026-09-11T00:00:00",
         "bars_ago": 9,
-        "score": -0.0587,
+        "score": -0.0555,
         "context": "multivariate outlier"
       }
     ],
-    "n_anomalies_30d": 1,
+    "n_anomalies_30d": 2,
     "n_bars_fit": 252,
     "fit_source": "long_csv",
     "fit_n_bars": 1281
@@ -22016,7 +21921,7 @@
   },
   "harmonic_patterns": {
     "available": true,
-    "n_swings_detected": 140,
+    "n_swings_detected": 138,
     "n_patterns_found": 0,
     "tolerance": 0.05,
     "lookback_bars": 1260,
@@ -22164,21 +22069,21 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 163319.93333333332,
+        "mean_volume_60d": 162387.8,
         "median_volume_60d": 149596.0,
-        "volume_consistency_score": 0.5940271716747711
+        "volume_consistency_score": 0.5848414464409112
       },
       "liquidity": {
-        "liquidity_score": 18327245.30984446,
+        "liquidity_score": 18073891.481223043,
         "liquidity_classification": "medium"
       },
       "freshness": {
         "last_bar_date": "2026-09-24T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
-        "overall_quality_score": 84.61937704077042,
+        "overall_quality_score": 84.48159116226252,
         "overall_label": "good",
         "warnings": []
       }
@@ -22225,7 +22130,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-24T12:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {
@@ -22269,7 +22174,7 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-24T15:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh"
       },
       "overall": {

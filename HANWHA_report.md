@@ -1,6 +1,6 @@
 # 012450
 
-**Generated** : 2026-09-24T00:26:58.712517+00:00  
+**Generated** : 2026-09-25T00:26:55.096824+00:00  
 **Santé technique** : 3/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · ₩1021000.00  
@@ -52,7 +52,7 @@ Plan privilegie A (intraday), composite 3/10, conviction 'Pass'.
    - _fenêtre arrêtée : rupture de regime a 900 seances en arriere (volatilite 2.42 % contre 4.01 % aujourd'hui, rapport 0.60)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -10.28 % vs -12.03 % si l'on extrapolait par √5 _(rapport 0.854 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.5131** (β de hausse 0.2884, asymétrie 1.779) vs KS11 — 555 séances de repli, historique complet
+- **β de baisse : 0.5131** (β de hausse 0.2878, asymétrie 1.7828) vs KS11 — 555 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 0.341× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
@@ -159,8 +159,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -179,5 +179,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (564647 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (587755 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

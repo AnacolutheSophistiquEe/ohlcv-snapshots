@@ -6,7 +6,7 @@
     "exchange": "KRX (KOSPI)",
     "currency": "KRW",
     "isin": "KR7207940008",
-    "generated_at": "2026-09-24T00:28:46.991530+00:00",
+    "generated_at": "2026-09-25T00:28:44.835110+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1494,29 +1494,29 @@
     "benchmark": "KS11",
     "n_common_dates": 243,
     "relative_perf_pct": {
-      "1M": -16.57,
-      "3M": 23.56,
-      "6M": -34.75,
+      "1M": -18.89,
+      "3M": 20.99,
+      "6M": -37.16,
       "1Y": null
     },
     "perf_breakdown": {
       "1M": {
-        "asset": -11.57,
-        "benchmark": 5.0
+        "asset": -13.16,
+        "benchmark": 5.73
       },
       "3M": {
-        "asset": 9.27,
-        "benchmark": -14.29
+        "asset": 7.31,
+        "benchmark": -13.69
       },
       "6M": {
-        "asset": -13.12,
-        "benchmark": 21.63
+        "asset": -14.68,
+        "benchmark": 22.48
       },
       "1Y": null
     },
-    "z_score_1y_daily_relative": -0.21,
+    "z_score_1y_daily_relative": -0.92,
     "price_ratio_trend_60d": "rising",
-    "interpretation": "underperform fort 1M (-16.6%); outperform fort 3M (+23.6%); ratio actif/benchmark en hausse 60d"
+    "interpretation": "underperform fort 1M (-18.9%); outperform fort 3M (+21.0%); ratio actif/benchmark en hausse 60d"
   },
   "ta_score": {
     "score": 2,
@@ -1779,7 +1779,7 @@
           "rr": 0.13,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7947,
+          "p_touch": 0.7946,
           "distance_pct": 1.02
         },
         "t2": {
@@ -1788,7 +1788,7 @@
           "rr": 0.25,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7947,
+          "p_touch": 0.7946,
           "distance_pct": 2.03
         },
         "t3": {
@@ -1823,7 +1823,7 @@
           "rr": 0.97,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7219,
+          "p_touch": 0.7217,
           "distance_pct": 2.27
         },
         "t2": {
@@ -1841,7 +1841,7 @@
           "rr": 2.9,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.4422,
+          "p_touch": 0.4419,
           "distance_pct": 6.81
         }
       }
@@ -1867,7 +1867,7 @@
           "rr": 0.89,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5885,
+          "p_touch": 0.5883,
           "distance_pct": 3.21
         },
         "t2": {
@@ -1876,7 +1876,7 @@
           "rr": 1.79,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.9321,
+          "p_touch": 0.932,
           "distance_pct": 6.42
         },
         "t3": {
@@ -1885,7 +1885,7 @@
           "rr": 2.68,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.5885,
+          "p_touch": 0.5883,
           "distance_pct": 9.64
         }
       }
@@ -2180,7 +2180,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-09-24T00:28:22.461920+00:00",
+    "generated_at": "2026-09-25T00:28:20.559055+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7316,7 +7316,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-09-24T00:28:08.184199+00:00",
+    "generated_at": "2026-09-25T00:28:06.166918+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7534,22 +7534,306 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-09-24T00:28:30.769793+00:00",
+    "generated_at": "2026-09-25T00:28:27.810985+00:00",
     "ticker": "207940",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 1,
+    "n_events": 20,
     "events": [
+      {
+        "date": "2026-09-25",
+        "type": "macro",
+        "label": "US Durable Goods Orders",
+        "importance": "low",
+        "sessions_to_event": 0,
+        "calendar_days": 0,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-25",
+        "type": "macro",
+        "label": "US University of Michigan Consumer Sentiment (prelim + final)",
+        "importance": "medium",
+        "sessions_to_event": 0,
+        "calendar_days": 0,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-29",
+        "type": "macro",
+        "label": "US Conference Board Consumer Confidence",
+        "importance": "medium",
+        "sessions_to_event": 3,
+        "calendar_days": 4,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-29",
+        "type": "macro",
+        "label": "US JOLTS (Job Openings and Labor Turnover)",
+        "importance": "medium",
+        "sessions_to_event": 3,
+        "calendar_days": 4,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-29",
+        "type": "macro",
+        "label": "Canada — tariff 50% sur importations US — effectif 29/09/2026",
+        "importance": "high",
+        "sessions_to_event": 3,
+        "calendar_days": 4,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "US PCE Price Index (headline) — Personal Income & Outlays",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "US Core PCE Price Index (ex food & energy)",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "US Personal Income & Spending",
+        "importance": "medium",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "US GDP (advance / second / third estimate)",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "US ADP National Employment Report",
+        "importance": "medium",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "German HICP Flash (inflation estimate)",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-09-30",
+        "type": "macro",
+        "label": "Micron Technology (MU) earnings Q4 FY2026 — ~30/09/2026",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-01",
+        "type": "macro",
+        "label": "US Initial Jobless Claims (weekly)",
+        "importance": "medium",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-01",
+        "type": "macro",
+        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
+        "importance": "low",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-01",
+        "type": "macro",
+        "label": "US ISM Manufacturing PMI",
+        "importance": "medium",
+        "sessions_to_event": 4,
+        "calendar_days": 6,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-02",
+        "type": "macro",
+        "label": "US Employment Situation (NFP / unemployment / earnings)",
+        "importance": "high",
+        "sessions_to_event": 5,
+        "calendar_days": 7,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-05",
+        "type": "macro",
+        "label": "US ISM Services PMI",
+        "importance": "medium",
+        "sessions_to_event": 7,
+        "calendar_days": 10,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-06",
+        "type": "macro",
+        "label": "US International Trade Balance (goods & services)",
+        "importance": "low",
+        "sessions_to_event": 8,
+        "calendar_days": 11,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-07",
+        "type": "macro",
+        "label": "US Retail Sales (headline + control group)",
+        "importance": "medium",
+        "sessions_to_event": 9,
+        "calendar_days": 12,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
       {
         "date": "2026-10-07",
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
         "sessions_to_event": 9,
-        "calendar_days": 13,
+        "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
@@ -7696,7 +7980,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-09-24T00:28:28.817454+00:00",
+    "generated_at": "2026-09-25T00:28:26.344260+00:00",
     "ticker": "207940",
     "yahoo": "207940.KS",
     "source": "yfinance.Ticker.info",
@@ -7723,9 +8007,9 @@
       "shares_outstanding": 46290951.0,
       "float_shares": 11807261.0,
       "free_float_pct": 25.5,
-      "avg_volume_3m": 54304.0,
-      "adv_str": "54.3 k titres",
-      "avg_volume_10d": 32982.0,
+      "avg_volume_3m": 53406.0,
+      "adv_str": "53.4 k titres",
+      "avg_volume_10d": 34279.0,
       "archetype_suggested": "compounder",
       "archetype_basis": "marge nette 38.7 % > 15 % et croissance 30 % > 10 %",
       "business_summary_raw": "Samsung Biologics Co.,Ltd., together with its subsidiaries engages in the manufacturing, commercializing, distributing, and selling of biopharmaceuticals products in South Korea, Europe, the United States, and internationally. Its development services include late discovery, cell line development, process development, analytical development, and non-GMP / CGMP manufacturing. The company also offers aseptic filling, lyophilization, finishing, cold chain storage and shipping, and regulatory support services; and quality services and analytical testing services, such as IPC and release testing, stability study and testing, environmental monitoring, biosafety testing, as well as manufactures drug substance. In addition, it engages in the development and manufacture of antibody-drug conjugates and mRNA products. The company was founded in 2011 and is headquartered in Incheon, South Korea."
@@ -7781,7 +8065,7 @@
       "ps_ttm": 12.35,
       "pe_trailing": null,
       "pe_fwd": 27.83,
-      "peg": 1.72,
+      "peg": 1.69,
       "price_to_book": null,
       "fcf_yield_pct": 2.05,
       "ev_ebitda_fwd": null,
@@ -7807,7 +8091,7 @@
     "market": {
       "beta": 0.208,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": -13.51,
+      "change_52w_pct": -13.07,
       "low_52w": 1228000.0,
       "high_52w": 1987000.0
     },
@@ -7897,7 +8181,7 @@
       },
       {
         "field": "identity.adv_str",
-        "value": "54.3 k titres",
+        "value": "53.4 k titres",
         "from": "fundamentals.identity.adv_str"
       },
       {
@@ -7982,7 +8266,7 @@
       },
       {
         "field": "valuation.peg",
-        "value": 1.72,
+        "value": 1.69,
         "from": "fundamentals.valuation.peg"
       },
       {
@@ -8194,7 +8478,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-09-24T00:28:06.279376+00:00",
+    "generated_at": "2026-09-25T00:28:04.192824+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/207940_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1221,
@@ -8602,7 +8886,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-09-24T00:28:07.892548+00:00",
+    "generated_at": "2026-09-25T00:28:05.832922+00:00",
     "ticker": "207940",
     "source_csv": "207940_daily_long.csv",
     "n_sessions": 1222,
@@ -12653,10 +12937,10 @@
   },
   "beta_dynamic": {
     "available": true,
-    "beta_60d": 0.0043,
-    "beta_252d": 0.2642,
-    "correlation_60d": 0.0067,
-    "correlation_252d": 0.3512,
+    "beta_60d": 0.0018,
+    "beta_252d": 0.2635,
+    "correlation_60d": 0.0028,
+    "correlation_252d": 0.3497,
     "ratio_price_benchmark_trend_60d": "rising"
   },
   "streaks": {
@@ -20577,18 +20861,18 @@
     "benchmark_synchronous": true,
     "asset_market": "KR",
     "benchmark_market": "KR",
-    "beta_up_days": 0.2188,
+    "beta_up_days": 0.2183,
     "beta_down_days": 0.3168,
-    "beta_asymmetry": 1.4481,
+    "beta_asymmetry": 1.4514,
     "n_up_days": 665,
     "n_down_days": 555,
     "interpretation": "defensive_weak",
     "window_days": 1220,
     "window_mode": "historique complet",
     "recent_252d": {
-      "beta_up_days": 0.2724,
+      "beta_up_days": 0.2747,
       "beta_down_days": 0.3046,
-      "beta_asymmetry": 1.1183,
+      "beta_asymmetry": 1.109,
       "n_up_days": 152,
       "n_down_days": 90,
       "window_days": 242
@@ -20823,11 +21107,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-23T00:00:00",
-        "days_since_last_bar": 1,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 2,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 82.75377630780639,
+        "overall_quality_score": 78.75377630780639,
         "overall_label": "good",
         "warnings": [
           "6.9% des bars manquantes (daily)",
@@ -20871,11 +21155,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-23T04:00:00+00:00",
-        "days_since_last_bar": 1,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 2,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 89.46760601570965,
+        "overall_quality_score": 85.46760601570965,
         "overall_label": "excellent",
         "warnings": []
       }
@@ -20916,11 +21200,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-23T05:00:00+00:00",
-        "days_since_last_bar": 1,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 2,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 92.90791164520475,
+        "overall_quality_score": 88.90791164520475,
         "overall_label": "excellent",
         "warnings": [
           "5 bar(s) à volume zéro (h1)"
@@ -20928,7 +21212,7 @@
       }
     },
     "summary": {
-      "worst_tf_quality_score": 82.75377630780639,
+      "worst_tf_quality_score": 78.75377630780639,
       "worst_tf": "daily",
       "recommendation": "review_outliers"
     }

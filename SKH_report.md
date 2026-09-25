@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-09-24T21:58:41.167244+00:00  
+**Generated** : 2026-09-25T00:19:44.225621+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 7/10 — **Rating** : Pass (negative EV)  
@@ -194,5 +194,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (594579 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (594525 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

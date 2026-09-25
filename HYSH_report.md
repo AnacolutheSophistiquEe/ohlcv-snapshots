@@ -1,11 +1,11 @@
 # 298040
 
-**Generated** : 2026-09-24T00:25:11.007460+00:00  
+**Generated** : 2026-09-25T00:25:06.858162+00:00  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · ₩2896000.00  
 
-> 🟡 **WAIT-FOR-DIP** — spot +6.4 % au-dessus de la zone d'entrée — attendre le repli  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)  
 > ↳ spot ₩2896000.00 (+6.4% vs entrée) · entrée ₩2722970.08 · stop ₩2596112.93 · T1 ₩2859441.34 · R/R 1.08  
 > ↳ P(T1 av. stop) 54 % _(réel 5 s)_ · EV/risk 0.035 _(réel 5 s)_ (GBM 0.162) · ¼-Kelly 0.018 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
 
@@ -41,7 +41,7 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass'.
    - coût AMORTI sur toutes les séances : 0.0011 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 1 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -2.474 % | p01 -4.655 % | pire -11.686 % _(sur 1221 séances)_
+- Chocs d'ouverture : p05 -2.473 % | p01 -4.655 % | pire -11.686 % _(sur 1221 séances)_
 - **P(stop avant cible)** _(source : daily, 1222 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0646** [0.035 ; 0.1086] _(largeur 7.4 pt, n_eff 173.1)_
    - swing : **0.4587** [0.4067 ; 0.5114] _(largeur 10.5 pt, n_eff 345.6)_
@@ -54,7 +54,7 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass'.
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -11.96 % vs -12.59 % si l'on extrapolait par √5 _(rapport 0.95 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0757** (β de hausse 0.9973, asymétrie 1.0787) vs KS11 — 555 séances de repli, historique complet
+- **β de baisse : 1.0757** (β de hausse 0.9967, asymétrie 1.0793) vs KS11 — 555 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -171,8 +171,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -191,5 +191,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (570801 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (594303 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # 326030
 
-**Generated** : 2026-09-24T00:30:33.765154+00:00  
+**Generated** : 2026-09-25T00:30:32.700549+00:00  
 **Santé technique** : 3/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · ₩75900.00  
@@ -52,7 +52,7 @@ Plan privilegie A (intraday), composite 3/10, conviction 'Pass'.
    - _fenêtre arrêtée : rupture de regime a 600 seances en arriere (volatilite 1.77 % contre 3.07 % aujourd'hui, rapport 0.58)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -8.28 % vs -8.79 % si l'on extrapolait par √5 _(rapport 0.943 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.6048** (β de hausse 0.4325, asymétrie 1.3984) vs KS11 — 555 séances de repli, historique complet
+- **β de baisse : 0.6048** (β de hausse 0.4319, asymétrie 1.4005) vs KS11 — 555 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -158,8 +158,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -178,5 +178,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (564203 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (587308 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
