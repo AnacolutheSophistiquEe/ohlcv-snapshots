@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE0005664809",
-    "generated_at": "2026-09-25T21:41:31.138470+00:00",
+    "generated_at": "2026-09-28T00:06:34.114470+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1765,7 +1765,7 @@
           "rr": 1.21,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7216,
+          "p_touch": 0.7215,
           "distance_pct": 5.63
         },
         "t3": {
@@ -2113,7 +2113,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-09-25T21:41:00.898692+00:00",
+    "generated_at": "2026-09-28T00:06:11.045986+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -7803,7 +7803,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-09-25T21:40:42.898008+00:00",
+    "generated_at": "2026-09-28T00:05:56.936000+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8022,51 +8022,19 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-09-25T21:41:09.224249+00:00",
+    "generated_at": "2026-09-28T00:06:16.700836+00:00",
     "ticker": "EVT",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 21,
+    "n_events": 20,
     "events": [
       {
-        "date": "2026-09-25",
+        "date": "2026-09-29",
         "type": "macro",
-        "label": "US Durable Goods Orders",
-        "importance": "low",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-25",
-        "type": "macro",
-        "label": "US University of Michigan Consumer Sentiment (prelim + final)",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-26",
-        "type": "macro",
-        "label": "Mirum Pharma (MIRM) PDUFA FDA — maralixibat (Livmarli) expansion — 26/09/2026",
+        "label": "US Conference Board Consumer Confidence",
         "importance": "medium",
         "sessions_to_event": 1,
         "calendar_days": 1,
@@ -8082,26 +8050,12 @@
       {
         "date": "2026-09-29",
         "type": "macro",
-        "label": "US Conference Board Consumer Confidence",
-        "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
-        "in_plan_horizon": [
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-29",
-        "type": "macro",
         "label": "US JOLTS (Job Openings and Labor Turnover)",
         "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8114,9 +8068,10 @@
         "type": "macro",
         "label": "Canada — tariff 50% sur importations US — effectif 29/09/2026",
         "importance": "high",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8129,9 +8084,10 @@
         "type": "macro",
         "label": "US PCE Price Index (headline) — Personal Income & Outlays",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8144,9 +8100,10 @@
         "type": "macro",
         "label": "US Core PCE Price Index (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8159,9 +8116,10 @@
         "type": "macro",
         "label": "US Personal Income & Spending",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8174,9 +8132,10 @@
         "type": "macro",
         "label": "US GDP (advance / second / third estimate)",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8189,9 +8148,10 @@
         "type": "macro",
         "label": "US ADP National Employment Report",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8204,9 +8164,10 @@
         "type": "macro",
         "label": "German HICP Flash (inflation estimate)",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8219,9 +8180,10 @@
         "type": "macro",
         "label": "Micron Technology (MU) earnings Q4 FY2026 — ~30/09/2026",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8234,8 +8196,8 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8249,8 +8211,8 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8264,8 +8226,8 @@
         "type": "macro",
         "label": "US ISM Manufacturing PMI",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8279,8 +8241,8 @@
         "type": "macro",
         "label": "US Employment Situation (NFP / unemployment / earnings)",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8294,9 +8256,10 @@
         "type": "macro",
         "label": "US ISM Services PMI",
         "importance": "medium",
-        "sessions_to_event": 7,
-        "calendar_days": 10,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -8308,8 +8271,8 @@
         "type": "macro",
         "label": "US International Trade Balance (goods & services)",
         "importance": "low",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8322,8 +8285,8 @@
         "type": "macro",
         "label": "US Retail Sales (headline + control group)",
         "importance": "medium",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8336,12 +8299,40 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
+        "sessions_to_event": 6,
+        "calendar_days": 9,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-09",
+        "type": "macro",
+        "label": "US University of Michigan Consumer Sentiment (prelim + final)",
+        "importance": "medium",
+        "sessions_to_event": 8,
+        "calendar_days": 11,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-10",
+        "type": "macro",
+        "label": "Merck (MRK) PDUFA FDA — ifinatamab deruxtecan (I-DXd) SCLC — 10/10/2026",
+        "importance": "medium",
         "sessions_to_event": 9,
         "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
-        "impact": "rates_sensitive",
+        "impact": "macro_broad",
         "ticker_specific": false,
         "recommendation": null
       }
@@ -8486,7 +8477,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-09-25T21:41:07.343202+00:00",
+    "generated_at": "2026-09-28T00:06:15.224576+00:00",
     "ticker": "EVT",
     "yahoo": "EVT.DE",
     "source": "yfinance.Ticker.info",
@@ -8509,13 +8500,13 @@
       "quote_type": "EQUITY",
       "market_cap": 499321696.0,
       "market_cap_str": "499.32 M EUR",
-      "enterprise_value": 499592544.0,
+      "enterprise_value": 509542272.0,
       "shares_outstanding": 177694559.0,
       "float_shares": 135385632.0,
       "free_float_pct": 76.2,
-      "avg_volume_3m": 925297.0,
-      "adv_str": "925.3 k titres",
-      "avg_volume_10d": 1145760.0,
+      "avg_volume_3m": 928080.0,
+      "adv_str": "928.1 k titres",
+      "avg_volume_10d": 1089714.0,
       "archetype_suggested": "turnaround",
       "archetype_basis": "marge nette -27.5 % < 0, croissance faible ou inconnue",
       "business_summary_raw": "Evotec SE operates as a drug discovery and development company in the United States, Germany, France, the United Kingdom, Switzerland, and internationally. It operates in two segments, Shared R&D and Just  Evotec Biologics. The company is developing pharmaceutical products in various therapeutic areas, such as oncology, autoimmune, cancer, diabetes, heart failure, immunology, pain and inflammation, infectious, kidney, liver, respiratory, fibrotic and metabolic diseases, and rare diseases. It is also developingcentral nervous system (CNS) and cardiometabolic diseases; and animal and women health. The company has collaboration agreements with Mass General Brigham and Joslin Diabetes Center focusing on cardiometabolic diseases; BMS antiviral; Novo Nordisk cell therapy; University of Oxford; German Cancer Research Center; University Hospital in Hamburg; University of Toronto, Harvard, and Yale; Johns Hopkins University; Ospedale San Raffaele (OSR); and National University of Singapore. In addition, it has a partnership with LAB282, LAB150, beLAB2122, beLAB1407, LAB eN², Danube Labs, VC Amplitude Ventures, LaB eN2, and 65LAB. Further, the company serves pharma and biotechnology companies, academic institutions, patient advocacy groups, and venture capital. Evotec SE has strategic collaboration with Almirall, S.A. for the development of novel therapeutics for severe skin diseases, including a range of immune-mediated inflammatory conditions. The company collaborate with Odyssey Therapeutics, Inc. to designs and develops AI based discovery platform to discover new treatments in autoimmune and inflammatory diseases. The company was formerly known as Evotec AG and changed its name to Evotec SE in April 2019. Evotec SE was incorporated in 1993 and is headquartered in Hamburg, Germany."
@@ -8539,7 +8530,7 @@
       "net_debt": 10278976.0,
       "net_debt_str": "10.28 M EUR",
       "net_debt_ebitda": -0.14,
-      "ebitda_implied": -73178928.37263806,
+      "ebitda_implied": -73178554.0715209,
       "debt_to_equity": 71.5,
       "current_ratio": 2.33,
       "quick_ratio": 2.02,
@@ -8566,8 +8557,8 @@
       "statements_note": "4 champs repris des etats financiers (exercice clos 2025-12-31), `.info` ne les publiant pas pour cette place"
     },
     "valuation": {
-      "ev_ebitda_ttm": -6.83,
-      "ev_revenue_ttm": 0.7,
+      "ev_ebitda_ttm": -6.96,
+      "ev_revenue_ttm": 0.71,
       "ps_ttm": 0.7,
       "pe_trailing": null,
       "pe_fwd": -6.73,
@@ -8584,8 +8575,8 @@
       "target_low": 3.5,
       "target_high": 10.0,
       "n_analysts": 7.0,
-      "recommendation": "none",
-      "recommendation_mean": null,
+      "recommendation": "hold",
+      "recommendation_mean": 2.62,
       "note": "consensus sell-side — n'est PAS une valeur d'equilibre calculee"
     },
     "ownership": {
@@ -8597,7 +8588,7 @@
     "market": {
       "beta": 1.26,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": -53.57,
+      "change_52w_pct": -53.71,
       "low_52w": 2.71,
       "high_52w": 7.3
     },
@@ -8687,7 +8678,7 @@
       },
       {
         "field": "identity.adv_str",
-        "value": "925.3 k titres",
+        "value": "928.1 k titres",
         "from": "fundamentals.identity.adv_str"
       },
       {
@@ -8807,7 +8798,7 @@
       },
       {
         "field": "consensus.buy_hold_sell",
-        "value": "none",
+        "value": "hold",
         "from": "fundamentals.consensus.recommendation"
       },
       {
@@ -8883,8 +8874,8 @@
     ],
     "coverage": {
       "n_fields": 103,
-      "n_filled": 95,
-      "fill_rate_pct": 92.2
+      "n_filled": 96,
+      "fill_rate_pct": 93.2
     }
   },
   "volatility_regime": {
@@ -8984,7 +8975,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-09-25T21:40:40.534560+00:00",
+    "generated_at": "2026-09-28T00:05:55.170139+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/EVT_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1274,
@@ -9392,7 +9383,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-09-25T21:40:42.549825+00:00",
+    "generated_at": "2026-09-28T00:05:56.648249+00:00",
     "ticker": "EVT",
     "source_csv": "EVT_daily_long.csv",
     "n_sessions": 1275,
@@ -21884,12 +21875,12 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-25T00:00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 72.87957182524406,
-        "overall_label": "good",
+        "overall_quality_score": 68.87957182524406,
+        "overall_label": "acceptable",
         "warnings": [
           "liquidité faible (low, daily)",
           "gap down de 20.4% le 2026-07-14 (daily)"
@@ -21932,12 +21923,12 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-25T12:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 71.23989898989899,
-        "overall_label": "good",
+        "overall_quality_score": 67.23989898989899,
+        "overall_label": "acceptable",
         "warnings": [
           "64 bar(s) à volume zéro (h4)",
           "liquidité faible (very_low, h4)"
@@ -21980,11 +21971,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-25T15:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 69.35144927536231,
+        "overall_quality_score": 65.35144927536231,
         "overall_label": "acceptable",
         "warnings": [
           "23 bar(s) à volume zéro (h1)",
@@ -21993,7 +21984,7 @@
       }
     },
     "summary": {
-      "worst_tf_quality_score": 69.35144927536231,
+      "worst_tf_quality_score": 65.35144927536231,
       "worst_tf": "h1",
       "recommendation": "fetch_again"
     }

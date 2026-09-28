@@ -1,11 +1,11 @@
 # SRT3
 
-**Generated** : 2026-09-25T21:39:04.816751+00:00  
+**Generated** : 2026-09-28T00:04:40.018072+00:00  
 **Santé technique** : 10/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €258.30  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)  
 > ↳ spot €258.30 (+6.4% vs entrée) · entrée €242.75 · stop €234.90 · T1 €249.37 · R/R 0.84  
 > ↳ P(T1 av. stop) 57 % · EV/risk -0.1 · ¼-Kelly 0.002 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
@@ -65,15 +65,15 @@ Plan privilegie B (swing), composite 10/10, conviction 'Pass (negative EV)'.
       - refuse : R/R 0.22 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.84 %) : P(cible) 72.8 % x 1.67 % + P(rien) 0.4 % x -0.84 % ne couvrent pas P(stop) 26.8 % x 7.67 %.
         -> l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne. A remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes.
-   - ⚪ sr_based a 3.71 ATR (stop 13.258 %) — p(stop avant cible) 0.0539 [0.03 ; 0.08], R/R 0.118, perte reelle 14.205 % (gap inclus), EV 0.0342 % — **REFUSE**
+   - ⚪ sr_based a 3.71 ATR (stop 12.946 %) — p(stop avant cible) 0.055 [0.03 ; 0.08], R/R 0.118, perte reelle 14.205 % (gap inclus), EV 0.0309 % — **REFUSE**
       - refuse : R/R 0.12 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 13.26 % > budget 12.00 %
-   - ⚪ swing_based a 4.29 ATR (stop 15.042 %) — p(stop avant cible) 0.0252 [0.01 ; 0.05], R/R 0.111, perte reelle 15.042 % (gap inclus), EV 0.1434 % — **REFUSE**
+      - refuse : CVaR 95 % 12.95 % > budget 12.00 %
+   - ⚪ swing_based a 4.29 ATR (stop 14.729 %) — p(stop avant cible) 0.0255 [0.01 ; 0.05], R/R 0.113, perte reelle 14.729 % (gap inclus), EV 0.1492 % — **REFUSE**
       - refuse : R/R 0.11 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 15.04 % > budget 12.00 %
-   - 🟢 support a 7.71 ATR (stop 25.422 %) — p(stop avant cible) 0.0015 [0.00 ; 0.01], R/R 0.066, perte reelle 25.422 % (gap inclus), EV 0.205 % — **REFUSE**
+      - refuse : CVaR 95 % 14.73 % > budget 12.00 %
+   - 🟢 support a 7.71 ATR (stop 25.11 %) — p(stop avant cible) 0.0017 [0.00 ; 0.01], R/R 0.067, perte reelle 25.11 % (gap inclus), EV 0.2029 % — **REFUSE**
       - refuse : R/R 0.07 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 25.42 % > budget 12.00 %
+      - refuse : CVaR 95 % 25.11 % > budget 12.00 %
    - ⚪ atr_grid a 0.25 ATR (stop 0.759 %) — p(stop avant cible) 0.6369 [0.59 ; 0.69], R/R 0.993, perte reelle 1.682 % (gap inclus), EV -0.4645 % — **REFUSE**
       - refuse : p_stop_first 0.637, borne haute 0.686 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
       - refuse : R/R 0.99 < plancher 3.00 (mesure vs SPOT, gap inclus)
@@ -126,6 +126,9 @@ Plan privilegie B (swing), composite 10/10, conviction 'Pass (negative EV)'.
    - ⚪ grid_snapped a 4.29 ATR (stop 13.946 %) — p(stop avant cible) 0.0398 [0.02 ; 0.06], R/R 0.118, perte reelle 14.205 % (gap inclus), EV 0.1241 % — **REFUSE**
       - refuse : R/R 0.12 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 13.95 % > budget 12.00 %
+   - ⚪ atr_grid a 5.0 ATR (stop 15.182 %) — p(stop avant cible) 0.0251 [0.01 ; 0.05], R/R 0.11, perte reelle 15.182 % (gap inclus), EV 0.1414 % — **REFUSE**
+      - refuse : R/R 0.11 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 15.18 % > budget 12.00 %
    - ⚪ atr_grid a 5.5 ATR (stop 16.7 %) — p(stop avant cible) 0.0058 [0.00 ; 0.02], R/R 0.1, perte reelle 16.7 % (gap inclus), EV 0.212 % — **REFUSE**
       - refuse : R/R 0.10 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 16.70 % > budget 12.00 %
@@ -297,9 +300,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-09-30 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -318,5 +321,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (911661 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (872661 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

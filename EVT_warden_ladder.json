@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-09-25T21:41:38.169909+00:00",
+  "generated_at": "2026-09-28T00:06:39.144075+00:00",
   "ticker": "EVT",
   "spot": 2.81,
   "atr_14": 0.1194,
@@ -15,9 +15,9 @@
   "target_note": "la cible sert a mesurer le R/R vs SPOT. Elle est prise sur une RESISTANCE reelle quand il en existe une au-dessus du spot — jamais sur la cible d'un plan d'entree sur repli, qui peut se situer SOUS le prix courant et rendrait tout R/R absurde.",
   "anchor_evidence": {
     "source": "registre point-in-time",
-    "measured_at": "2026-09-25T00:50:57.512077+00:00",
+    "measured_at": "2026-09-25T21:46:18.935814+00:00",
     "stale": false,
-    "generated_at": "2026-09-25T00:50:57.512077+00:00",
+    "generated_at": "2026-09-25T21:46:18.935814+00:00",
     "buckets": [
       {
         "bucket": "<1",
@@ -25,12 +25,12 @@
           0.0,
           1.0
         ],
-        "n": 1231,
+        "n": 1182,
         "n_tickers": 61,
-        "p_break": 0.4703,
+        "p_break": 0.4805,
         "ci95": [
-          0.4419,
-          0.4984
+          0.451,
+          0.5085
         ],
         "coinflip": true,
         "usable": true
@@ -41,12 +41,12 @@
           1.0,
           3.0
         ],
-        "n": 1206,
+        "n": 1256,
         "n_tickers": 61,
-        "p_break": 0.3491,
+        "p_break": 0.3567,
         "ci95": [
-          0.3198,
-          0.3775
+          0.3263,
+          0.3864
         ],
         "coinflip": false,
         "usable": true
@@ -57,12 +57,12 @@
           3.0,
           6.0
         ],
-        "n": 352,
+        "n": 338,
         "n_tickers": 58,
-        "p_break": 0.3239,
+        "p_break": 0.3225,
         "ci95": [
-          0.273,
-          0.3754
+          0.2711,
+          0.3761
         ],
         "coinflip": false,
         "usable": true
@@ -74,11 +74,11 @@
           null
         ],
         "n": 61,
-        "n_tickers": 32,
-        "p_break": 0.4262,
+        "n_tickers": 30,
+        "p_break": 0.3934,
         "ci95": [
-          0.3061,
-          0.5385
+          0.2833,
+          0.5
         ],
         "coinflip": false,
         "usable": true
@@ -94,23 +94,23 @@
     "cvar95_budget_stale": true,
     "cvar95_budget_measured_at": null,
     "cvar95_budget_default_witness": 12.0,
-    "anchor_buffer_atr": 0.548,
+    "anchor_buffer_atr": 0.544,
     "anchor_buffer_source": {
       "source": "registre point-in-time, quantile 90 % par classe d'ATR",
       "stale": false,
       "level_type": "support",
       "class": "atr_moyen",
       "atr_pct_range": [
-        3.958,
+        3.988,
         6.786
       ],
-      "n": 563,
+      "n": 557,
       "ci95": [
-        0.43,
+        0.432,
         0.618
       ],
-      "survival_at_0_30": 0.833,
-      "measured_at": "2026-09-25T00:50:57.512077+00:00"
+      "survival_at_0_30": 0.8366,
+      "measured_at": "2026-09-25T21:46:18.935814+00:00"
     },
     "target_buffer_atr": 0.3,
     "anchor_buffer_default_witness": 0.3,
@@ -132,7 +132,7 @@
   "candidates": [
     {
       "anchor_price": 2.7421,
-      "stop_price": 2.6767,
+      "stop_price": 2.6771,
       "origin": "swing_based",
       "strength": null,
       "touches": null,
@@ -141,7 +141,7 @@
       "anchor_distance_atr": 0.57,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
-      "distance_pct": 4.744,
+      "distance_pct": 4.73,
       "p_stop_first": 0.6507,
       "p_target_first": 0.0015,
       "p_no_touch": 0.3478,
@@ -156,21 +156,21 @@
       "n_windows": 1265,
       "n_eff": 345.8,
       "grid_point": null,
-      "gap_overshoot_pt": 6.973,
+      "gap_overshoot_pt": 6.987,
       "gap_overshoot_note": "surcout moyen mesure a cette distance",
       "loss_if_stop_pct": 11.717,
       "gain_if_tp_pct": 39.711,
       "rr_vs_spot": 3.389,
-      "cvar95_pct": 4.804,
-      "var95_pct": 4.744,
+      "cvar95_pct": 4.79,
+      "var95_pct": 4.73,
       "cvar95_budget_pct": 12.0,
-      "cost": 5.0464,
+      "cost": 5.04637,
       "ev_pct": -5.0464,
       "ev_terms": {
         "target": 0.0596,
         "stop": -7.6243,
         "no_touch": 2.5183,
-        "pnl_no_touch_pct": 7.2406
+        "pnl_no_touch_pct": 7.2407
       },
       "p_stop_upper": 0.6995,
       "flags": [
@@ -16138,9 +16138,9 @@
       "note": "avec le surcout de gap inclus, ce stop coute 8.70 % ; il faut donc viser au moins 26.11 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 2.6767,
+      "stop_price": 2.6771,
       "stop_origin": "swing_based",
-      "stop_distance_pct": 4.744,
+      "stop_distance_pct": 4.73,
       "min_target_pct_for_rr": 35.151,
       "note": "avec le surcout de gap inclus, ce stop coute 11.72 % ; il faut donc viser au moins 35.15 % pour tenir le plancher de R/R 3.0"
     },

@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE000ENER6Y0",
-    "generated_at": "2026-09-25T21:43:57.518831+00:00",
+    "generated_at": "2026-09-28T00:08:29.108855+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -428,7 +428,7 @@
           146.76,
           142.54,
           142.6,
-          1751550
+          1752282
         ]
       ],
       "h4": [
@@ -1255,8 +1255,8 @@
       "macd_hist": 0.6428478240178879,
       "macd_signal_cross": null,
       "obv_trend": "rising",
-      "mfi_14": 59.86564684957041,
-      "cmf_20": -0.20793449358335112,
+      "mfi_14": 59.866780750824915,
+      "cmf_20": -0.20794942103871772,
       "adl_trend": "falling",
       "adx_14": 11.026152052120887,
       "plus_di_14": 22.701259645427108,
@@ -1264,7 +1264,7 @@
       "di_spread_14": -0.7101451352304373,
       "choppiness_14": 49.6140664956478,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 0.9355273418154015,
+      "volume_ratio_ma20": 0.9359000177402491,
       "distance_ma20_pct": 0.13975034556923796,
       "distance_ma50_pct": -3.7872429493140243,
       "distance_ma200_pct": -6.605132730738666
@@ -1847,7 +1847,7 @@
           "rr": 0.6,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.426,
+          "p_touch": 0.4261,
           "distance_pct": 4.76
         }
       }
@@ -1873,7 +1873,7 @@
           "rr": 0.97,
           "rr_basis": "entry_mid",
           "capped": true,
-          "p_touch": 0.7216,
+          "p_touch": 0.7215,
           "distance_pct": 3.55
         },
         "t2": {
@@ -2230,7 +2230,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-09-25T21:43:27.092751+00:00",
+    "generated_at": "2026-09-28T00:08:06.237842+00:00",
     "n_sessions": 80,
     "regime_window": "recent",
     "bar_resolution": "5s",
@@ -8370,7 +8370,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-09-25T21:43:07.676400+00:00",
+    "generated_at": "2026-09-28T00:07:51.536943+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8599,51 +8599,19 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-09-25T21:43:34.729325+00:00",
+    "generated_at": "2026-09-28T00:08:12.090928+00:00",
     "ticker": "ENR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 21,
+    "n_events": 20,
     "events": [
       {
-        "date": "2026-09-25",
+        "date": "2026-09-29",
         "type": "macro",
-        "label": "US Durable Goods Orders",
-        "importance": "low",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-25",
-        "type": "macro",
-        "label": "US University of Michigan Consumer Sentiment (prelim + final)",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-26",
-        "type": "macro",
-        "label": "Mirum Pharma (MIRM) PDUFA FDA — maralixibat (Livmarli) expansion — 26/09/2026",
+        "label": "US Conference Board Consumer Confidence",
         "importance": "medium",
         "sessions_to_event": 1,
         "calendar_days": 1,
@@ -8659,26 +8627,12 @@
       {
         "date": "2026-09-29",
         "type": "macro",
-        "label": "US Conference Board Consumer Confidence",
-        "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
-        "in_plan_horizon": [
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-09-29",
-        "type": "macro",
         "label": "US JOLTS (Job Openings and Labor Turnover)",
         "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8691,9 +8645,10 @@
         "type": "macro",
         "label": "Canada — tariff 50% sur importations US — effectif 29/09/2026",
         "importance": "high",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8706,9 +8661,10 @@
         "type": "macro",
         "label": "US PCE Price Index (headline) — Personal Income & Outlays",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8721,9 +8677,10 @@
         "type": "macro",
         "label": "US Core PCE Price Index (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8736,9 +8693,10 @@
         "type": "macro",
         "label": "US Personal Income & Spending",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8751,9 +8709,10 @@
         "type": "macro",
         "label": "US GDP (advance / second / third estimate)",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8766,9 +8725,10 @@
         "type": "macro",
         "label": "US ADP National Employment Report",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8781,9 +8741,10 @@
         "type": "macro",
         "label": "German HICP Flash (inflation estimate)",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8796,9 +8757,10 @@
         "type": "macro",
         "label": "Micron Technology (MU) earnings Q4 FY2026 — ~30/09/2026",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8811,8 +8773,8 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8826,8 +8788,8 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8841,8 +8803,8 @@
         "type": "macro",
         "label": "US ISM Manufacturing PMI",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8856,8 +8818,8 @@
         "type": "macro",
         "label": "US Employment Situation (NFP / unemployment / earnings)",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8871,9 +8833,10 @@
         "type": "macro",
         "label": "US ISM Services PMI",
         "importance": "medium",
-        "sessions_to_event": 7,
-        "calendar_days": 10,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -8885,8 +8848,8 @@
         "type": "macro",
         "label": "US International Trade Balance (goods & services)",
         "importance": "low",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8899,8 +8862,8 @@
         "type": "macro",
         "label": "US Retail Sales (headline + control group)",
         "importance": "medium",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8913,12 +8876,40 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
+        "sessions_to_event": 6,
+        "calendar_days": 9,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-09",
+        "type": "macro",
+        "label": "US University of Michigan Consumer Sentiment (prelim + final)",
+        "importance": "medium",
+        "sessions_to_event": 8,
+        "calendar_days": 11,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-10",
+        "type": "macro",
+        "label": "Merck (MRK) PDUFA FDA — ifinatamab deruxtecan (I-DXd) SCLC — 10/10/2026",
+        "importance": "medium",
         "sessions_to_event": 9,
         "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
-        "impact": "rates_sensitive",
+        "impact": "macro_broad",
         "ticker_specific": false,
         "recommendation": null
       }
@@ -9063,7 +9054,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-09-25T21:43:33.021750+00:00",
+    "generated_at": "2026-09-28T00:08:10.793434+00:00",
     "ticker": "ENR",
     "yahoo": "ENR.DE",
     "source": "yfinance.Ticker.info",
@@ -9090,7 +9081,7 @@
       "shares_outstanding": 850848567.0,
       "float_shares": 777430232.0,
       "free_float_pct": 91.4,
-      "avg_volume_3m": 2023059.0,
+      "avg_volume_3m": 2001000.0,
       "adv_str": "2.0 M titres",
       "avg_volume_10d": 2081140.0,
       "archetype_suggested": null,
@@ -9120,8 +9111,8 @@
       "debt_to_equity": 26.5,
       "current_ratio": 0.9,
       "quick_ratio": 0.57,
-      "eps_trailing": 3.08,
-      "eps_str": "3.08 EUR",
+      "eps_trailing": 3.09,
+      "eps_str": "3.09 EUR",
       "eps_forward": 6.21,
       "eps_growth_pct": 80.0,
       "dividend_yield_pct": 0.49,
@@ -9145,7 +9136,7 @@
       "ev_ebitda_ttm": 24.61,
       "ev_revenue_ttm": 2.71,
       "ps_ttm": 2.9,
-      "pe_trailing": 46.3,
+      "pe_trailing": 46.15,
       "pe_fwd": 22.97,
       "peg": 0.4,
       "price_to_book": 11.31,
@@ -9173,7 +9164,7 @@
     "market": {
       "beta": 1.868,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": 43.94,
+      "change_52w_pct": 43.39,
       "low_52w": 94.4,
       "high_52w": 191.66
     },
@@ -9328,7 +9319,7 @@
       },
       {
         "field": "financials.eps_str",
-        "value": "3.08 EUR",
+        "value": "3.09 EUR",
         "from": "fundamentals.financials.eps_str"
       },
       {
@@ -9565,7 +9556,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-09-25T21:43:05.484683+00:00",
+    "generated_at": "2026-09-28T00:07:49.750730+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/ENR_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1274,
@@ -9952,10 +9943,10 @@
       "gap_best": 16.64
     },
     "asymmetry": {
-      "n_down": 570,
-      "n_up": 703,
-      "mean_down_pct": -1.139,
-      "mean_up_pct": 1.136,
+      "n_down": 571,
+      "n_up": 702,
+      "mean_down_pct": -1.137,
+      "mean_up_pct": 1.137,
       "worst_down_pct": -35.757,
       "best_up_pct": 16.64,
       "downside_heavier": true
@@ -9973,7 +9964,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-09-25T21:43:07.343894+00:00",
+    "generated_at": "2026-09-28T00:07:51.268666+00:00",
     "ticker": "ENR",
     "source_csv": "ENR_daily_long.csv",
     "n_sessions": 1275,
@@ -14090,7 +14081,7 @@
         "anchor_date": "2026-09-15",
         "anchor_event": "swing_low",
         "anchor_price": 131.28,
-        "vwap_today": 140.8726,
+        "vwap_today": 140.8728,
         "distance_from_close_pct": 1.23,
         "bars_since_anchor": 8
       },
@@ -14098,7 +14089,7 @@
         "anchor_date": "2026-08-12",
         "anchor_event": "swing_high",
         "anchor_price": 165.86,
-        "vwap_today": 146.7354,
+        "vwap_today": 146.7353,
         "distance_from_close_pct": -2.82,
         "bars_since_anchor": 32
       },
@@ -14106,7 +14097,7 @@
         "anchor_date": "2026-07-30",
         "anchor_event": "swing_low",
         "anchor_price": 133.3,
-        "vwap_today": 147.7013,
+        "vwap_today": 147.7012,
         "distance_from_close_pct": -3.45,
         "bars_since_anchor": 41
       }
@@ -19023,8 +19014,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": 5661048.778847853,
-        "signal_line": 1799371.6909586913,
+        "value": 5661123.135177704,
+        "signal_line": 1799382.3132915273,
         "signal": "neutral"
       }
     },
@@ -20563,7 +20554,7 @@
         5587657.510190565,
         7138769.196736429,
         6012603.333938807,
-        5661048.778847853
+        5661123.135177704
       ],
       "klinger_signal": [
         0.0,
@@ -20819,7 +20810,7 @@
         -785795.9781141432,
         346284.76115022413,
         1155758.8429771645,
-        1799371.6909586913
+        1799382.3132915273
       ]
     }
   },
@@ -20827,22 +20818,22 @@
     "available": true,
     "latest": {
       "close": 142.60000610351562,
-      "vwap": 141.7588055472826,
+      "vwap": 141.75884870693045,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": 0.5934026835126253,
+        "distance_from_close_pct": 0.5933720570235211,
         "position": "above_vwap"
       },
-      "force_index": -1172067.569164518,
+      "force_index": -1172015.2834502324,
       "force_index_meta": {
         "signal": "neutral"
       },
-      "chaikin_oscillator": -1530078.3712069478,
+      "chaikin_oscillator": -1530304.6558776218,
       "chaikin_oscillator_meta": {
         "cross_recent": null,
         "signal": "neutral"
       },
-      "vroc_14": 61.74190551735156,
+      "vroc_14": 61.809499976452756,
       "vroc_14_meta": {
         "signal": "high_activity"
       }
@@ -21358,7 +21349,7 @@
         142.59558048874553,
         142.35679993896122,
         141.95571826419828,
-        141.7588055472826
+        141.75884870693045
       ],
       "force_index": [
         null,
@@ -21614,7 +21605,7 @@
         -1103101.162341837,
         -1185750.580695905,
         -1513374.6640252708,
-        -1172067.569164518
+        -1172015.2834502324
       ],
       "chaikin_oscillator": [
         0.0,
@@ -21870,7 +21861,7 @@
         -887140.3707253882,
         -797679.8445371385,
         -997541.9623852023,
-        -1530078.3712069478
+        -1530304.6558776218
       ],
       "vroc_14": [
         null,
@@ -22126,7 +22117,7 @@
         -21.96973272033972,
         -21.974475090613552,
         -9.388279568457516,
-        61.74190551735156
+        61.809499976452756
       ]
     }
   },
@@ -22158,7 +22149,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": -0.4952,
+      "value": -0.4946,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -22417,22 +22408,22 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 1988546.0166666666,
+        "mean_volume_60d": 1988558.2166666666,
         "median_volume_60d": 1731455.5,
-        "volume_consistency_score": 0.5826137235556305
+        "volume_consistency_score": 0.5826180630687404
       },
       "liquidity": {
-        "liquidity_score": 256822844.15689036,
+        "liquidity_score": 256826323.59703928,
         "liquidity_classification": "high"
       },
       "freshness": {
         "last_bar_date": "2026-09-25T00:00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 88.69302865792663,
-        "overall_label": "excellent",
+        "overall_quality_score": 84.69309375062329,
+        "overall_label": "good",
         "warnings": []
       }
     },
@@ -22478,11 +22469,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-25T12:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 77.72979797979798,
+        "overall_quality_score": 73.72979797979798,
         "overall_label": "good",
         "warnings": [
           "65 bar(s) à volume zéro (h4)"
@@ -22525,11 +22516,11 @@
       },
       "freshness": {
         "last_bar_date": "2026-09-25T15:00:00+00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh"
+        "days_since_last_bar": 3,
+        "freshness_status": "stale"
       },
       "overall": {
-        "overall_quality_score": 78.78381642512078,
+        "overall_quality_score": 74.78381642512078,
         "overall_label": "good",
         "warnings": [
           "23 bar(s) à volume zéro (h1)"
@@ -22537,7 +22528,7 @@
       }
     },
     "summary": {
-      "worst_tf_quality_score": 77.72979797979798,
+      "worst_tf_quality_score": 73.72979797979798,
       "worst_tf": "h4",
       "recommendation": "review_outliers"
     }
