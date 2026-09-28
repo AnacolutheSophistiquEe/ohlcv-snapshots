@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMR",
-    "generated_at": "2026-09-25T22:05:30Z",
+    "generated_at": "2026-09-28T00:50:04Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-09-28T08:00:00Z",
-    "valid_until": "2026-09-28T21:00:00Z",
+    "valid_from": "2026-09-29T08:00:00Z",
+    "valid_until": "2026-09-29T21:00:00Z",
     "source_precomputed": "SMR_precomputed.json"
   },
   "context": {
-    "last_price": 8.475,
+    "last_price": 8.42,
     "ta_score": {
       "value": 2,
       "max": 10,
@@ -19,14 +19,14 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.7507,
-      "expected_duration_days": 4.01
+      "probability": 0.7854,
+      "expected_duration_days": 4.66
     },
-    "volatility_regime": "low",
+    "volatility_regime": "normal",
     "signals_counter": {
       "buy": 1,
-      "sell": 5,
-      "neutral": 9,
+      "sell": 6,
+      "neutral": 8,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,27 +37,27 @@
       "median_bounce_pct": 1.58,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (0.75), vol low, signals neutral (1b/5s/9n)."
+    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (0.79), vol normal, signals neutral (1b/6s/8n)."
   },
   "notes": {
-    "atr_daily": 0.7304,
+    "atr_daily": 0.7346,
     "atr_pct_daily": null,
-    "beta_60d": 3.5808,
+    "beta_60d": 3.5906,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.5266,
+    "beta_corr_60d": 0.528,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "bearish_engulfing",
-      "date": "2026-09-18",
-      "confidence": 0.803
+      "name": "",
+      "date": "",
+      "confidence": null
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -84.14,
+      "current_dd_pct": -84.24,
       "ath_price": 53.43,
       "ath_date": "2025-10-15",
       "max_dd_1y_pct": -85.79,
-      "days_in_dd": 344,
+      "days_in_dd": 345,
       "median_recovery_days": null
     }
   },
@@ -72,28 +72,28 @@
         "max": 8.3857
       },
       "stop": {
-        "price": 7.5081,
+        "price": 7.4791,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -8.61
+        "distance_pct": -8.96
       },
       "targets": [
         {
           "level": 1,
           "price": 9.6517,
           "basis": "VPVR VAH · touche hist. 44% (sans stop)",
-          "rr": 2.03
+          "rr": 1.95
         },
         {
           "level": 2,
           "price": 9.665,
           "basis": "résistance (weak) · touche hist. 44% (sans stop)",
-          "rr": 2.05
+          "rr": 1.97
         },
         {
           "level": 3,
-          "price": 10.195,
-          "basis": "résistance (medium) · touche hist. 14% (sans stop)",
-          "rr": 2.8
+          "price": 10.1418,
+          "basis": "plafond band 95% · touche hist. 14% (sans stop)",
+          "rr": 2.62
         }
       ],
       "preferred_target": 1,
@@ -120,21 +120,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 10.195,
+          "price": 10.824,
           "basis": "next_confluence_resistance",
-          "rr": 0.56
+          "rr": 1.27
         },
         {
           "level": 2,
-          "price": 10.5591,
+          "price": 10.9525,
           "basis": "fib_236",
-          "rr": 0.97
+          "rr": 1.41
         },
         {
           "level": 3,
-          "price": 12.3089,
-          "basis": "next_confluence_resistance",
-          "rr": 2.93
+          "price": 12.8038,
+          "basis": "fib_382",
+          "rr": 3.49
         }
       ],
       "preferred_target": 1,
@@ -151,31 +151,31 @@
       "side": "long",
       "entry_zone": {
         "min": 7.375,
-        "max": 7.6024
+        "max": 7.515
       },
       "stop": {
         "price": 7.08,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -5.46
+        "distance_pct": -4.9
       },
       "targets": [
         {
           "level": 1,
           "price": 9.6517,
           "basis": "VPVR VAH · touche hist. 44% (sans stop)",
-          "rr": 5.29
+          "rr": 6.05
         },
         {
           "level": 2,
           "price": 9.665,
           "basis": "résistance (weak) · touche hist. 44% (sans stop)",
-          "rr": 5.32
+          "rr": 6.08
         },
         {
           "level": 3,
-          "price": 10.195,
-          "basis": "résistance (medium) · touche hist. 14% (sans stop)",
-          "rr": 6.62
+          "price": 10.1418,
+          "basis": "plafond band 95% · touche hist. 14% (sans stop)",
+          "rr": 7.39
         }
       ],
       "preferred_target": 1,
