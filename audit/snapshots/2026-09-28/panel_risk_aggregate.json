@@ -1,0 +1,597 @@
+{
+  "available": true,
+  "generated_at": "2026-09-28T00:50:14.854794+00:00",
+  "window_sessions": 55,
+  "tickers_used": [
+    "000660",
+    "005380",
+    "005930",
+    "012450",
+    "042660",
+    "196170",
+    "207940",
+    "AL2SI",
+    "ALCPB",
+    "APP",
+    "CAT",
+    "COIN",
+    "ENR",
+    "FFAI",
+    "FIG",
+    "HOOD",
+    "IFX",
+    "IS0E",
+    "MSTR",
+    "NNE",
+    "NOK",
+    "NVTS",
+    "PRY",
+    "RGTI",
+    "RHM",
+    "SMCI",
+    "SNDK",
+    "STLAP"
+  ],
+  "tickers_skipped": [
+    "000270",
+    "ACMR",
+    "ADBE",
+    "AHCO",
+    "AMKR",
+    "AVGO",
+    "BABA",
+    "BMW",
+    "CELH",
+    "CLVT",
+    "CVS",
+    "FATE",
+    "HWM",
+    "INTU",
+    "JOBY",
+    "KOD",
+    "KTOS",
+    "LPTH",
+    "LWLG",
+    "NEM",
+    "NTLA",
+    "OKLO",
+    "PATH",
+    "PRVA",
+    "PSLV",
+    "PSQL",
+    "SBSW",
+    "SPCX",
+    "UPS",
+    "VICI",
+    "VRT"
+  ],
+  "weights_eur": {
+    "000660": 2415.1,
+    "005380": 462.35,
+    "005930": 2596.86,
+    "012450": 2671.07,
+    "042660": 2404.31,
+    "196170": 651.24,
+    "207940": 889.44,
+    "AL2SI": 907.68,
+    "ALCPB": 54.7,
+    "APP": 546.22,
+    "CAT": 721.4,
+    "COIN": 856.16,
+    "ENR": 287.4,
+    "FFAI": 905.98,
+    "FIG": 403.46,
+    "HOOD": 208.85,
+    "IFX": 114.16,
+    "IS0E": 1506.6,
+    "MSTR": 558.3,
+    "NNE": 194.01,
+    "NOK": 361.34,
+    "NVTS": 321.04,
+    "PRY": 1114.2,
+    "RGTI": 87.81,
+    "RHM": 1970.2,
+    "SMCI": 75.97,
+    "SNDK": 1556.05,
+    "STLAP": 52.7
+  },
+  "weights_source": {
+    "source": "tws_live_state",
+    "status": "ok",
+    "age_days": 0.14,
+    "n_positions": 59,
+    "total_notional_eur": 38369.5,
+    "account": {
+      "nlv_eur": 13279.97,
+      "gross_position_value_eur": 38388.36,
+      "maint_margin_eur": 8321.86,
+      "excess_liquidity_eur": 4958.11,
+      "leverage": 2.89,
+      "excess_over_maint_pct": 59.6
+    },
+    "skipped": []
+  },
+  "total_notional_eur": 24894.61,
+  "capital_total_eur": 13279.97,
+  "var_95_historical": {
+    "method": "historical_empirical",
+    "basket": "portefeuille complet",
+    "n_lines": 28,
+    "notional_eur": 24894.61,
+    "n_sessions": 299,
+    "window_start": "2025-08-01",
+    "window_end": "2026-09-25",
+    "var_eur": 815.56,
+    "cvar_eur": 1146.74,
+    "var_pct_notional": 3.28,
+    "cvar_pct_notional": 4.61,
+    "worst_session_eur": 1516.08,
+    "window_binding_ticker": "FIG",
+    "window_binding_first_date": "2025-07-31",
+    "caveat": "fenetre TRONQUEE au debut commun a toutes les lignes : c'est l'historique le plus court (FIG) qui la fixe. Panier complet, fenetre courte.",
+    "per_line_observed_pct": {
+      "000660": 93.3,
+      "005380": 93.3,
+      "005930": 93.3,
+      "012450": 93.3,
+      "042660": 93.3,
+      "196170": 93.3,
+      "207940": 93.3,
+      "AL2SI": 98.7,
+      "ALCPB": 98.7,
+      "APP": 97.0,
+      "CAT": 97.0,
+      "COIN": 97.0,
+      "ENR": 98.0,
+      "FFAI": 97.0,
+      "FIG": 97.0,
+      "HOOD": 97.0,
+      "IFX": 98.0,
+      "IS0E": 97.7,
+      "MSTR": 97.0,
+      "NNE": 97.0,
+      "NOK": 97.0,
+      "NVTS": 97.0,
+      "PRY": 97.7,
+      "RGTI": 97.0,
+      "RHM": 98.0,
+      "SMCI": 97.0,
+      "SNDK": 97.0,
+      "STLAP": 98.7
+    },
+    "long_window_restricted_basket": {
+      "method": "historical_empirical",
+      "basket": "lignes a historique profond",
+      "n_lines": 25,
+      "notional_eur": 22741.09,
+      "n_sessions": 1281,
+      "window_start": "2021-10-21",
+      "window_end": "2026-09-25",
+      "var_eur": 508.99,
+      "cvar_eur": 781.56,
+      "var_pct_notional": 2.24,
+      "cvar_pct_notional": 3.44,
+      "worst_session_eur": 1600.38,
+      "min_sessions_required": 750,
+      "notional_share_pct": 91.3,
+      "lines_excluded": [
+        "FIG",
+        "NNE",
+        "SNDK"
+      ],
+      "caveat": "fenetre LONGUE mais panier INCOMPLET : les lignes trop recentes sont exclues, leur risque n'est pas compte ici."
+    },
+    "note": "quantile empirique de la serie du panier pondere ; aucune hypothese de distribution — a preferer a la version gaussienne sur des titres a queues epaisses. Les jours de fermeture d'une place recoivent un rendement 0 par report du dernier cours (correct) ; les periodes ANTERIEURES a l'historique d'une ligne sont exclues par troncature (un 0 y serait une sous-estimation)."
+  },
+  "var_95": {
+    "method": "gaussian_1d",
+    "method_caveat": "VaR 95 % seule : ne dit rien de la QUEUE. Le CVaR de `var_95_historical` est 28-36 % au-dessus, et la pire seance 1,7-2,4x au-dessus. Sensible a la fenetre.",
+    "z_95": 1.6448536269514722,
+    "sigma_portfolio_daily_eur": 666.89,
+    "value_eur": 1096.93,
+    "pct_total_notional": 4.41,
+    "pct_capital": 8.26
+  },
+  "panel_beta_weighted": {},
+  "panel_beta_partial": {
+    "FCHI": 1.3763,
+    "KS11": 0.9419,
+    "SPY": 1.9351,
+    "GDAXI": 0.9477,
+    "IWM": 2.5419,
+    "FTSEMIB": 1.6525
+  },
+  "panel_beta_status": "aucun beta ne couvre >= 50 % du portefeuille — le livre s'etale sur 5 places et aucun indice unique ne le decrit ; les valeurs sont dans `panel_beta_partial` AVEC leur couverture. Un beta net SYNCHRONE par place, pondere par le poids de chaque place, est le livrable du chantier B1.",
+  "panel_beta_coverage": {
+    "FCHI": {
+      "notional_covered_eur": 907.68,
+      "notional_total_eur": 24894.61,
+      "coverage_pct": 3.6,
+      "lines_missing_beta": [
+        "000660",
+        "005380",
+        "005930",
+        "012450",
+        "042660",
+        "196170",
+        "207940",
+        "ALCPB",
+        "APP",
+        "CAT",
+        "COIN",
+        "ENR",
+        "FFAI",
+        "FIG",
+        "HOOD",
+        "IFX",
+        "IS0E",
+        "MSTR",
+        "NNE",
+        "NOK",
+        "NVTS",
+        "PRY",
+        "RGTI",
+        "RHM",
+        "SMCI",
+        "SNDK",
+        "STLAP"
+      ]
+    },
+    "KS11": {
+      "notional_covered_eur": 8572.48,
+      "notional_total_eur": 24894.61,
+      "coverage_pct": 34.4,
+      "lines_missing_beta": [
+        "005380",
+        "042660",
+        "196170",
+        "AL2SI",
+        "ALCPB",
+        "APP",
+        "CAT",
+        "COIN",
+        "ENR",
+        "FFAI",
+        "FIG",
+        "HOOD",
+        "IFX",
+        "IS0E",
+        "MSTR",
+        "NNE",
+        "NOK",
+        "NVTS",
+        "PRY",
+        "RGTI",
+        "RHM",
+        "SMCI",
+        "SNDK",
+        "STLAP"
+      ]
+    },
+    "SPY": {
+      "notional_covered_eur": 5131.79,
+      "notional_total_eur": 24894.61,
+      "coverage_pct": 20.6,
+      "lines_missing_beta": [
+        "000660",
+        "005380",
+        "005930",
+        "012450",
+        "042660",
+        "196170",
+        "207940",
+        "AL2SI",
+        "ENR",
+        "FFAI",
+        "HOOD",
+        "MSTR",
+        "PRY",
+        "RGTI",
+        "RHM",
+        "SMCI",
+        "SNDK"
+      ]
+    },
+    "GDAXI": {
+      "notional_covered_eur": 2257.6,
+      "notional_total_eur": 24894.61,
+      "coverage_pct": 9.1,
+      "lines_missing_beta": [
+        "000660",
+        "005380",
+        "005930",
+        "012450",
+        "042660",
+        "196170",
+        "207940",
+        "AL2SI",
+        "ALCPB",
+        "APP",
+        "CAT",
+        "COIN",
+        "FFAI",
+        "FIG",
+        "HOOD",
+        "IFX",
+        "IS0E",
+        "MSTR",
+        "NNE",
+        "NOK",
+        "NVTS",
+        "PRY",
+        "RGTI",
+        "SMCI",
+        "SNDK",
+        "STLAP"
+      ]
+    },
+    "IWM": {
+      "notional_covered_eur": 930.93,
+      "notional_total_eur": 24894.61,
+      "coverage_pct": 3.7,
+      "lines_missing_beta": [
+        "000660",
+        "005380",
+        "005930",
+        "012450",
+        "042660",
+        "196170",
+        "207940",
+        "AL2SI",
+        "ALCPB",
+        "APP",
+        "CAT",
+        "COIN",
+        "ENR",
+        "FFAI",
+        "FIG",
+        "IFX",
+        "IS0E",
+        "NNE",
+        "NOK",
+        "NVTS",
+        "PRY",
+        "RHM",
+        "SNDK",
+        "STLAP"
+      ]
+    },
+    "FTSEMIB": {
+      "notional_covered_eur": 1114.2,
+      "notional_total_eur": 24894.61,
+      "coverage_pct": 4.5,
+      "lines_missing_beta": [
+        "000660",
+        "005380",
+        "005930",
+        "012450",
+        "042660",
+        "196170",
+        "207940",
+        "AL2SI",
+        "ALCPB",
+        "APP",
+        "CAT",
+        "COIN",
+        "ENR",
+        "FFAI",
+        "FIG",
+        "HOOD",
+        "IFX",
+        "IS0E",
+        "MSTR",
+        "NNE",
+        "NOK",
+        "NVTS",
+        "RGTI",
+        "RHM",
+        "SMCI",
+        "SNDK",
+        "STLAP"
+      ]
+    }
+  },
+  "concentration_flags": [],
+  "high_corr_pairs_in_panel": [
+    {
+      "pair": "000660_005930",
+      "rho": 0.9294,
+      "share_pct": 20.1,
+      "flag": "red"
+    },
+    {
+      "pair": "COIN_MSTR",
+      "rho": 0.8577,
+      "share_pct": 5.7,
+      "flag": "red"
+    },
+    {
+      "pair": "ENR_PRY",
+      "rho": 0.8443,
+      "share_pct": 5.6,
+      "flag": "red"
+    },
+    {
+      "pair": "IFX_PRY",
+      "rho": 0.8113,
+      "share_pct": 4.9,
+      "flag": "red"
+    },
+    {
+      "pair": "NNE_RGTI",
+      "rho": 0.7953,
+      "share_pct": 1.1,
+      "flag": "red"
+    },
+    {
+      "pair": "NVTS_RGTI",
+      "rho": 0.7375,
+      "share_pct": 1.6,
+      "flag": "red"
+    },
+    {
+      "pair": "NOK_NVTS",
+      "rho": 0.7263,
+      "share_pct": 2.7,
+      "flag": "red"
+    },
+    {
+      "pair": "ENR_IFX",
+      "rho": 0.724,
+      "share_pct": 1.6,
+      "flag": "red"
+    },
+    {
+      "pair": "COIN_HOOD",
+      "rho": 0.7124,
+      "share_pct": 4.3,
+      "flag": "red"
+    },
+    {
+      "pair": "HOOD_MSTR",
+      "rho": 0.6986,
+      "share_pct": 3.1,
+      "flag": "red"
+    },
+    {
+      "pair": "NOK_PRY",
+      "rho": 0.6954,
+      "share_pct": 5.9,
+      "flag": "red"
+    },
+    {
+      "pair": "CAT_SNDK",
+      "rho": 0.6906,
+      "share_pct": 9.1,
+      "flag": "red"
+    },
+    {
+      "pair": "CAT_NOK",
+      "rho": 0.6888,
+      "share_pct": 4.3,
+      "flag": "red"
+    },
+    {
+      "pair": "ENR_NOK",
+      "rho": 0.6753,
+      "share_pct": 2.6,
+      "flag": "red"
+    },
+    {
+      "pair": "NNE_NVTS",
+      "rho": 0.6687,
+      "share_pct": 2.1,
+      "flag": "red"
+    },
+    {
+      "pair": "IFX_NVTS",
+      "rho": 0.6647,
+      "share_pct": 1.7,
+      "flag": "red"
+    },
+    {
+      "pair": "CAT_SMCI",
+      "rho": 0.6591,
+      "share_pct": 3.2,
+      "flag": "red"
+    },
+    {
+      "pair": "IFX_NOK",
+      "rho": 0.6584,
+      "share_pct": 1.9,
+      "flag": "red"
+    },
+    {
+      "pair": "CAT_PRY",
+      "rho": 0.6577,
+      "share_pct": 7.4,
+      "flag": "red"
+    },
+    {
+      "pair": "005380_005930",
+      "rho": 0.6576,
+      "share_pct": 12.3,
+      "flag": "red"
+    },
+    {
+      "pair": "CAT_IFX",
+      "rho": 0.6573,
+      "share_pct": 3.4,
+      "flag": "red"
+    },
+    {
+      "pair": "ENR_NVTS",
+      "rho": 0.6506,
+      "share_pct": 2.4,
+      "flag": "red"
+    },
+    {
+      "pair": "NVTS_SNDK",
+      "rho": 0.6384,
+      "share_pct": 7.5,
+      "flag": "red"
+    },
+    {
+      "pair": "IFX_SNDK",
+      "rho": 0.6378,
+      "share_pct": 6.7,
+      "flag": "red"
+    },
+    {
+      "pair": "005380_042660",
+      "rho": 0.637,
+      "share_pct": 11.5,
+      "flag": "red"
+    },
+    {
+      "pair": "CAT_NVTS",
+      "rho": 0.6335,
+      "share_pct": 4.2,
+      "flag": "red"
+    },
+    {
+      "pair": "NOK_SMCI",
+      "rho": 0.6321,
+      "share_pct": 1.8,
+      "flag": "red"
+    },
+    {
+      "pair": "CAT_RGTI",
+      "rho": 0.6312,
+      "share_pct": 3.3,
+      "flag": "red"
+    },
+    {
+      "pair": "NVTS_PRY",
+      "rho": 0.6311,
+      "share_pct": 5.8,
+      "flag": "red"
+    },
+    {
+      "pair": "NOK_SNDK",
+      "rho": 0.6309,
+      "share_pct": 7.7,
+      "flag": "red"
+    },
+    {
+      "pair": "000660_005380",
+      "rho": 0.6234,
+      "share_pct": 11.6,
+      "flag": "red"
+    },
+    {
+      "pair": "NOK_RGTI",
+      "rho": 0.6189,
+      "share_pct": 1.8,
+      "flag": "red"
+    }
+  ],
+  "scaling": {
+    "var_threshold_pct": 8.0,
+    "var_ref_metric": "var_95_pct_capital",
+    "scale_factor": 0.9685,
+    "scaling_applied": true,
+    "note": "Scale factor < 1 → réduire tous les sizings × scale_factor pour ramener la VaR sous le seuil."
+  },
+  "note": "Modèle Gaussien — ne capte pas les queues épaisses. Pour stress, utiliser compute_stress_test.py. Net beta = combinaison linéaire pondérée des betas par ticker × benchmark."
+}
