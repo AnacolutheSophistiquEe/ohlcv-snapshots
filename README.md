@@ -1,6 +1,6 @@
 # OHLCV Snapshots
 
-Last update: `2026-09-29T00:01:07.714374+00:00`
+Last update: `2026-09-29T21:30:28.496964+00:00`
 
 Daily snapshots of OHLCV data for the trading universe of [Manuel's IBKR Dip Scalper](https://github.com/AnacolutheSophistiquEe).
 Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the only reliable network path from the claude.ai sandbox.
@@ -24,7 +24,7 @@ Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the o
 
 ## Tickers
 
-(62 assets covered)
+(81 assets covered)
 
 | Display | yfinance symbol |
 |---|---|
@@ -90,6 +90,25 @@ Used by the `equity-technical-analyst` Claude.ai skill via `web_fetch` — the o
 | `NOK` | `NOK` |
 | `NVTS` | `NVTS` |
 | `SNDK` | `SNDK` |
+| `MTUM` | `MTUM` |
+| `QUAL` | `QUAL` |
+| `IWD` | `IWD` |
+| `IWF` | `IWF` |
+| `USMV` | `USMV` |
+| `^TNX` | `^TNX` |
+| `BITQ` | `BITQ` |
+| `EWI` | `EWI` |
+| `GRID` | `GRID` |
+| `IAI` | `IAI` |
+| `IGV` | `IGV` |
+| `IHF` | `IHF` |
+| `ITA` | `ITA` |
+| `KBE` | `KBE` |
+| `KIE` | `KIE` |
+| `SOXX` | `SOXX` |
+| `TAN` | `TAN` |
+| `XBI` | `XBI` |
+| `XLU` | `XLU` |
 
 ## Consumption
 
