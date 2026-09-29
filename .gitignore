@@ -2,3 +2,9 @@
 # Historique COMPLET, reserve aux backtests : lourd, regenerable, et aucun
 # consommateur du bulletin ne le lit. Cf. TF_MAX dans deploy/ohlcv_snapshot.py.
 *_daily_max.csv
+
+# Bulletin technique VF1 et precalculs de la veille : rapatries par scp,
+# jamais publies (ils gonfleraient l'historique pour aucun lecteur).
+bulletins/*_bulletin.html
+bulletins/*_bulletin_decision.html
+prev/
