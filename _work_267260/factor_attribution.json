@@ -1,0 +1,214 @@
+{
+  "available": true,
+  "generated_at": "2026-09-29T22:03:59.749195+00:00",
+  "ticker": "267260",
+  "window_sessions": 60,
+  "n_observations_aligned": 56,
+  "model": "OLS avec intercept sur log-returns daily (stepwise VIF<=10)",
+  "factor_sources_used": [
+    "market=EWY",
+    "sector=GRID",
+    "momentum=MTUM",
+    "quality=QUAL",
+    "value=IWD",
+    "growth=IWF",
+    "low_vol=USMV"
+  ],
+  "factor_sources_skipped": [],
+  "benchmarks": {
+    "market": "EWY",
+    "sector": "GRID",
+    "factor_etfs": {
+      "momentum": "MTUM",
+      "quality": "QUAL",
+      "value": "IWD",
+      "growth": "IWF",
+      "low_vol": "USMV"
+    },
+    "yields_included": false
+  },
+  "multicollinearity_diagnostics": {
+    "vif_initial": {
+      "market": 5.18,
+      "sector": 7.39,
+      "momentum": 8.75,
+      "quality": 8.89,
+      "value": 5.15,
+      "growth": 8.11,
+      "low_vol": 3.38
+    },
+    "vif_threshold": 10.0,
+    "dropped_factors": [],
+    "dropped_factors_detail": [],
+    "vif_after_stepwise": {
+      "market": 5.18,
+      "sector": 7.39,
+      "momentum": 8.75,
+      "quality": 8.89,
+      "value": 5.15,
+      "growth": 8.11,
+      "low_vol": 3.38
+    },
+    "condition_number": 26.6,
+    "ridge_fallback_used": false,
+    "factors_kept_in_model": [
+      "market",
+      "sector",
+      "momentum",
+      "quality",
+      "value",
+      "growth",
+      "low_vol"
+    ]
+  },
+  "regression": {
+    "betas": {
+      "market": -0.2256,
+      "sector": 0.9115,
+      "momentum": 0.6727,
+      "quality": -1.0479,
+      "value": -0.2002,
+      "growth": 0.6827,
+      "low_vol": 1.0352
+    },
+    "t_stats": {
+      "market": -0.536,
+      "sector": 0.763,
+      "momentum": 0.577,
+      "quality": -0.296,
+      "value": -0.071,
+      "growth": 0.394,
+      "low_vol": 0.438
+    },
+    "p_values": {
+      "market": 0.59463,
+      "sector": 0.44903,
+      "momentum": 0.56642,
+      "quality": 0.76829,
+      "value": 0.94377,
+      "growth": 0.69515,
+      "low_vol": 0.66305
+    },
+    "significance": {
+      "market": "ns",
+      "sector": "ns",
+      "momentum": "ns",
+      "quality": "ns",
+      "value": "ns",
+      "growth": "ns",
+      "low_vol": "ns"
+    },
+    "is_significant": {
+      "market": false,
+      "sector": false,
+      "momentum": false,
+      "quality": false,
+      "value": false,
+      "growth": false,
+      "low_vol": false
+    },
+    "n_significant_factors": 0,
+    "significance_threshold": 0.05,
+    "r_squared": 0.163,
+    "adj_r_squared": 0.041,
+    "alpha_daily_pct": -0.5556,
+    "alpha_t_stat": -0.77,
+    "alpha_p_value": 0.4451,
+    "alpha_significant": false
+  },
+  "return_attribution_30d": {
+    "window_sessions": 30,
+    "total_return_pct": -20.467,
+    "contribution_by_factor": {
+      "market": -0.548,
+      "sector": -5.912,
+      "momentum": -0.747,
+      "quality": 0.93,
+      "value": 0.511,
+      "growth": 0.19,
+      "low_vol": -1.703
+    },
+    "contribution_by_factor_significant": {
+      "market": 0.0,
+      "sector": 0.0,
+      "momentum": 0.0,
+      "quality": 0.0,
+      "value": 0.0,
+      "growth": 0.0,
+      "low_vol": 0.0
+    },
+    "alpha_contribution_pct": -16.667,
+    "idiosyncratic_pct": 3.479,
+    "idiosyncratic_share": 0.837
+  },
+  "stacked_bar_segments": [
+    {
+      "name": "market",
+      "contribution_pct": -0.548,
+      "significant": false,
+      "p_value": 0.59463,
+      "share": 0.0179
+    },
+    {
+      "name": "sector",
+      "contribution_pct": -5.912,
+      "significant": false,
+      "p_value": 0.44903,
+      "share": 0.1927
+    },
+    {
+      "name": "momentum",
+      "contribution_pct": -0.747,
+      "significant": false,
+      "p_value": 0.56642,
+      "share": 0.0243
+    },
+    {
+      "name": "quality",
+      "contribution_pct": 0.93,
+      "significant": false,
+      "p_value": 0.76829,
+      "share": 0.0303
+    },
+    {
+      "name": "value",
+      "contribution_pct": 0.511,
+      "significant": false,
+      "p_value": 0.94377,
+      "share": 0.0167
+    },
+    {
+      "name": "growth",
+      "contribution_pct": 0.19,
+      "significant": false,
+      "p_value": 0.69515,
+      "share": 0.0062
+    },
+    {
+      "name": "low_vol",
+      "contribution_pct": -1.703,
+      "significant": false,
+      "p_value": 0.66305,
+      "share": 0.0555
+    },
+    {
+      "name": "idiosyncratic",
+      "contribution_pct": 3.479,
+      "share": 0.1134
+    }
+  ],
+  "flags": {
+    "is_largely_idiosyncratic": true,
+    "is_pure_factor_play": false,
+    "high_market_beta": false,
+    "duration_play": false,
+    "low_explanatory_power": true,
+    "no_significant_factor": true,
+    "n_significant_factors": 0,
+    "multicollinearity_detected_initial": false,
+    "multicollinearity_resolved": false,
+    "fallback_ridge_used": false,
+    "high_condition_number": false
+  },
+  "note": "Pipeline anti-multicolinéarité : (1) calcul VIF par facteur, (2) drop itératif des facteurs avec VIF>10 (stepwise, garde >=2 régresseurs), (3) refit OLS, (4) fallback Ridge α=1.0 si VIF reste >10. Les facteurs droppés sont listés dans multicollinearity_diagnostics. Si low_explanatory_power, soit ticker idiosyncratique soit benchmarks mal choisis. Si fallback_ridge_used, t-stats/p-values ne sont pas fiables (Ridge biaisé, mais betas stables)."
+}
