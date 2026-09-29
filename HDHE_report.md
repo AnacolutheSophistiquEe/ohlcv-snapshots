@@ -1,6 +1,6 @@
 # 267260
 
-**Generated** : 2026-09-28T22:00:37.666608+00:00  
+**Generated** : 2026-09-29T00:22:59.939902+00:00  
 **Santé technique** : 3/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · ₩693000.00  
@@ -39,7 +39,7 @@ Plan privilegie B (swing), composite 3/10, conviction 'Pass'.
 **Plan B — swing** (order_type LMT)
 - Entry (zone de repli) : ₩602558.01–₩611935.00 (mid ₩607246.50)
 - Spot actuel : ₩693000.00 (+14.1% au-dessus de la zone — repli à attendre)
-- Stop : ₩576603.65 (stop swing_plan-based (-16.8%))
+- Stop : ₩576603.65 (plancher anti-bruit (R/R<2) ; -5.05 % depuis l'entree)
 - Targets : T1 ₩630688.97 · R/R 0.77 | T2 ₩654131.45 · R/R 1.53 | T3 ₩677573.92 · R/R 2.3
 - Activation : entree LMT en attente de touche de zone
 - Invalidation : close sous ₩576603.65
@@ -47,15 +47,15 @@ Plan privilegie B (swing), composite 3/10, conviction 'Pass'.
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
-- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=4.10 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (16.8 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1219).
+- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=4.11 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
+- **Au stop du plan (16.8 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 16.8 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -2.67 % | p01 -4.805 % | pire -11.715 % _(sur 1219 séances)_
-- **P(stop avant cible)** _(source : daily, 1220 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -2.671 % | p01 -4.805 % | pire -11.715 % _(sur 1218 séances)_
+- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0663** [0.0362 ; 0.1107] _(largeur 7.4 pt, n_eff 173.1)_
    - swing : **0.4107** [0.3598 ; 0.4631] _(largeur 10.3 pt, n_eff 345.6)_
    - deep : **0.348** [0.2992 ; 0.3993] _(largeur 10.0 pt, n_eff 345.6)_
@@ -64,8 +64,8 @@ Plan privilegie B (swing), composite 3/10, conviction 'Pass'.
    - _fenêtre arrêtée : rupture de regime a 300 seances en arriere (volatilite 2.75 % contre 4.90 % aujourd'hui, rapport 0.56)_
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -10.96 % vs -11.99 % si l'on extrapolait par √5 _(rapport 0.914 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0357** (β de hausse 0.8391, asymétrie 1.2343) vs KS11 — 553 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -10.97 % vs -11.99 % si l'on extrapolait par √5 _(rapport 0.915 ; < 1 = le √5 surestime)_
+- **β de baisse : 1.0357** (β de hausse 0.8391, asymétrie 1.2344) vs KS11 — 552 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -191,5 +191,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (577031 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (577069 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
