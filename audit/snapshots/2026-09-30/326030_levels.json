@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "326030",
+    "generated_at": "2026-09-30T00:36:44Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-10-01T08:00:00Z",
+    "valid_until": "2026-10-01T21:00:00Z",
+    "source_precomputed": "326030_precomputed.json"
+  },
+  "context": {
+    "last_price": 74900.0,
+    "ta_score": {
+      "value": 2,
+      "max": 10,
+      "label": "very_bearish"
+    },
+    "alignment_flag": "mixed",
+    "hmm_regime": {
+      "state": "bear",
+      "probability": 0.9,
+      "expected_duration_days": 10.08
+    },
+    "volatility_regime": "low",
+    "signals_counter": {
+      "buy": 4,
+      "sell": 5,
+      "neutral": 6,
+      "total": 15,
+      "verdict": "neutral"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_<30_dist_ma20_-10_-5",
+      "win_rate": 1.0,
+      "sample_size": 12,
+      "median_bounce_pct": 3.24,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bear (0.90), vol low, signals neutral (4b/5s/6n)."
+  },
+  "notes": {
+    "atr_daily": 2357.1429,
+    "atr_pct_daily": null,
+    "beta_60d": 0.1677,
+    "beta_benchmark": "KS11",
+    "beta_corr_60d": 0.2824,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "",
+      "date": "",
+      "confidence": null
+    },
+    "divergences": [],
+    "drawdown": {
+      "current_dd_pct": -46.77,
+      "ath_price": 140700.0,
+      "ath_date": "2025-11-26",
+      "max_dd_1y_pct": -46.98,
+      "days_in_dd": 307,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 82466.384,
+        "max": 82795.92
+      },
+      "stop": {
+        "price": 80803.95,
+        "basis": "below_broken_resistance",
+        "distance_pct": -2.21
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 86730.4,
+          "basis": "fib_236",
+          "rr": 2.24
+        },
+        {
+          "level": 2,
+          "price": 90119.3446,
+          "basis": "next_confluence_resistance",
+          "rr": 4.1
+        },
+        {
+          "level": 3,
+          "price": 94234.8,
+          "basis": "fib_382",
+          "rr": 6.35
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance MA20 + MA50 (strength 4.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 70263.3301,
+        "max": 71689.9967
+      },
+      "stop": {
+        "price": 67797.6157,
+        "basis": "fallback_pivot_classical_s3",
+        "distance_pct": -4.48
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 71533.4595,
+          "basis": "band 95% (atteignable) · touche hist. 73% (sans stop)",
+          "rr": 0.18
+        },
+        {
+          "level": 2,
+          "price": 72881.2048,
+          "basis": "band 95% (atteignable) · touche hist. 45% (sans stop)",
+          "rr": 0.6
+        },
+        {
+          "level": 3,
+          "price": 74228.95,
+          "basis": "plafond band 95% · touche hist. 45% (sans stop)",
+          "rr": 1.02
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_classical_s3. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=2<4",
+  "global_conditions": [],
+  "invalidation": {
+    "price": 67119.6395,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
