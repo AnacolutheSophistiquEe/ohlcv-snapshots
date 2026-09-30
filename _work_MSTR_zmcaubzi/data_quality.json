@@ -1,0 +1,253 @@
+{
+  "daily": {
+    "completeness": {
+      "n_bars": 251,
+      "expected_bars_daily": 251,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_dates_count": 0,
+      "holidays_in_range": [
+        {
+          "date": "2025-11-27",
+          "name": "Thanksgiving Day"
+        },
+        {
+          "date": "2025-12-25",
+          "name": "Christmas Day"
+        },
+        {
+          "date": "2026-01-01",
+          "name": "New Year's Day"
+        },
+        {
+          "date": "2026-01-19",
+          "name": "Martin Luther King Jr. Day"
+        },
+        {
+          "date": "2026-02-16",
+          "name": "Washington's Birthday"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Good Friday"
+        },
+        {
+          "date": "2026-05-25",
+          "name": "Memorial Day"
+        },
+        {
+          "date": "2026-06-19",
+          "name": "Juneteenth"
+        },
+        {
+          "date": "2026-07-03",
+          "name": "Independence Day"
+        },
+        {
+          "date": "2026-09-07",
+          "name": "Labor Day"
+        }
+      ],
+      "holidays_excluded_count": 10,
+      "probable_non_calendar_closures": [],
+      "bars_on_non_session_days": [],
+      "calendar": {
+        "venue": "NYSE",
+        "known": true,
+        "timezone": "America/New_York",
+        "regular_open": "09:30",
+        "regular_close": "16:00",
+        "holidays_complete": true,
+        "version": "venue_calendar/1.0",
+        "note": null
+      },
+      "method": "séances attendues = séances de la place (venue_calendar, fériés exclus) entre la première et la dernière barre ; missing_dates = séances ouvertes sans barre (10 premières)"
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 4,
+      "outliers_recent_30d": [
+        {
+          "date": "2026-09-03T00:00:00",
+          "return_pct": 17.558246979579817,
+          "sigma_distance": 3.415628634470328
+        },
+        {
+          "date": "2026-09-18T00:00:00",
+          "return_pct": 16.38563188578095,
+          "sigma_distance": 3.155457633673846
+        }
+      ]
+    },
+    "gaps": {
+      "n_gaps_up": 19,
+      "n_gaps_down": 13,
+      "last_significant_gap": {
+        "date": "2026-09-21T00:00:00",
+        "type": "up",
+        "magnitude_pct": 6.85625065943587
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 21593610.516666666,
+      "median_volume_60d": 17717300.0,
+      "volume_consistency_score": 0.49656394854384733
+    },
+    "liquidity": {
+      "liquidity_score": 3737000530.245634,
+      "liquidity_classification": "very_high",
+      "liquidity_note": "moyenne de Close × Volume sur les 30 dernières barres, en devise NATIVE du titre, non convertie : seuils 1e6/1e7/1e8/1e9 non comparables entre devises"
+    },
+    "freshness": {
+      "last_bar_date": "2026-09-30T00:00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh",
+      "sessions_since_last_bar": 0,
+      "last_bar_synthetic": false,
+      "last_bar_in_progress": false,
+      "freshness_reserve": null,
+      "asof_utc": "2026-09-30T22:04:55.637727+00:00",
+      "venue": "NYSE",
+      "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
+    },
+    "synthetic_bars": {
+      "dates": [],
+      "n": 0,
+      "last_bar_synthetic": false,
+      "nature": "reconstruite depuis le H1 (lag Yahoo) : O/H/L exacts, clôture approchée (~0,3 %, enchère de clôture absente), volume partiel",
+      "detected_from": "en-tête CSV « # Backfilled-from-h1 » (deploy/ohlcv_snapshot.py)",
+      "excluded_from": [],
+      "producer_daily_source": "yfinance",
+      "producer_daily_freshness": "fresh (last-bar 2026-09-30, expected 2026-09-30)",
+      "supplemented_dates": []
+    },
+    "overall": {
+      "overall_quality_score": 89.26120823214178,
+      "overall_label": "excellent",
+      "warnings": []
+    }
+  },
+  "h4": {
+    "completeness": {
+      "n_bars": 128,
+      "expected_bars_daily": null,
+      "expected_bars_h4": 128,
+      "bars_per_day_typical": 2,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_bars_intraday": 0
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 4,
+      "outliers_recent_30d": [
+        {
+          "date": "2026-09-18T12:00:00+00:00",
+          "return_pct": 13.286208882996187,
+          "sigma_distance": 3.575750923293028
+        }
+      ]
+    },
+    "gaps": {
+      "n_gaps_up": 11,
+      "n_gaps_down": 8,
+      "last_significant_gap": {
+        "date": "2026-09-30T12:00:00+00:00",
+        "type": "up",
+        "magnitude_pct": 3.9157489225131403
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 11922933.316666666,
+      "median_volume_60d": 10381764.0,
+      "volume_consistency_score": 0.42409247822621243
+    },
+    "liquidity": {
+      "liquidity_score": 1474758589.0057666,
+      "liquidity_classification": "very_high",
+      "liquidity_note": "moyenne de Close × Volume sur les 30 dernières barres, en devise NATIVE du titre, non convertie : seuils 1e6/1e7/1e8/1e9 non comparables entre devises"
+    },
+    "freshness": {
+      "last_bar_date": "2026-09-30T16:00:00+00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh",
+      "sessions_since_last_bar": 0,
+      "last_bar_synthetic": false,
+      "last_bar_in_progress": false,
+      "freshness_reserve": null,
+      "asof_utc": "2026-09-30T22:04:55.637727+00:00",
+      "venue": "NYSE",
+      "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
+    },
+    "overall": {
+      "overall_quality_score": 85.11138717339318,
+      "overall_label": "excellent",
+      "warnings": []
+    }
+  },
+  "h1": {
+    "completeness": {
+      "n_bars": 147,
+      "expected_bars_daily": null,
+      "expected_bars_h1": 147,
+      "bars_per_day_typical": 7,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_bars_intraday": 0
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 2,
+      "outliers_recent_30d": []
+    },
+    "gaps": {
+      "n_gaps_up": 6,
+      "n_gaps_down": 4,
+      "last_significant_gap": {
+        "date": "2026-09-30T13:30:00+00:00",
+        "type": "up",
+        "magnitude_pct": 3.9157489225131403
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 2803732.2666666666,
+      "median_volume_60d": 2006437.0,
+      "volume_consistency_score": 0.04730656978069414
+    },
+    "liquidity": {
+      "liquidity_score": 330941089.265269,
+      "liquidity_classification": "high",
+      "liquidity_note": "moyenne de Close × Volume sur les 30 dernières barres, en devise NATIVE du titre, non convertie : seuils 1e6/1e7/1e8/1e9 non comparables entre devises"
+    },
+    "freshness": {
+      "last_bar_date": "2026-09-30T19:30:00+00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh",
+      "sessions_since_last_bar": 0,
+      "last_bar_synthetic": false,
+      "last_bar_in_progress": false,
+      "freshness_reserve": null,
+      "asof_utc": "2026-09-30T22:04:55.637727+00:00",
+      "venue": "NYSE",
+      "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
+    },
+    "overall": {
+      "overall_quality_score": 80.73851011133627,
+      "overall_label": "good",
+      "warnings": []
+    }
+  },
+  "summary": {
+    "worst_tf_quality_score": 80.73851011133627,
+    "worst_tf": "h1",
+    "recommendation": "review_outliers",
+    "daily_freshness_status": "fresh",
+    "daily_sessions_since_last_bar": 0,
+    "last_daily_bar_synthetic": false,
+    "reserves": [],
+    "venue": "NYSE"
+  }
+}
