@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-10-01T00:10:19.950128+00:00",
+  "generated_at": "2026-10-01T21:46:57.441890+00:00",
   "prediction_id": "NEX_A_20261001",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "NEX",
@@ -14,22 +14,22 @@
     "entry_source": "stops_targets_by_horizon.intraday.entry_mid (zone entry_low..entry_high)",
     "stop_source": "stops_targets_by_horizon.intraday.stop_price",
     "targets_source": "stops_targets_by_horizon.intraday.targets.t1..t3",
-    "stop_basis": "plancher anti-bruit 5 s — stop EV-optimal −1.5% (first-passage 5 s réel)",
+    "stop_basis": "plancher anti-bruit 5 s — stop EV-optimal −8% (first-passage 5 s réel)",
     "entry_zone_raw": [
-      131.1202,
-      131.8512
+      131.2688,
+      132.0025
     ],
-    "entry_mid_raw": 131.4857,
-    "spot": 132.60000610351562,
+    "entry_mid_raw": 131.6357,
+    "spot": 132.8000030517578,
     "entry_vs_spot_pct": -0.9
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 131.4,
+    "limit_price": 131.6,
     "limit_price_range": [
-      131.1,
-      131.8
+      131.2,
+      132.0
     ],
     "quantity": 1,
     "tif": "DAY"
@@ -38,7 +38,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 133.7,
+      "limit_price": 133.8,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
@@ -49,7 +49,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 129.5,
+      "stop_price": 121.1,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -69,8 +69,8 @@
         "oca_group": "NEX_A_intraday_20261001_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 133.7,
-        "stop_price": 129.5
+        "target_price": 133.8,
+        "stop_price": 121.1
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -97,17 +97,17 @@
       "offset_sessions": 0,
       "sessions_counted": 1,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-01T00:10:18.760006+00:00",
+      "anchor_utc": "2026-10-01T21:46:55.655298+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "EURONEXT",
-      "good_till_date": "2026-10-01T15:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261001-15:30:00",
-      "reference_session": "2026-10-01",
-      "expiry_session": "2026-10-01",
+      "good_till_date": "2026-10-02T15:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261002-15:30:00",
+      "reference_session": "2026-10-02",
+      "expiry_session": "2026-10-02",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-01"
+        "2026-10-02"
       ]
     },
     "venue_calendar": {
@@ -164,19 +164,16 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 4.0,
+    "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": -0.0896,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 131.4857,
+    "ev_pct_risk": null,
+    "ev_pct_risk_source": "absent",
+    "ev_pct_risk_basis_price": 131.6357,
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": null,
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
-    "p_hit_upper": {
-      "T1": 0.3517,
-      "T2": 0.0852
-    },
-    "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
+    "p_hit_upper": null,
+    "p_hit_source": "absent",
     "p_fill": null,
     "p_fill_source": "absent",
     "p_fill_note": "conviction_rating.by_horizon.intraday absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
@@ -185,8 +182,8 @@
     "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (1 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 132.6,
-    "hold_tolerance_breach_price": 99.45,
+    "notional_eur": 132.8,
+    "hold_tolerance_breach_price": 99.6,
     "hold_fallback_active": true,
     "prediction_id": "NEX_A_20261001"
   },
@@ -201,11 +198,11 @@
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 1.21,
-      "T2": 2.37,
-      "T3": 3.53
+      "T1": 0.21,
+      "T2": 0.4,
+      "T3": 0.6
     },
-    "rr_blended_on_posted_entry": 1.21,
+    "rr_blended_on_posted_entry": 0.21,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,
