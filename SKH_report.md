@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-09-30T21:54:47.384082+00:00  
+**Generated** : 2026-10-01T00:15:07.164176+00:00  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 7/10 — **Rating** : Unknown  
@@ -9,7 +9,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 > ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-02 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)  
 > ↳ spot ₩1776000.00 (+3.1% vs entrée) · entrée ₩1723114.39 · stop ₩1645471.53 · T1 ₩1834840.47 · R/R 1.44  
-> ↳ ¼-Kelly 0.061 · _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_  
+> ↳ ¼-Kelly 0.06 · _first-passage empirique daily (historique réel, n≈207) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal 212 % hors [0,100] (R² max 1.00). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
@@ -49,15 +49,15 @@ Plan privilegie B (swing), composite 7/10, conviction 'Unknown'.
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
-- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=6.48 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (7.35 %)** : le gap seul le franchit 0.902 % des séances (11 fois sur 1219).
+- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=6.49 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
+- **Au stop du plan (7.35 %)** : le gap seul le franchit 0.903 % des séances (11 fois sur 1218).
    - exécution **1.296 pt plus bas** dans le cas TYPIQUE (médiane), 2.988 au p90, **3.51 au pire**
    - perte réelle **8.937 %** en moyenne _(tirée par la queue)_, jusqu'à **10.86 %** — au lieu des 7.35 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0143 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 11 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -3.443 % | p01 -6.994 % | pire -10.86 % _(sur 1219 séances)_
-- **P(stop avant cible)** _(source : daily, 1220 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -3.444 % | p01 -6.997 % | pire -10.86 % _(sur 1218 séances)_
+- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.457** [0.384 ; 0.5314] _(largeur 14.7 pt, n_eff 173.1)_
    - swing : **0.4409** [0.3892 ; 0.4936] _(largeur 10.4 pt, n_eff 345.6)_
    - deep : **0.3809** [0.3309 ; 0.4329] _(largeur 10.2 pt, n_eff 345.6)_
@@ -66,15 +66,15 @@ Plan privilegie B (swing), composite 7/10, conviction 'Unknown'.
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -9.4 % vs -10.74 % si l'on extrapolait par √5 _(rapport 0.875 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.4153** (β de hausse 1.6211, asymétrie 0.8731) vs KS11 — 554 séances de repli, historique complet
+- **β de baisse : 1.4151** (β de hausse 1.6211, asymétrie 0.8729) vs KS11 — 553 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.425 | EV/share : ₩33028.582 | p_fill : —
+- EV/risk : 0.422 | EV/share : ₩32744.111 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 52 % | T2 35 % | T3 23 %
-- Kelly (position) : f* 0.244 | ¼-Kelly 0.061 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈208) · non recalibrée track-record (n=0)_
+- Kelly (position) : f* 0.242 | ¼-Kelly 0.06 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈207) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, swing) : bull 85.0 | bear 6.6 | side 8.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel 0.0 (= 0 part(s) × prix) · cible 512.0
 
@@ -182,15 +182,15 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 10.5  _(pas de tendance nette)_
 - **MACD** : hist 457.247  _(pas de croisement recent)_
 - **BB** : %B 0.54 · largeur 19.1%
-- **ATR** : 77642.86 (58.0e pct 1a)  _(volatilite normale)_
+- **ATR** : 77642.86 (57.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV rising · CMF -0.085  _(distribution)_
 - **Vol ratio** : 1.01  _(volume normal)_
 - **Choppiness** : 53.6  _(transition)_
-- **MA** : MA20 1763650.0 · MA50 1683422.38 · MA200 1404768.95  _(prix > MA20)_
+- **MA** : MA20 1763650.0 · MA50 1683422.38 · MA200 1404768.96  _(prix > MA20)_
 - **Dist MA** : MA20 +0.7% · MA50 +5.5% · MA200 +26.4%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (550552 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (550611 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
