@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SRT3",
-    "generated_at": "2026-10-01T00:34:30Z",
+    "generated_at": "2026-10-01T22:05:30Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-10-02T08:00:00Z",
@@ -10,41 +10,41 @@
     "source_precomputed": "SRT3_precomputed.json"
   },
   "context": {
-    "last_price": 257.0,
+    "last_price": 251.0,
     "ta_score": {
-      "value": 10,
+      "value": 9,
       "max": 10,
       "label": "very_bullish"
     },
-    "alignment_flag": "mixed",
+    "alignment_flag": "divergent_short_long",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.7227,
-      "expected_duration_days": 5.53
+      "probability": 0.5743,
+      "expected_duration_days": 5.6
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 6,
+      "buy": 4,
       "sell": 1,
-      "neutral": 8,
+      "neutral": 10,
       "total": 15,
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_>=70_dist_ma20_+2_+5",
-      "win_rate": 0.75,
-      "sample_size": 8,
-      "median_bounce_pct": 0.62,
-      "confidence": "low"
+      "setup": "rsi_60-70_dist_ma20_-2_+2",
+      "win_rate": 1.0,
+      "sample_size": 4,
+      "median_bounce_pct": 2.28,
+      "confidence": "very_low"
     },
-    "narrative_short": "TA score 10/10 (very_bullish), alignment mixed, HMM bull (0.72), vol normal, signals neutral (6b/1s/8n)."
+    "narrative_short": "TA score 9/10 (very_bullish), alignment divergent_short_long, HMM bull (0.57), vol normal, signals neutral (4b/1s/10n)."
   },
   "notes": {
-    "atr_daily": 8.3357,
+    "atr_daily": 8.7571,
     "atr_pct_daily": null,
-    "beta_60d": 0.738,
+    "beta_60d": 0.3833,
     "beta_benchmark": "GDAXI",
-    "beta_corr_60d": 0.2138,
+    "beta_corr_60d": 0.1111,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -56,16 +56,16 @@
         "indicator": "obv",
         "type": "bearish",
         "confidence": 0.3,
-        "bars_ago": 4,
+        "bars_ago": 5,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": -57.0,
+      "current_dd_pct": -58.0,
       "ath_price": 597.6057,
       "ath_date": "2021-11-30",
       "max_dd_1y_pct": -22.5,
-      "days_in_dd": 1765,
+      "days_in_dd": 1766,
       "median_recovery_days": null
     }
   },
@@ -76,106 +76,30 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 245.885,
-        "max": 248.7301
+        "min": 239.94,
+        "max": 241.8406
       },
       "stop": {
-        "price": 233.8384,
+        "price": 230.7169,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -5.45
+        "distance_pct": -4.22
       },
       "targets": [
         {
           "level": 1,
-          "price": 251.4937,
+          "price": 249.2649,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 38% (sans stop)",
-          "rr": 0.31
+          "rr": 0.82
         },
         {
           "level": 2,
-          "price": 260.8133,
+          "price": 259.0557,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.0
+          "rr": 1.79
         },
         {
           "level": 3,
-          "price": 270.1329,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.69
-        }
-      ],
-      "preferred_target": 1,
-      "conditions": [
-        "session_eu_xetra_open"
-      ],
-      "max_budget_pct": 50,
-      "rationale": "Confluence support MA20 + FIB_786 (strength 5.0). Bounce mecanique."
-    },
-    {
-      "id": "B",
-      "type": "breakout",
-      "priority": 2,
-      "side": "long",
-      "entry_zone": {
-        "min": 257.8876,
-        "max": 258.9181
-      },
-      "stop": {
-        "price": 253.4621,
-        "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -1.91
-      },
-      "targets": [
-        {
-          "level": 2,
-          "price": 260.8133,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.49
-        },
-        {
-          "level": 3,
-          "price": 270.1329,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.37
-        }
-      ],
-      "preferred_target": 1,
-      "conditions": [
-        "session_eu_xetra_open"
-      ],
-      "max_budget_pct": 25,
-      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
-    },
-    {
-      "id": "C",
-      "type": "deep_retracement",
-      "priority": 3,
-      "side": "long",
-      "entry_zone": {
-        "min": 218.4744,
-        "max": 233.2074
-      },
-      "stop": {
-        "price": 209.7354,
-        "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -7.13
-      },
-      "targets": [
-        {
-          "level": 1,
-          "price": 251.4937,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 38% (sans stop)",
-          "rr": 1.59
-        },
-        {
-          "level": 2,
-          "price": 260.8133,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.17
-        },
-        {
-          "level": 3,
-          "price": 270.1329,
+          "price": 268.8464,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 2.75
         }
@@ -184,8 +108,84 @@
       "conditions": [
         "session_eu_xetra_open"
       ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support MA50 + FIB_618 (strength 5.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 251.6176,
+        "max": 252.623
+      },
+      "stop": {
+        "price": 246.9876,
+        "basis": "fallback_fib_fib_786",
+        "distance_pct": -2.04
+      },
+      "targets": [
+        {
+          "level": 2,
+          "price": 259.0557,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 1.35
+        },
+        {
+          "level": 3,
+          "price": 268.8464,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 3.26
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel fib_fib_786. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 228.4594,
+        "max": 235.15
+      },
+      "stop": {
+        "price": 219.321,
+        "basis": "deep_below_confluence_support_4pct",
+        "distance_pct": -5.39
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 249.2649,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 38% (sans stop)",
+          "rr": 1.4
+        },
+        {
+          "level": 2,
+          "price": 259.0557,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 2.18
+        },
+        {
+          "level": 3,
+          "price": 268.8464,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 2.97
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
       "max_budget_pct": 35,
-      "rationale": "Deep value mecanique : entree sur confluence support basse FIB_236 + VPVR_VAL + VPVR_POC + BB_LOWER + FIB_382 + S/R_support + FIB_50 + MA200 (strength 100.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+      "rationale": "Deep value mecanique : entree sur confluence support basse FIB_382 + S/R_support + MA200 + FIB_50 (strength 28.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
     }
   ],
   "bot_actionable": true,
@@ -201,7 +201,7 @@
     }
   ],
   "invalidation": {
-    "price": 207.638,
+    "price": 217.1278,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

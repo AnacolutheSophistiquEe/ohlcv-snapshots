@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-10-01T00:12:44.178931+00:00",
+  "generated_at": "2026-10-01T21:49:55.244123+00:00",
   "prediction_id": "AL2SI_B_20261001",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "AL2SI",
@@ -16,30 +16,30 @@
     "targets_source": "stops_targets_by_horizon.swing.targets.t1..t3",
     "stop_basis": "plancher anti-bruit (R/R<2)",
     "entry_zone_raw": [
-      26.3877,
-      26.8817
+      25.7973,
+      26.3021
     ],
-    "entry_mid_raw": 26.6347,
-    "spot": 27.940000534057617,
-    "entry_vs_spot_pct": -4.69
+    "entry_mid_raw": 26.0497,
+    "spot": 26.63999938964844,
+    "entry_vs_spot_pct": -2.25
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 26.63,
+    "limit_price": 26.04,
     "limit_price_range": [
-      26.38,
-      26.88
+      25.79,
+      26.3
     ],
-    "quantity": 5,
+    "quantity": 6,
     "tif": "GTD",
-    "gtd": "2026-10-07T15:30:00+00:00"
+    "gtd": "2026-10-08T15:30:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 29.21,
+      "limit_price": 28.01,
       "quantity": 3,
       "tif": "GTC",
       "tag": "T1",
@@ -50,7 +50,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 24.83,
+      "stop_price": 24.29,
       "quantity": 3,
       "tif": "GTC",
       "tag": "SL",
@@ -61,8 +61,8 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 31.23,
-      "quantity": 1,
+      "limit_price": 29.97,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "T2",
       "tranche": "T2",
@@ -72,8 +72,8 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 24.83,
-      "quantity": 1,
+      "stop_price": 24.29,
+      "quantity": 2,
       "tif": "GTC",
       "tag": "SL",
       "tranche": "T2",
@@ -83,7 +83,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 33.24,
+      "limit_price": 31.94,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3",
@@ -94,7 +94,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 24.83,
+      "stop_price": 24.29,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -114,29 +114,29 @@
         "oca_group": "AL2SI_B_swing_20261001_T1",
         "tranche": "T1",
         "quantity": 3,
-        "target_price": 29.21,
-        "stop_price": 24.83
+        "target_price": 28.01,
+        "stop_price": 24.29
       },
       {
         "oca_group": "AL2SI_B_swing_20261001_T2",
         "tranche": "T2",
-        "quantity": 1,
-        "target_price": 31.23,
-        "stop_price": 24.83
+        "quantity": 2,
+        "target_price": 29.97,
+        "stop_price": 24.29
       },
       {
         "oca_group": "AL2SI_B_swing_20261001_T3",
         "tranche": "T3",
         "quantity": 1,
-        "target_price": 33.24,
-        "stop_price": 24.83
+        "target_price": 31.94,
+        "stop_price": 24.29
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
     "quantity_invariants": {
-      "protection_qty": 5,
-      "held_qty_after_entry_fill": 5,
-      "max_joint_sales": 5,
+      "protection_qty": 6,
+      "held_qty_after_entry_fill": 6,
+      "max_joint_sales": 6,
       "rule": "Σ_j q_j(protection) = quantité détenue ; ventes maximales conjointement possibles = Σ_j q_j ≤ quantité détenue ; TP_j et SL_j d'une même paire ne sont JAMAIS sommés"
     },
     "partial_fill_policy": "fill partiel d'un membre d'une paire : l'autre membre est annulé (ocaType 1) ; le reliquat de la tranche doit être re-protégé par le robot R (nouvelle paire de quantité q_j − exécuté) et l'invariant Σ protection = détenu re-vérifié après chaque fill",
@@ -156,21 +156,21 @@
       "offset_sessions": 5,
       "sessions_counted": 5,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-01T00:12:43.338830+00:00",
+      "anchor_utc": "2026-10-01T21:49:54.254898+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "EURONEXT",
-      "good_till_date": "2026-10-07T15:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261007-15:30:00",
-      "reference_session": "2026-10-01",
-      "expiry_session": "2026-10-07",
+      "good_till_date": "2026-10-08T15:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261008-15:30:00",
+      "reference_session": "2026-10-02",
+      "expiry_session": "2026-10-08",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-01",
         "2026-10-02",
         "2026-10-05",
         "2026-10-06",
-        "2026-10-07"
+        "2026-10-07",
+        "2026-10-08"
       ]
     },
     "venue_calendar": {
@@ -201,7 +201,7 @@
       },
       {
         "tag": "T2",
-        "qty": 1
+        "qty": 2
       },
       {
         "tag": "T3",
@@ -211,9 +211,9 @@
     "allocation_method": "plus forts restes (§9.5), égalité T1 > T2 > T3, arithmétique exacte",
     "allocation_exact": false,
     "weights_effective": [
-      0.6,
-      0.2,
-      0.2
+      0.5,
+      0.3333,
+      0.1667
     ],
     "tick_rounding": {
       "entry": "down",
@@ -229,16 +229,16 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.1826,
+    "ev_pct_risk": 0.1675,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 26.6347,
+    "ev_pct_risk_basis_price": 26.0497,
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.376,
-      "T2": 0.2018,
-      "T3": 0.1126
+      "T1": 0.4962,
+      "T2": 0.2344,
+      "T3": 0.1226
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
@@ -246,11 +246,11 @@
     "p_fill_note": "conviction_rating.by_horizon.swing absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
     "rating": "Unknown",
     "rating_source": "conviction_rating.by_horizon.swing",
-    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (1 séance(s) de retard, drapeau lu sur first_passage_by_horizon) ; usable=false (intervalle le plus large 26.4 pt > 25) (aucun repli sur un autre moteur, R09)",
+    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (1 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 139.7,
-    "hold_tolerance_breach_price": 20.955,
+    "notional_eur": 159.84,
+    "hold_tolerance_breach_price": 19.98,
     "hold_fallback_active": true,
     "prediction_id": "AL2SI_B_20261001"
   },
@@ -265,11 +265,11 @@
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 1.43,
-      "T2": 2.56,
-      "T3": 3.67
+      "T1": 1.13,
+      "T2": 2.25,
+      "T3": 3.37
     },
-    "rr_blended_on_posted_entry": 2.1,
+    "rr_blended_on_posted_entry": 1.88,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,
