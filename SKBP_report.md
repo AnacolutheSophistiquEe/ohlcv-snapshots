@@ -1,12 +1,12 @@
 # 326030
 
-**Generated** : 2026-10-01T22:01:19.272084+00:00  
+**Generated** : 2026-10-02T00:21:36.836910+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 6/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · ₩76700.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-02 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-02 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)  
 > ↳ spot ₩76700.00 (+0.7% vs entrée) · entrée ₩76200.00 · stop ₩70104.00 · T1 ₩77332.14 · R/R 0.19  
 > ↳ ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=125 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -37,21 +37,21 @@ Plan privilegie A (intraday), composite 6/10, conviction 'Unknown'.
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟠 **Régime de gap : intermediaire** — p_breach(-3 %)=1.07 % — entre les deux regimes ; ni queue pure ni franchissement ordinaire
-- **Au stop du plan (4.39 %)** : le gap seul le franchit 0.492 % des séances (6 fois sur 1219).
+- **Au stop du plan (4.39 %)** : le gap seul le franchit 0.493 % des séances (6 fois sur 1218).
    - exécution **0.669 pt plus bas** dans le cas TYPIQUE (médiane), 1.102 au p90, **1.149 au pire**
    - perte réelle **5.119 %** en moyenne _(tirée par la queue)_, jusqu'à **5.539 %** — au lieu des 4.39 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0036 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 6 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
-- Chocs d'ouverture : p05 -1.578 % | p01 -3.013 % | pire -5.539 % _(sur 1219 séances)_
-- **P(stop avant cible)** _(source : daily, 1220 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -1.578 % | p01 -3.015 % | pire -5.539 % _(sur 1218 séances)_
+- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0057** [0.0006 ; 0.0265] _(largeur 2.6 pt, n_eff 173.1)_
    - swing : **0.5414** [0.4887 ; 0.5934] _(largeur 10.5 pt, n_eff 345.6)_
    - deep : **0.5512** [0.4985 ; 0.603] _(largeur 10.5 pt, n_eff 345.6)_
 - **VaR/CVaR à 1 j (fenêtre adaptative, 540 séances)** : VaR **-4.18 %** | CVaR **-6.25 %** | vol 2.95 %/j
    - _fenêtre arrêtée : rupture de regime a 600 seances en arriere (volatilite 1.80 % contre 3.02 % aujourd'hui, rapport 0.60)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -8.18 % vs -8.8 % si l'on extrapolait par √5 _(rapport 0.93 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.6029** (β de hausse 0.4331, asymétrie 1.3922) vs KS11 — 554 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -8.18 % vs -8.65 % si l'on extrapolait par √5 _(rapport 0.946 ; < 1 = le √5 surestime)_
+- **β de baisse : 0.6011** (β de hausse 0.4331, asymétrie 1.3881) vs KS11 — 553 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -148,7 +148,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.09 · part idiosyncratique 0.91
+**Factor** : R² 0.09 · part idiosyncratique 0.92
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -156,9 +156,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-10-02 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-02 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-02 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-10-02 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-02 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-02 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -177,5 +177,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (548246 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (548065 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
