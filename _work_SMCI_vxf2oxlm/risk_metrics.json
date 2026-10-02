@@ -1,0 +1,70 @@
+{
+  "var_1d_95pct": -7.63,
+  "horizon_5d_method": "scaling_sqrt5_from_1d",
+  "horizon_5d_caveat": "transformation deterministe de l'horizon 1 jour (x2.236), pas une mesure ; suppose des rendements i.i.d. Mesure du 2026-08-20 sur 58 actifs : le scaling surestime legerement la VaR 5 j en mediane (rapport 0,97), mais le sens de l'erreur depend du titre -> voir tail_long.scaling_error_*",
+  "var_5d_95pct": -17.07,
+  "cvar_1d_95pct": -12.34,
+  "cvar_5d_95pct": -27.58,
+  "sharpe_1y": 0.289,
+  "sortino_1y": 0.416,
+  "max_consec_losing_days": 6,
+  "n_samples": 250,
+  "downside_deviation_daily_pct": 4.0384,
+  "n_below_target": 132,
+  "sortino_null_reason": null,
+  "ratio_conventions": {
+    "returns": "simples, Close(t)/Close(t-1) - 1, daily",
+    "window_returns": 250,
+    "missing_values": "rendement de la premiere barre et rendements NaN exclus AVANT calcul ; n = window_returns",
+    "annualization_periods": 252,
+    "annualization": "ratio journalier x sqrt(252)",
+    "risk_free_rate": 0.0,
+    "sharpe": {
+      "std_ddof": 0,
+      "formula": "moyenne(r) / ecart-type(r, ddof 0) x sqrt(252)",
+      "zero_std_policy": "null"
+    },
+    "sortino": {
+      "target_daily": 0.0,
+      "denominator": "all_n",
+      "centered": false,
+      "formula": "DD_tau = sqrt((1/n) somme_{i=1..n} min(r_i - tau, 0)^2) ; Sortino = (moyenne(r) - tau) / DD_tau x sqrt(252) ; n = TOUS les rendements de la fenetre (pas le nombre de rendements negatifs), aucun ddof",
+      "zero_dd_policy": "null + sortino_null_reason (aucun nombre fini par defaut)"
+    }
+  },
+  "tail_long": {
+    "adaptive": {
+      "sessions_used": 250,
+      "regime_homogeneous_sessions": 180,
+      "floor_applied": true,
+      "var_1d_95pct": -7.63,
+      "cvar_1d_95pct": -12.34,
+      "vol_daily_pct": 5.83,
+      "stopped_because": "rupture de regime a 240 seances en arriere (volatilite 3.63 % contre 6.47 % aujourd'hui, rapport 0.56)",
+      "floor_warning": "le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.",
+      "method": "on remonte le temps par blocs de 60 seances et on s'arrete au PREMIER bloc dont la volatilite s'ecarte de plus de 1.6x de celle des 120 dernieres seances. On ne saute pas par-dessus un bloc incompatible : ce qu'on cherche est une periode CONTIGUE de regime homogene.",
+      "reading": "fenetre la plus longue dont le regime reste compatible avec les 120 dernieres seances. C'est la lecture a utiliser pour DIMENSIONNER : ni la fenetre 1 an (arbitraire) ni la fenetre complete (qui melange des marches sans rapport)."
+    },
+    "n_samples_1d": 1254,
+    "n_samples_5d_overlapping": 1250,
+    "n_samples_5d_independent": 250,
+    "var_1d_95pct": -7.36,
+    "cvar_1d_95pct": -11.73,
+    "var_5d_95pct_measured": -16.68,
+    "cvar_5d_95pct_measured": -24.81,
+    "var_5d_95pct_scaled": -16.46,
+    "cvar_5d_95pct_scaled": -26.22,
+    "scaling_error_var": 1.013,
+    "scaling_error_cvar": 0.946,
+    "vol_daily_recent_pct": 5.81,
+    "vol_daily_long_pct": 5.61,
+    "regime_shift_ratio": 1.035,
+    "long_window_representative": true,
+    "regime_warning": null,
+    "method": "VaR et CVaR a 5 jours MESUREES sur fenetres glissantes de 5 seances, et non obtenues par multiplication du 1 jour par sqrt(5). `scaling_error_*` = mesure / extrapole : > 1 = le scaling sous-estime, < 1 = il surestime.",
+    "measured_2026_08_20": "balayage sur 58 actifs : le scaling sqrt(5) SURESTIME la VaR a 5 jours sur 39 d'entre eux (rapport median 0,970 ; CVaR 0,911). Il est donc legerement CONSERVATEUR en pratique — l'inverse de ce que supposait le commentaire d'origine, qui n'avait jamais ete verifie. Explication plausible : le sqrt(5) suppose une autocorrelation nulle, or les rendements a quelques seances presentent un leger retour a la moyenne qui reduit la dispersion a 5 jours.",
+    "caveat": "les fenetres de 5 seances se chevauchent ; `n_samples_5d_independent` est la borne prudente. Et un historique profond melange des regimes : ces chiffres decrivent la queue MOYENNE des 1254 dernieres seances (~5.0 ans, du 2021-10-04 au 2026-10-02), pas celle du regime courant.",
+    "vol_ddof": 1
+  },
+  "tail_long_note": "queue MESUREE sur 1254 seances (contre 250 pour les metriques a 1 an ci-dessus). Le 5 jours y est mesure sur fenetres glissantes, pas extrapole par sqrt(5) : `scaling_error_*` dit de combien l'hypothese i.i.d. se trompe sur ce titre."
+}
