@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-10-01T22:05:30Z",
+    "generated_at": "2026-10-02T00:33:44Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-02T08:00:00Z",
-    "valid_until": "2026-10-02T21:00:00Z",
+    "valid_from": "2026-10-05T08:00:00Z",
+    "valid_until": "2026-10-05T21:00:00Z",
     "source_precomputed": "005930_precomputed.json"
   },
   "context": {
@@ -80,7 +80,7 @@
         "max": 264050.0
       },
       "stop": {
-        "price": 242495.8131,
+        "price": 242495.8153,
         "basis": "swing_plan_below_confluence_support",
         "distance_pct": -6.79
       },
@@ -126,7 +126,7 @@
       "targets": [
         {
           "level": 1,
-          "price": 311079.7729,
+          "price": 311079.7696,
           "basis": "fib_786",
           "rr": 9.07
         }
@@ -142,11 +142,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 237299.0375,
+        "min": 237299.0402,
         "max": 242045.455
       },
       "stop": {
-        "price": 227807.076,
+        "price": 227807.0786,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -4.95
       },
@@ -180,7 +180,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 225529.0052,
+    "price": 225529.0078,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
