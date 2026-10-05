@@ -1,6 +1,6 @@
 # 012450
 
-**Generated** : 2026-10-05T00:20:13.636378+00:00  
+**Generated** : 2026-10-05T22:00:42.413022+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 8/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -179,5 +179,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (543609 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (546021 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

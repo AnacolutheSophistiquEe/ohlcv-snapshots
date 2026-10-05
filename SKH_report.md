@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-10-05T00:15:50.763897+00:00  
+**Generated** : 2026-10-05T21:54:50.563018+00:00  
 **Couverture** : bulletin complet  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
@@ -195,5 +195,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (545219 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (547618 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

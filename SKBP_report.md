@@ -1,6 +1,6 @@
 # 326030
 
-**Generated** : 2026-10-05T00:22:24.808492+00:00  
+**Generated** : 2026-10-05T22:03:37.434705+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 5/10 — **Rating** : Pass (negative EV)  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -148,7 +148,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.1 · part idiosyncratique 0.9
+**Factor** : R² 0.11 · part idiosyncratique 0.89
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -177,5 +177,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (543661 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (546072 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

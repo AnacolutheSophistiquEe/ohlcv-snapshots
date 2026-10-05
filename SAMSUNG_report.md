@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-10-05T00:16:54.537056+00:00  
+**Generated** : 2026-10-05T21:56:19.828667+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 8/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -69,7 +69,7 @@ Plan privilegie A (intraday), composite 8/10, conviction 'Pass'.
 - Kelly (position) : f* 0.0 | ¼-Kelly 0.0 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=125 séances) · non recalibrée track-record (n=0)_
 - Régime probabiliste (posterior HMM, intraday) : bull 18.6 | bear 5.0 | side 76.4  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
-- Sizing : notional réel 546.0 (= 3 part(s) × prix) · cible 608.0
+- Sizing : notional réel 550.0 (= 3 part(s) × prix) · cible 608.0
 
 
 ## Microstructure intraday (5 s réel · 125 séances)
@@ -185,5 +185,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (554138 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (556549 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
