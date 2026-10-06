@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-10-06T00:08:59.473197+00:00",
+  "generated_at": "2026-10-06T21:46:15.852033+00:00",
   "prediction_id": "SAF_B_20261006",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SAF",
@@ -16,30 +16,30 @@
     "targets_source": "stops_targets_by_horizon.swing.targets.t1..t3",
     "stop_basis": "plancher anti-bruit (R/R<2)",
     "entry_zone_raw": [
-      309.3471,
-      311.8345
+      309.4828,
+      311.9688
     ],
-    "entry_mid_raw": 310.5908,
-    "spot": 329.1000061035156,
-    "entry_vs_spot_pct": -5.65
+    "entry_mid_raw": 310.7258,
+    "spot": 329.3999938964844,
+    "entry_vs_spot_pct": -5.68
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 310.5,
+    "limit_price": 310.7,
     "limit_price_range": [
-      309.3,
-      311.8
+      309.4,
+      311.9
     ],
     "quantity": 1,
     "tif": "GTD",
-    "gtd": "2026-10-12T15:30:00+00:00"
+    "gtd": "2026-10-13T15:30:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 319.5,
+      "limit_price": 320.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
@@ -50,7 +50,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 302.6,
+      "stop_price": 302.4,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -70,8 +70,8 @@
         "oca_group": "SAF_B_swing_20261006_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 319.5,
-        "stop_price": 302.6
+        "target_price": 320.0,
+        "stop_price": 302.4
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -98,21 +98,21 @@
       "offset_sessions": 5,
       "sessions_counted": 5,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-06T00:08:58.257570+00:00",
+      "anchor_utc": "2026-10-06T21:46:14.424677+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "EURONEXT",
-      "good_till_date": "2026-10-12T15:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261012-15:30:00",
-      "reference_session": "2026-10-06",
-      "expiry_session": "2026-10-12",
+      "good_till_date": "2026-10-13T15:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261013-15:30:00",
+      "reference_session": "2026-10-07",
+      "expiry_session": "2026-10-13",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-06",
         "2026-10-07",
         "2026-10-08",
         "2026-10-09",
-        "2026-10-12"
+        "2026-10-12",
+        "2026-10-13"
       ]
     },
     "venue_calendar": {
@@ -171,16 +171,16 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.0097,
+    "ev_pct_risk": -0.0244,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 310.5908,
+    "ev_pct_risk_basis_price": 310.7258,
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "negative_ev",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.4063,
-      "T2": 0.1526,
-      "T3": 0.0903
+      "T1": 0.3814,
+      "T2": 0.1496,
+      "T3": 0.0871
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": 0.026,
@@ -191,8 +191,8 @@
     "rating_note": "ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 4/121 fenêtres (p_fill pondéré 3 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 329.1,
-    "hold_tolerance_breach_price": 246.825,
+    "notional_eur": 329.4,
+    "hold_tolerance_breach_price": 247.05,
     "hold_fallback_active": true,
     "prediction_id": "SAF_B_20261006"
   },
@@ -207,11 +207,11 @@
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 1.14,
-      "T2": 2.25,
-      "T3": 3.37
+      "T1": 1.12,
+      "T2": 2.24,
+      "T3": 3.35
     },
-    "rr_blended_on_posted_entry": 1.14,
+    "rr_blended_on_posted_entry": 1.12,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,

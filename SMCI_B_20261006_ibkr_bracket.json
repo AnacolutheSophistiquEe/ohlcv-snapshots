@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-10-06T00:23:36.456871+00:00",
+  "generated_at": "2026-10-06T22:05:30.129517+00:00",
   "prediction_id": "SMCI_B_20261006",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SMCI",
@@ -16,24 +16,24 @@
     "targets_source": "stops_targets_by_horizon.swing.targets.t1..t3",
     "stop_basis": "R/R 2 (resserré, parité Claude)",
     "entry_zone_raw": [
-      41.6036,
-      42.4901
+      41.7203,
+      42.6074
     ],
-    "entry_mid_raw": 42.0468,
-    "spot": 43.20000076293945,
-    "entry_vs_spot_pct": -2.69
+    "entry_mid_raw": 42.1638,
+    "spot": 43.459999084472656,
+    "entry_vs_spot_pct": -2.99
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 42.04,
+    "limit_price": 42.16,
     "limit_price_range": [
-      41.6,
-      42.49
+      41.72,
+      42.6
     ],
     "quantity": 16,
     "tif": "GTD",
-    "gtd": "2026-10-12T20:00:00+00:00"
+    "gtd": "2026-10-13T20:00:00+00:00"
   },
   "children": [
     {
@@ -50,7 +50,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 39.48,
+      "stop_price": 39.66,
       "quantity": 8,
       "tif": "GTC",
       "tag": "SL",
@@ -72,7 +72,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 39.48,
+      "stop_price": 39.66,
       "quantity": 5,
       "tif": "GTC",
       "tag": "SL",
@@ -94,7 +94,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 39.48,
+      "stop_price": 39.66,
       "quantity": 3,
       "tif": "GTC",
       "tag": "SL",
@@ -115,21 +115,21 @@
         "tranche": "T1",
         "quantity": 8,
         "target_price": 47.17,
-        "stop_price": 39.48
+        "stop_price": 39.66
       },
       {
         "oca_group": "SMCI_B_swing_20261006_T2",
         "tranche": "T2",
         "quantity": 5,
         "target_price": 49.61,
-        "stop_price": 39.48
+        "stop_price": 39.66
       },
       {
         "oca_group": "SMCI_B_swing_20261006_T3",
         "tranche": "T3",
         "quantity": 3,
         "target_price": 52.06,
-        "stop_price": 39.48
+        "stop_price": 39.66
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -156,21 +156,21 @@
       "offset_sessions": 5,
       "sessions_counted": 5,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-06T00:23:35.474562+00:00",
+      "anchor_utc": "2026-10-06T22:05:28.980387+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "NYSE",
-      "good_till_date": "2026-10-12T20:00:00+00:00",
-      "good_till_date_ibkr_utc": "20261012-20:00:00",
-      "reference_session": "2026-10-06",
-      "expiry_session": "2026-10-12",
+      "good_till_date": "2026-10-13T20:00:00+00:00",
+      "good_till_date_ibkr_utc": "20261013-20:00:00",
+      "reference_session": "2026-10-07",
+      "expiry_session": "2026-10-13",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-06",
         "2026-10-07",
         "2026-10-08",
         "2026-10-09",
-        "2026-10-12"
+        "2026-10-12",
+        "2026-10-13"
       ]
     },
     "venue_calendar": {
@@ -229,16 +229,16 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 10.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.1387,
+    "ev_pct_risk": 0.1613,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 42.0468,
+    "ev_pct_risk_basis_price": 42.1638,
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.2507,
-      "T2": 0.149,
-      "T3": 0.1222
+      "T1": 0.268,
+      "T2": 0.1586,
+      "T3": 0.1253
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
@@ -246,11 +246,11 @@
     "p_fill_note": "conviction_rating.by_horizon.swing absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
     "rating": "Unknown",
     "rating_source": "conviction_rating.by_horizon.swing",
-    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (1 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
+    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 616.85,
-    "hold_tolerance_breach_price": 32.4,
+    "notional_eur": 620.05,
+    "hold_tolerance_breach_price": 32.595,
     "hold_fallback_active": true,
     "prediction_id": "SMCI_B_20261006"
   },
@@ -266,10 +266,10 @@
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
       "T1": 2.0,
-      "T2": 2.96,
-      "T3": 3.91
+      "T2": 2.98,
+      "T3": 3.96
     },
-    "rr_blended_on_posted_entry": 2.66,
+    "rr_blended_on_posted_entry": 2.67,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,

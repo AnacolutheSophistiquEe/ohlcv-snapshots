@@ -1,0 +1,406 @@
+{
+  "available": true,
+  "thresholds": {
+    "strong_buy": {
+      "ev_pct_risk_min": 0.5,
+      "p_fill_min": 0.6,
+      "composite_min": 7
+    },
+    "buy": {
+      "ev_pct_risk_min": 0.3,
+      "p_fill_min": 0.5,
+      "composite_min": 5
+    },
+    "neutral": {
+      "ev_pct_risk_min": 0.1,
+      "p_fill_min": 0.0,
+      "composite_min": 4
+    },
+    "pass_zero": {
+      "ev_pct_risk_min": 0.0,
+      "p_fill_min": 0.0
+    },
+    "pass_negative_ev": {
+      "ev_pct_risk_max": 0.0,
+      "composite_min": 4
+    },
+    "strong_pass_negative_ev": {
+      "ev_pct_risk_max": 0.0,
+      "composite_max": 4
+    }
+  },
+  "note": "Source de l'EV fixée par la DISPONIBILITÉ du bloc (empirical_5s → empirical_daily → gbm), jamais par son éligibilité ni sa valeur. Source inéligible (périmée, usable=false, effectif, p_fill absent) → Unknown / NON_ESTIMABLE, sans repli sur un autre moteur (R09) ; motifs dans inputs.ev_source_rejected, autres moteurs en diagnostic seul (inputs.ev_diagnostics). p_fill : celui du même rejeu que la source (5 s pondéré, fill_rate daily) ; pour gbm, réflexion GBM sans dérive depuis le spot. Override skill prioritaire.",
+  "selection_rule": "source = premier bloc DISPONIBLE pour l'horizon dans l'ordre empirical_5s → empirical_daily → gbm (existence du bloc, jamais son éligibilité ni sa valeur) ; source inéligible → Unknown / NON_ESTIMABLE, AUCUN repli sur un autre moteur (R09 : autre contrat, autre distribution)",
+  "eligibility_rule": "éligible = EV publiée ∧ fraîcheur établie (stale is False) ∧ usable ∧ n_eff ≥ seuil de la source ∧ p_fill du même rejeu",
+  "ev_source_order": [
+    "empirical_5s",
+    "empirical_daily",
+    "gbm"
+  ],
+  "by_horizon": {
+    "intraday": {
+      "plan_id": "A",
+      "rating": "Unknown",
+      "reason": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
+      "status": "NON_ESTIMABLE",
+      "inputs": {
+        "ev_pct_risk": null,
+        "ev_source": "empirical_5s",
+        "ev_source_eligible": false,
+        "ev_source_rejected": [
+          {
+            "source": "empirical_5s",
+            "reasons": [
+              "source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon)"
+            ]
+          }
+        ],
+        "ev_conditioning": "signal (EV × p_fill : non-remplis comptés à 0)",
+        "ev_diagnostics": {
+          "empirical_5s": {
+            "ev_pct_risk": -0.0338,
+            "n_eff": 77.5,
+            "p_fill": 0.7297,
+            "ev_conditioning": "signal (EV × p_fill : non-remplis comptés à 0)",
+            "eligible": false,
+            "reasons": [
+              "source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon)"
+            ],
+            "retained": true,
+            "used_by_rating": false
+          },
+          "empirical_daily": {
+            "ev_pct_risk": -0.3294,
+            "n_eff": 157.5,
+            "p_fill": 0.6411,
+            "ev_conditioning": "fill (épisodes remplis seulement)",
+            "eligible": true,
+            "reasons": [],
+            "retained": false,
+            "used_by_rating": false
+          },
+          "gbm": {
+            "ev_pct_risk": 0.003,
+            "n_eff": null,
+            "p_fill": 0.7496,
+            "ev_conditioning": "fill (entrée supposée au plan)",
+            "eligible": true,
+            "reasons": [],
+            "retained": false,
+            "used_by_rating": false
+          }
+        },
+        "ev_pct_risk_gbm": 0.003,
+        "ev_pct_risk_empirical_5s": -0.0338,
+        "n_eff_5s": 77.5,
+        "stale_5s": true,
+        "usable_5s": true,
+        "ev_pct_risk_empirical_daily": -0.3294,
+        "n_eff_daily": 157.5,
+        "ci95_empirical_daily": [
+          -0.5188,
+          -0.1218
+        ],
+        "ci95_empirical_5s": [
+          -0.1843,
+          0.1257
+        ],
+        "ev_intervals": {
+          "empirical_5s": {
+            "kind": "ic95_bootstrap_blocs",
+            "interval": [
+              -0.1843,
+              0.1257
+            ],
+            "conditioning": "signal (non-remplis comptés à 0), comme ev_pct_risk",
+            "method": "bootstrap circulaire par blocs de fenêtres consécutives (fenêtres chevauchantes : bloc = séances de départ contiguës), percentiles 2,5 / 97,5 ; poids récence d'origine conservés",
+            "block_sessions": 5,
+            "n_blocks": 25.0,
+            "n_boot": 1000,
+            "few_blocks": false,
+            "reason": null,
+            "path": "intraday_5s.first_passage_by_horizon.<h>.ev_pct_risk_ci95"
+          },
+          "empirical_daily": {
+            "kind": "ic95_bootstrap_blocs",
+            "interval": [
+              -0.5188,
+              -0.1218
+            ],
+            "conditioning": "fill (episodes remplis seulement), comme ev_pct_risk",
+            "method": "bootstrap circulaire par blocs d'episodes consecutifs (episodes chevauchants), percentiles 2,5 / 97,5 ; poids recence d'origine conserves",
+            "block_episodes": 2,
+            "n_blocks": 79.5,
+            "n_boot": 800,
+            "reason": null,
+            "path": "empirical_fp_daily.by_horizon.<h>.ci95_block_bootstrap"
+          },
+          "gbm": {
+            "kind": "aucun",
+            "interval": null,
+            "reason": "probabilités INTERPOLÉES sur la grille 5 s (cellules agrégées, pas de rééchantillonnage possible ici) — l'IC de la mesure 5 s du plan est publié par intraday_5s.first_passage_by_horizon.<h>.ev_pct_risk_ci95",
+            "prob_methods": [
+              "empirical_5s_intraday_real_path"
+            ],
+            "path": "edge_metrics.by_horizon.<h>.blended_scale_out.ev_pct_risk_interval"
+          }
+        },
+        "ci95_ev_pct_risk": null,
+        "p_fill_ci95": null,
+        "composite_score": 6.0,
+        "p_fill": null,
+        "p_fill_source": "absent",
+        "p_fill_definition": null
+      }
+    },
+    "swing": {
+      "plan_id": "B",
+      "rating": "Unknown",
+      "reason": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
+      "status": "NON_ESTIMABLE",
+      "inputs": {
+        "ev_pct_risk": null,
+        "ev_source": "empirical_5s",
+        "ev_source_eligible": false,
+        "ev_source_rejected": [
+          {
+            "source": "empirical_5s",
+            "reasons": [
+              "source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon)"
+            ]
+          }
+        ],
+        "ev_conditioning": "signal (EV × p_fill : non-remplis comptés à 0)",
+        "ev_diagnostics": {
+          "empirical_5s": {
+            "ev_pct_risk": 0.1021,
+            "n_eff": 67.7,
+            "p_fill": 0.5795,
+            "ev_conditioning": "signal (EV × p_fill : non-remplis comptés à 0)",
+            "eligible": false,
+            "reasons": [
+              "source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon)"
+            ],
+            "retained": true,
+            "used_by_rating": false
+          },
+          "empirical_daily": {
+            "ev_pct_risk": -0.0081,
+            "n_eff": 174.4,
+            "p_fill": 0.7333,
+            "ev_conditioning": "fill (épisodes remplis seulement)",
+            "eligible": true,
+            "reasons": [],
+            "retained": false,
+            "used_by_rating": false
+          },
+          "gbm": {
+            "ev_pct_risk": 0.1613,
+            "n_eff": null,
+            "p_fill": 0.7515,
+            "ev_conditioning": "fill (entrée supposée au plan)",
+            "eligible": true,
+            "reasons": [],
+            "retained": false,
+            "used_by_rating": false
+          }
+        },
+        "ev_pct_risk_gbm": 0.1613,
+        "ev_pct_risk_empirical_5s": 0.1021,
+        "n_eff_5s": 67.7,
+        "stale_5s": true,
+        "usable_5s": true,
+        "ev_pct_risk_empirical_daily": -0.0081,
+        "n_eff_daily": 174.4,
+        "ci95_empirical_daily": [
+          -0.2548,
+          0.2415
+        ],
+        "ci95_empirical_5s": [
+          -0.1803,
+          0.3343
+        ],
+        "ev_intervals": {
+          "empirical_5s": {
+            "kind": "ic95_bootstrap_blocs",
+            "interval": [
+              -0.1803,
+              0.3343
+            ],
+            "conditioning": "signal (non-remplis comptés à 0), comme ev_pct_risk",
+            "method": "bootstrap circulaire par blocs de fenêtres consécutives (fenêtres chevauchantes : bloc = séances de départ contiguës), percentiles 2,5 / 97,5 ; poids récence d'origine conservés",
+            "block_sessions": 10,
+            "n_blocks": 12.1,
+            "n_boot": 1000,
+            "few_blocks": false,
+            "reason": null,
+            "path": "intraday_5s.first_passage_by_horizon.<h>.ev_pct_risk_ci95"
+          },
+          "empirical_daily": {
+            "kind": "ic95_bootstrap_blocs",
+            "interval": [
+              -0.2548,
+              0.2415
+            ],
+            "conditioning": "fill (episodes remplis seulement), comme ev_pct_risk",
+            "method": "bootstrap circulaire par blocs d'episodes consecutifs (episodes chevauchants), percentiles 2,5 / 97,5 ; poids recence d'origine conserves",
+            "block_episodes": 10,
+            "n_blocks": 17.6,
+            "n_boot": 800,
+            "reason": null,
+            "path": "empirical_fp_daily.by_horizon.<h>.ci95_block_bootstrap"
+          },
+          "gbm": {
+            "kind": "ic95_bootstrap_blocs",
+            "interval": [
+              -0.1444,
+              0.4433
+            ],
+            "method": "bootstrap circulaire par blocs de jours d'entrée consécutifs (fenêtres de H séances chevauchantes), percentiles 2,5 / 97,5, poids récence d'origine ; même estimateur que l'EV publiée (premier passage daily, stop si double-touch, no-touch au terminal, coûts)",
+            "conditioning": "fill (entrée supposée au plan)",
+            "block_sessions": 10,
+            "n_days": 246,
+            "n_blocks": 24.6,
+            "n_boot": 1000,
+            "seed": 20260930,
+            "path": "edge_metrics.by_horizon.<h>.blended_scale_out.ev_pct_risk_interval"
+          }
+        },
+        "ci95_ev_pct_risk": null,
+        "p_fill_ci95": null,
+        "composite_score": 10.0,
+        "p_fill": null,
+        "p_fill_source": "absent",
+        "p_fill_definition": null
+      }
+    },
+    "deep": {
+      "plan_id": "C",
+      "rating": "Unknown",
+      "reason": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
+      "status": "NON_ESTIMABLE",
+      "inputs": {
+        "ev_pct_risk": null,
+        "ev_source": "empirical_5s",
+        "ev_source_eligible": false,
+        "ev_source_rejected": [
+          {
+            "source": "empirical_5s",
+            "reasons": [
+              "source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon)"
+            ]
+          }
+        ],
+        "ev_conditioning": "signal (EV × p_fill : non-remplis comptés à 0)",
+        "ev_diagnostics": {
+          "empirical_5s": {
+            "ev_pct_risk": 0.1997,
+            "n_eff": 64.9,
+            "p_fill": 0.5808,
+            "ev_conditioning": "signal (EV × p_fill : non-remplis comptés à 0)",
+            "eligible": false,
+            "reasons": [
+              "source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon)"
+            ],
+            "retained": true,
+            "used_by_rating": false
+          },
+          "empirical_daily": {
+            "ev_pct_risk": 0.098,
+            "n_eff": 170.5,
+            "p_fill": 0.7478,
+            "ev_conditioning": "fill (épisodes remplis seulement)",
+            "eligible": true,
+            "reasons": [],
+            "retained": false,
+            "used_by_rating": false
+          },
+          "gbm": {
+            "ev_pct_risk": 0.1811,
+            "n_eff": null,
+            "p_fill": 0.7272,
+            "ev_conditioning": "fill (entrée supposée au plan)",
+            "eligible": true,
+            "reasons": [],
+            "retained": false,
+            "used_by_rating": false
+          }
+        },
+        "ev_pct_risk_gbm": 0.1811,
+        "ev_pct_risk_empirical_5s": 0.1997,
+        "n_eff_5s": 64.9,
+        "stale_5s": true,
+        "usable_5s": true,
+        "ev_pct_risk_empirical_daily": 0.098,
+        "n_eff_daily": 170.5,
+        "ci95_empirical_daily": [
+          -0.3621,
+          0.6105
+        ],
+        "ci95_empirical_5s": [
+          -0.175,
+          0.5296
+        ],
+        "ev_intervals": {
+          "empirical_5s": {
+            "kind": "ic95_bootstrap_blocs",
+            "interval": [
+              -0.175,
+              0.5296
+            ],
+            "conditioning": "signal (non-remplis comptés à 0), comme ev_pct_risk",
+            "method": "bootstrap circulaire par blocs de fenêtres consécutives (fenêtres chevauchantes : bloc = séances de départ contiguës), percentiles 2,5 / 97,5 ; poids récence d'origine conservés",
+            "block_sessions": 20,
+            "n_blocks": 5.8,
+            "n_boot": 1000,
+            "few_blocks": false,
+            "reason": null,
+            "path": "intraday_5s.first_passage_by_horizon.<h>.ev_pct_risk_ci95"
+          },
+          "empirical_daily": {
+            "kind": "ic95_bootstrap_blocs",
+            "interval": [
+              -0.3621,
+              0.6105
+            ],
+            "conditioning": "fill (episodes remplis seulement), comme ev_pct_risk",
+            "method": "bootstrap circulaire par blocs d'episodes consecutifs (episodes chevauchants), percentiles 2,5 / 97,5 ; poids recence d'origine conserves",
+            "block_episodes": 20,
+            "n_blocks": 8.6,
+            "n_boot": 800,
+            "reason": null,
+            "path": "empirical_fp_daily.by_horizon.<h>.ci95_block_bootstrap"
+          },
+          "gbm": {
+            "kind": "ic95_bootstrap_blocs",
+            "interval": [
+              -0.1787,
+              0.5127
+            ],
+            "method": "bootstrap circulaire par blocs de jours d'entrée consécutifs (fenêtres de H séances chevauchantes), percentiles 2,5 / 97,5, poids récence d'origine ; même estimateur que l'EV publiée (premier passage daily, stop si double-touch, no-touch au terminal, coûts)",
+            "conditioning": "fill (entrée supposée au plan)",
+            "block_sessions": 20,
+            "n_days": 241,
+            "n_blocks": 12.1,
+            "n_boot": 1000,
+            "seed": 20260930,
+            "path": "edge_metrics.by_horizon.<h>.blended_scale_out.ev_pct_risk_interval"
+          }
+        },
+        "ci95_ev_pct_risk": null,
+        "p_fill_ci95": null,
+        "composite_score": 8.0,
+        "p_fill": null,
+        "p_fill_source": "absent",
+        "p_fill_definition": null
+      }
+    }
+  },
+  "best_rating": {
+    "plan_id": "B",
+    "horizon": "swing",
+    "rating": "Unknown",
+    "reason": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
+    "selected_by": "composite_plan (source unique §6)"
+  }
+}
