@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RHM",
-    "generated_at": "2026-10-05T22:05:30Z",
+    "generated_at": "2026-10-06T00:33:01Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-06T08:00:00Z",
-    "valid_until": "2026-10-06T21:00:00Z",
+    "valid_from": "2026-10-07T08:00:00Z",
+    "valid_until": "2026-10-07T21:00:00Z",
     "source_precomputed": "RHM_precomputed.json"
   },
   "context": {
-    "last_price": 980.2,
+    "last_price": 981.2,
     "ta_score": {
       "value": 1,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 28.1429,
     "atr_pct_daily": null,
-    "beta_60d": 0.7321,
+    "beta_60d": 0.7175,
     "beta_benchmark": "GDAXI",
-    "beta_corr_60d": 0.2452,
+    "beta_corr_60d": 0.2424,
     "btc_corr_high": null,
     "candlestick": {
       "name": "shooting_star",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -50.21,
+      "current_dd_pct": -50.16,
       "ath_price": 1968.8203,
       "ath_date": "2025-09-29",
       "max_dd_1y_pct": -50.59,
@@ -76,32 +76,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 938.6964,
+        "min": 938.8004,
         "max": 960.7651
       },
       "stop": {
-        "price": 933.7971,
+        "price": 934.2471,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -1.68
+        "distance_pct": -1.64
       },
       "targets": [
         {
           "level": 1,
-          "price": 993.4047,
+          "price": 993.8547,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 38% (sans stop)",
-          "rr": 2.74
+          "rr": 2.84
         },
         {
           "level": 2,
-          "price": 1024.8693,
+          "price": 1025.3193,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.72
+          "rr": 4.86
         },
         {
           "level": 3,
-          "price": 1056.334,
+          "price": 1056.784,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 6.69
+          "rr": 6.89
         }
       ],
       "preferred_target": 1,
@@ -117,8 +117,8 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 1052.6452,
-        "max": 1056.8516
+        "min": 1052.6412,
+        "max": 1056.8475
       },
       "stop": {
         "price": 1039.775,
@@ -158,32 +158,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 868.9473,
-        "max": 886.5909
+        "min": 869.8338,
+        "max": 887.4954
       },
       "stop": {
-        "price": 839.9657,
+        "price": 840.8657,
         "basis": "fallback_psych_-10pct",
-        "distance_pct": -4.31
+        "distance_pct": -4.3
       },
       "targets": [
         {
           "level": 1,
-          "price": 993.4047,
+          "price": 993.8547,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 38% (sans stop)",
-          "rr": 3.06
+          "rr": 3.05
         },
         {
           "level": 2,
-          "price": 1024.8693,
+          "price": 1025.3193,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.89
+          "rr": 3.88
         },
         {
           "level": 3,
-          "price": 1056.334,
+          "price": 1056.784,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.72
+          "rr": 4.71
         }
       ],
       "preferred_target": 1,
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 831.566,
+    "price": 832.457,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
