@@ -1,0 +1,207 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "CEG",
+    "generated_at": "2026-10-06T00:33:01Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-10-07T08:00:00Z",
+    "valid_until": "2026-10-07T21:00:00Z",
+    "source_precomputed": "CEG_precomputed.json"
+  },
+  "context": {
+    "last_price": 267.71,
+    "ta_score": {
+      "value": 3,
+      "max": 10,
+      "label": "bearish"
+    },
+    "alignment_flag": "mixed",
+    "hmm_regime": {
+      "state": "sideways",
+      "probability": 0.709,
+      "expected_duration_days": 4.17
+    },
+    "volatility_regime": "normal",
+    "signals_counter": {
+      "buy": 0,
+      "sell": 4,
+      "neutral": 11,
+      "total": 15,
+      "verdict": "neutral"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_50-60_dist_ma20_-2_+2",
+      "win_rate": 0.79,
+      "sample_size": 29,
+      "median_bounce_pct": 5.43,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.71), vol normal, signals neutral (0b/4s/11n)."
+  },
+  "notes": {
+    "atr_daily": 10.4686,
+    "atr_pct_daily": null,
+    "beta_60d": 0.8898,
+    "beta_benchmark": "SPY",
+    "beta_corr_60d": 0.2688,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "",
+      "date": "",
+      "confidence": null
+    },
+    "divergences": [
+      {
+        "indicator": "obv",
+        "type": "bullish",
+        "confidence": 0.32,
+        "bars_ago": 3,
+        "at_price": null
+      }
+    ],
+    "drawdown": {
+      "current_dd_pct": -33.36,
+      "ath_price": 401.7044,
+      "ath_date": "2025-10-15",
+      "max_dd_1y_pct": -41.22,
+      "days_in_dd": 355,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 256.0539,
+        "max": 261.1561
+      },
+      "stop": {
+        "price": 236.3043,
+        "basis": "swing_plan_below_confluence_support",
+        "distance_pct": -8.62
+      },
+      "targets": [
+        {
+          "level": 2,
+          "price": 270.1813,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 0.52
+        },
+        {
+          "level": 3,
+          "price": 281.8855,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 1.04
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support VPVR_VAL + FIB_236 + VPVR_POC (strength 13.5). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 280.0657,
+        "max": 281.1848
+      },
+      "stop": {
+        "price": 275.0802,
+        "basis": "below_broken_resistance",
+        "distance_pct": -1.98
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 286.4253,
+          "basis": "next_confluence_resistance",
+          "rr": 1.05
+        },
+        {
+          "level": 2,
+          "price": 290.087,
+          "basis": "fib_618",
+          "rr": 1.71
+        },
+        {
+          "level": 3,
+          "price": 304.753,
+          "basis": "fib_786",
+          "rr": 4.35
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance VPVR_VAH + FIB_50 (strength 6.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 242.6941,
+        "max": 247.6219
+      },
+      "stop": {
+        "price": 230.6871,
+        "basis": "fallback_pivot_classical_s3",
+        "distance_pct": -5.9
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 258.4771,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 38% (sans stop)",
+          "rr": 0.92
+        },
+        {
+          "level": 2,
+          "price": 270.1813,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 1.73
+        },
+        {
+          "level": 3,
+          "price": 281.8855,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 2.54
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_classical_s3. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=3<4",
+  "global_conditions": [
+    {
+      "id": "session_us_open",
+      "type": "session_window",
+      "params": {
+        "session": "us_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 228.3802,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
