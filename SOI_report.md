@@ -1,6 +1,6 @@
 # SOI
 
-**Generated** : 2026-10-07T21:50:21.049124+00:00  
+**Generated** : 2026-10-08T00:11:35.361947+00:00  
 **Couverture** : bulletin complet  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.8 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
@@ -8,7 +8,7 @@
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · €159.90  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US CPI (headline) (J-5 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)  
 > ↳ spot €159.90 (+2.5% vs entrée) · entrée €155.93 · stop €147.03 · T1 €167.14 · R/R 1.26  
 > ↳ ¼-Kelly 0.051 · _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_  
 
@@ -54,8 +54,8 @@ Plan privilegie B (swing), composite 10/10, conviction 'Unknown'.
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -12.4 % vs -11.44 % si l'on extrapolait par √5 _(rapport 1.084 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.1084** (β de hausse 1.5764, asymétrie 0.7031) vs FCHI — 620 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut -0.07× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 1.104** (β de hausse 1.5764, asymétrie 0.7003) vs FCHI — 619 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut -0.013× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
@@ -298,8 +298,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-5 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-5 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -309,8 +309,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.993  _(pas de croisement recent)_
 - **BB** : %B 0.72 · largeur 35.8%
 - **ATR** : 8.9 (60.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF 0.067  _(accumulation)_
-- **Vol ratio** : 0.91  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.074  _(accumulation)_
+- **Vol ratio** : 0.58  _(volume atone)_
 - **Choppiness** : 45.2  _(transition)_
 - **MA** : MA20 148.46 · MA50 130.97 · MA200 94.97  _(prix > MA20)_
 - **Dist MA** : MA20 +7.7% · MA50 +22.1% · MA200 +68.4%
@@ -318,5 +318,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (862099 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (862092 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
