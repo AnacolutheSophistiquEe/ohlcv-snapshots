@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RHM",
-    "generated_at": "2026-10-07T22:05:14Z",
+    "generated_at": "2026-10-08T00:35:26Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-08T08:00:00Z",
-    "valid_until": "2026-10-08T21:00:00Z",
+    "valid_from": "2026-10-09T08:00:00Z",
+    "valid_until": "2026-10-09T21:00:00Z",
     "source_precomputed": "RHM_precomputed.json"
   },
   "context": {
-    "last_price": 926.2,
+    "last_price": 926.9,
     "ta_score": {
       "value": 0,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 29.5714,
     "atr_pct_daily": null,
-    "beta_60d": 0.7311,
+    "beta_60d": 0.6491,
     "beta_benchmark": "GDAXI",
-    "beta_corr_60d": 0.2462,
+    "beta_corr_60d": 0.2163,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bearish_engulfing",
@@ -75,10 +75,10 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -52.96,
+      "current_dd_pct": -52.92,
       "ath_price": 1968.8203,
       "ath_date": "2025-09-29",
-      "max_dd_1y_pct": -51.28,
+      "max_dd_1y_pct": -51.24,
       "days_in_dd": 373,
       "median_recovery_days": null
     }
@@ -90,24 +90,24 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 919.8621,
-        "max": 925.3979
+        "min": 920.56,
+        "max": 926.1
       },
       "stop": {
-        "price": 881.8429,
+        "price": 882.5429,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -4.42
       },
       "targets": [
         {
           "level": 2,
-          "price": 933.1809,
+          "price": 933.8809,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 0.26
         },
         {
           "level": 3,
-          "price": 966.2427,
+          "price": 966.9427,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 1.07
         }
@@ -136,21 +136,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 1044.7372,
+          "price": 1044.6234,
           "basis": "next_confluence_resistance",
-          "rr": 10.16
+          "rr": 10.14
         },
         {
           "level": 2,
-          "price": 1127.1612,
+          "price": 1127.696,
           "basis": "fib_236",
-          "rr": 20.85
+          "rr": 20.92
         },
         {
           "level": 3,
-          "price": 1127.1612,
+          "price": 1127.696,
           "basis": "next_confluence_resistance",
-          "rr": 20.85
+          "rr": 20.92
         }
       ],
       "preferred_target": 1,
@@ -166,32 +166,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 860.2695,
-        "max": 877.7368
+        "min": 860.7226,
+        "max": 878.1991
       },
       "stop": {
-        "price": 829.0129,
+        "price": 829.4729,
         "basis": "fallback_pivot_classical_s3",
         "distance_pct": -4.6
       },
       "targets": [
         {
           "level": 1,
-          "price": 900.119,
+          "price": 900.819,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 38% (sans stop)",
           "rr": 0.78
         },
         {
           "level": 2,
-          "price": 933.1809,
+          "price": 933.8809,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.6
+          "rr": 1.61
         },
         {
           "level": 3,
-          "price": 966.2427,
+          "price": 966.9427,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.43
+          "rr": 2.44
         }
       ],
       "preferred_target": 1,
@@ -215,7 +215,7 @@
     }
   ],
   "invalidation": {
-    "price": 820.7228,
+    "price": 821.1782,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
