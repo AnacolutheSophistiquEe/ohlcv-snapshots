@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-10-08T00:07:57.893718+00:00",
+  "generated_at": "2026-10-08T21:46:35.994152+00:00",
   "prediction_id": "ENR_B_20261008",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "ENR",
@@ -16,30 +16,30 @@
     "targets_source": "stops_targets_by_horizon.swing.targets.t1..t3",
     "stop_basis": "plancher anti-bruit (R/R<2)",
     "entry_zone_raw": [
-      135.2551,
-      137.1581
+      135.1674,
+      136.9938
     ],
-    "entry_mid_raw": 136.2066,
-    "spot": 142.77999877929688,
-    "entry_vs_spot_pct": -4.61
+    "entry_mid_raw": 136.0806,
+    "spot": 142.5,
+    "entry_vs_spot_pct": -4.51
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 136.2,
+    "limit_price": 136.08,
     "limit_price_range": [
-      135.25,
-      137.15
+      135.16,
+      136.99
     ],
     "quantity": 2,
     "tif": "GTD",
-    "gtd": "2026-10-14T15:30:00+00:00"
+    "gtd": "2026-10-15T15:30:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 141.52,
+      "limit_price": 141.41,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
@@ -50,7 +50,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 131.45,
+      "stop_price": 131.31,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -61,7 +61,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 146.83,
+      "limit_price": 146.74,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2",
@@ -72,7 +72,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 131.45,
+      "stop_price": 131.31,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -92,15 +92,15 @@
         "oca_group": "ENR_B_swing_20261008_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 141.52,
-        "stop_price": 131.45
+        "target_price": 141.41,
+        "stop_price": 131.31
       },
       {
         "oca_group": "ENR_B_swing_20261008_T2",
         "tranche": "T2",
         "quantity": 1,
-        "target_price": 146.83,
-        "stop_price": 131.45
+        "target_price": 146.74,
+        "stop_price": 131.31
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -127,21 +127,21 @@
       "offset_sessions": 5,
       "sessions_counted": 5,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-08T00:07:57.166996+00:00",
+      "anchor_utc": "2026-10-08T21:46:34.691977+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "XETRA",
-      "good_till_date": "2026-10-14T15:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261014-15:30:00",
-      "reference_session": "2026-10-08",
-      "expiry_session": "2026-10-14",
+      "good_till_date": "2026-10-15T15:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261015-15:30:00",
+      "reference_session": "2026-10-09",
+      "expiry_session": "2026-10-15",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-08",
         "2026-10-09",
         "2026-10-12",
         "2026-10-13",
-        "2026-10-14"
+        "2026-10-14",
+        "2026-10-15"
       ]
     },
     "venue_calendar": {
@@ -200,28 +200,28 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 5.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0047,
+    "ev_pct_risk": 0.0193,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 136.2066,
+    "ev_pct_risk_basis_price": 136.0806,
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.4548,
-      "T2": 0.218,
-      "T3": 0.0575
+      "T1": 0.4616,
+      "T2": 0.2206,
+      "T3": 0.0572
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
-    "p_fill": 0.3102,
+    "p_fill": 0.3244,
     "p_fill_source": "conviction_rating.by_horizon.swing.inputs.p_fill (empirical_5s)",
     "p_fill_note": "p_fill telle qu'utilisée par le rating, reprise sans recalcul",
     "rating": "Pass",
     "rating_source": "conviction_rating.by_horizon.swing",
-    "rating_note": "ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 38/121 fenêtres (p_fill pondéré 31 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable",
+    "rating_note": "ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 40/121 fenêtres (p_fill pondéré 32 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 285.56,
-    "hold_tolerance_breach_price": 107.085,
+    "notional_eur": 285.0,
+    "hold_tolerance_breach_price": 106.875,
     "hold_fallback_active": true,
     "prediction_id": "ENR_B_20261008"
   },
@@ -237,7 +237,7 @@
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
       "T1": 1.12,
-      "T2": 2.24,
+      "T2": 2.23,
       "T3": 3.35
     },
     "rr_blended_on_posted_entry": 1.68,

@@ -1,0 +1,238 @@
+{
+  "daily": {
+    "completeness": {
+      "n_bars": 244,
+      "expected_bars_daily": 244,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_dates_count": 0,
+      "holidays_in_range": [
+        {
+          "date": "2025-12-25",
+          "name": "Seongtanjeol"
+        },
+        {
+          "date": "2025-12-31",
+          "name": "Yeonmal hyujang"
+        },
+        {
+          "date": "2026-01-01",
+          "name": "Sinjeong"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Geulloja-ui nal"
+        },
+        {
+          "date": "2026-05-05",
+          "name": "Eorininal"
+        }
+      ],
+      "holidays_excluded_count": 5,
+      "probable_non_calendar_closures": [
+        "2026-02-16T00:00:00",
+        "2026-02-17T00:00:00",
+        "2026-02-18T00:00:00",
+        "2026-03-02T00:00:00",
+        "2026-05-25T00:00:00",
+        "2026-06-03T00:00:00",
+        "2026-07-17T00:00:00",
+        "2026-08-17T00:00:00",
+        "2026-09-24T00:00:00",
+        "2026-09-25T00:00:00",
+        "2026-10-05T00:00:00"
+      ],
+      "bars_on_non_session_days": [],
+      "calendar": {
+        "venue": "KRX",
+        "known": true,
+        "timezone": "Asia/Seoul",
+        "regular_open": "09:00",
+        "regular_close": "15:30",
+        "holidays_complete": false,
+        "version": "venue_calendar/1.0",
+        "note": "fériés lunaires et jours d'élection non calculés : une échéance peut tomber un jour de fermeture"
+      },
+      "method": "séances attendues = séances de la place (venue_calendar, fériés exclus) entre la première et la dernière barre ; missing_dates = séances ouvertes sans barre (10 premières) ; place à fériés INCOMPLETS : un jour ouvré sans barre est classé en probable_non_calendar_closures, pas en manquant"
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 1,
+      "outliers_recent_30d": []
+    },
+    "gaps": {
+      "n_gaps_up": 16,
+      "n_gaps_down": 2,
+      "last_significant_gap": {
+        "date": "2026-08-19T00:00:00",
+        "type": "up",
+        "magnitude_pct": 7.540702656383891
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 179612.53333333333,
+      "median_volume_60d": 171011.0,
+      "volume_consistency_score": 0.5448432815593411
+    },
+    "liquidity": {
+      "liquidity_score": 139252894400.0,
+      "liquidity_classification": "very_high",
+      "liquidity_note": "moyenne de Close × Volume sur les 30 dernières barres, en devise NATIVE du titre, non convertie : seuils 1e6/1e7/1e8/1e9 non comparables entre devises"
+    },
+    "freshness": {
+      "last_bar_date": "2026-10-08T00:00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh",
+      "sessions_since_last_bar": 0,
+      "last_bar_synthetic": false,
+      "last_bar_in_progress": false,
+      "freshness_reserve": null,
+      "asof_utc": "2026-10-08T22:05:10.800401+00:00",
+      "venue": "KRX",
+      "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
+    },
+    "synthetic_bars": {
+      "dates": [],
+      "n": 0,
+      "last_bar_synthetic": false,
+      "nature": "reconstruite depuis le H1 (lag Yahoo) : O/H/L exacts, clôture approchée (~0,3 %, enchère de clôture absente), volume partiel",
+      "detected_from": "en-tête CSV « # Backfilled-from-h1 » (deploy/ohlcv_snapshot.py)",
+      "excluded_from": [],
+      "producer_daily_source": "yfinance",
+      "producer_daily_freshness": "fresh (last-bar 2026-10-08, expected 2026-10-08)",
+      "supplemented_dates": []
+    },
+    "overall": {
+      "overall_quality_score": 92.35297709224258,
+      "overall_label": "excellent",
+      "warnings": [
+        "11 jour(s) ouvré(s) sans barre classé(s) fermeture probable non calendaire — fériés de la place incomplets (daily)"
+      ]
+    }
+  },
+  "h4": {
+    "completeness": {
+      "n_bars": 122,
+      "expected_bars_daily": null,
+      "expected_bars_h4": 122,
+      "bars_per_day_typical": 2,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_bars_intraday": 0
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 0,
+      "outliers_recent_30d": []
+    },
+    "gaps": {
+      "n_gaps_up": 4,
+      "n_gaps_down": 2,
+      "last_significant_gap": {
+        "date": "2026-09-15T00:00:00+00:00",
+        "type": "down",
+        "magnitude_pct": 2.037201062887506
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 0,
+      "mean_volume_60d": 44881.316666666666,
+      "median_volume_60d": 40026.5,
+      "volume_consistency_score": 0.48621019176117086
+    },
+    "liquidity": {
+      "liquidity_score": 47601802216.666664,
+      "liquidity_classification": "very_high",
+      "liquidity_note": "moyenne de Close × Volume sur les 30 dernières barres, en devise NATIVE du titre, non convertie : seuils 1e6/1e7/1e8/1e9 non comparables entre devises"
+    },
+    "freshness": {
+      "last_bar_date": "2026-10-08T04:00:00+00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh",
+      "sessions_since_last_bar": 0,
+      "last_bar_synthetic": false,
+      "last_bar_in_progress": false,
+      "freshness_reserve": null,
+      "asof_utc": "2026-10-08T22:05:10.800401+00:00",
+      "venue": "KRX",
+      "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
+    },
+    "overall": {
+      "overall_quality_score": 92.29315287641757,
+      "overall_label": "excellent",
+      "warnings": []
+    }
+  },
+  "h1": {
+    "completeness": {
+      "n_bars": 114,
+      "expected_bars_daily": null,
+      "expected_bars_h1": 114,
+      "bars_per_day_typical": 6,
+      "completeness_pct": 100.0,
+      "missing_dates": [],
+      "missing_bars_intraday": 0
+    },
+    "outliers": {
+      "n_outliers_5sigma": 0,
+      "n_outliers_3sigma": 1,
+      "outliers_recent_30d": [
+        {
+          "date": "2026-10-08T00:00:00+00:00",
+          "return_pct": -5.63524590163934,
+          "sigma_distance": 4.3270475474440095
+        }
+      ]
+    },
+    "gaps": {
+      "n_gaps_up": 0,
+      "n_gaps_down": 1,
+      "last_significant_gap": {
+        "date": "2026-09-15T00:00:00+00:00",
+        "type": "down",
+        "magnitude_pct": 2.210433244915999
+      }
+    },
+    "volume": {
+      "n_zero_volume_bars": 5,
+      "mean_volume_60d": 15662.75,
+      "median_volume_60d": 13300.5,
+      "volume_consistency_score": 0.34752066106950474
+    },
+    "liquidity": {
+      "liquidity_score": 18727871283.333332,
+      "liquidity_classification": "very_high",
+      "liquidity_note": "moyenne de Close × Volume sur les 30 dernières barres, en devise NATIVE du titre, non convertie : seuils 1e6/1e7/1e8/1e9 non comparables entre devises"
+    },
+    "freshness": {
+      "last_bar_date": "2026-10-08T05:00:00+00:00",
+      "days_since_last_bar": 0,
+      "freshness_status": "fresh",
+      "sessions_since_last_bar": 0,
+      "last_bar_synthetic": false,
+      "last_bar_in_progress": false,
+      "freshness_reserve": null,
+      "asof_utc": "2026-10-08T22:05:10.800401+00:00",
+      "venue": "KRX",
+      "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
+    },
+    "overall": {
+      "overall_quality_score": 88.4584239511303,
+      "overall_label": "excellent",
+      "warnings": [
+        "5 bar(s) à volume zéro (h1)"
+      ]
+    }
+  },
+  "summary": {
+    "worst_tf_quality_score": 88.4584239511303,
+    "worst_tf": "h1",
+    "recommendation": "use_as_is",
+    "daily_freshness_status": "fresh",
+    "daily_sessions_since_last_bar": 0,
+    "last_daily_bar_synthetic": false,
+    "reserves": [],
+    "venue": "KRX"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-10-08T00:16:23.044573+00:00",
+  "generated_at": "2026-10-08T21:59:53.596557+00:00",
   "prediction_id": "005930_B_20261008",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "005930",
@@ -16,30 +16,30 @@
     "targets_source": "stops_targets_by_horizon.swing.targets.t1..t3",
     "stop_basis": "plancher anti-bruit (R/R<2)",
     "entry_zone_raw": [
-      249575.2804,
-      253103.6609
+      246809.8092,
+      250019.135
     ],
-    "entry_mid_raw": 251339.4706,
-    "spot": 268500.0,
-    "entry_vs_spot_pct": -6.41
+    "entry_mid_raw": 248414.4721,
+    "spot": 262000.0,
+    "entry_vs_spot_pct": -5.19
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 251300.0,
+    "limit_price": 248400.0,
     "limit_price_range": [
-      249500.0,
-      253100.0
+      246800.0,
+      250000.0
     ],
-    "quantity": 3,
+    "quantity": 2,
     "tif": "GTD",
-    "gtd": "2026-10-15T06:30:00+00:00"
+    "gtd": "2026-10-16T06:30:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 262000.0,
+      "limit_price": 259200.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
@@ -50,7 +50,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 241800.0,
+      "stop_price": 238700.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -61,7 +61,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 272600.0,
+      "limit_price": 270000.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2",
@@ -72,34 +72,12 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 241800.0,
+      "stop_price": 238700.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
       "tranche": "T2",
       "oca_group": "005930_B_swing_20261008_T2",
-      "oca_type": 1
-    },
-    {
-      "action": "SELL",
-      "order_type": "LMT",
-      "limit_price": 283300.0,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "T3",
-      "tranche": "T3",
-      "oca_group": "005930_B_swing_20261008_T3",
-      "oca_type": 1
-    },
-    {
-      "action": "SELL",
-      "order_type": "STP",
-      "stop_price": 241800.0,
-      "quantity": 1,
-      "tif": "GTC",
-      "tag": "SL",
-      "tranche": "T3",
-      "oca_group": "005930_B_swing_20261008_T3",
       "oca_type": 1
     }
   ],
@@ -114,33 +92,26 @@
         "oca_group": "005930_B_swing_20261008_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 262000.0,
-        "stop_price": 241800.0
+        "target_price": 259200.0,
+        "stop_price": 238700.0
       },
       {
         "oca_group": "005930_B_swing_20261008_T2",
         "tranche": "T2",
         "quantity": 1,
-        "target_price": 272600.0,
-        "stop_price": 241800.0
-      },
-      {
-        "oca_group": "005930_B_swing_20261008_T3",
-        "tranche": "T3",
-        "quantity": 1,
-        "target_price": 283300.0,
-        "stop_price": 241800.0
+        "target_price": 270000.0,
+        "stop_price": 238700.0
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
     "quantity_invariants": {
-      "protection_qty": 3,
-      "held_qty_after_entry_fill": 3,
-      "max_joint_sales": 3,
+      "protection_qty": 2,
+      "held_qty_after_entry_fill": 2,
+      "max_joint_sales": 2,
       "rule": "Σ_j q_j(protection) = quantité détenue ; ventes maximales conjointement possibles = Σ_j q_j ≤ quantité détenue ; TP_j et SL_j d'une même paire ne sont JAMAIS sommés"
     },
     "partial_fill_policy": "fill partiel d'un membre d'une paire : l'autre membre est annulé (ocaType 1) ; le reliquat de la tranche doit être re-protégé par le robot R (nouvelle paire de quantité q_j − exécuté) et l'invariant Σ protection = détenu re-vérifié après chaque fill",
-    "commission_note": "un stop touché = jusqu'à 3 ordre(s) STP exécuté(s) (un par tranche encore ouverte), donc autant de commissions"
+    "commission_note": "un stop touché = jusqu'à 2 ordre(s) STP exécuté(s) (un par tranche encore ouverte), donc autant de commissions"
   },
   "execution_rules": {
     "stop_mode": "breakeven_after_T1",
@@ -156,21 +127,21 @@
       "offset_sessions": 5,
       "sessions_counted": 5,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-08T00:16:21.823231+00:00",
+      "anchor_utc": "2026-10-08T21:59:51.745265+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "KRX",
-      "good_till_date": "2026-10-15T06:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261015-06:30:00",
-      "reference_session": "2026-10-08",
-      "expiry_session": "2026-10-15",
+      "good_till_date": "2026-10-16T06:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261016-06:30:00",
+      "reference_session": "2026-10-12",
+      "expiry_session": "2026-10-16",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-08",
         "2026-10-12",
         "2026-10-13",
         "2026-10-14",
-        "2026-10-15"
+        "2026-10-15",
+        "2026-10-16"
       ]
     },
     "venue_calendar": {
@@ -205,15 +176,15 @@
       },
       {
         "tag": "T3",
-        "qty": 1
+        "qty": 0
       }
     ],
     "allocation_method": "plus forts restes (§9.5), égalité T1 > T2 > T3, arithmétique exacte",
     "allocation_exact": false,
     "weights_effective": [
-      0.3333,
-      0.3333,
-      0.3333
+      0.5,
+      0.5,
+      0.0
     ],
     "tick_rounding": {
       "entry": "down",
@@ -227,30 +198,30 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 8.0,
+    "composite_score": 6.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.2882,
+    "ev_pct_risk": 0.2934,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 251339.4706,
+    "ev_pct_risk_basis_price": 248414.4721,
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.5519,
-      "T2": 0.3559,
-      "T3": 0.1996
+      "T1": 0.5492,
+      "T2": 0.3551,
+      "T3": 0.1943
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
-    "p_fill": 0.2754,
+    "p_fill": 0.3482,
     "p_fill_source": "conviction_rating.by_horizon.swing.inputs.p_fill (empirical_5s)",
     "p_fill_note": "p_fill telle qu'utilisée par le rating, reprise sans recalcul",
     "rating": "Pass",
     "rating_source": "conviction_rating.by_horizon.swing",
-    "rating_note": "ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 33/121 fenêtres (p_fill pondéré 28 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable",
+    "rating_note": "ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 42/121 fenêtres (p_fill pondéré 35 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 535.01,
-    "hold_tolerance_breach_price": 201375.0,
+    "notional_eur": 348.41,
+    "hold_tolerance_breach_price": 196500.0,
     "hold_fallback_active": true,
     "prediction_id": "005930_B_20261008"
   },
@@ -265,19 +236,19 @@
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 1.13,
-      "T2": 2.24,
-      "T3": 3.37
+      "T1": 1.11,
+      "T2": 2.23,
+      "T3": 3.34
     },
-    "rr_blended_on_posted_entry": 2.25,
+    "rr_blended_on_posted_entry": 1.67,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,
-    "stop_hit_orders_executed_max": 3,
+    "stop_hit_orders_executed_max": 2,
     "no_zero_quantity_order": true,
     "validity_resolved": true
   },
   "warnings": [
-    "calendrier KRX incomplet (fériés lunaires / élections non calculés) : l'échéance 2026-10-15 peut tomber un jour de fermeture"
+    "calendrier KRX incomplet (fériés lunaires / élections non calculés) : l'échéance 2026-10-16 peut tomber un jour de fermeture"
   ]
 }
