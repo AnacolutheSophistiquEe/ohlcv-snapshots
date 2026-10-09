@@ -29,15 +29,15 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 Plan privilegie A (intraday), composite 4/10, conviction 'Unknown'.
 
 
-## Niveaux clés & plan principal
+## Plans d'achat — Swing / Deep (methode v4)
 
-**Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : $7.55–$7.64 (mid $7.60)
-- Spot actuel : $7.67 (+0.9% au-dessus de la zone — repli à attendre)
-- Stop : $7.40 (R/R 2 (resserré, parité Claude) ; -2.63 % depuis l'entree)
-- Targets : T1 $8.00 · R/R 2.0 | T2 $8.24 · R/R 3.2 | T3 $8.49 · R/R 4.45
-- Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $7.40
+_Cloture 2026-10-08 : 7.32 · ATR Wilder 0.5656 (7.73 %)_
+- **Swing** : plage **6.65 → 6.3** (-9.09 % a -13.98 % sous la cloture, 0.63 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 6.35-6.61 (A). stop INDICATIF 5.58 (-11.43 % sous le bas ; sous le support 5.86-5.91 (- 0,5 ATR)).
+- **Deep** : plage **6.3 → 5.34** (-13.98 % a -26.98 % sous la cloture, 1.68 ATR) — touchee 44 % → 15 % du temps en 20 seances ; supports reels dans la plage : 5.86-5.91 (A) ; 5.3-5.58 (A). stop INDICATIF 4.33 (-19.04 % sous le bas ; sous le support 4.61-4.69 (- 0,5 ATR)).
+- ACHAT PAS CHER : inactif (4.33 ATR sous le plus haut 20 s., RSI(2) 13.8 ; seuils 4,7 ATR, ou RSI(2) < 10 et 3 ATR).
+- Supports reels sous le cours (pour le Warden) : 6.88-6.88 (C, -6.01 %) ; 6.35-6.61 (A, -9.7 %) ; 5.86-5.91 (A, -19.29 %) ; 5.3-5.58 (A, -23.77 %) ; 4.61-4.69 (C, -35.93 %) ; 3.79-3.79 (C, -48.22 %)
+- Resistances reelles au-dessus : 7.54-7.81 (A, 3.01 %) ; 7.87-8.05 (B, 7.51 %) ; 8.53-8.8 (A, 16.53 %) ; 8.85-9.12 (A, 20.9 %)
+- _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
@@ -367,5 +367,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (859251 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (862166 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

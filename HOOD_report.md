@@ -26,15 +26,15 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 Plan privilegie B (swing), composite 5/10, conviction 'Unknown'.
 
 
-## Niveaux clés & plan principal
+## Plans d'achat — Swing / Deep (methode v4)
 
-**Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : $104.68–$106.34 (mid $105.51)
-- Spot actuel : $109.52 (+3.8% au-dessus de la zone — repli à attendre)
-- Stop : $99.97 (plancher anti-bruit (R/R<2) ; -5.25 % depuis l'entree)
-- Targets : T1 $111.81 · R/R 1.14 | T2 $118.00 · R/R 2.25 | T3 $124.20 · R/R 3.37
-- Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $99.97
+_Cloture 2026-10-08 : 107.01 · ATR Wilder 5.71 (5.34 %)_
+- **Swing** : plage **100.77 → 96.0** (-5.83 % a -10.29 % sous la cloture, 0.84 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 98.75-100.88 (A) ; 95.66-96.59 (C). stop INDICATIF 89.95 (-6.3 % sous le bas ; sous le support 92.8-94.4 (- 0,5 ATR)).
+- **Deep** : plage **96.0 → 85.39** (-10.29 % a -20.21 % sous la cloture, 1.86 ATR) — touchee 42 % → 15 % du temps en 20 seances ; supports reels dans la plage : 95.66-96.59 (C) ; 92.8-94.4 (B) ; 88.6-91.44 (A). stop INDICATIF 79.08 (-7.39 % sous le bas ; sous le support 81.93-84.75 (- 0,5 ATR)).
+- 🟢 **ACHAT PAS CHER actif** (COMBO) : 3.46 ATR sous le plus haut 20 s., RSI(2) 5.8. Limite **104.16** (seance suivante), stop catastrophe 81.32, sortie : vente a l'ouverture qui suit la 1re cloture au-dessus de la MM5, au plus tard 21 seances.
+- Supports reels sous le cours (pour le Warden) : 101.71-104.45 (A, -2.39 %) ; 98.75-100.88 (A, -5.73 %) ; 95.66-96.59 (C, -9.74 %) ; 92.8-94.4 (B, -11.78 %) ; 88.6-91.44 (A, -14.55 %) ; 81.93-84.75 (A, -20.8 %)
+- Resistances reelles au-dessus : 110.41-112.5 (A, 3.18 %) ; 113.44-114.1 (A, 6.01 %) ; 117.46-120.05 (A, 9.77 %) ; 120.46-122.63 (A, 12.57 %)
+- _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
@@ -327,5 +327,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (858619 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (861674 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

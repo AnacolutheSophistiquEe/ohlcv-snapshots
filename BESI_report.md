@@ -1,6 +1,7 @@
 # BESI
 
 **Generated** : 2026-08-22T18:20:49.181616+00:00  
+**Couverture** : non publiée (précalcul antérieur au 01/10/2026)  
 **Santé technique** : 5/10 — **Rating** : Neutral  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · $212.80  
@@ -25,15 +26,15 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 Plan privilegie B (swing), composite 5/10, conviction 'Neutral'.
 
 
-## Niveaux clés & plan principal
+## Plans d'achat — Swing / Deep (methode v4)
 
-**Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : $195.08–$198.97 (mid $197.02)
-- Spot actuel : $212.80 (+8.0% au-dessus de la zone — repli à attendre)
-- Stop : $187.50 (stop swing_plan-based (-11.89%))
-- Targets : T1 $206.74 · R/R 1.02 | T2 $216.45 · R/R 2.04 | T3 $226.16 · R/R 3.06
-- Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $187.50
+_Cloture 2026-10-08 : 179.9 · ATR Wilder 9.56 (5.32 %)_
+- **Swing** : plage **167.34 → 157.61** (-6.98 % a -12.39 % sous la cloture, 1.02 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 164.96-166.8 (A). stop INDICATIF 148.37 (-5.86 % sous le bas ; sous le support 153.15-157.32 (- 0,5 ATR)).
+- **Deep** : plage **157.61 → 134.74** (-12.39 % a -25.1 % sous la cloture, 2.39 ATR) — touchee 45 % → 15 % du temps en 20 seances ; supports reels dans la plage : 153.15-157.32 (A) ; 146.33-150.05 (A) ; 140.45-144.98 (A) ; 135.35-140.03 (B) ; 130.23-135.4 (B). stop INDICATIF 119.73 (-11.14 % sous le bas ; sous le support 124.52-128.79 (- 0,5 ATR)).
+- ACHAT PAS CHER : inactif (3.03 ATR sous le plus haut 20 s., RSI(2) 31.2 ; seuils 4,7 ATR, ou RSI(2) < 10 et 3 ATR).
+- Supports reels sous le cours (pour le Warden) : 170.01-174.69 (A, -2.9 %) ; 164.96-166.8 (A, -7.28 %) ; 153.15-157.32 (A, -12.55 %) ; 146.33-150.05 (A, -16.59 %) ; 140.45-144.98 (A, -19.41 %) ; 135.35-140.03 (B, -22.16 %)
+- Resistances reelles au-dessus : 187.35-188.86 (A, 4.14 %) ; 192.25-196.26 (B, 6.86 %) ; 197.55-199.24 (B, 9.81 %) ; 237.6-241.9 (A, 32.07 %)
+- _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
@@ -138,5 +139,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (694399 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (697536 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

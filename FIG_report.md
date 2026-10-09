@@ -1,6 +1,7 @@
 # FIG
 
 **Generated** : 2026-08-22T18:39:03.652825+00:00  
+**Couverture** : non publiée (précalcul antérieur au 01/10/2026)  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.1 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 8/10 — **Rating** : Neutral  
@@ -27,15 +28,15 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 Plan privilegie B (swing), composite 8/10, conviction 'Neutral'.
 
 
-## Niveaux clés & plan principal
+## Plans d'achat — Swing / Deep (methode v4)
 
-**Plan B — swing** (order_type LMT)
-- Entry (zone de repli) : $26.21–$27.01 (mid $26.61)
-- Spot actuel : $27.10 (+1.8% au-dessus de la zone — repli à attendre)
-- Stop : $24.61 (stop swing_plan-based (-9.2%))
-- Targets : T1 $30.26 · R/R 1.83 | T2 $31.43 · R/R 2.41 | T3 $32.60 · R/R 3.0
-- Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $24.61
+_Cloture 2026-10-08 : 22.63 · ATR Wilder 1.17 (5.18 %)_
+- **Swing** : plage **20.93 → 20.21** (-7.53 % a -10.7 % sous la cloture, 0.61 ATR) — touchee 50 % → 30 % du temps en 10 seances ; aucun support reel dans la plage. stop INDICATIF 18.99 (-6.01 % sous le bas ; sous le support 19.58-20.13 (- 0,5 ATR)).
+- **Deep** : plage **20.21 → 17.74** (-10.7 % a -21.59 % sous la cloture, 2.1 ATR) — touchee 47 % → 15 % du temps en 20 seances ; supports reels dans la plage : 19.58-20.13 (A) ; 18.51-18.51 (C) ; 17.65-17.83 (C). stop INDICATIF 16.01 (-9.75 % sous le bas ; sous le support 16.6-16.8 (- 0,5 ATR)).
+- ACHAT PAS CHER : inactif (1.84 ATR sous le plus haut 20 s., RSI(2) 85.3 ; seuils 4,7 ATR, ou RSI(2) < 10 et 3 ATR).
+- Supports reels sous le cours (pour le Warden) : 21.09-21.62 (B, -4.46 %) ; 19.58-20.13 (A, -11.05 %) ; 18.51-18.51 (C, -18.18 %) ; 17.65-17.83 (C, -21.21 %) ; 16.6-16.8 (B, -25.76 %)
+- Resistances reelles au-dessus : 23.15-23.42 (B, 2.3 %) ; 24.78-25.17 (A, 9.52 %) ; 25.63-25.84 (A, 13.26 %) ; 26.79-26.8 (A, 18.38 %)
+- _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
@@ -202,5 +203,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (716887 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (719707 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

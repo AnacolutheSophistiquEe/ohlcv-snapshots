@@ -30,12 +30,12 @@ Plan privilegie A (intraday), composite 2/10, conviction 'Unknown'.
 ## Plans d'achat — Swing / Deep (methode v4)
 
 _Cloture 2026-10-08 : 2.81 · ATR Wilder 0.1326 (4.73 %)_
-- **Swing** : alerte a **2.58** (-8.2 % sous la cloture), touchee ~40 % du temps en 10 seances — niveau statistique (aucun support reel a +/- 0,5 ATR). stop INDICATIF 2.24 (-12.87 % ; 2,5 ATR sous le niveau (aucun support proche)).
-- **Deep** : alerte a **2.3** (-18.01 % sous la cloture), touchee ~25 % du temps en 20 seances — niveau statistique (aucun support reel a +/- 0,5 ATR). stop INDICATIF 1.97 (-14.41 % ; 2,5 ATR sous le niveau (aucun support proche)).
+- **Swing** : plage **2.63 → 2.5** (-6.25 % a -10.73 % sous la cloture, 0.95 ATR) — touchee 50 % → 30 % du temps en 10 seances ; aucun support reel dans la plage. stop INDICATIF 2.37 (-5.29 % sous le bas ; 1 ATR sous le bas de la plage (aucun support proche)).
+- **Deep** : plage **2.5 → 1.95** (-10.73 % a -30.54 % sous la cloture, 4.19 ATR) — touchee 48 % → 15 % du temps en 20 seances ; aucun support reel dans la plage. stop INDICATIF 1.82 (-6.8 % sous le bas ; 1 ATR sous le bas de la plage (aucun support proche)).
 - ACHAT PAS CHER : inactif (2.52 ATR sous le plus haut 20 s., RSI(2) 5.6 ; seuils 4,7 ATR, ou RSI(2) < 10 et 3 ATR).
 - Supports reels sous le cours (pour le Warden) : 2.71-2.77 (B, -1.43 %)
 - Resistances reelles au-dessus : 3.1-3.14 (A, 10.41 %) ; 3.18-3.24 (B, 13.19 %) ; 3.37-3.41 (A, 20.24 %) ; 3.45-3.51 (B, 22.85 %)
-- _Swing et Deep sont des niveaux d'ALERTE d'achat (decote) ; le stop est INDICATIF, le Warden decide. Rejeu 2001-2026 : la profondeur fait l'avantage, pas l'emplacement exact du niveau ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
+- _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
@@ -358,5 +358,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (903464 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (903721 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

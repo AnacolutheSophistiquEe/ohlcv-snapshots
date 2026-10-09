@@ -1,6 +1,7 @@
 # LRCX
 
 **Generated** : 2026-08-22T18:32:37.339009+00:00  
+**Couverture** : non publiée (précalcul antérieur au 01/10/2026)  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.6 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 7/10 — **Rating** : Neutral  
@@ -36,15 +37,15 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 Plan privilegie A (intraday), composite 7/10, conviction 'Neutral'.
 
 
-## Niveaux clés & plan principal
+## Plans d'achat — Swing / Deep (methode v4)
 
-**Plan A — intraday** (order_type LMT)
-- Entry (zone de repli) : $309.78–$313.60 (mid $311.69)
-- Spot actuel : $314.00 (+0.7% au-dessus de la zone — repli à attendre)
-- Stop : $306.47 (stop swing_plan-based (-7.16%))
-- Targets : T1 $321.23 · R/R 1.83 | T2 $330.77 · R/R 3.66 | T3 $340.31 · R/R 5.48
-- Activation : entree LMT en attente de touche de zone
-- Invalidation : close sous $306.47
+_Cloture 2026-10-08 : 320.59 · ATR Wilder 13.74 (4.29 %)_
+- **Swing** : plage **303.51 → 292.61** (-5.33 % a -8.73 % sous la cloture, 0.79 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 297.46-302.21 (B). stop INDICATIF 266.15 (-9.04 % sous le bas ; sous le support 273.02-277.74 (- 0,5 ATR)).
+- **Deep** : plage **292.61 → 268.74** (-8.73 % a -16.17 % sous la cloture, 1.74 ATR) — touchee 44 % → 15 % du temps en 20 seances ; supports reels dans la plage : 273.02-277.74 (A). stop INDICATIF 256.37 (-4.6 % sous le bas ; sous le support 263.24-265.09 (- 0,5 ATR)).
+- ACHAT PAS CHER : inactif (2.33 ATR sous le plus haut 20 s., RSI(2) 6.5 ; seuils 4,7 ATR, ou RSI(2) < 10 et 3 ATR).
+- Supports reels sous le cours (pour le Warden) : 306.5-312.77 (C, -2.44 %) ; 297.46-302.21 (B, -5.73 %) ; 273.02-277.74 (A, -13.36 %) ; 263.24-265.09 (B, -17.31 %) ; 250.23-255.92 (A, -20.17 %) ; 240.94-241.17 (A, -24.77 %)
+- Resistances reelles au-dessus : 344.91-345.58 (B, 7.59 %) ; 352.56-356.87 (B, 9.97 %) ; 438.03-438.03 (C, 36.63 %)
+- _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
@@ -193,5 +194,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (722589 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (725405 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

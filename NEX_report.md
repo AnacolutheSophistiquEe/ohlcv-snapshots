@@ -30,12 +30,12 @@ Plan privilegie A (intraday), composite 4/10, conviction 'Pass'.
 ## Plans d'achat — Swing / Deep (methode v4)
 
 _Cloture 2026-10-08 : 127.2 · ATR Wilder 4.23 (3.33 %)_
-- **Swing** : alerte a **120.59** (-5.19 % sous la cloture), touchee ~40 % du temps en 10 seances — cale sur le support reel 117.84-120.59 (note B). stop INDICATIF 113.48 (-5.9 % ; sous le support 115.59-117.16 (- 0,5 ATR)).
-- **Deep** : alerte a **114.01** (-10.37 % sous la cloture), touchee ~25 % du temps en 20 seances — cale sur le support reel 112.93-114.01 (note B). stop INDICATIF 107.54 (-5.68 % ; sous le support 109.66-110.28 (- 0,5 ATR)).
+- **Swing** : plage **122.01 → 118.57** (-4.08 % a -6.78 % sous la cloture, 0.81 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 120.5-122.56 (B) ; 117.84-120.59 (B). stop INDICATIF 113.48 (-4.3 % sous le bas ; sous le support 115.59-117.16 (- 0,5 ATR)).
+- **Deep** : plage **118.57 → 109.03** (-6.78 % a -14.28 % sous la cloture, 2.25 ATR) — touchee 43 % → 15 % du temps en 20 seances ; supports reels dans la plage : 117.84-120.59 (B) ; 115.59-117.16 (B) ; 112.93-114.01 (B) ; 109.66-110.28 (A) ; 107.17-109.18 (A). stop INDICATIF 102.38 (-6.11 % sous le bas ; sous le support 104.49-106.6 (- 0,5 ATR)).
 - 🟢 **ACHAT PAS CHER actif** (COMBO) : 4.35 ATR sous le plus haut 20 s., RSI(2) 6.6. Limite **125.08** (seance suivante), stop catastrophe 108.16, sortie : vente a l'ouverture qui suit la 1re cloture au-dessus de la MM5, au plus tard 21 seances.
 - Supports reels sous le cours (pour le Warden) : 123.8-125.7 (A, -1.18 %) ; 120.5-122.56 (B, -3.65 %) ; 117.84-120.59 (B, -5.19 %) ; 115.59-117.16 (B, -7.9 %) ; 112.93-114.01 (B, -10.37 %) ; 109.66-110.28 (A, -13.3 %)
 - Resistances reelles au-dessus : 129.73-131.79 (A, 1.99 %) ; 131.89-133.87 (B, 3.68 %) ; 134.34-136.3 (A, 5.61 %) ; 137.58-139.35 (A, 8.16 %)
-- _Swing et Deep sont des niveaux d'ALERTE d'achat (decote) ; le stop est INDICATIF, le Warden decide. Rejeu 2001-2026 : la profondeur fait l'avantage, pas l'emplacement exact du niveau ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
+- _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
@@ -330,5 +330,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (856988 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (857537 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

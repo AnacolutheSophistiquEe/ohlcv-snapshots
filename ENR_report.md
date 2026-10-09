@@ -33,13 +33,13 @@ Plan privilegie B (swing), composite 5/10, conviction 'Pass'.
 
 ## Plans d'achat — Swing / Deep (methode v4)
 
-_Cloture 2026-10-08 : 142.5 · ATR Wilder 5.09 (3.57 %)_
-- **Swing** : alerte a **135.72** (-4.76 % sous la cloture), touchee ~40 % du temps en 10 seances — cale sur le support reel 133.85-135.72 (note A). stop INDICATIF 128.35 (-5.43 % ; sous le support 130.89-133.3 (- 0,5 ATR)).
-- **Deep** : alerte a **129.09** (-9.41 % sous la cloture), touchee ~25 % du temps en 20 seances — niveau statistique (aucun support reel a +/- 0,5 ATR). stop INDICATIF 120.28 (-6.83 % ; sous le support 122.83-124.32 (- 0,5 ATR)).
-- ACHAT PAS CHER : inactif (1.67 ATR sous le plus haut 20 s., RSI(2) 19.0 ; seuils 4,7 ATR, ou RSI(2) < 10 et 3 ATR).
-- Supports reels sous le cours (pour le Warden) : 137.46-139.16 (A, -2.34 %) ; 133.85-135.72 (A, -4.76 %) ; 130.89-133.3 (A, -6.46 %) ; 122.83-124.32 (A, -12.76 %) ; 113.47-114.51 (A, -19.64 %) ; 109.88-110.08 (C, -22.75 %)
-- Resistances reelles au-dessus : 146.08-148.06 (A, 2.51 %) ; 150.58-151.76 (A, 5.67 %) ; 156.62-158.85 (A, 9.91 %) ; 159.46-161.46 (A, 11.9 %)
-- _Swing et Deep sont des niveaux d'ALERTE d'achat (decote) ; le stop est INDICATIF, le Warden decide. Rejeu 2001-2026 : la profondeur fait l'avantage, pas l'emplacement exact du niveau ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
+_Cloture 2026-10-08 : 142.54 · ATR Wilder 5.09 (3.57 %)_
+- **Swing** : plage **136.85 → 132.56** (-3.99 % a -7.0 % sous la cloture, 0.84 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 133.85-135.72 (A) ; 130.89-133.3 (A). stop INDICATIF 127.47 (-3.84 % sous le bas ; 1 ATR sous le bas de la plage (aucun support proche)).
+- **Deep** : plage **132.56 → 125.45** (-7.0 % a -11.99 % sous la cloture, 1.4 ATR) — touchee 40 % → 15 % du temps en 20 seances ; supports reels dans la plage : 130.89-133.3 (A). stop INDICATIF 120.28 (-4.12 % sous le bas ; sous le support 122.83-124.32 (- 0,5 ATR)).
+- ACHAT PAS CHER : inactif (1.66 ATR sous le plus haut 20 s., RSI(2) 19.2 ; seuils 4,7 ATR, ou RSI(2) < 10 et 3 ATR).
+- Supports reels sous le cours (pour le Warden) : 137.46-139.16 (A, -2.37 %) ; 133.85-135.72 (A, -4.78 %) ; 130.89-133.3 (A, -6.48 %) ; 122.83-124.32 (A, -12.78 %) ; 113.47-114.51 (A, -19.66 %) ; 109.88-110.08 (C, -22.77 %)
+- Resistances reelles au-dessus : 146.08-148.06 (A, 2.48 %) ; 150.58-151.76 (A, 5.64 %) ; 156.62-158.85 (A, 9.88 %) ; 159.46-161.46 (A, 11.87 %)
+- _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
@@ -339,5 +339,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (908560 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (908949 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
