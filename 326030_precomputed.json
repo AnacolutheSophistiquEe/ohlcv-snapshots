@@ -6,7 +6,7 @@
     "exchange": "KRX (KOSPI)",
     "currency": "KRW",
     "isin": "KR7326030004",
-    "generated_at": "2026-10-09T00:22:49.503509+00:00",
+    "generated_at": "2026-10-09T22:04:35.020564+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1480,31 +1480,31 @@
   "relative_strength": {
     "ticker": "326030",
     "benchmark": "KS11",
-    "n_common_dates": 243,
+    "n_common_dates": 244,
     "relative_perf_pct": {
-      "1M": -15.45,
-      "3M": 4.05,
-      "6M": -47.42,
+      "1M": -15.13,
+      "3M": 4.25,
+      "6M": -49.5,
       "1Y": null
     },
     "perf_breakdown": {
       "1M": {
-        "asset": -12.04,
-        "benchmark": 3.41
+        "asset": -16.05,
+        "benchmark": -0.92
       },
       "3M": {
-        "asset": -11.83,
-        "benchmark": -15.88
+        "asset": -13.45,
+        "benchmark": -17.7
       },
       "6M": {
-        "asset": -23.23,
-        "benchmark": 24.19
+        "asset": -22.91,
+        "benchmark": 26.59
       },
       "1Y": null
     },
-    "z_score_1y_daily_relative": 0.5,
+    "z_score_1y_daily_relative": -0.41,
     "price_ratio_trend_60d": "falling",
-    "interpretation": "underperform fort 1M (-15.4%); ratio actif/benchmark en baisse 60d"
+    "interpretation": "underperform fort 1M (-15.1%); ratio actif/benchmark en baisse 60d"
   },
   "ta_score": {
     "score": 2,
@@ -1779,7 +1779,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.2871,
+          "p_touch": 0.287,
           "p_touch_ref": "entry_mid",
           "distance_pct": 1.4
         },
@@ -1843,7 +1843,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.3751,
+          "p_touch": 0.375,
           "p_touch_ref": "entry_mid",
           "distance_pct": 3.23
         },
@@ -1856,7 +1856,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.1175,
+          "p_touch": 0.1173,
           "p_touch_ref": "entry_mid",
           "distance_pct": 6.46
         },
@@ -1869,7 +1869,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.1175,
+          "p_touch": 0.1173,
           "p_touch_ref": "entry_mid",
           "distance_pct": 9.69
         }
@@ -1907,7 +1907,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.5375,
+          "p_touch": 0.5374,
           "p_touch_ref": "entry_mid",
           "distance_pct": 4.7
         },
@@ -1920,7 +1920,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.2505,
+          "p_touch": 0.2503,
           "p_touch_ref": "entry_mid",
           "distance_pct": 9.41
         },
@@ -2397,7 +2397,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-10-09T00:22:22.526485+00:00",
+    "generated_at": "2026-10-09T22:03:57.536601+00:00",
     "n_sessions": 125,
     "sessions_distinct": 125,
     "regime_window": "recent",
@@ -7727,7 +7727,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-10-09T00:22:08.021702+00:00",
+    "generated_at": "2026-10-09T22:03:38.193672+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -7985,10 +7985,10 @@
     "note": "ADVISORY observe-only : aucun ordre piloté. Grille = hypothèse jusqu'à recalibration M7. Capital 2000 € (réel). Le skill peut re-dériver avec un capital utilisateur.",
     "currency": "KRW",
     "currency_source": "TICKER_METADATA (run_local.py)",
-    "fx_rate": 1503.98556174,
+    "fx_rate": 1505.57061126,
     "fx_rate_definition": "unites de devise du titre pour 1 EUR",
     "fx_source": "tws_live_state.account.exchange_rates (inverse)",
-    "fx_as_of": "2026-10-08T19:00:21+0200",
+    "fx_as_of": "2026-10-09T23:29:56+0200",
     "fx_stale": false,
     "status": "skip_low_score",
     "notional_target_eur": 0.0,
@@ -7996,14 +7996,14 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-10-09T00:22:31.408369+00:00",
+    "generated_at": "2026-10-09T22:04:10.007649+00:00",
     "ticker": "326030",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 16,
+    "n_events": 20,
     "events": [
       {
         "date": "2026-10-09",
@@ -8131,6 +8131,21 @@
         "recommendation": null
       },
       {
+        "date": "2026-10-14",
+        "type": "macro",
+        "label": "US Q3 2026 Earnings Season Kick-Off — JPM, WFC, BLK (14/10/2026)",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
         "date": "2026-10-15",
         "type": "macro",
         "label": "US PPI Final Demand (headline)",
@@ -8241,6 +8256,48 @@
         "importance": "high",
         "sessions_to_event": 9,
         "calendar_days": 12,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-22",
+        "type": "macro",
+        "label": "US Initial Jobless Claims (weekly)",
+        "importance": "medium",
+        "sessions_to_event": 9,
+        "calendar_days": 13,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-22",
+        "type": "macro",
+        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
+        "importance": "low",
+        "sessions_to_event": 9,
+        "calendar_days": 13,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-23",
+        "type": "macro",
+        "label": "US University of Michigan Consumer Sentiment (prelim + final)",
+        "importance": "medium",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8685,7 +8742,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-10-09T00:22:29.963022+00:00",
+    "generated_at": "2026-10-09T22:04:08.407266+00:00",
     "ticker": "326030",
     "window_sessions": 60,
     "n_observations_aligned": 54,
@@ -8714,27 +8771,27 @@
     },
     "multicollinearity_diagnostics": {
       "vif_initial": {
-        "market": 5.38,
-        "sector": 1.41,
-        "momentum": 8.23,
-        "quality": 8.69,
-        "value": 4.74,
-        "growth": 6.9,
-        "low_vol": 4.16
+        "market": 5.39,
+        "sector": 1.42,
+        "momentum": 7.69,
+        "quality": 9.02,
+        "value": 4.58,
+        "growth": 7.21,
+        "low_vol": 3.97
       },
       "vif_threshold": 10.0,
       "dropped_factors": [],
       "dropped_factors_detail": [],
       "vif_after_stepwise": {
-        "market": 5.38,
-        "sector": 1.41,
-        "momentum": 8.23,
-        "quality": 8.69,
-        "value": 4.74,
-        "growth": 6.9,
-        "low_vol": 4.16
+        "market": 5.39,
+        "sector": 1.42,
+        "momentum": 7.69,
+        "quality": 9.02,
+        "value": 4.58,
+        "growth": 7.21,
+        "low_vol": 3.97
       },
-      "condition_number": 23.5,
+      "condition_number": 23.6,
       "ridge_fallback_used": false,
       "factors_kept_in_model": [
         "market",
@@ -8748,31 +8805,31 @@
     },
     "regression": {
       "betas": {
-        "market": -0.1608,
-        "sector": 0.1073,
-        "momentum": 1.4237,
-        "quality": 0.1997,
-        "value": 1.3358,
-        "growth": -1.9343,
-        "low_vol": 0.5558
+        "market": -0.117,
+        "sector": 0.0941,
+        "momentum": 1.2163,
+        "quality": -0.1826,
+        "value": 1.1267,
+        "growth": -1.4331,
+        "low_vol": 0.4969
       },
       "t_stats": {
-        "market": -0.79,
-        "sector": 0.535,
-        "momentum": 2.663,
-        "quality": 0.128,
-        "value": 1.086,
-        "growth": -2.604,
-        "low_vol": 0.46
+        "market": -0.536,
+        "sector": 0.431,
+        "momentum": 2.159,
+        "quality": -0.107,
+        "value": 0.861,
+        "growth": -1.74,
+        "low_vol": 0.384
       },
       "p_values": {
-        "market": 0.43363,
-        "sector": 0.59504,
-        "momentum": 0.01064,
-        "quality": 0.89908,
-        "value": 0.28322,
-        "growth": 0.01235,
-        "low_vol": 0.64786
+        "market": 0.59486,
+        "sector": 0.66876,
+        "momentum": 0.0361,
+        "quality": 0.91521,
+        "value": 0.39386,
+        "growth": 0.08849,
+        "low_vol": 0.70258
       },
       "significance": {
         "market": "ns",
@@ -8780,7 +8837,7 @@
         "momentum": "*",
         "quality": "ns",
         "value": "ns",
-        "growth": "*",
+        "growth": "ns",
         "low_vol": "ns"
       },
       "is_significant": {
@@ -8789,97 +8846,97 @@
         "momentum": true,
         "quality": false,
         "value": false,
-        "growth": true,
+        "growth": false,
         "low_vol": false
       },
-      "n_significant_factors": 2,
+      "n_significant_factors": 1,
       "significance_threshold": 0.05,
-      "r_squared": 0.196,
-      "adj_r_squared": 0.074,
-      "alpha_daily_pct": -0.0066,
-      "alpha_t_stat": -0.02,
-      "alpha_p_value": 0.98387,
+      "r_squared": 0.132,
+      "adj_r_squared": -0.0,
+      "alpha_daily_pct": -0.1193,
+      "alpha_t_stat": -0.346,
+      "alpha_p_value": 0.73106,
       "alpha_significant": false
     },
     "return_attribution_30d": {
       "window_sessions": 30,
-      "total_return_pct": -11.076,
+      "total_return_pct": -12.225,
       "contribution_by_factor": {
-        "market": -0.395,
-        "sector": -1.01,
-        "momentum": 7.334,
-        "quality": 0.11,
-        "value": -3.148,
-        "growth": -7.63,
-        "low_vol": -0.738
+        "market": 0.206,
+        "sector": -1.079,
+        "momentum": 4.302,
+        "quality": -0.043,
+        "value": -2.6,
+        "growth": -3.136,
+        "low_vol": -0.671
       },
       "contribution_by_factor_significant": {
         "market": 0.0,
         "sector": 0.0,
-        "momentum": 7.334,
+        "momentum": 4.302,
         "quality": 0.0,
         "value": 0.0,
-        "growth": -7.63,
+        "growth": 0.0,
         "low_vol": 0.0
       },
-      "alpha_contribution_pct": -0.198,
-      "idiosyncratic_pct": -5.401,
-      "idiosyncratic_share": 0.804
+      "alpha_contribution_pct": -3.578,
+      "idiosyncratic_pct": -5.626,
+      "idiosyncratic_share": 0.868
     },
     "stacked_bar_segments": [
       {
         "name": "market",
-        "contribution_pct": -0.395,
+        "contribution_pct": 0.206,
         "significant": false,
-        "p_value": 0.43363,
-        "share": 0.0152
+        "p_value": 0.59486,
+        "share": 0.0097
       },
       {
         "name": "sector",
-        "contribution_pct": -1.01,
+        "contribution_pct": -1.079,
         "significant": false,
-        "p_value": 0.59504,
-        "share": 0.0389
+        "p_value": 0.66876,
+        "share": 0.0508
       },
       {
         "name": "momentum",
-        "contribution_pct": 7.334,
+        "contribution_pct": 4.302,
         "significant": true,
-        "p_value": 0.01064,
-        "share": 0.2825
+        "p_value": 0.0361,
+        "share": 0.2025
       },
       {
         "name": "quality",
-        "contribution_pct": 0.11,
+        "contribution_pct": -0.043,
         "significant": false,
-        "p_value": 0.89908,
-        "share": 0.0042
+        "p_value": 0.91521,
+        "share": 0.002
       },
       {
         "name": "value",
-        "contribution_pct": -3.148,
+        "contribution_pct": -2.6,
         "significant": false,
-        "p_value": 0.28322,
-        "share": 0.1212
+        "p_value": 0.39386,
+        "share": 0.1224
       },
       {
         "name": "growth",
-        "contribution_pct": -7.63,
-        "significant": true,
-        "p_value": 0.01235,
-        "share": 0.2939
+        "contribution_pct": -3.136,
+        "significant": false,
+        "p_value": 0.08849,
+        "share": 0.1476
       },
       {
         "name": "low_vol",
-        "contribution_pct": -0.738,
+        "contribution_pct": -0.671,
         "significant": false,
-        "p_value": 0.64786,
-        "share": 0.0284
+        "p_value": 0.70258,
+        "share": 0.0316
       },
       {
         "name": "idiosyncratic",
-        "contribution_pct": -5.401,
-        "share": 0.208
+        "contribution_pct": -5.626,
+        "share": 0.2649
       }
     ],
     "flags": {
@@ -8889,7 +8946,7 @@
       "duration_play": false,
       "low_explanatory_power": true,
       "no_significant_factor": false,
-      "n_significant_factors": 2,
+      "n_significant_factors": 1,
       "multicollinearity_detected_initial": false,
       "multicollinearity_resolved": false,
       "fallback_ridge_used": false,
@@ -8909,7 +8966,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-10-09T00:22:27.481755+00:00",
+    "generated_at": "2026-10-09T22:04:04.888771+00:00",
     "ticker": "326030",
     "yahoo": "326030.KS",
     "source": "yfinance.Ticker.info",
@@ -8937,9 +8994,9 @@
       "shares_outstanding": 78313250.0,
       "float_shares": 39045420.0,
       "free_float_pct": 49.9,
-      "avg_volume_3m": 128898.0,
-      "adv_str": "128.9 k titres",
-      "avg_volume_10d": 87158.0,
+      "avg_volume_3m": 128650.0,
+      "adv_str": "128.7 k titres",
+      "avg_volume_10d": 95071.0,
       "archetype_suggested": "compounder",
       "archetype_basis": "marge nette 46.6 % > 15 % et croissance 40 % > 10 %",
       "business_summary_raw": "SK Biopharmaceuticals Co., Ltd., a pharmaceutical company, engages in the research, development, and commercialization of drugs for the treatment of central nervous system disorders. The company offers Cenobamate, an anti-seizure medication for the treatment of epilepsy and Solriamfetol medication. It develops Carisbamate that is in Phase 3 trials to treat lennox-gastaut syndrome; Relenopride, which is in Phase 2 clinical trials for treatment of rare neurological disease; SKL24741, which is in Phase 1 clinical trials for the treatment of epilepsy; SKL20540, which is in Phase 1 clinical trials for the treatment of schizophrenia; SKL27969 for treatment of advanced solid tumors; SKL13865 clinical trials to treat attention deficit/hyperactivity disorder; and SKL-PSY that is in Phase 1 clinical trials to treat bipolar disorder. The company was founded in 1993 and is headquartered in Seongnam-si, South Korea. SK Biopharmaceuticals Co., Ltd. operates as a subsidiary of SK Inc."
@@ -9017,14 +9074,14 @@
     },
     "ownership": {
       "insiders_pct": 50.2,
-      "institutions_pct": 11.88,
+      "institutions_pct": 11.87,
       "short_pct_float": null,
       "short_ratio_days": null
     },
     "market": {
       "beta": 0.705,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": -27.27,
+      "change_52w_pct": -30.03,
       "low_52w": 72700.0,
       "high_52w": 144100.0
     },
@@ -9042,9 +9099,9 @@
     "portfolio_fit": {
       "beta": 0.05,
       "beta_ref": "EWY",
-      "beta_days": 468,
+      "beta_days": 469,
       "correlation": 0.05,
-      "correlation_note": "correlation 0.05 avec EWY sur 468 seances"
+      "correlation_note": "correlation 0.05 avec EWY sur 469 seances"
     },
     "debt_bridge": {
       "as_of": "2026-06-30",
@@ -9320,7 +9377,7 @@
       },
       {
         "field": "identity.adv_str",
-        "value": "128.9 k titres",
+        "value": "128.7 k titres",
         "from": "fundamentals.identity.adv_str"
       },
       {
@@ -9540,7 +9597,7 @@
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 11.88,
+        "value": 11.87,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -9590,7 +9647,7 @@
       },
       {
         "field": "portfolio_fit.correlation_note",
-        "value": "correlation 0.05 avec EWY sur 468 seances",
+        "value": "correlation 0.05 avec EWY sur 469 seances",
         "from": "fundamentals.portfolio_fit.correlation_note"
       }
     ],
@@ -9604,7 +9661,7 @@
       "scope": "univers suivi par le pipeline",
       "not_market_median": "mediane des titres SUIVIS par ce pipeline dans le meme secteur Yahoo — PAS une mediane de marche, de secteur GICS complet ni d'indice",
       "sector": "Healthcare",
-      "aggregate_generated_at": "2026-10-09T00:04:30.991019+00:00",
+      "aggregate_generated_at": "2026-10-09T21:39:02.281050+00:00",
       "aggregate_file": "sector_multiples.json",
       "aggregate_age_days": 0.0,
       "n_titles": 30,
@@ -9612,64 +9669,64 @@
       "metrics": {
         "pe_trailing": {
           "n": 8,
-          "q1": 24.24,
-          "median": 36.7,
+          "q1": 24.18,
+          "median": 36.96,
           "q3": 89.47,
-          "min": 14.06,
-          "max": 109.33,
+          "min": 13.84,
+          "max": 108.67,
           "self": null,
           "self_vs_median_pct": null,
           "thin": false
         },
         "pe_fwd": {
           "n": 12,
-          "q1": 13.0,
-          "median": 19.5,
-          "q3": 32.45,
+          "q1": 12.83,
+          "median": 19.17,
+          "q3": 32.51,
           "min": 10.29,
           "max": 44.61,
           "self": 13.98,
-          "self_vs_median_pct": -28.3,
+          "self_vs_median_pct": -27.1,
           "thin": false
         },
         "ev_ebitda_ttm": {
           "n": 12,
           "q1": 10.29,
-          "median": 16.79,
-          "q3": 25.92,
-          "min": 4.82,
+          "median": 16.57,
+          "q3": 25.93,
+          "min": 4.87,
           "max": 126.78,
           "self": 16.8,
-          "self_vs_median_pct": 0.1,
+          "self_vs_median_pct": 1.4,
           "thin": false
         },
         "ev_revenue_ttm": {
           "n": 26,
-          "q1": 2.36,
-          "median": 6.65,
-          "q3": 22.21,
+          "q1": 2.32,
+          "median": 6.62,
+          "q3": 21.82,
           "min": 0.42,
           "max": 259.95,
           "self": 6.22,
-          "self_vs_median_pct": -6.5,
+          "self_vs_median_pct": -6.0,
           "thin": false
         },
         "ps_ttm": {
           "n": 26,
-          "q1": 2.47,
-          "median": 8.33,
-          "q3": 28.23,
+          "q1": 2.45,
+          "median": 8.18,
+          "q3": 28.09,
           "min": 0.22,
-          "max": 377.98,
+          "max": 364.19,
           "self": 6.61,
-          "self_vs_median_pct": -20.6,
+          "self_vs_median_pct": -19.2,
           "thin": false
         },
         "price_to_book": {
           "n": 28,
-          "q1": 1.71,
-          "median": 3.08,
-          "q3": 6.76,
+          "q1": 1.7,
+          "median": 3.02,
+          "q3": 6.71,
           "min": 0.32,
           "max": 96.78,
           "self": null,
@@ -9678,13 +9735,13 @@
         },
         "fcf_yield_pct": {
           "n": 30,
-          "q1": -9.43,
-          "median": -0.86,
-          "q3": 2.28,
+          "q1": -9.51,
+          "median": -0.87,
+          "q3": 2.27,
           "min": -19.15,
-          "max": 76.69,
+          "max": 77.16,
           "self": 1.97,
-          "self_vs_median_pts": 2.83,
+          "self_vs_median_pts": 2.84,
           "thin": false
         },
         "dividend_yield_pct": {
@@ -9880,7 +9937,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-10-09T00:22:06.356931+00:00",
+    "generated_at": "2026-10-09T22:03:35.658072+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/326030_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1219,
@@ -10288,7 +10345,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-10-09T00:22:07.795160+00:00",
+    "generated_at": "2026-10-09T22:03:37.809586+00:00",
     "ticker": "326030",
     "source_csv": "326030_daily_long.csv",
     "n_sessions": 1220,
@@ -14339,10 +14396,10 @@
   },
   "beta_dynamic": {
     "available": true,
-    "beta_60d": 0.189,
-    "beta_252d": 0.4332,
-    "correlation_60d": 0.2987,
-    "correlation_252d": 0.5023,
+    "beta_60d": 0.2001,
+    "beta_252d": 0.4364,
+    "correlation_60d": 0.3121,
+    "correlation_252d": 0.5062,
     "ratio_price_benchmark_trend_60d": "falling"
   },
   "streaks": {
@@ -22276,22 +22333,22 @@
     "asset_market": "KR",
     "benchmark_market": "KR",
     "beta_up_days": 0.4326,
-    "beta_down_days": 0.5966,
-    "beta_asymmetry": 1.3791,
+    "beta_down_days": 0.5995,
+    "beta_asymmetry": 1.3858,
     "n_up_days": 665,
-    "n_down_days": 553,
+    "n_down_days": 554,
     "interpretation": "intermediate",
-    "window_days": 1218,
+    "window_days": 1219,
     "window_mode": "historique complet",
     "recent_252d": {
       "beta_up_days": 0.3979,
-      "beta_down_days": 0.5971,
-      "beta_asymmetry": 1.5006,
+      "beta_down_days": 0.5963,
+      "beta_asymmetry": 1.4985,
       "n_up_days": 151,
-      "n_down_days": 91,
-      "window_days": 242
+      "n_down_days": 92,
+      "window_days": 243
     },
-    "beta_down_shift_ratio": 1.001,
+    "beta_down_shift_ratio": 0.995,
     "beta_down_shift_note": "rapport entre le beta de baisse RECENT (252 seances) et celui de l'historique complet. Loin de 1 = le titre a change de sensibilite au marche ; c'est une information, pas une erreur.",
     "window_choice_note": "fenetre longue retenue apres mesure hors echantillon (18 couples, 878 points) : au-dela de 252 seances le gain est reel mais non significatif, tandis que RACCOURCIR degrade significativement. Le beta n'est pas une grandeur de regime rapide, contrairement a la volatilite."
   },
@@ -22565,7 +22622,7 @@
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-09T00:22:46.898721+00:00",
+        "asof_utc": "2026-10-09T22:04:31.342143+00:00",
         "venue": "KRX",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -22577,7 +22634,7 @@
         "detected_from": "en-tête CSV « # Backfilled-from-h1 » (deploy/ohlcv_snapshot.py)",
         "excluded_from": [],
         "producer_daily_source": "yfinance",
-        "producer_daily_freshness": "fresh (last-bar 2026-10-08, expected 2026-10-08)",
+        "producer_daily_freshness": "stale_1d (last-bar 2026-10-08, expected 2026-10-09)",
         "supplemented_dates": []
       },
       "overall": {
@@ -22631,7 +22688,7 @@
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-09T00:22:46.898721+00:00",
+        "asof_utc": "2026-10-09T22:04:31.342143+00:00",
         "venue": "KRX",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -22684,7 +22741,7 @@
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-09T00:22:46.898721+00:00",
+        "asof_utc": "2026-10-09T22:04:31.342143+00:00",
         "venue": "KRX",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23020,7 +23077,7 @@
         }
       }
     ],
-    "generated_at": "2026-10-09T00:22:50.039959+00:00",
+    "generated_at": "2026-10-09T22:04:35.772265+00:00",
     "history_file": "data/v3/episodes/326030_episodes.json"
   },
   "setup": {
@@ -23122,26 +23179,26 @@
         "CORRECTION": 2,
         "CAPITULATION": 2
       },
-      "252": {
-        "NOISE": 2,
-        "PULLBACK": 1,
-        "CORRECTION": 1,
-        "CAPITULATION": 0
-      },
       "20": {
         "NOISE": 18,
         "PULLBACK": 14,
         "CORRECTION": 5,
         "CAPITULATION": 2
+      },
+      "252": {
+        "NOISE": 2,
+        "PULLBACK": 1,
+        "CORRECTION": 1,
+        "CAPITULATION": 0
       }
     },
-    "generated_at": "2026-10-09T00:22:50.100244+00:00"
+    "generated_at": "2026-10-09T22:04:35.879027+00:00"
   },
   "profiles": {
     "version": "profiles/1.0",
     "provenance": "v3",
     "status": "UNVALIDATED",
-    "generated_at": "2026-10-09T00:04:01.481920+00:00",
+    "generated_at": "2026-10-09T21:38:21.682466+00:00",
     "n_occasions": 608,
     "zones_open_episodes": [
       {

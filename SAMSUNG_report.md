@@ -1,6 +1,6 @@
 # 005930
 
-**Generated** : 2026-10-09T00:17:11.196901+00:00  
+**Generated** : 2026-10-09T21:56:45.887238+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -26,9 +26,9 @@ Plan privilegie B (swing), composite 6/10, conviction 'Pass'.
 
 _Cloture 2026-10-08 : 262000.0 · ATR Wilder 11037.69 (4.21 %)_
 - **Swing** : plage **248811.52 → 240757.67** (-5.03 % a -8.11 % sous la cloture, 0.73 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 246000.0-246500.0 (B) ; 240000.0-245000.0 (A). stop INDICATIF 229719.98 (-4.58 % sous le bas ; 1 ATR sous le bas de la plage (aucun support proche)).
-- **Deep** : plage **240757.67 → 217146.8** (-8.11 % a -17.12 % sous la cloture, 2.14 ATR) — touchee 41 % → 15 % du temps en 20 seances ; supports reels dans la plage : 240000.0-245000.0 (A) ; 222294.24-227500.0 (A). stop INDICATIF 206109.11 (-5.08 % sous le bas ; 1 ATR sous le bas de la plage (aucun support proche)).
+- **Deep** : plage **240757.67 → 217146.8** (-8.11 % a -17.12 % sous la cloture, 2.14 ATR) — touchee 41 % → 15 % du temps en 20 seances ; supports reels dans la plage : 240000.0-245000.0 (A) ; 222294.22-227500.0 (A). stop INDICATIF 206109.11 (-5.08 % sous le bas ; 1 ATR sous le bas de la plage (aucun support proche)).
 - ACHAT PAS CHER : inactif (2.13 ATR sous le plus haut 20 s., RSI(2) 5.6 ; seuils 4,7 ATR, ou RSI(2) < 10 et 3 ATR).
-- Supports reels sous le cours (pour le Warden) : 246000.0-246500.0 (B, -5.92 %) ; 240000.0-245000.0 (A, -6.49 %) ; 222294.24-227500.0 (A, -13.17 %) ; 189200.0-194183.48 (A, -25.88 %) ; 166770.51-168863.88 (A, -35.55 %) ; 148727.8-151120.2 (B, -42.32 %)
+- Supports reels sous le cours (pour le Warden) : 246000.0-246500.0 (B, -5.92 %) ; 240000.0-245000.0 (A, -6.49 %) ; 222294.22-227500.0 (A, -13.17 %) ; 189200.0-194183.48 (A, -25.88 %) ; 166770.53-168863.88 (A, -35.55 %) ; 148727.8-151120.2 (B, -42.32 %)
 - Resistances reelles au-dessus : 276000.0-281500.0 (A, 5.34 %) ; 285500.0-288000.0 (A, 8.97 %) ; 369592.41-374087.45 (B, 41.07 %)
 - _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
@@ -54,12 +54,12 @@ _Cloture 2026-10-08 : 262000.0 · ATR Wilder 11037.69 (4.21 %)_
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -6.38 % vs -7.35 % si l'on extrapolait par √5 _(rapport 0.869 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.1735** (β de hausse 1.3398, asymétrie 0.8758) vs KS11 — 553 séances de repli, historique complet
+- **β de baisse : 1.1728** (β de hausse 1.3398, asymétrie 0.8753) vs KS11 — 554 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.293 | EV/share : ₩2829.134 | p_fill : —
+- EV/risk : 0.293 | EV/share : ₩2829.135 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 55 % | T2 36 % | T3 19 %
 - Kelly (position) : f* 0.215 | ¼-Kelly 0.054 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
@@ -151,7 +151,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.31 · part idiosyncratique 0.69
+**Factor** : R² 0.27 · part idiosyncratique 0.73
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -180,5 +180,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (573081 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (606581 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

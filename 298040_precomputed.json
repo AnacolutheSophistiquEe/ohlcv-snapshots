@@ -6,7 +6,7 @@
     "exchange": "KRX (KOSPI)",
     "currency": "KRW",
     "isin": "KR7298040007",
-    "generated_at": "2026-10-09T00:19:25.506488+00:00",
+    "generated_at": "2026-10-09T21:59:49.661824+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1517,31 +1517,31 @@
   "relative_strength": {
     "ticker": "298040",
     "benchmark": "KS11",
-    "n_common_dates": 243,
+    "n_common_dates": 244,
     "relative_perf_pct": {
-      "1M": -8.44,
-      "3M": -6.24,
-      "6M": -26.68,
+      "1M": -7.8,
+      "3M": -2.28,
+      "6M": -27.55,
       "1Y": null
     },
     "perf_breakdown": {
       "1M": {
-        "asset": -5.03,
-        "benchmark": 3.41
+        "asset": -8.71,
+        "benchmark": -0.92
       },
       "3M": {
-        "asset": -22.12,
-        "benchmark": -15.88
+        "asset": -19.99,
+        "benchmark": -17.7
       },
       "6M": {
-        "asset": -2.49,
-        "benchmark": 24.19
+        "asset": -0.95,
+        "benchmark": 26.59
       },
       "1Y": null
     },
-    "z_score_1y_daily_relative": -1.64,
+    "z_score_1y_daily_relative": -0.29,
     "price_ratio_trend_60d": "rising",
-    "interpretation": "underperform fort 1M (-8.4%); ratio actif/benchmark en hausse 60d"
+    "interpretation": "underperform fort 1M (-7.8%); ratio actif/benchmark en hausse 60d"
   },
   "ta_score": {
     "score": 2,
@@ -1822,7 +1822,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.6581,
+          "p_touch": 0.658,
           "p_touch_ref": "entry_mid",
           "distance_pct": 2.42
         },
@@ -1835,7 +1835,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.2871,
+          "p_touch": 0.287,
           "p_touch_ref": "entry_mid",
           "distance_pct": 4.84
         },
@@ -1899,7 +1899,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.1175,
+          "p_touch": 0.1173,
           "p_touch_ref": "entry_mid",
           "distance_pct": 12.75
         },
@@ -1912,7 +1912,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.1175,
+          "p_touch": 0.1173,
           "p_touch_ref": "entry_mid",
           "distance_pct": 18.21
         }
@@ -1950,7 +1950,7 @@
           "placement": "sous_niveau",
           "level_price": 2654000.0,
           "beyond_band95": false,
-          "p_touch": 0.5375,
+          "p_touch": 0.5374,
           "p_touch_ref": "entry_mid",
           "distance_pct": 8.06
         },
@@ -1963,7 +1963,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.2505,
+          "p_touch": 0.2503,
           "p_touch_ref": "entry_mid",
           "distance_pct": 15.83
         },
@@ -2534,7 +2534,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-10-09T00:18:58.117868+00:00",
+    "generated_at": "2026-10-09T21:59:12.608260+00:00",
     "n_sessions": 125,
     "sessions_distinct": 125,
     "regime_window": "recent",
@@ -7817,7 +7817,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-10-09T00:18:43.494654+00:00",
+    "generated_at": "2026-10-09T21:58:51.433273+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8075,10 +8075,10 @@
     "note": "ADVISORY observe-only : aucun ordre piloté. Grille = hypothèse jusqu'à recalibration M7. Capital 2000 € (réel). Le skill peut re-dériver avec un capital utilisateur.",
     "currency": "KRW",
     "currency_source": "TICKER_METADATA (run_local.py)",
-    "fx_rate": 1503.98556174,
+    "fx_rate": 1505.57061126,
     "fx_rate_definition": "unites de devise du titre pour 1 EUR",
     "fx_source": "tws_live_state.account.exchange_rates (inverse)",
-    "fx_as_of": "2026-10-08T19:00:21+0200",
+    "fx_as_of": "2026-10-09T23:29:56+0200",
     "fx_stale": false,
     "status": "skip_low_score",
     "notional_target_eur": 0.0,
@@ -8086,14 +8086,14 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-10-09T00:19:07.859879+00:00",
+    "generated_at": "2026-10-09T21:59:25.389852+00:00",
     "ticker": "298040",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 16,
+    "n_events": 20,
     "events": [
       {
         "date": "2026-10-09",
@@ -8221,6 +8221,21 @@
         "recommendation": null
       },
       {
+        "date": "2026-10-14",
+        "type": "macro",
+        "label": "US Q3 2026 Earnings Season Kick-Off — JPM, WFC, BLK (14/10/2026)",
+        "importance": "high",
+        "sessions_to_event": 4,
+        "calendar_days": 5,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
         "date": "2026-10-15",
         "type": "macro",
         "label": "US PPI Final Demand (headline)",
@@ -8331,6 +8346,48 @@
         "importance": "high",
         "sessions_to_event": 9,
         "calendar_days": 12,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-22",
+        "type": "macro",
+        "label": "US Initial Jobless Claims (weekly)",
+        "importance": "medium",
+        "sessions_to_event": 9,
+        "calendar_days": 13,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-22",
+        "type": "macro",
+        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
+        "importance": "low",
+        "sessions_to_event": 9,
+        "calendar_days": 13,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-23",
+        "type": "macro",
+        "label": "US University of Michigan Consumer Sentiment (prelim + final)",
+        "importance": "medium",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8756,7 +8813,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-10-09T00:19:06.612039+00:00",
+    "generated_at": "2026-10-09T21:59:23.595433+00:00",
     "ticker": "298040",
     "window_sessions": 60,
     "n_observations_aligned": 54,
@@ -8785,25 +8842,25 @@
     },
     "multicollinearity_diagnostics": {
       "vif_initial": {
-        "market": 4.73,
-        "sector": 5.81,
-        "momentum": 9.03,
-        "quality": 8.79,
-        "value": 5.37,
-        "growth": 7.26,
-        "low_vol": 4.36
+        "market": 4.65,
+        "sector": 5.45,
+        "momentum": 8.63,
+        "quality": 9.05,
+        "value": 5.21,
+        "growth": 7.5,
+        "low_vol": 4.14
       },
       "vif_threshold": 10.0,
       "dropped_factors": [],
       "dropped_factors_detail": [],
       "vif_after_stepwise": {
-        "market": 4.73,
-        "sector": 5.81,
-        "momentum": 9.03,
-        "quality": 8.79,
-        "value": 5.37,
-        "growth": 7.26,
-        "low_vol": 4.36
+        "market": 4.65,
+        "sector": 5.45,
+        "momentum": 8.63,
+        "quality": 9.05,
+        "value": 5.21,
+        "growth": 7.5,
+        "low_vol": 4.14
       },
       "condition_number": 24.9,
       "ridge_fallback_used": false,
@@ -8819,31 +8876,31 @@
     },
     "regression": {
       "betas": {
-        "market": -0.5697,
-        "sector": 1.5142,
-        "momentum": 0.4294,
-        "quality": -1.9098,
-        "value": -0.2693,
-        "growth": 1.069,
-        "low_vol": 1.6357
+        "market": -0.5582,
+        "sector": 1.4593,
+        "momentum": 0.343,
+        "quality": -2.3765,
+        "value": -0.3195,
+        "growth": 1.5495,
+        "low_vol": 1.5122
       },
       "t_stats": {
-        "market": -1.142,
-        "sector": 1.244,
-        "momentum": 0.293,
-        "quality": -0.464,
-        "value": -0.079,
-        "growth": 0.537,
-        "low_vol": 0.506
+        "market": -1.122,
+        "sector": 1.208,
+        "momentum": 0.234,
+        "quality": -0.567,
+        "value": -0.093,
+        "growth": 0.752,
+        "low_vol": 0.467
       },
       "p_values": {
-        "market": 0.25953,
-        "sector": 0.21987,
-        "momentum": 0.77061,
-        "quality": 0.64494,
-        "value": 0.93763,
-        "growth": 0.59396,
-        "low_vol": 0.61561
+        "market": 0.26777,
+        "sector": 0.23315,
+        "momentum": 0.81576,
+        "quality": 0.57348,
+        "value": 0.92609,
+        "growth": 0.45581,
+        "low_vol": 0.64278
       },
       "significance": {
         "market": "ns",
@@ -8865,24 +8922,24 @@
       },
       "n_significant_factors": 0,
       "significance_threshold": 0.05,
-      "r_squared": 0.123,
-      "adj_r_squared": -0.011,
-      "alpha_daily_pct": -0.3476,
-      "alpha_t_stat": -0.412,
-      "alpha_p_value": 0.6825,
+      "r_squared": 0.124,
+      "adj_r_squared": -0.01,
+      "alpha_daily_pct": -0.429,
+      "alpha_t_stat": -0.51,
+      "alpha_p_value": 0.61282,
       "alpha_significant": false
     },
     "return_attribution_30d": {
       "window_sessions": 30,
-      "total_return_pct": -18.073,
+      "total_return_pct": -16.895,
       "contribution_by_factor": {
-        "market": -1.399,
-        "sector": -0.469,
-        "momentum": 2.212,
-        "quality": -1.049,
-        "value": 0.635,
-        "growth": 4.217,
-        "low_vol": -2.172
+        "market": 0.981,
+        "sector": -1.514,
+        "momentum": 1.213,
+        "quality": -0.565,
+        "value": 0.737,
+        "growth": 3.391,
+        "low_vol": -2.043
       },
       "contribution_by_factor_significant": {
         "market": 0.0,
@@ -8893,64 +8950,64 @@
         "growth": 0.0,
         "low_vol": 0.0
       },
-      "alpha_contribution_pct": -10.427,
-      "idiosyncratic_pct": -9.621,
-      "idiosyncratic_share": 0.877
+      "alpha_contribution_pct": -12.87,
+      "idiosyncratic_pct": -6.225,
+      "idiosyncratic_share": 0.876
     },
     "stacked_bar_segments": [
       {
         "name": "market",
-        "contribution_pct": -1.399,
+        "contribution_pct": 0.981,
         "significant": false,
-        "p_value": 0.25953,
-        "share": 0.0434
+        "p_value": 0.26777,
+        "share": 0.0332
       },
       {
         "name": "sector",
-        "contribution_pct": -0.469,
+        "contribution_pct": -1.514,
         "significant": false,
-        "p_value": 0.21987,
-        "share": 0.0146
+        "p_value": 0.23315,
+        "share": 0.0513
       },
       {
         "name": "momentum",
-        "contribution_pct": 2.212,
+        "contribution_pct": 1.213,
         "significant": false,
-        "p_value": 0.77061,
-        "share": 0.0687
+        "p_value": 0.81576,
+        "share": 0.0411
       },
       {
         "name": "quality",
-        "contribution_pct": -1.049,
+        "contribution_pct": -0.565,
         "significant": false,
-        "p_value": 0.64494,
-        "share": 0.0326
+        "p_value": 0.57348,
+        "share": 0.0191
       },
       {
         "name": "value",
-        "contribution_pct": 0.635,
+        "contribution_pct": 0.737,
         "significant": false,
-        "p_value": 0.93763,
-        "share": 0.0197
+        "p_value": 0.92609,
+        "share": 0.0249
       },
       {
         "name": "growth",
-        "contribution_pct": 4.217,
+        "contribution_pct": 3.391,
         "significant": false,
-        "p_value": 0.59396,
-        "share": 0.131
+        "p_value": 0.45581,
+        "share": 0.1148
       },
       {
         "name": "low_vol",
-        "contribution_pct": -2.172,
+        "contribution_pct": -2.043,
         "significant": false,
-        "p_value": 0.61561,
-        "share": 0.0675
+        "p_value": 0.64278,
+        "share": 0.0692
       },
       {
         "name": "idiosyncratic",
-        "contribution_pct": -9.621,
-        "share": 0.2988
+        "contribution_pct": -6.225,
+        "share": 0.2107
       }
     ],
     "flags": {
@@ -8980,7 +9037,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-10-09T00:19:03.888306+00:00",
+    "generated_at": "2026-10-09T21:59:20.439145+00:00",
     "ticker": "298040",
     "yahoo": "298040.KS",
     "source": "yfinance.Ticker.info",
@@ -9008,9 +9065,9 @@
       "shares_outstanding": 9311741.0,
       "float_shares": 4276790.0,
       "free_float_pct": 45.9,
-      "avg_volume_3m": 45704.0,
-      "adv_str": "45.7 k titres",
-      "avg_volume_10d": 45794.0,
+      "avg_volume_3m": 45565.0,
+      "adv_str": "45.6 k titres",
+      "avg_volume_10d": 50415.0,
       "archetype_suggested": null,
       "archetype_basis": "aucune regle ne tranche — a l'appreciation du /full_brief",
       "business_summary_raw": "Hyosung Heavy Industries Corporation manufactures and sells heavy electrical equipment in South Korea. The company offers transmission and distribution products, such as power, oil-immersed distribution, cast-resin, and special transformers; shunt reactors, high voltage switchgears, medium/ low voltage switchgears, and high voltage direct current transmission systems; STATCOM, a power electronic based device to enhance the power system stability and quality; and turnkey solutions. It also provides system and engineering solutions, including condition monitoring systems; asset health management, power system maintenance, power automation, and process automation solutions; and renewable energy products comprising energy storage systems, solar inverters, and wind turbines, as well as engineering, procurement, and construction services for solar energy projects. In addition, the company offers high and low voltage motors, DC motors, general industrial and special-purpose motors, commercial generators, and emergency power generators; chemical equipment, filling stations, and industrial gas supplying systems; gear boxes, motors, and special gear units; and ARC, resistance, and special spot welding machines. Further, it undertakes various construction projects, including housing, redevelopment and reconstruction, business and commercial facilities, civil engineering and environment, and SOC. Additionally, the company provides power conditioning systems and power management systems. It also exports its products to North and Central America, Europe, Asia, and internationally. Hyosung Heavy Industries Corporation was founded in 1962 and is headquartered in Seoul, South Korea."
@@ -9042,7 +9099,7 @@
       "eps_str": "55832.0 KRW",
       "eps_forward": null,
       "eps_growth_pct": 86.5,
-      "dividend_yield_pct": 0.29,
+      "dividend_yield_pct": 0.3,
       "dividend_yield_note": null,
       "dividend_rate": 7500.0,
       "payout_ratio_pct": 11.94,
@@ -9088,15 +9145,15 @@
     },
     "ownership": {
       "insiders_pct": 43.99,
-      "institutions_pct": 32.1,
+      "institutions_pct": 32.2,
       "short_pct_float": null,
       "short_ratio_days": null
     },
     "market": {
       "beta": 2.171,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": 82.51,
-      "low_52w": 1418000.0,
+      "change_52w_pct": 66.49,
+      "low_52w": 1428000.0,
       "high_52w": 4742000.0
     },
     "price_behaviour": {
@@ -9113,9 +9170,9 @@
     "portfolio_fit": {
       "beta": 0.23,
       "beta_ref": "EWY",
-      "beta_days": 468,
+      "beta_days": 469,
       "correlation": 0.15,
-      "correlation_note": "correlation 0.15 avec EWY sur 468 seances"
+      "correlation_note": "correlation 0.15 avec EWY sur 469 seances"
     },
     "debt_bridge": {
       "as_of": "2026-06-30",
@@ -9408,7 +9465,7 @@
       },
       {
         "field": "identity.adv_str",
-        "value": "45.7 k titres",
+        "value": "45.6 k titres",
         "from": "fundamentals.identity.adv_str"
       },
       {
@@ -9483,7 +9540,7 @@
       },
       {
         "field": "financials.dividend_yield_pct",
-        "value": 0.29,
+        "value": 0.3,
         "from": "fundamentals.financials.dividend_yield_pct"
       },
       {
@@ -9628,7 +9685,7 @@
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 32.1,
+        "value": 32.2,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -9678,7 +9735,7 @@
       },
       {
         "field": "portfolio_fit.correlation_note",
-        "value": "correlation 0.15 avec EWY sur 468 seances",
+        "value": "correlation 0.15 avec EWY sur 469 seances",
         "from": "fundamentals.portfolio_fit.correlation_note"
       }
     ],
@@ -9692,7 +9749,7 @@
       "scope": "univers suivi par le pipeline",
       "not_market_median": "mediane des titres SUIVIS par ce pipeline dans le meme secteur Yahoo — PAS une mediane de marche, de secteur GICS complet ni d'indice",
       "sector": "Industrials",
-      "aggregate_generated_at": "2026-10-09T00:04:30.991019+00:00",
+      "aggregate_generated_at": "2026-10-09T21:39:02.281050+00:00",
       "aggregate_file": "sector_multiples.json",
       "aggregate_age_days": 0.0,
       "n_titles": 56,
@@ -9700,53 +9757,53 @@
       "metrics": {
         "pe_trailing": {
           "n": 32,
-          "q1": 28.3,
-          "median": 35.55,
-          "q3": 46.87,
-          "min": 13.53,
-          "max": 383.28,
+          "q1": 28.23,
+          "median": 34.28,
+          "q3": 46.47,
+          "min": 13.83,
+          "max": 358.97,
           "self": null,
           "self_vs_median_pct": null,
           "thin": false
         },
         "pe_fwd": {
           "n": 45,
-          "q1": 15.75,
-          "median": 21.03,
-          "q3": 28.29,
+          "q1": 15.54,
+          "median": 21.14,
+          "q3": 27.08,
           "min": 9.77,
           "max": 1266.9,
           "self": 20.53,
-          "self_vs_median_pct": -2.4,
+          "self_vs_median_pct": -2.9,
           "thin": false
         },
         "ev_ebitda_ttm": {
           "n": 44,
-          "q1": 15.22,
-          "median": 21.33,
-          "q3": 29.4,
-          "min": 8.49,
+          "q1": 15.0,
+          "median": 21.02,
+          "q3": 28.97,
+          "min": 8.43,
           "max": 739.06,
           "self": 25.61,
-          "self_vs_median_pct": 20.1,
+          "self_vs_median_pct": 21.8,
           "thin": false
         },
         "ev_revenue_ttm": {
           "n": 56,
-          "q1": 2.41,
-          "median": 4.43,
-          "q3": 7.3,
-          "min": 0.75,
+          "q1": 2.34,
+          "median": 4.38,
+          "q3": 7.12,
+          "min": 0.76,
           "max": 1312.39,
           "self": 3.65,
-          "self_vs_median_pct": -17.6,
+          "self_vs_median_pct": -16.7,
           "thin": false
         },
         "ps_ttm": {
           "n": 56,
-          "q1": 2.09,
+          "q1": 2.06,
           "median": 3.83,
-          "q3": 6.27,
+          "q3": 6.08,
           "min": 0.61,
           "max": 3828.38,
           "self": 3.62,
@@ -9755,11 +9812,11 @@
         },
         "price_to_book": {
           "n": 45,
-          "q1": 3.66,
-          "median": 6.81,
+          "q1": 3.68,
+          "median": 6.67,
           "q3": 11.3,
           "min": 1.33,
-          "max": 53.01,
+          "max": 49.65,
           "self": null,
           "self_vs_median_pct": null,
           "thin": false
@@ -9767,22 +9824,22 @@
         "fcf_yield_pct": {
           "n": 56,
           "q1": -2.59,
-          "median": 1.16,
-          "q3": 2.86,
-          "min": -28.71,
-          "max": 13.8,
+          "median": 1.18,
+          "q3": 2.88,
+          "min": -32.19,
+          "max": 13.92,
           "self": 3.74,
-          "self_vs_median_pts": 2.58,
+          "self_vs_median_pts": 2.56,
           "thin": false
         },
         "dividend_yield_pct": {
           "n": 56,
           "q1": 0.0,
-          "median": 0.27,
-          "q3": 1.0,
+          "median": 0.28,
+          "q3": 1.03,
           "min": 0.0,
           "max": 7.11,
-          "self": 0.29,
+          "self": 0.3,
           "self_vs_median_pts": 0.02,
           "thin": false
         }
@@ -9968,7 +10025,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-10-09T00:18:41.865716+00:00",
+    "generated_at": "2026-10-09T21:58:48.953933+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/298040_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1219,
@@ -10355,9 +10412,9 @@
       "gap_best": 21.742
     },
     "asymmetry": {
-      "n_down": 496,
+      "n_down": 495,
       "n_up": 709,
-      "mean_down_pct": -1.133,
+      "mean_down_pct": -1.136,
       "mean_up_pct": 1.454,
       "worst_down_pct": -11.686,
       "best_up_pct": 21.742,
@@ -10376,7 +10433,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-10-09T00:18:43.253998+00:00",
+    "generated_at": "2026-10-09T21:58:51.072231+00:00",
     "ticker": "298040",
     "source_csv": "298040_daily_long.csv",
     "n_sessions": 1220,
@@ -10465,7 +10522,7 @@
         "p_stop_first": 0.4153,
         "p_target_first": 0.4971,
         "pnl_no_touch_pct": 0.0944,
-        "pnl_no_touch_median_pct": -0.3676,
+        "pnl_no_touch_median_pct": -0.3677,
         "horizon_sessions": 10,
         "stop_pct": 7.367,
         "target_pct": 8.063,
@@ -10565,11 +10622,11 @@
       {
         "n_windows": 1200,
         "n_eff": 345.6,
-        "n_ambiguous": 306,
-        "ambiguous_pct": 30.466,
+        "n_ambiguous": 305,
+        "ambiguous_pct": 30.465,
         "p_stop_first_lo": 0.3145,
-        "p_stop_first_hi": 0.6192,
-        "p_target_first_lo": 0.3808,
+        "p_stop_first_hi": 0.6191,
+        "p_target_first_lo": 0.3809,
         "p_target_first_hi": 0.6855,
         "p_no_touch": 0.0,
         "p_stop_first": 0.4668,
@@ -10585,7 +10642,7 @@
           0.5195
         ],
         "ci_width_pt": 10.5,
-        "bound_spread_pt": 30.47
+        "bound_spread_pt": 30.46
       },
       {
         "n_windows": 1200,
@@ -10640,11 +10697,11 @@
       {
         "n_windows": 1200,
         "n_eff": 345.6,
-        "n_ambiguous": 110,
-        "ambiguous_pct": 12.92,
+        "n_ambiguous": 109,
+        "ambiguous_pct": 12.909,
         "p_stop_first_lo": 0.2475,
-        "p_stop_first_hi": 0.3767,
-        "p_target_first_lo": 0.6233,
+        "p_stop_first_hi": 0.3766,
+        "p_target_first_lo": 0.6234,
         "p_target_first_hi": 0.7525,
         "p_no_touch": 0.0,
         "p_stop_first": 0.3121,
@@ -10660,7 +10717,7 @@
           0.3624
         ],
         "ci_width_pt": 9.7,
-        "bound_spread_pt": 12.92
+        "bound_spread_pt": 12.91
       },
       {
         "n_windows": 1200,
@@ -10890,8 +10947,8 @@
       {
         "n_windows": 1200,
         "n_eff": 345.6,
-        "n_ambiguous": 163,
-        "ambiguous_pct": 18.324,
+        "n_ambiguous": 164,
+        "ambiguous_pct": 18.325,
         "p_stop_first_lo": 0.3522,
         "p_stop_first_hi": 0.5354,
         "p_target_first_lo": 0.4646,
@@ -10943,8 +11000,8 @@
         "n_ambiguous": 77,
         "ambiguous_pct": 9.493,
         "p_stop_first_lo": 0.2891,
-        "p_stop_first_hi": 0.3841,
-        "p_target_first_lo": 0.6159,
+        "p_stop_first_hi": 0.384,
+        "p_target_first_lo": 0.616,
         "p_target_first_hi": 0.7109,
         "p_no_touch": 0.0,
         "p_stop_first": 0.3366,
@@ -10960,17 +11017,17 @@
           0.3876
         ],
         "ci_width_pt": 9.9,
-        "bound_spread_pt": 9.5
+        "bound_spread_pt": 9.49
       },
       {
         "n_windows": 1200,
         "n_eff": 345.6,
         "n_ambiguous": 38,
         "ambiguous_pct": 5.266,
-        "p_stop_first_lo": 0.2607,
+        "p_stop_first_lo": 0.2606,
         "p_stop_first_hi": 0.3133,
         "p_target_first_lo": 0.6867,
-        "p_target_first_hi": 0.7393,
+        "p_target_first_hi": 0.7394,
         "p_no_touch": 0.0,
         "p_stop_first": 0.287,
         "p_target_first": 0.713,
@@ -10985,7 +11042,7 @@
           0.3363
         ],
         "ci_width_pt": 9.5,
-        "bound_spread_pt": 5.26
+        "bound_spread_pt": 5.27
       },
       {
         "n_windows": 1200,
@@ -11349,7 +11406,7 @@
         "p_no_touch": 0.0002,
         "p_stop_first": 0.1619,
         "p_target_first": 0.8379,
-        "pnl_no_touch_pct": -6.0197,
+        "pnl_no_touch_pct": -6.0196,
         "pnl_no_touch_median_pct": -6.4194,
         "horizon": "extended",
         "horizon_sessions": 20,
@@ -11567,10 +11624,10 @@
         "n_eff": 345.6,
         "n_ambiguous": 16,
         "ambiguous_pct": 3.109,
-        "p_stop_first_lo": 0.3644,
+        "p_stop_first_lo": 0.3643,
         "p_stop_first_hi": 0.3954,
         "p_target_first_lo": 0.6046,
-        "p_target_first_hi": 0.6356,
+        "p_target_first_hi": 0.6357,
         "p_no_touch": 0.0,
         "p_stop_first": 0.3799,
         "p_target_first": 0.6201,
@@ -11585,7 +11642,7 @@
           0.4319
         ],
         "ci_width_pt": 10.2,
-        "bound_spread_pt": 3.1
+        "bound_spread_pt": 3.11
       },
       {
         "n_windows": 1200,
@@ -12770,7 +12827,7 @@
         "p_stop_first_lo": 0.5766,
         "p_stop_first_hi": 0.585,
         "p_target_first_lo": 0.4149,
-        "p_target_first_hi": 0.4233,
+        "p_target_first_hi": 0.4234,
         "p_no_touch": 0.0001,
         "p_stop_first": 0.5808,
         "p_target_first": 0.4191,
@@ -12819,11 +12876,11 @@
         "ambiguous_pct": 0.0,
         "p_stop_first_lo": 0.4063,
         "p_stop_first_hi": 0.4063,
-        "p_target_first_lo": 0.5816,
-        "p_target_first_hi": 0.5816,
+        "p_target_first_lo": 0.5815,
+        "p_target_first_hi": 0.5815,
         "p_no_touch": 0.0122,
         "p_stop_first": 0.4063,
-        "p_target_first": 0.5816,
+        "p_target_first": 0.5815,
         "pnl_no_touch_pct": -4.3153,
         "pnl_no_touch_median_pct": -1.2802,
         "horizon": "extended",
@@ -12844,13 +12901,13 @@
         "ambiguous_pct": 0.0,
         "p_stop_first_lo": 0.3534,
         "p_stop_first_hi": 0.3534,
-        "p_target_first_lo": 0.63,
-        "p_target_first_hi": 0.63,
-        "p_no_touch": 0.0166,
+        "p_target_first_lo": 0.6299,
+        "p_target_first_hi": 0.6299,
+        "p_no_touch": 0.0167,
         "p_stop_first": 0.3534,
-        "p_target_first": 0.63,
-        "pnl_no_touch_pct": -4.4261,
-        "pnl_no_touch_median_pct": -4.1186,
+        "p_target_first": 0.6299,
+        "pnl_no_touch_pct": -4.4256,
+        "pnl_no_touch_median_pct": -4.1254,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 10.0,
@@ -12874,8 +12931,8 @@
         "p_no_touch": 0.0311,
         "p_stop_first": 0.3129,
         "p_target_first": 0.656,
-        "pnl_no_touch_pct": -4.7749,
-        "pnl_no_touch_median_pct": -4.9031,
+        "pnl_no_touch_pct": -4.7742,
+        "pnl_no_touch_median_pct": -4.8062,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 12.0,
@@ -12899,8 +12956,8 @@
         "p_no_touch": 0.0637,
         "p_stop_first": 0.2309,
         "p_target_first": 0.7054,
-        "pnl_no_touch_pct": -5.1387,
-        "pnl_no_touch_median_pct": -5.8589,
+        "pnl_no_touch_pct": -5.1382,
+        "pnl_no_touch_median_pct": -5.7911,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -13674,8 +13731,8 @@
         "p_no_touch": 0.0123,
         "p_stop_first": 0.6657,
         "p_target_first": 0.322,
-        "pnl_no_touch_pct": 1.4023,
-        "pnl_no_touch_median_pct": 3.616,
+        "pnl_no_touch_pct": 1.4074,
+        "pnl_no_touch_median_pct": 3.6653,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 5.0,
@@ -13974,8 +14031,8 @@
         "p_no_touch": 0.0256,
         "p_stop_first": 0.7082,
         "p_target_first": 0.2662,
-        "pnl_no_touch_pct": 4.0617,
-        "pnl_no_touch_median_pct": 6.526,
+        "pnl_no_touch_pct": 4.0628,
+        "pnl_no_touch_median_pct": 6.2724,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 5.0,
@@ -14274,8 +14331,8 @@
         "p_no_touch": 0.0514,
         "p_stop_first": 0.7376,
         "p_target_first": 0.211,
-        "pnl_no_touch_pct": 7.9324,
-        "pnl_no_touch_median_pct": 9.8811,
+        "pnl_no_touch_pct": 7.932,
+        "pnl_no_touch_median_pct": 9.8663,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 5.0,
@@ -14319,13 +14376,13 @@
         "ambiguous_pct": 0.0,
         "p_stop_first_lo": 0.5913,
         "p_stop_first_hi": 0.5913,
-        "p_target_first_lo": 0.2782,
-        "p_target_first_hi": 0.2782,
+        "p_target_first_lo": 0.2781,
+        "p_target_first_hi": 0.2781,
         "p_no_touch": 0.1306,
         "p_stop_first": 0.5913,
-        "p_target_first": 0.2782,
-        "pnl_no_touch_pct": 6.7862,
-        "pnl_no_touch_median_pct": 6.7797,
+        "p_target_first": 0.2781,
+        "pnl_no_touch_pct": 6.7916,
+        "pnl_no_touch_median_pct": 6.7915,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 8.0,
@@ -14346,11 +14403,11 @@
         "p_stop_first_hi": 0.5055,
         "p_target_first_lo": 0.2888,
         "p_target_first_hi": 0.2888,
-        "p_no_touch": 0.2057,
+        "p_no_touch": 0.2058,
         "p_stop_first": 0.5055,
         "p_target_first": 0.2888,
-        "pnl_no_touch_pct": 5.8372,
-        "pnl_no_touch_median_pct": 5.3694,
+        "pnl_no_touch_pct": 5.8409,
+        "pnl_no_touch_median_pct": 5.3718,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 10.0,
@@ -14369,13 +14426,13 @@
         "ambiguous_pct": 0.0,
         "p_stop_first_lo": 0.4353,
         "p_stop_first_hi": 0.4353,
-        "p_target_first_lo": 0.2918,
-        "p_target_first_hi": 0.2918,
-        "p_no_touch": 0.2729,
+        "p_target_first_lo": 0.2917,
+        "p_target_first_hi": 0.2917,
+        "p_no_touch": 0.273,
         "p_stop_first": 0.4353,
-        "p_target_first": 0.2918,
-        "pnl_no_touch_pct": 4.4982,
-        "pnl_no_touch_median_pct": 3.0528,
+        "p_target_first": 0.2917,
+        "pnl_no_touch_pct": 4.5013,
+        "pnl_no_touch_median_pct": 3.1269,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 12.0,
@@ -14394,13 +14451,13 @@
         "ambiguous_pct": 0.0,
         "p_stop_first_lo": 0.3337,
         "p_stop_first_hi": 0.3337,
-        "p_target_first_lo": 0.293,
-        "p_target_first_hi": 0.293,
-        "p_no_touch": 0.3733,
+        "p_target_first_lo": 0.2929,
+        "p_target_first_hi": 0.2929,
+        "p_no_touch": 0.3734,
         "p_stop_first": 0.3337,
-        "p_target_first": 0.293,
-        "pnl_no_touch_pct": 2.8058,
-        "pnl_no_touch_median_pct": 1.4378,
+        "p_target_first": 0.2929,
+        "pnl_no_touch_pct": 2.8083,
+        "pnl_no_touch_median_pct": 1.4576,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -14427,10 +14484,10 @@
   },
   "beta_dynamic": {
     "available": true,
-    "beta_60d": 1.1952,
-    "beta_252d": 1.0289,
-    "correlation_60d": 0.7873,
-    "correlation_252d": 0.7035,
+    "beta_60d": 1.1954,
+    "beta_252d": 1.0299,
+    "correlation_60d": 0.789,
+    "correlation_252d": 0.7043,
     "ratio_price_benchmark_trend_60d": "rising"
   },
   "streaks": {
@@ -22358,22 +22415,22 @@
     "asset_market": "KR",
     "benchmark_market": "KR",
     "beta_up_days": 0.9975,
-    "beta_down_days": 1.0758,
-    "beta_asymmetry": 1.0785,
+    "beta_down_days": 1.0771,
+    "beta_asymmetry": 1.0798,
     "n_up_days": 665,
-    "n_down_days": 553,
+    "n_down_days": 554,
     "interpretation": "balanced",
-    "window_days": 1218,
+    "window_days": 1219,
     "window_mode": "historique complet",
     "recent_252d": {
       "beta_up_days": 1.1748,
-      "beta_down_days": 0.9525,
-      "beta_asymmetry": 0.8108,
+      "beta_down_days": 0.9522,
+      "beta_asymmetry": 0.8106,
       "n_up_days": 151,
-      "n_down_days": 91,
-      "window_days": 242
+      "n_down_days": 92,
+      "window_days": 243
     },
-    "beta_down_shift_ratio": 0.885,
+    "beta_down_shift_ratio": 0.884,
     "beta_down_shift_note": "rapport entre le beta de baisse RECENT (252 seances) et celui de l'historique complet. Loin de 1 = le titre a change de sensibilite au marche ; c'est une information, pas une erreur.",
     "window_choice_note": "fenetre longue retenue apres mesure hors echantillon (18 couples, 878 points) : au-dela de 252 seances le gain est reel mais non significatif, tandis que RACCOURCIR degrade significativement. Le beta n'est pas une grandeur de regime rapide, contrairement a la volatilite."
   },
@@ -22647,7 +22704,7 @@
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-09T00:19:22.934552+00:00",
+        "asof_utc": "2026-10-09T21:59:46.002251+00:00",
         "venue": "KRX",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -22659,7 +22716,7 @@
         "detected_from": "en-tête CSV « # Backfilled-from-h1 » (deploy/ohlcv_snapshot.py)",
         "excluded_from": [],
         "producer_daily_source": "yfinance",
-        "producer_daily_freshness": "fresh (last-bar 2026-10-08, expected 2026-10-08)",
+        "producer_daily_freshness": "stale_1d (last-bar 2026-10-08, expected 2026-10-09)",
         "supplemented_dates": []
       },
       "overall": {
@@ -22713,7 +22770,7 @@
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-09T00:19:22.934552+00:00",
+        "asof_utc": "2026-10-09T21:59:46.002251+00:00",
         "venue": "KRX",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -22777,7 +22834,7 @@
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-09T00:19:22.934552+00:00",
+        "asof_utc": "2026-10-09T21:59:46.002251+00:00",
         "venue": "KRX",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23113,7 +23170,7 @@
         }
       }
     ],
-    "generated_at": "2026-10-09T00:19:26.107064+00:00",
+    "generated_at": "2026-10-09T21:59:50.452903+00:00",
     "history_file": "data/v3/episodes/298040_episodes.json"
   },
   "setup": {
@@ -23203,6 +23260,18 @@
       }
     ],
     "counts_by_class": {
+      "20": {
+        "NOISE": 17,
+        "PULLBACK": 25,
+        "CORRECTION": 1,
+        "CAPITULATION": 1
+      },
+      "126": {
+        "NOISE": 3,
+        "PULLBACK": 4,
+        "CORRECTION": 0,
+        "CAPITULATION": 1
+      },
       "252": {
         "NOISE": 1,
         "PULLBACK": 1,
@@ -23214,27 +23283,15 @@
         "PULLBACK": 6,
         "CORRECTION": 2,
         "CAPITULATION": 1
-      },
-      "126": {
-        "NOISE": 3,
-        "PULLBACK": 4,
-        "CORRECTION": 0,
-        "CAPITULATION": 1
-      },
-      "20": {
-        "NOISE": 17,
-        "PULLBACK": 25,
-        "CORRECTION": 1,
-        "CAPITULATION": 1
       }
     },
-    "generated_at": "2026-10-09T00:19:26.176495+00:00"
+    "generated_at": "2026-10-09T21:59:50.553893+00:00"
   },
   "profiles": {
     "version": "profiles/1.0",
     "provenance": "v3",
     "status": "UNVALIDATED",
-    "generated_at": "2026-10-09T00:04:01.481920+00:00",
+    "generated_at": "2026-10-09T21:38:21.682466+00:00",
     "n_occasions": 641,
     "zones_open_episodes": [
       {

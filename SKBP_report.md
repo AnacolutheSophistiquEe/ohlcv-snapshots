@@ -1,6 +1,6 @@
 # 326030
 
-**Generated** : 2026-10-09T00:22:49.503509+00:00  
+**Generated** : 2026-10-09T22:04:35.020564+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 2/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -56,7 +56,7 @@ _Cloture 2026-10-08 : 72700.0 · ATR Wilder 2593.58 (3.57 %)_
    - _fenêtre arrêtée : rupture de regime a 600 seances en arriere (volatilite 1.77 % contre 3.02 % aujourd'hui, rapport 0.59)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -8.18 % vs -8.65 % si l'on extrapolait par √5 _(rapport 0.946 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.5966** (β de hausse 0.4326, asymétrie 1.3791) vs KS11 — 553 séances de repli, historique complet
+- **β de baisse : 0.5995** (β de hausse 0.4326, asymétrie 1.3858) vs KS11 — 554 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -153,7 +153,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.2 · part idiosyncratique 0.8
+**Factor** : R² 0.13 · part idiosyncratique 0.87
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -182,5 +182,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (564523 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (598040 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
