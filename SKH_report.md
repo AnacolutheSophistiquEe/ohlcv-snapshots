@@ -1,6 +1,6 @@
 # 000660
 
-**Generated** : 2026-10-08T21:58:07.208734+00:00  
+**Generated** : 2026-10-09T00:16:04.577907+00:00  
 **Couverture** : bulletin complet  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
@@ -27,10 +27,10 @@ Plan privilegie B (swing), composite 5/10, conviction 'Unknown'.
 ## Plans d'achat — Swing / Deep (methode v4)
 
 _Cloture 2026-10-08 : 1681000.0 · ATR Wilder 84702.03 (5.04 %)_
-- **Swing** : plage **1584845.1 → 1523025.91** (-5.72 % a -9.4 % sous la cloture, 0.73 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 1556662.48-1558000.0 (B). stop INDICATIF 1438323.87 (-5.56 % sous le bas ; 1 ATR sous le bas de la plage (aucun support proche)).
-- **Deep** : plage **1523025.91 → 1381537.31** (-9.4 % a -17.81 % sous la cloture, 1.67 ATR) — touchee 41 % → 15 % du temps en 20 seances ; aucun support reel dans la plage. stop INDICATIF 1296835.27 (-6.13 % sous le bas ; 1 ATR sous le bas de la plage (aucun support proche)).
+- **Swing** : plage **1584845.29 → 1523025.8** (-5.72 % a -9.4 % sous la cloture, 0.73 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 1556662.48-1558000.0 (B). stop INDICATIF 1438323.77 (-5.56 % sous le bas ; 1 ATR sous le bas de la plage (aucun support proche)).
+- **Deep** : plage **1523025.8 → 1381537.54** (-9.4 % a -17.81 % sous la cloture, 1.67 ATR) — touchee 41 % → 15 % du temps en 20 seances ; aucun support reel dans la plage. stop INDICATIF 1296835.51 (-6.13 % sous le bas ; 1 ATR sous le bas de la plage (aucun support proche)).
 - ACHAT PAS CHER : inactif (3.0 ATR sous le plus haut 20 s., RSI(2) 5.6 ; seuils 4,7 ATR, ou RSI(2) < 10 et 3 ATR).
-- Supports reels sous le cours (pour le Warden) : 1556662.48-1558000.0 (B, -7.32 %) ; 1245729.86-1245729.86 (C, -25.89 %) ; 1041599.96-1077586.1 (B, -35.9 %) ; 926644.12-989619.88 (B, -41.13 %) ; 883660.61-902986.28 (B, -46.28 %) ; 772277.75-807689.75 (A, -51.95 %)
+- Supports reels sous le cours (pour le Warden) : 1556662.48-1558000.0 (B, -7.32 %) ; 1245729.86-1245729.86 (C, -25.89 %) ; 1041599.96-1077586.1 (B, -35.9 %) ; 926644.12-989619.88 (B, -41.13 %) ; 883660.61-902986.35 (B, -46.28 %) ; 772277.81-807689.75 (A, -51.95 %)
 - Resistances reelles au-dessus : 1717627.62-1736000.0 (A, 2.18 %) ; 1791611.52-1791611.57 (C, 6.58 %) ; 1854597.89-1890000.0 (A, 10.33 %) ; 1994234.05-2005565.09 (B, 18.63 %)
 - _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
@@ -174,7 +174,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **OBV/CMF** : OBV falling · CMF -0.201  _(distribution)_
 - **Vol ratio** : 1.01  _(volume normal)_
 - **Choppiness** : 50.7  _(transition)_
-- **MA** : MA20 1789600.0 · MA50 1678321.87 · MA200 1434975.28  _(prix < MA20)_
+- **MA** : MA20 1789600.0 · MA50 1678321.87 · MA200 1434975.29  _(prix < MA20)_
 - **Dist MA** : MA20 -6.1% · MA50 +0.2% · MA200 +17.1%
 
 

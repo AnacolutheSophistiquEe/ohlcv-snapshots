@@ -1,6 +1,6 @@
 # 267260
 
-**Generated** : 2026-10-08T22:01:42.349786+00:00  
+**Generated** : 2026-10-09T00:18:18.500768+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 1/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -30,10 +30,10 @@ Plan privilegie A (intraday), composite 1/10, conviction 'Unknown'.
 ## Plans d'achat — Swing / Deep (methode v4)
 
 _Cloture 2026-10-08 : 606000.0 · ATR Wilder 35700.28 (5.89 %)_
-- **Swing** : plage **567522.26 → 545514.58** (-6.35 % a -9.98 % sous la cloture, 0.62 ATR) — touchee 50 % → 30 % du temps en 10 seances ; aucun support reel dans la plage. stop INDICATIF 519234.41 (-4.82 % sous le bas ; sous le support 537084.55-537084.55 (- 0,5 ATR)).
-- **Deep** : plage **545514.58 → 488091.28** (-9.98 % a -19.46 % sous la cloture, 1.61 ATR) — touchee 42 % → 15 % du temps en 20 seances ; supports reels dans la plage : 537084.55-537084.55 (C) ; 501200.32-516087.46 (B). stop INDICATIF 455064.63 (-6.77 % sous le bas ; sous le support 472914.77-480358.35 (- 0,5 ATR)).
+- **Swing** : plage **567522.3 → 545514.82** (-6.35 % a -9.98 % sous la cloture, 0.62 ATR) — touchee 50 % → 30 % du temps en 10 seances ; aucun support reel dans la plage. stop INDICATIF 519234.41 (-4.82 % sous le bas ; sous le support 537084.55-537084.55 (- 0,5 ATR)).
+- **Deep** : plage **545514.82 → 488091.17** (-9.98 % a -19.46 % sous la cloture, 1.61 ATR) — touchee 42 % → 15 % du temps en 20 seances ; supports reels dans la plage : 537084.55-537084.55 (C) ; 501200.32-516087.46 (B). stop INDICATIF 455064.63 (-6.77 % sous le bas ; sous le support 472914.77-480358.32 (- 0,5 ATR)).
 - 🟢 **ACHAT PAS CHER actif** (COMBO) : 4.57 ATR sous le plus haut 20 s., RSI(2) 4.9. Limite **588149.86** (seance suivante), stop catastrophe 445348.74, sortie : vente a l'ouverture qui suit la 1re cloture au-dessus de la MM5, au plus tard 21 seances.
-- Supports reels sous le cours (pour le Warden) : 537084.55-537084.55 (C, -11.37 %) ; 501200.32-516087.46 (B, -14.84 %) ; 472914.77-480358.35 (B, -20.73 %) ; 439785.35-447606.63 (A, -26.14 %) ; 414854.93-431230.79 (A, -28.84 %) ; 393454.76-408023.08 (B, -32.67 %)
+- Supports reels sous le cours (pour le Warden) : 537084.55-537084.55 (C, -11.37 %) ; 501200.32-516087.46 (B, -14.84 %) ; 472914.77-480358.32 (B, -20.73 %) ; 439785.32-447606.66 (A, -26.14 %) ; 414854.93-431230.79 (A, -28.84 %) ; 393454.73-408023.05 (B, -32.67 %)
 - Resistances reelles au-dessus : 673000.0-673000.0 (C, 11.06 %) ; 691000.0-698000.0 (B, 14.03 %) ; 715779.98-731000.0 (A, 18.12 %) ; 738000.0-748326.87 (A, 21.78 %)
 - _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
@@ -156,7 +156,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.23 · part idiosyncratique 0.77
+**Factor** : R² 0.22 · part idiosyncratique 0.78
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -185,5 +185,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (565197 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (565183 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
