@@ -1,12 +1,12 @@
 # SRT3
 
-**Generated** : 2026-10-09T21:41:59.375827+00:00  
+**Generated** : 2026-10-12T00:06:16.031198+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · €253.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot €253.00 (+4.7% vs entrée) · entrée €241.59 · stop €231.24 · T1 €262.29 · R/R 2.0  
 > ↳ ¼-Kelly 0.014 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
@@ -76,14 +76,14 @@ _Cloture 2026-10-09 : 253.0 · ATR Wilder 9.31 (3.68 %)_
    - ⚪ atr_based a 1.5 ATR (stop 5.975 %) — p(stop avant cible) 0.3851 [0.33 ; 0.44], R/R 2.064, perte reelle 6.096 % (gap inclus), EV 0.6668 % — **REFUSE**
       - refuse : cible atteinte seulement 11.6 % du temps (< 15 %) meme a 10 seances : le R/R de 2.06 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 2.06 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ sr_based a 2.16 ATR (stop 10.882 %) — p(stop avant cible) 0.1473 [0.11 ; 0.19], R/R 1.15, perte reelle 10.943 % (gap inclus), EV 0.6502 % — **REFUSE**
-      - refuse : cible atteinte seulement 11.8 % du temps (< 15 %) meme a 10 seances : le R/R de 1.15 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 1.15 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ swing_based a 2.86 ATR (stop 13.672 %) — p(stop avant cible) 0.0652 [0.04 ; 0.09], R/R 0.911, perte reelle 13.81 % (gap inclus), EV 0.7774 % — **REFUSE**
-      - refuse : cible atteinte seulement 11.8 % du temps (< 15 %) meme a 10 seances : le R/R de 0.91 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 0.91 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 13.85 % > budget 12.00 %
-   - 🟢 support a 5.48 ATR (stop 24.094 %) — p(stop avant cible) 0.0024 [0.00 ; 0.01], R/R 0.491, perte reelle 25.615 % (gap inclus), EV 0.9493 % — **REFUSE**
+   - ⚪ sr_based a 2.16 ATR (stop 11.037 %) — p(stop avant cible) 0.1422 [0.11 ; 0.18], R/R 1.134, perte reelle 11.092 % (gap inclus), EV 0.6621 % — **REFUSE**
+      - refuse : cible atteinte seulement 11.8 % du temps (< 15 %) meme a 10 seances : le R/R de 1.13 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 1.13 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - ⚪ swing_based a 2.86 ATR (stop 13.828 %) — p(stop avant cible) 0.063 [0.04 ; 0.09], R/R 0.901, perte reelle 13.966 % (gap inclus), EV 0.7737 % — **REFUSE**
+      - refuse : cible atteinte seulement 11.8 % du temps (< 15 %) meme a 10 seances : le R/R de 0.90 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 0.90 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 14.00 % > budget 12.00 %
+   - 🟢 support a 5.48 ATR (stop 24.249 %) — p(stop avant cible) 0.0024 [0.00 ; 0.01], R/R 0.49, perte reelle 25.686 % (gap inclus), EV 0.9491 % — **REFUSE**
       - refuse : cible atteinte seulement 11.8 % du temps (< 15 %) meme a 10 seances : le R/R de 0.49 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.49 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 13.06 % > budget 12.00 %
@@ -302,9 +302,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -323,5 +323,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (943698 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (897634 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

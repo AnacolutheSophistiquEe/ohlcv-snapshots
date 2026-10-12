@@ -1,12 +1,12 @@
 # AL2SI
 
-**Generated** : 2026-10-09T21:51:56.336185+00:00  
+**Generated** : 2026-10-12T00:12:59.905795+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 4/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €24.80  
 
-> ⛔ **STAND-DOWN** — NON ESTIMABLE — la source du rating est inéligible (source périmée (5 séance(s) de retard, drapeau lu sur first_passage_by_horizon)) ; aucun repli sur un autre moteur (R09)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot €24.80 (+1.8% vs entrée) · entrée €24.35 · stop €23.82 · T1 €25.40 · R/R 1.98  
 > ↳ ¼-Kelly 0.014 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=125 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.17% cohérent avec le bruit 5 s (EV-optimal ≈ −1.5%)  
@@ -286,9 +286,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -307,5 +307,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (886819 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (886635 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

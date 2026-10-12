@@ -1,12 +1,12 @@
 # 326030
 
-**Generated** : 2026-10-09T22:04:35.020564+00:00  
+**Generated** : 2026-10-12T00:21:34.658141+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 2/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · ₩72700.00  
 
-> ⛔ **STAND-DOWN** — ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 42/125 fenêtres (p_fill pondéré 32 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot ₩72700.00 (+2.8% vs entrée) · entrée ₩70714.29 · stop ₩65057.14 · T1 ₩71707.14 · R/R 0.18  
 > ↳ ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=125 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -40,13 +40,13 @@ _Cloture 2026-10-08 : 72700.0 · ATR Wilder 2593.58 (3.57 %)_
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟠 **Régime de gap : intermediaire** — p_breach(-3 %)=1.07 % — entre les deux regimes ; ni queue pure ni franchissement ordinaire
-- **Au stop du plan (8.19 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1219).
+- **Au stop du plan (8.19 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 8.19 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
-- Chocs d'ouverture : p05 -1.578 % | p01 -3.013 % | pire -5.539 % _(sur 1219 séances)_
-- **P(stop avant cible)** _(source : daily, 1220 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -1.578 % | p01 -3.015 % | pire -5.539 % _(sur 1218 séances)_
+- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0055** [0.0006 ; 0.0262] _(largeur 2.6 pt, n_eff 173.1)_
    - swing : **0.5759** [0.5233 ; 0.6272] _(largeur 10.4 pt, n_eff 345.6)_
    - deep : **0.5608** [0.5082 ; 0.6124] _(largeur 10.4 pt, n_eff 345.6)_
@@ -56,7 +56,7 @@ _Cloture 2026-10-08 : 72700.0 · ATR Wilder 2593.58 (3.57 %)_
    - _fenêtre arrêtée : rupture de regime a 600 seances en arriere (volatilite 1.77 % contre 3.02 % aujourd'hui, rapport 0.59)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -8.18 % vs -8.65 % si l'on extrapolait par √5 _(rapport 0.946 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.5995** (β de hausse 0.4326, asymétrie 1.3858) vs KS11 — 554 séances de repli, historique complet
+- **β de baisse : 0.5997** (β de hausse 0.4326, asymétrie 1.3863) vs KS11 — 553 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -161,9 +161,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -182,5 +182,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (598040 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (597783 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

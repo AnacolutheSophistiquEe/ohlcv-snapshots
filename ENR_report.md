@@ -1,12 +1,12 @@
 # ENR
 
-**Generated** : 2026-10-09T21:45:15.621019+00:00  
+**Generated** : 2026-10-12T00:08:31.193641+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 6/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : range · volatilite low · €145.36  
 
-> ⛔ **STAND-DOWN** — NON ESTIMABLE — la source du rating est inéligible (source périmée (5 séance(s) de retard, drapeau lu sur first_passage_by_horizon); usable=false (intervalle le plus large 26.8 pt > 25)) ; aucun repli sur un autre moteur (R09)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot €145.36 (+2.6% vs entrée) · entrée €141.73 · stop €130.39 · T1 €144.13 · R/R 0.21  
 > ↳ _probas brutes, non calibrées · n=0_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -81,19 +81,19 @@ _Cloture 2026-10-09 : 145.36 · ATR Wilder 4.99 (3.43 %)_
       - refuse : p_stop_first 0.600, borne haute 0.651 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.35 %) : P(cible) 0.5 % x 29.22 % + P(rien) 39.5 % x 6.51 % ne couvrent pas P(stop) 60.0 % x 5.11 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
-   - ⚪ swing_based a 1.49 ATR (stop 6.817 %) — p(stop avant cible) 0.4684 [0.42 ; 0.52], R/R 4.138, perte reelle 7.062 % (gap inclus), EV -0.539 % — **REFUSE**
-      - refuse : cible atteinte seulement 0.5 % du temps (< 15 %) meme a 10 seances : le R/R de 4.14 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.54 %) : P(cible) 0.5 % x 29.22 % + P(rien) 52.7 % x 4.97 % ne couvrent pas P(stop) 46.8 % x 7.06 %.
+   - ⚪ swing_based a 1.49 ATR (stop 6.946 %) — p(stop avant cible) 0.4555 [0.40 ; 0.51], R/R 4.066, perte reelle 7.187 % (gap inclus), EV -0.5108 % — **REFUSE**
+      - refuse : cible atteinte seulement 0.5 % du temps (< 15 %) meme a 10 seances : le R/R de 4.07 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.51 %) : P(cible) 0.5 % x 29.22 % + P(rien) 53.9 % x 4.85 % ne couvrent pas P(stop) 45.6 % x 7.19 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
-   - ⚪ sr_based a 3.13 ATR (stop 12.219 %) — p(stop avant cible) 0.1275 [0.10 ; 0.17], R/R 2.275, perte reelle 12.843 % (gap inclus), EV 0.4414 % — **REFUSE**
-      - refuse : cible atteinte seulement 0.5 % du temps (< 15 %) meme a 10 seances : le R/R de 2.28 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 2.28 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 13.81 % > budget 12.00 %
-   - 🟢 support a 6.65 ATR (stop 23.833 %) — p(stop avant cible) 0.0051 [0.00 ; 0.02], R/R 1.098, perte reelle 26.625 % (gap inclus), EV 1.1204 % — **REFUSE**
+   - ⚪ sr_based a 3.13 ATR (stop 12.347 %) — p(stop avant cible) 0.1246 [0.09 ; 0.16], R/R 2.255, perte reelle 12.958 % (gap inclus), EV 0.4452 % — **REFUSE**
+      - refuse : cible atteinte seulement 0.5 % du temps (< 15 %) meme a 10 seances : le R/R de 2.26 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 2.26 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 13.87 % > budget 12.00 %
+   - 🟢 support a 6.65 ATR (stop 23.962 %) — p(stop avant cible) 0.0051 [0.00 ; 0.02], R/R 1.095, perte reelle 26.678 % (gap inclus), EV 1.1202 % — **REFUSE**
       - refuse : cible atteinte seulement 0.5 % du temps (< 15 %) meme a 10 seances : le R/R de 1.10 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.10 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 14.76 % > budget 12.00 %
-   - 🟢 support a 10.7 ATR (stop 37.225 %) — p(stop avant cible) 0.0011 [0.00 ; 0.01], R/R 0.785, perte reelle 37.236 % (gap inclus), EV 1.1851 % — **REFUSE**
+      - refuse : CVaR 95 % 14.77 % > budget 12.00 %
+   - 🟢 support a 10.7 ATR (stop 37.354 %) — p(stop avant cible) 0.0011 [0.00 ; 0.01], R/R 0.782, perte reelle 37.359 % (gap inclus), EV 1.1849 % — **REFUSE**
       - refuse : cible atteinte seulement 0.5 % du temps (< 15 %) meme a 10 seances : le R/R de 0.78 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.78 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 13.95 % > budget 12.00 %
@@ -323,9 +323,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -344,5 +344,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (950725 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (904126 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,12 +1,12 @@
 # RHM
 
-**Generated** : 2026-10-09T21:40:20.948739+00:00  
+**Generated** : 2026-10-12T00:05:09.509419+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 5/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite low · €939.10  
 
-> ⛔ **STAND-DOWN** — ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 33/125 fenêtres (p_fill pondéré 26 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot €939.10 (+3.4% vs entrée) · entrée €908.54 · stop €835.85 · T1 €923.82 · R/R 0.21  
 > ↳ _probas brutes, non calibrées · n=0_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -72,10 +72,10 @@ _Cloture 2026-10-09 : 939.1 · ATR Wilder 33.03 (3.52 %)_
    - viole : R/R 2.97 < plancher 3.00 (mesure vs SPOT, gap inclus)
 - Budget de queue : **12.0 %** du notionnel — ⚠ VALEUR FIGEE (valeur de repli (ligne absente de l'allocation)), PAS une mesure. L'allocation derivee de la contrainte du compte n'etait pas disponible.
 - Candidats (la structure propose, la statistique elimine) :
-   - ⚪ swing_based a 0.17 ATR (stop 2.42 %) — p(stop avant cible) 0.8244 [0.78 ; 0.86], R/R 8.104, perte reelle 2.529 % (gap inclus), EV -0.0924 % — **REFUSE**
-      - refuse : cible atteinte seulement 4.2 % du temps (< 15 %) meme a 10 seances : le R/R de 8.10 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : p_stop_first 0.824, borne haute 0.862 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.09 %) : P(cible) 4.2 % x 20.50 % + P(rien) 13.4 % x 8.50 % ne couvrent pas P(stop) 82.4 % x 2.53 %.
+   - ⚪ swing_based a 0.17 ATR (stop 2.547 %) — p(stop avant cible) 0.8106 [0.77 ; 0.85], R/R 7.722, perte reelle 2.654 % (gap inclus), EV -0.1382 % — **REFUSE**
+      - refuse : cible atteinte seulement 4.2 % du temps (< 15 %) meme a 10 seances : le R/R de 7.72 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : p_stop_first 0.811, borne haute 0.849 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.14 %) : P(cible) 4.2 % x 20.50 % + P(rien) 14.7 % x 7.82 % ne couvrent pas P(stop) 81.1 % x 2.65 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
    - ⚪ atr_based a 1.5 ATR (stop 4.882 %) — p(stop avant cible) 0.6336 [0.58 ; 0.68], R/R 3.935, perte reelle 5.209 % (gap inclus), EV -0.6464 % — **REFUSE**
       - refuse : cible atteinte seulement 5.8 % du temps (< 15 %) meme a 10 seances : le R/R de 3.93 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
@@ -341,9 +341,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -362,5 +362,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (944561 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (898185 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

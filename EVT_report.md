@@ -1,12 +1,12 @@
 # EVT
 
-**Generated** : 2026-10-09T21:43:37.380256+00:00  
+**Generated** : 2026-10-12T00:07:22.621021+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 2/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite low · €2.77  
 
-> ⛔ **STAND-DOWN** — NON ESTIMABLE — la source du rating est inéligible (source périmée (5 séance(s) de retard, drapeau lu sur first_passage_by_horizon)) ; aucun repli sur un autre moteur (R09)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot €2.77 (+0.7% vs entrée) · entrée €2.75 · stop €2.53 · T1 €2.82 · R/R 0.32  
 > ↳ _probas brutes, non calibrées · n=0_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -57,16 +57,16 @@ _Cloture 2026-10-09 : 2.77 · ATR Wilder 0.1324 (4.78 %)_
 ## Echelle Warden — OU poser le stop
 
 - **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — rien n'y coupe la baisse avant la perte du notionnel investi ; un stop ne borne pas la perte (un gap l'execute sous son seuil), il la limite en esperance.**
-- **Couple retenu** : stop 2.6506 sur support (0.45 ATR, 4.241 %) — p(stop avant cible) 0.6721 [0.62 ; 0.72], R/R 8.747, perte reelle 4.772 % (gap inclus), CVaR 10.763 %, EV -0.7924 % — **NON CONFORME (best_effort — proposition de derniere main)**
-   - severite des violations : 1.3018 (somme des depassements RELATIFS a chaque seuil ; c'est elle qui a departage, l'esperance ne tranchant qu'a severites egales)
-   - viole : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 8.75 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+- **Couple retenu** : stop 2.6496 sur support (0.45 ATR, 4.277 %) — p(stop avant cible) 0.672 [0.62 ; 0.72], R/R 8.681, perte reelle 4.808 % (gap inclus), CVaR 10.763 %, EV -0.8165 % — **NON CONFORME (best_effort — proposition de derniere main)**
+   - severite des violations : 1.3016 (somme des depassements RELATIFS a chaque seuil ; c'est elle qui a departage, l'esperance ne tranchant qu'a severites egales)
+   - viole : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 8.68 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
    - viole : p_stop_first 0.672, borne haute 0.720 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
 - Budget de queue : **12.0 %** du notionnel — ⚠ VALEUR FIGEE (valeur de repli (ligne absente de l'allocation)), PAS une mesure. L'allocation derivee de la contrainte du compte n'etait pas disponible.
 - Candidats (la structure propose, la statistique elimine) :
-   - 🟢 support a 0.45 ATR (stop 4.241 %) — p(stop avant cible) 0.6721 [0.62 ; 0.72], R/R 8.747, perte reelle 4.772 % (gap inclus), EV -0.7924 % — **REFUSE**
-      - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 8.75 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+   - 🟢 support a 0.45 ATR (stop 4.277 %) — p(stop avant cible) 0.672 [0.62 ; 0.72], R/R 8.681, perte reelle 4.808 % (gap inclus), EV -0.8165 % — **REFUSE**
+      - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 8.68 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.672, borne haute 0.720 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.79 %) : P(cible) 0.1 % x 41.74 % + P(rien) 32.7 % x 7.25 % ne couvrent pas P(stop) 67.2 % x 4.77 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.82 %) : P(cible) 0.1 % x 41.74 % + P(rien) 32.7 % x 7.24 % ne couvrent pas P(stop) 67.2 % x 4.81 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
    - ⚪ atr_based a 1.5 ATR (stop 6.936 %) — p(stop avant cible) 0.4849 [0.43 ; 0.54], R/R 5.056, perte reelle 8.255 % (gap inclus), EV -1.4089 % — **REFUSE**
       - refuse : cible atteinte seulement 0.2 % du temps (< 15 %) meme a 10 seances : le R/R de 5.06 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
@@ -329,9 +329,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -342,7 +342,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.21 · largeur 12.8%
 - **ATR** : 0.13 (10.0e pct 1a)  _(volatilite basse)_
 - **OBV/CMF** : OBV falling · CMF -0.232  _(distribution)_
-- **Vol ratio** : 0.74  _(volume normal)_
+- **Vol ratio** : 0.75  _(volume normal)_
 - **Choppiness** : 54.1  _(transition)_
 - **MA** : MA20 2.87 · MA50 3.16 · MA200 4.62  _(prix < MA20)_
 - **Dist MA** : MA20 -3.7% · MA50 -12.5% · MA200 -40.1%
@@ -350,5 +350,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (941365 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (895124 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

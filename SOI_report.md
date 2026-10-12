@@ -1,6 +1,6 @@
 # SOI
 
-**Generated** : 2026-10-09T21:50:21.382581+00:00  
+**Generated** : 2026-10-12T00:11:54.008567+00:00  
 **Couverture** : bulletin complet  
 > ⚠️ **Données suspectes** : volatilité réalisée 5.9 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
@@ -8,7 +8,7 @@
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · €159.95  
 
-> ⛔ **STAND-DOWN** — NON ESTIMABLE — la source du rating est inéligible (source périmée (5 séance(s) de retard, drapeau lu sur first_passage_by_horizon)) ; aucun repli sur un autre moteur (R09)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot €159.95 (+1.2% vs entrée) · entrée €158.13 · stop €153.67 · T1 €167.06 · R/R 2.0  
 > ↳ _probas brutes, non calibrées · n=0_  
 
@@ -17,15 +17,6 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 - **Daily** : up (trend-up)  
 - **H4** : down | **H1** : range  
 - **Flag multi-TF** : mixed (score 1)
-
-
-## ⚠ Contradictions techniques
-
-- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.010 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
-  - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
-  - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
-  - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
-  - _Vraie incohérence (rare) : volume corrompu/dégradé (flux délayé, volume nul certains jours) fausserait l'un des deux — vérifier la qualité du volume si les valeurs semblent aberrantes._
 
 
 ## Lecture chartiste
@@ -299,9 +290,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -311,7 +302,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.335  _(bearish_recent)_
 - **BB** : %B 0.69 · largeur 34.8%
 - **ATR** : 9.05 (62.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF -0.008  _(neutre)_
+- **OBV/CMF** : OBV rising · CMF -0.005  _(neutre)_
 - **Vol ratio** : 1.24  _(volume normal)_
 - **Choppiness** : 49.6  _(transition)_
 - **MA** : MA20 150.19 · MA50 133.05 · MA200 96.3  _(prix > MA20)_
@@ -320,5 +311,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (895473 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (894070 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
