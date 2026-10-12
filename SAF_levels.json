@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SAF",
-    "generated_at": "2026-10-12T00:33:05Z",
+    "generated_at": "2026-10-12T22:05:29Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-10-13T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "SAF_precomputed.json"
   },
   "context": {
-    "last_price": 316.2,
+    "last_price": 318.4,
     "ta_score": {
       "value": 5,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.6856,
-      "expected_duration_days": 5.32
+      "probability": 0.8681,
+      "expected_duration_days": 5.31
     },
     "volatility_regime": "normal",
     "signals_counter": {
@@ -37,14 +37,14 @@
       "median_bounce_pct": 2.66,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM sideways (0.69), vol normal, signals neutral (1b/6s/8n)."
+    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM sideways (0.87), vol normal, signals neutral (1b/6s/8n)."
   },
   "notes": {
-    "atr_daily": 8.5643,
+    "atr_daily": 8.0571,
     "atr_pct_daily": null,
-    "beta_60d": 1.6656,
+    "beta_60d": 1.6706,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.775,
+    "beta_corr_60d": 0.7839,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -53,11 +53,11 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -13.04,
+      "current_dd_pct": -12.43,
       "ath_price": 363.6,
       "ath_date": "2026-08-12",
       "max_dd_1y_pct": -23.62,
-      "days_in_dd": 58,
+      "days_in_dd": 61,
       "median_recovery_days": null
     }
   },
@@ -68,26 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 313.8514,
-        "max": 315.9098
+        "min": 313.3199,
+        "max": 316.3361
       },
       "stop": {
-        "price": 296.376,
+        "price": 297.8731,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -5.88
+        "distance_pct": -5.39
       },
       "targets": [
         {
+          "level": 1,
+          "price": 314.9384,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
+          "rr": 0.01
+        },
+        {
           "level": 2,
-          "price": 324.0906,
+          "price": 323.9466,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.5
+          "rr": 0.54
         },
         {
           "level": 3,
-          "price": 333.6658,
+          "price": 332.9548,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.02
+          "rr": 1.07
         }
       ],
       "preferred_target": 1,
@@ -95,7 +101,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support BB_LOWER + FIB_50 + MA200 (strength 10.5). Bounce mecanique."
+      "rationale": "Confluence support BB_LOWER + MA200 + FIB_50 (strength 10.5). Bounce mecanique."
     },
     {
       "id": "B",
@@ -103,32 +109,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 328.293,
-        "max": 329.6048
+        "min": 330.0764,
+        "max": 331.3954
       },
       "stop": {
-        "price": 319.132,
+        "price": 325.759,
         "basis": "below_broken_resistance",
-        "distance_pct": -2.98
+        "distance_pct": -1.5
       },
       "targets": [
         {
           "level": 1,
-          "price": 338.418,
+          "price": 342.2901,
           "basis": "next_confluence_resistance",
-          "rr": 0.96
+          "rr": 2.32
         },
         {
           "level": 2,
-          "price": 342.6737,
+          "price": 343.1423,
           "basis": "fib_786",
-          "rr": 1.4
-        },
-        {
-          "level": 3,
-          "price": 361.1786,
-          "basis": "next_confluence_resistance",
-          "rr": 3.28
+          "rr": 2.49
         }
       ],
       "preferred_target": 1,
@@ -136,7 +136,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance VPVR_VAL + VPVR_POC + FIB_618 + MA20 (strength 22.0)."
+      "rationale": "Breakout au-dessus confluence resistance FIB_618 + MA20 + VPVR_POC (strength 12.0)."
     },
     {
       "id": "C",
@@ -144,32 +144,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 284.5576,
-        "max": 290.3355
+        "min": 287.2181,
+        "max": 293.05
       },
       "stop": {
-        "price": 276.0446,
+        "price": 279.5063,
         "basis": "fallback_fib_fib_236",
-        "distance_pct": -3.97
+        "distance_pct": -3.66
       },
       "targets": [
         {
           "level": 1,
-          "price": 314.5155,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 38% (sans stop)",
-          "rr": 2.37
+          "price": 314.9384,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
+          "rr": 2.33
         },
         {
           "level": 2,
-          "price": 324.0906,
+          "price": 323.9466,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.21
+          "rr": 3.18
         },
         {
           "level": 3,
-          "price": 333.6658,
+          "price": 332.9548,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.05
+          "rr": 4.03
         }
       ],
       "preferred_target": 1,
@@ -193,7 +193,7 @@
     }
   ],
   "invalidation": {
-    "price": 273.2842,
+    "price": 276.7112,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

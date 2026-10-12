@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-10-12T00:08:31.978067+00:00",
+  "generated_at": "2026-10-12T21:44:09.745964+00:00",
   "prediction_id": "ENR_A_20261012",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "ENR",
@@ -16,20 +16,20 @@
     "targets_source": "stops_targets_by_horizon.intraday.targets.t1..t3",
     "stop_basis": "plancher anti-bruit 5 s — stop EV-optimal −8% (first-passage 5 s réel)",
     "entry_zone_raw": [
-      141.3045,
-      142.1497
+      142.5012,
+      143.083
     ],
-    "entry_mid_raw": 141.7271,
-    "spot": 145.36000061035156,
-    "entry_vs_spot_pct": -2.5
+    "entry_mid_raw": 142.7921,
+    "spot": 146.77999877929688,
+    "entry_vs_spot_pct": -2.72
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 141.72,
+    "limit_price": 142.79,
     "limit_price_range": [
-      141.3,
-      142.14
+      142.5,
+      143.08
     ],
     "quantity": 1,
     "tif": "DAY"
@@ -38,7 +38,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 144.13,
+      "limit_price": 145.17,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
@@ -49,7 +49,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 130.38,
+      "stop_price": 131.36,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -69,8 +69,8 @@
         "oca_group": "ENR_A_intraday_20261012_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 144.13,
-        "stop_price": 130.38
+        "target_price": 145.17,
+        "stop_price": 131.36
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -97,17 +97,17 @@
       "offset_sessions": 0,
       "sessions_counted": 1,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-12T00:08:31.193641+00:00",
+      "anchor_utc": "2026-10-12T21:44:08.814111+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "XETRA",
-      "good_till_date": "2026-10-12T15:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261012-15:30:00",
-      "reference_session": "2026-10-12",
-      "expiry_session": "2026-10-12",
+      "good_till_date": "2026-10-13T15:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261013-15:30:00",
+      "reference_session": "2026-10-13",
+      "expiry_session": "2026-10-13",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-12"
+        "2026-10-13"
       ]
     },
     "venue_calendar": {
@@ -168,22 +168,22 @@
     "composite_score_source": "horizon_ta_score.plan_a.score",
     "ev_pct_risk": null,
     "ev_pct_risk_source": "absent",
-    "ev_pct_risk_basis_price": 141.7271,
+    "ev_pct_risk_basis_price": 142.7921,
     "ev_pct_risk_threshold": 0.3,
     "ev_status": null,
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": null,
     "p_hit_source": "absent",
-    "p_fill": null,
-    "p_fill_source": "absent",
-    "p_fill_note": "conviction_rating.by_horizon.intraday absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
-    "rating": "Unknown",
+    "p_fill": 0.3101,
+    "p_fill_source": "conviction_rating.by_horizon.intraday.inputs.p_fill (empirical_5s)",
+    "p_fill_note": "p_fill telle qu'utilisée par le rating, reprise sans recalcul",
+    "rating": "Pass",
     "rating_source": "conviction_rating.by_horizon.intraday",
-    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (5 séance(s) de retard, drapeau lu sur first_passage_by_horizon) ; usable=false (intervalle le plus large 26.8 pt > 25) (aucun repli sur un autre moteur, R09)",
+    "rating_note": "ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 42/125 fenêtres (p_fill pondéré 31 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 145.36,
-    "hold_tolerance_breach_price": 109.02,
+    "notional_eur": 146.78,
+    "hold_tolerance_breach_price": 110.085,
     "hold_fallback_active": true,
     "prediction_id": "ENR_A_20261012"
   },
@@ -200,7 +200,7 @@
     "rr_on_posted_entry": {
       "T1": 0.21,
       "T2": 0.42,
-      "T3": 0.64
+      "T3": 0.62
     },
     "rr_blended_on_posted_entry": 0.21,
     "oca_per_tranche": true,
