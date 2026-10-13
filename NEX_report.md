@@ -1,6 +1,6 @@
 # NEX
 
-**Generated** : 2026-10-12T21:47:07.117925+00:00  
+**Generated** : 2026-10-13T00:09:41.622868+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 7/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -51,7 +51,7 @@ _Cloture 2026-10-12 : 131.9 · ATR Wilder 4.17 (3.16 %)_
    - _fenêtre arrêtée : historique epuise — le regime est homogene sur toute la profondeur_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -7.51 % vs -7.88 % si l'on extrapolait par √5 _(rapport 0.953 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.003** (β de hausse 1.0878, asymétrie 0.9221) vs FCHI — 619 séances de repli, historique complet
+- **β de baisse : 1.003** (β de hausse 1.0895, asymétrie 0.9207) vs FCHI — 619 séances de repli, historique complet
 
 
 ## Echelle Warden — OU poser le stop
@@ -167,7 +167,7 @@ _Cloture 2026-10-12 : 131.9 · ATR Wilder 4.17 (3.16 %)_
 | 0.5 ATR | 1.53 % | 129.8821 | 34.61 % | 52.5 % | 61.39 % | 70.77 % | 80.22 % | 87.41 % |
 | 0.75 ATR | 2.295 % | 128.8732 | 20.59 % | 36.31 % | 47.05 % | 58.56 % | 70.23 % | 80.92 % |
 | 1.0 ATR | 3.06 % | 127.8643 | 10.78 % | 24.34 % | 34.58 % | 48.23 % | 61.62 % | 74.23 % |
-| 1.25 ATR | 3.825 % | 126.8554 | 4.8 % | 16.19 % | 24.95 % | 39.27 % | 54.4 % | 67.83 % |
+| 1.25 ATR | 3.825 % | 126.8554 | 4.8 % | 16.19 % | 24.95 % | 39.27 % | 54.4 % | 67.73 % |
 | 1.5 ATR | 4.59 % | 125.8464 | 2.45 % | 11.29 % | 18.76 % | 30.71 % | 46.98 % | 60.34 % |
 | 2.0 ATR | 6.119 % | 123.8286 | 0.88 % | 5.3 % | 10.22 % | 19.59 % | 35.31 % | 50.55 % |
 | 2.5 ATR | 7.649 % | 121.8107 | 0.49 % | 2.65 % | 5.7 % | 11.61 % | 24.63 % | 38.66 % |
@@ -294,7 +294,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.48 · part idiosyncratique 0.52
+**Factor** : R² 0.53 · part idiosyncratique 0.47
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -314,8 +314,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.532  _(pas de croisement recent)_
 - **BB** : %B 0.34 · largeur 12.7%
 - **ATR** : 4.04 (46.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.131  _(distribution)_
-- **Vol ratio** : 0.73  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.129  _(distribution)_
+- **Vol ratio** : 0.25  _(volume atone)_
 - **Choppiness** : 40.1  _(transition)_
 - **MA** : MA20 134.62 · MA50 137.4 · MA200 135.73  _(prix < MA20)_
 - **Dist MA** : MA20 -2.0% · MA50 -4.0% · MA200 -2.8%
@@ -323,5 +323,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (888393 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (888396 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
