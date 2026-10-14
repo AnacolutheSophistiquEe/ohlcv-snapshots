@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PLTR",
-    "generated_at": "2026-10-14T00:31:17Z",
+    "generated_at": "2026-10-14T22:05:27Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-10-15T08:00:00Z",
@@ -10,41 +10,41 @@
     "source_precomputed": "PLTR_precomputed.json"
   },
   "context": {
-    "last_price": 208.62,
+    "last_price": 200.97,
     "ta_score": {
       "value": 10,
       "max": 10,
       "label": "very_bullish"
     },
-    "alignment_flag": "triple_bullish",
+    "alignment_flag": "divergent_short_long",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.9,
-      "expected_duration_days": 5.57
+      "probability": 0.4399,
+      "expected_duration_days": 7.75
     },
     "volatility_regime": "low",
     "signals_counter": {
-      "buy": 9,
-      "sell": 3,
-      "neutral": 4,
-      "total": 16,
-      "verdict": "buy"
+      "buy": 7,
+      "sell": 2,
+      "neutral": 6,
+      "total": 15,
+      "verdict": "neutral_to_bullish"
     },
     "mean_reversion_score": {
-      "setup": "rsi_>=70_dist_ma20_+5_+10",
-      "win_rate": 0.94,
-      "sample_size": 18,
-      "median_bounce_pct": 3.48,
-      "confidence": "medium"
+      "setup": "rsi_60-70_dist_ma20_+2_+5",
+      "win_rate": 0.33,
+      "sample_size": 3,
+      "median_bounce_pct": -0.35,
+      "confidence": "very_low"
     },
-    "narrative_short": "TA score 10/10 (very_bullish), alignment triple_bullish, HMM bull (0.90), vol low, signals buy (9b/3s/4n)."
+    "narrative_short": "TA score 10/10 (very_bullish), alignment divergent_short_long, HMM bull (0.44), vol low, signals neutral_to_bullish (7b/2s/6n)."
   },
   "notes": {
-    "atr_daily": 5.9787,
+    "atr_daily": 6.2001,
     "atr_pct_daily": null,
-    "beta_60d": 2.0888,
+    "beta_60d": 2.3301,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.3603,
+    "beta_corr_60d": 0.404,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -53,11 +53,11 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -0.21,
+      "current_dd_pct": -3.87,
       "ath_price": 209.05,
       "ath_date": "2026-10-09",
       "max_dd_1y_pct": -48.22,
-      "days_in_dd": 4,
+      "days_in_dd": 5,
       "median_recovery_days": null
     }
   },
@@ -68,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 188.2643,
-        "max": 190.584
+        "min": 191.918,
+        "max": 194.52
       },
       "stop": {
-        "price": 186.3817,
-        "basis": "below_zone_1pct_below_confluence_support",
-        "distance_pct": -1.61
+        "price": 191.2224,
+        "basis": "swing_plan_below_confluence_support",
+        "distance_pct": -1.03
       },
       "targets": [
         {
           "level": 1,
-          "price": 207.5494,
+          "price": 204.3545,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 5.96
+          "rr": 5.58
         },
         {
           "level": 2,
-          "price": 214.2338,
+          "price": 211.2864,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 8.15
+          "rr": 9.05
         },
         {
           "level": 3,
-          "price": 220.9182,
+          "price": 218.2184,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 10.35
+          "rr": 12.52
         }
       ],
       "preferred_target": 1,
@@ -101,7 +101,7 @@
         "session_us_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support FIB_786 + MA20 (strength 5.0). Bounce mecanique."
+      "rationale": "Confluence support MA20 + VPVR_VAH + S/R_support (strength 16.5). Bounce mecanique."
     },
     {
       "id": "B",
@@ -109,26 +109,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 209.2791,
-        "max": 210.1153
+        "min": 202.0418,
+        "max": 202.8492
       },
       "stop": {
-        "price": 206.0806,
+        "price": 198.7399,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -1.72
+        "distance_pct": -1.83
       },
       "targets": [
         {
+          "level": 1,
+          "price": 204.3545,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
+          "rr": 0.52
+        },
+        {
           "level": 2,
-          "price": 214.2338,
+          "price": 211.2864,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.25
+          "rr": 2.39
         },
         {
           "level": 3,
-          "price": 220.9182,
+          "price": 218.2184,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.1
+          "rr": 4.26
         }
       ],
       "preferred_target": 1,
@@ -144,32 +150,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 170.8036,
-        "max": 175.0685
+        "min": 170.17,
+        "max": 175.3799
       },
       "stop": {
-        "price": 163.9715,
+        "price": 163.3632,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -5.18
+        "distance_pct": -5.45
       },
       "targets": [
         {
           "level": 1,
-          "price": 207.5494,
+          "price": 204.3545,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 3.86
+          "rr": 3.36
         },
         {
           "level": 2,
-          "price": 214.2338,
+          "price": 211.2864,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.61
+          "rr": 4.09
         },
         {
           "level": 3,
-          "price": 220.9182,
+          "price": 218.2184,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 5.35
+          "rr": 4.83
         }
       ],
       "preferred_target": 1,
@@ -177,7 +183,7 @@
         "session_us_open"
       ],
       "max_budget_pct": 35,
-      "rationale": "Deep value mecanique : entree sur confluence support basse BB_LOWER + FIB_618 + VPVR_POC (strength 12.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+      "rationale": "Deep value mecanique : entree sur confluence support basse FIB_618 + BB_LOWER + VPVR_POC (strength 12.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
     }
   ],
   "bot_actionable": true,
@@ -193,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 162.3318,
+    "price": 161.7296,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
