@@ -1,16 +1,17 @@
 # SMCI
 
-**Generated** : 2026-10-13T22:02:27.074461+00:00  
+**Generated** : 2026-10-14T00:22:16.249736+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite normal · $39.07  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)  
 > ↳ spot $39.07 (+10.8% vs entrée) · entrée $35.25 · stop $32.98 · T1 $39.24 · R/R 1.76  
 > ↳ ¼-Kelly 0.018 · _first-passage empirique daily (historique réel, n≈214) · non recalibrée track-record (n=0)_  
 
-> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+> ⚠ **QA flags (2, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+>   - **[MEDIUM]** §12 Options — Max-pain gap affiché +1.3 % ≠ (strike 40.5 − spot 39.07)/spot = +3.7 %. Probable spot d'options périmé vs spot courant.
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -118 % hors [0,100] (R² max 0.93). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
@@ -58,7 +59,7 @@ _Cloture 2026-10-13 : 39.07 · ATR Wilder 2.31 (5.91 %)_
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -16.69 % vs -16.48 % si l'on extrapolait par √5 _(rapport 1.013 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.5095** (β de hausse 1.2181, asymétrie 1.2393) vs IWM — 606 séances de repli, historique complet
+- **β de baisse : 1.5094** (β de hausse 1.2181, asymétrie 1.2392) vs IWM — 606 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 1.733× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
@@ -301,9 +302,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US CPI (headline) (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-10-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-14 — US Core CPI (ex food & energy) (J-0 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -314,7 +315,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.17 · largeur 18.0%
 - **ATR** : 2.28 (60.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
 - **OBV/CMF** : OBV rising · CMF 0.113  _(accumulation)_
-- **Vol ratio** : 0.69  _(volume normal)_
+- **Vol ratio** : 0.62  _(volume normal)_
 - **Choppiness** : 55.9  _(transition)_
 - **MA** : MA20 41.5 · MA50 38.44 · MA200 32.41  _(prix < MA20)_
 - **Dist MA** : MA20 -5.9% · MA50 +1.6% · MA200 +20.6%
@@ -322,5 +323,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (896141 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (896537 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
