@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SOI",
-    "generated_at": "2026-10-14T22:05:27Z",
+    "generated_at": "2026-10-15T00:30:46Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-15T08:00:00Z",
-    "valid_until": "2026-10-15T21:00:00Z",
+    "valid_from": "2026-10-16T08:00:00Z",
+    "valid_until": "2026-10-16T21:00:00Z",
     "source_precomputed": "SOI_precomputed.json"
   },
   "context": {
-    "last_price": 140.7,
+    "last_price": 142.45,
     "ta_score": {
       "value": 6,
       "max": 10,
@@ -20,13 +20,13 @@
     "hmm_regime": {
       "state": "sideways",
       "probability": 0.9,
-      "expected_duration_days": 16.65
+      "expected_duration_days": 16.16
     },
     "volatility_regime": "normal",
     "signals_counter": {
       "buy": 3,
-      "sell": 4,
-      "neutral": 8,
+      "sell": 3,
+      "neutral": 9,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,19 +37,19 @@
       "median_bounce_pct": 7.59,
       "confidence": "low"
     },
-    "narrative_short": "TA score 6/10 (neutral), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (3b/4s/8n)."
+    "narrative_short": "TA score 6/10 (neutral), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (3b/3s/9n)."
   },
   "notes": {
-    "atr_daily": 9.3321,
+    "atr_daily": 9.2571,
     "atr_pct_daily": null,
-    "beta_60d": 1.0703,
+    "beta_60d": 1.1307,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.1283,
+    "beta_corr_60d": 0.1372,
     "btc_corr_high": null,
     "candlestick": {
       "name": "three_black_crows",
       "date": "2026-10-14",
-      "confidence": 0.821
+      "confidence": 0.781
     },
     "divergences": [
       {
@@ -82,7 +82,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -41.67,
+      "current_dd_pct": -40.94,
       "ath_price": 241.2,
       "ath_date": "2021-12-01",
       "max_dd_1y_pct": -55.05,
@@ -97,32 +97,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 134.2475,
+        "min": 134.561,
         "max": 136.9333
       },
       "stop": {
-        "price": 129.2962,
+        "price": 130.1587,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -4.64
+        "distance_pct": -4.12
       },
       "targets": [
         {
           "level": 1,
-          "price": 155.6668,
+          "price": 155.6743,
           "basis": "sous résistance (weak) à 156.6 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 3.19
+          "rr": 3.57
         },
         {
           "level": 2,
-          "price": 166.1004,
+          "price": 166.0241,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.85
+          "rr": 5.42
         },
         {
           "level": 3,
-          "price": 176.5341,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
-          "rr": 6.5
+          "price": 176.3739,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 7.27
         }
       ],
       "preferred_target": 1,
@@ -178,21 +178,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 155.6668,
+          "price": 155.6743,
           "basis": "sous résistance (weak) à 156.6 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
           "rr": 6.87
         },
         {
           "level": 2,
-          "price": 166.1004,
+          "price": 166.0241,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 8.83
+          "rr": 8.81
         },
         {
           "level": 3,
-          "price": 176.5341,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
-          "rr": 10.79
+          "price": 176.3739,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 10.76
         }
       ],
       "preferred_target": 1,
