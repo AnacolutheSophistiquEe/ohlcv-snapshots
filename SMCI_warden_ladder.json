@@ -1,10 +1,10 @@
 {
   "available": true,
-  "generated_at": "2026-10-14T22:01:40.387723+00:00",
+  "generated_at": "2026-10-15T00:21:38.087518+00:00",
   "ticker": "SMCI",
-  "spot": 35.78,
+  "spot": 35.8,
   "atr_14": 2.3479,
-  "target_pct_used": 28.202,
+  "target_pct_used": 28.13,
   "target_source": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
   "target_anchor": {
     "origin": "resistance",
@@ -12,7 +12,7 @@
     "anchor_price": 46.575,
     "aim_price": 45.8706,
     "below_doctrine_floor": true,
-    "floor_note": "AUCUNE cible n'atteint le plancher effectif de 52.50 % = max(8.0 ATR, plancher de cible 12 %) : on retient la PLUS LOINTAINE disponible, a 4.30 ATR. La doctrine dit « loin », la structure ne va pas plus loin. ⚠ Le rail de pose exigera quand meme 12 % : si cette cible est en dessous, elle n'est pas posable telle quelle.",
+    "floor_note": "AUCUNE cible n'atteint le plancher effectif de 52.47 % = max(8.0 ATR, plancher de cible 12 %) : on retient la PLUS LOINTAINE disponible, a 4.29 ATR. La doctrine dit « loin », la structure ne va pas plus loin. ⚠ Le rail de pose exigera quand meme 12 % : si cette cible est en dessous, elle n'est pas posable telle quelle.",
     "farthest_available": true
   },
   "target_note": "la cible sert a mesurer le R/R vs SPOT. Elle est prise sur une RESISTANCE reelle quand il en existe une au-dessus du spot — jamais sur la cible d'un plan d'entree sur repli, qui peut se situer SOUS le prix courant et rendrait tout R/R absurde.",
@@ -175,8 +175,8 @@
   },
   "candidates": [
     {
-      "anchor_price": 32.2582,
-      "stop_price": 32.2582,
+      "anchor_price": 32.2782,
+      "stop_price": 32.2782,
       "origin": "atr_based",
       "strength": "n/a",
       "touches": null,
@@ -185,10 +185,10 @@
       "anchor_distance_atr": 1.5,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
-      "distance_pct": 9.843,
+      "distance_pct": 9.837,
       "p_stop_first": 0.3947,
-      "p_target_first": 0.1532,
-      "p_no_touch": 0.4521,
+      "p_target_first": 0.1533,
+      "p_no_touch": 0.452,
       "p_stop_ci95": [
         0.3442,
         0.4469
@@ -200,25 +200,25 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 10.02,
+      "gap_overshoot_pt": 10.029,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 11.443,
-      "p_gap_through_given_stop": 0.1597,
-      "expected_overshoot_given_stop_pt": 1.5997,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 2.465,
-      "cvar95_pct": 22.224,
+      "loss_if_stop_pct": 11.437,
+      "p_gap_through_given_stop": 0.1596,
+      "expected_overshoot_given_stop_pt": 1.6002,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 2.46,
+      "cvar95_pct": 22.222,
       "var95_pct": 11.811,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -1.87355,
-      "ev_pct": 1.8736,
+      "cost": -1.86568,
+      "ev_pct": 1.8657,
       "ev_terms": {
-        "target": 4.3205,
-        "stop": -4.5164,
-        "no_touch": 2.0694,
-        "pnl_no_touch_pct": 4.5774
+        "target": 4.3123,
+        "stop": -4.5143,
+        "no_touch": 2.0676,
+        "pnl_no_touch_pct": 4.5744
       },
       "p_stop_upper": 0.4469,
       "flags": [],
@@ -230,18 +230,18 @@
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 2.4646,
+          "value": 2.4595,
           "limit": 3.0,
-          "excess_ratio": 0.1785
+          "excess_ratio": 0.1802
         },
         {
           "constraint": "cvar95",
-          "value": 22.2239,
+          "value": 22.2222,
           "limit": 12.0,
-          "excess_ratio": 0.852
+          "excess_ratio": 0.8518
         }
       ],
-      "violation_severity": 1.0305
+      "violation_severity": 1.032
     },
     {
       "anchor_price": 31.896,
@@ -251,16 +251,16 @@
       "touches": null,
       "touch_weight": null,
       "why": "sous le S/R le plus proche",
-      "anchor_distance_atr": 1.65,
+      "anchor_distance_atr": 1.66,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
-      "distance_pct": 14.215,
-      "p_stop_first": 0.2207,
-      "p_target_first": 0.1569,
-      "p_no_touch": 0.6225,
+      "distance_pct": 14.263,
+      "p_stop_first": 0.2199,
+      "p_target_first": 0.157,
+      "p_no_touch": 0.6232,
       "p_stop_ci95": [
-        0.1794,
-        0.2666
+        0.1787,
+        0.2658
       ],
       "p_stop_ci_width_pt": 8.7,
       "prob_source": "calcul DIRECT sur 1244 seances daily, horizon deep (10 j)",
@@ -269,48 +269,48 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 7.884,
+      "gap_overshoot_pt": 7.89,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 16.345,
-      "p_gap_through_given_stop": 0.2702,
-      "expected_overshoot_given_stop_pt": 2.1302,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 1.725,
-      "cvar95_pct": 23.557,
-      "var95_pct": 15.135,
+      "loss_if_stop_pct": 16.409,
+      "p_gap_through_given_stop": 0.272,
+      "expected_overshoot_given_stop_pt": 2.146,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 1.714,
+      "cvar95_pct": 23.563,
+      "var95_pct": 15.374,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.52728,
-      "ev_pct": 2.5273,
+      "cost": -2.51166,
+      "ev_pct": 2.5117,
       "ev_terms": {
-        "target": 4.4249,
-        "stop": -3.6074,
-        "no_touch": 1.7098,
-        "pnl_no_touch_pct": 2.7466
+        "target": 4.4164,
+        "stop": -3.6083,
+        "no_touch": 1.7036,
+        "pnl_no_touch_pct": 2.7336
       },
-      "p_stop_upper": 0.2666,
+      "p_stop_upper": 0.2658,
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "R/R 1.73 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "R/R 1.71 < plancher 3.00 (mesure vs SPOT, gap inclus)",
         "CVaR 95 % 23.56 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 1.7254,
+          "value": 1.7143,
           "limit": 3.0,
-          "excess_ratio": 0.4249
+          "excess_ratio": 0.4286
         },
         {
           "constraint": "cvar95",
-          "value": 23.5573,
+          "value": 23.5632,
           "limit": 12.0,
-          "excess_ratio": 0.9631
+          "excess_ratio": 0.9636
         }
       ],
-      "violation_severity": 1.388
+      "violation_severity": 1.3922
     },
     {
       "anchor_price": 27.71,
@@ -320,8 +320,8 @@
       "touches": 21,
       "touch_weight": 20.6,
       "why": "support a 21 touche(s), force strong",
-      "level_distance_atr": 1.55,
-      "anchor_distance_atr": 3.44,
+      "level_distance_atr": 1.56,
+      "anchor_distance_atr": 3.45,
       "anchor_quality": "exploitable",
       "anchor_quality_basis": "level_distance_atr",
       "anchor_measure": {
@@ -336,10 +336,10 @@
         "measured_at": "2026-10-14T21:46:02.646521+00:00"
       },
       "anchor_warning": null,
-      "distance_pct": 25.914,
+      "distance_pct": 25.956,
       "p_stop_first": 0.0828,
-      "p_target_first": 0.1588,
-      "p_no_touch": 0.7585,
+      "p_target_first": 0.1589,
+      "p_no_touch": 0.7584,
       "p_stop_ci95": [
         0.0572,
         0.1153
@@ -351,48 +351,48 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 2.401,
+      "gap_overshoot_pt": 2.462,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 26.977,
-      "p_gap_through_given_stop": 0.4428,
-      "expected_overshoot_given_stop_pt": 1.0629,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 1.045,
-      "cvar95_pct": 27.674,
-      "var95_pct": 25.914,
+      "loss_if_stop_pct": 27.001,
+      "p_gap_through_given_stop": 0.4243,
+      "expected_overshoot_given_stop_pt": 1.0448,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 1.042,
+      "cvar95_pct": 27.686,
+      "var95_pct": 25.956,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.83437,
-      "ev_pct": 2.8344,
+      "cost": -2.82195,
+      "ev_pct": 2.822,
       "ev_terms": {
-        "target": 4.4785,
-        "stop": -2.2337,
-        "no_touch": 0.5896,
-        "pnl_no_touch_pct": 0.7773
+        "target": 4.4699,
+        "stop": -2.2357,
+        "no_touch": 0.5878,
+        "pnl_no_touch_pct": 0.775
       },
       "p_stop_upper": 0.1153,
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "R/R 1.05 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 27.67 % > budget 12.00 %"
+        "R/R 1.04 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 27.69 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 1.0454,
+          "value": 1.0418,
           "limit": 3.0,
-          "excess_ratio": 0.6515
+          "excess_ratio": 0.6527
         },
         {
           "constraint": "cvar95",
-          "value": 27.6737,
+          "value": 27.6857,
           "limit": 12.0,
-          "excess_ratio": 1.3061
+          "excess_ratio": 1.3071
         }
       ],
-      "violation_severity": 1.9576
+      "violation_severity": 1.9598
     },
     {
       "anchor_price": 25.41,
@@ -402,8 +402,8 @@
       "touches": 3,
       "touch_weight": 3.0,
       "why": "support a 3 touche(s), force medium",
-      "level_distance_atr": 4.37,
-      "anchor_distance_atr": 4.42,
+      "level_distance_atr": 4.38,
+      "anchor_distance_atr": 4.43,
       "anchor_quality": "exploitable",
       "anchor_quality_basis": "level_distance_atr",
       "anchor_measure": {
@@ -418,13 +418,13 @@
         "measured_at": "2026-10-14T21:46:02.646521+00:00"
       },
       "anchor_warning": null,
-      "distance_pct": 32.342,
-      "p_stop_first": 0.0659,
-      "p_target_first": 0.1588,
-      "p_no_touch": 0.7753,
+      "distance_pct": 32.38,
+      "p_stop_first": 0.0657,
+      "p_target_first": 0.1589,
+      "p_no_touch": 0.7754,
       "p_stop_ci95": [
-        0.0433,
-        0.0957
+        0.0431,
+        0.0955
       ],
       "p_stop_ci_width_pt": 5.2,
       "prob_source": "calcul DIRECT sur 1244 seances daily, horizon deep (10 j)",
@@ -433,48 +433,48 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 2.934,
+      "gap_overshoot_pt": 2.896,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 32.484,
-      "p_gap_through_given_stop": 0.0483,
-      "expected_overshoot_given_stop_pt": 0.1418,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 0.868,
-      "cvar95_pct": 32.529,
-      "var95_pct": 32.342,
+      "loss_if_stop_pct": 32.52,
+      "p_gap_through_given_stop": 0.0485,
+      "expected_overshoot_given_stop_pt": 0.1403,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 0.865,
+      "cvar95_pct": 32.564,
+      "var95_pct": 32.38,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.5072,
-      "ev_pct": 2.5072,
+      "cost": -2.49866,
+      "ev_pct": 2.4987,
       "ev_terms": {
-        "target": 4.4785,
-        "stop": -2.1407,
-        "no_touch": 0.1694,
-        "pnl_no_touch_pct": 0.2185
+        "target": 4.4699,
+        "stop": -2.1366,
+        "no_touch": 0.1654,
+        "pnl_no_touch_pct": 0.2133
       },
-      "p_stop_upper": 0.0957,
+      "p_stop_upper": 0.0955,
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "R/R 0.87 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 32.53 % > budget 12.00 %"
+        "R/R 0.86 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 32.56 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 0.8682,
+          "value": 0.865,
           "limit": 3.0,
-          "excess_ratio": 0.7106
+          "excess_ratio": 0.7117
         },
         {
           "constraint": "cvar95",
-          "value": 32.5289,
+          "value": 32.5645,
           "limit": 12.0,
-          "excess_ratio": 1.7107
+          "excess_ratio": 1.7137
         }
       ],
-      "violation_severity": 2.4213
+      "violation_severity": 2.4254
     },
     {
       "anchor_price": 23.38,
@@ -484,8 +484,8 @@
       "touches": 1,
       "touch_weight": 1.0,
       "why": "support a 1 touche(s), force weak",
-      "level_distance_atr": 5.28,
-      "anchor_distance_atr": 5.28,
+      "level_distance_atr": 5.29,
+      "anchor_distance_atr": 5.29,
       "anchor_quality": "exploitable",
       "anchor_quality_basis": "level_distance_atr",
       "anchor_measure": {
@@ -500,10 +500,10 @@
         "measured_at": "2026-10-14T21:46:02.646521+00:00"
       },
       "anchor_warning": null,
-      "distance_pct": 38.016,
+      "distance_pct": 38.051,
       "p_stop_first": 0.0359,
-      "p_target_first": 0.1588,
-      "p_no_touch": 0.8054,
+      "p_target_first": 0.1589,
+      "p_no_touch": 0.8053,
       "p_stop_ci95": [
         0.02,
         0.0595
@@ -515,52 +515,52 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 1.314,
+      "gap_overshoot_pt": 1.279,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 38.05,
+      "loss_if_stop_pct": 38.084,
       "p_gap_through_given_stop": 0.0257,
-      "expected_overshoot_given_stop_pt": 0.0337,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 0.741,
-      "cvar95_pct": 36.459,
+      "expected_overshoot_given_stop_pt": 0.0328,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 0.739,
+      "cvar95_pct": 36.483,
       "var95_pct": 29.41,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.46189,
-      "ev_pct": 2.4619,
+      "cost": -2.45027,
+      "ev_pct": 2.4503,
       "ev_terms": {
-        "target": 4.4785,
-        "stop": -1.366,
-        "no_touch": -0.6506,
-        "pnl_no_touch_pct": -0.8078
+        "target": 4.4699,
+        "stop": -1.3672,
+        "no_touch": -0.6524,
+        "pnl_no_touch_pct": -0.8101
       },
       "p_stop_upper": 0.0595,
       "flags": [],
       "feasible": false,
       "rejected_because": [
         "R/R 0.74 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 36.46 % > budget 12.00 %"
+        "CVaR 95 % 36.48 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 0.7412,
+          "value": 0.7386,
           "limit": 3.0,
-          "excess_ratio": 0.7529
+          "excess_ratio": 0.7538
         },
         {
           "constraint": "cvar95",
-          "value": 36.4589,
+          "value": 36.4834,
           "limit": 12.0,
-          "excess_ratio": 2.0382
+          "excess_ratio": 2.0403
         }
       ],
-      "violation_severity": 2.7911
+      "violation_severity": 2.7941
     },
     {
-      "anchor_price": 35.193,
-      "stop_price": 35.193,
+      "anchor_price": 35.213,
+      "stop_price": 35.213,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
@@ -589,17 +589,17 @@
       "loss_if_stop_pct": 1.876,
       "p_gap_through_given_stop": 0.0682,
       "expected_overshoot_given_stop_pt": 0.2359,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 15.034,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 14.995,
       "cvar95_pct": 5.858,
       "var95_pct": 1.86,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -0.3411,
-      "ev_pct": 0.3411,
+      "cost": -0.33736,
+      "ev_pct": 0.3374,
       "ev_terms": {
-        "target": 1.4637,
+        "target": 1.4599,
         "stop": -1.6894,
         "no_touch": 0.5668,
         "pnl_no_touch_pct": 11.9336
@@ -608,7 +608,7 @@
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "cible atteinte seulement 5.2 % du temps (< 15 %) meme a 10 seances : le R/R de 15.03 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "cible atteinte seulement 5.2 % du temps (< 15 %) meme a 10 seances : le R/R de 15.00 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
         "p_stop_first 0.901, borne haute 0.929 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)"
       ],
       "violations": [
@@ -628,20 +628,20 @@
       "violation_severity": 1.3427
     },
     {
-      "anchor_price": 34.6061,
-      "stop_price": 34.6061,
+      "anchor_price": 34.6261,
+      "stop_price": 34.6261,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 0.50 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 0.5,
-      "distance_pct": 3.281,
+      "distance_pct": 3.279,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.7848,
-      "p_target_first": 0.094,
-      "p_no_touch": 0.1212,
+      "p_target_first": 0.0941,
+      "p_no_touch": 0.1211,
       "p_stop_ci95": [
         0.7392,
         0.8256
@@ -653,39 +653,39 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 3.856,
+      "gap_overshoot_pt": 3.858,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 3.766,
+      "loss_if_stop_pct": 3.764,
       "p_gap_through_given_stop": 0.1258,
-      "expected_overshoot_given_stop_pt": 0.4851,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 7.488,
+      "expected_overshoot_given_stop_pt": 0.4853,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 7.473,
       "cvar95_pct": 10.304,
       "var95_pct": 4.437,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -0.78033,
-      "ev_pct": 0.7803,
+      "cost": -0.77593,
+      "ev_pct": 0.7759,
       "ev_terms": {
-        "target": 2.651,
-        "stop": -2.9556,
-        "no_touch": 1.085,
-        "pnl_no_touch_pct": 8.9518
+        "target": 2.647,
+        "stop": -2.9542,
+        "no_touch": 1.0831,
+        "pnl_no_touch_pct": 8.9442
       },
       "p_stop_upper": 0.8256,
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "cible atteinte seulement 9.4 % du temps (< 15 %) meme a 10 seances : le R/R de 7.49 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "cible atteinte seulement 9.4 % du temps (< 15 %) meme a 10 seances : le R/R de 7.47 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
         "p_stop_first 0.785, borne haute 0.826 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)"
       ],
       "violations": [
         {
           "constraint": "p_target_first",
-          "value": 0.094,
+          "value": 0.0941,
           "limit": 0.15,
-          "excess_ratio": 0.3733
+          "excess_ratio": 0.3727
         },
         {
           "constraint": "p_stop_first_upper",
@@ -694,23 +694,23 @@
           "excess_ratio": 0.5011
         }
       ],
-      "violation_severity": 0.8744
+      "violation_severity": 0.8738
     },
     {
-      "anchor_price": 34.0191,
-      "stop_price": 34.0191,
+      "anchor_price": 34.0391,
+      "stop_price": 34.0391,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 0.75 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 0.75,
-      "distance_pct": 4.921,
+      "distance_pct": 4.919,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.686,
-      "p_target_first": 0.118,
-      "p_no_touch": 0.196,
+      "p_target_first": 0.1181,
+      "p_no_touch": 0.1959,
       "p_stop_ci95": [
         0.6357,
         0.7332
@@ -722,40 +722,40 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 4.888,
+      "gap_overshoot_pt": 4.89,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 5.647,
+      "loss_if_stop_pct": 5.645,
       "p_gap_through_given_stop": 0.1485,
-      "expected_overshoot_given_stop_pt": 0.7257,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 4.994,
+      "expected_overshoot_given_stop_pt": 0.726,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 4.983,
       "cvar95_pct": 14.312,
       "var95_pct": 6.301,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -1.00523,
-      "ev_pct": 1.0052,
+      "cost": -0.9989,
+      "ev_pct": 0.9989,
       "ev_terms": {
-        "target": 3.3278,
-        "stop": -3.8736,
-        "no_touch": 1.551,
-        "pnl_no_touch_pct": 7.9133
+        "target": 3.3222,
+        "stop": -3.8724,
+        "no_touch": 1.5492,
+        "pnl_no_touch_pct": 7.9081
       },
       "p_stop_upper": 0.7332,
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "cible atteinte seulement 11.8 % du temps (< 15 %) meme a 10 seances : le R/R de 4.99 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "cible atteinte seulement 11.8 % du temps (< 15 %) meme a 10 seances : le R/R de 4.98 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
         "p_stop_first 0.686, borne haute 0.733 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
         "CVaR 95 % 14.31 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "p_target_first",
-          "value": 0.118,
+          "value": 0.1181,
           "limit": 0.15,
-          "excess_ratio": 0.2133
+          "excess_ratio": 0.2127
         },
         {
           "constraint": "p_stop_first_upper",
@@ -770,23 +770,23 @@
           "excess_ratio": 0.1927
         }
       ],
-      "violation_severity": 0.7391
+      "violation_severity": 0.7385
     },
     {
-      "anchor_price": 33.4321,
-      "stop_price": 33.4321,
+      "anchor_price": 33.4521,
+      "stop_price": 33.4521,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 1.00 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 1.0,
-      "distance_pct": 6.562,
+      "distance_pct": 6.558,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.5758,
-      "p_target_first": 0.135,
-      "p_no_touch": 0.2892,
+      "p_target_first": 0.1351,
+      "p_no_touch": 0.2891,
       "p_stop_ci95": [
         0.5233,
         0.6271
@@ -798,40 +798,40 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 7.253,
+      "gap_overshoot_pt": 7.257,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 7.631,
+      "loss_if_stop_pct": 7.627,
       "p_gap_through_given_stop": 0.1474,
-      "expected_overshoot_given_stop_pt": 1.0689,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 3.696,
+      "expected_overshoot_given_stop_pt": 1.0695,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 3.688,
       "cvar95_pct": 18.299,
       "var95_pct": 8.493,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -1.3397,
-      "ev_pct": 1.3397,
+      "cost": -1.33294,
+      "ev_pct": 1.3329,
       "ev_terms": {
-        "target": 3.8073,
-        "stop": -4.3939,
-        "no_touch": 1.9263,
-        "pnl_no_touch_pct": 6.6608
+        "target": 3.8004,
+        "stop": -4.3919,
+        "no_touch": 1.9245,
+        "pnl_no_touch_pct": 6.6568
       },
       "p_stop_upper": 0.6271,
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "cible atteinte seulement 13.5 % du temps (< 15 %) meme a 10 seances : le R/R de 3.70 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "cible atteinte seulement 13.5 % du temps (< 15 %) meme a 10 seances : le R/R de 3.69 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
         "p_stop_first 0.576, borne haute 0.627 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)",
         "CVaR 95 % 18.30 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "p_target_first",
-          "value": 0.135,
+          "value": 0.1351,
           "limit": 0.15,
-          "excess_ratio": 0.1
+          "excess_ratio": 0.0993
         },
         {
           "constraint": "p_stop_first_upper",
@@ -846,23 +846,23 @@
           "excess_ratio": 0.5249
         }
       ],
-      "violation_severity": 0.7651
+      "violation_severity": 0.7644
     },
     {
-      "anchor_price": 32.8452,
-      "stop_price": 32.8452,
+      "anchor_price": 32.8652,
+      "stop_price": 32.8652,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 1.25 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 1.25,
-      "distance_pct": 8.202,
+      "distance_pct": 8.198,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.4611,
-      "p_target_first": 0.1518,
-      "p_no_touch": 0.387,
+      "p_target_first": 0.1519,
+      "p_no_touch": 0.3869,
       "p_stop_ci95": [
         0.4091,
         0.5138
@@ -874,25 +874,25 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 7.0,
+      "gap_overshoot_pt": 7.004,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 9.579,
+      "loss_if_stop_pct": 9.576,
       "p_gap_through_given_stop": 0.1968,
-      "expected_overshoot_given_stop_pt": 1.3775,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 2.944,
+      "expected_overshoot_given_stop_pt": 1.3783,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 2.937,
       "cvar95_pct": 20.506,
       "var95_pct": 9.61,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -1.9399,
-      "ev_pct": 1.9399,
+      "cost": -1.93146,
+      "ev_pct": 1.9315,
       "ev_terms": {
-        "target": 4.2811,
-        "stop": -4.4171,
-        "no_touch": 2.0759,
-        "pnl_no_touch_pct": 5.3642
+        "target": 4.2729,
+        "stop": -4.4156,
+        "no_touch": 2.0741,
+        "pnl_no_touch_pct": 5.3609
       },
       "p_stop_upper": 0.5138,
       "flags": [],
@@ -904,9 +904,9 @@
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 2.944,
+          "value": 2.9375,
           "limit": 3.0,
-          "excess_ratio": 0.0187
+          "excess_ratio": 0.0208
         },
         {
           "constraint": "cvar95",
@@ -915,7 +915,7 @@
           "excess_ratio": 0.7089
         }
       ],
-      "violation_severity": 0.7276
+      "violation_severity": 0.7297
     },
     {
       "anchor_price": 31.896,
@@ -925,16 +925,16 @@
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 1.50 ATR, ramene SOUS le niveau sr_based a 31.8960 (moins le tampon mesure)",
-      "anchor_distance_atr": 1.65,
-      "distance_pct": 12.824,
+      "anchor_distance_atr": 1.66,
+      "distance_pct": 12.873,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "la mesure des 51 %% porte sur les supports DETECTES, pas sur ce type d'ancre",
-      "p_stop_first": 0.2661,
-      "p_target_first": 0.1564,
-      "p_no_touch": 0.5774,
+      "p_stop_first": 0.2654,
+      "p_target_first": 0.1565,
+      "p_no_touch": 0.5781,
       "p_stop_ci95": [
-        0.2216,
-        0.3145
+        0.2209,
+        0.3138
       ],
       "p_stop_ci_width_pt": 9.3,
       "prob_source": "calcul DIRECT sur 1244 seances daily, horizon deep (10 j)",
@@ -943,64 +943,64 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 7.889,
+      "gap_overshoot_pt": 7.844,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 14.745,
-      "p_gap_through_given_stop": 0.2435,
-      "expected_overshoot_given_stop_pt": 1.9213,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 1.913,
+      "loss_if_stop_pct": 14.788,
+      "p_gap_through_given_stop": 0.2441,
+      "expected_overshoot_given_stop_pt": 1.9151,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 1.902,
       "cvar95_pct": 22.949,
       "var95_pct": 13.447,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.42991,
-      "ev_pct": 2.4299,
+      "cost": -2.41816,
+      "ev_pct": 2.4182,
       "ev_terms": {
-        "target": 4.4108,
-        "stop": -3.9237,
-        "no_touch": 1.9428,
-        "pnl_no_touch_pct": 3.3648
+        "target": 4.4023,
+        "stop": -3.9248,
+        "no_touch": 1.9406,
+        "pnl_no_touch_pct": 3.3568
       },
-      "p_stop_upper": 0.3145,
+      "p_stop_upper": 0.3138,
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "R/R 1.91 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "R/R 1.90 < plancher 3.00 (mesure vs SPOT, gap inclus)",
         "CVaR 95 % 22.95 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 1.9126,
+          "value": 1.9022,
           "limit": 3.0,
-          "excess_ratio": 0.3625
+          "excess_ratio": 0.3659
         },
         {
           "constraint": "cvar95",
-          "value": 22.9492,
+          "value": 22.9493,
           "limit": 12.0,
           "excess_ratio": 0.9124
         }
       ],
-      "violation_severity": 1.2749
+      "violation_severity": 1.2783
     },
     {
-      "anchor_price": 29.9104,
-      "stop_price": 29.9104,
+      "anchor_price": 29.9304,
+      "stop_price": 29.9304,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 2.50 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 2.5,
-      "distance_pct": 16.405,
+      "distance_pct": 16.396,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.1785,
-      "p_target_first": 0.1569,
-      "p_no_touch": 0.6646,
+      "p_target_first": 0.157,
+      "p_no_touch": 0.6645,
       "p_stop_ci95": [
         0.1409,
         0.2215
@@ -1012,25 +1012,25 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 6.72,
+      "gap_overshoot_pt": 6.716,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 18.891,
-      "p_gap_through_given_stop": 0.37,
-      "expected_overshoot_given_stop_pt": 2.4863,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 1.493,
+      "loss_if_stop_pct": 18.886,
+      "p_gap_through_given_stop": 0.3707,
+      "expected_overshoot_given_stop_pt": 2.4896,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 1.489,
       "cvar95_pct": 24.739,
       "var95_pct": 19.52,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.69343,
-      "ev_pct": 2.6934,
+      "cost": -2.68419,
+      "ev_pct": 2.6842,
       "ev_terms": {
-        "target": 4.4249,
-        "stop": -3.3721,
-        "no_touch": 1.6406,
-        "pnl_no_touch_pct": 2.4686
+        "target": 4.4164,
+        "stop": -3.3711,
+        "no_touch": 1.6389,
+        "pnl_no_touch_pct": 2.4663
       },
       "p_stop_upper": 0.2215,
       "flags": [],
@@ -1042,9 +1042,9 @@
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 1.4929,
+          "value": 1.4895,
           "limit": 3.0,
-          "excess_ratio": 0.5024
+          "excess_ratio": 0.5035
         },
         {
           "constraint": "cvar95",
@@ -1053,23 +1053,23 @@
           "excess_ratio": 1.0616
         }
       ],
-      "violation_severity": 1.564
+      "violation_severity": 1.5651
     },
     {
-      "anchor_price": 29.3234,
-      "stop_price": 29.3234,
+      "anchor_price": 29.3434,
+      "stop_price": 29.3434,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 2.75 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 2.75,
-      "distance_pct": 18.045,
+      "distance_pct": 18.035,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.1419,
-      "p_target_first": 0.1576,
-      "p_no_touch": 0.7005,
+      "p_target_first": 0.1577,
+      "p_no_touch": 0.7004,
       "p_stop_ci95": [
         0.1082,
         0.1816
@@ -1081,25 +1081,25 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 5.49,
+      "gap_overshoot_pt": 5.5,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 20.667,
+      "loss_if_stop_pct": 20.662,
       "p_gap_through_given_stop": 0.4775,
-      "expected_overshoot_given_stop_pt": 2.6218,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 1.365,
+      "expected_overshoot_given_stop_pt": 2.6266,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 1.361,
       "cvar95_pct": 25.05,
       "var95_pct": 20.338,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.90489,
-      "ev_pct": 2.9049,
+      "cost": -2.89536,
+      "ev_pct": 2.8954,
       "ev_terms": {
-        "target": 4.4446,
-        "stop": -2.9326,
-        "no_touch": 1.3929,
-        "pnl_no_touch_pct": 1.9884
+        "target": 4.4361,
+        "stop": -2.9319,
+        "no_touch": 1.3911,
+        "pnl_no_touch_pct": 1.9862
       },
       "p_stop_upper": 0.1816,
       "flags": [],
@@ -1111,9 +1111,9 @@
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 1.3646,
+          "value": 1.3615,
           "limit": 3.0,
-          "excess_ratio": 0.5451
+          "excess_ratio": 0.5462
         },
         {
           "constraint": "cvar95",
@@ -1122,23 +1122,23 @@
           "excess_ratio": 1.0875
         }
       ],
-      "violation_severity": 1.6326
+      "violation_severity": 1.6337
     },
     {
-      "anchor_price": 28.7364,
-      "stop_price": 28.7364,
+      "anchor_price": 28.7564,
+      "stop_price": 28.7564,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 3.00 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 3.0,
-      "distance_pct": 19.686,
+      "distance_pct": 19.675,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.1299,
-      "p_target_first": 0.1576,
-      "p_no_touch": 0.7125,
+      "p_target_first": 0.1577,
+      "p_no_touch": 0.7124,
       "p_stop_ci95": [
         0.0976,
         0.1684
@@ -1150,25 +1150,25 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 4.614,
+      "gap_overshoot_pt": 4.625,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 21.855,
+      "loss_if_stop_pct": 21.849,
       "p_gap_through_given_stop": 0.4701,
-      "expected_overshoot_given_stop_pt": 2.1688,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 1.29,
+      "expected_overshoot_given_stop_pt": 2.174,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 1.287,
       "cvar95_pct": 25.223,
       "var95_pct": 20.713,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.92489,
-      "ev_pct": 2.9249,
+      "cost": -2.91529,
+      "ev_pct": 2.9153,
       "ev_terms": {
-        "target": 4.4446,
-        "stop": -2.8389,
-        "no_touch": 1.3192,
-        "pnl_no_touch_pct": 1.8515
+        "target": 4.4361,
+        "stop": -2.8382,
+        "no_touch": 1.3174,
+        "pnl_no_touch_pct": 1.8492
       },
       "p_stop_upper": 0.1684,
       "flags": [],
@@ -1180,9 +1180,9 @@
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 1.2904,
+          "value": 1.2875,
           "limit": 3.0,
-          "excess_ratio": 0.5699
+          "excess_ratio": 0.5708
         },
         {
           "constraint": "cvar95",
@@ -1191,7 +1191,7 @@
           "excess_ratio": 1.1019
         }
       ],
-      "violation_severity": 1.6718
+      "violation_severity": 1.6727
     },
     {
       "anchor_price": 27.71,
@@ -1201,16 +1201,16 @@
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 3.50 ATR, ramene SOUS le niveau support a 27.7100 (moins le tampon mesure)",
-      "anchor_distance_atr": 3.44,
-      "distance_pct": 24.523,
+      "anchor_distance_atr": 3.45,
+      "distance_pct": 24.565,
       "anchor_quality": "exploitable",
       "anchor_quality_basis": "level_distance_atr",
-      "p_stop_first": 0.0901,
-      "p_target_first": 0.1588,
+      "p_stop_first": 0.0899,
+      "p_target_first": 0.1589,
       "p_no_touch": 0.7512,
       "p_stop_ci95": [
-        0.0633,
-        0.1237
+        0.0632,
+        0.1235
       ],
       "p_stop_ci_width_pt": 6.0,
       "prob_source": "calcul DIRECT sur 1244 seances daily, horizon deep (10 j)",
@@ -1219,48 +1219,48 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 3.185,
+      "gap_overshoot_pt": 3.162,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 25.982,
-      "p_gap_through_given_stop": 0.458,
-      "expected_overshoot_given_stop_pt": 1.4589,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 1.085,
-      "cvar95_pct": 27.151,
-      "var95_pct": 24.523,
+      "loss_if_stop_pct": 26.007,
+      "p_gap_through_given_stop": 0.4559,
+      "expected_overshoot_given_stop_pt": 1.4419,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 1.082,
+      "cvar95_pct": 27.158,
+      "var95_pct": 24.565,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.88616,
-      "ev_pct": 2.8862,
+      "cost": -2.87575,
+      "ev_pct": 2.8758,
       "ev_terms": {
-        "target": 4.4785,
-        "stop": -2.341,
-        "no_touch": 0.7486,
-        "pnl_no_touch_pct": 0.9966
+        "target": 4.4699,
+        "stop": -2.338,
+        "no_touch": 0.7439,
+        "pnl_no_touch_pct": 0.9903
       },
-      "p_stop_upper": 0.1237,
+      "p_stop_upper": 0.1235,
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "R/R 1.09 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 27.15 % > budget 12.00 %"
+        "R/R 1.08 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 27.16 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 1.0854,
+          "value": 1.0816,
           "limit": 3.0,
-          "excess_ratio": 0.6382
+          "excess_ratio": 0.6395
         },
         {
           "constraint": "cvar95",
-          "value": 27.151,
+          "value": 27.1583,
           "limit": 12.0,
-          "excess_ratio": 1.2626
+          "excess_ratio": 1.2632
         }
       ],
-      "violation_severity": 1.9008
+      "violation_severity": 1.9027
     },
     {
       "anchor_price": 25.41,
@@ -1270,13 +1270,13 @@
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 4.50 ATR, ramene SOUS le niveau support a 25.4100 (moins le tampon mesure)",
-      "anchor_distance_atr": 4.42,
-      "distance_pct": 30.951,
+      "anchor_distance_atr": 4.43,
+      "distance_pct": 30.99,
       "anchor_quality": "exploitable",
       "anchor_quality_basis": "level_distance_atr",
       "p_stop_first": 0.0701,
-      "p_target_first": 0.1588,
-      "p_no_touch": 0.7712,
+      "p_target_first": 0.1589,
+      "p_no_touch": 0.7711,
       "p_stop_ci95": [
         0.0467,
         0.1006
@@ -1288,48 +1288,48 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 2.512,
+      "gap_overshoot_pt": 2.473,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 31.056,
+      "loss_if_stop_pct": 31.093,
       "p_gap_through_given_stop": 0.0416,
-      "expected_overshoot_given_stop_pt": 0.1045,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 0.908,
-      "cvar95_pct": 31.098,
-      "var95_pct": 30.951,
+      "expected_overshoot_given_stop_pt": 0.1029,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 0.905,
+      "cvar95_pct": 31.134,
+      "var95_pct": 30.99,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.5829,
-      "ev_pct": 2.5829,
+      "cost": -2.56985,
+      "ev_pct": 2.5698,
       "ev_terms": {
-        "target": 4.4785,
-        "stop": -2.177,
-        "no_touch": 0.2814,
-        "pnl_no_touch_pct": 0.3649
+        "target": 4.4699,
+        "stop": -2.1796,
+        "no_touch": 0.2796,
+        "pnl_no_touch_pct": 0.3626
       },
       "p_stop_upper": 0.1006,
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "R/R 0.91 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 31.10 % > budget 12.00 %"
+        "R/R 0.90 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 31.13 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 0.9081,
+          "value": 0.9047,
           "limit": 3.0,
-          "excess_ratio": 0.6973
+          "excess_ratio": 0.6984
         },
         {
           "constraint": "cvar95",
-          "value": 31.0975,
+          "value": 31.1342,
           "limit": 12.0,
-          "excess_ratio": 1.5915
+          "excess_ratio": 1.5945
         }
       ],
-      "violation_severity": 2.2888
+      "violation_severity": 2.2929
     },
     {
       "anchor_price": 23.38,
@@ -1339,13 +1339,13 @@
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 5.50 ATR, ramene SOUS le niveau support a 23.3800 (moins le tampon mesure)",
-      "anchor_distance_atr": 5.28,
-      "distance_pct": 36.625,
+      "anchor_distance_atr": 5.29,
+      "distance_pct": 36.66,
       "anchor_quality": "exploitable",
       "anchor_quality_basis": "level_distance_atr",
       "p_stop_first": 0.0504,
-      "p_target_first": 0.1588,
-      "p_no_touch": 0.7909,
+      "p_target_first": 0.1589,
+      "p_no_touch": 0.7908,
       "p_stop_ci95": [
         0.031,
         0.0773
@@ -1357,64 +1357,64 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 1.134,
+      "gap_overshoot_pt": 1.099,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 36.665,
+      "loss_if_stop_pct": 36.699,
       "p_gap_through_given_stop": 0.0353,
-      "expected_overshoot_given_stop_pt": 0.04,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 0.769,
-      "cvar95_pct": 36.665,
-      "var95_pct": 36.625,
+      "expected_overshoot_given_stop_pt": 0.0388,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 0.767,
+      "cvar95_pct": 36.699,
+      "var95_pct": 36.66,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.37811,
-      "ev_pct": 2.3781,
+      "cost": -2.366,
+      "ev_pct": 2.366,
       "ev_terms": {
-        "target": 4.4785,
-        "stop": -1.8479,
-        "no_touch": -0.2525,
-        "pnl_no_touch_pct": -0.3192
+        "target": 4.4699,
+        "stop": -1.8496,
+        "no_touch": -0.2542,
+        "pnl_no_touch_pct": -0.3215
       },
       "p_stop_upper": 0.0773,
       "flags": [],
       "feasible": false,
       "rejected_because": [
         "R/R 0.77 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 36.67 % > budget 12.00 %"
+        "CVaR 95 % 36.70 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 0.7692,
+          "value": 0.7665,
           "limit": 3.0,
-          "excess_ratio": 0.7436
+          "excess_ratio": 0.7445
         },
         {
           "constraint": "cvar95",
-          "value": 36.6653,
+          "value": 36.6991,
           "limit": 12.0,
-          "excess_ratio": 2.0554
+          "excess_ratio": 2.0583
         }
       ],
-      "violation_severity": 2.799
+      "violation_severity": 2.8028
     },
     {
-      "anchor_price": 21.6929,
-      "stop_price": 21.6929,
+      "anchor_price": 21.7129,
+      "stop_price": 21.7129,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 6.00 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 6.0,
-      "distance_pct": 39.372,
+      "distance_pct": 39.35,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.0146,
-      "p_target_first": 0.1588,
-      "p_no_touch": 0.8267,
+      "p_target_first": 0.1589,
+      "p_no_touch": 0.8266,
       "p_stop_ci95": [
         0.0056,
         0.0316
@@ -1426,64 +1426,64 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 0.743,
+      "gap_overshoot_pt": 0.765,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 39.39,
+      "loss_if_stop_pct": 39.369,
       "p_gap_through_given_stop": 0.0248,
-      "expected_overshoot_given_stop_pt": 0.0184,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 0.716,
-      "cvar95_pct": 34.319,
+      "expected_overshoot_given_stop_pt": 0.019,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 0.715,
+      "cvar95_pct": 34.313,
       "var95_pct": 28.157,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.58992,
-      "ev_pct": 2.5899,
+      "cost": -2.57987,
+      "ev_pct": 2.5799,
       "ev_terms": {
-        "target": 4.4785,
-        "stop": -0.5751,
-        "no_touch": -1.3135,
-        "pnl_no_touch_pct": -1.5888
+        "target": 4.4699,
+        "stop": -0.5748,
+        "no_touch": -1.3152,
+        "pnl_no_touch_pct": -1.5911
       },
       "p_stop_upper": 0.0316,
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "R/R 0.72 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 34.32 % > budget 12.00 %"
+        "R/R 0.71 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 34.31 % > budget 12.00 %"
       ],
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 0.716,
+          "value": 0.7145,
           "limit": 3.0,
-          "excess_ratio": 0.7613
+          "excess_ratio": 0.7618
         },
         {
           "constraint": "cvar95",
-          "value": 34.3194,
+          "value": 34.3131,
           "limit": 12.0,
-          "excess_ratio": 1.8599
+          "excess_ratio": 1.8594
         }
       ],
       "violation_severity": 2.6212
     },
     {
-      "anchor_price": 20.5189,
-      "stop_price": 20.5189,
+      "anchor_price": 20.5389,
+      "stop_price": 20.5389,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 6.50 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 6.5,
-      "distance_pct": 42.653,
+      "distance_pct": 42.629,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.0034,
-      "p_target_first": 0.1588,
-      "p_no_touch": 0.8379,
+      "p_target_first": 0.1589,
+      "p_no_touch": 0.8378,
       "p_stop_ci95": [
         0.0004,
         0.0144
@@ -1497,23 +1497,23 @@
       "grid_point": null,
       "gap_overshoot_pt": 0.0,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 42.653,
+      "loss_if_stop_pct": 42.629,
       "p_gap_through_given_stop": 0.0,
       "expected_overshoot_given_stop_pt": 0.0,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 0.661,
-      "cvar95_pct": 33.905,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 0.66,
+      "cvar95_pct": 33.903,
       "var95_pct": 28.157,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.61057,
-      "ev_pct": 2.6106,
+      "cost": -2.60022,
+      "ev_pct": 2.6002,
       "ev_terms": {
-        "target": 4.4785,
-        "stop": -0.145,
-        "no_touch": -1.7229,
-        "pnl_no_touch_pct": -2.0562
+        "target": 4.4699,
+        "stop": -0.1449,
+        "no_touch": -1.7247,
+        "pnl_no_touch_pct": -2.0586
       },
       "p_stop_upper": 0.0144,
       "flags": [],
@@ -1525,34 +1525,34 @@
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 0.6612,
+          "value": 0.6599,
           "limit": 3.0,
-          "excess_ratio": 0.7796
+          "excess_ratio": 0.78
         },
         {
           "constraint": "cvar95",
-          "value": 33.9047,
+          "value": 33.903,
           "limit": 12.0,
-          "excess_ratio": 1.8254
+          "excess_ratio": 1.8253
         }
       ],
-      "violation_severity": 2.605
+      "violation_severity": 2.6053
     },
     {
-      "anchor_price": 19.345,
-      "stop_price": 19.345,
+      "anchor_price": 19.365,
+      "stop_price": 19.365,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 7.00 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 7.0,
-      "distance_pct": 45.933,
+      "distance_pct": 45.908,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.0021,
-      "p_target_first": 0.1588,
-      "p_no_touch": 0.8391,
+      "p_target_first": 0.1589,
+      "p_no_touch": 0.839,
       "p_stop_ci95": [
         0.0002,
         0.0119
@@ -1564,25 +1564,25 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 0.747,
+      "gap_overshoot_pt": 0.772,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 46.058,
+      "loss_if_stop_pct": 46.037,
       "p_gap_through_given_stop": 0.1671,
-      "expected_overshoot_given_stop_pt": 0.1248,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 0.612,
-      "cvar95_pct": 34.006,
+      "expected_overshoot_given_stop_pt": 0.129,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 0.611,
+      "cvar95_pct": 34.005,
       "var95_pct": 28.157,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.60756,
-      "ev_pct": 2.6076,
+      "cost": -2.59718,
+      "ev_pct": 2.5972,
       "ev_terms": {
-        "target": 4.4785,
+        "target": 4.4699,
         "stop": -0.0967,
-        "no_touch": -1.7742,
-        "pnl_no_touch_pct": -2.1144
+        "no_touch": -1.776,
+        "pnl_no_touch_pct": -2.1168
       },
       "p_stop_upper": 0.0119,
       "flags": [],
@@ -1594,34 +1594,34 @@
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 0.6123,
+          "value": 0.611,
           "limit": 3.0,
-          "excess_ratio": 0.7959
+          "excess_ratio": 0.7963
         },
         {
           "constraint": "cvar95",
-          "value": 34.006,
+          "value": 34.0052,
           "limit": 12.0,
           "excess_ratio": 1.8338
         }
       ],
-      "violation_severity": 2.6297
+      "violation_severity": 2.6301
     },
     {
-      "anchor_price": 18.1711,
-      "stop_price": 18.1711,
+      "anchor_price": 18.1911,
+      "stop_price": 18.1911,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 7.50 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 7.5,
-      "distance_pct": 49.214,
+      "distance_pct": 49.187,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.0018,
-      "p_target_first": 0.1588,
-      "p_no_touch": 0.8395,
+      "p_target_first": 0.1589,
+      "p_no_touch": 0.8394,
       "p_stop_ci95": [
         0.0001,
         0.0113
@@ -1633,25 +1633,25 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 5.584,
+      "gap_overshoot_pt": 5.611,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 51.444,
+      "loss_if_stop_pct": 51.428,
       "p_gap_through_given_stop": 0.3993,
-      "expected_overshoot_given_stop_pt": 2.2298,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 0.548,
+      "expected_overshoot_given_stop_pt": 2.2406,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 0.547,
       "cvar95_pct": 34.148,
       "var95_pct": 28.157,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.59783,
-      "ev_pct": 2.5978,
+      "cost": -2.58743,
+      "ev_pct": 2.5874,
       "ev_terms": {
-        "target": 4.4785,
+        "target": 4.4699,
         "stop": -0.0926,
-        "no_touch": -1.7881,
-        "pnl_no_touch_pct": -2.1299
+        "no_touch": -1.7899,
+        "pnl_no_touch_pct": -2.1323
       },
       "p_stop_upper": 0.0113,
       "flags": [],
@@ -1663,34 +1663,34 @@
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 0.5482,
+          "value": 0.547,
           "limit": 3.0,
-          "excess_ratio": 0.8173
+          "excess_ratio": 0.8177
         },
         {
           "constraint": "cvar95",
-          "value": 34.1482,
+          "value": 34.1477,
           "limit": 12.0,
-          "excess_ratio": 1.8457
+          "excess_ratio": 1.8456
         }
       ],
-      "violation_severity": 2.663
+      "violation_severity": 2.6633
     },
     {
-      "anchor_price": 16.9971,
-      "stop_price": 16.9971,
+      "anchor_price": 17.0171,
+      "stop_price": 17.0171,
       "origin": "atr_grid",
       "strength": null,
       "touches": null,
       "touch_weight": null,
       "why": "point de grille a 8.00 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
       "anchor_distance_atr": 8.0,
-      "distance_pct": 52.495,
+      "distance_pct": 52.466,
       "anchor_quality": "non mesure",
       "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
       "p_stop_first": 0.0014,
-      "p_target_first": 0.1588,
-      "p_no_touch": 0.8398,
+      "p_target_first": 0.1589,
+      "p_no_touch": 0.8397,
       "p_stop_ci95": [
         0.0001,
         0.0105
@@ -1702,25 +1702,25 @@
       "n_windows": 1244,
       "n_eff": 345.7,
       "grid_point": null,
-      "gap_overshoot_pt": 3.048,
+      "gap_overshoot_pt": 3.077,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
       "loss_if_stop_pct": 55.543,
       "p_gap_through_given_stop": 1.0,
-      "expected_overshoot_given_stop_pt": 3.0481,
-      "gain_if_tp_pct": 28.202,
-      "rr_vs_spot": 0.508,
+      "expected_overshoot_given_stop_pt": 3.0771,
+      "gain_if_tp_pct": 28.13,
+      "rr_vs_spot": 0.506,
       "cvar95_pct": 34.224,
       "var95_pct": 28.157,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 12.0,
-      "cost": -2.59683,
-      "ev_pct": 2.5968,
+      "cost": -2.58641,
+      "ev_pct": 2.5864,
       "ev_terms": {
-        "target": 4.4785,
+        "target": 4.4699,
         "stop": -0.0778,
-        "no_touch": -1.8039,
-        "pnl_no_touch_pct": -2.148
+        "no_touch": -1.8057,
+        "pnl_no_touch_pct": -2.1504
       },
       "p_stop_upper": 0.0105,
       "flags": [],
@@ -1732,9 +1732,9 @@
       "violations": [
         {
           "constraint": "rr_vs_spot",
-          "value": 0.5078,
+          "value": 0.5065,
           "limit": 3.0,
-          "excess_ratio": 0.8307
+          "excess_ratio": 0.8312
         },
         {
           "constraint": "cvar95",
@@ -1743,7 +1743,7 @@
           "excess_ratio": 1.852
         }
       ],
-      "violation_severity": 2.6827
+      "violation_severity": 2.6832
     }
   ],
   "n_candidates": 22,
@@ -1766,64 +1766,64 @@
   },
   "target_selection": {
     "rule": "aucune cible n'admet de candidat faisable ; on CONSERVE la cible doctrinale (la plus lointaine retenue par build_targets) et on le declare. Rapprocher la cible pour satisfaire un veto degradait le resultat de 1,23 point par fenetre sur ENR, etabli.",
-    "chosen_pct": 28.202,
-    "doctrinal_first_pct": 28.202,
+    "chosen_pct": 28.13,
+    "doctrinal_first_pct": 28.13,
     "changed": true,
     "p_target_floor": 0.15,
     "horizon_used": "auto",
     "scan": [
       {
-        "pct": 28.202,
+        "pct": 28.13,
         "origin": "resistance",
-        "atr": 4.3,
+        "atr": 4.29,
         "n_feasible": 0,
-        "p_target_max": 0.1588,
-        "rr_max": 15.034,
-        "min_severity": 0.728,
+        "p_target_max": 0.1589,
+        "rr_max": 14.996,
+        "min_severity": 0.73,
         "below_doctrine_floor": true,
         "why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)"
       },
       {
-        "pct": 16.4,
+        "pct": 16.36,
         "origin": "plan_t3",
-        "atr": 2.5,
+        "atr": 2.49,
         "n_feasible": 0,
-        "p_target_max": 0.303,
-        "rr_max": 8.824,
+        "p_target_max": 0.3041,
+        "rr_max": 8.802,
         "min_severity": 0.52,
         "below_doctrine_floor": true,
         "why": "cible t3 du plan (écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop))"
       },
       {
-        "pct": 15.192,
+        "pct": 15.127,
         "origin": "resistance",
-        "atr": 2.32,
+        "atr": 2.31,
         "n_feasible": 0,
-        "p_target_max": 0.3283,
-        "rr_max": 8.166,
+        "p_target_max": 0.3325,
+        "rr_max": 8.131,
         "min_severity": 0.478,
         "below_doctrine_floor": true,
         "why": "resistance a 2 touche(s), force medium (prix 41.9200, visee 41.2156 apres tampon)"
       },
       {
-        "pct": 9.063,
+        "pct": 9.028,
         "origin": "plan_t2",
         "atr": 1.38,
         "n_feasible": 0,
-        "p_target_max": 0.527,
-        "rr_max": 4.968,
-        "min_severity": 0.582,
+        "p_target_max": 0.5301,
+        "rr_max": 4.947,
+        "min_severity": 0.58,
         "below_doctrine_floor": true,
         "why": "cible t2 du plan (écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop))"
       },
       {
-        "pct": 1.727,
+        "pct": 1.695,
         "origin": "plan_t1",
         "atr": 0.26,
         "n_feasible": 0,
-        "p_target_max": 0.9137,
-        "rr_max": 1.053,
-        "min_severity": 0.717,
+        "p_target_max": 0.9163,
+        "rr_max": 1.033,
+        "min_severity": 0.721,
         "below_doctrine_floor": true,
         "why": "cible t1 du plan (écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop))"
       }
@@ -1835,16 +1835,16 @@
     "n_windows": 974,
     "horizon_sessions": 20,
     "stop_atr_tested": 1.5,
-    "target_pct_tested": 28.202,
-    "gain_of_removing_target_pct": 1.6653,
+    "target_pct_tested": 28.13,
+    "gain_of_removing_target_pct": 1.6786,
     "ci95": [
-      0.6408,
-      2.7582
+      0.6528,
+      2.7713
     ],
     "established": true,
     "target_pays": false,
     "target_costs": true,
-    "recommendation": "PAS DE CIBLE — la retirer gagne 1.67 point par fenetre (etabli). Une cible qui se remplit PLAFONNE la position.",
+    "recommendation": "PAS DE CIBLE — la retirer gagne 1.68 point par fenetre (etabli). Une cible qui se remplit PLAFONNE la position.",
     "method": "comparaison APPARIEE sur les memes fenetres, meme stop (1.50 ATR), horizon 20 seances, intervalles groupes par date. `simulate_ladder` reutilise."
   },
   "distance_frontier": {
@@ -2423,10 +2423,10 @@
       },
       {
         "k_atr": 0.35,
-        "distance_pct": 2.297,
+        "distance_pct": 2.295,
         "ordinary_pct": 0.8061,
         "stress_pct": -4.526,
-        "cash_released_in_stress_pct": 96.716,
+        "cash_released_in_stress_pct": 96.718,
         "exit_rate_in_stress_pct": 98.99,
         "n_stress": 99,
         "pnl_percentiles": [
@@ -2536,10 +2536,10 @@
       },
       {
         "k_atr": 0.5,
-        "distance_pct": 3.281,
+        "distance_pct": 3.279,
         "ordinary_pct": 0.8835,
         "stress_pct": -6.9404,
-        "cash_released_in_stress_pct": 95.742,
+        "cash_released_in_stress_pct": 95.744,
         "exit_rate_in_stress_pct": 98.99,
         "n_stress": 99,
         "pnl_percentiles": [
@@ -2649,10 +2649,10 @@
       },
       {
         "k_atr": 0.75,
-        "distance_pct": 4.921,
+        "distance_pct": 4.919,
         "ordinary_pct": 1.2331,
         "stress_pct": -8.8552,
-        "cash_released_in_stress_pct": 91.237,
+        "cash_released_in_stress_pct": 91.24,
         "exit_rate_in_stress_pct": 95.96,
         "n_stress": 99,
         "pnl_percentiles": [
@@ -2762,10 +2762,10 @@
       },
       {
         "k_atr": 1.0,
-        "distance_pct": 6.562,
+        "distance_pct": 6.558,
         "ordinary_pct": 1.393,
         "stress_pct": -10.9969,
-        "cash_released_in_stress_pct": 87.775,
+        "cash_released_in_stress_pct": 87.779,
         "exit_rate_in_stress_pct": 93.94,
         "n_stress": 99,
         "pnl_percentiles": [
@@ -2875,10 +2875,10 @@
       },
       {
         "k_atr": 1.25,
-        "distance_pct": 8.202,
+        "distance_pct": 8.198,
         "ordinary_pct": 1.675,
         "stress_pct": -11.9423,
-        "cash_released_in_stress_pct": 82.525,
+        "cash_released_in_stress_pct": 82.529,
         "exit_rate_in_stress_pct": 89.9,
         "n_stress": 99,
         "pnl_percentiles": [
@@ -2988,10 +2988,10 @@
       },
       {
         "k_atr": 1.5,
-        "distance_pct": 9.843,
+        "distance_pct": 9.837,
         "ordinary_pct": 1.7,
         "stress_pct": -13.4951,
-        "cash_released_in_stress_pct": 79.229,
+        "cash_released_in_stress_pct": 79.234,
         "exit_rate_in_stress_pct": 87.88,
         "n_stress": 99,
         "pnl_percentiles": [
@@ -3101,10 +3101,10 @@
       },
       {
         "k_atr": 2.0,
-        "distance_pct": 13.124,
+        "distance_pct": 13.117,
         "ordinary_pct": 1.586,
         "stress_pct": -15.7326,
-        "cash_released_in_stress_pct": 69.325,
+        "cash_released_in_stress_pct": 69.331,
         "exit_rate_in_stress_pct": 79.8,
         "n_stress": 99,
         "pnl_percentiles": [
@@ -3214,10 +3214,10 @@
       },
       {
         "k_atr": 2.5,
-        "distance_pct": 16.405,
+        "distance_pct": 16.396,
         "ordinary_pct": 1.6194,
         "stress_pct": -16.9731,
-        "cash_released_in_stress_pct": 54.886,
+        "cash_released_in_stress_pct": 54.892,
         "exit_rate_in_stress_pct": 65.66,
         "n_stress": 99,
         "pnl_percentiles": [
@@ -3327,10 +3327,10 @@
       },
       {
         "k_atr": 3.0,
-        "distance_pct": 19.686,
+        "distance_pct": 19.675,
         "ordinary_pct": 1.6827,
         "stress_pct": -16.9832,
-        "cash_released_in_stress_pct": 38.94,
+        "cash_released_in_stress_pct": 38.946,
         "exit_rate_in_stress_pct": 48.48,
         "n_stress": 99,
         "pnl_percentiles": [
@@ -3440,10 +3440,10 @@
       },
       {
         "k_atr": 4.0,
-        "distance_pct": 26.248,
+        "distance_pct": 26.233,
         "ordinary_pct": 1.6572,
         "stress_pct": -17.2993,
-        "cash_released_in_stress_pct": 19.369,
+        "cash_released_in_stress_pct": 19.373,
         "exit_rate_in_stress_pct": 26.26,
         "n_stress": 99,
         "pnl_percentiles": [
@@ -3553,10 +3553,10 @@
       },
       {
         "k_atr": 6.0,
-        "distance_pct": 39.372,
+        "distance_pct": 39.35,
         "ordinary_pct": 1.6599,
         "stress_pct": -17.2725,
-        "cash_released_in_stress_pct": 4.287,
+        "cash_released_in_stress_pct": 4.288,
         "exit_rate_in_stress_pct": 7.07,
         "n_stress": 99,
         "pnl_percentiles": [
@@ -3952,7 +3952,7 @@
           "distance_pct": 0.984,
           "ordinary_pct": 0.2502,
           "stress_pct": -1.1631,
-          "cash_released_in_stress_pct": 97.035,
+          "cash_released_in_stress_pct": 97.036,
           "exit_rate_in_stress_pct": 98.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -4065,7 +4065,7 @@
           "distance_pct": 1.312,
           "ordinary_pct": 0.2523,
           "stress_pct": -1.4554,
-          "cash_released_in_stress_pct": 91.779,
+          "cash_released_in_stress_pct": 91.78,
           "exit_rate_in_stress_pct": 93.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -4178,7 +4178,7 @@
           "distance_pct": 1.64,
           "ordinary_pct": 0.2503,
           "stress_pct": -1.663,
-          "cash_released_in_stress_pct": 87.54,
+          "cash_released_in_stress_pct": 87.541,
           "exit_rate_in_stress_pct": 89.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -4288,10 +4288,10 @@
         },
         {
           "k_atr": 0.35,
-          "distance_pct": 2.297,
+          "distance_pct": 2.295,
           "ordinary_pct": 0.2392,
           "stress_pct": -2.3252,
-          "cash_released_in_stress_pct": 82.071,
+          "cash_released_in_stress_pct": 82.072,
           "exit_rate_in_stress_pct": 84.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -4401,10 +4401,10 @@
         },
         {
           "k_atr": 0.5,
-          "distance_pct": 3.281,
+          "distance_pct": 3.279,
           "ordinary_pct": 0.1864,
           "stress_pct": -2.9193,
-          "cash_released_in_stress_pct": 69.638,
+          "cash_released_in_stress_pct": 69.639,
           "exit_rate_in_stress_pct": 72.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -4514,10 +4514,10 @@
         },
         {
           "k_atr": 0.75,
-          "distance_pct": 4.921,
+          "distance_pct": 4.919,
           "ordinary_pct": 0.1557,
           "stress_pct": -3.9573,
-          "cash_released_in_stress_pct": 53.244,
+          "cash_released_in_stress_pct": 53.246,
           "exit_rate_in_stress_pct": 56.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -4627,10 +4627,10 @@
         },
         {
           "k_atr": 1.0,
-          "distance_pct": 6.562,
+          "distance_pct": 6.558,
           "ordinary_pct": 0.1754,
           "stress_pct": -4.5131,
-          "cash_released_in_stress_pct": 34.572,
+          "cash_released_in_stress_pct": 34.573,
           "exit_rate_in_stress_pct": 37.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -4740,7 +4740,7 @@
         },
         {
           "k_atr": 1.25,
-          "distance_pct": 8.202,
+          "distance_pct": 8.198,
           "ordinary_pct": 0.1739,
           "stress_pct": -4.5684,
           "cash_released_in_stress_pct": 18.36,
@@ -4853,7 +4853,7 @@
         },
         {
           "k_atr": 1.5,
-          "distance_pct": 9.843,
+          "distance_pct": 9.837,
           "ordinary_pct": 0.1719,
           "stress_pct": -4.6935,
           "cash_released_in_stress_pct": 9.016,
@@ -4966,10 +4966,10 @@
         },
         {
           "k_atr": 2.0,
-          "distance_pct": 13.124,
+          "distance_pct": 13.117,
           "ordinary_pct": 0.1838,
           "stress_pct": -4.6783,
-          "cash_released_in_stress_pct": 2.606,
+          "cash_released_in_stress_pct": 2.607,
           "exit_rate_in_stress_pct": 3.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -5079,7 +5079,7 @@
         },
         {
           "k_atr": 2.5,
-          "distance_pct": 16.405,
+          "distance_pct": 16.396,
           "ordinary_pct": 0.1757,
           "stress_pct": -4.759,
           "cash_released_in_stress_pct": 1.672,
@@ -5192,10 +5192,10 @@
         },
         {
           "k_atr": 3.0,
-          "distance_pct": 19.686,
+          "distance_pct": 19.675,
           "ordinary_pct": 0.1686,
           "stress_pct": -4.8297,
-          "cash_released_in_stress_pct": 1.606,
+          "cash_released_in_stress_pct": 1.607,
           "exit_rate_in_stress_pct": 2.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -5305,7 +5305,7 @@
         },
         {
           "k_atr": 4.0,
-          "distance_pct": 26.248,
+          "distance_pct": 26.233,
           "ordinary_pct": 0.1732,
           "stress_pct": -4.7839,
           "cash_released_in_stress_pct": 0.0,
@@ -5418,7 +5418,7 @@
         },
         {
           "k_atr": 6.0,
-          "distance_pct": 39.372,
+          "distance_pct": 39.35,
           "ordinary_pct": 0.1732,
           "stress_pct": -4.7839,
           "cash_released_in_stress_pct": 0.0,
@@ -5926,7 +5926,7 @@
           "distance_pct": 1.312,
           "ordinary_pct": 0.446,
           "stress_pct": -2.1067,
-          "cash_released_in_stress_pct": 96.714,
+          "cash_released_in_stress_pct": 96.715,
           "exit_rate_in_stress_pct": 98.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -6039,7 +6039,7 @@
           "distance_pct": 1.64,
           "ordinary_pct": 0.4151,
           "stress_pct": -2.7676,
-          "cash_released_in_stress_pct": 95.409,
+          "cash_released_in_stress_pct": 95.41,
           "exit_rate_in_stress_pct": 97.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -6149,10 +6149,10 @@
         },
         {
           "k_atr": 0.35,
-          "distance_pct": 2.297,
+          "distance_pct": 2.295,
           "ordinary_pct": 0.4236,
           "stress_pct": -3.5823,
-          "cash_released_in_stress_pct": 93.795,
+          "cash_released_in_stress_pct": 93.796,
           "exit_rate_in_stress_pct": 96.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -6262,10 +6262,10 @@
         },
         {
           "k_atr": 0.5,
-          "distance_pct": 3.281,
+          "distance_pct": 3.279,
           "ordinary_pct": 0.4375,
           "stress_pct": -5.1812,
-          "cash_released_in_stress_pct": 88.014,
+          "cash_released_in_stress_pct": 88.016,
           "exit_rate_in_stress_pct": 91.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -6375,10 +6375,10 @@
         },
         {
           "k_atr": 0.75,
-          "distance_pct": 4.921,
+          "distance_pct": 4.919,
           "ordinary_pct": 0.5353,
           "stress_pct": -6.9098,
-          "cash_released_in_stress_pct": 82.718,
+          "cash_released_in_stress_pct": 82.721,
           "exit_rate_in_stress_pct": 87.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -6488,10 +6488,10 @@
         },
         {
           "k_atr": 1.0,
-          "distance_pct": 6.562,
+          "distance_pct": 6.558,
           "ordinary_pct": 0.517,
           "stress_pct": -8.1632,
-          "cash_released_in_stress_pct": 71.947,
+          "cash_released_in_stress_pct": 71.95,
           "exit_rate_in_stress_pct": 77.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -6601,10 +6601,10 @@
         },
         {
           "k_atr": 1.25,
-          "distance_pct": 8.202,
+          "distance_pct": 8.198,
           "ordinary_pct": 0.52,
           "stress_pct": -8.8314,
-          "cash_released_in_stress_pct": 60.586,
+          "cash_released_in_stress_pct": 60.589,
           "exit_rate_in_stress_pct": 66.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -6714,10 +6714,10 @@
         },
         {
           "k_atr": 1.5,
-          "distance_pct": 9.843,
+          "distance_pct": 9.837,
           "ordinary_pct": 0.5217,
           "stress_pct": -9.507,
-          "cash_released_in_stress_pct": 50.488,
+          "cash_released_in_stress_pct": 50.491,
           "exit_rate_in_stress_pct": 56.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -6827,10 +6827,10 @@
         },
         {
           "k_atr": 2.0,
-          "distance_pct": 13.124,
+          "distance_pct": 13.117,
           "ordinary_pct": 0.5643,
           "stress_pct": -9.6735,
-          "cash_released_in_stress_pct": 25.194,
+          "cash_released_in_stress_pct": 25.196,
           "exit_rate_in_stress_pct": 29.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -6940,10 +6940,10 @@
         },
         {
           "k_atr": 2.5,
-          "distance_pct": 16.405,
+          "distance_pct": 16.396,
           "ordinary_pct": 0.5576,
           "stress_pct": -9.8108,
-          "cash_released_in_stress_pct": 12.539,
+          "cash_released_in_stress_pct": 12.541,
           "exit_rate_in_stress_pct": 15.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -7053,10 +7053,10 @@
         },
         {
           "k_atr": 3.0,
-          "distance_pct": 19.686,
+          "distance_pct": 19.675,
           "ordinary_pct": 0.5389,
           "stress_pct": -9.9957,
-          "cash_released_in_stress_pct": 9.638,
+          "cash_released_in_stress_pct": 9.639,
           "exit_rate_in_stress_pct": 12.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -7166,10 +7166,10 @@
         },
         {
           "k_atr": 4.0,
-          "distance_pct": 26.248,
+          "distance_pct": 26.233,
           "ordinary_pct": 0.5377,
           "stress_pct": -10.0081,
-          "cash_released_in_stress_pct": 4.425,
+          "cash_released_in_stress_pct": 4.426,
           "exit_rate_in_stress_pct": 6.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -7279,7 +7279,7 @@
         },
         {
           "k_atr": 6.0,
-          "distance_pct": 39.372,
+          "distance_pct": 39.35,
           "ordinary_pct": 0.5304,
           "stress_pct": -10.08,
           "cash_released_in_stress_pct": 1.213,
@@ -7679,7 +7679,7 @@
           "distance_pct": 0.984,
           "ordinary_pct": 0.5234,
           "stress_pct": -1.5775,
-          "cash_released_in_stress_pct": 96.045,
+          "cash_released_in_stress_pct": 96.046,
           "exit_rate_in_stress_pct": 97.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -7792,7 +7792,7 @@
           "distance_pct": 1.312,
           "ordinary_pct": 0.5764,
           "stress_pct": -2.0866,
-          "cash_released_in_stress_pct": 93.753,
+          "cash_released_in_stress_pct": 93.754,
           "exit_rate_in_stress_pct": 95.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -8015,10 +8015,10 @@
         },
         {
           "k_atr": 0.35,
-          "distance_pct": 2.297,
+          "distance_pct": 2.295,
           "ordinary_pct": 0.571,
           "stress_pct": -3.9779,
-          "cash_released_in_stress_pct": 92.818,
+          "cash_released_in_stress_pct": 92.819,
           "exit_rate_in_stress_pct": 95.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -8128,10 +8128,10 @@
         },
         {
           "k_atr": 0.5,
-          "distance_pct": 3.281,
+          "distance_pct": 3.279,
           "ordinary_pct": 0.603,
           "stress_pct": -6.2269,
-          "cash_released_in_stress_pct": 89.949,
+          "cash_released_in_stress_pct": 89.95,
           "exit_rate_in_stress_pct": 93.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -8241,10 +8241,10 @@
         },
         {
           "k_atr": 0.75,
-          "distance_pct": 4.921,
+          "distance_pct": 4.919,
           "ordinary_pct": 0.8297,
           "stress_pct": -7.8989,
-          "cash_released_in_stress_pct": 85.571,
+          "cash_released_in_stress_pct": 85.573,
           "exit_rate_in_stress_pct": 90.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -8354,10 +8354,10 @@
         },
         {
           "k_atr": 1.0,
-          "distance_pct": 6.562,
+          "distance_pct": 6.558,
           "ordinary_pct": 0.8929,
           "stress_pct": -9.5346,
-          "cash_released_in_stress_pct": 78.488,
+          "cash_released_in_stress_pct": 78.491,
           "exit_rate_in_stress_pct": 84.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -8467,10 +8467,10 @@
         },
         {
           "k_atr": 1.25,
-          "distance_pct": 8.202,
+          "distance_pct": 8.198,
           "ordinary_pct": 0.9541,
           "stress_pct": -10.466,
-          "cash_released_in_stress_pct": 71.602,
+          "cash_released_in_stress_pct": 71.606,
           "exit_rate_in_stress_pct": 78.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -8580,10 +8580,10 @@
         },
         {
           "k_atr": 1.5,
-          "distance_pct": 9.843,
+          "distance_pct": 9.837,
           "ordinary_pct": 0.9552,
           "stress_pct": -11.3841,
-          "cash_released_in_stress_pct": 63.11,
+          "cash_released_in_stress_pct": 63.114,
           "exit_rate_in_stress_pct": 70.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -8693,10 +8693,10 @@
         },
         {
           "k_atr": 2.0,
-          "distance_pct": 13.124,
+          "distance_pct": 13.117,
           "ordinary_pct": 0.9718,
           "stress_pct": -12.2671,
-          "cash_released_in_stress_pct": 44.307,
+          "cash_released_in_stress_pct": 44.311,
           "exit_rate_in_stress_pct": 51.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -8806,10 +8806,10 @@
         },
         {
           "k_atr": 2.5,
-          "distance_pct": 16.405,
+          "distance_pct": 16.396,
           "ordinary_pct": 0.9491,
           "stress_pct": -12.7718,
-          "cash_released_in_stress_pct": 28.422,
+          "cash_released_in_stress_pct": 28.425,
           "exit_rate_in_stress_pct": 34.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -8919,10 +8919,10 @@
         },
         {
           "k_atr": 3.0,
-          "distance_pct": 19.686,
+          "distance_pct": 19.675,
           "ordinary_pct": 0.9285,
           "stress_pct": -13.0171,
-          "cash_released_in_stress_pct": 19.275,
+          "cash_released_in_stress_pct": 19.278,
           "exit_rate_in_stress_pct": 24.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -9032,10 +9032,10 @@
         },
         {
           "k_atr": 4.0,
-          "distance_pct": 26.248,
+          "distance_pct": 26.233,
           "ordinary_pct": 0.913,
           "stress_pct": -13.2036,
-          "cash_released_in_stress_pct": 11.063,
+          "cash_released_in_stress_pct": 11.065,
           "exit_rate_in_stress_pct": 15.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -9145,10 +9145,10 @@
         },
         {
           "k_atr": 6.0,
-          "distance_pct": 39.372,
+          "distance_pct": 39.35,
           "ordinary_pct": 0.9099,
           "stress_pct": -13.2339,
-          "cash_released_in_stress_pct": 2.425,
+          "cash_released_in_stress_pct": 2.426,
           "exit_rate_in_stress_pct": 4.0,
           "n_stress": 100,
           "pnl_percentiles": [
@@ -9880,10 +9880,10 @@
         },
         {
           "k_atr": 0.35,
-          "distance_pct": 2.297,
+          "distance_pct": 2.295,
           "ordinary_pct": 0.8061,
           "stress_pct": -4.526,
-          "cash_released_in_stress_pct": 96.716,
+          "cash_released_in_stress_pct": 96.718,
           "exit_rate_in_stress_pct": 98.99,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -9993,10 +9993,10 @@
         },
         {
           "k_atr": 0.5,
-          "distance_pct": 3.281,
+          "distance_pct": 3.279,
           "ordinary_pct": 0.8835,
           "stress_pct": -6.9404,
-          "cash_released_in_stress_pct": 95.742,
+          "cash_released_in_stress_pct": 95.744,
           "exit_rate_in_stress_pct": 98.99,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -10106,10 +10106,10 @@
         },
         {
           "k_atr": 0.75,
-          "distance_pct": 4.921,
+          "distance_pct": 4.919,
           "ordinary_pct": 1.2331,
           "stress_pct": -8.8552,
-          "cash_released_in_stress_pct": 91.237,
+          "cash_released_in_stress_pct": 91.24,
           "exit_rate_in_stress_pct": 95.96,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -10219,10 +10219,10 @@
         },
         {
           "k_atr": 1.0,
-          "distance_pct": 6.562,
+          "distance_pct": 6.558,
           "ordinary_pct": 1.393,
           "stress_pct": -10.9969,
-          "cash_released_in_stress_pct": 87.775,
+          "cash_released_in_stress_pct": 87.779,
           "exit_rate_in_stress_pct": 93.94,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -10332,10 +10332,10 @@
         },
         {
           "k_atr": 1.25,
-          "distance_pct": 8.202,
+          "distance_pct": 8.198,
           "ordinary_pct": 1.675,
           "stress_pct": -11.9423,
-          "cash_released_in_stress_pct": 82.525,
+          "cash_released_in_stress_pct": 82.529,
           "exit_rate_in_stress_pct": 89.9,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -10445,10 +10445,10 @@
         },
         {
           "k_atr": 1.5,
-          "distance_pct": 9.843,
+          "distance_pct": 9.837,
           "ordinary_pct": 1.7,
           "stress_pct": -13.4951,
-          "cash_released_in_stress_pct": 79.229,
+          "cash_released_in_stress_pct": 79.234,
           "exit_rate_in_stress_pct": 87.88,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -10558,10 +10558,10 @@
         },
         {
           "k_atr": 2.0,
-          "distance_pct": 13.124,
+          "distance_pct": 13.117,
           "ordinary_pct": 1.586,
           "stress_pct": -15.7326,
-          "cash_released_in_stress_pct": 69.325,
+          "cash_released_in_stress_pct": 69.331,
           "exit_rate_in_stress_pct": 79.8,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -10671,10 +10671,10 @@
         },
         {
           "k_atr": 2.5,
-          "distance_pct": 16.405,
+          "distance_pct": 16.396,
           "ordinary_pct": 1.6194,
           "stress_pct": -16.9731,
-          "cash_released_in_stress_pct": 54.886,
+          "cash_released_in_stress_pct": 54.892,
           "exit_rate_in_stress_pct": 65.66,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -10784,10 +10784,10 @@
         },
         {
           "k_atr": 3.0,
-          "distance_pct": 19.686,
+          "distance_pct": 19.675,
           "ordinary_pct": 1.6827,
           "stress_pct": -16.9832,
-          "cash_released_in_stress_pct": 38.94,
+          "cash_released_in_stress_pct": 38.946,
           "exit_rate_in_stress_pct": 48.48,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -10897,10 +10897,10 @@
         },
         {
           "k_atr": 4.0,
-          "distance_pct": 26.248,
+          "distance_pct": 26.233,
           "ordinary_pct": 1.6572,
           "stress_pct": -17.2993,
-          "cash_released_in_stress_pct": 19.369,
+          "cash_released_in_stress_pct": 19.373,
           "exit_rate_in_stress_pct": 26.26,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -11010,10 +11010,10 @@
         },
         {
           "k_atr": 6.0,
-          "distance_pct": 39.372,
+          "distance_pct": 39.35,
           "ordinary_pct": 1.6599,
           "stress_pct": -17.2725,
-          "cash_released_in_stress_pct": 4.287,
+          "cash_released_in_stress_pct": 4.288,
           "exit_rate_in_stress_pct": 7.07,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -11744,10 +11744,10 @@
         },
         {
           "k_atr": 0.35,
-          "distance_pct": 2.297,
+          "distance_pct": 2.295,
           "ordinary_pct": 1.4658,
           "stress_pct": -4.1655,
-          "cash_released_in_stress_pct": 97.703,
+          "cash_released_in_stress_pct": 97.705,
           "exit_rate_in_stress_pct": 100.0,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -11857,10 +11857,10 @@
         },
         {
           "k_atr": 0.5,
-          "distance_pct": 3.281,
+          "distance_pct": 3.279,
           "ordinary_pct": 1.4192,
           "stress_pct": -6.1357,
-          "cash_released_in_stress_pct": 96.719,
+          "cash_released_in_stress_pct": 96.721,
           "exit_rate_in_stress_pct": 100.0,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -11970,10 +11970,10 @@
         },
         {
           "k_atr": 0.75,
-          "distance_pct": 4.921,
+          "distance_pct": 4.919,
           "ordinary_pct": 2.1976,
           "stress_pct": -8.4346,
-          "cash_released_in_stress_pct": 95.079,
+          "cash_released_in_stress_pct": 95.081,
           "exit_rate_in_stress_pct": 100.0,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -12083,10 +12083,10 @@
         },
         {
           "k_atr": 1.0,
-          "distance_pct": 6.562,
+          "distance_pct": 6.558,
           "ordinary_pct": 2.6104,
           "stress_pct": -11.1427,
-          "cash_released_in_stress_pct": 92.494,
+          "cash_released_in_stress_pct": 92.498,
           "exit_rate_in_stress_pct": 98.99,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -12196,10 +12196,10 @@
         },
         {
           "k_atr": 1.25,
-          "distance_pct": 8.202,
+          "distance_pct": 8.198,
           "ordinary_pct": 3.1325,
           "stress_pct": -13.4928,
-          "cash_released_in_stress_pct": 88.089,
+          "cash_released_in_stress_pct": 88.093,
           "exit_rate_in_stress_pct": 95.96,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -12309,10 +12309,10 @@
         },
         {
           "k_atr": 1.5,
-          "distance_pct": 9.843,
+          "distance_pct": 9.837,
           "ordinary_pct": 3.1817,
           "stress_pct": -15.4418,
-          "cash_released_in_stress_pct": 86.514,
+          "cash_released_in_stress_pct": 86.52,
           "exit_rate_in_stress_pct": 95.96,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -12422,10 +12422,10 @@
         },
         {
           "k_atr": 2.0,
-          "distance_pct": 13.124,
+          "distance_pct": 13.117,
           "ordinary_pct": 3.2071,
           "stress_pct": -18.3318,
-          "cash_released_in_stress_pct": 81.611,
+          "cash_released_in_stress_pct": 81.618,
           "exit_rate_in_stress_pct": 93.94,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -12535,10 +12535,10 @@
         },
         {
           "k_atr": 2.5,
-          "distance_pct": 16.405,
+          "distance_pct": 16.396,
           "ordinary_pct": 3.6329,
           "stress_pct": -20.7868,
-          "cash_released_in_stress_pct": 72.618,
+          "cash_released_in_stress_pct": 72.626,
           "exit_rate_in_stress_pct": 86.87,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -12648,10 +12648,10 @@
         },
         {
           "k_atr": 3.0,
-          "distance_pct": 19.686,
+          "distance_pct": 19.675,
           "ordinary_pct": 3.6786,
           "stress_pct": -22.5839,
-          "cash_released_in_stress_pct": 65.712,
+          "cash_released_in_stress_pct": 65.721,
           "exit_rate_in_stress_pct": 81.82,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -12761,10 +12761,10 @@
         },
         {
           "k_atr": 4.0,
-          "distance_pct": 26.248,
+          "distance_pct": 26.233,
           "ordinary_pct": 3.6182,
           "stress_pct": -25.1741,
-          "cash_released_in_stress_pct": 45.443,
+          "cash_released_in_stress_pct": 45.452,
           "exit_rate_in_stress_pct": 61.62,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -12874,10 +12874,10 @@
         },
         {
           "k_atr": 6.0,
-          "distance_pct": 39.372,
+          "distance_pct": 39.35,
           "ordinary_pct": 3.5455,
           "stress_pct": -26.0464,
-          "cash_released_in_stress_pct": 12.248,
+          "cash_released_in_stress_pct": 12.253,
           "exit_rate_in_stress_pct": 20.2,
           "n_stress": 99,
           "pnl_percentiles": [
@@ -13609,10 +13609,10 @@
         },
         {
           "k_atr": 0.35,
-          "distance_pct": 2.297,
+          "distance_pct": 2.295,
           "ordinary_pct": 1.8306,
           "stress_pct": -3.8439,
-          "cash_released_in_stress_pct": 97.703,
+          "cash_released_in_stress_pct": 97.705,
           "exit_rate_in_stress_pct": 100.0,
           "n_stress": 98,
           "pnl_percentiles": [
@@ -13722,10 +13722,10 @@
         },
         {
           "k_atr": 0.5,
-          "distance_pct": 3.281,
+          "distance_pct": 3.279,
           "ordinary_pct": 2.0316,
           "stress_pct": -6.1477,
-          "cash_released_in_stress_pct": 96.719,
+          "cash_released_in_stress_pct": 96.721,
           "exit_rate_in_stress_pct": 100.0,
           "n_stress": 98,
           "pnl_percentiles": [
@@ -13835,10 +13835,10 @@
         },
         {
           "k_atr": 0.75,
-          "distance_pct": 4.921,
+          "distance_pct": 4.919,
           "ordinary_pct": 2.7888,
           "stress_pct": -9.3223,
-          "cash_released_in_stress_pct": 95.079,
+          "cash_released_in_stress_pct": 95.081,
           "exit_rate_in_stress_pct": 100.0,
           "n_stress": 98,
           "pnl_percentiles": [
@@ -13948,10 +13948,10 @@
         },
         {
           "k_atr": 1.0,
-          "distance_pct": 6.562,
+          "distance_pct": 6.558,
           "ordinary_pct": 3.3268,
           "stress_pct": -12.7185,
-          "cash_released_in_stress_pct": 92.485,
+          "cash_released_in_stress_pct": 92.488,
           "exit_rate_in_stress_pct": 98.98,
           "n_stress": 98,
           "pnl_percentiles": [
@@ -14061,10 +14061,10 @@
         },
         {
           "k_atr": 1.25,
-          "distance_pct": 8.202,
+          "distance_pct": 8.198,
           "ordinary_pct": 4.2384,
           "stress_pct": -14.9785,
-          "cash_released_in_stress_pct": 90.861,
+          "cash_released_in_stress_pct": 90.865,
           "exit_rate_in_stress_pct": 98.98,
           "n_stress": 98,
           "pnl_percentiles": [
@@ -14174,10 +14174,10 @@
         },
         {
           "k_atr": 1.5,
-          "distance_pct": 9.843,
+          "distance_pct": 9.837,
           "ordinary_pct": 4.4592,
           "stress_pct": -16.9449,
-          "cash_released_in_stress_pct": 89.237,
+          "cash_released_in_stress_pct": 89.243,
           "exit_rate_in_stress_pct": 98.98,
           "n_stress": 98,
           "pnl_percentiles": [
@@ -14287,10 +14287,10 @@
         },
         {
           "k_atr": 2.0,
-          "distance_pct": 13.124,
+          "distance_pct": 13.117,
           "ordinary_pct": 4.7261,
           "stress_pct": -20.2029,
-          "cash_released_in_stress_pct": 85.99,
+          "cash_released_in_stress_pct": 85.997,
           "exit_rate_in_stress_pct": 98.98,
           "n_stress": 98,
           "pnl_percentiles": [
@@ -14400,10 +14400,10 @@
         },
         {
           "k_atr": 2.5,
-          "distance_pct": 16.405,
+          "distance_pct": 16.396,
           "ordinary_pct": 6.237,
           "stress_pct": -22.6474,
-          "cash_released_in_stress_pct": 82.742,
+          "cash_released_in_stress_pct": 82.751,
           "exit_rate_in_stress_pct": 98.98,
           "n_stress": 98,
           "pnl_percentiles": [
@@ -14513,10 +14513,10 @@
         },
         {
           "k_atr": 3.0,
-          "distance_pct": 19.686,
+          "distance_pct": 19.675,
           "ordinary_pct": 6.8769,
           "stress_pct": -24.1028,
-          "cash_released_in_stress_pct": 77.856,
+          "cash_released_in_stress_pct": 77.866,
           "exit_rate_in_stress_pct": 96.94,
           "n_stress": 98,
           "pnl_percentiles": [
@@ -14626,10 +14626,10 @@
         },
         {
           "k_atr": 4.0,
-          "distance_pct": 26.248,
+          "distance_pct": 26.233,
           "ordinary_pct": 7.2903,
           "stress_pct": -27.5768,
-          "cash_released_in_stress_pct": 66.227,
+          "cash_released_in_stress_pct": 66.24,
           "exit_rate_in_stress_pct": 89.8,
           "n_stress": 98,
           "pnl_percentiles": [
@@ -14739,10 +14739,10 @@
         },
         {
           "k_atr": 6.0,
-          "distance_pct": 39.372,
+          "distance_pct": 39.35,
           "ordinary_pct": 7.0497,
           "stress_pct": -32.5968,
-          "cash_released_in_stress_pct": 30.314,
+          "cash_released_in_stress_pct": 30.325,
           "exit_rate_in_stress_pct": 50.0,
           "n_stress": 98,
           "pnl_percentiles": [
@@ -14900,9 +14900,9 @@
   },
   "atr_touch_table": {
     "available": true,
-    "reference_spot": 35.78,
+    "reference_spot": 35.8,
     "atr_14": 2.3479,
-    "atr_pct_of_price": 6.562,
+    "atr_pct_of_price": 6.558,
     "horizons": [
       1,
       2,
@@ -14924,7 +14924,7 @@
       {
         "k_atr": 0.05,
         "distance_pct": 0.328,
-        "stop_price_at_ref_spot": 35.6626,
+        "stop_price_at_ref_spot": 35.6826,
         "p_touch_pct": {
           "1": 90.74,
           "2": 93.55,
@@ -14961,7 +14961,7 @@
       {
         "k_atr": 0.1,
         "distance_pct": 0.656,
-        "stop_price_at_ref_spot": 35.5452,
+        "stop_price_at_ref_spot": 35.5652,
         "p_touch_pct": {
           "1": 82.18,
           "2": 87.5,
@@ -14998,7 +14998,7 @@
       {
         "k_atr": 0.15,
         "distance_pct": 0.984,
-        "stop_price_at_ref_spot": 35.4278,
+        "stop_price_at_ref_spot": 35.4478,
         "p_touch_pct": {
           "1": 75.03,
           "2": 82.36,
@@ -15035,7 +15035,7 @@
       {
         "k_atr": 0.2,
         "distance_pct": 1.312,
-        "stop_price_at_ref_spot": 35.3104,
+        "stop_price_at_ref_spot": 35.3304,
         "p_touch_pct": {
           "1": 68.18,
           "2": 77.62,
@@ -15072,7 +15072,7 @@
       {
         "k_atr": 0.25,
         "distance_pct": 1.64,
-        "stop_price_at_ref_spot": 35.193,
+        "stop_price_at_ref_spot": 35.213,
         "p_touch_pct": {
           "1": 61.93,
           "2": 72.88,
@@ -15108,8 +15108,8 @@
       },
       {
         "k_atr": 0.35,
-        "distance_pct": 2.297,
-        "stop_price_at_ref_spot": 34.9582,
+        "distance_pct": 2.295,
+        "stop_price_at_ref_spot": 34.9782,
         "p_touch_pct": {
           "1": 49.24,
           "2": 63.51,
@@ -15145,8 +15145,8 @@
       },
       {
         "k_atr": 0.5,
-        "distance_pct": 3.281,
-        "stop_price_at_ref_spot": 34.6061,
+        "distance_pct": 3.279,
+        "stop_price_at_ref_spot": 34.6261,
         "p_touch_pct": {
           "1": 34.84,
           "2": 49.9,
@@ -15182,8 +15182,8 @@
       },
       {
         "k_atr": 0.75,
-        "distance_pct": 4.921,
-        "stop_price_at_ref_spot": 34.0191,
+        "distance_pct": 4.919,
+        "stop_price_at_ref_spot": 34.0391,
         "p_touch_pct": {
           "1": 17.32,
           "2": 33.37,
@@ -15219,8 +15219,8 @@
       },
       {
         "k_atr": 1.0,
-        "distance_pct": 6.562,
-        "stop_price_at_ref_spot": 33.4321,
+        "distance_pct": 6.558,
+        "stop_price_at_ref_spot": 33.4521,
         "p_touch_pct": {
           "1": 7.85,
           "2": 21.47,
@@ -15256,8 +15256,8 @@
       },
       {
         "k_atr": 1.25,
-        "distance_pct": 8.202,
-        "stop_price_at_ref_spot": 32.8452,
+        "distance_pct": 8.198,
+        "stop_price_at_ref_spot": 32.8652,
         "p_touch_pct": {
           "1": 3.73,
           "2": 14.92,
@@ -15293,8 +15293,8 @@
       },
       {
         "k_atr": 1.5,
-        "distance_pct": 9.843,
-        "stop_price_at_ref_spot": 32.2582,
+        "distance_pct": 9.837,
+        "stop_price_at_ref_spot": 32.2782,
         "p_touch_pct": {
           "1": 1.51,
           "2": 9.58,
@@ -15330,8 +15330,8 @@
       },
       {
         "k_atr": 2.0,
-        "distance_pct": 13.124,
-        "stop_price_at_ref_spot": 31.0843,
+        "distance_pct": 13.117,
+        "stop_price_at_ref_spot": 31.1043,
         "p_touch_pct": {
           "1": 0.3,
           "2": 3.53,
@@ -15367,8 +15367,8 @@
       },
       {
         "k_atr": 2.5,
-        "distance_pct": 16.405,
-        "stop_price_at_ref_spot": 29.9104,
+        "distance_pct": 16.396,
+        "stop_price_at_ref_spot": 29.9304,
         "p_touch_pct": {
           "1": 0.2,
           "2": 1.51,
@@ -15404,8 +15404,8 @@
       },
       {
         "k_atr": 3.0,
-        "distance_pct": 19.686,
-        "stop_price_at_ref_spot": 28.7364,
+        "distance_pct": 19.675,
+        "stop_price_at_ref_spot": 28.7564,
         "p_touch_pct": {
           "1": 0.2,
           "2": 1.21,
@@ -15441,8 +15441,8 @@
       },
       {
         "k_atr": 4.0,
-        "distance_pct": 26.248,
-        "stop_price_at_ref_spot": 26.3886,
+        "distance_pct": 26.233,
+        "stop_price_at_ref_spot": 26.4086,
         "p_touch_pct": {
           "1": 0.0,
           "2": 0.6,
@@ -15478,8 +15478,8 @@
       },
       {
         "k_atr": 6.0,
-        "distance_pct": 39.372,
-        "stop_price_at_ref_spot": 21.6929,
+        "distance_pct": 39.35,
+        "stop_price_at_ref_spot": 21.7129,
         "p_touch_pct": {
           "1": 0.0,
           "2": 0.2,
@@ -15516,7 +15516,7 @@
     ],
     "noise_floor": {
       "median_daily_excursion_atr": 0.344,
-      "median_daily_excursion_pct": 2.257,
+      "median_daily_excursion_pct": 2.256,
       "deep_noise_atr": 0.15,
       "quiet_atr": 0.64,
       "definition": "excursion adverse MEDIANE d'une seance, en ATR : la distance que le prix vient chercher une seance sur deux. Mesuree, pas modelisee — c'est exactement p(touche)=50 %% a l'horizon 1 seance.",
@@ -15535,247 +15535,247 @@
         "p75": {
           "k_atr": 0.15,
           "distance_pct": 0.984,
-          "stop_price_at_ref_spot": 35.4278
+          "stop_price_at_ref_spot": 35.4478
         },
         "p50": {
           "k_atr": 0.344,
-          "distance_pct": 2.257,
-          "stop_price_at_ref_spot": 34.9723
+          "distance_pct": 2.256,
+          "stop_price_at_ref_spot": 34.9923
         },
         "p45": {
           "k_atr": 0.394,
-          "distance_pct": 2.585,
-          "stop_price_at_ref_spot": 34.8549
+          "distance_pct": 2.584,
+          "stop_price_at_ref_spot": 34.8749
         },
         "p33": {
           "k_atr": 0.526,
-          "distance_pct": 3.452,
-          "stop_price_at_ref_spot": 34.545
+          "distance_pct": 3.45,
+          "stop_price_at_ref_spot": 34.565
         },
         "p25": {
           "k_atr": 0.64,
-          "distance_pct": 4.2,
-          "stop_price_at_ref_spot": 34.2774
+          "distance_pct": 4.197,
+          "stop_price_at_ref_spot": 34.2974
         },
         "p20": {
           "k_atr": 0.712,
-          "distance_pct": 4.672,
-          "stop_price_at_ref_spot": 34.1083
+          "distance_pct": 4.669,
+          "stop_price_at_ref_spot": 34.1283
         },
         "p10": {
           "k_atr": 0.943,
-          "distance_pct": 6.188,
-          "stop_price_at_ref_spot": 33.566
+          "distance_pct": 6.184,
+          "stop_price_at_ref_spot": 33.586
         },
         "p5": {
           "k_atr": 1.173,
-          "distance_pct": 7.697,
-          "stop_price_at_ref_spot": 33.026
+          "distance_pct": 7.693,
+          "stop_price_at_ref_spot": 33.046
         }
       },
       "2": {
         "p75": {
           "k_atr": 0.228,
-          "distance_pct": 1.496,
-          "stop_price_at_ref_spot": 35.2447
+          "distance_pct": 1.495,
+          "stop_price_at_ref_spot": 35.2647
         },
         "p50": {
           "k_atr": 0.499,
-          "distance_pct": 3.274,
-          "stop_price_at_ref_spot": 34.6084
+          "distance_pct": 3.273,
+          "stop_price_at_ref_spot": 34.6284
         },
         "p45": {
           "k_atr": 0.574,
-          "distance_pct": 3.767,
-          "stop_price_at_ref_spot": 34.4323
+          "distance_pct": 3.764,
+          "stop_price_at_ref_spot": 34.4523
         },
         "p33": {
           "k_atr": 0.758,
-          "distance_pct": 4.974,
-          "stop_price_at_ref_spot": 34.0003
+          "distance_pct": 4.971,
+          "stop_price_at_ref_spot": 34.0203
         },
         "p25": {
           "k_atr": 0.926,
-          "distance_pct": 6.076,
-          "stop_price_at_ref_spot": 33.6059
+          "distance_pct": 6.073,
+          "stop_price_at_ref_spot": 33.6259
         },
         "p20": {
           "k_atr": 1.056,
-          "distance_pct": 6.929,
-          "stop_price_at_ref_spot": 33.3007
+          "distance_pct": 6.926,
+          "stop_price_at_ref_spot": 33.3207
         },
         "p10": {
           "k_atr": 1.48,
-          "distance_pct": 9.712,
-          "stop_price_at_ref_spot": 32.3052
+          "distance_pct": 9.706,
+          "stop_price_at_ref_spot": 32.3252
         },
         "p5": {
           "k_atr": 1.879,
-          "distance_pct": 12.33,
-          "stop_price_at_ref_spot": 31.3684
+          "distance_pct": 12.323,
+          "stop_price_at_ref_spot": 31.3884
         }
       },
       "3": {
         "p75": {
           "k_atr": 0.272,
-          "distance_pct": 1.785,
-          "stop_price_at_ref_spot": 35.1414
+          "distance_pct": 1.784,
+          "stop_price_at_ref_spot": 35.1614
         },
         "p50": {
           "k_atr": 0.64,
-          "distance_pct": 4.2,
-          "stop_price_at_ref_spot": 34.2774
+          "distance_pct": 4.197,
+          "stop_price_at_ref_spot": 34.2974
         },
         "p45": {
           "k_atr": 0.721,
-          "distance_pct": 4.731,
-          "stop_price_at_ref_spot": 34.0872
+          "distance_pct": 4.729,
+          "stop_price_at_ref_spot": 34.1072
         },
         "p33": {
           "k_atr": 0.949,
-          "distance_pct": 6.227,
-          "stop_price_at_ref_spot": 33.5519
+          "distance_pct": 6.224,
+          "stop_price_at_ref_spot": 33.5719
         },
         "p25": {
           "k_atr": 1.164,
-          "distance_pct": 7.638,
-          "stop_price_at_ref_spot": 33.0471
+          "distance_pct": 7.634,
+          "stop_price_at_ref_spot": 33.0671
         },
         "p20": {
           "k_atr": 1.342,
-          "distance_pct": 8.806,
-          "stop_price_at_ref_spot": 32.6292
+          "distance_pct": 8.801,
+          "stop_price_at_ref_spot": 32.6492
         },
         "p10": {
           "k_atr": 1.897,
-          "distance_pct": 12.448,
-          "stop_price_at_ref_spot": 31.3261
+          "distance_pct": 12.441,
+          "stop_price_at_ref_spot": 31.3461
         },
         "p5": {
           "k_atr": 2.408,
-          "distance_pct": 15.801,
-          "stop_price_at_ref_spot": 30.1264
+          "distance_pct": 15.792,
+          "stop_price_at_ref_spot": 30.1464
         }
       },
       "5": {
         "p75": {
           "k_atr": 0.392,
-          "distance_pct": 2.572,
-          "stop_price_at_ref_spot": 34.8596
+          "distance_pct": 2.571,
+          "stop_price_at_ref_spot": 34.8796
         },
         "p50": {
           "k_atr": 0.864,
-          "distance_pct": 5.67,
-          "stop_price_at_ref_spot": 33.7515
+          "distance_pct": 5.666,
+          "stop_price_at_ref_spot": 33.7715
         },
         "p45": {
           "k_atr": 0.972,
-          "distance_pct": 6.378,
-          "stop_price_at_ref_spot": 33.4979
+          "distance_pct": 6.375,
+          "stop_price_at_ref_spot": 33.5179
         },
         "p33": {
           "k_atr": 1.252,
-          "distance_pct": 8.216,
-          "stop_price_at_ref_spot": 32.8405
+          "distance_pct": 8.211,
+          "stop_price_at_ref_spot": 32.8605
         },
         "p25": {
           "k_atr": 1.544,
-          "distance_pct": 10.132,
-          "stop_price_at_ref_spot": 32.1549
+          "distance_pct": 10.126,
+          "stop_price_at_ref_spot": 32.1749
         },
         "p20": {
           "k_atr": 1.797,
-          "distance_pct": 11.792,
-          "stop_price_at_ref_spot": 31.5609
+          "distance_pct": 11.785,
+          "stop_price_at_ref_spot": 31.5809
         },
         "p10": {
           "k_atr": 2.461,
-          "distance_pct": 16.149,
-          "stop_price_at_ref_spot": 30.0019
+          "distance_pct": 16.14,
+          "stop_price_at_ref_spot": 30.0219
         },
         "p5": {
           "k_atr": 3.163,
-          "distance_pct": 20.755,
-          "stop_price_at_ref_spot": 28.3537
+          "distance_pct": 20.744,
+          "stop_price_at_ref_spot": 28.3737
         }
       },
       "10": {
         "p75": {
           "k_atr": 0.55,
-          "distance_pct": 3.609,
-          "stop_price_at_ref_spot": 34.4887
+          "distance_pct": 3.607,
+          "stop_price_at_ref_spot": 34.5087
         },
         "p50": {
           "k_atr": 1.19,
-          "distance_pct": 7.809,
-          "stop_price_at_ref_spot": 32.986
+          "distance_pct": 7.804,
+          "stop_price_at_ref_spot": 33.006
         },
         "p45": {
           "k_atr": 1.36,
-          "distance_pct": 8.924,
-          "stop_price_at_ref_spot": 32.5869
+          "distance_pct": 8.919,
+          "stop_price_at_ref_spot": 32.6069
         },
         "p33": {
           "k_atr": 1.856,
-          "distance_pct": 12.179,
-          "stop_price_at_ref_spot": 31.4224
+          "distance_pct": 12.172,
+          "stop_price_at_ref_spot": 31.4424
         },
         "p25": {
           "k_atr": 2.223,
-          "distance_pct": 14.587,
-          "stop_price_at_ref_spot": 30.5607
+          "distance_pct": 14.579,
+          "stop_price_at_ref_spot": 30.5807
         },
         "p20": {
           "k_atr": 2.466,
-          "distance_pct": 16.182,
-          "stop_price_at_ref_spot": 29.9902
+          "distance_pct": 16.173,
+          "stop_price_at_ref_spot": 30.0102
         },
         "p10": {
           "k_atr": 3.597,
-          "distance_pct": 23.603,
-          "stop_price_at_ref_spot": 27.3348
+          "distance_pct": 23.59,
+          "stop_price_at_ref_spot": 27.3548
         },
         "p5": {
           "k_atr": 4.898,
-          "distance_pct": 32.14,
-          "stop_price_at_ref_spot": 24.2802
+          "distance_pct": 32.122,
+          "stop_price_at_ref_spot": 24.3002
         }
       },
       "20": {
         "p75": {
           "k_atr": 0.767,
-          "distance_pct": 5.033,
-          "stop_price_at_ref_spot": 33.9792
+          "distance_pct": 5.03,
+          "stop_price_at_ref_spot": 33.9992
         },
         "p50": {
           "k_atr": 1.706,
-          "distance_pct": 11.195,
-          "stop_price_at_ref_spot": 31.7746
+          "distance_pct": 11.188,
+          "stop_price_at_ref_spot": 31.7946
         },
         "p45": {
           "k_atr": 1.93,
-          "distance_pct": 12.665,
-          "stop_price_at_ref_spot": 31.2486
+          "distance_pct": 12.657,
+          "stop_price_at_ref_spot": 31.2686
         },
         "p33": {
           "k_atr": 2.438,
-          "distance_pct": 15.998,
-          "stop_price_at_ref_spot": 30.0559
+          "distance_pct": 15.989,
+          "stop_price_at_ref_spot": 30.0759
         },
         "p25": {
           "k_atr": 2.918,
-          "distance_pct": 19.148,
-          "stop_price_at_ref_spot": 28.929
+          "distance_pct": 19.137,
+          "stop_price_at_ref_spot": 28.949
         },
         "p20": {
           "k_atr": 3.39,
-          "distance_pct": 22.245,
-          "stop_price_at_ref_spot": 27.8208
+          "distance_pct": 22.232,
+          "stop_price_at_ref_spot": 27.8408
         },
         "p10": {
           "k_atr": 4.966,
-          "distance_pct": 32.587,
-          "stop_price_at_ref_spot": 24.1205
+          "distance_pct": 32.568,
+          "stop_price_at_ref_spot": 24.1405
         },
         "p5": {
           "k_atr": null,
@@ -15825,14 +15825,14 @@
         "alternatives": [
           {
             "k_atr": 0.75,
-            "distance_pct": 4.921,
+            "distance_pct": 4.919,
             "p_touch_pct": 33.37,
             "ordinary_pct": 0.5353,
             "regret_pct": 0.5645
           }
         ],
-        "best_distance_pct": 4.921,
-        "best_stop_price_at_ref_spot": 34.0193,
+        "best_distance_pct": 4.919,
+        "best_stop_price_at_ref_spot": 34.039,
         "p_touch_pct": 33.37,
         "p_touch_in_stress_pct": 87.0,
         "why_range": "borne HAUTE = derniere distance ou le cash rendu en stress reste >= 80 %. Critere de PORTEFEUILLE, insensible a la tendance du titre — le plateau du rendement, lui, reimportait le biais haussier (ENR rendait 6,00 ATR contre 1,25-1,50 en mediane inter-titres). Borne BASSE = plus petite distance mesuree ; en dessous, ce sont le reglage et les bornes de l'operateur qui decident, pas un plancher fixe."
@@ -15854,14 +15854,14 @@
         "alternatives": [
           {
             "k_atr": 0.75,
-            "distance_pct": 4.921,
+            "distance_pct": 4.919,
             "p_touch_pct": 43.19,
             "ordinary_pct": 0.8297,
             "regret_pct": 1.0829
           }
         ],
-        "best_distance_pct": 4.921,
-        "best_stop_price_at_ref_spot": 34.0193,
+        "best_distance_pct": 4.919,
+        "best_stop_price_at_ref_spot": 34.039,
         "p_touch_pct": 43.19,
         "p_touch_in_stress_pct": 90.0,
         "why_range": "borne HAUTE = derniere distance ou le cash rendu en stress reste >= 80 %. Critere de PORTEFEUILLE, insensible a la tendance du titre — le plateau du rendement, lui, reimportait le biais haussier (ENR rendait 6,00 ATR contre 1,25-1,50 en mediane inter-titres). Borne BASSE = plus petite distance mesuree ; en dessous, ce sont le reglage et les bornes de l'operateur qui decident, pas un plancher fixe."
@@ -15883,21 +15883,21 @@
         "alternatives": [
           {
             "k_atr": 1.25,
-            "distance_pct": 8.202,
+            "distance_pct": 8.198,
             "p_touch_pct": 33.06,
             "ordinary_pct": 1.675,
             "regret_pct": 0.9244
           },
           {
             "k_atr": 1.0,
-            "distance_pct": 6.562,
+            "distance_pct": 6.558,
             "p_touch_pct": 43.68,
             "ordinary_pct": 1.393,
             "regret_pct": 1.515
           }
         ],
-        "best_distance_pct": 8.202,
-        "best_stop_price_at_ref_spot": 32.8453,
+        "best_distance_pct": 8.198,
+        "best_stop_price_at_ref_spot": 32.8651,
         "p_touch_pct": 33.06,
         "p_touch_in_stress_pct": 89.9,
         "why_range": "borne HAUTE = derniere distance ou le cash rendu en stress reste >= 80 %. Critere de PORTEFEUILLE, insensible a la tendance du titre — le plateau du rendement, lui, reimportait le biais haussier (ENR rendait 6,00 ATR contre 1,25-1,50 en mediane inter-titres). Borne BASSE = plus petite distance mesuree ; en dessous, ce sont le reglage et les bornes de l'operateur qui decident, pas un plancher fixe."
@@ -15919,21 +15919,21 @@
         "alternatives": [
           {
             "k_atr": 1.5,
-            "distance_pct": 9.843,
+            "distance_pct": 9.837,
             "p_touch_pct": 41.46,
             "ordinary_pct": 3.1817,
             "regret_pct": 1.9836
           },
           {
             "k_atr": 2.0,
-            "distance_pct": 13.124,
+            "distance_pct": 13.117,
             "p_touch_pct": 29.57,
             "ordinary_pct": 3.2071,
             "regret_pct": 1.4196
           }
         ],
-        "best_distance_pct": 9.843,
-        "best_stop_price_at_ref_spot": 32.2582,
+        "best_distance_pct": 9.837,
+        "best_stop_price_at_ref_spot": 32.2784,
         "p_touch_pct": 41.46,
         "p_touch_in_stress_pct": 95.96,
         "why_range": "borne HAUTE = derniere distance ou le cash rendu en stress reste >= 80 %. Critere de PORTEFEUILLE, insensible a la tendance du titre — le plateau du rendement, lui, reimportait le biais haussier (ENR rendait 6,00 ATR contre 1,25-1,50 en mediane inter-titres). Borne BASSE = plus petite distance mesuree ; en dessous, ce sont le reglage et les bornes de l'operateur qui decident, pas un plancher fixe."
@@ -15955,21 +15955,21 @@
         "alternatives": [
           {
             "k_atr": 2.5,
-            "distance_pct": 16.405,
+            "distance_pct": 16.396,
             "p_touch_pct": 31.52,
             "ordinary_pct": 6.237,
             "regret_pct": 2.3658
           },
           {
             "k_atr": 2.0,
-            "distance_pct": 13.124,
+            "distance_pct": 13.117,
             "p_touch_pct": 43.43,
             "ordinary_pct": 4.7261,
             "regret_pct": 4.3483
           }
         ],
-        "best_distance_pct": 16.405,
-        "best_stop_price_at_ref_spot": 29.9103,
+        "best_distance_pct": 16.396,
+        "best_stop_price_at_ref_spot": 29.9302,
         "p_touch_pct": 31.52,
         "p_touch_in_stress_pct": 98.98,
         "why_range": "borne HAUTE = derniere distance ou le cash rendu en stress reste >= 80 %. Critere de PORTEFEUILLE, insensible a la tendance du titre — le plateau du rendement, lui, reimportait le biais haussier (ENR rendait 6,00 ATR contre 1,25-1,50 en mediane inter-titres). Borne BASSE = plus petite distance mesuree ; en dessous, ce sont le reglage et les bornes de l'operateur qui decident, pas un plancher fixe."
@@ -15981,46 +15981,46 @@
     "warning_same_price_different_meaning": "le meme stop n'a pas le meme sens selon l'horizon : a 1 ATR il part rarement sur une seance et souvent sur vingt. Choisir la distance sans choisir l'horizon n'a pas de sens."
   },
   "target_recommended_pct": null,
-  "target_recommendation": "PAS DE CIBLE — la retirer gagne 1.67 point par fenetre (etabli). Une cible qui se remplit PLAFONNE la position.",
+  "target_recommendation": "PAS DE CIBLE — la retirer gagne 1.68 point par fenetre (etabli). Une cible qui se remplit PLAFONNE la position.",
   "targets_considered": [
     {
-      "pct": 28.202,
+      "pct": 28.13,
       "origin": "resistance",
       "why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)"
     },
     {
-      "pct": 16.4,
+      "pct": 16.36,
       "origin": "plan_t3",
       "why": "cible t3 du plan (écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop))"
     },
     {
-      "pct": 15.192,
+      "pct": 15.127,
       "origin": "resistance",
       "why": "resistance a 2 touche(s), force medium (prix 41.9200, visee 41.2156 apres tampon)"
     },
     {
-      "pct": 9.063,
+      "pct": 9.028,
       "origin": "plan_t2",
       "why": "cible t2 du plan (écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop))"
     },
     {
-      "pct": 1.727,
+      "pct": 1.695,
       "origin": "plan_t1",
       "why": "cible t1 du plan (écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop))"
     }
   ],
   "pairs": [
     {
-      "stop_price": 28.7364,
+      "stop_price": 28.7564,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 19.686,
-      "target_pct": 28.202,
+      "stop_distance_pct": 19.675,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 1.29,
+      "rr_vs_spot": 1.287,
       "p_stop_first": 0.1299,
       "cvar95_pct": 25.223,
-      "cost": -2.92487,
+      "cost": -2.91533,
       "feasible": false,
       "rejected_because": [
         "R/R 1.29 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16028,16 +16028,16 @@
       ]
     },
     {
-      "stop_price": 29.3234,
+      "stop_price": 29.3434,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 18.045,
-      "target_pct": 28.202,
+      "stop_distance_pct": 18.035,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 1.365,
+      "rr_vs_spot": 1.361,
       "p_stop_first": 0.1419,
       "cvar95_pct": 25.05,
-      "cost": -2.90488,
+      "cost": -2.8954,
       "feasible": false,
       "rejected_because": [
         "R/R 1.36 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16047,48 +16047,48 @@
     {
       "stop_price": 27.0056,
       "stop_origin": "grid_snapped",
-      "stop_distance_pct": 24.523,
-      "target_pct": 28.202,
+      "stop_distance_pct": 24.565,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 1.085,
-      "p_stop_first": 0.0901,
-      "cvar95_pct": 27.151,
-      "cost": -2.88614,
+      "rr_vs_spot": 1.082,
+      "p_stop_first": 0.0899,
+      "cvar95_pct": 27.158,
+      "cost": -2.8758,
       "feasible": false,
       "rejected_because": [
-        "R/R 1.09 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 27.15 % > budget 12.00 %"
+        "R/R 1.08 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 27.16 % > budget 12.00 %"
       ]
     },
     {
       "stop_price": 26.5079,
       "stop_origin": "support",
-      "stop_distance_pct": 25.914,
-      "target_pct": 28.202,
+      "stop_distance_pct": 25.956,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 1.045,
+      "rr_vs_spot": 1.042,
       "p_stop_first": 0.0828,
-      "cvar95_pct": 27.674,
-      "cost": -2.83436,
+      "cvar95_pct": 27.686,
+      "cost": -2.822,
       "feasible": false,
       "rejected_because": [
-        "R/R 1.05 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 27.67 % > budget 12.00 %"
+        "R/R 1.04 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 27.69 % > budget 12.00 %"
       ]
     },
     {
-      "stop_price": 29.9104,
+      "stop_price": 29.9304,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 16.405,
-      "target_pct": 28.202,
+      "stop_distance_pct": 16.396,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 1.493,
+      "rr_vs_spot": 1.49,
       "p_stop_first": 0.1785,
       "cvar95_pct": 24.739,
-      "cost": -2.69342,
+      "cost": -2.68423,
       "feasible": false,
       "rejected_because": [
         "R/R 1.49 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16096,16 +16096,16 @@
       ]
     },
     {
-      "stop_price": 20.5189,
+      "stop_price": 20.5389,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 42.653,
-      "target_pct": 28.202,
+      "stop_distance_pct": 42.629,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 0.661,
+      "rr_vs_spot": 0.66,
       "p_stop_first": 0.0034,
-      "cvar95_pct": 33.905,
-      "cost": -2.61055,
+      "cvar95_pct": 33.903,
+      "cost": -2.60027,
       "feasible": false,
       "rejected_because": [
         "R/R 0.66 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16113,16 +16113,16 @@
       ]
     },
     {
-      "stop_price": 19.345,
+      "stop_price": 19.365,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 45.933,
-      "target_pct": 28.202,
+      "stop_distance_pct": 45.908,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 0.612,
+      "rr_vs_spot": 0.611,
       "p_stop_first": 0.0021,
-      "cvar95_pct": 34.006,
-      "cost": -2.60755,
+      "cvar95_pct": 34.005,
+      "cost": -2.59723,
       "feasible": false,
       "rejected_because": [
         "R/R 0.61 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16130,16 +16130,16 @@
       ]
     },
     {
-      "stop_price": 18.1711,
+      "stop_price": 18.1911,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 49.214,
-      "target_pct": 28.202,
+      "stop_distance_pct": 49.187,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 0.548,
+      "rr_vs_spot": 0.547,
       "p_stop_first": 0.0018,
       "cvar95_pct": 34.148,
-      "cost": -2.59781,
+      "cost": -2.58748,
       "feasible": false,
       "rejected_because": [
         "R/R 0.55 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16147,16 +16147,16 @@
       ]
     },
     {
-      "stop_price": 16.9971,
+      "stop_price": 17.0171,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 52.495,
-      "target_pct": 28.202,
+      "stop_distance_pct": 52.466,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 0.508,
+      "rr_vs_spot": 0.506,
       "p_stop_first": 0.0014,
       "cvar95_pct": 34.224,
-      "cost": -2.59681,
+      "cost": -2.58645,
       "feasible": false,
       "rejected_because": [
         "R/R 0.51 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16164,135 +16164,135 @@
       ]
     },
     {
-      "stop_price": 21.6929,
+      "stop_price": 21.7129,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 39.372,
-      "target_pct": 28.202,
+      "stop_distance_pct": 39.35,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 0.716,
+      "rr_vs_spot": 0.715,
       "p_stop_first": 0.0146,
-      "cvar95_pct": 34.319,
-      "cost": -2.5899,
+      "cvar95_pct": 34.313,
+      "cost": -2.57991,
       "feasible": false,
       "rejected_because": [
-        "R/R 0.72 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 34.32 % > budget 12.00 %"
+        "R/R 0.71 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 34.31 % > budget 12.00 %"
       ]
     },
     {
       "stop_price": 24.7056,
       "stop_origin": "grid_snapped",
-      "stop_distance_pct": 30.951,
-      "target_pct": 28.202,
+      "stop_distance_pct": 30.99,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 0.908,
+      "rr_vs_spot": 0.905,
       "p_stop_first": 0.0701,
-      "cvar95_pct": 31.098,
-      "cost": -2.58288,
+      "cvar95_pct": 31.134,
+      "cost": -2.56989,
       "feasible": false,
       "rejected_because": [
-        "R/R 0.91 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 31.10 % > budget 12.00 %"
+        "R/R 0.90 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 31.13 % > budget 12.00 %"
       ]
     },
     {
       "stop_price": 30.6939,
       "stop_origin": "sr_based",
-      "stop_distance_pct": 14.215,
-      "target_pct": 28.202,
+      "stop_distance_pct": 14.263,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 1.725,
-      "p_stop_first": 0.2207,
-      "cvar95_pct": 23.557,
-      "cost": -2.52726,
+      "rr_vs_spot": 1.714,
+      "p_stop_first": 0.2199,
+      "cvar95_pct": 23.563,
+      "cost": -2.5117,
       "feasible": false,
       "rejected_because": [
-        "R/R 1.73 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "R/R 1.71 < plancher 3.00 (mesure vs SPOT, gap inclus)",
         "CVaR 95 % 23.56 % > budget 12.00 %"
       ]
     },
     {
       "stop_price": 24.2079,
       "stop_origin": "support",
-      "stop_distance_pct": 32.342,
-      "target_pct": 28.202,
+      "stop_distance_pct": 32.38,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 0.868,
-      "p_stop_first": 0.0659,
-      "cvar95_pct": 32.529,
-      "cost": -2.50718,
+      "rr_vs_spot": 0.865,
+      "p_stop_first": 0.0657,
+      "cvar95_pct": 32.564,
+      "cost": -2.49871,
       "feasible": false,
       "rejected_because": [
         "R/R 0.87 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 32.53 % > budget 12.00 %"
+        "CVaR 95 % 32.56 % > budget 12.00 %"
       ]
     },
     {
       "stop_price": 22.1779,
       "stop_origin": "support",
-      "stop_distance_pct": 38.016,
-      "target_pct": 28.202,
+      "stop_distance_pct": 38.051,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 0.741,
+      "rr_vs_spot": 0.739,
       "p_stop_first": 0.0359,
-      "cvar95_pct": 36.459,
-      "cost": -2.46188,
+      "cvar95_pct": 36.483,
+      "cost": -2.45032,
       "feasible": false,
       "rejected_because": [
         "R/R 0.74 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 36.46 % > budget 12.00 %"
+        "CVaR 95 % 36.48 % > budget 12.00 %"
       ]
     },
     {
       "stop_price": 31.1916,
       "stop_origin": "grid_snapped",
-      "stop_distance_pct": 12.824,
-      "target_pct": 28.202,
+      "stop_distance_pct": 12.873,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 1.913,
-      "p_stop_first": 0.2661,
+      "rr_vs_spot": 1.902,
+      "p_stop_first": 0.2654,
       "cvar95_pct": 22.949,
-      "cost": -2.4299,
+      "cost": -2.4182,
       "feasible": false,
       "rejected_because": [
-        "R/R 1.91 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "R/R 1.90 < plancher 3.00 (mesure vs SPOT, gap inclus)",
         "CVaR 95 % 22.95 % > budget 12.00 %"
       ]
     },
     {
       "stop_price": 22.6756,
       "stop_origin": "grid_snapped",
-      "stop_distance_pct": 36.625,
-      "target_pct": 28.202,
+      "stop_distance_pct": 36.66,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 0.769,
+      "rr_vs_spot": 0.767,
       "p_stop_first": 0.0504,
-      "cvar95_pct": 36.665,
-      "cost": -2.37809,
+      "cvar95_pct": 36.699,
+      "cost": -2.36604,
       "feasible": false,
       "rejected_because": [
         "R/R 0.77 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 36.67 % > budget 12.00 %"
+        "CVaR 95 % 36.70 % > budget 12.00 %"
       ]
     },
     {
-      "stop_price": 28.7364,
+      "stop_price": 28.7564,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 19.686,
-      "target_pct": 15.192,
+      "stop_distance_pct": 19.675,
+      "target_pct": 15.127,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 41.9200, visee 41.2156 apres tampon)",
-      "rr_vs_spot": 0.693,
+      "rr_vs_spot": 0.69,
       "p_stop_first": 0.1254,
       "cvar95_pct": 25.217,
-      "cost": -1.99221,
+      "cost": -1.99143,
       "feasible": false,
       "rejected_because": [
         "R/R 0.69 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16300,16 +16300,16 @@
       ]
     },
     {
-      "stop_price": 29.3234,
+      "stop_price": 29.3434,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 18.045,
-      "target_pct": 15.192,
+      "stop_distance_pct": 18.035,
+      "target_pct": 15.127,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 41.9200, visee 41.2156 apres tampon)",
-      "rr_vs_spot": 0.734,
+      "rr_vs_spot": 0.731,
       "p_stop_first": 0.1374,
       "cvar95_pct": 25.04,
-      "cost": -1.97187,
+      "cost": -1.97109,
       "feasible": false,
       "rejected_because": [
         "R/R 0.73 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16317,16 +16317,16 @@
       ]
     },
     {
-      "stop_price": 28.7364,
+      "stop_price": 28.7564,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 19.686,
-      "target_pct": 16.4,
+      "stop_distance_pct": 19.675,
+      "target_pct": 16.36,
       "target_origin": "plan_t3",
       "target_why": "cible t3 du plan (écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop))",
-      "rr_vs_spot": 0.75,
+      "rr_vs_spot": 0.748,
       "p_stop_first": 0.1289,
       "cvar95_pct": 25.217,
-      "cost": -1.9489,
+      "cost": -1.93986,
       "feasible": false,
       "rejected_because": [
         "R/R 0.75 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16334,16 +16334,33 @@
       ]
     },
     {
-      "stop_price": 32.8452,
+      "stop_price": 27.0056,
+      "stop_origin": "grid_snapped",
+      "stop_distance_pct": 24.565,
+      "target_pct": 15.127,
+      "target_origin": "resistance",
+      "target_why": "resistance a 2 touche(s), force medium (prix 41.9200, visee 41.2156 apres tampon)",
+      "rr_vs_spot": 0.58,
+      "p_stop_first": 0.0864,
+      "cvar95_pct": 27.158,
+      "cost": -1.93429,
+      "feasible": false,
+      "rejected_because": [
+        "R/R 0.58 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 27.16 % > budget 12.00 %"
+      ]
+    },
+    {
+      "stop_price": 32.8652,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 8.202,
-      "target_pct": 28.202,
+      "stop_distance_pct": 8.198,
+      "target_pct": 28.13,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 46.5750, visee 45.8706 apres tampon)",
-      "rr_vs_spot": 2.944,
+      "rr_vs_spot": 2.937,
       "p_stop_first": 0.4611,
       "cvar95_pct": 20.506,
-      "cost": -1.93989,
+      "cost": -1.9315,
       "feasible": false,
       "rejected_because": [
         "R/R 2.94 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16351,33 +16368,16 @@
       ]
     },
     {
-      "stop_price": 27.0056,
-      "stop_origin": "grid_snapped",
-      "stop_distance_pct": 24.523,
-      "target_pct": 15.192,
-      "target_origin": "resistance",
-      "target_why": "resistance a 2 touche(s), force medium (prix 41.9200, visee 41.2156 apres tampon)",
-      "rr_vs_spot": 0.583,
-      "p_stop_first": 0.0865,
-      "cvar95_pct": 27.151,
-      "cost": -1.93677,
-      "feasible": false,
-      "rejected_because": [
-        "R/R 0.58 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 27.15 % > budget 12.00 %"
-      ]
-    },
-    {
-      "stop_price": 29.3234,
+      "stop_price": 29.3434,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 18.045,
-      "target_pct": 16.4,
+      "stop_distance_pct": 18.035,
+      "target_pct": 16.36,
       "target_origin": "plan_t3",
       "target_why": "cible t3 du plan (écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop))",
-      "rr_vs_spot": 0.793,
+      "rr_vs_spot": 0.792,
       "p_stop_first": 0.141,
       "cvar95_pct": 25.04,
-      "cost": -1.92647,
+      "cost": -1.9174,
       "feasible": false,
       "rejected_because": [
         "R/R 0.79 < plancher 3.00 (mesure vs SPOT, gap inclus)",
@@ -16387,211 +16387,211 @@
     {
       "stop_price": 26.5079,
       "stop_origin": "support",
-      "stop_distance_pct": 25.914,
-      "target_pct": 15.192,
+      "stop_distance_pct": 25.956,
+      "target_pct": 15.127,
       "target_origin": "resistance",
       "target_why": "resistance a 2 touche(s), force medium (prix 41.9200, visee 41.2156 apres tampon)",
-      "rr_vs_spot": 0.562,
+      "rr_vs_spot": 0.559,
       "p_stop_first": 0.0792,
-      "cvar95_pct": 27.674,
-      "cost": -1.88994,
+      "cvar95_pct": 27.686,
+      "cost": -1.88797,
       "feasible": false,
       "rejected_because": [
         "R/R 0.56 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 27.67 % > budget 12.00 %"
+        "CVaR 95 % 27.69 % > budget 12.00 %"
       ]
     },
     {
       "stop_price": 27.0056,
       "stop_origin": "grid_snapped",
-      "stop_distance_pct": 24.523,
-      "target_pct": 16.4,
+      "stop_distance_pct": 24.565,
+      "target_pct": 16.36,
       "target_origin": "plan_t3",
       "target_why": "cible t3 du plan (écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop))",
-      "rr_vs_spot": 0.631,
-      "p_stop_first": 0.0901,
-      "cvar95_pct": 27.151,
-      "cost": -1.87583,
+      "rr_vs_spot": 0.629,
+      "p_stop_first": 0.0899,
+      "cvar95_pct": 27.158,
+      "cost": -1.86768,
       "feasible": false,
       "rejected_because": [
         "R/R 0.63 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 27.15 % > budget 12.00 %"
+        "CVaR 95 % 27.16 % > budget 12.00 %"
       ]
     }
   ],
   "best_pair": null,
   "min_target_for_rr": [
     {
-      "stop_price": 35.193,
+      "stop_price": 35.213,
       "stop_origin": "atr_grid",
       "stop_distance_pct": 1.64,
       "min_target_pct_for_rr": 5.684,
       "note": "avec le surcout de gap inclus, ce stop coute 1.89 % ; il faut donc viser au moins 5.68 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 34.6061,
+      "stop_price": 34.6261,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 3.281,
-      "min_target_pct_for_rr": 11.329,
-      "note": "avec le surcout de gap inclus, ce stop coute 3.78 % ; il faut donc viser au moins 11.33 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 3.279,
+      "min_target_pct_for_rr": 11.324,
+      "note": "avec le surcout de gap inclus, ce stop coute 3.77 % ; il faut donc viser au moins 11.32 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 34.0191,
+      "stop_price": 34.0391,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 4.921,
-      "min_target_pct_for_rr": 16.937,
-      "note": "avec le surcout de gap inclus, ce stop coute 5.65 % ; il faut donc viser au moins 16.94 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 4.919,
+      "min_target_pct_for_rr": 16.932,
+      "note": "avec le surcout de gap inclus, ce stop coute 5.64 % ; il faut donc viser au moins 16.93 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 33.4321,
+      "stop_price": 33.4521,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 6.562,
-      "min_target_pct_for_rr": 22.865,
-      "note": "avec le surcout de gap inclus, ce stop coute 7.62 % ; il faut donc viser au moins 22.87 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 6.558,
+      "min_target_pct_for_rr": 22.855,
+      "note": "avec le surcout de gap inclus, ce stop coute 7.62 % ; il faut donc viser au moins 22.85 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 32.8452,
+      "stop_price": 32.8652,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 8.202,
-      "min_target_pct_for_rr": 28.695,
-      "note": "avec le surcout de gap inclus, ce stop coute 9.57 % ; il faut donc viser au moins 28.70 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 8.198,
+      "min_target_pct_for_rr": 28.686,
+      "note": "avec le surcout de gap inclus, ce stop coute 9.56 % ; il faut donc viser au moins 28.69 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 32.2582,
+      "stop_price": 32.2782,
       "stop_origin": "atr_based",
-      "stop_distance_pct": 9.843,
-      "min_target_pct_for_rr": 34.278,
-      "note": "avec le surcout de gap inclus, ce stop coute 11.43 % ; il faut donc viser au moins 34.28 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 9.837,
+      "min_target_pct_for_rr": 34.261,
+      "note": "avec le surcout de gap inclus, ce stop coute 11.42 % ; il faut donc viser au moins 34.26 % pour tenir le plancher de R/R 3.0"
     },
     {
       "stop_price": 31.1916,
       "stop_origin": "grid_snapped",
-      "stop_distance_pct": 12.824,
-      "min_target_pct_for_rr": 44.147,
-      "note": "avec le surcout de gap inclus, ce stop coute 14.72 % ; il faut donc viser au moins 44.15 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 12.873,
+      "min_target_pct_for_rr": 44.275,
+      "note": "avec le surcout de gap inclus, ce stop coute 14.76 % ; il faut donc viser au moins 44.27 % pour tenir le plancher de R/R 3.0"
     },
     {
       "stop_price": 30.6939,
       "stop_origin": "sr_based",
-      "stop_distance_pct": 14.215,
-      "min_target_pct_for_rr": 48.916,
-      "note": "avec le surcout de gap inclus, ce stop coute 16.31 % ; il faut donc viser au moins 48.92 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 14.263,
+      "min_target_pct_for_rr": 49.107,
+      "note": "avec le surcout de gap inclus, ce stop coute 16.37 % ; il faut donc viser au moins 49.11 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 29.9104,
+      "stop_price": 29.9304,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 16.405,
-      "min_target_pct_for_rr": 56.508,
-      "note": "avec le surcout de gap inclus, ce stop coute 18.84 % ; il faut donc viser au moins 56.51 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 16.396,
+      "min_target_pct_for_rr": 56.491,
+      "note": "avec le surcout de gap inclus, ce stop coute 18.83 % ; il faut donc viser au moins 56.49 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 29.3234,
+      "stop_price": 29.3434,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 18.045,
-      "min_target_pct_for_rr": 61.817,
-      "note": "avec le surcout de gap inclus, ce stop coute 20.61 % ; il faut donc viser au moins 61.82 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 18.035,
+      "min_target_pct_for_rr": 61.801,
+      "note": "avec le surcout de gap inclus, ce stop coute 20.60 % ; il faut donc viser au moins 61.80 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 28.7364,
+      "stop_price": 28.7564,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 19.686,
-      "min_target_pct_for_rr": 65.385,
-      "note": "avec le surcout de gap inclus, ce stop coute 21.80 % ; il faut donc viser au moins 65.39 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 19.675,
+      "min_target_pct_for_rr": 65.367,
+      "note": "avec le surcout de gap inclus, ce stop coute 21.79 % ; il faut donc viser au moins 65.37 % pour tenir le plancher de R/R 3.0"
     },
     {
       "stop_price": 27.0056,
       "stop_origin": "grid_snapped",
-      "stop_distance_pct": 24.523,
-      "min_target_pct_for_rr": 77.919,
-      "note": "avec le surcout de gap inclus, ce stop coute 25.97 % ; il faut donc viser au moins 77.92 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 24.565,
+      "min_target_pct_for_rr": 77.994,
+      "note": "avec le surcout de gap inclus, ce stop coute 26.00 % ; il faut donc viser au moins 77.99 % pour tenir le plancher de R/R 3.0"
     },
     {
       "stop_price": 26.5079,
       "stop_origin": "support",
-      "stop_distance_pct": 25.914,
-      "min_target_pct_for_rr": 80.91,
-      "note": "avec le surcout de gap inclus, ce stop coute 26.97 % ; il faut donc viser au moins 80.91 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 25.956,
+      "min_target_pct_for_rr": 80.982,
+      "note": "avec le surcout de gap inclus, ce stop coute 26.99 % ; il faut donc viser au moins 80.98 % pour tenir le plancher de R/R 3.0"
     },
     {
       "stop_price": 24.7056,
       "stop_origin": "grid_snapped",
-      "stop_distance_pct": 30.951,
-      "min_target_pct_for_rr": 93.167,
-      "note": "avec le surcout de gap inclus, ce stop coute 31.06 % ; il faut donc viser au moins 93.17 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 30.99,
+      "min_target_pct_for_rr": 93.279,
+      "note": "avec le surcout de gap inclus, ce stop coute 31.09 % ; il faut donc viser au moins 93.28 % pour tenir le plancher de R/R 3.0"
     },
     {
       "stop_price": 24.2079,
       "stop_origin": "support",
-      "stop_distance_pct": 32.342,
-      "min_target_pct_for_rr": 97.451,
-      "note": "avec le surcout de gap inclus, ce stop coute 32.48 % ; il faut donc viser au moins 97.45 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 32.38,
+      "min_target_pct_for_rr": 97.561,
+      "note": "avec le surcout de gap inclus, ce stop coute 32.52 % ; il faut donc viser au moins 97.56 % pour tenir le plancher de R/R 3.0"
     },
     {
       "stop_price": 22.6756,
       "stop_origin": "grid_snapped",
-      "stop_distance_pct": 36.625,
-      "min_target_pct_for_rr": 109.995,
-      "note": "avec le surcout de gap inclus, ce stop coute 36.67 % ; il faut donc viser au moins 110.00 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 36.66,
+      "min_target_pct_for_rr": 110.096,
+      "note": "avec le surcout de gap inclus, ce stop coute 36.70 % ; il faut donc viser au moins 110.10 % pour tenir le plancher de R/R 3.0"
     },
     {
       "stop_price": 22.1779,
       "stop_origin": "support",
-      "stop_distance_pct": 38.016,
-      "min_target_pct_for_rr": 114.149,
-      "note": "avec le surcout de gap inclus, ce stop coute 38.05 % ; il faut donc viser au moins 114.15 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 38.051,
+      "min_target_pct_for_rr": 114.252,
+      "note": "avec le surcout de gap inclus, ce stop coute 38.08 % ; il faut donc viser au moins 114.25 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 21.6929,
+      "stop_price": 21.7129,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 39.372,
-      "min_target_pct_for_rr": 118.171,
-      "note": "avec le surcout de gap inclus, ce stop coute 39.39 % ; il faut donc viser au moins 118.17 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 39.35,
+      "min_target_pct_for_rr": 118.107,
+      "note": "avec le surcout de gap inclus, ce stop coute 39.37 % ; il faut donc viser au moins 118.11 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 20.5189,
+      "stop_price": 20.5389,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 42.653,
-      "min_target_pct_for_rr": 127.959,
-      "note": "avec le surcout de gap inclus, ce stop coute 42.65 % ; il faut donc viser au moins 127.96 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 42.629,
+      "min_target_pct_for_rr": 127.887,
+      "note": "avec le surcout de gap inclus, ce stop coute 42.63 % ; il faut donc viser au moins 127.89 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 19.345,
+      "stop_price": 19.365,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 45.933,
-      "min_target_pct_for_rr": 138.173,
-      "note": "avec le surcout de gap inclus, ce stop coute 46.06 % ; il faut donc viser au moins 138.17 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 45.908,
+      "min_target_pct_for_rr": 138.111,
+      "note": "avec le surcout de gap inclus, ce stop coute 46.04 % ; il faut donc viser au moins 138.11 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 18.1711,
+      "stop_price": 18.1911,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 49.214,
-      "min_target_pct_for_rr": 154.331,
-      "note": "avec le surcout de gap inclus, ce stop coute 51.44 % ; il faut donc viser au moins 154.33 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 49.187,
+      "min_target_pct_for_rr": 154.283,
+      "note": "avec le surcout de gap inclus, ce stop coute 51.43 % ; il faut donc viser au moins 154.28 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 16.9971,
+      "stop_price": 17.0171,
       "stop_origin": "atr_grid",
-      "stop_distance_pct": 52.495,
+      "stop_distance_pct": 52.466,
       "min_target_pct_for_rr": 166.629,
       "note": "avec le surcout de gap inclus, ce stop coute 55.54 % ; il faut donc viser au moins 166.63 % pour tenir le plancher de R/R 3.0"
     }
   ],
   "verdict": "AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — rien n'y coupe la baisse avant la perte du notionnel investi ; un stop ne borne pas la perte (un gap l'execute sous son seuil), il la limite en esperance.",
   "recommended": {
-    "anchor_price": 32.8452,
-    "stop_price": 32.8452,
+    "anchor_price": 32.8652,
+    "stop_price": 32.8652,
     "origin": "atr_grid",
     "strength": null,
     "touches": null,
     "touch_weight": null,
     "why": "point de grille a 1.25 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
     "anchor_distance_atr": 1.25,
-    "distance_pct": 8.202,
+    "distance_pct": 8.198,
     "anchor_quality": "non mesure",
     "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
     "p_stop_first": 0.4611,
-    "p_target_first": 0.1518,
-    "p_no_touch": 0.387,
+    "p_target_first": 0.1519,
+    "p_no_touch": 0.3869,
     "p_stop_ci95": [
       0.4091,
       0.5138
@@ -16603,25 +16603,25 @@
     "n_windows": 1244,
     "n_eff": 345.7,
     "grid_point": null,
-    "gap_overshoot_pt": 7.0,
+    "gap_overshoot_pt": 7.004,
     "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-    "loss_if_stop_pct": 9.579,
+    "loss_if_stop_pct": 9.576,
     "p_gap_through_given_stop": 0.1968,
-    "expected_overshoot_given_stop_pt": 1.3775,
-    "gain_if_tp_pct": 28.202,
-    "rr_vs_spot": 2.944,
+    "expected_overshoot_given_stop_pt": 1.3783,
+    "gain_if_tp_pct": 28.13,
+    "rr_vs_spot": 2.937,
     "cvar95_pct": 20.506,
     "var95_pct": 9.61,
     "cvar95_horizon_sessions": 10,
     "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
     "cvar95_budget_pct": 12.0,
-    "cost": -1.9399,
-    "ev_pct": 1.9399,
+    "cost": -1.93146,
+    "ev_pct": 1.9315,
     "ev_terms": {
-      "target": 4.2811,
-      "stop": -4.4171,
-      "no_touch": 2.0759,
-      "pnl_no_touch_pct": 5.3642
+      "target": 4.2729,
+      "stop": -4.4156,
+      "no_touch": 2.0741,
+      "pnl_no_touch_pct": 5.3609
     },
     "p_stop_upper": 0.5138,
     "flags": [],
@@ -16633,9 +16633,9 @@
     "violations": [
       {
         "constraint": "rr_vs_spot",
-        "value": 2.944,
+        "value": 2.9375,
         "limit": 3.0,
-        "excess_ratio": 0.0187
+        "excess_ratio": 0.0208
       },
       {
         "constraint": "cvar95",
@@ -16644,26 +16644,26 @@
         "excess_ratio": 0.7089
       }
     ],
-    "violation_severity": 0.7276,
+    "violation_severity": 0.7297,
     "is_best_effort": true,
     "best_effort_note": "AUCUN couple ne tient les contraintes. Celui-ci est le MOINS MAUVAIS au sens de la SEVERITE des violations (somme des depassements relatifs a chaque seuil), l'esperance ne departageant qu'a severites egales. Compter les violations ne suffisait pas : un depassement de budget de 1,5 point comptait comme un depassement de 13, et le classement retombait sur l'esperance, qui elit toujours le stop le plus large. Il n'est pas conforme et ne doit pas etre presente comme tel — mais laisser la ligne NUE est pire : sans stop, rien ne coupe la baisse avant la perte du notionnel investi (la seule borne d'une action detenue au comptant). Le stop ne BORNE pas la perte : un ordre stop devient un ordre au marche et peut etre execute bien en dessous de son seuil sur un gap. Il la LIMITE en esperance, a la distance plus le depassement moyen observe au stop (P(gap franchissant | stop) x depassement moyen de ce gap), qui est une moyenne et non un maximum. Poser, dire ce qui est viole, et remonter le probleme de fond a l'etage portefeuille."
   },
   "recommendation_is_compliant": false,
   "best_effort": {
-    "anchor_price": 32.8452,
-    "stop_price": 32.8452,
+    "anchor_price": 32.8652,
+    "stop_price": 32.8652,
     "origin": "atr_grid",
     "strength": null,
     "touches": null,
     "touch_weight": null,
     "why": "point de grille a 1.25 ATR sous le spot — AUCUNE structure a proximite. Sert la RESOLUTION du reglage, pas la recherche d'un optimum : la frontiere est monotone.",
     "anchor_distance_atr": 1.25,
-    "distance_pct": 8.202,
+    "distance_pct": 8.198,
     "anchor_quality": "non mesure",
     "anchor_quality_basis": "point de grille : la mesure des 51 %% porte sur les supports DETECTES, pas sur une distance en ATR",
     "p_stop_first": 0.4611,
-    "p_target_first": 0.1518,
-    "p_no_touch": 0.387,
+    "p_target_first": 0.1519,
+    "p_no_touch": 0.3869,
     "p_stop_ci95": [
       0.4091,
       0.5138
@@ -16675,25 +16675,25 @@
     "n_windows": 1244,
     "n_eff": 345.7,
     "grid_point": null,
-    "gap_overshoot_pt": 7.0,
+    "gap_overshoot_pt": 7.004,
     "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-    "loss_if_stop_pct": 9.579,
+    "loss_if_stop_pct": 9.576,
     "p_gap_through_given_stop": 0.1968,
-    "expected_overshoot_given_stop_pt": 1.3775,
-    "gain_if_tp_pct": 28.202,
-    "rr_vs_spot": 2.944,
+    "expected_overshoot_given_stop_pt": 1.3783,
+    "gain_if_tp_pct": 28.13,
+    "rr_vs_spot": 2.937,
     "cvar95_pct": 20.506,
     "var95_pct": 9.61,
     "cvar95_horizon_sessions": 10,
     "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
     "cvar95_budget_pct": 12.0,
-    "cost": -1.9399,
-    "ev_pct": 1.9399,
+    "cost": -1.93146,
+    "ev_pct": 1.9315,
     "ev_terms": {
-      "target": 4.2811,
-      "stop": -4.4171,
-      "no_touch": 2.0759,
-      "pnl_no_touch_pct": 5.3642
+      "target": 4.2729,
+      "stop": -4.4156,
+      "no_touch": 2.0741,
+      "pnl_no_touch_pct": 5.3609
     },
     "p_stop_upper": 0.5138,
     "flags": [],
@@ -16705,9 +16705,9 @@
     "violations": [
       {
         "constraint": "rr_vs_spot",
-        "value": 2.944,
+        "value": 2.9375,
         "limit": 3.0,
-        "excess_ratio": 0.0187
+        "excess_ratio": 0.0208
       },
       {
         "constraint": "cvar95",
@@ -16716,7 +16716,7 @@
         "excess_ratio": 0.7089
       }
     ],
-    "violation_severity": 0.7276,
+    "violation_severity": 0.7297,
     "is_best_effort": true,
     "best_effort_note": "AUCUN couple ne tient les contraintes. Celui-ci est le MOINS MAUVAIS au sens de la SEVERITE des violations (somme des depassements relatifs a chaque seuil), l'esperance ne departageant qu'a severites egales. Compter les violations ne suffisait pas : un depassement de budget de 1,5 point comptait comme un depassement de 13, et le classement retombait sur l'esperance, qui elit toujours le stop le plus large. Il n'est pas conforme et ne doit pas etre presente comme tel — mais laisser la ligne NUE est pire : sans stop, rien ne coupe la baisse avant la perte du notionnel investi (la seule borne d'une action detenue au comptant). Le stop ne BORNE pas la perte : un ordre stop devient un ordre au marche et peut etre execute bien en dessous de son seuil sur un gap. Il la LIMITE en esperance, a la distance plus le depassement moyen observe au stop (P(gap franchissant | stop) x depassement moyen de ce gap), qui est une moyenne et non un maximum. Poser, dire ce qui est viole, et remonter le probleme de fond a l'etage portefeuille."
   },
