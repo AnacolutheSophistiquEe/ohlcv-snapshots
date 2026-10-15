@@ -1,0 +1,222 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "SOI",
+    "generated_at": "2026-10-15T00:30:46Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-10-16T08:00:00Z",
+    "valid_until": "2026-10-16T21:00:00Z",
+    "source_precomputed": "SOI_precomputed.json"
+  },
+  "context": {
+    "last_price": 142.45,
+    "ta_score": {
+      "value": 6,
+      "max": 10,
+      "label": "neutral"
+    },
+    "alignment_flag": "mixed",
+    "hmm_regime": {
+      "state": "sideways",
+      "probability": 0.9,
+      "expected_duration_days": 16.16
+    },
+    "volatility_regime": "normal",
+    "signals_counter": {
+      "buy": 3,
+      "sell": 3,
+      "neutral": 9,
+      "total": 15,
+      "verdict": "neutral"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_40-50_dist_ma20_-10_-5",
+      "win_rate": 0.83,
+      "sample_size": 6,
+      "median_bounce_pct": 7.59,
+      "confidence": "low"
+    },
+    "narrative_short": "TA score 6/10 (neutral), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (3b/3s/9n)."
+  },
+  "notes": {
+    "atr_daily": 9.2571,
+    "atr_pct_daily": null,
+    "beta_60d": 1.1307,
+    "beta_benchmark": "FCHI",
+    "beta_corr_60d": 0.1372,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "three_black_crows",
+      "date": "2026-10-14",
+      "confidence": 0.781
+    },
+    "divergences": [
+      {
+        "indicator": "rsi",
+        "type": "hidden_bullish",
+        "confidence": 0.53,
+        "bars_ago": 12,
+        "at_price": null
+      },
+      {
+        "indicator": "macd_hist",
+        "type": "bearish",
+        "confidence": 0.38,
+        "bars_ago": 8,
+        "at_price": null
+      },
+      {
+        "indicator": "macd_hist",
+        "type": "hidden_bullish",
+        "confidence": 0.44,
+        "bars_ago": 12,
+        "at_price": null
+      },
+      {
+        "indicator": "obv",
+        "type": "bearish",
+        "confidence": 0.37,
+        "bars_ago": 8,
+        "at_price": null
+      }
+    ],
+    "drawdown": {
+      "current_dd_pct": -40.94,
+      "ath_price": 241.2,
+      "ath_date": "2021-12-01",
+      "max_dd_1y_pct": -55.05,
+      "days_in_dd": 1778,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 134.561,
+        "max": 136.9333
+      },
+      "stop": {
+        "price": 130.1587,
+        "basis": "swing_plan_below_confluence_support",
+        "distance_pct": -4.12
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 155.6743,
+          "basis": "sous résistance (weak) à 156.6 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
+          "rr": 3.57
+        },
+        {
+          "level": 2,
+          "price": 166.0241,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 5.42
+        },
+        {
+          "level": 3,
+          "price": 176.3739,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 7.27
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support BB_LOWER + MA50 + S/R_support (strength 12.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 156.7566,
+        "max": 157.383
+      },
+      "stop": {
+        "price": 148.0062,
+        "basis": "below_broken_resistance",
+        "distance_pct": -5.77
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 167.78,
+          "basis": "next_confluence_resistance",
+          "rr": 1.18
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance S/R_resistance + MA20 + FIB_786 + S/R_resistance (strength 18.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 118.5833,
+        "max": 119.732
+      },
+      "stop": {
+        "price": 113.84,
+        "basis": "deep_below_confluence_support_4pct",
+        "distance_pct": -4.46
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 155.6743,
+          "basis": "sous résistance (weak) à 156.6 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
+          "rr": 6.87
+        },
+        {
+          "level": 2,
+          "price": 166.0241,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 8.81
+        },
+        {
+          "level": 3,
+          "price": 176.3739,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 10.76
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Deep value mecanique : entree sur confluence support basse S/R_support + VPVR_POC (strength 7.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+    }
+  ],
+  "bot_actionable": true,
+  "bot_actionable_reason": "ok",
+  "global_conditions": [
+    {
+      "id": "session_eu_paris_open",
+      "type": "session_window",
+      "params": {
+        "session": "eu_paris_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 112.7016,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
