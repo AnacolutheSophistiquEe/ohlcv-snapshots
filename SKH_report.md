@@ -1,19 +1,19 @@
 # 000660
 
-**Generated** : 2026-10-15T00:13:45.889891+00:00  
+**Generated** : 2026-10-15T21:51:23.144889+00:00  
 **Couverture** : bulletin complet  
 > ⚠️ **Données suspectes** : barres source hors échelle (prix/vol) — bulletin NON FIABLE, re-télécharger les données KR.  
 
 **Santé technique** : 2/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · ₩1419000.00  
+**Subtitle** : indeterminate · volatilite normal · ₩1262000.00  
 
-> ⛔ **STAND-DOWN** — NON ESTIMABLE — la source du rating est inéligible (source périmée (6 séance(s) de retard, drapeau lu sur first_passage_by_horizon)) ; aucun repli sur un autre moteur (R09)  
-> ↳ spot ₩1419000.00 (+1.8% vs entrée) · entrée ₩1393536.32 · stop ₩1315168.76 · T1 ₩1550271.43 · R/R 2.0  
-> ↳ ¼-Kelly 0.043 · _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_  
+> ⛔ **STAND-DOWN** — NON ESTIMABLE — la source du rating est inéligible (source périmée (7 séance(s) de retard, drapeau lu sur first_passage_by_horizon)) ; aucun repli sur un autre moteur (R09)  
+> ↳ spot ₩1262000.00 (+0.9% vs entrée) · entrée ₩1250653.00 · stop ₩1163367.28 · T1 ₩1363973.82 · R/R 1.3  
+> ↳ ¼-Kelly 0.044 · _first-passage empirique daily (historique réel, n≈210) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -388 % hors [0,100] (R² max 0.58). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
+>   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -944 % hors [0,100] (R² max 0.58). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
 ## Régime & alignement multi-TF
@@ -25,7 +25,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## ⚠ Contradictions techniques
 
-- 🟠 **Tendance en transition (ADX / Choppiness)** — ADX 14.8 < 20 (tendance pas encore confirmée) alors que Choppiness 26.8 < 38 (marché déjà directionnel) — les deux jauges ne pointent pas au même stade.
+- 🟠 **Tendance en transition (ADX / Choppiness)** — ADX 17.5 < 20 (tendance pas encore confirmée) alors que Choppiness 21.3 < 38 (marché déjà directionnel) — les deux jauges ne pointent pas au même stade.
   - _Le plus probable — DÉBUT de tendance : la Choppiness réagit plus vite que l'ADX (lissé Wilder, qui retarde) ; le prix progresse déjà en ligne mais l'ADX n'a pas franchi 20 → tendance jeune qui accélère, surveiller le passage ADX > 20/25 pour confirmation._
   - _Tendance lente / peu volatile : mouvement net mais de faible amplitude par barre → ADX bas (DI spread modeste) bien que la direction soit claire (Choppiness basse)._
   - _Vraie incohérence (rare) : ADX et Choppiness calculés sur des fenêtres ou des données décalées rendraient la comparaison invalide — ici les deux sont en daily 14 périodes, donc comparables._
@@ -38,53 +38,53 @@ Plan privilegie B (swing), composite 2/10, conviction 'Unknown'.
 
 ## Plans d'achat — Swing / Deep (methode v4)
 
-_Cloture 2026-10-14 : 1419000.0 · ATR Wilder 91222.44 (6.43 %)_
-- **Swing** : plage **1315443.14 → 1248126.19** (-7.3 % a -12.04 % sous la cloture, 0.74 ATR) — touchee 50 % → 30 % du temps en 10 seances ; aucun support reel dans la plage. stop INDICATIF 1200118.64 (-3.85 % sous le bas ; sous le support 1245729.86-1245729.86 (- 0,5 ATR)).
-- **Deep** : plage **1248126.19 → 1096484.63** (-12.04 % a -22.73 % sous la cloture, 1.66 ATR) — touchee 40 % → 15 % du temps en 20 seances ; supports reels dans la plage : 1245729.86-1245729.86 (C). stop INDICATIF 995988.74 (-9.17 % sous le bas ; sous le support 1041599.96-1077586.1 (- 0,5 ATR)).
-- 🟢 **ACHAT PAS CHER actif** (DD20) : 5.66 ATR sous le plus haut 20 s., RSI(2) 0.5. Limite **1373388.78** (seance suivante), stop catastrophe 1008499.03, sortie : vente a l'ouverture qui suit la 1re cloture au-dessus de la MM5, au plus tard 21 seances.
-- Supports reels sous le cours (pour le Warden) : 1245729.86-1245729.86 (C, -12.21 %) ; 1041599.96-1077586.1 (B, -24.06 %) ; 883660.61-989619.88 (B, -30.26 %) ; 772277.75-807689.75 (A, -43.08 %) ; 722389.03-731369.02 (B, -48.46 %) ; 622165.99-644101.33 (C, -54.61 %)
-- Resistances reelles au-dessus : 1556662.48-1558000.0 (B, 9.7 %) ; 1671000.0-1689351.24 (A, 17.76 %) ; 1717627.62-1736000.0 (A, 21.04 %) ; 1791611.52-1791611.57 (C, 26.26 %)
+_Cloture 2026-10-15 : 1262000.0 · ATR Wilder 97635.12 (7.74 %)_
+- **Swing** : plage **1151163.39 → 1078637.75** (-8.78 % a -14.53 % sous la cloture, 0.74 ATR) — touchee 50 % → 30 % du temps en 10 seances ; aucun support reel dans la plage. stop INDICATIF 992782.4 (-7.96 % sous le bas ; sous le support 1041599.96-1077586.1 (- 0,5 ATR)).
+- **Deep** : plage **1078637.75 → 915605.8** (-14.53 % a -27.45 % sous la cloture, 1.67 ATR) — touchee 41 % → 15 % du temps en 20 seances ; supports reels dans la plage : 1041599.96-1077586.1 (B) ; 883660.61-989619.88 (B). stop INDICATIF 723460.25 (-20.99 % sous le bas ; sous le support 772277.81-807689.75 (- 0,5 ATR)).
+- 🟢 **ACHAT PAS CHER actif** (DD20) : 6.89 ATR sous le plus haut 20 s., RSI(2) 0.1. Limite **1213182.44** (seance suivante), stop catastrophe 822641.95, sortie : vente a l'ouverture qui suit la 1re cloture au-dessus de la MM5, au plus tard 21 seances.
+- Supports reels sous le cours (pour le Warden) : 1041599.96-1077586.1 (B, -14.61 %) ; 883660.61-989619.88 (B, -21.58 %) ; 772277.81-807689.75 (A, -36.0 %) ; 722389.03-731368.96 (B, -42.05 %) ; 622165.99-644101.33 (C, -48.96 %) ; 557756.21-623609.31 (A, -50.59 %)
+- Resistances reelles au-dessus : 1556662.48-1558000.0 (B, 23.35 %) ; 1671000.0-1717627.62 (A, 32.41 %) ; 1731624.54-1736000.0 (B, 37.21 %) ; 1791611.52-1791611.57 (B, 41.97 %)
 - _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
-- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=6.57 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (7.32 %)** : le gap seul le franchit 0.903 % des séances (11 fois sur 1218).
-   - exécution **1.326 pt plus bas** dans le cas TYPIQUE (médiane), 3.018 au p90, **3.54 au pire**
-   - perte réelle **8.937 %** en moyenne _(tirée par la queue)_, jusqu'à **10.86 %** — au lieu des 7.32 % annoncés par la distance
-   - coût AMORTI sur toutes les séances : 0.0146 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
-   - ⚠ seulement 11 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
+- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=6.64 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
+- **Au stop du plan (7.82 %)** : le gap seul le franchit 0.82 % des séances (10 fois sur 1219).
+   - exécution **1.078 pt plus bas** dans le cas TYPIQUE (médiane), 2.57 au p90, **3.04 au pire**
+   - perte réelle **9.087 %** en moyenne _(tirée par la queue)_, jusqu'à **10.86 %** — au lieu des 7.82 % annoncés par la distance
+   - coût AMORTI sur toutes les séances : 0.0104 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+   - ⚠ seulement 10 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -3.452 % | p01 -6.997 % | pire -10.86 % _(sur 1218 séances)_
-- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
-   - intraday : **0.5027** [0.4287 ; 0.5766] _(largeur 14.8 pt, n_eff 173.1)_
-   - swing : **0.4068** [0.356 ; 0.4592] _(largeur 10.3 pt, n_eff 345.6)_
-   - deep : **0.3419** [0.2934 ; 0.3931] _(largeur 10.0 pt, n_eff 345.6)_
-- **VaR/CVaR à 1 j (fenêtre adaptative, 250 séances)** : VaR **-9.19 %** | CVaR **-11.46 %** | vol 5.76 %/j
-   - _fenêtre arrêtée : rupture de regime a 240 seances en arriere (volatilite 3.78 % contre 6.63 % aujourd'hui, rapport 0.57)_
+- Chocs d'ouverture : p05 -3.475 % | p01 -7.068 % | pire -10.86 % _(sur 1219 séances)_
+- **P(stop avant cible)** _(source : daily, 1220 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+   - intraday : **0.4793** [0.4057 ; 0.5535] _(largeur 14.8 pt, n_eff 173.1)_
+   - swing : **0.3388** [0.2904 ; 0.3899] _(largeur 9.9 pt, n_eff 345.6)_
+   - deep : **0.2937** [0.2476 ; 0.3433] _(largeur 9.6 pt, n_eff 345.6)_
+- **VaR/CVaR à 1 j (fenêtre adaptative, 250 séances)** : VaR **-9.56 %** | CVaR **-11.58 %** | vol 5.81 %/j
+   - _fenêtre arrêtée : rupture de regime a 240 seances en arriere (volatilite 3.77 % contre 6.71 % aujourd'hui, rapport 0.56)_
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
-- 5 jours **mesuré** : VaR -9.59 % vs -10.81 % si l'on extrapolait par √5 _(rapport 0.888 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.4229** (β de hausse 1.6238, asymétrie 0.8763) vs KS11 — 555 séances de repli, historique complet
+- 5 jours **mesuré** : VaR -9.66 % vs -10.82 % si l'on extrapolait par √5 _(rapport 0.892 ; < 1 = le √5 surestime)_
+- **β de baisse : 1.4223** (β de hausse 1.6238, asymétrie 0.8759) vs KS11 — 556 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.321 | EV/share : ₩25127.408 | p_fill : —
-- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 34 % | T2 18 % | T3 7 %
-- Kelly (position) : f* 0.172 | ¼-Kelly 0.043 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
-- Calibration des probas : _first-passage empirique daily (historique réel, n≈209) · non recalibrée track-record (n=0)_
-- Régime probabiliste (posterior HMM, swing) : bull 8.8 | bear 6.2 | side 85.0  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
+- EV/risk : 0.219 | EV/share : ₩19079.409 | p_fill : —
+- P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 40 % | T2 20 % | T3 7 %
+- Kelly (position) : f* 0.176 | ¼-Kelly 0.044 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
+- Calibration des probas : _first-passage empirique daily (historique réel, n≈210) · non recalibrée track-record (n=0)_
+- Régime probabiliste (posterior HMM, swing) : bull 17.9 | bear 5.0 | side 77.1  _(probas d'ÉTAT de régime, bornées [5,85]% ; ≠ Monte-Carlo de l'EV ci-dessus)_
 - Sizing : notional réel — (= 0 part(s) × prix) · cible 0.0
 
 
 ## Microstructure intraday (5 s réel · 125 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈120.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −0.816% → cible +2.746% / stop −1.647%, p_fill 76%, n_eff≈82.0) : P(cible|rempli) **19%** · **EV/risk -0.257** (×p_fill ; si rempli -0.56% du capital)
-  - **swing** (entrée dip −1.797% → cible +11.247% / stop −5.624%, p_fill 69%, n_eff≈79.3) : P(cible|rempli) **29%** · **EV/risk -0.024** (×p_fill ; si rempli -0.19% du capital)
-  - **deep** (entrée dip −2.77% → cible +12.367% / stop −8.403%, p_fill 68%, n_eff≈74.9) : P(cible|rempli) **40%** · **EV/risk -0.045** (×p_fill ; si rempli -0.56% du capital)
+  - **intraday** (entrée dip −0.405% → cible +3.472% / stop −2.083%, p_fill 81%, n_eff≈88.1) : P(cible|rempli) **19%** · **EV/risk -0.279** (×p_fill ; si rempli -0.72% du capital)
+  - **swing** (entrée dip −0.904% → cible +9.061% / stop −6.979%, p_fill 81%, n_eff≈93.5) : P(cible|rempli) **37%** · **EV/risk -0.081** (×p_fill ; si rempli -0.70% du capital)
+  - **deep** (entrée dip −1.315% → cible +11.082% / stop −10.513%, p_fill 81%, n_eff≈90.0) : P(cible|rempli) **47%** · **EV/risk -0.039** (×p_fill ; si rempli -0.51% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→90% · +1.0%→77% · +2.0%→54% · +3.0%→38% · +5.0%→21% · +8.0%→8%
 - Range intraday médian 5.51% (p90 10.55%) · excursion haute méd. +2.19% / basse méd. −2.54%
 - Profil de vol intra : ouverture 2.923% vs midi 1.197% vs clôture 1.401% _(ouverture ~2.4× plus volatile → privilégier/éviter selon le setup)_
@@ -157,13 +157,13 @@ _Trop peu de séances trend-up (7) pour des stats fiables : 4.4% des séances se
 ## Timing d'entrée (observe-only)
 
 - **Verdict timing** : survente — dip présent, entrée sur faiblesse (favorable au dip-buy)
-- Proximité zone : 0.0/2 | R/R T1 : 0.5 | extension : extreme
+- Proximité zone : 0.75/2 | R/R T1 : 2.0 | extension : extreme
 _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un timing d'entrée défavorable (et inversement)._
 
 
 ## Positioning & factor
 
-**Factor** : R² 0.21 · part idiosyncratique 0.79
+**Factor** : R² 0.23 · part idiosyncratique 0.78
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -178,19 +178,19 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Indicateurs (résumé)
 
-- **RSI** : 16.6  _(survente)_
-- **ADX** : 14.8  _(pas de tendance nette)_
-- **MACD** : hist -44681.097  _(pas de croisement recent)_
-- **BB** : %B -0.13 · largeur 29.0%
-- **ATR** : 77285.71 (57.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.328  _(distribution)_
-- **Vol ratio** : 1.18  _(volume normal)_
-- **Choppiness** : 26.8  _(marche directionnel)_
-- **MA** : MA20 1737850.0 · MA50 1672342.53 · MA200 1448879.09  _(prix < MA20)_
-- **Dist MA** : MA20 -18.3% · MA50 -15.1% · MA200 -2.1%
+- **RSI** : 12.2  _(survente)_
+- **ADX** : 17.5  _(pas de tendance nette)_
+- **MACD** : hist -57833.118  _(pas de croisement recent)_
+- **BB** : %B -0.19 · largeur 38.2%
+- **ATR** : 87285.71 (60.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
+- **OBV/CMF** : OBV falling · CMF -0.375  _(distribution)_
+- **Vol ratio** : 1.77  _(volume au-dessus de la moyenne)_
+- **Choppiness** : 21.3  _(marche directionnel)_
+- **MA** : MA20 1710350.0 · MA50 1671148.27 · MA200 1452544.99  _(prix < MA20)_
+- **Dist MA** : MA20 -26.2% · MA50 -24.5% · MA200 -13.1%
 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (597306 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (551455 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
