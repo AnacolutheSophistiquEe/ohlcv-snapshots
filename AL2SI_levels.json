@@ -2,19 +2,19 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "AL2SI",
-    "generated_at": "2026-10-15T22:05:27Z",
+    "generated_at": "2026-10-16T00:33:17Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-16T08:00:00Z",
-    "valid_until": "2026-10-16T21:00:00Z",
+    "valid_from": "2026-10-19T08:00:00Z",
+    "valid_until": "2026-10-19T21:00:00Z",
     "source_precomputed": "AL2SI_precomputed.json"
   },
   "context": {
-    "last_price": 26.76,
+    "last_price": 26.7,
     "ta_score": {
-      "value": 5,
+      "value": 6,
       "max": 10,
-      "label": "neutral"
+      "label": "bullish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
@@ -24,9 +24,9 @@
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 3,
+      "buy": 2,
       "sell": 4,
-      "neutral": 8,
+      "neutral": 9,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 11.27,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM sideways (0.78), vol normal, signals neutral (3b/4s/8n)."
+    "narrative_short": "TA score 6/10 (bullish), alignment mixed, HMM sideways (0.78), vol normal, signals neutral (2b/4s/9n)."
   },
   "notes": {
     "atr_daily": 1.9657,
     "atr_pct_daily": null,
-    "beta_60d": 1.9945,
+    "beta_60d": 2.0551,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.2976,
+    "beta_corr_60d": 0.3164,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bullish_engulfing",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -54.22,
+      "current_dd_pct": -54.32,
       "ath_price": 58.45,
       "ath_date": "2026-06-02",
       "max_dd_1y_pct": -62.36,
@@ -80,28 +80,28 @@
         "max": 25.6511
       },
       "stop": {
-        "price": 24.138,
+        "price": 24.111,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -5.74
+        "distance_pct": -5.85
       },
       "targets": [
         {
           "level": 1,
           "price": 28.7523,
           "basis": "sous VPVR VAH à 28.95 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 2.14
+          "rr": 2.1
         },
         {
           "level": 2,
           "price": 30.9501,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.63
+          "rr": 3.57
         },
         {
           "level": 3,
           "price": 33.1478,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 5.13
+          "rr": 5.03
         }
       ],
       "preferred_target": 1,
@@ -158,32 +158,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 24.0756,
+        "min": 24.0692,
         "max": 24.4392
       },
       "stop": {
-        "price": 23.1126,
+        "price": 23.1064,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -4.72
+        "distance_pct": -4.73
       },
       "targets": [
         {
           "level": 1,
           "price": 28.7523,
           "basis": "sous VPVR VAH à 28.95 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 3.93
+          "rr": 3.92
         },
         {
           "level": 2,
           "price": 30.9501,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 5.85
+          "rr": 5.83
         },
         {
           "level": 3,
           "price": 33.1478,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 7.77
+          "rr": 7.75
         }
       ],
       "preferred_target": 1,
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 22.8815,
+    "price": 22.8753,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

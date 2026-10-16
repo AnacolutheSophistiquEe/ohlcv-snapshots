@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-10-15T22:05:27Z",
+    "generated_at": "2026-10-16T00:33:17Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-16T08:00:00Z",
-    "valid_until": "2026-10-16T21:00:00Z",
+    "valid_from": "2026-10-19T08:00:00Z",
+    "valid_until": "2026-10-19T21:00:00Z",
     "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
-    "last_price": 151.29,
+    "last_price": 151.27,
     "ta_score": {
       "value": 5,
       "max": 10,
@@ -19,7 +19,7 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.8256,
+      "probability": 0.8257,
       "expected_duration_days": 8.02
     },
     "volatility_regime": "normal",
@@ -42,7 +42,7 @@
   "notes": {
     "atr_daily": 9.1449,
     "atr_pct_daily": null,
-    "beta_60d": 2.7105,
+    "beta_60d": 2.7103,
     "beta_benchmark": "IWM",
     "beta_corr_60d": 0.4321,
     "btc_corr_high": null,
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -68.07,
+      "current_dd_pct": -68.08,
       "ath_price": 473.83,
       "ath_date": "2024-11-20",
       "max_dd_1y_pct": -72.74,
@@ -76,11 +76,11 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 149.3307,
-        "max": 150.2293
+        "min": 149.3107,
+        "max": 150.2093
       },
       "stop": {
-        "price": 137.5727,
+        "price": 137.5527,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -8.15
       },
@@ -101,7 +101,7 @@
           "level": 3,
           "price": 187.3082,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
-          "rr": 3.07
+          "rr": 3.08
         }
       ],
       "preferred_target": 1,
@@ -158,11 +158,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 134.1236,
+        "min": 134.1232,
         "max": 136.46
       },
       "stop": {
-        "price": 128.7587,
+        "price": 128.7583,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -4.83
       },
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 127.4711,
+    "price": 127.4707,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

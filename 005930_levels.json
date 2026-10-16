@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-10-15T22:05:27Z",
+    "generated_at": "2026-10-16T00:33:17Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-16T08:00:00Z",
-    "valid_until": "2026-10-16T21:00:00Z",
+    "valid_from": "2026-10-19T08:00:00Z",
+    "valid_until": "2026-10-19T21:00:00Z",
     "source_precomputed": "005930_precomputed.json"
   },
   "context": {
@@ -79,19 +79,19 @@
       "targets": [
         {
           "level": 1,
-          "price": 223668.5491,
+          "price": 223668.5411,
           "basis": "sous résistance (medium) à 2.249e+05 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
           "rr": 0.9
         },
         {
           "level": 2,
-          "price": 237404.3952,
+          "price": 237404.3872,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 1.72
         },
         {
           "level": 3,
-          "price": 251140.2414,
+          "price": 251140.2334,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 2.53
         }
@@ -107,8 +107,8 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 231504.3203,
-        "max": 232429.4125
+        "min": 231504.3202,
+        "max": 232429.4124
       },
       "stop": {
         "price": 220897.9813,
@@ -146,30 +146,30 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 165184.9563,
-        "max": 168538.9655
+        "min": 165184.9582,
+        "max": 168538.9675
       },
       "stop": {
-        "price": 149271.8918,
+        "price": 149271.8938,
         "basis": "fallback_sr_support",
         "distance_pct": -10.54
       },
       "targets": [
         {
           "level": 1,
-          "price": 223668.5491,
+          "price": 223668.5411,
           "basis": "sous résistance (medium) à 2.249e+05 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
           "rr": 3.23
         },
         {
           "level": 2,
-          "price": 237404.3952,
+          "price": 237404.3872,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 4.01
         },
         {
           "level": 3,
-          "price": 251140.2414,
+          "price": 251140.2334,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 4.79
         }
@@ -184,7 +184,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 147779.1729,
+    "price": 147779.1749,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
