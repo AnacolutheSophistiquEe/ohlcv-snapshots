@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-10-15T22:02:50.206909+00:00  
+**Generated** : 2026-10-16T00:25:16.783374+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 10/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -277,7 +277,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.62 · part idiosyncratique 0.38
+**Factor** : R² 0.64 · part idiosyncratique 0.36
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
 **Options** : favorable
 
@@ -297,8 +297,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.521  _(pas de croisement recent)_
 - **BB** : %B 0.71 · largeur 18.2%
 - **ATR** : 6.45 (24.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV rising · CMF 0.187  _(accumulation)_
-- **Vol ratio** : 1.05  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.182  _(accumulation)_
+- **Vol ratio** : 0.92  _(volume normal)_
 - **Choppiness** : 44.2  _(transition)_
 - **MA** : MA20 193.13 · MA50 181.97 · MA200 152.62  _(prix > MA20)_
 - **Dist MA** : MA20 +3.8% · MA50 +10.2% · MA200 +31.4%
@@ -306,5 +306,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (841479 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (841488 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
