@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-10-16T22:04:38.108596+00:00  
+**Generated** : 2026-10-19T00:23:40.208660+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 7/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -299,7 +299,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.27 · largeur 16.9%
 - **ATR** : 7.48 (66.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
 - **OBV/CMF** : OBV falling · CMF 0.048  _(neutre)_
-- **Vol ratio** : 1.43  _(volume normal)_
+- **Vol ratio** : 1.44  _(volume normal)_
 - **Choppiness** : 49.4  _(transition)_
 - **MA** : MA20 193.55 · MA50 182.57 · MA200 152.65  _(prix < MA20)_
 - **Dist MA** : MA20 -3.9% · MA50 +1.9% · MA200 +21.9%
@@ -307,5 +307,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (784285 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (784265 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

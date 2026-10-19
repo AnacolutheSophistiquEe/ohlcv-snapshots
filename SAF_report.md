@@ -1,6 +1,6 @@
 # SAF
 
-**Generated** : 2026-10-16T21:45:11.275187+00:00  
+**Generated** : 2026-10-19T00:09:15.150562+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -76,15 +76,15 @@ _Cloture 2026-10-16 : 317.0 · ATR Wilder 7.58 (2.39 %)_
 - Candidats (la structure propose, la statistique elimine) :
    - ⚪ atr_based a 1.5 ATR (stop 3.775 %) — p(stop avant cible) 0.4113 [0.36 ; 0.46], R/R 3.605, perte reelle 3.873 % (gap inclus), EV 0.7492 % — **REFUSE**
       - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.60 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-   - ⚪ swing_based a 1.47 ATR (stop 5.404 %) — p(stop avant cible) 0.2724 [0.23 ; 0.32], R/R 2.549, perte reelle 5.478 % (gap inclus), EV 0.8206 % — **REFUSE**
-      - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.55 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 2.55 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ sr_based a 2.7 ATR (stop 8.516 %) — p(stop avant cible) 0.112 [0.08 ; 0.15], R/R 1.602, perte reelle 8.715 % (gap inclus), EV 0.6673 % — **REFUSE**
-      - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 1.60 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 1.60 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - 🟢 support a 7.18 ATR (stop 19.795 %) — p(stop avant cible) 0.0043 [0.00 ; 0.02], R/R 0.674, perte reelle 20.702 % (gap inclus), EV 0.6113 % — **REFUSE**
-      - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 0.67 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 0.67 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - ⚪ swing_based a 1.47 ATR (stop 5.298 %) — p(stop avant cible) 0.276 [0.23 ; 0.32], R/R 2.614, perte reelle 5.341 % (gap inclus), EV 0.8363 % — **REFUSE**
+      - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.61 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 2.61 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - ⚪ sr_based a 2.7 ATR (stop 8.41 %) — p(stop avant cible) 0.1134 [0.08 ; 0.15], R/R 1.627, perte reelle 8.58 % (gap inclus), EV 0.675 % — **REFUSE**
+      - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 1.63 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 1.63 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - 🟢 support a 7.18 ATR (stop 19.69 %) — p(stop avant cible) 0.0043 [0.00 ; 0.02], R/R 0.675, perte reelle 20.672 % (gap inclus), EV 0.6114 % — **REFUSE**
+      - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 0.68 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 0.68 < plancher 3.00 (mesure vs SPOT, gap inclus)
    - ⚪ atr_grid a 0.25 ATR (stop 0.629 %) — p(stop avant cible) 0.8871 [0.85 ; 0.92], R/R 21.24, perte reelle 0.657 % (gap inclus), EV 0.1884 % — **REFUSE**
       - refuse : cible atteinte seulement 2.6 % du temps (< 15 %) meme a 10 seances : le R/R de 21.24 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.887, borne haute 0.917 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
@@ -99,12 +99,15 @@ _Cloture 2026-10-16 : 317.0 · ATR Wilder 7.58 (2.39 %)_
       - refuse : p_stop_first 0.587, borne haute 0.637 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
    - ⚪ grid_snapped a 1.47 ATR (stop 4.445 %) — p(stop avant cible) 0.3544 [0.31 ; 0.41], R/R 3.083, perte reelle 4.529 % (gap inclus), EV 0.7031 % — **REFUSE**
       - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.08 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-   - ⚪ atr_grid a 2.0 ATR (stop 5.034 %) — p(stop avant cible) 0.2992 [0.25 ; 0.35], R/R 2.74, perte reelle 5.094 % (gap inclus), EV 0.8386 % — **REFUSE**
-      - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.74 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 2.74 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - ⚪ atr_grid a 2.25 ATR (stop 5.663 %) — p(stop avant cible) 0.262 [0.22 ; 0.31], R/R 2.432, perte reelle 5.741 % (gap inclus), EV 0.8098 % — **REFUSE**
+      - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.43 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 2.43 < plancher 3.00 (mesure vs SPOT, gap inclus)
    - ⚪ grid_snapped a 2.7 ATR (stop 7.557 %) — p(stop avant cible) 0.1561 [0.12 ; 0.20], R/R 1.818, perte reelle 7.677 % (gap inclus), EV 0.7071 % — **REFUSE**
       - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 1.82 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.82 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - ⚪ atr_grid a 3.5 ATR (stop 8.809 %) — p(stop avant cible) 0.1039 [0.07 ; 0.14], R/R 1.541, perte reelle 9.062 % (gap inclus), EV 0.6578 % — **REFUSE**
+      - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 1.54 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 1.54 < plancher 3.00 (mesure vs SPOT, gap inclus)
    - ⚪ atr_grid a 4.0 ATR (stop 10.068 %) — p(stop avant cible) 0.0693 [0.05 ; 0.10], R/R 1.358, perte reelle 10.283 % (gap inclus), EV 0.6243 % — **REFUSE**
       - refuse : cible atteinte seulement 4.1 % du temps (< 15 %) meme a 10 seances : le R/R de 1.36 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.36 < plancher 3.00 (mesure vs SPOT, gap inclus)
@@ -310,5 +313,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (804281 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (779606 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

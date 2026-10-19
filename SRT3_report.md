@@ -1,6 +1,6 @@
 # SRT3
 
-**Generated** : 2026-10-16T21:40:55.819419+00:00  
+**Generated** : 2026-10-19T00:06:07.181886+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 9/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -34,10 +34,10 @@ Plan privilegie B (swing), composite 9/10, conviction 'Pass'.
 ## Plans d'achat — Swing / Deep (methode v4)
 
 _Cloture 2026-10-16 : 261.0 · ATR Wilder 8.54 (3.27 %)_
-- **Swing** : plage **249.51 → 242.67** (-4.4 % a -7.02 % sous la cloture, 0.8 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 247.02-251.19 (B) ; 241.86-245.73 (A). stop INDICATIF 232.41 (-4.23 % sous le bas ; sous le support 236.68-240.8 (- 0,5 ATR)).
-- **Deep** : plage **242.67 → 225.07** (-7.02 % a -13.77 % sous la cloture, 2.06 ATR) — touchee 46 % → 15 % du temps en 20 seances ; supports reels dans la plage : 241.86-245.73 (A) ; 236.68-240.8 (B) ; 232.0-235.99 (B) ; 227.55-231.42 (A) ; 222.39-226.52 (A). stop INDICATIF 212.98 (-5.37 % sous le bas ; sous le support 217.25-221.24 (- 0,5 ATR)).
+- **Swing** : plage **249.51 → 242.67** (-4.4 % a -7.02 % sous la cloture, 0.8 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 247.02-251.19 (B) ; 241.86-245.25 (A). stop INDICATIF 232.41 (-4.23 % sous le bas ; sous le support 236.68-240.8 (- 0,5 ATR)).
+- **Deep** : plage **242.67 → 225.07** (-7.02 % a -13.77 % sous la cloture, 2.06 ATR) — touchee 46 % → 15 % du temps en 20 seances ; supports reels dans la plage : 241.86-245.25 (A) ; 236.68-240.8 (B) ; 232.0-235.99 (B) ; 227.55-231.42 (A) ; 222.39-226.52 (A). stop INDICATIF 212.98 (-5.37 % sous le bas ; sous le support 217.25-221.24 (- 0,5 ATR)).
 - ACHAT PAS CHER : inactif (1.28 ATR sous le plus haut 20 s., RSI(2) 75.7 ; seuils 4,7 ATR, ou RSI(2) < 10 et 3 ATR).
-- Supports reels sous le cours (pour le Warden) : 251.3-255.5 (B, -2.11 %) ; 247.02-251.19 (B, -3.76 %) ; 241.86-245.73 (A, -5.85 %) ; 236.68-240.8 (B, -7.74 %) ; 232.0-235.99 (B, -9.58 %) ; 227.55-231.42 (A, -11.33 %)
+- Supports reels sous le cours (pour le Warden) : 251.3-255.5 (B, -2.11 %) ; 247.02-251.19 (B, -3.76 %) ; 241.86-245.25 (A, -6.03 %) ; 236.68-240.8 (B, -7.74 %) ; 232.0-235.99 (B, -9.58 %) ; 227.55-231.42 (A, -11.33 %)
 - Resistances reelles au-dessus : 266.78-270.86 (A, 2.21 %) ; 271.9-275.96 (A, 4.18 %) ; 288.55-290.03 (A, 10.56 %) ; 294.6-297.38 (A, 12.87 %)
 - _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
@@ -75,12 +75,12 @@ _Cloture 2026-10-16 : 261.0 · ATR Wilder 8.54 (3.27 %)_
 - Candidats (la structure propose, la statistique elimine) :
    - ⚪ atr_based a 1.5 ATR (stop 5.127 %) — p(stop avant cible) 0.4497 [0.40 ; 0.50], R/R 1.477, perte reelle 5.219 % (gap inclus), EV 0.5999 % — **REFUSE**
       - refuse : R/R 1.48 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ swing_based a 2.09 ATR (stop 9.487 %) — p(stop avant cible) 0.1764 [0.14 ; 0.22], R/R 0.803, perte reelle 9.595 % (gap inclus), EV 0.8553 % — **REFUSE**
-      - refuse : R/R 0.80 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ sr_based a 3.13 ATR (stop 13.027 %) — p(stop avant cible) 0.0793 [0.05 ; 0.11], R/R 0.586, perte reelle 13.156 % (gap inclus), EV 0.8784 % — **REFUSE**
+   - ⚪ swing_based a 2.09 ATR (stop 9.343 %) — p(stop avant cible) 0.1816 [0.14 ; 0.22], R/R 0.815, perte reelle 9.462 % (gap inclus), EV 0.8201 % — **REFUSE**
+      - refuse : R/R 0.81 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - ⚪ sr_based a 3.13 ATR (stop 12.883 %) — p(stop avant cible) 0.0794 [0.05 ; 0.11], R/R 0.595, perte reelle 12.96 % (gap inclus), EV 0.8926 % — **REFUSE**
       - refuse : R/R 0.59 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 13.23 % > budget 12.00 %
-   - 🟢 support a 7.08 ATR (stop 26.535 %) — p(stop avant cible) 0.0015 [0.00 ; 0.01], R/R 0.287, perte reelle 26.872 % (gap inclus), EV 1.0977 % — **REFUSE**
+      - refuse : CVaR 95 % 13.00 % > budget 12.00 %
+   - 🟢 support a 7.08 ATR (stop 26.392 %) — p(stop avant cible) 0.0015 [0.00 ; 0.01], R/R 0.287, perte reelle 26.852 % (gap inclus), EV 1.0977 % — **REFUSE**
       - refuse : R/R 0.29 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 12.90 % > budget 12.00 %
    - ⚪ atr_grid a 0.25 ATR (stop 0.855 %) — p(stop avant cible) 0.8847 [0.85 ; 0.92], R/R 8.732, perte reelle 0.883 % (gap inclus), EV 0.0594 % — **REFUSE**
@@ -304,5 +304,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (808827 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (781912 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

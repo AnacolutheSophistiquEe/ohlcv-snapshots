@@ -1,6 +1,6 @@
 # MSTR
 
-**Generated** : 2026-10-16T22:01:34.662802+00:00  
+**Generated** : 2026-10-19T00:21:20.630510+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 4/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -56,7 +56,7 @@ _Cloture 2026-10-16 : 136.83 · ATR Wilder 9.73 (7.11 %)_
    - _fenêtre arrêtée : rupture de regime a 660 seances en arriere (volatilite 8.77 % contre 5.27 % aujourd'hui, rapport 1.66)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -16.99 % vs -17.76 % si l'on extrapolait par √5 _(rapport 0.957 ; < 1 = le √5 surestime)_
-- **β de baisse : 2.3578** (β de hausse 1.8276, asymétrie 1.2901) vs IWM — 606 séances de repli, historique complet
+- **β de baisse : 2.3578** (β de hausse 1.8277, asymétrie 1.2901) vs IWM — 606 séances de repli, historique complet
 
 
 ## Echelle Warden — OU poser le stop
@@ -306,7 +306,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Factor** : R² 0.85 · part idiosyncratique 0.15
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
-**Options** : neutral_cautious
+**Options** : bearish
 
 
 ## Event risk & invalidation
@@ -325,7 +325,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B -0.13 · largeur 20.0%
 - **ATR** : 9.9 (50.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV falling · CMF -0.202  _(distribution)_
-- **Vol ratio** : 1.52  _(volume au-dessus de la moyenne)_
+- **Vol ratio** : 1.53  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 51.0  _(transition)_
 - **MA** : MA20 156.4 · MA50 134.92 · MA200 135.6  _(prix < MA20)_
 - **Dist MA** : MA20 -12.5% · MA50 +1.4% · MA200 +0.9%
@@ -333,5 +333,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (793809 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (793784 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

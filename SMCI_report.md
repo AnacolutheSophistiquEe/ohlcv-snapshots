@@ -1,6 +1,6 @@
 # SMCI
 
-**Generated** : 2026-10-16T22:03:07.003581+00:00  
+**Generated** : 2026-10-19T00:22:34.133856+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 3/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -319,7 +319,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B -0.21 · largeur 31.7%
 - **ATR** : 2.53 (78.0e pct 1a)  _(volatilite elevee)_
 - **OBV/CMF** : OBV falling · CMF 0.006  _(neutre)_
-- **Vol ratio** : 1.28  _(volume normal)_
+- **Vol ratio** : 1.29  _(volume normal)_
 - **Choppiness** : 34.2  _(marche directionnel)_
 - **MA** : MA20 40.81 · MA50 38.67 · MA200 32.47  _(prix < MA20)_
 - **Dist MA** : MA20 -22.5% · MA50 -18.2% · MA200 -2.6%
@@ -327,5 +327,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (780158 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (780138 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

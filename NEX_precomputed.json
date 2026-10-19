@@ -6,7 +6,7 @@
     "exchange": "Euronext Paris",
     "currency": "EUR",
     "isin": "FR0000044448",
-    "generated_at": "2026-10-16T21:46:43.720439+00:00",
+    "generated_at": "2026-10-19T00:10:19.178780+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -1784,7 +1784,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.287,
+          "p_touch": 0.2869,
           "p_touch_ref": "entry_mid",
           "distance_pct": 1.74
         },
@@ -1861,7 +1861,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.117,
+          "p_touch": 0.1169,
           "p_touch_ref": "entry_mid",
           "distance_pct": 8.07
         },
@@ -1874,7 +1874,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.117,
+          "p_touch": 0.1169,
           "p_touch_ref": "entry_mid",
           "distance_pct": 12.1
         }
@@ -1912,7 +1912,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.5365,
+          "p_touch": 0.5364,
           "p_touch_ref": "entry_mid",
           "distance_pct": 5.92
         },
@@ -1925,7 +1925,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.2498,
+          "p_touch": 0.2497,
           "p_touch_ref": "entry_mid",
           "distance_pct": 11.84
         },
@@ -2538,7 +2538,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-10-16T21:46:09.525927+00:00",
+    "generated_at": "2026-10-19T00:09:53.883935+00:00",
     "n_sessions": 125,
     "sessions_distinct": 125,
     "regime_window": "recent",
@@ -8391,7 +8391,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-10-16T21:45:49.460641+00:00",
+    "generated_at": "2026-10-19T00:09:41.250677+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8659,7 +8659,7 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-10-16T21:46:20.038151+00:00",
+    "generated_at": "2026-10-19T00:10:02.206536+00:00",
     "ticker": "NEX",
     "horizons_days": {
       "intraday": 2,
@@ -8669,25 +8669,9 @@
     "n_events": 26,
     "events": [
       {
-        "date": "2026-10-16",
+        "date": "2026-10-20",
         "type": "macro",
-        "label": "US Industrial Production & Capacity Utilization",
-        "importance": "low",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-10-17",
-        "type": "macro",
-        "label": "Viatris (VTRS) Ryzumvi FDA PDUFA",
+        "label": "US Housing Starts",
         "importance": "low",
         "sessions_to_event": 1,
         "calendar_days": 1,
@@ -8703,11 +8687,12 @@
       {
         "date": "2026-10-20",
         "type": "macro",
-        "label": "US Housing Starts",
+        "label": "US Building Permits",
         "importance": "low",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8720,9 +8705,10 @@
         "type": "macro",
         "label": "Sartorius (SRT3/SRT) Q3 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8735,8 +8721,8 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8750,8 +8736,8 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8765,8 +8751,8 @@
         "type": "macro",
         "label": "US University of Michigan Consumer Sentiment (prelim + final)",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8780,8 +8766,8 @@
         "type": "macro",
         "label": "Safran (SAF) Q3 2026 Revenue",
         "importance": "low",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8795,9 +8781,10 @@
         "type": "macro",
         "label": "Ionis Pharmaceuticals (IONS) PDUFA FDA — diroximel fumarate — 26/10/2026",
         "importance": "medium",
-        "sessions_to_event": 7,
-        "calendar_days": 10,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -8809,8 +8796,8 @@
         "type": "macro",
         "label": "US Durable Goods Orders",
         "importance": "low",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8823,8 +8810,8 @@
         "type": "macro",
         "label": "US New Home Sales",
         "importance": "low",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8837,8 +8824,8 @@
         "type": "macro",
         "label": "Robinhood (HOOD) Q3 2026 Earnings",
         "importance": "low",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8851,8 +8838,8 @@
         "type": "macro",
         "label": "SoFi Technologies (SOFI) Q3 2026 Earnings",
         "importance": "low",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8865,8 +8852,8 @@
         "type": "macro",
         "label": "Israel Election",
         "importance": "low",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8879,8 +8866,8 @@
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8893,8 +8880,8 @@
         "type": "macro",
         "label": "GE Vernova (GEV) Q3 2026 Earnings",
         "importance": "medium",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8907,8 +8894,8 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 9,
-        "calendar_days": 13,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8921,8 +8908,8 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 9,
-        "calendar_days": 13,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8935,8 +8922,8 @@
         "type": "macro",
         "label": "US PCE Price Index (headline) — Personal Income & Outlays",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 13,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8949,8 +8936,8 @@
         "type": "macro",
         "label": "US Core PCE Price Index (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 13,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8963,8 +8950,8 @@
         "type": "macro",
         "label": "US Personal Income & Spending",
         "importance": "medium",
-        "sessions_to_event": 9,
-        "calendar_days": 13,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8977,8 +8964,8 @@
         "type": "macro",
         "label": "US GDP (advance / second / third estimate)",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 13,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8991,8 +8978,8 @@
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 13,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9005,8 +8992,8 @@
         "type": "macro",
         "label": "2CRSI — Résultats annuels FY2026 — 29/10/2026",
         "importance": "medium",
-        "sessions_to_event": 9,
-        "calendar_days": 13,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9019,8 +9006,8 @@
         "type": "macro",
         "label": "Prysmian (PRY) Q3 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 13,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9033,8 +9020,22 @@
         "type": "macro",
         "label": "Inovio (INO) PDUFA FDA — INO-3107 RRP — 30/10/2026",
         "importance": "medium",
-        "sessions_to_event": 10,
-        "calendar_days": 14,
+        "sessions_to_event": 8,
+        "calendar_days": 11,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-10-31",
+        "type": "macro",
+        "label": "Surrozen (SRZN) — IND clearance Wnt pathway liver fibrosis — 31/10/2026",
+        "importance": "low",
+        "sessions_to_event": 9,
+        "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9433,7 +9434,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-10-16T21:46:18.584599+00:00",
+    "generated_at": "2026-10-19T00:10:00.838325+00:00",
     "ticker": "NEX",
     "window_sessions": 60,
     "n_observations_aligned": 59,
@@ -9657,7 +9658,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-10-16T21:46:15.723230+00:00",
+    "generated_at": "2026-10-19T00:09:58.401269+00:00",
     "ticker": "NEX",
     "yahoo": "NEX.PA",
     "source": "yfinance.Ticker.info",
@@ -9685,9 +9686,9 @@
       "shares_outstanding": 43579474.0,
       "float_shares": 37904927.0,
       "free_float_pct": 87.0,
-      "avg_volume_3m": 157136.0,
-      "adv_str": "157.1 k titres",
-      "avg_volume_10d": 129399.0,
+      "avg_volume_3m": 155724.0,
+      "adv_str": "155.7 k titres",
+      "avg_volume_10d": 131373.0,
       "archetype_suggested": null,
       "archetype_basis": "aucune regle ne tranche — a l'appreciation du /full_brief",
       "business_summary_raw": "Nexans S.A. manufactures and sells cables in France, Canada, Norway, Italy, and internationally. It operates through PWR-Grid & Connect, PWR-Transmission, and Other segments. The company provides cables for the energy distribution networks, as well as equipment cables for buildings. It also offers design, engineering, financing, asset management, and systems management solutions for offshore wind farms, subsea interconnections, onshore high voltage, and subsea data transmissions; and smart solutions for the oil and gas sector. In addition, the company offers wire rods and electrical wires; and engages in winding wire production operations. The company was formerly known as Atalec and changed its name to Nexans S.A. in October 2000. The company was incorporated in 1994 and is headquartered in Courbevoie, France."
@@ -9719,7 +9720,7 @@
       "eps_str": "-0.9 EUR",
       "eps_forward": 9.31,
       "eps_growth_pct": -72.3,
-      "dividend_yield_pct": 2.24,
+      "dividend_yield_pct": 2.29,
       "dividend_yield_note": null,
       "dividend_rate": 2.9,
       "payout_ratio_pct": 67.76,
@@ -9764,14 +9765,14 @@
     },
     "ownership": {
       "insiders_pct": 8.09,
-      "institutions_pct": 66.91,
+      "institutions_pct": 66.9,
       "short_pct_float": null,
       "short_ratio_days": null
     },
     "market": {
       "beta": 0.945,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": 5.39,
+      "change_52w_pct": 4.71,
       "low_52w": 109.7,
       "high_52w": 169.0
     },
@@ -10027,7 +10028,7 @@
       },
       {
         "field": "identity.adv_str",
-        "value": "157.1 k titres",
+        "value": "155.7 k titres",
         "from": "fundamentals.identity.adv_str"
       },
       {
@@ -10102,7 +10103,7 @@
       },
       {
         "field": "financials.dividend_yield_pct",
-        "value": 2.24,
+        "value": 2.29,
         "from": "fundamentals.financials.dividend_yield_pct"
       },
       {
@@ -10182,7 +10183,7 @@
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 66.91,
+        "value": 66.9,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -10246,7 +10247,7 @@
       "scope": "univers suivi par le pipeline",
       "not_market_median": "mediane des titres SUIVIS par ce pipeline dans le meme secteur Yahoo — PAS une mediane de marche, de secteur GICS complet ni d'indice",
       "sector": "Industrials",
-      "aggregate_generated_at": "2026-10-16T21:38:27.058809+00:00",
+      "aggregate_generated_at": "2026-10-19T00:04:09.095042+00:00",
       "aggregate_file": "sector_multiples.json",
       "aggregate_age_days": 0.0,
       "n_titles": 56,
@@ -10254,90 +10255,90 @@
       "metrics": {
         "pe_trailing": {
           "n": 32,
-          "q1": 27.24,
-          "median": 33.0,
-          "q3": 45.35,
-          "min": 14.57,
-          "max": 310.92,
+          "q1": 26.45,
+          "median": 32.84,
+          "q3": 44.54,
+          "min": 15.3,
+          "max": 291.2,
           "self": null,
           "self_vs_median_pct": null,
           "thin": false
         },
         "pe_fwd": {
           "n": 45,
-          "q1": 14.84,
-          "median": 20.84,
-          "q3": 24.71,
-          "min": 9.45,
-          "max": 850.13,
+          "q1": 15.37,
+          "median": 20.57,
+          "q3": 24.64,
+          "min": 9.48,
+          "max": 782.27,
           "self": 13.61,
-          "self_vs_median_pct": -34.7,
+          "self_vs_median_pct": -33.8,
           "thin": false
         },
         "ev_ebitda_ttm": {
           "n": 44,
-          "q1": 14.89,
-          "median": 20.63,
-          "q3": 27.66,
-          "min": 7.06,
-          "max": 654.21,
+          "q1": 14.9,
+          "median": 20.56,
+          "q3": 27.06,
+          "min": 7.58,
+          "max": 642.63,
           "self": 8.86,
-          "self_vs_median_pct": -57.1,
+          "self_vs_median_pct": -56.9,
           "thin": false
         },
         "ev_revenue_ttm": {
           "n": 56,
-          "q1": 2.45,
-          "median": 4.04,
-          "q3": 6.38,
+          "q1": 2.43,
+          "median": 3.99,
+          "q3": 6.45,
           "min": 0.69,
-          "max": 705.27,
+          "max": 527.14,
           "self": 0.77,
-          "self_vs_median_pct": -80.9,
+          "self_vs_median_pct": -80.7,
           "thin": false
         },
         "ps_ttm": {
           "n": 56,
           "q1": 2.48,
-          "median": 3.79,
-          "q3": 5.76,
-          "min": 0.55,
-          "max": 3409.41,
+          "median": 3.76,
+          "q3": 5.73,
+          "min": 0.54,
+          "max": 3231.29,
           "self": 0.64,
-          "self_vs_median_pct": -83.1,
+          "self_vs_median_pct": -83.0,
           "thin": false
         },
         "price_to_book": {
           "n": 44,
-          "q1": 3.74,
-          "median": 6.71,
-          "q3": 10.15,
-          "min": 1.18,
-          "max": 43.0,
+          "q1": 3.8,
+          "median": 6.62,
+          "q3": 10.09,
+          "min": 1.12,
+          "max": 40.27,
           "self": 2.6,
-          "self_vs_median_pct": -61.3,
+          "self_vs_median_pct": -60.7,
           "thin": false
         },
         "fcf_yield_pct": {
           "n": 56,
-          "q1": -2.83,
-          "median": 1.35,
-          "q3": 3.31,
-          "min": -41.21,
+          "q1": -2.67,
+          "median": 1.31,
+          "q3": 3.3,
+          "min": -48.91,
           "max": 13.84,
           "self": -0.06,
-          "self_vs_median_pts": -1.41,
+          "self_vs_median_pts": -1.37,
           "thin": false
         },
         "dividend_yield_pct": {
           "n": 56,
           "q1": 0.0,
-          "median": 0.31,
-          "q3": 0.94,
+          "median": 0.35,
+          "q3": 0.96,
           "min": 0.0,
-          "max": 6.92,
-          "self": 2.24,
-          "self_vs_median_pts": 1.93,
+          "max": 6.73,
+          "self": 2.29,
+          "self_vs_median_pts": 1.94,
           "thin": false
         }
       },
@@ -10522,7 +10523,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-10-16T21:45:47.589706+00:00",
+    "generated_at": "2026-10-19T00:09:39.638357+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/NEX_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1280,
@@ -10875,10 +10876,10 @@
       "gap_best": 15.284
     },
     "asymmetry": {
-      "n_down": 588,
-      "n_up": 685,
-      "mean_down_pct": -0.75,
-      "mean_up_pct": 0.718,
+      "n_down": 585,
+      "n_up": 688,
+      "mean_down_pct": -0.753,
+      "mean_up_pct": 0.715,
       "worst_down_pct": -9.596,
       "best_up_pct": 15.284,
       "downside_heavier": false
@@ -10896,7 +10897,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-10-16T21:45:49.194699+00:00",
+    "generated_at": "2026-10-19T00:09:41.039589+00:00",
     "ticker": "NEX",
     "source_csv": "NEX_daily_long.csv",
     "n_sessions": 1281,
@@ -11485,7 +11486,7 @@
       {
         "n_windows": 1261,
         "n_eff": 345.8,
-        "n_ambiguous": 6,
+        "n_ambiguous": 5,
         "ambiguous_pct": 0.343,
         "p_stop_first_lo": 0.2317,
         "p_stop_first_hi": 0.2352,
@@ -11662,13 +11663,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 55,
         "ambiguous_pct": 3.52,
-        "p_stop_first_lo": 0.5302,
-        "p_stop_first_hi": 0.5654,
-        "p_target_first_lo": 0.4346,
-        "p_target_first_hi": 0.4698,
+        "p_stop_first_lo": 0.5299,
+        "p_stop_first_hi": 0.5651,
+        "p_target_first_lo": 0.4349,
+        "p_target_first_hi": 0.4701,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.5478,
-        "p_target_first": 0.4522,
+        "p_stop_first": 0.5475,
+        "p_target_first": 0.4525,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -11676,8 +11677,8 @@
         "stop_pct": 1.5,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.4951,
-          0.5997
+          0.4948,
+          0.5994
         ],
         "ci_width_pt": 10.5,
         "bound_spread_pt": 3.52
@@ -11687,13 +11688,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 39,
         "ambiguous_pct": 2.458,
-        "p_stop_first_lo": 0.467,
-        "p_stop_first_hi": 0.4915,
-        "p_target_first_lo": 0.5085,
-        "p_target_first_hi": 0.533,
+        "p_stop_first_lo": 0.4666,
+        "p_stop_first_hi": 0.4912,
+        "p_target_first_lo": 0.5088,
+        "p_target_first_hi": 0.5334,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.4792,
-        "p_target_first": 0.5208,
+        "p_stop_first": 0.4789,
+        "p_target_first": 0.5211,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -11701,24 +11702,24 @@
         "stop_pct": 2.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.4269,
-          0.5318
+          0.4266,
+          0.5315
         ],
         "ci_width_pt": 10.5,
-        "bound_spread_pt": 2.45
+        "bound_spread_pt": 2.46
       },
       {
         "n_windows": 1261,
         "n_eff": 345.8,
         "n_ambiguous": 28,
         "ambiguous_pct": 0.911,
-        "p_stop_first_lo": 0.4252,
-        "p_stop_first_hi": 0.4343,
-        "p_target_first_lo": 0.5657,
-        "p_target_first_hi": 0.5748,
+        "p_stop_first_lo": 0.4248,
+        "p_stop_first_hi": 0.4339,
+        "p_target_first_lo": 0.5661,
+        "p_target_first_hi": 0.5752,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.4297,
-        "p_target_first": 0.5703,
+        "p_stop_first": 0.4294,
+        "p_target_first": 0.5706,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -11726,8 +11727,8 @@
         "stop_pct": 2.5,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.3783,
-          0.4823
+          0.378,
+          0.482
         ],
         "ci_width_pt": 10.4,
         "bound_spread_pt": 0.91
@@ -11737,13 +11738,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 22,
         "ambiguous_pct": 0.303,
-        "p_stop_first_lo": 0.3882,
-        "p_stop_first_hi": 0.3912,
-        "p_target_first_lo": 0.6088,
-        "p_target_first_hi": 0.6118,
+        "p_stop_first_lo": 0.3878,
+        "p_stop_first_hi": 0.3909,
+        "p_target_first_lo": 0.6091,
+        "p_target_first_hi": 0.6122,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.3897,
-        "p_target_first": 0.6103,
+        "p_stop_first": 0.3893,
+        "p_target_first": 0.6107,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -11751,24 +11752,24 @@
         "stop_pct": 3.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.3394,
-          0.4418
+          0.339,
+          0.4414
         ],
         "ci_width_pt": 10.2,
-        "bound_spread_pt": 0.3
+        "bound_spread_pt": 0.31
       },
       {
         "n_windows": 1261,
         "n_eff": 345.8,
         "n_ambiguous": 8,
         "ambiguous_pct": 0.074,
-        "p_stop_first_lo": 0.3268,
-        "p_stop_first_hi": 0.3275,
-        "p_target_first_lo": 0.6725,
-        "p_target_first_hi": 0.6732,
+        "p_stop_first_lo": 0.3264,
+        "p_stop_first_hi": 0.3272,
+        "p_target_first_lo": 0.6728,
+        "p_target_first_hi": 0.6736,
         "p_no_touch": 0.0,
-        "p_stop_first": 0.3272,
-        "p_target_first": 0.6728,
+        "p_stop_first": 0.3268,
+        "p_target_first": 0.6732,
         "pnl_no_touch_pct": null,
         "pnl_no_touch_median_pct": null,
         "horizon": "extended",
@@ -11776,24 +11777,24 @@
         "stop_pct": 4.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.2793,
-          0.3779
+          0.279,
+          0.3775
         ],
         "ci_width_pt": 9.9,
-        "bound_spread_pt": 0.07
+        "bound_spread_pt": 0.08
       },
       {
         "n_windows": 1261,
         "n_eff": 345.8,
-        "n_ambiguous": 3,
+        "n_ambiguous": 2,
         "ambiguous_pct": 0.062,
-        "p_stop_first_lo": 0.2748,
-        "p_stop_first_hi": 0.2754,
-        "p_target_first_lo": 0.7243,
-        "p_target_first_hi": 0.725,
+        "p_stop_first_lo": 0.2744,
+        "p_stop_first_hi": 0.275,
+        "p_target_first_lo": 0.7247,
+        "p_target_first_hi": 0.7253,
         "p_no_touch": 0.0003,
-        "p_stop_first": 0.2751,
-        "p_target_first": 0.7246,
+        "p_stop_first": 0.2747,
+        "p_target_first": 0.725,
         "pnl_no_touch_pct": -1.6116,
         "pnl_no_touch_median_pct": -1.6141,
         "horizon": "extended",
@@ -11801,8 +11802,8 @@
         "stop_pct": 5.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.23,
-          0.3239
+          0.2297,
+          0.3235
         ],
         "ci_width_pt": 9.4,
         "bound_spread_pt": 0.06
@@ -11812,13 +11813,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 1,
         "ambiguous_pct": 0.056,
-        "p_stop_first_lo": 0.2499,
-        "p_stop_first_hi": 0.2505,
-        "p_target_first_lo": 0.7492,
-        "p_target_first_hi": 0.7498,
+        "p_stop_first_lo": 0.2495,
+        "p_stop_first_hi": 0.2501,
+        "p_target_first_lo": 0.7496,
+        "p_target_first_hi": 0.7502,
         "p_no_touch": 0.0003,
-        "p_stop_first": 0.2502,
-        "p_target_first": 0.7495,
+        "p_stop_first": 0.2498,
+        "p_target_first": 0.7499,
         "pnl_no_touch_pct": -1.6654,
         "pnl_no_touch_median_pct": -2.4124,
         "horizon": "extended",
@@ -11826,8 +11827,8 @@
         "stop_pct": 6.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.2068,
-          0.2978
+          0.2064,
+          0.2974
         ],
         "ci_width_pt": 9.1,
         "bound_spread_pt": 0.06
@@ -11837,13 +11838,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 1,
         "ambiguous_pct": 0.056,
-        "p_stop_first_lo": 0.1846,
-        "p_stop_first_hi": 0.1852,
-        "p_target_first_lo": 0.8087,
-        "p_target_first_hi": 0.8092,
+        "p_stop_first_lo": 0.1843,
+        "p_stop_first_hi": 0.1848,
+        "p_target_first_lo": 0.809,
+        "p_target_first_hi": 0.8096,
         "p_no_touch": 0.0061,
-        "p_stop_first": 0.1849,
-        "p_target_first": 0.809,
+        "p_stop_first": 0.1846,
+        "p_target_first": 0.8093,
         "pnl_no_touch_pct": -4.5579,
         "pnl_no_touch_median_pct": -3.0958,
         "horizon": "extended",
@@ -11851,24 +11852,24 @@
         "stop_pct": 8.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.1467,
-          0.2283
+          0.1464,
+          0.228
         ],
         "ci_width_pt": 8.2,
-        "bound_spread_pt": 0.06
+        "bound_spread_pt": 0.05
       },
       {
         "n_windows": 1261,
         "n_eff": 345.8,
         "n_ambiguous": 0,
         "ambiguous_pct": 0.0,
-        "p_stop_first_lo": 0.1368,
-        "p_stop_first_hi": 0.1368,
-        "p_target_first_lo": 0.8399,
-        "p_target_first_hi": 0.8399,
+        "p_stop_first_lo": 0.1364,
+        "p_stop_first_hi": 0.1364,
+        "p_target_first_lo": 0.8402,
+        "p_target_first_hi": 0.8402,
         "p_no_touch": 0.0234,
-        "p_stop_first": 0.1368,
-        "p_target_first": 0.8399,
+        "p_stop_first": 0.1364,
+        "p_target_first": 0.8402,
         "pnl_no_touch_pct": -4.4139,
         "pnl_no_touch_median_pct": -3.5077,
         "horizon": "extended",
@@ -11876,8 +11877,8 @@
         "stop_pct": 10.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.1037,
-          0.176
+          0.1033,
+          0.1756
         ],
         "ci_width_pt": 7.2,
         "bound_spread_pt": 0.0
@@ -11887,13 +11888,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 0,
         "ambiguous_pct": 0.0,
-        "p_stop_first_lo": 0.0774,
-        "p_stop_first_hi": 0.0774,
-        "p_target_first_lo": 0.8559,
-        "p_target_first_hi": 0.8559,
+        "p_stop_first_lo": 0.077,
+        "p_stop_first_hi": 0.077,
+        "p_target_first_lo": 0.8563,
+        "p_target_first_hi": 0.8563,
         "p_no_touch": 0.0667,
-        "p_stop_first": 0.0774,
-        "p_target_first": 0.8559,
+        "p_stop_first": 0.077,
+        "p_target_first": 0.8563,
         "pnl_no_touch_pct": -5.7767,
         "pnl_no_touch_median_pct": -4.7022,
         "horizon": "extended",
@@ -11901,8 +11902,8 @@
         "stop_pct": 12.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.0527,
-          0.1091
+          0.0524,
+          0.1087
         ],
         "ci_width_pt": 5.6,
         "bound_spread_pt": 0.0
@@ -11912,13 +11913,13 @@
         "n_eff": 345.8,
         "n_ambiguous": 0,
         "ambiguous_pct": 0.0,
-        "p_stop_first_lo": 0.0343,
-        "p_stop_first_hi": 0.0343,
-        "p_target_first_lo": 0.8559,
-        "p_target_first_hi": 0.8559,
+        "p_stop_first_lo": 0.034,
+        "p_stop_first_hi": 0.034,
+        "p_target_first_lo": 0.8563,
+        "p_target_first_hi": 0.8563,
         "p_no_touch": 0.1097,
-        "p_stop_first": 0.0343,
-        "p_target_first": 0.8559,
+        "p_stop_first": 0.034,
+        "p_target_first": 0.8563,
         "pnl_no_touch_pct": -7.1328,
         "pnl_no_touch_median_pct": -5.615,
         "horizon": "extended",
@@ -11926,8 +11927,8 @@
         "stop_pct": 15.0,
         "target_pct": 2.0,
         "p_stop_first_ci95": [
-          0.0188,
-          0.0575
+          0.0186,
+          0.0571
         ],
         "ci_width_pt": 3.9,
         "bound_spread_pt": 0.0
@@ -12085,8 +12086,8 @@
       {
         "n_windows": 1261,
         "n_eff": 345.8,
-        "n_ambiguous": 2,
-        "ambiguous_pct": 0.006,
+        "n_ambiguous": 1,
+        "ambiguous_pct": 0.005,
         "p_stop_first_lo": 0.3441,
         "p_stop_first_hi": 0.3442,
         "p_target_first_lo": 0.6455,
@@ -13170,7 +13171,7 @@
         "p_stop_first": 0.8613,
         "p_target_first": 0.1379,
         "pnl_no_touch_pct": 2.8706,
-        "pnl_no_touch_median_pct": 2.463,
+        "pnl_no_touch_median_pct": 2.4631,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 1.5,
@@ -13220,7 +13221,7 @@
         "p_stop_first": 0.7887,
         "p_target_first": 0.1937,
         "pnl_no_touch_pct": 1.1807,
-        "pnl_no_touch_median_pct": 2.1505,
+        "pnl_no_touch_median_pct": 2.1506,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 2.5,
@@ -13462,7 +13463,7 @@
         "n_eff": 345.8,
         "n_ambiguous": 1,
         "ambiguous_pct": 0.068,
-        "p_stop_first_lo": 0.8847,
+        "p_stop_first_lo": 0.8846,
         "p_stop_first_hi": 0.8853,
         "p_target_first_lo": 0.104,
         "p_target_first_hi": 0.1047,
@@ -13480,7 +13481,7 @@
           0.9154
         ],
         "ci_width_pt": 6.7,
-        "bound_spread_pt": 0.06
+        "bound_spread_pt": 0.07
       },
       {
         "n_windows": 1261,
@@ -13519,8 +13520,8 @@
         "p_no_touch": 0.0309,
         "p_stop_first": 0.815,
         "p_target_first": 0.1541,
-        "pnl_no_touch_pct": 2.2909,
-        "pnl_no_touch_median_pct": 3.12,
+        "pnl_no_touch_pct": 2.2913,
+        "pnl_no_touch_median_pct": 3.2472,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 2.5,
@@ -13544,8 +13545,8 @@
         "p_no_touch": 0.0557,
         "p_stop_first": 0.7722,
         "p_target_first": 0.1721,
-        "pnl_no_touch_pct": 1.6612,
-        "pnl_no_touch_median_pct": 2.6077,
+        "pnl_no_touch_pct": 1.6613,
+        "pnl_no_touch_median_pct": 2.6112,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 3.0,
@@ -13569,8 +13570,8 @@
         "p_no_touch": 0.0992,
         "p_stop_first": 0.6983,
         "p_target_first": 0.2025,
-        "pnl_no_touch_pct": 1.5573,
-        "pnl_no_touch_median_pct": 2.1834,
+        "pnl_no_touch_pct": 1.5574,
+        "pnl_no_touch_median_pct": 2.204,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 4.0,
@@ -13594,8 +13595,8 @@
         "p_no_touch": 0.1872,
         "p_stop_first": 0.5896,
         "p_target_first": 0.2232,
-        "pnl_no_touch_pct": 1.2727,
-        "pnl_no_touch_median_pct": 2.1448,
+        "pnl_no_touch_pct": 1.2728,
+        "pnl_no_touch_median_pct": 2.1506,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 5.0,
@@ -13620,7 +13621,7 @@
         "p_stop_first": 0.5223,
         "p_target_first": 0.2331,
         "pnl_no_touch_pct": 0.8661,
-        "pnl_no_touch_median_pct": 1.9842,
+        "pnl_no_touch_median_pct": 1.9983,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 6.0,
@@ -13645,7 +13646,7 @@
         "p_stop_first": 0.3499,
         "p_target_first": 0.2643,
         "pnl_no_touch_pct": 0.6253,
-        "pnl_no_touch_median_pct": 1.439,
+        "pnl_no_touch_median_pct": 1.4544,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 8.0,
@@ -13670,7 +13671,7 @@
         "p_stop_first": 0.2486,
         "p_target_first": 0.2651,
         "pnl_no_touch_pct": -0.0617,
-        "pnl_no_touch_median_pct": 0.4432,
+        "pnl_no_touch_median_pct": 0.4348,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 10.0,
@@ -13691,11 +13692,11 @@
         "p_stop_first_hi": 0.1496,
         "p_target_first_lo": 0.2658,
         "p_target_first_hi": 0.2658,
-        "p_no_touch": 0.5847,
+        "p_no_touch": 0.5846,
         "p_stop_first": 0.1496,
         "p_target_first": 0.2658,
         "pnl_no_touch_pct": -1.1443,
-        "pnl_no_touch_median_pct": -0.7278,
+        "pnl_no_touch_median_pct": -0.7349,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 12.0,
@@ -13719,8 +13720,8 @@
         "p_no_touch": 0.6639,
         "p_stop_first": 0.0703,
         "p_target_first": 0.2658,
-        "pnl_no_touch_pct": -2.1189,
-        "pnl_no_touch_median_pct": -1.7913,
+        "pnl_no_touch_pct": -2.119,
+        "pnl_no_touch_median_pct": -1.7914,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 15.0,
@@ -13845,7 +13846,7 @@
         "p_stop_first": 0.7913,
         "p_target_first": 0.1377,
         "pnl_no_touch_pct": 2.3594,
-        "pnl_no_touch_median_pct": 3.0619,
+        "pnl_no_touch_median_pct": 3.0618,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 3.0,
@@ -14095,7 +14096,7 @@
         "p_stop_first": 0.872,
         "p_target_first": 0.0782,
         "pnl_no_touch_pct": 4.4736,
-        "pnl_no_touch_median_pct": 5.6677,
+        "pnl_no_touch_median_pct": 5.6678,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 2.0,
@@ -14145,7 +14146,7 @@
         "p_stop_first": 0.8009,
         "p_target_first": 0.1057,
         "pnl_no_touch_pct": 3.825,
-        "pnl_no_touch_median_pct": 4.5984,
+        "pnl_no_touch_median_pct": 4.5985,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 3.0,
@@ -14545,7 +14546,7 @@
         "p_stop_first": 0.3766,
         "p_target_first": 0.0899,
         "pnl_no_touch_pct": 3.0651,
-        "pnl_no_touch_median_pct": 3.5051,
+        "pnl_no_touch_median_pct": 3.505,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 8.0,
@@ -14645,7 +14646,7 @@
         "p_stop_first": 0.9456,
         "p_target_first": 0.0188,
         "pnl_no_touch_pct": 12.3291,
-        "pnl_no_touch_median_pct": 9.4429,
+        "pnl_no_touch_median_pct": 9.443,
         "horizon": "extended",
         "horizon_sessions": 20,
         "stop_pct": 1.0,
@@ -23270,7 +23271,7 @@
   },
   "harmonic_patterns": {
     "available": true,
-    "n_swings_detected": 140,
+    "n_swings_detected": 138,
     "n_patterns_found": 0,
     "tolerance": 0.05,
     "lookback_bars": 1260,
@@ -23463,13 +23464,13 @@
       },
       "freshness": {
         "last_bar_date": "2026-10-16T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-16T21:46:40.347472+00:00",
+        "asof_utc": "2026-10-19T00:10:16.806887+00:00",
         "venue": "EURONEXT",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23533,13 +23534,13 @@
       },
       "freshness": {
         "last_bar_date": "2026-10-16T12:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-16T21:46:40.347472+00:00",
+        "asof_utc": "2026-10-19T00:10:16.806887+00:00",
         "venue": "EURONEXT",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23595,13 +23596,13 @@
       },
       "freshness": {
         "last_bar_date": "2026-10-16T15:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-16T21:46:40.347472+00:00",
+        "asof_utc": "2026-10-19T00:10:16.806887+00:00",
         "venue": "EURONEXT",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23884,7 +23885,7 @@
         }
       }
     ],
-    "generated_at": "2026-10-16T21:46:44.947002+00:00",
+    "generated_at": "2026-10-19T00:10:20.010647+00:00",
     "history_file": "data/v3/episodes/NEX_episodes.json"
   },
   "setup": {
@@ -23956,38 +23957,38 @@
       }
     ],
     "counts_by_class": {
-      "63": {
-        "NOISE": 27,
-        "PULLBACK": 16,
-        "CORRECTION": 3,
-        "CAPITULATION": 7
-      },
-      "126": {
-        "NOISE": 10,
-        "PULLBACK": 12,
-        "CORRECTION": 2,
-        "CAPITULATION": 2
-      },
       "252": {
         "NOISE": 6,
         "PULLBACK": 6,
         "CORRECTION": 0,
         "CAPITULATION": 0
       },
+      "63": {
+        "NOISE": 27,
+        "PULLBACK": 16,
+        "CORRECTION": 3,
+        "CAPITULATION": 7
+      },
       "20": {
         "NOISE": 80,
         "PULLBACK": 55,
         "CORRECTION": 8,
         "CAPITULATION": 16
+      },
+      "126": {
+        "NOISE": 10,
+        "PULLBACK": 12,
+        "CORRECTION": 2,
+        "CAPITULATION": 2
       }
     },
-    "generated_at": "2026-10-16T21:46:45.058398+00:00"
+    "generated_at": "2026-10-19T00:10:20.092753+00:00"
   },
   "profiles": {
     "version": "profiles/1.0",
     "provenance": "v3",
     "status": "UNVALIDATED",
-    "generated_at": "2026-10-16T21:37:53.302535+00:00",
+    "generated_at": "2026-10-19T00:03:42.250026+00:00",
     "n_occasions": 2119,
     "zones_open_episodes": [
       {

@@ -1,6 +1,6 @@
 # PRY
 
-**Generated** : 2026-10-16T21:50:56.351107+00:00  
+**Generated** : 2026-10-19T00:13:28.103582+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 6/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -161,7 +161,7 @@ _Cloture 2026-10-16 : 109.4 · ATR Wilder 5.12 (4.68 %)_
 | 0.35 ATR | 1.649 % | 107.5963 | 49.31 % | 63.83 % | 70.73 % | 76.54 % | 83.72 % | 87.39 % |
 | 0.5 ATR | 2.355 % | 106.8232 | 34.95 % | 52.03 % | 59.92 % | 67.69 % | 76.52 % | 81.84 % |
 | 0.75 ATR | 3.533 % | 105.5348 | 19.41 % | 34.69 % | 43.45 % | 54.47 % | 64.94 % | 73.46 % |
-| 1.0 ATR | 4.711 % | 104.2464 | 10.0 % | 23.39 % | 31.75 % | 44.43 % | 55.74 % | 65.39 % |
+| 1.0 ATR | 4.711 % | 104.2464 | 10.0 % | 23.39 % | 31.85 % | 44.53 % | 55.74 % | 65.39 % |
 | 1.25 ATR | 5.888 % | 102.958 | 5.64 % | 16.06 % | 24.11 % | 34.69 % | 47.25 % | 57.72 % |
 | 1.5 ATR | 7.066 % | 101.6696 | 2.57 % | 9.81 % | 16.37 % | 24.65 % | 36.76 % | 49.24 % |
 | 2.0 ATR | 9.422 % | 99.0929 | 0.4 % | 4.06 % | 7.74 % | 14.21 % | 24.48 % | 37.54 % |
@@ -185,7 +185,7 @@ _Cloture 2026-10-16 : 109.4 · ATR Wilder 5.12 (4.68 %)_
 - **1 seance(s)** : plage utile 0.395–0.35 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 46.0 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **2 seance(s)** : plage utile 0.601–0.75 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (3.533 %, prix 105.5349), p(touche) 34.69 % (en stress 88.12 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 30.0 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **3 seance(s)** : plage utile 0.726–1.25 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (3.533 %, prix 105.5349), p(touche) 43.45 % (en stress 95.05 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 55.5 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
-- **5 seance(s)** : plage utile 0.986–1.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (4.711 %, prix 104.2462), p(touche) 44.43 % (en stress 99.01 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 48.1 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
+- **5 seance(s)** : plage utile 0.988–1.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (4.711 %, prix 104.2462), p(touche) 44.53 % (en stress 99.01 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 48.1 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **10 seance(s)** : plage utile 1.304–2.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.5 ATR (7.066 %, prix 101.6698), p(touche) 36.76 % (en stress 98.02 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 45.1 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **20 seance(s)** : plage utile 1.681–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (9.422 %, prix 99.0923), p(touche) 37.54 % (en stress 99.0 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 55.4 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 
@@ -315,5 +315,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (786130 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (786089 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
