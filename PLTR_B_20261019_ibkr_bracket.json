@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-10-19T00:23:40.840387+00:00",
+  "generated_at": "2026-10-19T22:04:18.495517+00:00",
   "prediction_id": "PLTR_B_20261019",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "PLTR",
@@ -16,30 +16,30 @@
     "targets_source": "stops_targets_by_horizon.swing.targets.t1..t3",
     "stop_basis": "plancher anti-bruit (R/R<2)",
     "entry_zone_raw": [
-      179.6093,
-      181.9677
+      183.2019,
+      185.6831
     ],
-    "entry_mid_raw": 180.7885,
-    "spot": 186.02999877929688,
-    "entry_vs_spot_pct": -2.82
+    "entry_mid_raw": 184.4425,
+    "spot": 194.1499938964844,
+    "entry_vs_spot_pct": -5.0
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 180.78,
+    "limit_price": 184.44,
     "limit_price_range": [
-      179.6,
-      181.96
+      183.2,
+      185.68
     ],
     "quantity": 3,
     "tif": "GTD",
-    "gtd": "2026-10-23T20:00:00+00:00"
+    "gtd": "2026-10-26T20:00:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 190.76,
+      "limit_price": 196.36,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
@@ -50,7 +50,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 173.3,
+      "stop_price": 176.44,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -61,7 +61,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 199.13,
+      "limit_price": 205.3,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2",
@@ -72,7 +72,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 173.3,
+      "stop_price": 176.44,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -83,7 +83,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 207.5,
+      "limit_price": 214.23,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T3",
@@ -94,7 +94,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 173.3,
+      "stop_price": 176.44,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -114,22 +114,22 @@
         "oca_group": "PLTR_B_swing_20261019_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 190.76,
-        "stop_price": 173.3
+        "target_price": 196.36,
+        "stop_price": 176.44
       },
       {
         "oca_group": "PLTR_B_swing_20261019_T2",
         "tranche": "T2",
         "quantity": 1,
-        "target_price": 199.13,
-        "stop_price": 173.3
+        "target_price": 205.3,
+        "stop_price": 176.44
       },
       {
         "oca_group": "PLTR_B_swing_20261019_T3",
         "tranche": "T3",
         "quantity": 1,
-        "target_price": 207.5,
-        "stop_price": 173.3
+        "target_price": 214.23,
+        "stop_price": 176.44
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -156,21 +156,21 @@
       "offset_sessions": 5,
       "sessions_counted": 5,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-19T00:23:40.208660+00:00",
+      "anchor_utc": "2026-10-19T22:04:17.633908+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "NYSE",
-      "good_till_date": "2026-10-23T20:00:00+00:00",
-      "good_till_date_ibkr_utc": "20261023-20:00:00",
-      "reference_session": "2026-10-19",
-      "expiry_session": "2026-10-23",
+      "good_till_date": "2026-10-26T20:00:00+00:00",
+      "good_till_date_ibkr_utc": "20261026-20:00:00",
+      "reference_session": "2026-10-20",
+      "expiry_session": "2026-10-26",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-19",
         "2026-10-20",
         "2026-10-21",
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-26"
       ]
     },
     "venue_calendar": {
@@ -227,30 +227,30 @@
     "plan_id": "B",
     "horizon": "swing",
     "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 7.0,
+    "composite_score": 8.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.1174,
+    "ev_pct_risk": 0.1114,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 180.7885,
+    "ev_pct_risk_basis_price": 184.4425,
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.3931,
-      "T2": 0.1656,
-      "T3": 0.08
+      "T1": 0.3266,
+      "T2": 0.1286,
+      "T3": 0.0639
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
-    "p_fill": null,
-    "p_fill_source": "absent",
-    "p_fill_note": "conviction_rating.by_horizon.swing absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
-    "rating": "Unknown",
+    "p_fill": 0.2212,
+    "p_fill_source": "conviction_rating.by_horizon.swing.inputs.p_fill (empirical_5s)",
+    "p_fill_note": "p_fill telle qu'utilisée par le rating, reprise sans recalcul",
+    "rating": "Pass",
     "rating_source": "conviction_rating.by_horizon.swing",
-    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (10 séance(s) de retard, drapeau lu sur first_passage_by_horizon) ; usable=false (intervalle le plus large 25.8 pt > 25) (aucun repli sur un autre moteur, R09)",
+    "rating_note": "ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 29/121 fenêtres (p_fill pondéré 22 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 496.58,
-    "hold_tolerance_breach_price": 139.5225,
+    "notional_eur": 519.48,
+    "hold_tolerance_breach_price": 145.6125,
     "hold_fallback_active": true,
     "prediction_id": "PLTR_B_20261019"
   },
@@ -265,11 +265,11 @@
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 1.33,
-      "T2": 2.45,
-      "T3": 3.57
+      "T1": 1.49,
+      "T2": 2.61,
+      "T3": 3.72
     },
-    "rr_blended_on_posted_entry": 2.45,
+    "rr_blended_on_posted_entry": 2.61,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,
