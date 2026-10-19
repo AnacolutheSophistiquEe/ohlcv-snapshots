@@ -1,0 +1,214 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "SRT3",
+    "generated_at": "2026-10-19T00:31:13Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-10-20T08:00:00Z",
+    "valid_until": "2026-10-20T21:00:00Z",
+    "source_precomputed": "SRT3_precomputed.json"
+  },
+  "context": {
+    "last_price": 261.0,
+    "ta_score": {
+      "value": 9,
+      "max": 10,
+      "label": "very_bullish"
+    },
+    "alignment_flag": "mixed",
+    "hmm_regime": {
+      "state": "bull",
+      "probability": 0.5201,
+      "expected_duration_days": 6.07
+    },
+    "volatility_regime": "normal",
+    "signals_counter": {
+      "buy": 6,
+      "sell": 0,
+      "neutral": 9,
+      "total": 15,
+      "verdict": "neutral"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_40-50_dist_ma20_-2_+2",
+      "win_rate": 0.85,
+      "sample_size": 34,
+      "median_bounce_pct": 7.26,
+      "confidence": "high"
+    },
+    "narrative_short": "TA score 9/10 (very_bullish), alignment mixed, HMM bull (0.52), vol normal, signals neutral (6b/0s/9n)."
+  },
+  "notes": {
+    "atr_daily": 8.9214,
+    "atr_pct_daily": null,
+    "beta_60d": 0.867,
+    "beta_benchmark": "GDAXI",
+    "beta_corr_60d": 0.2888,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "hammer",
+      "date": "2026-10-16",
+      "confidence": 0.689
+    },
+    "divergences": [
+      {
+        "indicator": "obv",
+        "type": "hidden_bearish",
+        "confidence": 0.4,
+        "bars_ago": 7,
+        "at_price": null
+      },
+      {
+        "indicator": "obv",
+        "type": "bullish",
+        "confidence": 0.57,
+        "bars_ago": 6,
+        "at_price": null
+      }
+    ],
+    "drawdown": {
+      "current_dd_pct": -56.33,
+      "ath_price": 597.6057,
+      "ath_date": "2021-11-30",
+      "max_dd_1y_pct": -22.5,
+      "days_in_dd": 1781,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 245.4556,
+        "max": 248.9946
+      },
+      "stop": {
+        "price": 237.2111,
+        "basis": "swing_plan_below_confluence_support",
+        "distance_pct": -4.05
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 261.1722,
+          "basis": "sous VPVR VAH à 262.1 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
+          "rr": 1.39
+        },
+        {
+          "level": 2,
+          "price": 271.1466,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 2.39
+        },
+        {
+          "level": 3,
+          "price": 281.1211,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 3.38
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support BB_LOWER + MA50 + FIB_786 (strength 10.5). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 261.9217,
+        "max": 262.9683
+      },
+      "stop": {
+        "price": 257.1993,
+        "basis": "fallback_pivot_camarilla_r1",
+        "distance_pct": -2.0
+      },
+      "targets": [
+        {
+          "level": 2,
+          "price": 271.1466,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 1.66
+        },
+        {
+          "level": 3,
+          "price": 281.1211,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 3.56
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 232.95,
+        "max": 233.9682
+      },
+      "stop": {
+        "price": 223.632,
+        "basis": "deep_below_confluence_support_4pct",
+        "distance_pct": -4.21
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 261.1722,
+          "basis": "sous VPVR VAH à 262.1 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
+          "rr": 2.82
+        },
+        {
+          "level": 2,
+          "price": 271.1466,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 3.84
+        },
+        {
+          "level": 3,
+          "price": 281.1211,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 4.85
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Deep value mecanique : entree sur confluence support basse FIB_50 + MA200 + S/R_support (strength 16.5). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+    }
+  ],
+  "bot_actionable": true,
+  "bot_actionable_reason": "ok",
+  "global_conditions": [
+    {
+      "id": "session_eu_xetra_open",
+      "type": "session_window",
+      "params": {
+        "session": "eu_xetra_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 221.3957,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
