@@ -1,0 +1,980 @@
+{
+ "available": true,
+ "version": "setup/1.0",
+ "provenance": "v3",
+ "ticker": "IONQ",
+ "thresholds_cutoff": "2024-12-31",
+ "thresholds_version": "setup/1.0",
+ "amplitude_population": "episode_max (finale si close, as-of si ouvert)",
+ "structural_break": null,
+ "structural_break_status": "NON_EVALUE (contrat §7.9 non rempli)",
+ "origin": "UNKNOWN",
+ "origin_status": "NON_EVALUE (lot 2bis)",
+ "open": [
+  {
+   "episode_id": "3c996400612c5d75",
+   "lookback": 20,
+   "event_id": "3c996400612c5d75",
+   "open_date": "2026-10-12",
+   "end": {
+    "date": null,
+    "reason": "CENSORED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "running_vs_final",
+   "amplitude_atr": 5.738535205213635,
+   "speed_atr": 1.4346338013034088,
+   "min_ret_sigma": -2.844909301468808,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "9aaa361eb483765e",
+   "lookback": 63,
+   "event_id": "3c996400612c5d75",
+   "open_date": "2026-07-13",
+   "end": {
+    "date": null,
+    "reason": "CENSORED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "running_vs_final",
+   "amplitude_atr": 9.42919400775247,
+   "speed_atr": 0.9524924320007615,
+   "min_ret_sigma": -2.844909301468808,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L63 régime high"
+  },
+  {
+   "episode_id": "48e9957e9c0bfa79",
+   "lookback": 126,
+   "event_id": "3c996400612c5d75",
+   "open_date": "2026-08-28",
+   "end": {
+    "date": null,
+    "reason": "CENSORED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "running_vs_final",
+   "amplitude_atr": 13.939613322438385,
+   "speed_atr": 1.408113586773503,
+   "min_ret_sigma": -2.844909301468808,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L126 régime low"
+  }
+ ],
+ "counts_by_class": {
+  "126": {
+   "NOISE": 0,
+   "PULLBACK": 3,
+   "CORRECTION": 1,
+   "CAPITULATION": 1
+  },
+  "20": {
+   "NOISE": 16,
+   "PULLBACK": 15,
+   "CORRECTION": 1,
+   "CAPITULATION": 1
+  },
+  "252": {
+   "NOISE": 0,
+   "PULLBACK": 1,
+   "CORRECTION": 0,
+   "CAPITULATION": 1
+  },
+  "63": {
+   "NOISE": 0,
+   "PULLBACK": 7,
+   "CORRECTION": 2,
+   "CAPITULATION": 0
+  }
+ },
+ "episodes": [
+  {
+   "episode_id": "3ebb59c2a5e673a9",
+   "lookback": 20,
+   "event_id": "3ebb59c2a5e673a9",
+   "open_date": "2021-03-08",
+   "end": {
+    "date": "2021-05-05",
+    "reason": "EXPIRED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 4.080490077008574,
+   "speed_atr": 0.6997982748950173,
+   "min_ret_sigma": -2.3403405432805537,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "9a9a233ebbbd7aba",
+   "lookback": 20,
+   "event_id": "9a9a233ebbbd7aba",
+   "open_date": "2021-05-14",
+   "end": {
+    "date": "2021-06-08",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.276677694987387,
+   "speed_atr": 0.9458953746243053,
+   "min_ret_sigma": -0.840757281876818,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "1d00f96903f3cf84",
+   "lookback": 20,
+   "event_id": "1d00f96903f3cf84",
+   "open_date": "2021-07-14",
+   "end": {
+    "date": "2021-09-10",
+    "reason": "EXPIRED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.734198513395693,
+   "speed_atr": 0.8566838923690336,
+   "min_ret_sigma": -2.624074990358244,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "ec13d5d4c8791ac3",
+   "lookback": 20,
+   "event_id": "e958e485c0110a19",
+   "open_date": "2021-09-28",
+   "end": {
+    "date": "2021-10-14",
+    "reason": "RECOVERED"
+   },
+   "class": "CAPITULATION",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 15.44935395885544,
+   "speed_atr": 5.839306927391815,
+   "min_ret_sigma": -4.368860394155943,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "872b519a85a6f5da",
+   "lookback": 20,
+   "event_id": "872b519a85a6f5da",
+   "open_date": "2021-11-10",
+   "end": {
+    "date": "2021-11-16",
+    "reason": "NEW_HIGH"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 2.651802784189132,
+   "speed_atr": 2.651802784189132,
+   "min_ret_sigma": -3.504567251594844,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "a573768e205497b2",
+   "lookback": 20,
+   "event_id": "a573768e205497b2",
+   "open_date": "2021-12-03",
+   "end": {
+    "date": "2022-02-02",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 6.596535642999005,
+   "speed_atr": 0.9521279073011093,
+   "min_ret_sigma": -2.7877664506159987,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "9591dfa7f922d27e",
+   "lookback": 20,
+   "event_id": "9591dfa7f922d27e",
+   "open_date": "2022-03-08",
+   "end": {
+    "date": "2022-03-18",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.7979234843664567,
+   "speed_atr": 0.8492415084386257,
+   "min_ret_sigma": -1.2223136753154054,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "8ee6ddaecf4749a6",
+   "lookback": 20,
+   "event_id": "8ee6ddaecf4749a6",
+   "open_date": "2022-04-11",
+   "end": {
+    "date": "2022-06-09",
+    "reason": "EXPIRED"
+   },
+   "class": "CORRECTION",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 10.605236924884528,
+   "speed_atr": 1.7926122218940255,
+   "min_ret_sigma": -3.462649819460975,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "f7d65abd8f9c5843",
+   "lookback": 20,
+   "event_id": "f7d65abd8f9c5843",
+   "open_date": "2022-08-19",
+   "end": {
+    "date": "2022-10-18",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 6.567915892191699,
+   "speed_atr": 1.2639960027905661,
+   "min_ret_sigma": -1.777263495918424,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "bd3f17ecdc07aeff",
+   "lookback": 20,
+   "event_id": "bd3f17ecdc07aeff",
+   "open_date": "2022-11-09",
+   "end": {
+    "date": "2022-11-10",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.67402533902468,
+   "speed_atr": 1.3886510510870105,
+   "min_ret_sigma": -1.9405495160574937,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "c26960a314098ace",
+   "lookback": 20,
+   "event_id": "c26960a314098ace",
+   "open_date": "2022-11-29",
+   "end": {
+    "date": "2023-01-30",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 8.498162199733173,
+   "speed_atr": 1.5780691035628907,
+   "min_ret_sigma": -2.446048498248807,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "84043aac135d3d77",
+   "lookback": 20,
+   "event_id": "84043aac135d3d77",
+   "open_date": "2023-03-01",
+   "end": {
+    "date": "2023-03-27",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.2730436183430567,
+   "speed_atr": 0.8182609045857642,
+   "min_ret_sigma": -1.4386759439427999,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "dec78d5520c4070b",
+   "lookback": 20,
+   "event_id": "dec78d5520c4070b",
+   "open_date": "2023-04-25",
+   "end": {
+    "date": "2023-05-09",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.9150446503726526,
+   "speed_atr": 0.8981728416012589,
+   "min_ret_sigma": -0.8659832064388421,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "5980f08771967baa",
+   "lookback": 20,
+   "event_id": "5980f08771967baa",
+   "open_date": "2023-08-07",
+   "end": {
+    "date": "2023-08-29",
+    "reason": "RECOVERED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 4.754729476457548,
+   "speed_atr": 1.372572171578307,
+   "min_ret_sigma": -1.9924883534372273,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "dc0bc3d157d4c9b7",
+   "lookback": 20,
+   "event_id": "dc0bc3d157d4c9b7",
+   "open_date": "2023-09-20",
+   "end": {
+    "date": "2023-11-16",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 6.626438193036182,
+   "speed_atr": 1.1200724865080145,
+   "min_ret_sigma": -2.8100414532709057,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "801dd3a66e417d6b",
+   "lookback": 20,
+   "event_id": "801dd3a66e417d6b",
+   "open_date": "2023-12-29",
+   "end": {
+    "date": "2024-02-29",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 5.978356384525141,
+   "speed_atr": 1.0406982658859172,
+   "min_ret_sigma": -2.659296360213048,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "268936e66e357cca",
+   "lookback": 20,
+   "event_id": "268936e66e357cca",
+   "open_date": "2024-03-05",
+   "end": {
+    "date": "2024-03-07",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.2789040803616034,
+   "speed_atr": 0.8466093931368024,
+   "min_ret_sigma": -1.6571291870562561,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "4657100859259619",
+   "lookback": 20,
+   "event_id": "4657100859259619",
+   "open_date": "2024-03-19",
+   "end": {
+    "date": "2024-05-16",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 6.059077021987217,
+   "speed_atr": 0.9961061264198585,
+   "min_ret_sigma": -2.576338568260749,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "ae29d25d5e1eee8f",
+   "lookback": 20,
+   "event_id": "ae29d25d5e1eee8f",
+   "open_date": "2024-06-03",
+   "end": {
+    "date": "2024-07-10",
+    "reason": "RECOVERED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 5.9989891135836055,
+   "speed_atr": 1.0288181452649015,
+   "min_ret_sigma": -2.1071135867599082,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "ccf00686d63166d5",
+   "lookback": 20,
+   "event_id": "ccf00686d63166d5",
+   "open_date": "2024-07-19",
+   "end": {
+    "date": "2024-07-23",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.1958131962126752,
+   "speed_atr": 1.8451036091131465,
+   "min_ret_sigma": -2.5063770317880563,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "36470763e2d3c45f",
+   "lookback": 20,
+   "event_id": "36470763e2d3c45f",
+   "open_date": "2024-08-02",
+   "end": {
+    "date": "2024-09-16",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 4.349084615672534,
+   "speed_atr": 1.1623417555668603,
+   "min_ret_sigma": -1.3272023190976876,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "720a16c7b6789773",
+   "lookback": 20,
+   "event_id": "720a16c7b6789773",
+   "open_date": "2025-01-08",
+   "end": {
+    "date": "2025-01-16",
+    "reason": "RECOVERED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 4.642335916797164,
+   "speed_atr": 2.321167958398582,
+   "min_ret_sigma": -5.183417338178838,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "0dc74797db4b6617",
+   "lookback": 20,
+   "event_id": "0dc74797db4b6617",
+   "open_date": "2025-02-27",
+   "end": {
+    "date": "2025-04-28",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 6.450629431303357,
+   "speed_atr": 1.3752788156984594,
+   "min_ret_sigma": -4.934567757135406,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "c942bfce52885633",
+   "lookback": 20,
+   "event_id": "c942bfce52885633",
+   "open_date": "2025-06-05",
+   "end": {
+    "date": "2025-06-30",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.1255224595504676,
+   "speed_atr": 1.181336449302496,
+   "min_ret_sigma": -1.7245012627338245,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "0d317fb58f3691f4",
+   "lookback": 20,
+   "event_id": "0d317fb58f3691f4",
+   "open_date": "2025-08-01",
+   "end": {
+    "date": "2025-08-11",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 2.9203125097039755,
+   "speed_atr": 0.9234839010147134,
+   "min_ret_sigma": -1.2751940362499858,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "b9bd46a394b16efa",
+   "lookback": 20,
+   "event_id": "b9bd46a394b16efa",
+   "open_date": "2025-08-19",
+   "end": {
+    "date": "2025-08-27",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.0715685519027485,
+   "speed_atr": 1.1609437890316374,
+   "min_ret_sigma": -2.473548646271069,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "0f5c4b4eb66487e6",
+   "lookback": 20,
+   "event_id": "0f5c4b4eb66487e6",
+   "open_date": "2025-09-30",
+   "end": {
+    "date": "2025-10-02",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.101130305781191,
+   "speed_atr": 1.3868676341622903,
+   "min_ret_sigma": -0.8181762700926705,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "5476615757eb7f4d",
+   "lookback": 20,
+   "event_id": "5476615757eb7f4d",
+   "open_date": "2025-10-20",
+   "end": {
+    "date": "2025-12-17",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 6.542340252754858,
+   "speed_atr": 1.236386092939772,
+   "min_ret_sigma": -2.7222563178771297,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "d5726fa7a732ee06",
+   "lookback": 20,
+   "event_id": "d5726fa7a732ee06",
+   "open_date": "2026-02-04",
+   "end": {
+    "date": "2026-02-26",
+    "reason": "RECOVERED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 5.32376855001101,
+   "speed_atr": 1.2912035328256926,
+   "min_ret_sigma": -3.282464544470098,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L20 régime high"
+  },
+  {
+   "episode_id": "ed9b093c867802c3",
+   "lookback": 20,
+   "event_id": "ed9b093c867802c3",
+   "open_date": "2026-03-18",
+   "end": {
+    "date": "2026-04-14",
+    "reason": "RECOVERED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 5.41839648549915,
+   "speed_atr": 1.1552060122071406,
+   "min_ret_sigma": -2.9768508103386027,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "431b2f385b73207b",
+   "lookback": 20,
+   "event_id": "431b2f385b73207b",
+   "open_date": "2026-06-05",
+   "end": {
+    "date": "2026-08-05",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 7.753014890469364,
+   "speed_atr": 1.2108175014229798,
+   "min_ret_sigma": -2.2078299340589367,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "4b33f18550cfdb28",
+   "lookback": 20,
+   "event_id": "4b33f18550cfdb28",
+   "open_date": "2026-09-01",
+   "end": {
+    "date": "2026-09-23",
+    "reason": "RECOVERED"
+   },
+   "class": "NOISE",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 3.4101448121404863,
+   "speed_atr": 0.8037788404975544,
+   "min_ret_sigma": -1.3111893593376351,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "3c996400612c5d75",
+   "lookback": 20,
+   "event_id": "3c996400612c5d75",
+   "open_date": "2026-10-12",
+   "end": {
+    "date": null,
+    "reason": "CENSORED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "running_vs_final",
+   "amplitude_atr": 5.738535205213635,
+   "speed_atr": 1.4346338013034088,
+   "min_ret_sigma": -2.844909301468808,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L20 régime low"
+  },
+  {
+   "episode_id": "e958e485c0110a19",
+   "lookback": 63,
+   "event_id": "e958e485c0110a19",
+   "open_date": "2021-04-06",
+   "end": {
+    "date": "2021-10-05",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 11.959204485518876,
+   "speed_atr": 0.9732262586399543,
+   "min_ret_sigma": -4.368860394155943,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L63 régime low"
+  },
+  {
+   "episode_id": "f1145fecdec55c10",
+   "lookback": 63,
+   "event_id": "8ee6ddaecf4749a6",
+   "open_date": "2022-01-12",
+   "end": {
+    "date": "2022-07-18",
+    "reason": "EXPIRED"
+   },
+   "class": "CORRECTION",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 15.009232648197873,
+   "speed_atr": 1.3701492153768293,
+   "min_ret_sigma": -3.462649819460975,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L63 régime high"
+  },
+  {
+   "episode_id": "9e99911eea560a14",
+   "lookback": 63,
+   "event_id": "9e99911eea560a14",
+   "open_date": "2022-07-19",
+   "end": {
+    "date": "2022-08-16",
+    "reason": "RECOVERED"
+   },
+   "class": "CORRECTION",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 17.43503080371007,
+   "speed_atr": 2.1300280256243247,
+   "min_ret_sigma": -1.7123780955960917,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L63 régime low"
+  },
+  {
+   "episode_id": "68f6d42ef37e5a65",
+   "lookback": 63,
+   "event_id": "c26960a314098ace",
+   "open_date": "2022-09-20",
+   "end": {
+    "date": "2023-03-23",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 12.188697602288341,
+   "speed_atr": 1.2707595693300129,
+   "min_ret_sigma": -2.446048498248807,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L63 régime low"
+  },
+  {
+   "episode_id": "42d7cb2ccdda5e09",
+   "lookback": 63,
+   "event_id": "dc0bc3d157d4c9b7",
+   "open_date": "2023-10-24",
+   "end": {
+    "date": "2023-12-14",
+    "reason": "RECOVERED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 9.100720853884248,
+   "speed_atr": 1.1465830538474813,
+   "min_ret_sigma": -2.8100414532709057,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L63 régime high"
+  },
+  {
+   "episode_id": "abeedae25202ca87",
+   "lookback": 63,
+   "event_id": "ae29d25d5e1eee8f",
+   "open_date": "2024-01-31",
+   "end": {
+    "date": "2024-08-02",
+    "reason": "EXPIRED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 11.459198258641957,
+   "speed_atr": 1.0050381727571074,
+   "min_ret_sigma": -2.659296360213048,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L63 régime low"
+  },
+  {
+   "episode_id": "32c991b7ae107209",
+   "lookback": 63,
+   "event_id": "32c991b7ae107209",
+   "open_date": "2025-03-18",
+   "end": {
+    "date": "2025-05-22",
+    "reason": "RECOVERED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 10.267034459159332,
+   "speed_atr": 1.314559058314289,
+   "min_ret_sigma": -1.4172121524145231,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L63 régime high"
+  },
+  {
+   "episode_id": "a62779ada77faf28",
+   "lookback": 63,
+   "event_id": "ed9b093c867802c3",
+   "open_date": "2025-11-20",
+   "end": {
+    "date": "2026-05-11",
+    "reason": "RECOVERED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 10.966649467903808,
+   "speed_atr": 1.022645335910638,
+   "min_ret_sigma": -3.282464544470098,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L63 régime high"
+  },
+  {
+   "episode_id": "9aaa361eb483765e",
+   "lookback": 63,
+   "event_id": "3c996400612c5d75",
+   "open_date": "2026-07-13",
+   "end": {
+    "date": null,
+    "reason": "CENSORED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "running_vs_final",
+   "amplitude_atr": 9.42919400775247,
+   "speed_atr": 0.9524924320007615,
+   "min_ret_sigma": -2.844909301468808,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L63 régime high"
+  },
+  {
+   "episode_id": "38cf7e8710ada5d8",
+   "lookback": 126,
+   "event_id": "e958e485c0110a19",
+   "open_date": "2021-07-06",
+   "end": {
+    "date": "2021-10-27",
+    "reason": "RECOVERED"
+   },
+   "class": "CAPITULATION",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 33.92704507727173,
+   "speed_atr": 2.7428390278173143,
+   "min_ret_sigma": -4.368860394155943,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L126 régime low"
+  },
+  {
+   "episode_id": "6e895e8459c52792",
+   "lookback": 126,
+   "event_id": "c26960a314098ace",
+   "open_date": "2022-03-21",
+   "end": {
+    "date": "2023-03-23",
+    "reason": "EXPIRED"
+   },
+   "class": "CORRECTION",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 23.386747755204542,
+   "speed_atr": 1.4026439199109597,
+   "min_ret_sigma": -3.462649819460975,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L126 régime high"
+  },
+  {
+   "episode_id": "f8399b02f52cdae4",
+   "lookback": 126,
+   "event_id": "36470763e2d3c45f",
+   "open_date": "2024-01-10",
+   "end": {
+    "date": "2024-10-18",
+    "reason": "RECOVERED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 17.914875494655327,
+   "speed_atr": 1.1240792627448823,
+   "min_ret_sigma": -2.659296360213048,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L126 régime low"
+  },
+  {
+   "episode_id": "4bf5b0d88bc3874c",
+   "lookback": 126,
+   "event_id": "ed9b093c867802c3",
+   "open_date": "2026-03-05",
+   "end": {
+    "date": "2026-05-11",
+    "reason": "RECOVERED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 16.905167844323646,
+   "speed_atr": 1.5764150298941342,
+   "min_ret_sigma": -2.9768508103386027,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L126 régime high"
+  },
+  {
+   "episode_id": "48e9957e9c0bfa79",
+   "lookback": 126,
+   "event_id": "3c996400612c5d75",
+   "open_date": "2026-08-28",
+   "end": {
+    "date": null,
+    "reason": "CENSORED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "running_vs_final",
+   "amplitude_atr": 13.939613322438385,
+   "speed_atr": 1.408113586773503,
+   "min_ret_sigma": -2.844909301468808,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L126 régime low"
+  },
+  {
+   "episode_id": "2dee2c03157d585f",
+   "lookback": 252,
+   "event_id": "c26960a314098ace",
+   "open_date": "2022-06-27",
+   "end": {
+    "date": "2023-07-28",
+    "reason": "RECOVERED"
+   },
+   "class": "CAPITULATION",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 57.872083519774854,
+   "speed_atr": 3.4709369139848363,
+   "min_ret_sigma": -2.5917205269856662,
+   "vol_regime_at_open": "high",
+   "thresholds_provenance": "univers L252 régime high"
+  },
+  {
+   "episode_id": "cb1e250ddc465d27",
+   "lookback": 252,
+   "event_id": "36470763e2d3c45f",
+   "open_date": "2024-04-08",
+   "end": {
+    "date": "2024-10-18",
+    "reason": "RECOVERED"
+   },
+   "class": "PULLBACK",
+   "reason": null,
+   "class_basis": "final",
+   "amplitude_atr": 23.114877398625858,
+   "speed_atr": 1.4503564008824612,
+   "min_ret_sigma": -2.576338568260749,
+   "vol_regime_at_open": "low",
+   "thresholds_provenance": "univers L252 régime low"
+  }
+ ],
+ "generated_at": "2026-10-20T22:05:16.191915+00:00"
+}

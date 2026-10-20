@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-10-20T00:20:53.950880+00:00",
+  "generated_at": "2026-10-20T22:00:51.648154+00:00",
   "prediction_id": "MSTR_A_20261020",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "MSTR",
@@ -16,20 +16,20 @@
     "targets_source": "stops_targets_by_horizon.intraday.targets.t1..t3",
     "stop_basis": "plancher anti-bruit 5 s — stop EV-optimal −3.5% (first-passage 5 s réel)",
     "entry_zone_raw": [
-      131.17,
-      132.2183
+      140.5048,
+      141.7002
     ],
-    "entry_mid_raw": 131.6942,
-    "spot": 135.8000030517578,
-    "entry_vs_spot_pct": -3.03
+    "entry_mid_raw": 141.1025,
+    "spot": 142.72000122070312,
+    "entry_vs_spot_pct": -1.14
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 131.69,
+    "limit_price": 141.1,
     "limit_price_range": [
-      131.17,
-      132.21
+      140.5,
+      141.7
     ],
     "quantity": 1,
     "tif": "DAY"
@@ -38,7 +38,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 136.5,
+      "limit_price": 145.97,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
@@ -49,7 +49,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 127.08,
+      "stop_price": 136.16,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -69,8 +69,8 @@
         "oca_group": "MSTR_A_intraday_20261020_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 136.5,
-        "stop_price": 127.08
+        "target_price": 145.97,
+        "stop_price": 136.16
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -97,17 +97,17 @@
       "offset_sessions": 0,
       "sessions_counted": 1,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-20T00:20:52.879404+00:00",
+      "anchor_utc": "2026-10-20T22:00:50.274439+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "NYSE",
-      "good_till_date": "2026-10-20T20:00:00+00:00",
-      "good_till_date_ibkr_utc": "20261020-20:00:00",
-      "reference_session": "2026-10-20",
-      "expiry_session": "2026-10-20",
+      "good_till_date": "2026-10-21T20:00:00+00:00",
+      "good_till_date_ibkr_utc": "20261021-20:00:00",
+      "reference_session": "2026-10-21",
+      "expiry_session": "2026-10-21",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-20"
+        "2026-10-21"
       ]
     },
     "venue_calendar": {
@@ -164,16 +164,16 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 4.0,
+    "composite_score": 8.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.0041,
+    "ev_pct_risk": 0.0042,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 131.6942,
+    "ev_pct_risk_basis_price": 141.1025,
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.3137
+      "T1": 0.3356
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
@@ -181,11 +181,11 @@
     "p_fill_note": "conviction_rating.by_horizon.intraday absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
     "rating": "Unknown",
     "rating_source": "conviction_rating.by_horizon.intraday",
-    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (11 séance(s) de retard, drapeau lu sur first_passage_by_horizon) ; usable=false (intervalle le plus large 26.6 pt > 25) (aucun repli sur un autre moteur, R09)",
+    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (12 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 121.12,
-    "hold_tolerance_breach_price": 101.85,
+    "notional_eur": 127.01,
+    "hold_tolerance_breach_price": 107.04,
     "hold_fallback_active": true,
     "prediction_id": "MSTR_A_20261020"
   },
@@ -200,11 +200,11 @@
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 1.04,
-      "T2": 2.09,
-      "T3": 3.13
+      "T1": 0.99,
+      "T2": 1.97,
+      "T3": 2.96
     },
-    "rr_blended_on_posted_entry": 1.04,
+    "rr_blended_on_posted_entry": 0.99,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,
