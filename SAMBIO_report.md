@@ -1,6 +1,6 @@
 # 207940
 
-**Generated** : 2026-10-19T21:58:46.887227+00:00  
+**Generated** : 2026-10-20T00:18:49.989854+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 8/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -37,13 +37,13 @@ _Cloture 2026-10-19 : 1427000.0 · ATR Wilder 61389.36 (4.3 %)_
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟢 **Régime de gap : gap_calme** — p_breach(-3 %)=0.57 % < 1 % et 100 % des franchissements viennent des 4 pires jours/an — la queue est TOUT, l'ordinaire est sans risque de gap
-- **Au stop du plan (10.54 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1219).
+- **Au stop du plan (10.54 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 10.54 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
-- Chocs d'ouverture : p05 -1.276 % | p01 -2.573 % | pire -5.458 % _(sur 1219 séances)_
-- **P(stop avant cible)** _(source : daily, 1220 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -1.276 % | p01 -2.574 % | pire -5.458 % _(sur 1218 séances)_
+- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0034** [0.0002 ; 0.0221] _(largeur 2.2 pt, n_eff 173.1)_
    - swing : **0.3139** [0.2667 ; 0.3642] _(largeur 9.8 pt, n_eff 345.6)_
    - deep : **0.3129** [0.2657 ; 0.3632] _(largeur 9.7 pt, n_eff 345.6)_
@@ -53,7 +53,7 @@ _Cloture 2026-10-19 : 1427000.0 · ATR Wilder 61389.36 (4.3 %)_
    - ⚠ le regime n'est homogene que sur 240 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -5.77 % vs -6.29 % si l'on extrapolait par √5 _(rapport 0.917 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.2641** (β de hausse 0.2238, asymétrie 1.1802) vs KS11 — 556 séances de repli, historique complet
+- **β de baisse : 0.2635** (β de hausse 0.2238, asymétrie 1.1773) vs KS11 — 555 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -150,7 +150,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.19 · part idiosyncratique 0.81
+**Factor** : R² 0.18 · part idiosyncratique 0.82
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -179,5 +179,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (459434 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (459438 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
