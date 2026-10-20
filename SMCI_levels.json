@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-10-19T22:05:30Z",
+    "generated_at": "2026-10-20T00:31:18Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-20T08:00:00Z",
-    "valid_until": "2026-10-20T21:00:00Z",
+    "valid_from": "2026-10-21T08:00:00Z",
+    "valid_until": "2026-10-21T21:00:00Z",
     "source_precomputed": "SMCI_precomputed.json"
   },
   "context": {
-    "last_price": 32.1,
+    "last_price": 32.075,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 2.5071,
     "atr_pct_daily": null,
-    "beta_60d": 3.3198,
+    "beta_60d": 3.3187,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.5734,
+    "beta_corr_60d": 0.5733,
     "btc_corr_high": null,
     "candlestick": {
       "name": "hammer",
@@ -55,13 +55,13 @@
       {
         "indicator": "macd_hist",
         "type": "bearish",
-        "confidence": 0.26,
+        "confidence": 0.25,
         "bars_ago": 8,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": -72.98,
+      "current_dd_pct": -73.0,
       "ath_price": 118.807,
       "ath_date": "2024-03-13",
       "max_dd_1y_pct": -62.7,
@@ -76,26 +76,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 31.8841,
-        "max": 32.0759
+        "min": 31.8641,
+        "max": 32.0559
       },
       "stop": {
-        "price": 28.3393,
+        "price": 28.3143,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -11.38
+        "distance_pct": -11.41
       },
       "targets": [
         {
           "level": 2,
           "price": 34.6832,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.74
+          "rr": 0.75
         },
         {
           "level": 3,
           "price": 37.4862,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.51
+          "rr": 1.52
         }
       ],
       "preferred_target": 1,

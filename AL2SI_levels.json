@@ -2,17 +2,17 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "AL2SI",
-    "generated_at": "2026-10-19T22:05:30Z",
+    "generated_at": "2026-10-20T00:31:18Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-20T08:00:00Z",
-    "valid_until": "2026-10-20T21:00:00Z",
+    "valid_from": "2026-10-21T08:00:00Z",
+    "valid_until": "2026-10-21T21:00:00Z",
     "source_precomputed": "AL2SI_precomputed.json"
   },
   "context": {
-    "last_price": 26.78,
+    "last_price": 26.62,
     "ta_score": {
-      "value": 3,
+      "value": 2,
       "max": 10,
       "label": "bearish"
     },
@@ -20,7 +20,7 @@
     "hmm_regime": {
       "state": "sideways",
       "probability": 0.9,
-      "expected_duration_days": 19.54
+      "expected_duration_days": 19.18
     },
     "volatility_regime": "normal",
     "signals_counter": {
@@ -37,14 +37,14 @@
       "median_bounce_pct": 11.27,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (0b/5s/10n)."
+    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (0b/5s/10n)."
   },
   "notes": {
     "atr_daily": 1.9443,
     "atr_pct_daily": null,
-    "beta_60d": 1.8089,
+    "beta_60d": 1.8917,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.2712,
+    "beta_corr_60d": 0.2797,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -54.18,
+      "current_dd_pct": -54.46,
       "ath_price": 58.45,
       "ath_date": "2026-06-02",
       "max_dd_1y_pct": -62.36,
@@ -80,28 +80,28 @@
         "max": 25.6511
       },
       "stop": {
-        "price": 24.1684,
+        "price": 24.0964,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -5.47
+        "distance_pct": -5.75
       },
       "targets": [
         {
           "level": 1,
           "price": 28.7545,
           "basis": "sous VPVR VAH à 28.95 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 2.28
+          "rr": 2.17
         },
         {
           "level": 2,
           "price": 30.9282,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.83
+          "rr": 3.64
         },
         {
           "level": 3,
           "price": 33.102,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 5.39
+          "rr": 5.12
         }
       ],
       "preferred_target": 1,
@@ -117,13 +117,13 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 29.0879,
-        "max": 29.2041
+        "min": 29.0871,
+        "max": 29.2033
       },
       "stop": {
         "price": 26.9291,
         "basis": "below_broken_resistance",
-        "distance_pct": -7.61
+        "distance_pct": -7.6
       },
       "targets": [
         {
@@ -159,31 +159,31 @@
       "side": "long",
       "entry_zone": {
         "min": 22.9991,
-        "max": 23.8451
+        "max": 23.8295
       },
       "stop": {
         "price": 22.0791,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -5.73
+        "distance_pct": -5.7
       },
       "targets": [
         {
           "level": 1,
           "price": 28.7545,
           "basis": "sous VPVR VAH à 28.95 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 3.97
+          "rr": 4.0
         },
         {
           "level": 2,
           "price": 30.9282,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 5.59
+          "rr": 5.63
         },
         {
           "level": 3,
           "price": 33.102,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 7.21
+          "rr": 7.26
         }
       ],
       "preferred_target": 1,
@@ -195,7 +195,7 @@
     }
   ],
   "bot_actionable": false,
-  "bot_actionable_reason": "ta_score=3<4",
+  "bot_actionable_reason": "ta_score=2<4",
   "global_conditions": [
     {
       "id": "session_eu_paris_open",
