@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "207940",
-    "generated_at": "2026-10-21T00:32:28Z",
+    "generated_at": "2026-10-21T22:05:19Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-10-22T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "207940_precomputed.json"
   },
   "context": {
-    "last_price": 1391000.0,
+    "last_price": 1417000.0,
     "ta_score": {
       "value": 6,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "triple_bullish",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.7602,
-      "expected_duration_days": 5.27
+      "probability": 0.9,
+      "expected_duration_days": 4.82
     },
     "volatility_regime": "high",
     "signals_counter": {
@@ -31,20 +31,20 @@
       "verdict": "neutral_to_bullish"
     },
     "mean_reversion_score": {
-      "setup": "rsi_50-60_dist_ma20_+2_+5",
-      "win_rate": 0.82,
-      "sample_size": 17,
-      "median_bounce_pct": 1.86,
-      "confidence": "medium"
+      "setup": "rsi_50-60_dist_ma20_+5_+10",
+      "win_rate": 1.0,
+      "sample_size": 5,
+      "median_bounce_pct": 2.24,
+      "confidence": "low"
     },
-    "narrative_short": "TA score 6/10 (bullish), alignment triple_bullish, HMM bull (0.76), vol high, signals neutral_to_bullish (8b/3s/5n)."
+    "narrative_short": "TA score 6/10 (bullish), alignment triple_bullish, HMM bull (0.90), vol high, signals neutral_to_bullish (8b/3s/5n)."
   },
   "notes": {
-    "atr_daily": 67652.1518,
+    "atr_daily": 69599.0268,
     "atr_pct_daily": null,
-    "beta_60d": -0.0294,
+    "beta_60d": -0.0341,
     "beta_benchmark": "KS11",
-    "beta_corr_60d": -0.0386,
+    "beta_corr_60d": -0.045,
     "btc_corr_high": null,
     "candlestick": {
       "name": "three_white_soldiers",
@@ -55,17 +55,17 @@
       {
         "indicator": "rsi",
         "type": "bullish",
-        "confidence": 0.47,
-        "bars_ago": 4,
+        "confidence": 0.48,
+        "bars_ago": 5,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": -29.21,
+      "current_dd_pct": -27.89,
       "ath_price": 1965000.0,
       "ath_date": "2026-01-15",
       "max_dd_1y_pct": -39.85,
-      "days_in_dd": 278,
+      "days_in_dd": 279,
       "median_recovery_days": null
     }
   },
@@ -76,32 +76,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 1330680.575,
-        "max": 1340004.0
+        "min": 1331730.575,
+        "max": 1346656.0
       },
       "stop": {
-        "price": 1258172.8482,
+        "price": 1267925.9732,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -5.78
+        "distance_pct": -5.32
       },
       "targets": [
         {
           "level": 1,
-          "price": 1401462.4051,
+          "price": 1415339.0775,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 0.86
+          "rr": 1.07
         },
         {
           "level": 2,
-          "price": 1477099.8102,
+          "price": 1493153.1551,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.84
+          "rr": 2.16
         },
         {
           "level": 3,
-          "price": 1552737.2153,
+          "price": 1570967.2326,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.82
+          "rr": 3.25
         }
       ],
       "preferred_target": 1,
@@ -115,38 +115,38 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 1440451.2422,
-        "max": 1446207.2911
+        "min": 1438969.7622,
+        "max": 1444719.8911
       },
       "stop": {
-        "price": 1398721.25,
+        "price": 1426503.64,
         "basis": "below_broken_resistance",
-        "distance_pct": -3.09
+        "distance_pct": -1.06
       },
       "targets": [
         {
           "level": 1,
-          "price": 1492908.3117,
+          "price": 1495997.4304,
           "basis": "next_confluence_resistance",
-          "rr": 1.11
+          "rr": 3.53
         },
         {
           "level": 2,
-          "price": 1495500.0,
+          "price": 1504000.0,
           "basis": "fib_50",
-          "rr": 1.17
+          "rr": 4.05
         },
         {
           "level": 3,
-          "price": 1565002.0,
+          "price": 1574328.0,
           "basis": "fib_618",
-          "rr": 2.73
+          "rr": 8.64
         }
       ],
       "preferred_target": 1,
       "conditions": [],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance VPVR_POC + FIB_382 + MA50 (strength 12.0)."
+      "rationale": "Breakout au-dessus confluence resistance FIB_382 + MA50 (strength 5.0)."
     },
     {
       "id": "C",
@@ -155,31 +155,31 @@
       "side": "long",
       "entry_zone": {
         "min": 1272500.0,
-        "max": 1290250.0
+        "max": 1278017.2414
       },
       "stop": {
         "price": 1221600.0,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -4.66
+        "distance_pct": -4.21
       },
       "targets": [
         {
           "level": 1,
-          "price": 1401462.4051,
+          "price": 1415339.0775,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 2.01
+          "rr": 2.61
         },
         {
           "level": 2,
-          "price": 1477099.8102,
+          "price": 1493153.1551,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.27
+          "rr": 4.06
         },
         {
           "level": 3,
-          "price": 1552737.2153,
+          "price": 1570967.2326,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.54
+          "rr": 5.51
         }
       ],
       "preferred_target": 1,
