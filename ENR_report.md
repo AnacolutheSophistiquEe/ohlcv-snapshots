@@ -1,6 +1,6 @@
 # ENR
 
-**Generated** : 2026-10-20T21:43:31.275278+00:00  
+**Generated** : 2026-10-21T00:08:29.750859+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 3/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -52,8 +52,8 @@ _Cloture 2026-10-20 : 130.32 · ATR Wilder 5.37 (4.12 %)_
    - _fenêtre arrêtée : rupture de regime a 780 seances en arriere (volatilite 6.12 % contre 2.90 % aujourd'hui, rapport 2.11)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -8.86 % vs -9.76 % si l'on extrapolait par √5 _(rapport 0.908 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.3379** (β de hausse 1.108, asymétrie 1.2075) vs GDAXI — 600 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 1.281× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 1.3418** (β de hausse 1.108, asymétrie 1.2111) vs GDAXI — 599 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 1.298× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
@@ -67,16 +67,16 @@ _Cloture 2026-10-20 : 130.32 · ATR Wilder 5.37 (4.12 %)_
 - Budget de queue : **6.13 %** du notionnel (temoin fige : 12.0 %) — DERIVE de la contrainte JOINTE d'appel de marge par allocation d'Euler : c'est la part de CETTE ligne dans la queue du portefeuille, pas un pourcentage choisi.
    - prix du risque 0.264 : chaque ligne protegeable doit ramener sa perte de queue a ce multiple de ce qu'elle coute aujourd'hui — le noyau permanent preleve 36.1 % de la queue AVANT le partage, ce qui durcit le budget de toutes les autres.
 - Candidats (la structure propose, la statistique elimine) :
-   - 🟢 support a 1.13 ATR (stop 6.737 %) — p(stop avant cible) 0.4673 [0.42 ; 0.52], R/R 6.26, perte reelle 7.032 % (gap inclus), EV -0.6267 % — **REFUSE**
-      - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 6.26 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : CVaR 95 % 9.39 % > budget 6.13 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.63 %) : P(cible) 0.1 % x 44.02 % + P(rien) 53.2 % x 4.95 % ne couvrent pas P(stop) 46.7 % x 7.03 %.
+   - 🟢 support a 1.13 ATR (stop 6.822 %) — p(stop avant cible) 0.467 [0.41 ; 0.52], R/R 6.178, perte reelle 7.126 % (gap inclus), EV -0.6689 % — **REFUSE**
+      - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 6.18 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : CVaR 95 % 9.58 % > budget 6.13 %
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.67 %) : P(cible) 0.1 % x 44.02 % + P(rien) 53.2 % x 4.94 % ne couvrent pas P(stop) 46.7 % x 7.13 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon. P(cible) nulle : la cible (+44.0 %) est hors d'atteinte a l'horizon ; verifier la cible avant de conclure.
-   - 🟢 support a 3.18 ATR (stop 15.066 %) — p(stop avant cible) 0.0567 [0.04 ; 0.08], R/R 2.717, perte reelle 16.2 % (gap inclus), EV 0.6329 % — **REFUSE**
-      - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.72 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 2.72 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 16.35 % > budget 6.13 %
-   - 🟢 support a 5.75 ATR (stop 25.495 %) — p(stop avant cible) 0.0036 [0.00 ; 0.01], R/R 1.569, perte reelle 28.059 % (gap inclus), EV 0.9723 % — **REFUSE**
+   - 🟢 support a 3.18 ATR (stop 15.151 %) — p(stop avant cible) 0.0492 [0.03 ; 0.08], R/R 2.68, perte reelle 16.428 % (gap inclus), EV 0.6883 % — **REFUSE**
+      - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.68 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 2.68 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 16.37 % > budget 6.13 %
+   - 🟢 support a 5.75 ATR (stop 25.581 %) — p(stop avant cible) 0.0036 [0.00 ; 0.01], R/R 1.567, perte reelle 28.091 % (gap inclus), EV 0.9722 % — **REFUSE**
       - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 1.57 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.57 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 14.32 % > budget 6.13 %
@@ -309,7 +309,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.53 · part idiosyncratique 0.47
+**Factor** : R² 0.54 · part idiosyncratique 0.46
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -318,8 +318,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -329,8 +329,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -1.284  _(pas de croisement recent)_
 - **BB** : %B -0.03 · largeur 14.6%
 - **ATR** : 5.29 (30.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF -0.02  _(neutre)_
-- **Vol ratio** : 1.04  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.018  _(neutre)_
+- **Vol ratio** : 0.61  _(volume normal)_
 - **Choppiness** : 38.9  _(transition)_
 - **MA** : MA20 141.34 · MA50 145.17 · MA200 154.36  _(prix < MA20)_
 - **Dist MA** : MA20 -7.8% · MA50 -10.2% · MA200 -15.6%
@@ -338,5 +338,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (781455 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (758689 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

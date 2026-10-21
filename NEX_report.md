@@ -1,6 +1,6 @@
 # NEX
 
-**Generated** : 2026-10-20T21:46:24.477343+00:00  
+**Generated** : 2026-10-21T00:10:39.487475+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 4/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -55,7 +55,7 @@ _Cloture 2026-10-20 : 118.6 · ATR Wilder 4.5 (3.8 %)_
    - _fenêtre arrêtée : historique epuise — le regime est homogene sur toute la profondeur_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -7.6 % vs -7.9 % si l'on extrapolait par √5 _(rapport 0.962 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.9997** (β de hausse 1.0886, asymétrie 0.9183) vs FCHI — 620 séances de repli, historique complet
+- **β de baisse : 1.0023** (β de hausse 1.0886, asymétrie 0.9207) vs FCHI — 619 séances de repli, historique complet
 
 
 ## Echelle Warden — OU poser le stop
@@ -175,11 +175,11 @@ _Cloture 2026-10-20 : 118.6 · ATR Wilder 4.5 (3.8 %)_
 | 1.0 ATR | 3.848 % | 114.0357 | 10.78 % | 24.44 % | 34.68 % | 48.43 % | 61.62 % | 74.23 % |
 | 1.25 ATR | 4.811 % | 112.8946 | 4.8 % | 16.39 % | 25.15 % | 39.76 % | 54.6 % | 67.73 % |
 | 1.5 ATR | 5.773 % | 111.7536 | 2.45 % | 11.48 % | 18.96 % | 31.1 % | 47.18 % | 60.34 % |
-| 2.0 ATR | 7.697 % | 109.4714 | 0.88 % | 5.5 % | 10.41 % | 19.98 % | 35.61 % | 50.35 % |
+| 2.0 ATR | 7.697 % | 109.4714 | 0.88 % | 5.5 % | 10.31 % | 19.88 % | 35.51 % | 50.35 % |
 | 2.5 ATR | 9.621 % | 107.1893 | 0.49 % | 2.75 % | 5.8 % | 11.71 % | 24.83 % | 38.46 % |
 | 3.0 ATR | 11.545 % | 104.9071 | 0.2 % | 1.67 % | 3.24 % | 7.19 % | 17.61 % | 29.87 % |
 | 4.0 ATR | 15.394 % | 100.3429 | 0.1 % | 0.49 % | 0.88 % | 1.87 % | 7.52 % | 17.58 % |
-| 6.0 ATR | 23.091 % | 91.2143 | 0.0 % | 0.0 % | 0.0 % | 0.2 % | 1.38 % | 4.4 % |
+| 6.0 ATR | 23.091 % | 91.2143 | 0.0 % | 0.0 % | 0.0 % | 0.2 % | 1.29 % | 4.3 % |
 
 **A quelle distance poser pour n'etre sorti que p % du temps** (lecture INVERSE — c'est elle qui sert a arbitrer) :
 
@@ -187,18 +187,18 @@ _Cloture 2026-10-20 : 118.6 · ATR Wilder 4.5 (3.8 %)_
 |---|---|---|---|---|---|---|---|---|
 | **1 s.** | 0.15 ATR | 0.35 ATR | 0.40 ATR | 0.53 ATR | 0.68 ATR | 0.77 ATR | 1.03 ATR | 1.24 ATR |
 | **2 s.** | 0.24 ATR | 0.54 ATR | 0.62 ATR | 0.82 ATR | 0.99 ATR | 1.14 ATR | 1.62 ATR | 2.09 ATR |
-| **3 s.** | 0.31 ATR | 0.70 ATR | 0.79 ATR | 1.04 ATR | 1.26 ATR | 1.46 ATR | 2.04 ATR | 2.66 ATR |
+| **3 s.** | 0.31 ATR | 0.70 ATR | 0.79 ATR | 1.04 ATR | 1.26 ATR | 1.46 ATR | 2.03 ATR | 2.66 ATR |
 | **5 s.** | 0.42 ATR | 0.96 ATR | 1.10 ATR | 1.45 ATR | 1.77 ATR | 2.00 ATR | 2.69 ATR | 3.41 ATR |
-| **10 s.** | 0.63 ATR | 1.41 ATR | 1.59 ATR | 2.12 ATR | 2.49 ATR | 2.83 ATR | 3.75 ATR | 4.82 ATR |
-| **20 s.** | 0.97 ATR | 2.02 ATR | 2.23 ATR | 2.82 ATR | 3.40 ATR | 3.80 ATR | 5.15 ATR | 5.91 ATR |
+| **10 s.** | 0.63 ATR | 1.41 ATR | 1.59 ATR | 2.12 ATR | 2.49 ATR | 2.83 ATR | 3.75 ATR | 4.81 ATR |
+| **20 s.** | 0.97 ATR | 2.02 ATR | 2.23 ATR | 2.82 ATR | 3.40 ATR | 3.80 ATR | 5.14 ATR | 5.89 ATR |
 
 **Distance optimale par horizon** (plage utile mesuree, puis meilleur point unique de cette plage) :
 - **1 seance(s)** : plage utile 0.399–0.35 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ✅ optimum identifie (77.0 % des re-echantillons)
 - **2 seance(s)** : plage utile 0.617–1.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (2.886 %, prix 115.1772), p(touche) 36.41 % (en stress 89.22 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 46.6 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **3 seance(s)** : plage utile 0.793–1.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (3.848 %, prix 114.0363), p(touche) 34.68 % (en stress 83.33 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 38.8 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **5 seance(s)** : plage utile 1.099–1.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.25 ATR (4.811 %, prix 112.8942), p(touche) 39.76 % (en stress 94.12 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 59.1 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
-- **10 seance(s)** : plage utile 1.594–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (7.697 %, prix 109.4714), p(touche) 35.61 % (en stress 99.02 %)  ✅ optimum identifie (71.4 % des re-echantillons)
-- **20 seance(s)** : plage utile 2.225–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (9.621 %, prix 107.1895), p(touche) 38.46 % (en stress 98.02 %)  ✅ optimum identifie (68.9 % des re-echantillons)
+- **10 seance(s)** : plage utile 1.593–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (7.697 %, prix 109.4714), p(touche) 35.51 % (en stress 98.04 %)  ✅ optimum identifie (71.5 % des re-echantillons)
+- **20 seance(s)** : plage utile 2.225–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (9.621 %, prix 107.1895), p(touche) 38.46 % (en stress 98.02 %)  ✅ optimum identifie (69.1 % des re-echantillons)
 
 - p(touche) = part des fenetres de N seances ou le prix est venu chercher un stop pose a cette distance SOUS le prix d'entree de la fenetre. Mesure sur les barres reelles du titre, pas modelisee.
 
@@ -297,7 +297,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.49 · part idiosyncratique 0.51
+**Factor** : R² 0.5 · part idiosyncratique 0.5
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -306,8 +306,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -317,8 +317,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -1.089  _(pas de croisement recent)_
 - **BB** : %B -0.1 · largeur 15.7%
 - **ATR** : 4.56 (70.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV falling · CMF -0.264  _(distribution)_
-- **Vol ratio** : 1.24  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.277  _(distribution)_
+- **Vol ratio** : 0.49  _(volume atone)_
 - **Choppiness** : 42.5  _(transition)_
 - **MA** : MA20 130.89 · MA50 135.95 · MA200 135.73  _(prix < MA20)_
 - **Dist MA** : MA20 -9.4% · MA50 -12.8% · MA200 -12.6%
@@ -326,5 +326,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (750743 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (751023 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

@@ -1,6 +1,6 @@
 # 298040
 
-**Generated** : 2026-10-20T21:55:46.996437+00:00  
+**Generated** : 2026-10-21T00:17:56.439247+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 3/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -30,8 +30,8 @@ Plan privilegie A (intraday), composite 3/10, conviction 'Unknown'.
 ## Plans d'achat — Swing / Deep (methode v4)
 
 _Cloture 2026-10-20 : 1892000.0 · ATR Wilder 158190.13 (8.36 %)_
-- **Swing** : plage **1720052.98 → 1591654.96** (-9.09 % a -15.87 % sous la cloture, 0.81 ATR) — touchee 50 % → 30 % du temps en 10 seances ; aucun support reel dans la plage. stop INDICATIF 1363719.61 (-14.32 % sous le bas ; sous le support 1442814.68-1491605.62 (- 0,5 ATR)).
-- **Deep** : plage **1591654.96 → 1367554.41** (-15.87 % a -27.72 % sous la cloture, 1.42 ATR) — touchee 42 % → 15 % du temps en 20 seances ; supports reels dans la plage : 1442814.68-1491605.62 (C). stop INDICATIF 1271116.63 (-7.05 % sous le bas ; sous le support 1350211.69-1364151.97 (- 0,5 ATR)).
+- **Swing** : plage **1720053.18 → 1591655.27** (-9.09 % a -15.87 % sous la cloture, 0.81 ATR) — touchee 50 % → 30 % du temps en 10 seances ; aucun support reel dans la plage. stop INDICATIF 1363719.61 (-14.32 % sous le bas ; sous le support 1442814.68-1491605.62 (- 0,5 ATR)).
+- **Deep** : plage **1591655.27 → 1367554.42** (-15.87 % a -27.72 % sous la cloture, 1.42 ATR) — touchee 42 % → 15 % du temps en 20 seances ; supports reels dans la plage : 1442814.68-1491605.62 (C). stop INDICATIF 1271116.63 (-7.05 % sous le bas ; sous le support 1350211.69-1364151.97 (- 0,5 ATR)).
 - 🟢 **ACHAT PAS CHER actif** (DD20) : 7.06 ATR sous le plus haut 20 s., RSI(2) 25.3. Limite **1812904.94** (seance suivante), stop catastrophe 1180144.42, sortie : vente a l'ouverture qui suit la 1re cloture au-dessus de la MM5, au plus tard 21 seances.
 - Supports reels sous le cours (pour le Warden) : 1723610.98-1793312.2 (A, -5.22 %) ; 1442814.68-1491605.62 (C, -21.16 %) ; 1350211.69-1364151.97 (A, -27.9 %) ; 1264578.88-1309386.78 (A, -30.79 %) ; 1170980.01-1187907.55 (A, -37.21 %) ; 1068419.78-1138120.94 (A, -39.85 %)
 - Resistances reelles au-dessus : 2016356.01-2091035.73 (A, 6.57 %) ; 2101000.0-2101000.0 (C, 11.05 %) ; 2189000.0-2220000.0 (B, 15.7 %) ; 2400000.0-2472400.84 (A, 26.85 %)
@@ -40,15 +40,15 @@ _Cloture 2026-10-20 : 1892000.0 · ATR Wilder 158190.13 (8.36 %)_
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
-- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=3.44 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (12.06 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1219).
+- 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=3.45 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
+- **Au stop du plan (12.06 %)** : le gap seul le franchit 0.0 % des séances (0 fois sur 1218).
    - exécution **— pt plus bas** dans le cas TYPIQUE (médiane), — au p90, **— au pire**
    - perte réelle **— %** en moyenne _(tirée par la queue)_, jusqu'à **— %** — au lieu des 12.06 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 0 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
-- Chocs d'ouverture : p05 -2.525 % | p01 -5.142 % | pire -11.686 % _(sur 1219 séances)_
-- **P(stop avant cible)** _(source : daily, 1220 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -2.528 % | p01 -5.142 % | pire -11.686 % _(sur 1218 séances)_
+- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0903** [0.0543 ; 0.1398] _(largeur 8.5 pt, n_eff 173.1)_
    - swing : **0.3259** [0.2781 ; 0.3766] _(largeur 9.9 pt, n_eff 345.6)_
    - deep : **0.3137** [0.2665 ; 0.364] _(largeur 9.8 pt, n_eff 345.6)_
@@ -57,7 +57,7 @@ _Cloture 2026-10-20 : 1892000.0 · ATR Wilder 158190.13 (8.36 %)_
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -12.43 % vs -12.7 % si l'on extrapolait par √5 _(rapport 0.979 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.1188** (β de hausse 0.9986, asymétrie 1.1204) vs KS11 — 555 séances de repli, historique complet
+- **β de baisse : 1.1191** (β de hausse 0.9986, asymétrie 1.1206) vs KS11 — 554 séances de repli, historique complet
 
 
 ## Edge, scénarios & sizing
@@ -163,8 +163,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -183,5 +183,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (461902 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (462166 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

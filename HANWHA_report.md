@@ -1,6 +1,6 @@
 # 012450
 
-**Generated** : 2026-10-20T21:57:01.472788+00:00  
+**Generated** : 2026-10-21T00:18:55.224558+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 2/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -49,13 +49,13 @@ _Cloture 2026-10-20 : 799000.0 · ATR Wilder 60461.1 (7.57 %)_
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟠 **Régime de gap : intermediaire** — p_breach(-3 %)=1.48 % — entre les deux regimes ; ni queue pure ni franchissement ordinaire
-- **Au stop du plan (8.47 %)** : le gap seul le franchit 0.246 % des séances (3 fois sur 1219).
+- **Au stop du plan (8.47 %)** : le gap seul le franchit 0.246 % des séances (3 fois sur 1218).
    - exécution **4.688 pt plus bas** dans le cas TYPIQUE (médiane), 4.737 au p90, **4.749 au pire**
    - perte réelle **11.779 %** en moyenne _(tirée par la queue)_, jusqu'à **13.219 %** — au lieu des 8.47 % annoncés par la distance
-   - coût AMORTI sur toutes les séances : 0.0081 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+   - coût AMORTI sur toutes les séances : 0.0082 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 3 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
-- Chocs d'ouverture : p05 -1.844 % | p01 -3.826 % | pire -13.219 % _(sur 1219 séances)_
-- **P(stop avant cible)** _(source : daily, 1220 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -1.845 % | p01 -3.827 % | pire -13.219 % _(sur 1218 séances)_
+- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.0512** [0.0255 ; 0.0917] _(largeur 6.6 pt, n_eff 173.1)_
    - swing : **0.3675** [0.3179 ; 0.4193] _(largeur 10.1 pt, n_eff 345.6)_
    - deep : **0.3284** [0.2805 ; 0.3792] _(largeur 9.9 pt, n_eff 345.6)_
@@ -63,8 +63,8 @@ _Cloture 2026-10-20 : 799000.0 · ATR Wilder 60461.1 (7.57 %)_
    - _fenêtre arrêtée : rupture de regime a 780 seances en arriere (volatilite 2.21 % contre 4.16 % aujourd'hui, rapport 0.53)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -10.6 % vs -12.04 % si l'on extrapolait par √5 _(rapport 0.88 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.516** (β de hausse 0.2939, asymétrie 1.7557) vs KS11 — 555 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 0.294× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 0.5142** (β de hausse 0.2939, asymétrie 1.7494) vs KS11 — 554 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 0.295× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Edge, scénarios & sizing
@@ -161,7 +161,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.19 · part idiosyncratique 0.81
+**Factor** : R² 0.17 · part idiosyncratique 0.83
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -170,8 +170,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : 🟢 LIVE
-- **deep** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -190,5 +190,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (463235 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (463502 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
