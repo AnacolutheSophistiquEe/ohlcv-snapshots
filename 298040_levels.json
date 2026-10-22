@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "298040",
-    "generated_at": "2026-10-22T00:30:53Z",
+    "generated_at": "2026-10-22T22:05:06Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-10-23T08:00:00Z",
@@ -10,23 +10,23 @@
     "source_precomputed": "298040_precomputed.json"
   },
   "context": {
-    "last_price": 1949000.0,
+    "last_price": 1924000.0,
     "ta_score": {
       "value": 0,
       "max": 10,
       "label": "very_bearish"
     },
-    "alignment_flag": "divergent_short_long",
+    "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
       "probability": 0.9,
-      "expected_duration_days": 5.63
+      "expected_duration_days": 5.79
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 3,
+      "buy": 2,
       "sell": 7,
-      "neutral": 5,
+      "neutral": 6,
       "total": 15,
       "verdict": "strong_sell"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 5.84,
       "confidence": "low"
     },
-    "narrative_short": "TA score 0/10 (very_bearish), alignment divergent_short_long, HMM sideways (0.90), vol normal, signals strong_sell (3b/7s/5n)."
+    "narrative_short": "TA score 0/10 (very_bearish), alignment mixed, HMM sideways (0.90), vol normal, signals strong_sell (2b/7s/6n)."
   },
   "notes": {
-    "atr_daily": 155178.5714,
+    "atr_daily": 156535.7143,
     "atr_pct_daily": null,
-    "beta_60d": 1.2842,
+    "beta_60d": 1.2767,
     "beta_benchmark": "KS11",
-    "beta_corr_60d": 0.7931,
+    "beta_corr_60d": 0.7944,
     "btc_corr_high": null,
     "candlestick": {
       "name": "hammer",
@@ -53,11 +53,11 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -57.64,
+      "current_dd_pct": -58.18,
       "ath_price": 4601000.0,
       "ath_date": "2026-05-07",
       "max_dd_1y_pct": -60.42,
-      "days_in_dd": 167,
+      "days_in_dd": 168,
       "median_recovery_days": null
     }
   },
@@ -68,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 1934379.4,
-        "max": 1946020.6
+        "min": 1910094.145,
+        "max": 1921589.195
       },
       "stop": {
-        "price": 1716232.1429,
+        "price": 1689196.4286,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -11.54
+        "distance_pct": -11.83
       },
       "targets": [
         {
           "level": 1,
-          "price": 2070542.7546,
+          "price": 2070407.0403,
           "basis": "sous résistance (medium) à 2.086e+06 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 0.58
+          "rr": 0.68
         },
         {
           "level": 2,
-          "price": 2244037.6717,
+          "price": 2245419.2893,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.36
+          "rr": 1.45
         },
         {
           "level": 3,
-          "price": 2417532.5889,
+          "price": 2420431.5383,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.13
+          "rr": 2.23
         }
       ],
       "preferred_target": 1,
@@ -107,32 +107,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 1959757.8,
-        "max": 1967589.0
+        "min": 1934090.4883,
+        "max": 1941819.1216
       },
       "stop": {
-        "price": 1880210.7143,
+        "price": 1853890.4729,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -4.25
+        "distance_pct": -4.34
       },
       "targets": [
         {
           "level": 1,
-          "price": 2070542.7546,
+          "price": 2070407.0403,
           "basis": "sous résistance (medium) à 2.086e+06 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 1.28
+          "rr": 1.58
         },
         {
           "level": 2,
-          "price": 2244037.6717,
+          "price": 2245419.2893,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.36
+          "rr": 3.66
         },
         {
           "level": 3,
-          "price": 2417532.5889,
+          "price": 2420431.5383,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 5.44
+          "rr": 5.74
         }
       ],
       "preferred_target": 1,
@@ -146,32 +146,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 1731981.7654,
-        "max": 1767148.9078
+        "min": 1733645.9847,
+        "max": 1768846.9184
       },
       "stop": {
-        "price": 1525589.2651,
+        "price": 1525243.1136,
         "basis": "fallback_sr_support",
-        "distance_pct": -12.8
+        "distance_pct": -12.91
       },
       "targets": [
         {
           "level": 1,
-          "price": 2070542.7546,
+          "price": 2070407.0403,
           "basis": "sous résistance (medium) à 2.086e+06 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 1.43
+          "rr": 1.41
         },
         {
           "level": 2,
-          "price": 2244037.6717,
+          "price": 2245419.2893,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.21
+          "rr": 2.19
         },
         {
           "level": 3,
-          "price": 2417532.5889,
+          "price": 2420431.5383,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.98
+          "rr": 2.96
         }
       ],
       "preferred_target": 1,
@@ -184,7 +184,7 @@
   "bot_actionable_reason": "ta_score=0<4",
   "global_conditions": [],
   "invalidation": {
-    "price": 1510333.3724,
+    "price": 1509990.6825,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
