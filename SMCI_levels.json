@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-10-21T22:05:19Z",
+    "generated_at": "2026-10-22T00:30:53Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-22T08:00:00Z",
-    "valid_until": "2026-10-22T21:00:00Z",
+    "valid_from": "2026-10-23T08:00:00Z",
+    "valid_until": "2026-10-23T21:00:00Z",
     "source_precomputed": "SMCI_precomputed.json"
   },
   "context": {
-    "last_price": 35.57,
+    "last_price": 35.55,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -19,7 +19,7 @@
     "alignment_flag": "divergent_short_long",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.7075,
+      "probability": 0.7077,
       "expected_duration_days": 4.0
     },
     "volatility_regime": "high",
@@ -42,14 +42,14 @@
   "notes": {
     "atr_daily": 2.7307,
     "atr_pct_daily": null,
-    "beta_60d": 3.2782,
+    "beta_60d": 3.2763,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.5716,
+    "beta_corr_60d": 0.5714,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "hammer",
-      "date": "2026-10-15",
-      "confidence": 0.921
+      "name": "shooting_star",
+      "date": "2026-10-21",
+      "confidence": 0.648
     },
     "divergences": [
       {
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -70.06,
+      "current_dd_pct": -70.08,
       "ath_price": 118.807,
       "ath_date": "2024-03-13",
       "max_dd_1y_pct": -61.04,
@@ -76,32 +76,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 35.2539,
-        "max": 35.4661
+        "min": 35.234,
+        "max": 35.446
       },
       "stop": {
-        "price": 31.4739,
+        "price": 31.4539,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -10.99
+        "distance_pct": -11.0
       },
       "targets": [
         {
           "level": 1,
-          "price": 36.7315,
+          "price": 36.7225,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 0.35
+          "rr": 0.36
         },
         {
           "level": 2,
-          "price": 39.7845,
+          "price": 39.7755,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 1.14
         },
         {
           "level": 3,
-          "price": 42.8375,
+          "price": 42.8285,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.92
+          "rr": 1.93
         }
       ],
       "preferred_target": 1,
@@ -121,7 +121,7 @@
         "max": 40.3086
       },
       "stop": {
-        "price": 38.5923,
+        "price": 38.5919,
         "basis": "below_broken_resistance",
         "distance_pct": -4.07
       },
@@ -153,7 +153,7 @@
       "side": "long",
       "entry_zone": {
         "min": 30.0462,
-        "max": 32.5175
+        "max": 32.5174
       },
       "stop": {
         "price": 28.8444,
@@ -163,19 +163,19 @@
       "targets": [
         {
           "level": 1,
-          "price": 36.7315,
+          "price": 36.7225,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 2.24
+          "rr": 2.23
         },
         {
           "level": 2,
-          "price": 39.7845,
+          "price": 39.7755,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.49
+          "rr": 3.48
         },
         {
           "level": 3,
-          "price": 42.8375,
+          "price": 42.8285,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 4.74
         }

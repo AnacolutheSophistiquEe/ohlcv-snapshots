@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-10-21T22:05:19Z",
+    "generated_at": "2026-10-22T00:30:53Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-22T08:00:00Z",
-    "valid_until": "2026-10-22T21:00:00Z",
+    "valid_from": "2026-10-23T08:00:00Z",
+    "valid_until": "2026-10-23T21:00:00Z",
     "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
-    "last_price": 153.48,
+    "last_price": 153.31,
     "ta_score": {
       "value": 6,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 10.0157,
     "atr_pct_daily": null,
-    "beta_60d": 2.7869,
+    "beta_60d": 2.7851,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.4623,
+    "beta_corr_60d": 0.4621,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bullish_engulfing",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -67.61,
+      "current_dd_pct": -67.64,
       "ath_price": 473.83,
       "ath_date": "2024-11-20",
       "max_dd_1y_pct": -72.16,
@@ -77,31 +77,31 @@
       "side": "long",
       "entry_zone": {
         "min": 152.2674,
-        "max": 153.1115
+        "max": 153.103
       },
       "stop": {
-        "price": 142.3404,
+        "price": 142.2195,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -6.78
+        "distance_pct": -6.85
       },
       "targets": [
         {
           "level": 1,
           "price": 166.462,
           "basis": "sous VPVR VAH à 167.5 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 1.33
+          "rr": 1.32
         },
         {
           "level": 2,
           "price": 177.6599,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.41
+          "rr": 2.39
         },
         {
           "level": 3,
           "price": 188.8578,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.49
+          "rr": 3.46
         }
       ],
       "preferred_target": 1,
@@ -158,11 +158,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 135.3969,
+        "min": 135.396,
         "max": 139.125
       },
       "stop": {
-        "price": 129.981,
+        "price": 129.9802,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -5.3
       },
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 128.6812,
+    "price": 128.6804,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
