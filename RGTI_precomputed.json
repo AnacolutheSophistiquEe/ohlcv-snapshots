@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US76655K1034",
-    "generated_at": "2026-10-21T22:05:10.257790+00:00",
+    "generated_at": "2026-10-22T00:25:24.552623+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -429,7 +429,7 @@
           12.169,
           11.745,
           12.05,
-          10136350
+          8865683
         ]
       ],
       "h4": [
@@ -1256,8 +1256,8 @@
       "macd_hist": -0.24090410574380572,
       "macd_signal_cross": null,
       "obv_trend": "falling",
-      "mfi_14": 23.919445021553912,
-      "cmf_20": -0.3156794200959718,
+      "mfi_14": 23.502353119064594,
+      "cmf_20": -0.3188777737301896,
       "adl_trend": "falling",
       "adx_14": 25.187077971298976,
       "plus_di_14": 12.238039394962787,
@@ -1265,7 +1265,7 @@
       "di_spread_14": -21.595847224442362,
       "choppiness_14": 31.0311010467693,
       "regime_label": "strong_trend",
-      "volume_ratio_ma20": 0.6735808881345109,
+      "volume_ratio_ma20": 0.5916403626375255,
       "distance_ma20_pct": -14.557184900017331,
       "distance_ma50_pct": -21.742066038601067,
       "distance_ma200_pct": -31.70163440594172
@@ -1435,23 +1435,23 @@
     "benchmark": "IWM",
     "n_common_dates": 251,
     "relative_perf_pct": {
-      "1M": -23.32,
-      "3M": -13.76,
-      "6M": -34.94,
+      "1M": -23.31,
+      "3M": -13.75,
+      "6M": -34.93,
       "1Y": null
     },
     "perf_breakdown": {
       "1M": {
         "asset": -27.06,
-        "benchmark": -3.74
+        "benchmark": -3.75
       },
       "3M": {
         "asset": -18.86,
-        "benchmark": -5.1
+        "benchmark": -5.11
       },
       "6M": {
         "asset": -34.44,
-        "benchmark": 0.5
+        "benchmark": 0.49
       },
       "1Y": null
     },
@@ -1776,7 +1776,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.3738,
+          "p_touch": 0.3737,
           "p_touch_ref": "entry_mid",
           "distance_pct": 8.67
         },
@@ -1853,7 +1853,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.2495,
+          "p_touch": 0.2496,
           "p_touch_ref": "entry_mid",
           "distance_pct": 26.59
         },
@@ -1866,7 +1866,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.0518,
+          "p_touch": 0.0519,
           "p_touch_ref": "entry_mid",
           "distance_pct": 39.89
         }
@@ -2442,7 +2442,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-10-21T22:04:38.131879+00:00",
+    "generated_at": "2026-10-22T00:24:57.806799+00:00",
     "n_sessions": 125,
     "sessions_distinct": 125,
     "regime_window": "recent",
@@ -7972,7 +7972,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-10-21T22:04:23.297123+00:00",
+    "generated_at": "2026-10-22T00:24:45.485477+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8241,19 +8241,51 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-10-21T22:04:52.089615+00:00",
+    "generated_at": "2026-10-22T00:25:09.190930+00:00",
     "ticker": "RGTI",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 34,
+    "n_events": 35,
     "events": [
       {
-        "date": "2026-10-21",
+        "date": "2026-10-22",
         "type": "macro",
-        "label": "Sartorius (SRT3/SRT) Q3 2026 Earnings",
+        "label": "US Initial Jobless Claims (weekly)",
+        "importance": "medium",
+        "sessions_to_event": 0,
+        "calendar_days": 0,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+      },
+      {
+        "date": "2026-10-22",
+        "type": "macro",
+        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
+        "importance": "low",
+        "sessions_to_event": 0,
+        "calendar_days": 0,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
+      },
+      {
+        "date": "2026-10-22",
+        "type": "macro",
+        "label": "Sartorius Stedim Biotech (SRT3) Q3 2026 Earnings",
         "importance": "high",
         "sessions_to_event": 0,
         "calendar_days": 0,
@@ -8269,58 +8301,10 @@
       {
         "date": "2026-10-22",
         "type": "macro",
-        "label": "US Initial Jobless Claims (weekly)",
-        "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
-      },
-      {
-        "date": "2026-10-22",
-        "type": "macro",
-        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
-        "importance": "low",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
-      },
-      {
-        "date": "2026-10-22",
-        "type": "macro",
-        "label": "Sartorius Stedim Biotech (SRT3) Q3 2026 Earnings",
-        "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-10-22",
-        "type": "macro",
         "label": "Nexans (NEX) Q3 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -8336,7 +8320,7 @@
         "label": "US University of Michigan Consumer Sentiment (prelim + final)",
         "importance": "medium",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -8352,7 +8336,7 @@
         "label": "Safran (SAF) Q3 2026 Revenue",
         "importance": "low",
         "sessions_to_event": 1,
-        "calendar_days": 2,
+        "calendar_days": 1,
         "in_plan_horizon": [
           "intraday",
           "swing",
@@ -8367,9 +8351,10 @@
         "type": "macro",
         "label": "PMI Flash octobre 2026 — S&P Global US + EU",
         "importance": "high",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8382,8 +8367,8 @@
         "type": "macro",
         "label": "Ionis Pharmaceuticals (IONS) PDUFA FDA — diroximel fumarate — 26/10/2026",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8398,7 +8383,7 @@
         "label": "US Durable Goods Orders",
         "importance": "low",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8413,7 +8398,7 @@
         "label": "US New Home Sales",
         "importance": "low",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8428,7 +8413,7 @@
         "label": "Robinhood (HOOD) Q3 2026 Earnings",
         "importance": "low",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8443,7 +8428,7 @@
         "label": "SoFi Technologies (SOFI) Q3 2026 Earnings",
         "importance": "low",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8458,7 +8443,7 @@
         "label": "Israel Election",
         "importance": "low",
         "sessions_to_event": 4,
-        "calendar_days": 6,
+        "calendar_days": 5,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8472,8 +8457,8 @@
         "type": "macro",
         "label": "US FOMC Rate Decision",
         "importance": "high",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8487,8 +8472,8 @@
         "type": "macro",
         "label": "GE Vernova (GEV) Q3 2026 Earnings",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8502,9 +8487,10 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -8516,9 +8502,10 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -8530,9 +8517,10 @@
         "type": "macro",
         "label": "US PCE Price Index (headline) — Personal Income & Outlays",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -8544,9 +8532,10 @@
         "type": "macro",
         "label": "US Core PCE Price Index (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -8558,9 +8547,10 @@
         "type": "macro",
         "label": "US Personal Income & Spending",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -8572,9 +8562,10 @@
         "type": "macro",
         "label": "US GDP (advance / second / third estimate)",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -8586,9 +8577,10 @@
         "type": "macro",
         "label": "ECB Monetary Policy Decision",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -8600,9 +8592,10 @@
         "type": "macro",
         "label": "2CRSI — Résultats annuels FY2026 — 29/10/2026",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -8614,9 +8607,10 @@
         "type": "macro",
         "label": "Prysmian (PRY) Q3 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -8628,9 +8622,10 @@
         "type": "macro",
         "label": "2CRSi (2CRSI) Q3 2026 Earnings",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 8,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -8643,7 +8638,7 @@
         "label": "Inovio (INO) PDUFA FDA — INO-3107 RRP — 30/10/2026",
         "importance": "medium",
         "sessions_to_event": 6,
-        "calendar_days": 9,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8656,8 +8651,8 @@
         "type": "macro",
         "label": "Surrozen (SRZN) — IND clearance Wnt pathway liver fibrosis — 31/10/2026",
         "importance": "low",
-        "sessions_to_event": 7,
-        "calendar_days": 10,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8669,6 +8664,20 @@
         "date": "2026-11-01",
         "type": "macro",
         "label": "Agios (AGIO) FDA PDUFA — mitapivat drépanocytose",
+        "importance": "medium",
+        "sessions_to_event": 7,
+        "calendar_days": 10,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-02",
+        "type": "macro",
+        "label": "US ISM Manufacturing PMI",
         "importance": "medium",
         "sessions_to_event": 8,
         "calendar_days": 11,
@@ -8682,24 +8691,10 @@
       {
         "date": "2026-11-02",
         "type": "macro",
-        "label": "US ISM Manufacturing PMI",
-        "importance": "medium",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
-        "in_plan_horizon": [
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-02",
-        "type": "macro",
         "label": "Palantir Technologies (PLTR) Q3 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 8,
+        "calendar_days": 11,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8713,7 +8708,7 @@
         "label": "US JOLTS (Job Openings and Labor Turnover)",
         "importance": "medium",
         "sessions_to_event": 9,
-        "calendar_days": 13,
+        "calendar_days": 12,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8726,8 +8721,8 @@
         "type": "macro",
         "label": "US ISM Services PMI",
         "importance": "medium",
-        "sessions_to_event": 10,
-        "calendar_days": 14,
+        "sessions_to_event": 9,
+        "calendar_days": 13,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8740,6 +8735,34 @@
         "type": "macro",
         "label": "US ADP National Employment Report",
         "importance": "medium",
+        "sessions_to_event": 9,
+        "calendar_days": 13,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-05",
+        "type": "macro",
+        "label": "Rheinmetall (RHM) Q3 2026 Earnings",
+        "importance": "high",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-05",
+        "type": "macro",
+        "label": "Evotec (EVT) Q3/9M 2026 Results",
+        "importance": "low",
         "sessions_to_event": 10,
         "calendar_days": 14,
         "in_plan_horizon": [
@@ -9150,10 +9173,10 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-10-21T22:04:46.946469+00:00",
+    "generated_at": "2026-10-22T00:25:06.139984+00:00",
     "ticker": "RGTI",
     "window_sessions": 60,
-    "n_observations_aligned": 60,
+    "n_observations_aligned": 59,
     "model": "OLS avec intercept sur log-returns daily (stepwise VIF<=10)",
     "factor_sources_used": [
       "market=SPY",
@@ -9179,34 +9202,34 @@
     },
     "multicollinearity_diagnostics": {
       "vif_initial": {
-        "market": 271.24,
-        "sector": 13.39,
-        "momentum": 12.43,
-        "quality": 8.6,
-        "value": 46.32,
-        "growth": 161.91,
+        "market": 270.53,
+        "sector": 13.26,
+        "momentum": 12.3,
+        "quality": 8.73,
+        "value": 46.66,
+        "growth": 161.66,
         "low_vol": 4.22
       },
       "vif_threshold": 10.0,
       "dropped_factors": [
-        "market (VIF 271.2)",
-        "sector (VIF 13.4)"
+        "market (VIF 270.5)",
+        "sector (VIF 13.3)"
       ],
       "dropped_factors_detail": [
         {
           "factor": "market",
-          "vif": 271.24
+          "vif": 270.53
         },
         {
           "factor": "sector",
-          "vif": 13.39
+          "vif": 13.26
         }
       ],
       "vif_after_stepwise": {
-        "momentum": 4.8,
-        "quality": 8.19,
-        "value": 4.46,
-        "growth": 8.43,
+        "momentum": 4.76,
+        "quality": 8.37,
+        "value": 4.5,
+        "growth": 8.44,
         "low_vol": 3.72
       },
       "condition_number": 10.8,
@@ -9221,25 +9244,25 @@
     },
     "regression": {
       "betas": {
-        "momentum": 0.6787,
-        "quality": -2.0555,
-        "value": 1.6003,
-        "growth": 2.8435,
-        "low_vol": 0.508
+        "momentum": 0.677,
+        "quality": -2.0203,
+        "value": 1.5801,
+        "growth": 2.8306,
+        "low_vol": 0.5081
       },
       "t_stats": {
-        "momentum": 1.205,
-        "quality": -1.055,
-        "value": 1.028,
-        "growth": 2.731,
-        "low_vol": 0.347
+        "momentum": 1.19,
+        "quality": -1.016,
+        "value": 1.0,
+        "growth": 2.681,
+        "low_vol": 0.344
       },
       "p_values": {
-        "momentum": 0.23352,
-        "quality": 0.29628,
-        "value": 0.30849,
-        "growth": 0.00851,
-        "low_vol": 0.73019
+        "momentum": 0.23916,
+        "quality": 0.31413,
+        "value": 0.3217,
+        "growth": 0.00977,
+        "low_vol": 0.73257
       },
       "significance": {
         "momentum": "ns",
@@ -9257,74 +9280,74 @@
       },
       "n_significant_factors": 1,
       "significance_threshold": 0.05,
-      "r_squared": 0.607,
-      "adj_r_squared": 0.571,
-      "alpha_daily_pct": -0.6096,
-      "alpha_t_stat": -1.538,
-      "alpha_p_value": 0.12992,
+      "r_squared": 0.603,
+      "adj_r_squared": 0.566,
+      "alpha_daily_pct": -0.6159,
+      "alpha_t_stat": -1.527,
+      "alpha_p_value": 0.13271,
       "alpha_significant": false
     },
     "return_attribution_30d": {
       "window_sessions": 30,
-      "total_return_pct": -23.486,
+      "total_return_pct": -30.448,
       "contribution_by_factor": {
-        "momentum": -2.033,
-        "quality": -6.439,
-        "value": 3.226,
-        "growth": 2.752,
-        "low_vol": 1.656
+        "momentum": -2.742,
+        "quality": -4.869,
+        "value": 1.913,
+        "growth": -1.152,
+        "low_vol": 1.373
       },
       "contribution_by_factor_significant": {
         "momentum": 0.0,
         "quality": 0.0,
         "value": 0.0,
-        "growth": 2.752,
+        "growth": -1.152,
         "low_vol": 0.0
       },
-      "alpha_contribution_pct": -18.289,
-      "idiosyncratic_pct": -4.359,
-      "idiosyncratic_share": 0.393
+      "alpha_contribution_pct": -18.476,
+      "idiosyncratic_pct": -6.495,
+      "idiosyncratic_share": 0.397
     },
     "stacked_bar_segments": [
       {
         "name": "momentum",
-        "contribution_pct": -2.033,
+        "contribution_pct": -2.742,
         "significant": false,
-        "p_value": 0.23352,
-        "share": 0.0525
+        "p_value": 0.23916,
+        "share": 0.0741
       },
       {
         "name": "quality",
-        "contribution_pct": -6.439,
+        "contribution_pct": -4.869,
         "significant": false,
-        "p_value": 0.29628,
-        "share": 0.1662
+        "p_value": 0.31413,
+        "share": 0.1315
       },
       {
         "name": "value",
-        "contribution_pct": 3.226,
+        "contribution_pct": 1.913,
         "significant": false,
-        "p_value": 0.30849,
-        "share": 0.0832
+        "p_value": 0.3217,
+        "share": 0.0517
       },
       {
         "name": "growth",
-        "contribution_pct": 2.752,
+        "contribution_pct": -1.152,
         "significant": true,
-        "p_value": 0.00851,
-        "share": 0.071
+        "p_value": 0.00977,
+        "share": 0.0311
       },
       {
         "name": "low_vol",
-        "contribution_pct": 1.656,
+        "contribution_pct": 1.373,
         "significant": false,
-        "p_value": 0.73019,
-        "share": 0.0427
+        "p_value": 0.73257,
+        "share": 0.0371
       },
       {
         "name": "idiosyncratic",
-        "contribution_pct": -4.359,
-        "share": 0.1125
+        "contribution_pct": -6.495,
+        "share": 0.1754
       }
     ],
     "flags": {
@@ -9344,36 +9367,36 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-10-21T22:04:42.366235+00:00",
+    "generated_at": "2026-10-22T00:25:01.820945+00:00",
     "ticker": "RGTI",
-    "spot_price": 12.05,
+    "spot_price": 11.66,
     "expiries_available": [
       {
         "date": "2026-10-23",
-        "days_to_exp": 2
+        "days_to_exp": 1
       },
       {
         "date": "2026-10-30",
-        "days_to_exp": 9
+        "days_to_exp": 8
       },
       {
         "date": "2026-11-06",
-        "days_to_exp": 16
+        "days_to_exp": 15
       },
       {
         "date": "2026-11-13",
-        "days_to_exp": 23
+        "days_to_exp": 22
       },
       {
         "date": "2026-11-20",
-        "days_to_exp": 30
+        "days_to_exp": 29
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.75,
-      "iv_atm_90d": 0.75,
+      "iv_atm_30d": 0.7549,
+      "iv_atm_90d": 0.7549,
       "rv_20d_annualized": 0.5976,
-      "iv_rv_ratio": 1.255,
+      "iv_rv_ratio": 1.263,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
@@ -9384,17 +9407,17 @@
     },
     "term_structure": {
       "m1_expiry": "2026-10-23",
-      "m1_days_to_exp": 2,
-      "m1_iv_atm": 0.6211,
+      "m1_days_to_exp": 1,
+      "m1_iv_atm": 0.8203,
       "m3_expiry": "2026-11-20",
-      "m3_days_to_exp": 30,
-      "m3_iv_atm": 0.75,
-      "ratio_m1_m3": 0.8281,
-      "label": "contango_fort"
+      "m3_days_to_exp": 29,
+      "m3_iv_atm": 0.7549,
+      "ratio_m1_m3": 1.0867,
+      "label": "backwardation"
     },
     "open_interest_m1": {
       "expiry": "2026-10-23",
-      "days_to_exp": 2,
+      "days_to_exp": 1,
       "put_call_ratio": 0.262,
       "total_oi_m1": 36239,
       "largest_call_strike_oi": {
@@ -9407,14 +9430,14 @@
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 46238982.0,
+      "gex_total_usd_per_point": 18655520.0,
       "gex_label": "positive_stabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
       "strike": 12.0,
       "expiry": "2026-10-23",
-      "gap_vs_spot_pct": -0.41
+      "gap_vs_spot_pct": 2.92
     },
     "verdict": {
       "label": "bullish",
@@ -9461,7 +9484,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-10-21T22:04:51.168640+00:00",
+    "generated_at": "2026-10-22T00:25:08.329215+00:00",
     "ticker": "RGTI",
     "short_interest": {
       "status": "ok",
@@ -9475,7 +9498,7 @@
       "float_shares": 327964508,
       "delta_shares_short_mom_pct": 11.48,
       "squeeze_potential": "moderate",
-      "fetched_at": "2026-10-21T22:04:47.188212+00:00"
+      "fetched_at": "2026-10-22T00:25:06.355945+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -9581,7 +9604,7 @@
           "underlying_shares": 25000.0
         }
       ],
-      "fetched_at": "2026-10-21T22:04:51.166378+00:00"
+      "fetched_at": "2026-10-22T00:25:08.326451+00:00"
     },
     "data_quality": {
       "short_data_available": true,
@@ -9591,7 +9614,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-10-21T22:04:44.402309+00:00",
+    "generated_at": "2026-10-22T00:25:03.698221+00:00",
     "ticker": "RGTI",
     "yahoo": "RGTI",
     "source": "yfinance.Ticker.info",
@@ -9615,7 +9638,7 @@
       "market_cap": 4021913344.0,
       "market_cap_musd": 4021.91,
       "market_cap_str": "4.02 Md USD",
-      "enterprise_value": 3505735680.0,
+      "enterprise_value": 3635905280.0,
       "shares_outstanding": 333768747.0,
       "float_shares": 327964508.0,
       "free_float_pct": 98.3,
@@ -9645,7 +9668,7 @@
       "net_debt": -386007992.0,
       "net_debt_str": "-386.01 M USD",
       "net_debt_ebitda": 4.43,
-      "ebitda_implied": -87229053.99353074,
+      "ebitda_implied": -87229626.21755193,
       "debt_to_equity": 1.4,
       "current_ratio": 3.94,
       "quick_ratio": 3.78,
@@ -9672,11 +9695,11 @@
       "statements_note": "4 champs repris des etats financiers (exercice clos 2025-12-31), `.info` ne les publiant pas pour cette place"
     },
     "valuation": {
-      "ev_ebitda_ttm": -40.19,
+      "ev_ebitda_ttm": -41.68,
       "ev_definition": "enterpriseValue du fournisseur : capitalisation + dette totale Y COMPRIS obligations locatives - tresorerie et placements court terme",
       "earnings_metric": "EBITDA TTM du fournisseur (apres loyers)",
       "leases_treatment": "loyers dans l'EV mais PAS reintegres a l'EBITDA : le multiple est sureleve pour un gros locataire ; apparier EV ajuste <-> EBITDAR, ou EV hors loyers <-> EBITDA",
-      "ev_revenue_ttm": 262.54,
+      "ev_revenue_ttm": 272.29,
       "ps_ttm": 301.2,
       "pe_trailing": null,
       "pe_fwd": -58.5,
@@ -9712,7 +9735,7 @@
       "high_52w": 44.52
     },
     "price_behaviour": {
-      "realized_vol_1y_pct": 94.8,
+      "realized_vol_1y_pct": 94.9,
       "realized_vol_window_d": 252,
       "worst_month_pct": -59.1,
       "worst_month_when": "2022-06",
@@ -9725,9 +9748,9 @@
     "portfolio_fit": {
       "beta": 2.93,
       "beta_ref": "SPY",
-      "beta_days": 500,
+      "beta_days": 499,
       "correlation": 0.34,
-      "correlation_note": "correlation 0.34 avec SPY sur 500 seances"
+      "correlation_note": "correlation 0.34 avec SPY sur 499 seances"
     },
     "valuation_history": {
       "available": true,
@@ -9749,7 +9772,7 @@
       "ns_rule": "multiple non significatif (liste `ns`) quand le numerateur ou le denominateur est <= 0",
       "source": "yfinance : income_stmt, balance_sheet, cashflow (+ quarterly_*), history(auto_adjust=False), dividendes et splits ; change historique yfinance quand les devises different",
       "control": {
-        "market_cap_rebuilt_vs_source": 1.0,
+        "market_cap_rebuilt_vs_source": 0.967,
         "shares_ref_date": "2026-06-30"
       },
       "annual": [
@@ -9859,16 +9882,16 @@
         }
       ],
       "current": {
-        "date": "2026-10-21",
-        "price": 12.05,
-        "market_cap_m": 4020.8,
-        "ev_m": 3634.8,
+        "date": "2026-10-20",
+        "price": 11.66,
+        "market_cap_m": 3890.7,
+        "ev_m": 3504.7,
         "flows_basis": "TTM 4 trimestres",
         "flows_period_end": "2026-06-30",
-        "ev_sales": 272.21,
-        "ps": 301.12,
-        "pb": 7.48,
-        "fcf_yield_pct": -2.18,
+        "ev_sales": 262.46,
+        "ps": 291.37,
+        "pb": 7.24,
+        "fcf_yield_pct": -2.25,
         "ns": [
           "pe",
           "ev_ebitda"
@@ -9876,7 +9899,7 @@
       },
       "percentiles": {
         "ev_sales": {
-          "current": 272.21,
+          "current": 262.46,
           "n": 3,
           "min": 6.29,
           "median": 384.03,
@@ -9884,7 +9907,7 @@
           "pct_rank": 33.3
         },
         "ps": {
-          "current": 301.12,
+          "current": 291.37,
           "n": 4,
           "min": 6.97,
           "median": 206.53,
@@ -9892,7 +9915,7 @@
           "pct_rank": 50.0
         },
         "pb": {
-          "current": 7.48,
+          "current": 7.24,
           "n": 4,
           "min": 0.61,
           "median": 7.38,
@@ -9900,7 +9923,7 @@
           "pct_rank": 50.0
         },
         "fcf_yield_pct": {
-          "current": -2.18,
+          "current": -2.25,
           "n": 4,
           "min": -93.55,
           "median": -21.3,
@@ -10069,7 +10092,7 @@
       },
       {
         "field": "valuation.ev_ebitda_ttm",
-        "value": -40.19,
+        "value": -41.68,
         "from": "fundamentals.valuation.ev_ebitda_ttm"
       },
       {
@@ -10159,7 +10182,7 @@
       },
       {
         "field": "price_behaviour.realized_vol_1y",
-        "value": 94.8,
+        "value": 94.9,
         "from": "fundamentals.price_behaviour.realized_vol_1y_pct"
       },
       {
@@ -10199,7 +10222,7 @@
       },
       {
         "field": "portfolio_fit.correlation_note",
-        "value": "correlation 0.34 avec SPY sur 500 seances",
+        "value": "correlation 0.34 avec SPY sur 499 seances",
         "from": "fundamentals.portfolio_fit.correlation_note"
       }
     ],
@@ -10213,7 +10236,7 @@
       "scope": "univers suivi par le pipeline",
       "not_market_median": "mediane des titres SUIVIS par ce pipeline dans le meme secteur Yahoo — PAS une mediane de marche, de secteur GICS complet ni d'indice",
       "sector": "Technology",
-      "aggregate_generated_at": "2026-10-21T21:38:07.772663+00:00",
+      "aggregate_generated_at": "2026-10-22T00:04:00.013035+00:00",
       "aggregate_file": "sector_multiples.json",
       "aggregate_age_days": 0.0,
       "n_titles": 143,
@@ -10259,19 +10282,19 @@
           "q3": 14.95,
           "min": 0.41,
           "max": 313.02,
-          "self": 262.54,
-          "self_vs_median_pct": 3405.2,
+          "self": 272.29,
+          "self_vs_median_pct": 3535.4,
           "thin": false
         },
         "ps_ttm": {
           "n": 143,
           "q1": 4.01,
-          "median": 7.61,
+          "median": 7.69,
           "q3": 15.55,
           "min": 0.32,
           "max": 561.72,
           "self": 301.2,
-          "self_vs_median_pct": 3858.0,
+          "self_vs_median_pct": 3816.8,
           "thin": false
         },
         "price_to_book": {
@@ -10484,12 +10507,12 @@
       "reference_high": 56.34,
       "note": "épisode non récupéré : compté comme CENSURÉ dans chaque bucket qu'il atteint (n_censored) ; elapsed_sessions depuis l'entrée à -5 %, même origine que les durées de récupération"
     },
-    "last_close_synthetic": false,
+    "last_close_synthetic": true,
     "max_dd_1y_note": "sommet et creux dans la fenêtre des 252 dernières barres, pas depuis l'ATH"
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-10-21T22:04:21.445999+00:00",
+    "generated_at": "2026-10-22T00:24:43.999442+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/RGTI_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1253,
@@ -10897,7 +10920,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-10-21T22:04:23.056073+00:00",
+    "generated_at": "2026-10-22T00:24:45.297992+00:00",
     "ticker": "RGTI",
     "source_csv": "RGTI_daily_long.csv",
     "n_sessions": 1254,
@@ -14948,9 +14971,9 @@
   },
   "beta_dynamic": {
     "available": true,
-    "beta_60d": 3.7616,
-    "beta_252d": 3.2731,
-    "correlation_60d": 0.7312,
+    "beta_60d": 3.7613,
+    "beta_252d": 3.273,
+    "correlation_60d": 0.7311,
     "correlation_252d": 0.6182,
     "ratio_price_benchmark_trend_60d": "flat"
   },
@@ -15040,7 +15063,7 @@
         "anchor_date": "2026-10-15",
         "anchor_event": "swing_low",
         "anchor_price": 11.11,
-        "vwap_today": 11.9946,
+        "vwap_today": 11.9947,
         "distance_from_close_pct": 0.46,
         "bars_since_anchor": 4
       },
@@ -15048,16 +15071,16 @@
         "anchor_date": "2026-09-23",
         "anchor_event": "swing_high",
         "anchor_price": 17.66,
-        "vwap_today": 14.3039,
-        "distance_from_close_pct": -15.76,
+        "vwap_today": 14.3129,
+        "distance_from_close_pct": -15.81,
         "bars_since_anchor": 20
       },
       {
         "anchor_date": "2026-09-16",
         "anchor_event": "swing_low",
         "anchor_price": 14.41,
-        "vwap_today": 14.6153,
-        "distance_from_close_pct": -17.55,
+        "vwap_today": 14.6234,
+        "distance_from_close_pct": -17.6,
         "bars_since_anchor": 25
       }
     ]
@@ -19962,8 +19985,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": -62855204.719593525,
-        "signal_line": -47748721.30392316,
+        "value": -63467475.20071095,
+        "signal_line": -47836188.515511364,
         "signal": "neutral"
       }
     },
@@ -21484,7 +21507,7 @@
         -65638257.17667776,
         -69335362.38665453,
         -76784840.59356862,
-        -62855204.719593525
+        -63467475.20071095
       ],
       "klinger_signal": [
         0.0,
@@ -21737,7 +21760,7 @@
         -35078101.96822276,
         -39971996.313713014,
         -45230974.0679781,
-        -47748721.30392316
+        -47836188.515511364
       ]
     }
   },
@@ -21745,22 +21768,22 @@
     "available": true,
     "latest": {
       "close": 12.050000190734863,
-      "vwap": 14.100933225270294,
+      "vwap": 14.109891680775853,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": -14.544661702673354,
+        "distance_from_close_pct": -14.598917813433726,
         "position": "below_vwap"
       },
-      "force_index": -2444546.558768216,
+      "force_index": -2515340.925375201,
       "force_index_meta": {
         "signal": "neutral"
       },
-      "chaikin_oscillator": -14293430.699332252,
+      "chaikin_oscillator": -14470790.969113857,
       "chaikin_oscillator_meta": {
         "cross_recent": null,
         "signal": "neutral"
       },
-      "vroc_14": -20.8709669864714,
+      "vroc_14": -30.790380877290218,
       "vroc_14_meta": {
         "signal": "normal"
       }
@@ -22270,7 +22293,7 @@
         14.740159979869585,
         14.558758620615153,
         14.377658415255516,
-        14.100933225270294
+        14.109891680775853
       ],
       "force_index": [
         null,
@@ -22523,7 +22546,7 @@
         -4527838.951437255,
         -4077314.2740458967,
         -3510834.3152361847,
-        -2444546.558768216
+        -2515340.925375201
       ],
       "chaikin_oscillator": [
         0.0,
@@ -22776,7 +22799,7 @@
         -17809256.162857056,
         -18894642.92919998,
         -17780471.03083764,
-        -14293430.699332252
+        -14470790.969113857
       ],
       "vroc_14": [
         null,
@@ -23029,7 +23052,7 @@
         36.256887157164165,
         -19.578663866888824,
         -20.2393844400114,
-        -20.8709669864714
+        -30.790380877290218
       ]
     }
   },
@@ -23061,7 +23084,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": -0.9887,
+      "value": -1.0435,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -23087,7 +23110,7 @@
     "benchmark_synchronous": true,
     "asset_market": "US",
     "benchmark_market": "US",
-    "beta_up_days": 1.9967,
+    "beta_up_days": 1.9966,
     "beta_down_days": 1.8345,
     "beta_asymmetry": 0.9188,
     "n_up_days": 648,
@@ -23096,9 +23119,9 @@
     "window_days": 1253,
     "window_mode": "historique complet",
     "recent_252d": {
-      "beta_up_days": 2.7809,
+      "beta_up_days": 2.7802,
       "beta_down_days": 2.636,
-      "beta_asymmetry": 0.9479,
+      "beta_asymmetry": 0.9481,
       "n_up_days": 136,
       "n_down_days": 114,
       "window_days": 250
@@ -23109,39 +23132,39 @@
   },
   "anomaly_detection": {
     "available": true,
-    "anomaly_score": -0.0561,
+    "anomaly_score": -0.0482,
     "is_anomaly": false,
-    "anomaly_percentile": 69.8,
+    "anomaly_percentile": 74.6,
     "recent_anomalies": [
       {
         "date": "2026-09-23T00:00:00",
         "bars_ago": 20,
-        "score": 0.0343,
+        "score": 0.0345,
         "context": "wide range + strong body"
       },
       {
         "date": "2026-10-15T00:00:00",
         "bars_ago": 4,
-        "score": 0.0155,
+        "score": 0.0156,
         "context": "high volume + large return + wide range + strong body"
       },
       {
         "date": "2026-09-21T00:00:00",
         "bars_ago": 22,
-        "score": -0.0059,
+        "score": -0.0074,
         "context": "large return"
       },
       {
         "date": "2026-10-14T00:00:00",
         "bars_ago": 5,
-        "score": -0.0101,
+        "score": -0.0113,
         "context": "large return + wide range + strong body"
       },
       {
-        "date": "2026-10-13T00:00:00",
-        "bars_ago": 6,
-        "score": -0.0346,
-        "context": "multivariate outlier"
+        "date": "2026-09-17T00:00:00",
+        "bars_ago": 24,
+        "score": -0.0347,
+        "context": "large return + wide range + strong body"
       }
     ],
     "n_anomalies_30d": 2,
@@ -23368,42 +23391,49 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 17016435.833333332,
-        "median_volume_60d": 15280950.0,
-        "volume_consistency_score": 0.6632427626644427
+        "mean_volume_60d": 17147863.333333332,
+        "median_volume_60d": 15764800.0,
+        "volume_consistency_score": 0.6699335904115047
       },
       "liquidity": {
-        "liquidity_score": 227194720.71736813,
+        "liquidity_score": 232583414.9941794,
         "liquidity_classification": "high",
         "liquidity_note": "moyenne de Close × Volume sur les 30 dernières barres, en devise NATIVE du titre, non convertie : seuils 1e6/1e7/1e8/1e9 non comparables entre devises"
       },
       "freshness": {
         "last_bar_date": "2026-10-21T00:00:00",
-        "days_since_last_bar": 0,
-        "freshness_status": "fresh",
+        "days_since_last_bar": 1,
+        "freshness_status": "fresh_synthetic",
         "sessions_since_last_bar": 0,
-        "last_bar_synthetic": false,
+        "last_bar_synthetic": true,
         "last_bar_in_progress": false,
-        "freshness_reserve": null,
-        "asof_utc": "2026-10-21T22:05:07.396226+00:00",
+        "freshness_reserve": "dernière barre SYNTHÉTIQUE (reconstruite depuis le H1) : O/H/L exacts, clôture approchée (~0,3 %), volume partiel",
+        "asof_utc": "2026-10-22T00:25:22.400519+00:00",
         "venue": "NYSE",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
       "synthetic_bars": {
-        "dates": [],
-        "n": 0,
-        "last_bar_synthetic": false,
+        "dates": [
+          "2026-10-21"
+        ],
+        "n": 1,
+        "last_bar_synthetic": true,
         "nature": "reconstruite depuis le H1 (lag Yahoo) : O/H/L exacts, clôture approchée (~0,3 %, enchère de clôture absente), volume partiel",
         "detected_from": "en-tête CSV « # Backfilled-from-h1 » (deploy/ohlcv_snapshot.py)",
-        "excluded_from": [],
-        "producer_daily_source": "yfinance",
+        "excluded_from": [
+          "volume",
+          "liquidity"
+        ],
+        "producer_daily_source": "yfinance+h1backfill",
         "producer_daily_freshness": "fresh (last-bar 2026-10-21, expected 2026-10-21)",
         "supplemented_dates": []
       },
       "overall": {
-        "overall_quality_score": 91.10501594195867,
+        "overall_quality_score": 89.20537835816461,
         "overall_label": "excellent",
-        "warnings": []
+        "warnings": [
+          "dernière barre SYNTHÉTIQUE (reconstruite depuis le H1) : O/H/L exacts, clôture approchée (~0,3 %), volume partiel (daily)"
+        ]
       }
     },
     "h4": {
@@ -23443,13 +23473,13 @@
       },
       "freshness": {
         "last_bar_date": "2026-10-21T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-21T22:05:07.396226+00:00",
+        "asof_utc": "2026-10-22T00:25:22.400519+00:00",
         "venue": "NYSE",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23496,13 +23526,13 @@
       },
       "freshness": {
         "last_bar_date": "2026-10-21T19:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 1,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-21T22:05:07.396226+00:00",
+        "asof_utc": "2026-10-22T00:25:22.400519+00:00",
         "venue": "NYSE",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23516,10 +23546,12 @@
       "worst_tf_quality_score": 79.15538372933167,
       "worst_tf": "h1",
       "recommendation": "review_outliers",
-      "daily_freshness_status": "fresh",
+      "daily_freshness_status": "fresh_synthetic",
       "daily_sessions_since_last_bar": 0,
-      "last_daily_bar_synthetic": false,
-      "reserves": [],
+      "last_daily_bar_synthetic": true,
+      "reserves": [
+        "daily: dernière barre SYNTHÉTIQUE (reconstruite depuis le H1) : O/H/L exacts, clôture approchée (~0,3 %), volume partiel"
+      ],
       "venue": "NYSE"
     }
   },
@@ -23558,8 +23590,8 @@
     },
     "data": {
       "first": "2021-04-22",
-      "last": "2026-10-21",
-      "n_sessions": 1382,
+      "last": "2026-10-20",
+      "n_sessions": 1381,
       "n_dividends": 0,
       "universe_label": "univers actuel (biais de selection et de survie)"
     },
@@ -23568,7 +23600,7 @@
       "20": {
         "n_episodes": 25,
         "n_events": 25,
-        "share_sessions_in_episode": 0.5169,
+        "share_sessions_in_episode": 0.5165,
         "n_censored": 1,
         "by_end_reason": {
           "NEW_HIGH": 0,
@@ -23580,7 +23612,7 @@
       "63": {
         "n_episodes": 10,
         "n_events": 10,
-        "share_sessions_in_episode": 0.5845,
+        "share_sessions_in_episode": 0.5842,
         "n_censored": 1,
         "by_end_reason": {
           "NEW_HIGH": 0,
@@ -23592,7 +23624,7 @@
       "126": {
         "n_episodes": 6,
         "n_events": 6,
-        "share_sessions_in_episode": 0.5573,
+        "share_sessions_in_episode": 0.557,
         "n_censored": 1,
         "by_end_reason": {
           "NEW_HIGH": 0,
@@ -23604,7 +23636,7 @@
       "252": {
         "n_episodes": 2,
         "n_events": 2,
-        "share_sessions_in_episode": 0.5796,
+        "share_sessions_in_episode": 0.5793,
         "n_censored": 1,
         "by_end_reason": {
           "NEW_HIGH": 0,
@@ -23657,17 +23689,17 @@
         "depth_max_final": 0.3804463317489435,
         "depth_max_final_atr": 6.365515248087592,
         "low_depth_max_final": 0.40967057190055844,
-        "duration_sessions": 35,
+        "duration_sessions": 34,
         "anchor_to_trough_sessions": 46,
         "speed_final_atr": 0.9385440201118598,
         "event_id": "7d011205505ae587",
         "asof_state": {
-          "asof": "2026-10-21",
-          "depth_current": 0.3597236776763183,
-          "depth_current_atr": 6.018789942907917,
+          "asof": "2026-10-20",
+          "depth_current": 0.3804463317489435,
+          "depth_current_atr": 6.365515248087592,
           "depth_max_asof": 0.3804463317489435,
           "depth_max_asof_atr": 6.365515248087592,
-          "age_sessions": 35
+          "age_sessions": 34
         }
       },
       {
@@ -23712,17 +23744,17 @@
         "depth_max_final": 0.5686274675837182,
         "depth_max_final_atr": 9.542193114632044,
         "low_depth_max_final": 0.5889752358694437,
-        "duration_sessions": 68,
+        "duration_sessions": 67,
         "anchor_to_trough_sessions": 100,
         "speed_final_atr": 0.9542193114632044,
         "event_id": "7d011205505ae587",
         "asof_state": {
-          "asof": "2026-10-21",
-          "depth_current": 0.5541990423741162,
-          "depth_current_atr": 9.300068300867615,
+          "asof": "2026-10-20",
+          "depth_current": 0.5686274675837182,
+          "depth_current_atr": 9.542193114632044,
           "depth_max_asof": 0.5686274675837182,
           "depth_max_asof_atr": 9.542193114632044,
-          "age_sessions": 68
+          "age_sessions": 67
         }
       },
       {
@@ -23767,17 +23799,17 @@
         "depth_max_final": 0.7930422467903291,
         "depth_max_final_atr": 20.72021899719949,
         "low_depth_max_final": 0.8028044084737738,
-        "duration_sessions": 199,
+        "duration_sessions": 198,
         "anchor_to_trough_sessions": 254,
         "speed_final_atr": 1.3001021693526773,
         "event_id": "7d011205505ae587",
         "asof_state": {
-          "asof": "2026-10-21",
-          "depth_current": 0.7861199829943315,
-          "depth_current_atr": 20.53935748270898,
+          "asof": "2026-10-20",
+          "depth_current": 0.7930422467903291,
+          "depth_current_atr": 20.72021899719949,
           "depth_max_asof": 0.7930422467903291,
           "depth_max_asof_atr": 20.72021899719949,
-          "age_sessions": 199
+          "age_sessions": 198
         }
       },
       {
@@ -23822,21 +23854,21 @@
         "depth_max_final": 0.7930422467903291,
         "depth_max_final_atr": 35.106941736755466,
         "low_depth_max_final": 0.8028044084737738,
-        "duration_sessions": 148,
+        "duration_sessions": 147,
         "anchor_to_trough_sessions": 254,
         "speed_final_atr": 2.2028054393374323,
         "event_id": "7d011205505ae587",
         "asof_state": {
-          "asof": "2026-10-21",
-          "depth_current": 0.7861199829943315,
-          "depth_current_atr": 34.80050218355876,
+          "asof": "2026-10-20",
+          "depth_current": 0.7930422467903291,
+          "depth_current_atr": 35.106941736755466,
           "depth_max_asof": 0.7930422467903291,
           "depth_max_asof_atr": 35.106941736755466,
-          "age_sessions": 148
+          "age_sessions": 147
         }
       }
     ],
-    "generated_at": "2026-10-21T22:05:10.820190+00:00",
+    "generated_at": "2026-10-22T00:25:24.964096+00:00",
     "history_file": "data/v3/episodes/RGTI_episodes.json"
   },
   "setup": {
@@ -23926,18 +23958,6 @@
       }
     ],
     "counts_by_class": {
-      "20": {
-        "NOISE": 8,
-        "PULLBACK": 13,
-        "CORRECTION": 1,
-        "CAPITULATION": 3
-      },
-      "126": {
-        "NOISE": 1,
-        "PULLBACK": 4,
-        "CORRECTION": 0,
-        "CAPITULATION": 1
-      },
       "63": {
         "NOISE": 1,
         "PULLBACK": 7,
@@ -23949,15 +23969,27 @@
         "PULLBACK": 0,
         "CORRECTION": 1,
         "CAPITULATION": 1
+      },
+      "20": {
+        "NOISE": 8,
+        "PULLBACK": 13,
+        "CORRECTION": 1,
+        "CAPITULATION": 3
+      },
+      "126": {
+        "NOISE": 1,
+        "PULLBACK": 4,
+        "CORRECTION": 0,
+        "CAPITULATION": 1
       }
     },
-    "generated_at": "2026-10-21T22:05:10.880537+00:00"
+    "generated_at": "2026-10-22T00:25:25.013221+00:00"
   },
   "profiles": {
     "version": "profiles/1.0",
     "provenance": "v3",
     "status": "UNVALIDATED",
-    "generated_at": "2026-10-21T21:37:36.249911+00:00",
+    "generated_at": "2026-10-22T00:03:34.382901+00:00",
     "n_occasions": 392,
     "zones_open_episodes": [
       {
@@ -23974,9 +24006,9 @@
         ],
         "profile_version": "profiles/1.0",
         "zone_id": "f8fc4649c182",
-        "z_raw": 3.0187899429079175,
+        "z_raw": 3.3655152480875916,
         "subzone": "au-dessous",
-        "asof": "2026-10-21",
+        "asof": "2026-10-20",
         "status": "UNVALIDATED"
       }
     ],
@@ -24002,7 +24034,7 @@
   },
   "qa_flags": {
     "available": true,
-    "n_flags": 0,
+    "n_flags": 1,
     "n_high": 0,
     "checks_run": [
       "dist_ma200",
@@ -24013,7 +24045,16 @@
       "factor_contrib_sum",
       "currency"
     ],
-    "flags": [],
+    "flags": [
+      {
+        "id": "max_pain_gap",
+        "severity": "medium",
+        "section": "§12 Options",
+        "message": "Max-pain gap affiché +2.9 % ≠ (strike 12.0 − spot 12.05)/spot = -0.4 %. Probable spot d'options périmé vs spot courant.",
+        "expected": -0.4149,
+        "actual": 2.92
+      }
+    ],
     "note": "Assertions de cohérence inter-sections (observe-only). Un champ flaggé est suspect : la section DATA fraîche prime. Aucun flag = toutes les égalités testées passent."
   }
 }

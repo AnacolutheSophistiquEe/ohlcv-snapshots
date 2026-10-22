@@ -1,6 +1,6 @@
 # IONQ
 
-**Generated** : 2026-10-21T22:03:52.909964+00:00  
+**Generated** : 2026-10-22T00:24:21.312114+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 6/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -9,6 +9,10 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 > ⛔ **STAND-DOWN** — NON ESTIMABLE — la source du rating est inéligible (source périmée (13 séance(s) de retard, drapeau lu sur first_passage_by_horizon)) ; aucun repli sur un autre moteur (R09)  
 > ↳ spot $32.28 (+0.4% vs entrée) · entrée $32.14 · stop $31.04 · T1 $34.33 · R/R 1.99  
 > ↳ _probas brutes, non calibrées · n=0_  
+
+> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+>   - **[MEDIUM]** §12 Options — Max-pain gap affiché +7.2 % ≠ (strike 33.5 − spot 32.28)/spot = +3.8 %. Probable spot d'options périmé vs spot courant.
+
 
 ## Régime & alignement multi-TF
 
@@ -51,7 +55,7 @@ _Cloture 2026-10-21 : 32.28 · ATR Wilder 2.62 (8.11 %)_
    - _fenêtre arrêtée : rupture de regime a 480 seances en arriere (volatilite 10.15 % contre 5.50 % aujourd'hui, rapport 1.85)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -17.92 % vs -19.94 % si l'on extrapolait par √5 _(rapport 0.899 ; < 1 = le √5 surestime)_
-- **β de baisse : 2.198** (β de hausse 1.9997, asymétrie 1.0991) vs IWM — 605 séances de repli, historique complet
+- **β de baisse : 2.198** (β de hausse 1.9996, asymétrie 1.0992) vs IWM — 605 séances de repli, historique complet
 
 
 ## Echelle Warden — OU poser le stop
@@ -289,17 +293,17 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.55 · part idiosyncratique 0.45
+**Factor** : R² 0.55 · part idiosyncratique 0.46
 **Short/Insider** : SI —% | insider — | verdict sell_bias_modere
-**Options** : bullish
+**Options** : neutral
 
 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -309,8 +313,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -1.006  _(pas de croisement recent)_
 - **BB** : %B 0.2 · largeur 56.8%
 - **ATR** : 2.57 (14.0e pct 1a)  _(volatilite basse)_
-- **OBV/CMF** : OBV falling · CMF -0.262  _(distribution)_
-- **Vol ratio** : 0.65  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.267  _(distribution)_
+- **Vol ratio** : 0.54  _(volume atone)_
 - **Choppiness** : 32.2  _(marche directionnel)_
 - **MA** : MA20 38.99 · MA50 40.04 · MA200 42.69  _(prix < MA20)_
 - **Dist MA** : MA20 -17.2% · MA50 -19.4% · MA200 -24.4%
@@ -318,5 +322,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (763407 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (763679 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

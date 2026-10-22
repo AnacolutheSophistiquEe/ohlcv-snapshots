@@ -1,6 +1,6 @@
 # 012450
 
-**Generated** : 2026-10-21T21:55:54.270304+00:00  
+**Generated** : 2026-10-22T00:17:56.024333+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 3/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -40,7 +40,7 @@ _Cloture 2026-10-21 : 814000.0 · ATR Wilder 58571.02 (7.2 %)_
 - **Swing** : plage **743924.57 → 703421.1** (-8.61 % a -13.58 % sous la cloture, 0.69 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 739005.77-763528.87 (A) ; 695359.79-714206.92 (C). stop INDICATIF 601597.26 (-14.48 % sous le bas ; sous le support 630882.78-639810.36 (- 0,5 ATR)).
 - **Deep** : plage **703421.1 → 603542.55** (-13.58 % a -25.85 % sous la cloture, 1.71 ATR) — touchee 43 % → 15 % du temps en 20 seances ; supports reels dans la plage : 695359.79-714206.92 (C) ; 630882.78-639810.36 (B). stop INDICATIF 557951.27 (-7.55 % sous le bas ; sous le support 587236.78-603108.04 (- 0,5 ATR)).
 - 🟢 **ACHAT PAS CHER actif** (DD20) : 5.4 ATR sous le plus haut 20 s., RSI(2) 33.2. Limite **784714.49** (seance suivante), stop catastrophe 550430.39, sortie : vente a l'ouverture qui suit la 1re cloture au-dessus de la MM5, au plus tard 21 seances.
-- Supports reels sous le cours (pour le Warden) : 739005.77-763528.87 (A, -6.2 %) ; 695359.79-714206.92 (C, -12.26 %) ; 630882.78-639810.36 (B, -21.4 %) ; 587236.78-603108.04 (A, -25.91 %) ; 398765.51-438939.65 (A, -46.08 %) ; 359721.44-387638.51 (A, -52.38 %)
+- Supports reels sous le cours (pour le Warden) : 739005.77-763528.87 (A, -6.2 %) ; 695359.79-714206.92 (C, -12.26 %) ; 630882.78-639810.36 (B, -21.4 %) ; 587236.78-603108.04 (A, -25.91 %) ; 398765.51-438939.65 (A, -46.08 %) ; 359721.41-387638.51 (A, -52.38 %)
 - Resistances reelles au-dessus : 838201.17-862000.0 (A, 2.97 %) ; 885814.95-910000.0 (A, 8.82 %) ; 955000.0-979058.66 (A, 17.32 %) ; 994929.92-1021000.0 (A, 22.23 %)
 - _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
@@ -48,13 +48,13 @@ _Cloture 2026-10-21 : 814000.0 · ATR Wilder 58571.02 (7.2 %)_
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🟠 **Régime de gap : intermediaire** — p_breach(-3 %)=1.48 % — entre les deux regimes ; ni queue pure ni franchissement ordinaire
-- **Au stop du plan (9.26 %)** : le gap seul le franchit 0.164 % des séances (2 fois sur 1219).
+- **Au stop du plan (9.26 %)** : le gap seul le franchit 0.164 % des séances (2 fois sur 1218).
    - exécution **3.928 pt plus bas** dans le cas TYPIQUE (médiane), 3.953 au p90, **3.959 au pire**
    - perte réelle **13.188 %** en moyenne _(tirée par la queue)_, jusqu'à **13.219 %** — au lieu des 9.26 % annoncés par la distance
-   - coût AMORTI sur toutes les séances : 0.0064 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
+   - coût AMORTI sur toutes les séances : 0.0065 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 2 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
-- Chocs d'ouverture : p05 -1.844 % | p01 -3.826 % | pire -13.219 % _(sur 1219 séances)_
-- **P(stop avant cible)** _(source : daily, 1220 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
+- Chocs d'ouverture : p05 -1.845 % | p01 -3.827 % | pire -13.219 % _(sur 1218 séances)_
+- **P(stop avant cible)** _(source : daily, 1219 séances — à préférer au 5 s sur swing et deep, où celui-ci ne dispose que d'une trentaine d'observations effectives)_ :
    - intraday : **0.4714** [0.398 ; 0.5457] _(largeur 14.8 pt, n_eff 173.1)_
    - swing : **0.3766** [0.3267 ; 0.4285] _(largeur 10.2 pt, n_eff 345.6)_
    - deep : **0.3325** [0.2844 ; 0.3834] _(largeur 9.9 pt, n_eff 345.6)_
@@ -62,8 +62,8 @@ _Cloture 2026-10-21 : 814000.0 · ATR Wilder 58571.02 (7.2 %)_
    - _fenêtre arrêtée : rupture de regime a 720 seances en arriere (volatilite 2.45 % contre 4.16 % aujourd'hui, rapport 0.59)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -10.6 % vs -12.04 % si l'on extrapolait par √5 _(rapport 0.88 ; < 1 = le √5 surestime)_
-- **β de baisse : 0.5331** (β de hausse 0.2939, asymétrie 1.8137) vs KS11 — 555 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 0.308× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 0.5372** (β de hausse 0.2939, asymétrie 1.8277) vs KS11 — 554 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 0.305× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Edge, scénarios & sizing
@@ -166,8 +166,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
 - **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-5 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-4 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-4 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -176,7 +176,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **ADX** : 15.5  _(pas de tendance nette)_
 - **MACD** : hist -13266.008  _(pas de croisement recent)_
 - **BB** : %B 0.15 · largeur 41.6%
-- **ATR** : 58785.71 (33.0e pct 1a)  _(volatilite normale)_
+- **ATR** : 58785.71 (32.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV falling · CMF -0.273  _(distribution)_
 - **Vol ratio** : 1.03  _(volume normal)_
 - **Choppiness** : 35.1  _(marche directionnel)_
@@ -186,5 +186,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (479408 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (479429 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
