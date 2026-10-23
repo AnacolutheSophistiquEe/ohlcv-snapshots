@@ -2,17 +2,17 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RHM",
-    "generated_at": "2026-10-22T22:05:06Z",
+    "generated_at": "2026-10-23T00:32:22Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-23T08:00:00Z",
-    "valid_until": "2026-10-23T21:00:00Z",
+    "valid_from": "2026-10-26T08:00:00Z",
+    "valid_until": "2026-10-26T21:00:00Z",
     "source_precomputed": "RHM_precomputed.json"
   },
   "context": {
-    "last_price": 1015.0,
+    "last_price": 1014.5,
     "ta_score": {
-      "value": 5,
+      "value": 6,
       "max": 10,
       "label": "neutral"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": -0.27,
       "confidence": "low"
     },
-    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM bull (0.90), vol low, signals neutral (3b/3s/9n)."
+    "narrative_short": "TA score 6/10 (neutral), alignment mixed, HMM bull (0.90), vol low, signals neutral (3b/3s/9n)."
   },
   "notes": {
     "atr_daily": 39.6071,
     "atr_pct_daily": null,
-    "beta_60d": 0.8264,
+    "beta_60d": 0.8172,
     "beta_benchmark": "GDAXI",
-    "beta_corr_60d": 0.2728,
+    "beta_corr_60d": 0.2662,
     "btc_corr_high": null,
     "candlestick": {
       "name": "three_white_soldiers",
@@ -53,7 +53,7 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -48.45,
+      "current_dd_pct": -48.47,
       "ath_price": 1968.8203,
       "ath_date": "2025-09-29",
       "max_dd_1y_pct": -51.28,
@@ -113,9 +113,9 @@
         "max": 1050.225
       },
       "stop": {
-        "price": 1036.0378,
+        "price": 1036.0278,
         "basis": "below_broken_resistance",
-        "distance_pct": -1.15
+        "distance_pct": -1.16
       },
       "targets": [
         {
@@ -128,13 +128,13 @@
           "level": 2,
           "price": 1165.4265,
           "basis": "next_confluence_resistance",
-          "rr": 9.7
+          "rr": 9.69
         },
         {
           "level": 3,
           "price": 1213.8088,
           "basis": "next_confluence_resistance",
-          "rr": 13.7
+          "rr": 13.68
         }
       ],
       "preferred_target": 1,
@@ -150,20 +150,20 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 899.7975,
-        "max": 918.0675
+        "min": 899.3543,
+        "max": 917.6152
       },
       "stop": {
-        "price": 854.0893,
+        "price": 853.6393,
         "basis": "fallback_psych_-10pct",
-        "distance_pct": -6.03
+        "distance_pct": -6.04
       },
       "targets": [
         {
           "level": 1,
           "price": 1041.0393,
           "basis": "sous résistance (weak) à 1045 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 2.41
+          "rr": 2.42
         },
         {
           "level": 2,
@@ -175,7 +175,7 @@
           "level": 3,
           "price": 1129.6035,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.02
+          "rr": 4.03
         }
       ],
       "preferred_target": 1,
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 845.5484,
+    "price": 845.1029,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
