@@ -1,11 +1,11 @@
 {
   "available": true,
-  "generated_at": "2026-10-15T21:52:41.577669+00:00",
-  "prediction_id": "005930_B_20261015",
+  "generated_at": "2026-10-26T01:29:19.389946+00:00",
+  "prediction_id": "HOOD_B_20261026",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "005930",
-  "exchange": "KSE",
-  "currency": "KRW",
+  "symbol": "HOOD",
+  "exchange": "SMART",
+  "currency": "USD",
   "selected_execution_plan_id": "B",
   "execution_plan": {
     "plan_id": "B",
@@ -16,50 +16,50 @@
     "targets_source": "stops_targets_by_horizon.swing.targets.t1..t3",
     "stop_basis": "plancher anti-bruit (R/R<2)",
     "entry_zone_raw": [
-      207131.8712,
-      210000.0
+      93.3778,
+      94.8105
     ],
-    "entry_mid_raw": 208565.9356,
-    "spot": 210000.0,
-    "entry_vs_spot_pct": -0.71
+    "entry_mid_raw": 94.0942,
+    "spot": 95.06999969482422,
+    "entry_vs_spot_pct": -1.03
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 208500.0,
+    "limit_price": 94.09,
     "limit_price_range": [
-      207100.0,
-      210000.0
+      93.37,
+      94.81
     ],
     "quantity": 1,
     "tif": "GTD",
-    "gtd": "2026-10-22T06:30:00+00:00"
+    "gtd": "2026-10-30T20:00:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 223700.0,
+      "limit_price": 101.71,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
       "tranche": "T1",
-      "oca_group": "005930_B_swing_20261015_T1",
+      "oca_group": "HOOD_B_swing_20261026_T1",
       "oca_type": 1
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 196200.0,
+      "stop_price": 88.78,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
       "tranche": "T1",
-      "oca_group": "005930_B_swing_20261015_T1",
+      "oca_group": "HOOD_B_swing_20261026_T1",
       "oca_type": 1
     }
   ],
-  "oca_group": "005930_B_swing_20261015",
+  "oca_group": "HOOD_B_swing_20261026",
   "oca_type": 1,
   "oca_structure": {
     "mode": "per_tranche",
@@ -67,11 +67,11 @@
     "oca_type_per_group": 1,
     "groups": [
       {
-        "oca_group": "005930_B_swing_20261015_T1",
+        "oca_group": "HOOD_B_swing_20261026_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 223700.0,
-        "stop_price": 196200.0
+        "target_price": 101.71,
+        "stop_price": 88.78
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -98,33 +98,33 @@
       "offset_sessions": 5,
       "sessions_counted": 5,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-15T21:52:40.109790+00:00",
+      "anchor_utc": "2026-10-26T01:29:18.686976+00:00",
       "anchor_source": "meta.generated_at",
-      "calendar": "KRX",
-      "good_till_date": "2026-10-22T06:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261022-06:30:00",
-      "reference_session": "2026-10-16",
-      "expiry_session": "2026-10-22",
+      "calendar": "NYSE",
+      "good_till_date": "2026-10-30T20:00:00+00:00",
+      "good_till_date_ibkr_utc": "20261030-20:00:00",
+      "reference_session": "2026-10-26",
+      "expiry_session": "2026-10-30",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-16",
-        "2026-10-19",
-        "2026-10-20",
-        "2026-10-21",
-        "2026-10-22"
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30"
       ]
     },
     "venue_calendar": {
-      "venue": "KRX",
+      "venue": "NYSE",
       "known": true,
-      "timezone": "Asia/Seoul",
-      "regular_open": "09:00",
-      "regular_close": "15:30",
-      "holidays_complete": false,
+      "timezone": "America/New_York",
+      "regular_open": "09:30",
+      "regular_close": "16:00",
+      "holidays_complete": true,
       "version": "venue_calendar/1.0",
-      "note": "fériés lunaires et jours d'élection non calculés : une échéance peut tomber un jour de fermeture",
-      "source": "meta.exchange (KRX (KOSPI))"
+      "note": null,
+      "source": "meta.exchange (NASDAQ)"
     },
     "scale_out_weights": [
       0.5,
@@ -161,7 +161,7 @@
       "entry": "down",
       "stop": "down",
       "targets": "up",
-      "tick": 100.0,
+      "tick": 0.01,
       "tick_source": "TICKER_VENUE"
     }
   },
@@ -171,47 +171,47 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 4.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.2163,
+    "ev_pct_risk": -0.0993,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 208565.9356,
+    "ev_pct_risk_basis_price": 94.0942,
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "below_threshold",
+    "ev_status": "negative_ev",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.4227,
-      "T2": 0.1753,
-      "T3": 0.0648
+      "T1": 0.2774,
+      "T2": 0.1569,
+      "T3": 0.0803
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
-    "p_fill": null,
-    "p_fill_source": "absent",
-    "p_fill_note": "conviction_rating.by_horizon.swing absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
-    "rating": "Unknown",
+    "p_fill": 0.8466,
+    "p_fill_source": "conviction_rating.by_horizon.swing.inputs.p_fill (empirical_5s)",
+    "p_fill_note": "p_fill telle qu'utilisée par le rating, reprise sans recalcul",
+    "rating": "Pass (negative EV)",
     "rating_source": "conviction_rating.by_horizon.swing",
-    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (7 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
-    "rating_ev_pct_risk": null,
+    "rating_note": "ev=-0.177 < 0 mais santé 4.0 ≥ 4 (actif sain, entrée non favorable)",
+    "rating_ev_pct_risk": -0.1775,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 139.25,
-    "hold_tolerance_breach_price": 157500.0,
+    "notional_eur": 84.86,
+    "hold_tolerance_breach_price": null,
     "hold_fallback_active": true,
-    "prediction_id": "005930_B_20261015"
+    "prediction_id": "HOOD_B_20261026"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 100.0,
+    "tick_size_used": 0.01,
     "qty_total_positive": true,
     "targets_non_decreasing": true,
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 1.24,
-      "T2": 2.36,
-      "T3": 3.47
+      "T1": 1.44,
+      "T2": 2.55,
+      "T3": 3.67
     },
-    "rr_blended_on_posted_entry": 1.24,
+    "rr_blended_on_posted_entry": 1.44,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,
@@ -219,7 +219,5 @@
     "no_zero_quantity_order": true,
     "validity_resolved": true
   },
-  "warnings": [
-    "calendrier KRX incomplet (fériés lunaires / élections non calculés) : l'échéance 2026-10-22 peut tomber un jour de fermeture"
-  ]
+  "warnings": []
 }
