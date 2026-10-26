@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-10-26T01:31:31Z",
+    "generated_at": "2026-10-26T22:05:29Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-10-27T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "IONQ_precomputed.json"
   },
   "context": {
-    "last_price": 31.27,
+    "last_price": 30.76,
     "ta_score": {
       "value": 0,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "triple_bearish",
     "hmm_regime": {
       "state": "bear",
-      "probability": 0.8828,
-      "expected_duration_days": 4.07
+      "probability": 0.7828,
+      "expected_duration_days": 2.53
     },
     "volatility_regime": "low",
     "signals_counter": {
@@ -32,19 +32,19 @@
     },
     "mean_reversion_score": {
       "setup": "rsi_<30_dist_ma20_<-10",
-      "win_rate": 0.71,
-      "sample_size": 31,
-      "median_bounce_pct": 13.46,
+      "win_rate": 0.7,
+      "sample_size": 30,
+      "median_bounce_pct": 10.82,
       "confidence": "high"
     },
-    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (0.88), vol low, signals strong_sell (2b/9s/5n)."
+    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (0.78), vol low, signals strong_sell (2b/9s/5n)."
   },
   "notes": {
-    "atr_daily": 2.4764,
+    "atr_daily": 2.4155,
     "atr_pct_daily": null,
-    "beta_60d": 3.62,
+    "beta_60d": 3.6094,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.664,
+    "beta_corr_60d": 0.6635,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -53,11 +53,11 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -61.91,
+      "current_dd_pct": -62.53,
       "ath_price": 82.09,
       "ath_date": "2025-10-13",
       "max_dd_1y_pct": -57.66,
-      "days_in_dd": 375,
+      "days_in_dd": 378,
       "median_recovery_days": null
     }
   },
@@ -68,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 31.0665,
-        "max": 31.2535
+        "min": 30.5281,
+        "max": 30.7119
       },
       "stop": {
-        "price": 27.5554,
+        "price": 27.1367,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -11.57
+        "distance_pct": -11.38
       },
       "targets": [
         {
           "level": 1,
-          "price": 34.3424,
+          "price": 34.3484,
           "basis": "sous résistance (medium) à 34.59 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 0.88
+          "rr": 1.07
         },
         {
           "level": 2,
-          "price": 37.1111,
+          "price": 37.0491,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.65
+          "rr": 1.85
         },
         {
           "level": 3,
-          "price": 39.8798,
+          "price": 39.7497,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.42
+          "rr": 2.62
         }
       ],
       "preferred_target": 1,
@@ -109,32 +109,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 31.4114,
-        "max": 31.5369
+        "min": 31.8418,
+        "max": 31.969
       },
       "stop": {
-        "price": 30.1418,
-        "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -4.23
+        "price": 31.2832,
+        "basis": "below_broken_resistance",
+        "distance_pct": -1.95
       },
       "targets": [
         {
           "level": 1,
-          "price": 34.3424,
-          "basis": "sous résistance (medium) à 34.59 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 2.15
+          "price": 36.9015,
+          "basis": "next_confluence_resistance",
+          "rr": 8.03
         },
         {
           "level": 2,
-          "price": 37.1111,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.23
+          "price": 37.3677,
+          "basis": "fib_236",
+          "rr": 8.78
         },
         {
           "level": 3,
-          "price": 39.8798,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 6.31
+          "price": 42.4048,
+          "basis": "next_confluence_resistance",
+          "rr": 16.87
         }
       ],
       "preferred_target": 1,
@@ -142,7 +142,7 @@
         "session_us_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+      "rationale": "Breakout au-dessus confluence resistance VPVR_VAL + S/R_resistance (strength 5.0)."
     },
     {
       "id": "C",
@@ -151,31 +151,31 @@
       "side": "long",
       "entry_zone": {
         "min": 25.89,
-        "max": 26.4878
+        "max": 25.9081
       },
       "stop": {
         "price": 24.8544,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -5.1
+        "distance_pct": -4.03
       },
       "targets": [
         {
           "level": 1,
-          "price": 34.3424,
+          "price": 34.3484,
           "basis": "sous résistance (medium) à 34.59 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 6.11
+          "rr": 8.09
         },
         {
           "level": 2,
-          "price": 37.1111,
+          "price": 37.0491,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 8.18
+          "rr": 10.67
         },
         {
           "level": 3,
-          "price": 39.8798,
+          "price": 39.7497,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 10.26
+          "rr": 13.26
         }
       ],
       "preferred_target": 1,

@@ -1,0 +1,106 @@
+{
+ "available": true,
+ "generated_at": "2026-10-26T22:04:29.975150+00:00",
+ "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
+ "min_neff": 30.0,
+ "halflife_sessions": 500.0,
+ "cost_pct_per_leg": 0.08,
+ "by_horizon": {
+  "intraday": {
+   "available": true,
+   "ev_pct_risk": -0.5419,
+   "p_target_first": 0.203,
+   "n_episodes": 203,
+   "n_eff_weighted": 201.0,
+   "fill_rate": 0.8185,
+   "ci95_block_bootstrap": [
+    -0.6997,
+    -0.3528
+   ],
+   "ci95_block_bootstrap_meta": {
+    "method": "bootstrap circulaire par blocs d'episodes consecutifs (episodes chevauchants), percentiles 2,5 / 97,5 ; poids recence d'origine conserves",
+    "conditioning": "fill (episodes remplis seulement), comme ev_pct_risk",
+    "block_episodes": 2,
+    "n_episodes": 203,
+    "n_blocks": 101.5,
+    "n_boot": 800,
+    "seed": 7
+   },
+   "plan_pct": {
+    "dip": 0.721,
+    "stop": 2.048,
+    "targets": [
+     3.413,
+     6.825,
+     10.238
+    ]
+   },
+   "horizon_sessions": 1,
+   "n_bars": 251
+  },
+  "swing": {
+   "available": true,
+   "ev_pct_risk": -0.3472,
+   "p_target_first": 0.2315,
+   "n_episodes": 211,
+   "n_eff_weighted": 209.0,
+   "fill_rate": 0.8792,
+   "ci95_block_bootstrap": [
+    -0.5886,
+    -0.0666
+   ],
+   "ci95_block_bootstrap_meta": {
+    "method": "bootstrap circulaire par blocs d'episodes consecutifs (episodes chevauchants), percentiles 2,5 / 97,5 ; poids recence d'origine conserves",
+    "conditioning": "fill (episodes remplis seulement), comme ev_pct_risk",
+    "block_episodes": 10,
+    "n_episodes": 211,
+    "n_blocks": 21.1,
+    "n_boot": 800,
+    "seed": 7
+   },
+   "plan_pct": {
+    "dip": 1.587,
+    "stop": 6.885,
+    "targets": [
+     10.605,
+     18.304,
+     26.001
+    ]
+   },
+   "horizon_sessions": 5,
+   "n_bars": 251
+  },
+  "deep": {
+   "available": true,
+   "ev_pct_risk": -0.3327,
+   "p_target_first": 0.3488,
+   "n_episodes": 209,
+   "n_eff_weighted": 207.2,
+   "fill_rate": 0.9087,
+   "ci95_block_bootstrap": [
+    -0.5475,
+    -0.0636
+   ],
+   "ci95_block_bootstrap_meta": {
+    "method": "bootstrap circulaire par blocs d'episodes consecutifs (episodes chevauchants), percentiles 2,5 / 97,5 ; poids recence d'origine conserves",
+    "conditioning": "fill (episodes remplis seulement), comme ev_pct_risk",
+    "block_episodes": 20,
+    "n_episodes": 209,
+    "n_blocks": 10.4,
+    "n_boot": 800,
+    "seed": 7
+   },
+   "plan_pct": {
+    "dip": 2.452,
+    "stop": 10.42,
+    "targets": [
+     11.587,
+     22.57,
+     33.553
+    ]
+   },
+   "horizon_sessions": 10,
+   "n_bars": 251
+  }
+ }
+}
