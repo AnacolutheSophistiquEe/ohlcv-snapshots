@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "AL2SI",
-    "generated_at": "2026-10-26T22:05:29Z",
+    "generated_at": "2026-10-27T01:32:40Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-27T08:00:00Z",
-    "valid_until": "2026-10-27T21:00:00Z",
+    "valid_from": "2026-10-28T08:00:00Z",
+    "valid_until": "2026-10-28T21:00:00Z",
     "source_precomputed": "AL2SI_precomputed.json"
   },
   "context": {
-    "last_price": 26.86,
+    "last_price": 26.64,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -20,13 +20,13 @@
     "hmm_regime": {
       "state": "sideways",
       "probability": 0.9,
-      "expected_duration_days": 16.69
+      "expected_duration_days": 16.41
     },
     "volatility_regime": "normal",
     "signals_counter": {
       "buy": 1,
-      "sell": 4,
-      "neutral": 10,
+      "sell": 5,
+      "neutral": 9,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 9.21,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (1b/4s/10n)."
+    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM sideways (0.90), vol normal, signals neutral (1b/5s/9n)."
   },
   "notes": {
     "atr_daily": 2.0364,
     "atr_pct_daily": null,
-    "beta_60d": 2.2593,
+    "beta_60d": 1.9481,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.36,
+    "beta_corr_60d": 0.3121,
     "btc_corr_high": null,
     "candlestick": {
       "name": "hammer",
@@ -68,7 +68,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -54.05,
+      "current_dd_pct": -54.42,
       "ath_price": 58.45,
       "ath_date": "2026-06-02",
       "max_dd_1y_pct": -62.36,
@@ -83,32 +83,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 25.525,
-        "max": 28.18
+        "min": 26.4803,
+        "max": 26.6397
       },
       "stop": {
-        "price": 24.0893,
-        "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -10.29
+        "price": 23.5854,
+        "basis": "fallback_pivot_camarilla_s1",
+        "distance_pct": -11.2
       },
       "targets": [
         {
           "level": 1,
           "price": 29.0917,
           "basis": "sous VPVR VAH à 29.3 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 0.81
+          "rr": 0.85
         },
         {
           "level": 2,
           "price": 31.3685,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.63
+          "rr": 1.62
         },
         {
           "level": 3,
           "price": 33.6453,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.46
+          "rr": 2.38
         }
       ],
       "preferred_target": 1,
@@ -116,7 +116,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support S/R_support + FIB_236 + VPVR_VAL + MA20 + VPVR_POC + MA50 + S/R_resistance (strength 73.5). Bounce mecanique."
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_s1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
     },
     {
       "id": "B",
@@ -124,32 +124,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 29.7026,
-        "max": 29.8213
+        "min": 29.6946,
+        "max": 29.8132
       },
       "stop": {
         "price": 29.1488,
         "basis": "below_broken_resistance",
-        "distance_pct": -2.06
+        "distance_pct": -2.03
       },
       "targets": [
         {
           "level": 1,
           "price": 32.1238,
           "basis": "fib_382",
-          "rr": 3.85
+          "rr": 3.92
         },
         {
           "level": 2,
           "price": 32.1238,
           "basis": "next_confluence_resistance",
-          "rr": 3.85
+          "rr": 3.92
         },
         {
           "level": 3,
           "price": 36.95,
           "basis": "fib_50",
-          "rr": 11.72
+          "rr": 11.89
         }
       ],
       "preferred_target": 1,

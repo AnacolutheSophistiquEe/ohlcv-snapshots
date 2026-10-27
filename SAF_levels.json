@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SAF",
-    "generated_at": "2026-10-26T22:05:29Z",
+    "generated_at": "2026-10-27T01:32:40Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-27T08:00:00Z",
-    "valid_until": "2026-10-27T21:00:00Z",
+    "valid_from": "2026-10-28T08:00:00Z",
+    "valid_until": "2026-10-28T21:00:00Z",
     "source_precomputed": "SAF_precomputed.json"
   },
   "context": {
-    "last_price": 274.4,
+    "last_price": 273.55,
     "ta_score": {
       "value": 0,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 9.5786,
     "atr_pct_daily": null,
-    "beta_60d": 1.6147,
+    "beta_60d": 1.7105,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.5963,
+    "beta_corr_60d": 0.6196,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -53,7 +53,7 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -24.53,
+      "current_dd_pct": -24.77,
       "ath_price": 363.6,
       "ath_date": "2026-08-12",
       "max_dd_1y_pct": -25.25,
@@ -68,24 +68,24 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 273.0285,
-        "max": 274.6715
+        "min": 272.181,
+        "max": 273.819
       },
       "stop": {
-        "price": 260.0321,
+        "price": 259.1821,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -5.05
+        "distance_pct": -5.06
       },
       "targets": [
         {
           "level": 2,
-          "price": 276.6612,
+          "price": 275.8112,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 0.2
         },
         {
           "level": 3,
-          "price": 287.3704,
+          "price": 286.5204,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 0.98
         }
@@ -144,32 +144,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 260.9265,
-        "max": 266.2245
+        "min": 260.365,
+        "max": 265.6516
       },
       "stop": {
-        "price": 250.5321,
+        "price": 249.9621,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -4.95
+        "distance_pct": -4.96
       },
       "targets": [
         {
           "level": 1,
-          "price": 265.952,
+          "price": 265.102,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 0.18
+          "rr": 0.16
         },
         {
           "level": 2,
-          "price": 276.6612,
+          "price": 275.8112,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.0
+          "rr": 0.98
         },
         {
           "level": 3,
-          "price": 287.3704,
+          "price": 286.5204,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.82
+          "rr": 1.8
         }
       ],
       "preferred_target": 1,
@@ -193,7 +193,7 @@
     }
   ],
   "invalidation": {
-    "price": 248.0268,
+    "price": 247.4625,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
