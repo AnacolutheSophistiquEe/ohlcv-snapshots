@@ -1,6 +1,6 @@
 # SOI
 
-**Generated** : 2026-10-26T21:47:18.587238+00:00  
+**Generated** : 2026-10-27T01:11:09.589250+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 7/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -57,8 +57,8 @@ _Cloture 2026-10-26 : 117.3 · ATR Wilder 9.33 (7.95 %)_
    - _fenêtre arrêtée : rupture de regime a 360 seances en arriere (volatilite 3.14 % contre 6.72 % aujourd'hui, rapport 0.47)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -12.89 % vs -11.79 % si l'on extrapolait par √5 _(rapport 1.093 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0853** (β de hausse 1.5856, asymétrie 0.6845) vs FCHI — 620 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 0.157× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 1.0853** (β de hausse 1.5845, asymétrie 0.685) vs FCHI — 620 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 0.202× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
@@ -290,7 +290,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.56 · part idiosyncratique 0.43
+**Factor** : R² 0.56 · part idiosyncratique 0.44
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -310,8 +310,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -4.764  _(pas de croisement recent)_
 - **BB** : %B 0.16 · largeur 53.5%
 - **ATR** : 9.54 (63.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV falling · CMF -0.107  _(distribution)_
-- **Vol ratio** : 0.75  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.118  _(distribution)_
+- **Vol ratio** : 0.51  _(volume atone)_
 - **Choppiness** : 32.0  _(marche directionnel)_
 - **MA** : MA20 143.49 · MA50 134.25 · MA200 101.98  _(prix < MA20)_
 - **Dist MA** : MA20 -18.3% · MA50 -12.6% · MA200 +15.0%
@@ -319,5 +319,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (777126 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (777069 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

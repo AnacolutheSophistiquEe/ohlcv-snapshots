@@ -1,65 +1,64 @@
 {
   "available": true,
-  "generated_at": "2026-10-16T00:16:30.941872+00:00",
-  "prediction_id": "005930_B_20261016",
+  "generated_at": "2026-10-27T01:15:27.272955+00:00",
+  "prediction_id": "005930_A_20261027",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "005930",
   "exchange": "KSE",
   "currency": "KRW",
-  "selected_execution_plan_id": "B",
+  "selected_execution_plan_id": "A",
   "execution_plan": {
-    "plan_id": "B",
-    "horizon": "swing",
-    "source": "stops_targets_by_horizon.swing",
-    "entry_source": "stops_targets_by_horizon.swing.entry_mid (zone entry_low..entry_high)",
-    "stop_source": "stops_targets_by_horizon.swing.stop_price",
-    "targets_source": "stops_targets_by_horizon.swing.targets.t1..t3",
+    "plan_id": "A",
+    "horizon": "intraday",
+    "source": "stops_targets_by_horizon.intraday",
+    "entry_source": "stops_targets_by_horizon.intraday.entry_mid (zone entry_low..entry_high)",
+    "stop_source": "stops_targets_by_horizon.intraday.stop_price",
+    "targets_source": "stops_targets_by_horizon.intraday.targets.t1..t3",
     "stop_basis": "plancher anti-bruit (R/R<2)",
     "entry_zone_raw": [
-      207131.8797,
-      210000.0
+      218289.0503,
+      220170.5853
     ],
-    "entry_mid_raw": 208565.9399,
-    "spot": 210000.0,
-    "entry_vs_spot_pct": -0.71
+    "entry_mid_raw": 219229.8178,
+    "spot": 223500.0,
+    "entry_vs_spot_pct": -1.92
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 208500.0,
+    "limit_price": 219200.0,
     "limit_price_range": [
-      207100.0,
-      210000.0
+      218200.0,
+      220100.0
     ],
     "quantity": 1,
-    "tif": "GTD",
-    "gtd": "2026-10-22T06:30:00+00:00"
+    "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 223700.0,
+      "limit_price": 226000.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
       "tranche": "T1",
-      "oca_group": "005930_B_swing_20261016_T1",
+      "oca_group": "005930_A_intraday_20261027_T1",
       "oca_type": 1
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 196200.0,
+      "stop_price": 215100.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
       "tranche": "T1",
-      "oca_group": "005930_B_swing_20261016_T1",
+      "oca_group": "005930_A_intraday_20261027_T1",
       "oca_type": 1
     }
   ],
-  "oca_group": "005930_B_swing_20261016",
+  "oca_group": "005930_A_intraday_20261027",
   "oca_type": 1,
   "oca_structure": {
     "mode": "per_tranche",
@@ -67,11 +66,11 @@
     "oca_type_per_group": 1,
     "groups": [
       {
-        "oca_group": "005930_B_swing_20261016_T1",
+        "oca_group": "005930_A_intraday_20261027_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 223700.0,
-        "stop_price": 196200.0
+        "target_price": 226000.0,
+        "stop_price": 215100.0
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -85,34 +84,30 @@
     "commission_note": "un stop touché = jusqu'à 1 ordre(s) STP exécuté(s) (un par tranche encore ouverte), donc autant de commissions"
   },
   "execution_rules": {
-    "stop_mode": "breakeven_after_T1",
-    "stop_mode_description": "SL → prix d'entrée après hit T1",
+    "stop_mode": "fixed",
+    "stop_mode_description": "SL hard statique, pas de trailing",
     "trail_distance_atr": null,
     "time_stop": {
       "enabled": true,
-      "max_holding_sessions": 5,
-      "exit_mode": "market_close_at_breakeven"
+      "max_holding_sessions": 1,
+      "exit_mode": "market_close_unconditional"
     },
     "order_validity": {
-      "type": "GTD",
-      "offset_sessions": 5,
-      "sessions_counted": 5,
+      "type": "DAY",
+      "offset_sessions": 0,
+      "sessions_counted": 1,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-16T00:16:29.807111+00:00",
+      "anchor_utc": "2026-10-27T01:15:26.218634+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "KRX",
-      "good_till_date": "2026-10-22T06:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261022-06:30:00",
-      "reference_session": "2026-10-16",
-      "expiry_session": "2026-10-22",
+      "good_till_date": "2026-10-27T06:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261027-06:30:00",
+      "reference_session": "2026-10-27",
+      "expiry_session": "2026-10-27",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-16",
-        "2026-10-19",
-        "2026-10-20",
-        "2026-10-21",
-        "2026-10-22"
+        "2026-10-27"
       ]
     },
     "venue_calendar": {
@@ -166,35 +161,33 @@
     }
   },
   "bracket_metadata": {
-    "plan_id": "B",
-    "horizon": "swing",
-    "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 4.0,
-    "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.2155,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 208565.9399,
+    "plan_id": "A",
+    "horizon": "intraday",
+    "horizon_label_long": "intraday",
+    "composite_score": 8.0,
+    "composite_score_source": "horizon_ta_score.plan_a.score",
+    "ev_pct_risk": -0.0262,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
+    "ev_pct_risk_basis_price": 219229.8178,
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "below_threshold",
+    "ev_status": "negative_ev",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.4235,
-      "T2": 0.1757,
-      "T3": 0.0649
+      "T1": 0.2834
     },
-    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
+    "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
     "p_fill_source": "absent",
-    "p_fill_note": "conviction_rating.by_horizon.swing absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
+    "p_fill_note": "conviction_rating.by_horizon.intraday absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
     "rating": "Unknown",
-    "rating_source": "conviction_rating.by_horizon.swing",
-    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (7 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
+    "rating_source": "conviction_rating.by_horizon.intraday",
+    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (2 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 139.25,
-    "hold_tolerance_breach_price": 157500.0,
+    "notional_eur": 150.66,
+    "hold_tolerance_breach_price": 167625.0,
     "hold_fallback_active": true,
-    "prediction_id": "005930_B_20261016"
+    "prediction_id": "005930_A_20261027"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
@@ -207,11 +200,11 @@
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 1.24,
-      "T2": 2.36,
-      "T3": 3.47
+      "T1": 1.66,
+      "T2": 3.32,
+      "T3": 4.95
     },
-    "rr_blended_on_posted_entry": 1.24,
+    "rr_blended_on_posted_entry": 1.66,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,
@@ -220,6 +213,6 @@
     "validity_resolved": true
   },
   "warnings": [
-    "calendrier KRX incomplet (fériés lunaires / élections non calculés) : l'échéance 2026-10-22 peut tomber un jour de fermeture"
+    "calendrier KRX incomplet (fériés lunaires / élections non calculés) : l'échéance 2026-10-27 peut tomber un jour de fermeture"
   ]
 }
