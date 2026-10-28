@@ -1,12 +1,12 @@
 # SRT3
 
-**Generated** : 2026-10-27T21:41:08.443862+00:00  
+**Generated** : 2026-10-28T01:06:15.465894+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 10/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · €290.70  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-28 — US FOMC Rate Decision (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-29 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)  
 > ↳ spot €290.70 (+12.1% vs entrée) · entrée €259.30 · stop €249.36 · T1 €270.42 · R/R 1.12  
 > ↳ ¼-Kelly 0.023 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
@@ -62,8 +62,8 @@ _Cloture 2026-10-27 : 290.7 · ATR Wilder 9.73 (3.35 %)_
    - _fenêtre arrêtée : historique epuise — le regime est homogene sur toute la profondeur_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -9.98 % vs -9.16 % si l'on extrapolait par √5 _(rapport 1.089 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0799** (β de hausse 1.1719, asymétrie 0.9215) vs GDAXI — 600 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 1.352× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 1.0799** (β de hausse 1.1718, asymétrie 0.9215) vs GDAXI — 600 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 1.336× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
@@ -76,11 +76,11 @@ _Cloture 2026-10-27 : 290.7 · ATR Wilder 9.73 (3.35 %)_
 - Candidats (la structure propose, la statistique elimine) :
    - ⚪ atr_based a 1.5 ATR (stop 5.13 %) — p(stop avant cible) 0.1133 [0.08 ; 0.15], R/R 0.129, perte reelle 5.203 % (gap inclus), EV 0.0046 % — **REFUSE**
       - refuse : R/R 0.13 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ swing_based a 3.73 ATR (stop 15.012 %) — p(stop avant cible) 0.0114 [0.00 ; 0.03], R/R 0.045, perte reelle 15.017 % (gap inclus), EV 0.1151 % — **REFUSE**
-      - refuse : R/R 0.04 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ sr_based a 5.84 ATR (stop 22.236 %) — p(stop avant cible) 0.0016 [0.00 ; 0.01], R/R 0.026, perte reelle 25.815 % (gap inclus), EV 0.1366 % — **REFUSE**
+   - ⚪ swing_based a 3.73 ATR (stop 14.872 %) — p(stop avant cible) 0.0114 [0.00 ; 0.03], R/R 0.045, perte reelle 14.879 % (gap inclus), EV 0.1166 % — **REFUSE**
+      - refuse : R/R 0.05 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - ⚪ sr_based a 5.84 ATR (stop 22.096 %) — p(stop avant cible) 0.0016 [0.00 ; 0.01], R/R 0.026, perte reelle 25.781 % (gap inclus), EV 0.1366 % — **REFUSE**
       - refuse : R/R 0.03 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - 🟢 support a 9.34 ATR (stop 34.205 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.02, perte reelle 34.205 % (gap inclus), EV 0.1443 % — **REFUSE**
+   - 🟢 support a 9.34 ATR (stop 34.065 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.02, perte reelle 34.065 % (gap inclus), EV 0.1443 % — **REFUSE**
       - refuse : R/R 0.02 < plancher 3.00 (mesure vs SPOT, gap inclus)
    - ⚪ atr_grid a 0.25 ATR (stop 0.855 %) — p(stop avant cible) 0.4481 [0.40 ; 0.50], R/R 0.78, perte reelle 0.858 % (gap inclus), EV -0.0149 % — **REFUSE**
       - refuse : R/R 0.78 < plancher 3.00 (mesure vs SPOT, gap inclus)
@@ -116,6 +116,8 @@ _Cloture 2026-10-27 : 290.7 · ATR Wilder 9.73 (3.35 %)_
       - refuse : R/R 0.06 < plancher 3.00 (mesure vs SPOT, gap inclus)
    - ⚪ grid_snapped a 3.73 ATR (stop 13.784 %) — p(stop avant cible) 0.02 [0.01 ; 0.04], R/R 0.049, perte reelle 13.793 % (gap inclus), EV 0.1133 % — **REFUSE**
       - refuse : R/R 0.05 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - ⚪ atr_grid a 4.5 ATR (stop 15.391 %) — p(stop avant cible) 0.0112 [0.00 ; 0.03], R/R 0.044, perte reelle 15.392 % (gap inclus), EV 0.1117 % — **REFUSE**
+      - refuse : R/R 0.04 < plancher 3.00 (mesure vs SPOT, gap inclus)
    - ⚪ atr_grid a 5.0 ATR (stop 17.102 %) — p(stop avant cible) 0.0031 [0.00 ; 0.01], R/R 0.039, perte reelle 17.102 % (gap inclus), EV 0.1468 % — **REFUSE**
       - refuse : R/R 0.04 < plancher 3.00 (mesure vs SPOT, gap inclus)
    - ⚪ atr_grid a 5.5 ATR (stop 18.812 %) — p(stop avant cible) 0.0027 [0.00 ; 0.01], R/R 0.036, perte reelle 18.812 % (gap inclus), EV 0.1431 % — **REFUSE**
@@ -284,9 +286,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-28 — US FOMC Rate Decision (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-10-29 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-29 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-29 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -296,8 +298,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 3.172  _(pas de croisement recent)_
 - **BB** : %B 1.07 · largeur 19.2%
 - **ATR** : 9.94 (80.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF 0.114  _(accumulation)_
-- **Vol ratio** : 1.07  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.093  _(accumulation)_
+- **Vol ratio** : 0.37  _(volume atone)_
 - **Choppiness** : 40.6  _(transition)_
 - **MA** : MA20 261.99 · MA50 252.22 · MA200 234.38  _(prix > MA20)_
 - **Dist MA** : MA20 +11.0% · MA50 +15.3% · MA200 +24.0%
@@ -305,5 +307,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (797515 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (776049 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
