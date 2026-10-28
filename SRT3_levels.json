@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SRT3",
-    "generated_at": "2026-10-27T22:05:07Z",
+    "generated_at": "2026-10-28T01:34:11Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-28T08:00:00Z",
-    "valid_until": "2026-10-28T21:00:00Z",
+    "valid_from": "2026-10-29T08:00:00Z",
+    "valid_until": "2026-10-29T21:00:00Z",
     "source_precomputed": "SRT3_precomputed.json"
   },
   "context": {
@@ -24,11 +24,11 @@
     },
     "volatility_regime": "high",
     "signals_counter": {
-      "buy": 9,
+      "buy": 8,
       "sell": 5,
-      "neutral": 2,
+      "neutral": 3,
       "total": 16,
-      "verdict": "buy"
+      "verdict": "neutral_to_bullish"
     },
     "mean_reversion_score": {
       "setup": "rsi_>=70_dist_ma20_>+10",
@@ -37,14 +37,14 @@
       "median_bounce_pct": -0.17,
       "confidence": "very_low"
     },
-    "narrative_short": "TA score 10/10 (very_bullish), alignment triple_bullish, HMM sideways (0.90), vol high, signals buy (9b/5s/2n)."
+    "narrative_short": "TA score 10/10 (very_bullish), alignment triple_bullish, HMM sideways (0.90), vol high, signals neutral_to_bullish (8b/5s/3n)."
   },
   "notes": {
     "atr_daily": 9.9429,
     "atr_pct_daily": null,
-    "beta_60d": 0.5845,
+    "beta_60d": 0.5988,
     "beta_benchmark": "GDAXI",
-    "beta_corr_60d": 0.2026,
+    "beta_corr_60d": 0.2077,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -55,14 +55,14 @@
       {
         "indicator": "obv",
         "type": "hidden_bearish",
-        "confidence": 0.34,
+        "confidence": 0.35,
         "bars_ago": 14,
         "at_price": null
       },
       {
         "indicator": "obv",
         "type": "bullish",
-        "confidence": 0.5,
+        "confidence": 0.52,
         "bars_ago": 13,
         "at_price": null
       }
