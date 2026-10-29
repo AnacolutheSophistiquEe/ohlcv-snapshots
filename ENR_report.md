@@ -1,12 +1,12 @@
 # ENR
 
-**Generated** : 2026-10-28T21:44:51.081122+00:00  
+**Generated** : 2026-10-29T01:08:55.145739+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 6/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €133.26  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-29 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)  
 > ↳ spot €133.26 (+3.3% vs entrée) · entrée €128.97 · stop €118.65 · T1 €134.63 · R/R 0.55  
 > ↳ ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=125 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -52,8 +52,8 @@ _Cloture 2026-10-28 : 133.26 · ATR Wilder 5.92 (4.44 %)_
    - _fenêtre arrêtée : rupture de regime a 780 seances en arriere (volatilite 6.14 % contre 3.01 % aujourd'hui, rapport 2.04)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -8.88 % vs -9.83 % si l'on extrapolait par √5 _(rapport 0.903 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.3383** (β de hausse 1.1011, asymétrie 1.2155) vs GDAXI — 599 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 1.293× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 1.3383** (β de hausse 1.1036, asymétrie 1.2128) vs GDAXI — 599 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 1.301× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
@@ -72,11 +72,11 @@ _Cloture 2026-10-28 : 133.26 · ATR Wilder 5.92 (4.44 %)_
       - refuse : CVaR 95 % 12.91 % > budget 4.47 %
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.10 %) : P(cible) 0.1 % x 40.64 % + P(rien) 52.7 % x 4.82 % ne couvrent pas P(stop) 47.2 % x 7.76 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon. P(cible) nulle : la cible (+40.6 %) est hors d'atteinte a l'horizon ; verifier la cible avant de conclure.
-   - 🟢 support a 3.01 ATR (stop 16.121 %) — p(stop avant cible) 0.0484 [0.03 ; 0.07], R/R 2.357, perte reelle 17.238 % (gap inclus), EV 0.3166 % — **REFUSE**
-      - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.36 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 2.36 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 17.15 % > budget 4.47 %
-   - 🟢 support a 5.36 ATR (stop 27.105 %) — p(stop avant cible) 0.0029 [0.00 ; 0.01], R/R 1.4, perte reelle 29.016 % (gap inclus), EV 0.5278 % — **REFUSE**
+   - 🟢 support a 3.01 ATR (stop 16.242 %) — p(stop avant cible) 0.0484 [0.03 ; 0.07], R/R 2.347, perte reelle 17.311 % (gap inclus), EV 0.3131 % — **REFUSE**
+      - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.35 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 2.35 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 17.22 % > budget 4.47 %
+   - 🟢 support a 5.36 ATR (stop 27.227 %) — p(stop avant cible) 0.0029 [0.00 ; 0.01], R/R 1.398, perte reelle 29.072 % (gap inclus), EV 0.5276 % — **REFUSE**
       - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 1.40 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.40 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 15.67 % > budget 4.47 %
@@ -322,7 +322,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.6 · part idiosyncratique 0.4
+**Factor** : R² 0.59 · part idiosyncratique 0.41
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -330,9 +330,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-10-29 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-29 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-29 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -342,8 +342,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.657  _(pas de croisement recent)_
 - **BB** : %B 0.41 · largeur 25.9%
 - **ATR** : 6.23 (40.0e pct 1a)  _(volatilite normale)_
-- **OBV/CMF** : OBV falling · CMF 0.154  _(accumulation)_
-- **Vol ratio** : 1.64  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV falling · CMF 0.137  _(accumulation)_
+- **Vol ratio** : 1.04  _(volume normal)_
 - **Choppiness** : 38.5  _(transition)_
 - **MA** : MA20 136.39 · MA50 141.27 · MA200 154.3  _(prix < MA20)_
 - **Dist MA** : MA20 -2.3% · MA50 -5.7% · MA200 -13.6%
@@ -351,5 +351,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (826112 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (800902 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

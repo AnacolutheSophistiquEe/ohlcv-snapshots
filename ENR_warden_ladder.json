@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-10-28T21:44:58.963714+00:00",
+  "generated_at": "2026-10-29T01:09:00.394356+00:00",
   "ticker": "ENR",
   "spot": 133.26,
   "atr_14": 6.2286,
@@ -15,9 +15,9 @@
   "target_note": "la cible sert a mesurer le R/R vs SPOT. Elle est prise sur une RESISTANCE reelle quand il en existe une au-dessus du spot — jamais sur la cible d'un plan d'entree sur repli, qui peut se situer SOUS le prix courant et rendrait tout R/R absurde.",
   "anchor_evidence": {
     "source": "registre point-in-time",
-    "measured_at": "2026-10-28T01:35:27.577669+00:00",
+    "measured_at": "2026-10-28T21:46:23.538825+00:00",
     "stale": false,
-    "generated_at": "2026-10-28T01:35:27.577669+00:00",
+    "generated_at": "2026-10-28T21:46:23.538825+00:00",
     "buckets": [
       {
         "bucket": "<1",
@@ -25,12 +25,12 @@
           0.0,
           1.0
         ],
-        "n": 1184,
+        "n": 1178,
         "n_tickers": 61,
-        "p_break": 0.5059,
+        "p_break": 0.4805,
         "ci95": [
-          0.474,
-          0.5367
+          0.4487,
+          0.5137
         ],
         "coinflip": true,
         "usable": true
@@ -41,12 +41,12 @@
           1.0,
           3.0
         ],
-        "n": 1241,
+        "n": 1190,
         "n_tickers": 61,
-        "p_break": 0.3699,
+        "p_break": 0.3622,
         "ci95": [
-          0.3409,
-          0.3982
+          0.3325,
+          0.3934
         ],
         "coinflip": false,
         "usable": true
@@ -58,11 +58,11 @@
           6.0
         ],
         "n": 371,
-        "n_tickers": 60,
+        "n_tickers": 59,
         "p_break": 0.3342,
         "ci95": [
-          0.2804,
-          0.3899
+          0.2802,
+          0.3914
         ],
         "coinflip": false,
         "usable": true
@@ -73,12 +73,12 @@
           6.0,
           null
         ],
-        "n": 50,
-        "n_tickers": 27,
-        "p_break": 0.28,
+        "n": 64,
+        "n_tickers": 28,
+        "p_break": 0.3594,
         "ci95": [
-          0.1591,
-          0.4118
+          0.2407,
+          0.5
         ],
         "coinflip": false,
         "usable": true
@@ -94,23 +94,23 @@
     "cvar95_budget_stale": false,
     "cvar95_budget_measured_at": "2026-10-28T01:34:41.261838+00:00",
     "cvar95_budget_default_witness": 12.0,
-    "anchor_buffer_atr": 0.439,
+    "anchor_buffer_atr": 0.465,
     "anchor_buffer_source": {
       "source": "registre point-in-time, quantile 90 % par classe d'ATR",
       "stale": false,
       "level_type": "support",
       "class": "atr_moyen",
       "atr_pct_range": [
-        3.91,
-        6.887
+        3.937,
+        6.806
       ],
-      "n": 544,
+      "n": 549,
       "ci95": [
-        0.365,
-        0.5
+        0.417,
+        0.536
       ],
-      "survival_at_0_30": 0.8456,
-      "measured_at": "2026-10-28T01:35:27.577669+00:00"
+      "survival_at_0_30": 0.8288,
+      "measured_at": "2026-10-28T21:46:23.538825+00:00"
     },
     "target_buffer_atr": 0.3,
     "anchor_buffer_default_witness": 0.3,
@@ -247,7 +247,7 @@
     },
     {
       "anchor_price": 114.5117,
-      "stop_price": 111.7774,
+      "stop_price": 111.6154,
       "origin": "support",
       "strength": "medium",
       "touches": 2,
@@ -259,17 +259,17 @@
       "anchor_quality_basis": "level_distance_atr",
       "anchor_measure": {
         "bucket": "1-3",
-        "p_break": 0.3699,
+        "p_break": 0.3622,
         "ci95": [
-          0.3409,
-          0.3982
+          0.3325,
+          0.3934
         ],
-        "n": 1241,
+        "n": 1190,
         "source": "registre point-in-time",
-        "measured_at": "2026-10-28T01:35:27.577669+00:00"
+        "measured_at": "2026-10-28T21:46:23.538825+00:00"
       },
       "anchor_warning": null,
-      "distance_pct": 16.121,
+      "distance_pct": 16.242,
       "p_stop_first": 0.0484,
       "p_target_first": 0.0006,
       "p_no_touch": 0.9509,
@@ -284,23 +284,23 @@
       "n_windows": 1265,
       "n_eff": 345.8,
       "grid_point": null,
-      "gap_overshoot_pt": 2.793,
+      "gap_overshoot_pt": 2.757,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 17.238,
-      "p_gap_through_given_stop": 0.3998,
-      "expected_overshoot_given_stop_pt": 1.1168,
+      "loss_if_stop_pct": 17.311,
+      "p_gap_through_given_stop": 0.3877,
+      "expected_overshoot_given_stop_pt": 1.0688,
       "gain_if_tp_pct": 40.636,
-      "rr_vs_spot": 2.357,
-      "cvar95_pct": 17.154,
+      "rr_vs_spot": 2.347,
+      "cvar95_pct": 17.225,
       "var95_pct": 14.557,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 4.47,
-      "cost": -0.3166,
-      "ev_pct": 0.3166,
+      "cost": -0.31307,
+      "ev_pct": 0.3131,
       "ev_terms": {
         "target": 0.0244,
-        "stop": -0.8343,
+        "stop": -0.8378,
         "no_touch": 1.1265,
         "pnl_no_touch_pct": 1.1847
       },
@@ -308,9 +308,9 @@
       "flags": [],
       "feasible": false,
       "rejected_because": [
-        "cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.36 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
-        "R/R 2.36 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 17.15 % > budget 4.47 %"
+        "cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.35 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
+        "R/R 2.35 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "CVaR 95 % 17.22 % > budget 4.47 %"
       ],
       "violations": [
         {
@@ -321,22 +321,22 @@
         },
         {
           "constraint": "rr_vs_spot",
-          "value": 2.3574,
+          "value": 2.3474,
           "limit": 3.0,
-          "excess_ratio": 0.2142
+          "excess_ratio": 0.2175
         },
         {
           "constraint": "cvar95",
-          "value": 17.1541,
+          "value": 17.2249,
           "limit": 4.47,
-          "excess_ratio": 2.8376
+          "excess_ratio": 2.8534
         }
       ],
-      "violation_severity": 4.0478
+      "violation_severity": 4.0669
     },
     {
       "anchor_price": 99.8741,
-      "stop_price": 97.1398,
+      "stop_price": 96.9778,
       "origin": "support",
       "strength": "weak",
       "touches": 1,
@@ -350,15 +350,15 @@
         "bucket": "3-6",
         "p_break": 0.3342,
         "ci95": [
-          0.2804,
-          0.3899
+          0.2802,
+          0.3914
         ],
         "n": 371,
         "source": "registre point-in-time",
-        "measured_at": "2026-10-28T01:35:27.577669+00:00"
+        "measured_at": "2026-10-28T21:46:23.538825+00:00"
       },
       "anchor_warning": null,
-      "distance_pct": 27.105,
+      "distance_pct": 27.227,
       "p_stop_first": 0.0029,
       "p_target_first": 0.0006,
       "p_no_touch": 0.9965,
@@ -373,23 +373,23 @@
       "n_windows": 1265,
       "n_eff": 345.8,
       "grid_point": null,
-      "gap_overshoot_pt": 3.522,
+      "gap_overshoot_pt": 3.4,
       "gap_overshoot_note": "depassement moyen QUAND la seance de touche ouvre sous le stop, mesure sur les sorties au stop des fenetres rejouees",
-      "loss_if_stop_pct": 29.016,
+      "loss_if_stop_pct": 29.072,
       "p_gap_through_given_stop": 0.5427,
-      "expected_overshoot_given_stop_pt": 1.9112,
+      "expected_overshoot_given_stop_pt": 1.845,
       "gain_if_tp_pct": 40.636,
-      "rr_vs_spot": 1.4,
-      "cvar95_pct": 15.665,
+      "rr_vs_spot": 1.398,
+      "cvar95_pct": 15.668,
       "var95_pct": 11.552,
       "cvar95_horizon_sessions": 10,
       "cvar95_method": "fenetres rejouees (first-passage exact, 10 seances), sortie au stop au prix du stop ou a l'ouverture si gap franchissant ; EV et CVaR lues sur ce meme echantillon pondere",
       "cvar95_budget_pct": 4.47,
-      "cost": -0.52777,
-      "ev_pct": 0.5278,
+      "cost": -0.52761,
+      "ev_pct": 0.5276,
       "ev_terms": {
         "target": 0.0244,
-        "stop": -0.0841,
+        "stop": -0.0843,
         "no_touch": 0.5875,
         "pnl_no_touch_pct": 0.5896
       },
@@ -410,18 +410,18 @@
         },
         {
           "constraint": "rr_vs_spot",
-          "value": 1.4005,
+          "value": 1.3978,
           "limit": 3.0,
-          "excess_ratio": 0.5332
+          "excess_ratio": 0.5341
         },
         {
           "constraint": "cvar95",
-          "value": 15.6652,
+          "value": 15.6685,
           "limit": 4.47,
-          "excess_ratio": 2.5045
+          "excess_ratio": 2.5052
         }
       ],
-      "violation_severity": 4.0337
+      "violation_severity": 4.0353
     },
     {
       "anchor_price": 131.7029,
@@ -16291,20 +16291,20 @@
       ]
     },
     {
-      "stop_price": 97.1398,
+      "stop_price": 96.9778,
       "stop_origin": "support",
-      "stop_distance_pct": 27.105,
+      "stop_distance_pct": 27.227,
       "target_pct": 6.251,
       "target_origin": "plan_t2",
       "target_why": "cible t2 du plan (écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop))",
       "rr_vs_spot": 0.215,
       "p_stop_first": 0.0029,
-      "cvar95_pct": 15.664,
-      "cost": -0.683,
+      "cvar95_pct": 15.668,
+      "cost": -0.68284,
       "feasible": false,
       "rejected_because": [
         "R/R 0.22 < plancher 3.00 (mesure vs SPOT, gap inclus)",
-        "CVaR 95 % 15.66 % > budget 4.47 %"
+        "CVaR 95 % 15.67 % > budget 4.47 %"
       ]
     },
     {
@@ -16516,19 +16516,19 @@
       ]
     },
     {
-      "stop_price": 97.1398,
+      "stop_price": 96.9778,
       "stop_origin": "support",
-      "stop_distance_pct": 27.105,
+      "stop_distance_pct": 27.227,
       "target_pct": 11.477,
       "target_origin": "plan_t3",
       "target_why": "cible t3 du plan (écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop))",
-      "rr_vs_spot": 0.396,
+      "rr_vs_spot": 0.395,
       "p_stop_first": 0.0029,
-      "cvar95_pct": 15.665,
-      "cost": -0.5349,
+      "cvar95_pct": 15.668,
+      "cost": -0.53474,
       "feasible": false,
       "rejected_because": [
-        "R/R 0.40 < plancher 3.00 (mesure vs SPOT, gap inclus)",
+        "R/R 0.39 < plancher 3.00 (mesure vs SPOT, gap inclus)",
         "CVaR 95 % 15.67 % > budget 4.47 %"
       ]
     },
@@ -16550,16 +16550,16 @@
       ]
     },
     {
-      "stop_price": 97.1398,
+      "stop_price": 96.9778,
       "stop_origin": "support",
-      "stop_distance_pct": 27.105,
+      "stop_distance_pct": 27.227,
       "target_pct": 40.636,
       "target_origin": "resistance",
       "target_why": "resistance a 3 touche(s), force medium (prix 189.2800, visee 187.4114 apres tampon)",
-      "rr_vs_spot": 1.4,
+      "rr_vs_spot": 1.398,
       "p_stop_first": 0.0029,
-      "cvar95_pct": 15.665,
-      "cost": -0.52777,
+      "cvar95_pct": 15.668,
+      "cost": -0.52761,
       "feasible": false,
       "rejected_because": [
         "cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 1.40 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible",
@@ -16726,11 +16726,11 @@
       "note": "avec le surcout de gap inclus, ce stop coute 16.29 % ; il faut donc viser au moins 48.88 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 111.7774,
+      "stop_price": 111.6154,
       "stop_origin": "support",
-      "stop_distance_pct": 16.121,
-      "min_target_pct_for_rr": 51.713,
-      "note": "avec le surcout de gap inclus, ce stop coute 17.24 % ; il faut donc viser au moins 51.71 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 16.242,
+      "min_target_pct_for_rr": 51.932,
+      "note": "avec le surcout de gap inclus, ce stop coute 17.31 % ; il faut donc viser au moins 51.93 % pour tenir le plancher de R/R 3.0"
     },
     {
       "stop_price": 108.3457,
@@ -16761,11 +16761,11 @@
       "note": "avec le surcout de gap inclus, ce stop coute 28.42 % ; il faut donc viser au moins 85.27 % pour tenir le plancher de R/R 3.0"
     },
     {
-      "stop_price": 97.1398,
+      "stop_price": 96.9778,
       "stop_origin": "support",
-      "stop_distance_pct": 27.105,
-      "min_target_pct_for_rr": 87.049,
-      "note": "avec le surcout de gap inclus, ce stop coute 29.02 % ; il faut donc viser au moins 87.05 % pour tenir le plancher de R/R 3.0"
+      "stop_distance_pct": 27.227,
+      "min_target_pct_for_rr": 87.216,
+      "note": "avec le surcout de gap inclus, ce stop coute 29.07 % ; il faut donc viser au moins 87.22 % pour tenir le plancher de R/R 3.0"
     },
     {
       "stop_price": 95.8886,
