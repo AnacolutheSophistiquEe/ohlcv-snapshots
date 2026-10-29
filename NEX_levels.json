@@ -2,19 +2,19 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "NEX",
-    "generated_at": "2026-10-28T22:05:07Z",
+    "generated_at": "2026-10-29T01:35:16Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-29T08:00:00Z",
-    "valid_until": "2026-10-29T21:00:00Z",
+    "valid_from": "2026-10-30T08:00:00Z",
+    "valid_until": "2026-10-30T21:00:00Z",
     "source_precomputed": "NEX_precomputed.json"
   },
   "context": {
-    "last_price": 124.1,
+    "last_price": 124.0,
     "ta_score": {
       "value": 2,
       "max": 10,
-      "label": "bearish"
+      "label": "very_bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
@@ -37,14 +37,14 @@
       "median_bounce_pct": 5.31,
       "confidence": "high"
     },
-    "narrative_short": "TA score 2/10 (bearish), alignment mixed, HMM bull (0.90), vol high, signals neutral (1b/4s/10n)."
+    "narrative_short": "TA score 2/10 (very_bearish), alignment mixed, HMM bull (0.90), vol high, signals neutral (1b/4s/10n)."
   },
   "notes": {
     "atr_daily": 4.7357,
     "atr_pct_daily": null,
-    "beta_60d": 1.7686,
+    "beta_60d": 1.7837,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.5389,
+    "beta_corr_60d": 0.533,
     "btc_corr_high": null,
     "candlestick": {
       "name": "bearish_engulfing",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -24.73,
+      "current_dd_pct": -24.8,
       "ath_price": 164.8832,
       "ath_date": "2026-05-14",
       "max_dd_1y_pct": -31.1,
@@ -76,24 +76,24 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 123.4884,
-        "max": 124.2316
+        "min": 123.3887,
+        "max": 124.1313
       },
       "stop": {
-        "price": 116.9964,
+        "price": 116.8964,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -5.54
+        "distance_pct": -5.55
       },
       "targets": [
         {
           "level": 2,
-          "price": 125.2179,
+          "price": 125.118,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 0.2
         },
         {
           "level": 3,
-          "price": 130.5126,
+          "price": 130.4126,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 0.97
         }
@@ -122,7 +122,7 @@
       "targets": [
         {
           "level": 1,
-          "price": 133.348,
+          "price": 133.346,
           "basis": "next_confluence_resistance",
           "rr": 0.67
         },
@@ -152,30 +152,30 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 118.0326,
-        "max": 120.4291
+        "min": 117.9734,
+        "max": 120.3688
       },
       "stop": {
-        "price": 112.7264,
+        "price": 112.6664,
         "basis": "fallback_pivot_classical_s3",
         "distance_pct": -5.46
       },
       "targets": [
         {
           "level": 1,
-          "price": 119.9233,
+          "price": 119.8233,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 0.11
+          "rr": 0.1
         },
         {
           "level": 2,
-          "price": 125.2179,
+          "price": 125.118,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.92
+          "rr": 0.91
         },
         {
           "level": 3,
-          "price": 130.5126,
+          "price": 130.4126,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 1.73
         }
@@ -201,7 +201,7 @@
     }
   ],
   "invalidation": {
-    "price": 111.5991,
+    "price": 111.5397,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

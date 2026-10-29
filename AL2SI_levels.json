@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "AL2SI",
-    "generated_at": "2026-10-28T22:05:07Z",
+    "generated_at": "2026-10-29T01:35:16Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-29T08:00:00Z",
-    "valid_until": "2026-10-29T21:00:00Z",
+    "valid_from": "2026-10-30T08:00:00Z",
+    "valid_until": "2026-10-30T21:00:00Z",
     "source_precomputed": "AL2SI_precomputed.json"
   },
   "context": {
-    "last_price": 27.52,
+    "last_price": 27.8,
     "ta_score": {
       "value": 6,
       "max": 10,
@@ -24,9 +24,9 @@
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 2,
+      "buy": 3,
       "sell": 1,
-      "neutral": 12,
+      "neutral": 11,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 6.69,
       "confidence": "low"
     },
-    "narrative_short": "TA score 6/10 (bullish), alignment mixed, HMM bear (0.90), vol normal, signals neutral (2b/1s/12n)."
+    "narrative_short": "TA score 6/10 (bullish), alignment mixed, HMM bear (0.90), vol normal, signals neutral (3b/1s/11n)."
   },
   "notes": {
     "atr_daily": 1.9736,
     "atr_pct_daily": null,
-    "beta_60d": 2.2131,
+    "beta_60d": 2.2742,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.3594,
+    "beta_corr_60d": 0.3605,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -55,7 +55,7 @@
       {
         "indicator": "rsi",
         "type": "hidden_bearish",
-        "confidence": 0.37,
+        "confidence": 0.36,
         "bars_ago": 5,
         "at_price": null
       },
@@ -68,7 +68,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -52.92,
+      "current_dd_pct": -52.44,
       "ath_price": 58.45,
       "ath_date": "2026-06-02",
       "max_dd_1y_pct": -62.36,
@@ -84,31 +84,31 @@
       "side": "long",
       "entry_zone": {
         "min": 25.525,
-        "max": 27.6136
+        "max": 27.6192
       },
       "stop": {
-        "price": 24.4492,
+        "price": 24.5752,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -7.98
+        "distance_pct": -7.52
       },
       "targets": [
         {
           "level": 1,
           "price": 28.7515,
           "basis": "sous VPVR VAH à 28.95 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 1.03
+          "rr": 1.09
         },
         {
           "level": 2,
           "price": 30.9581,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.07
+          "rr": 2.2
         },
         {
           "level": 3,
           "price": 33.1646,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.11
+          "rr": 3.3
         }
       ],
       "preferred_target": 1,
