@@ -1,0 +1,138 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "SRT3",
+    "generated_at": "2026-10-29T01:35:16Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-10-30T08:00:00Z",
+    "valid_until": "2026-10-30T21:00:00Z",
+    "source_precomputed": "SRT3_precomputed.json"
+  },
+  "context": {
+    "last_price": 292.3,
+    "ta_score": {
+      "value": 10,
+      "max": 10,
+      "label": "very_bullish"
+    },
+    "alignment_flag": "triple_bullish",
+    "hmm_regime": {
+      "state": "sideways",
+      "probability": 0.6081,
+      "expected_duration_days": 11.3
+    },
+    "volatility_regime": "normal",
+    "signals_counter": {
+      "buy": 9,
+      "sell": 4,
+      "neutral": 3,
+      "total": 16,
+      "verdict": "buy"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_>=70_dist_ma20_>+10",
+      "win_rate": 0.5,
+      "sample_size": 4,
+      "median_bounce_pct": -0.17,
+      "confidence": "very_low"
+    },
+    "narrative_short": "TA score 10/10 (very_bullish), alignment triple_bullish, HMM sideways (0.61), vol normal, signals buy (9b/4s/3n)."
+  },
+  "notes": {
+    "atr_daily": 9.3643,
+    "atr_pct_daily": null,
+    "beta_60d": 0.5845,
+    "beta_benchmark": "GDAXI",
+    "beta_corr_60d": 0.2026,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "",
+      "date": "",
+      "confidence": null
+    },
+    "divergences": [
+      {
+        "indicator": "obv",
+        "type": "hidden_bearish",
+        "confidence": 0.34,
+        "bars_ago": 15,
+        "at_price": null
+      },
+      {
+        "indicator": "obv",
+        "type": "bullish",
+        "confidence": 0.5,
+        "bars_ago": 14,
+        "at_price": null
+      }
+    ],
+    "drawdown": {
+      "current_dd_pct": -51.09,
+      "ath_price": 597.6057,
+      "ath_date": "2021-11-30",
+      "max_dd_1y_pct": -22.5,
+      "days_in_dd": 1793,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 231.6742,
+        "max": 238.6526
+      },
+      "stop": {
+        "price": 222.4072,
+        "basis": "deep_below_confluence_support_4pct",
+        "distance_pct": -5.42
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 270.4881,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
+          "rr": 2.77
+        },
+        {
+          "level": 2,
+          "price": 280.9577,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 3.59
+        },
+        {
+          "level": 3,
+          "price": 291.4273,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 4.41
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Deep value mecanique : entree sur confluence support basse VPVR_VAL + S/R_support + MA200 + BB_LOWER + FIB_382 (strength 40.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+    }
+  ],
+  "bot_actionable": true,
+  "bot_actionable_reason": "ok",
+  "global_conditions": [
+    {
+      "id": "session_eu_xetra_open",
+      "type": "session_window",
+      "params": {
+        "session": "eu_xetra_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 220.1831,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
