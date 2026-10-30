@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-10-29T22:05:21Z",
+    "generated_at": "2026-10-30T01:34:36Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-10-30T08:00:00Z",
-    "valid_until": "2026-10-30T21:00:00Z",
+    "valid_from": "2026-11-02T08:00:00Z",
+    "valid_until": "2026-11-02T21:00:00Z",
     "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
-    "last_price": 141.62,
+    "last_price": 141.53,
     "ta_score": {
       "value": 5,
       "max": 10,
@@ -25,8 +25,8 @@
     "volatility_regime": "normal",
     "signals_counter": {
       "buy": 2,
-      "sell": 2,
-      "neutral": 11,
+      "sell": 3,
+      "neutral": 10,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,23 +37,23 @@
       "median_bounce_pct": 12.63,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM bull (0.90), vol normal, signals neutral (2b/2s/11n)."
+    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM bull (0.90), vol normal, signals neutral (2b/3s/10n)."
   },
   "notes": {
     "atr_daily": 9.3821,
     "atr_pct_daily": null,
-    "beta_60d": 2.7765,
+    "beta_60d": 2.7749,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.4154,
+    "beta_corr_60d": 0.4151,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
       "date": "2026-10-29",
-      "confidence": 0.663
+      "confidence": 0.816
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -70.11,
+      "current_dd_pct": -70.13,
       "ath_price": 473.83,
       "ath_date": "2024-11-20",
       "max_dd_1y_pct": -69.46,
@@ -68,13 +68,13 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 140.6568,
-        "max": 141.5032
+        "min": 140.567,
+        "max": 141.413
       },
       "stop": {
-        "price": 127.5468,
+        "price": 127.4568,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -9.59
+        "distance_pct": -9.6
       },
       "targets": [
         {
@@ -87,7 +87,7 @@
           "level": 2,
           "price": 162.2311,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.56
+          "rr": 1.57
         },
         {
           "level": 3,
@@ -113,14 +113,14 @@
         "max": 153.4432
       },
       "stop": {
-        "price": 148.0769,
+        "price": 148.0724,
         "basis": "below_broken_resistance",
-        "distance_pct": -3.3
+        "distance_pct": -3.31
       },
       "targets": [
         {
           "level": 1,
-          "price": 165.5087,
+          "price": 165.5124,
           "basis": "next_confluence_resistance",
           "rr": 2.44
         },
