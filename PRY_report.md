@@ -1,12 +1,12 @@
 # PRY
 
-**Generated** : 2026-10-29T21:52:35.023402+00:00  
+**Generated** : 2026-10-30T01:14:29.089483+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 7/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · €114.90  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 10/125 fenêtres (p_fill pondéré 9 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable  
 > ↳ spot €114.90 (+6.6% vs entrée) · entrée €107.78 · stop €99.15 · T1 €110.67 · R/R 0.33  
 > ↳ _probas brutes, non calibrées · n=0_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -51,7 +51,7 @@ _Cloture 2026-10-29 : 114.9 · ATR Wilder 5.35 (4.66 %)_
    - _fenêtre arrêtée : rupture de regime a 660 seances en arriere (volatilite 1.58 % contre 2.78 % aujourd'hui, rapport 0.57)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -6.66 % vs -7.7 % si l'on extrapolait par √5 _(rapport 0.864 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0436** (β de hausse 1.2324, asymétrie 0.8468) vs FTSEMIB — 565 séances de repli, historique complet
+- **β de baisse : 1.0436** (β de hausse 1.2333, asymétrie 0.8462) vs FTSEMIB — 565 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 1.453× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
@@ -180,7 +180,7 @@ _Cloture 2026-10-29 : 114.9 · ATR Wilder 5.35 (4.66 %)_
 | 0.35 ATR | 1.767 % | 112.8703 | 49.31 % | 63.83 % | 70.83 % | 76.64 % | 83.72 % | 87.39 % |
 | 0.5 ATR | 2.524 % | 112.0004 | 35.05 % | 52.13 % | 60.12 % | 67.89 % | 76.62 % | 81.94 % |
 | 0.75 ATR | 3.785 % | 110.5505 | 19.5 % | 34.79 % | 43.65 % | 54.67 % | 65.03 % | 73.56 % |
-| 1.0 ATR | 5.047 % | 109.1007 | 10.0 % | 23.59 % | 32.04 % | 44.73 % | 55.84 % | 65.49 % |
+| 1.0 ATR | 5.047 % | 109.1007 | 10.0 % | 23.59 % | 32.14 % | 44.83 % | 55.84 % | 65.49 % |
 | 1.25 ATR | 6.309 % | 107.6509 | 5.54 % | 16.25 % | 24.31 % | 34.99 % | 47.35 % | 57.92 % |
 | 1.5 ATR | 7.571 % | 106.2011 | 2.48 % | 9.61 % | 16.47 % | 24.85 % | 37.06 % | 49.65 % |
 | 2.0 ATR | 10.094 % | 103.3014 | 0.4 % | 4.06 % | 7.74 % | 14.61 % | 24.98 % | 38.14 % |
@@ -196,7 +196,7 @@ _Cloture 2026-10-29 : 114.9 · ATR Wilder 5.35 (4.66 %)_
 | **1 s.** | 0.17 ATR | 0.34 ATR | 0.40 ATR | 0.53 ATR | 0.66 ATR | 0.74 ATR | 1.00 ATR | 1.29 ATR |
 | **2 s.** | 0.24 ATR | 0.53 ATR | 0.60 ATR | 0.79 ATR | 0.97 ATR | 1.12 ATR | 1.49 ATR | 1.92 ATR |
 | **3 s.** | 0.30 ATR | 0.65 ATR | 0.73 ATR | 0.98 ATR | 1.23 ATR | 1.39 ATR | 1.87 ATR | 2.33 ATR |
-| **5 s.** | 0.38 ATR | 0.87 ATR | 0.99 ATR | 1.30 ATR | 1.50 ATR | 1.74 ATR | 2.37 ATR | 2.94 ATR |
+| **5 s.** | 0.38 ATR | 0.87 ATR | 1.00 ATR | 1.30 ATR | 1.50 ATR | 1.74 ATR | 2.37 ATR | 2.94 ATR |
 | **10 s.** | 0.54 ATR | 1.17 ATR | 1.31 ATR | 1.67 ATR | 2.00 ATR | 2.30 ATR | 3.14 ATR | 4.37 ATR |
 | **20 s.** | 0.71 ATR | 1.49 ATR | 1.70 ATR | 2.25 ATR | 2.68 ATR | 3.00 ATR | 4.51 ATR | 5.72 ATR |
 
@@ -204,7 +204,7 @@ _Cloture 2026-10-29 : 114.9 · ATR Wilder 5.35 (4.66 %)_
 - **1 seance(s)** : plage utile 0.395–0.35 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 45.8 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **2 seance(s)** : plage utile 0.603–0.75 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (3.785 %, prix 110.551), p(touche) 34.79 % (en stress 89.11 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 30.5 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **3 seance(s)** : plage utile 0.73–1.25 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (3.785 %, prix 110.551), p(touche) 43.65 % (en stress 96.04 %)  ✅ optimum identifie (61.9 % des re-echantillons)
-- **5 seance(s)** : plage utile 0.993–1.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (5.047 %, prix 109.101), p(touche) 44.73 % (en stress 99.01 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 40.4 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
+- **5 seance(s)** : plage utile 0.996–1.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (5.047 %, prix 109.101), p(touche) 44.83 % (en stress 99.01 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 40.4 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **10 seance(s)** : plage utile 1.307–2.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.5 ATR (7.571 %, prix 106.2009), p(touche) 37.06 % (en stress 98.02 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 50.4 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **20 seance(s)** : plage utile 1.702–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (10.094 %, prix 103.302), p(touche) 38.14 % (en stress 99.0 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 56.0 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 
@@ -305,7 +305,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.76 · part idiosyncratique 0.24
+**Factor** : R² 0.79 · part idiosyncratique 0.21
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -313,9 +313,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -325,8 +325,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.133  _(bullish_recent)_
 - **BB** : %B 0.52 · largeur 35.3%
 - **ATR** : 5.8 (76.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF 0.117  _(accumulation)_
-- **Vol ratio** : 1.79  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV rising · CMF 0.088  _(accumulation)_
+- **Vol ratio** : 1.03  _(volume normal)_
 - **Choppiness** : 41.2  _(transition)_
 - **MA** : MA20 114.17 · MA50 119.4 · MA200 121.56  _(prix > MA20)_
 - **Dist MA** : MA20 +0.6% · MA50 -3.8% · MA200 -5.5%
@@ -334,5 +334,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (806682 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (806548 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

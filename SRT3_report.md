@@ -1,12 +1,12 @@
 # SRT3
 
-**Generated** : 2026-10-29T21:41:31.695899+00:00  
+**Generated** : 2026-10-30T01:06:21.777656+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 10/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : strong_trend · volatilite normal · €298.50  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 2/121 fenêtres (p_fill pondéré 2 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable  
 > ↳ spot €298.50 (+13.6% vs entrée) · entrée €262.81 · stop €253.62 · T1 €273.09 · R/R 1.12  
 > ↳ ¼-Kelly 0.035 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
@@ -62,8 +62,8 @@ _Cloture 2026-10-29 : 298.5 · ATR Wilder 9.4 (3.15 %)_
    - _fenêtre arrêtée : historique epuise — le regime est homogene sur toute la profondeur_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -9.98 % vs -9.16 % si l'on extrapolait par √5 _(rapport 1.089 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0749** (β de hausse 1.1726, asymétrie 0.9167) vs GDAXI — 598 séances de repli, historique complet
-   - ⚠ le β de baisse récent vaut 1.378× celui de l'historique complet : la sensibilité du titre au marché a changé.
+- **β de baisse : 1.0749** (β de hausse 1.1717, asymétrie 0.9174) vs GDAXI — 598 séances de repli, historique complet
+   - ⚠ le β de baisse récent vaut 1.354× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
@@ -77,13 +77,13 @@ _Cloture 2026-10-29 : 298.5 · ATR Wilder 9.4 (3.15 %)_
 - Candidats (la structure propose, la statistique elimine) :
    - ⚪ atr_based a 1.5 ATR (stop 4.62 %) — p(stop avant cible) 0.4221 [0.37 ; 0.47], R/R 0.849, perte reelle 4.712 % (gap inclus), EV 0.1376 % — **REFUSE**
       - refuse : R/R 0.85 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ swing_based a 4.87 ATR (stop 16.987 %) — p(stop avant cible) 0.0104 [0.00 ; 0.03], R/R 0.22, perte reelle 18.184 % (gap inclus), EV 0.7034 % — **REFUSE**
+   - ⚪ swing_based a 4.87 ATR (stop 16.712 %) — p(stop avant cible) 0.0104 [0.00 ; 0.03], R/R 0.222, perte reelle 17.988 % (gap inclus), EV 0.7056 % — **REFUSE**
       - refuse : R/R 0.22 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 13.01 % > budget 12.00 %
-   - ⚪ sr_based a 7.16 ATR (stop 24.047 %) — p(stop avant cible) 0.0021 [0.00 ; 0.01], R/R 0.156, perte reelle 25.642 % (gap inclus), EV 0.7319 % — **REFUSE**
+      - refuse : CVaR 95 % 12.97 % > budget 12.00 %
+   - ⚪ sr_based a 7.16 ATR (stop 23.772 %) — p(stop avant cible) 0.0023 [0.00 ; 0.01], R/R 0.157, perte reelle 25.404 % (gap inclus), EV 0.7305 % — **REFUSE**
       - refuse : R/R 0.16 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 12.62 % > budget 12.00 %
-   - 🟢 support a 10.95 ATR (stop 35.728 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.112, perte reelle 35.728 % (gap inclus), EV 0.7403 % — **REFUSE**
+      - refuse : CVaR 95 % 12.63 % > budget 12.00 %
+   - 🟢 support a 10.95 ATR (stop 35.454 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.113, perte reelle 35.454 % (gap inclus), EV 0.7403 % — **REFUSE**
       - refuse : R/R 0.11 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 12.44 % > budget 12.00 %
    - ⚪ atr_grid a 0.25 ATR (stop 0.77 %) — p(stop avant cible) 0.7932 [0.75 ; 0.83], R/R 5.112, perte reelle 0.782 % (gap inclus), EV 0.2065 % — **REFUSE**
@@ -282,7 +282,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.16 · part idiosyncratique 0.84
+**Factor** : R² 0.17 · part idiosyncratique 0.83
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -290,9 +290,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-10-29 — ECB Monetary Policy Decision (J-0 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : 🟢 LIVE
+- **deep** : 🟢 LIVE
 
 
 ## Indicateurs (résumé)
@@ -302,8 +302,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 3.612  _(pas de croisement recent)_
 - **BB** : %B 1.01 · largeur 23.9%
 - **ATR** : 9.19 (64.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF 0.169  _(accumulation)_
-- **Vol ratio** : 0.82  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.15  _(accumulation)_
+- **Vol ratio** : 0.18  _(volume atone)_
 - **Choppiness** : 36.8  _(marche directionnel)_
 - **MA** : MA20 266.02 · MA50 254.37 · MA200 234.77  _(prix > MA20)_
 - **Dist MA** : MA20 +12.2% · MA50 +17.3% · MA200 +27.1%
@@ -311,5 +311,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (817084 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (794050 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
