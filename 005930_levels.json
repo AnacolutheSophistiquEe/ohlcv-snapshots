@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-10-30T01:34:36Z",
+    "generated_at": "2026-10-30T22:05:02Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-11-02T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "005930_precomputed.json"
   },
   "context": {
-    "last_price": 221750.0,
+    "last_price": 225000.0,
     "ta_score": {
       "value": 5,
       "max": 10,
@@ -20,7 +20,7 @@
     "hmm_regime": {
       "state": "bull",
       "probability": 0.9,
-      "expected_duration_days": 24.5
+      "expected_duration_days": 23.85
     },
     "volatility_regime": "normal",
     "signals_counter": {
@@ -31,29 +31,29 @@
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_30-40_dist_ma20_-10_-5",
-      "win_rate": 1.0,
-      "sample_size": 2,
-      "median_bounce_pct": 9.5,
+      "setup": "rsi_30-40_dist_ma20_-5_-2",
+      "win_rate": 0.0,
+      "sample_size": 0,
+      "median_bounce_pct": 0.0,
       "confidence": "very_low"
     },
     "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM bull (0.90), vol normal, signals neutral (2b/5s/8n)."
   },
   "notes": {
-    "atr_daily": 15160.7143,
+    "atr_daily": 15482.1429,
     "atr_pct_daily": null,
-    "beta_60d": 1.4237,
+    "beta_60d": 1.4199,
     "beta_benchmark": "KS11",
-    "beta_corr_60d": 0.9697,
+    "beta_corr_60d": 0.9673,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "shooting_star",
-      "date": "2026-10-30",
-      "confidence": 0.929
+      "name": "doji",
+      "date": "2026-10-27",
+      "confidence": 1.0
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -38.76,
+      "current_dd_pct": -37.86,
       "ath_price": 362100.6562,
       "ath_date": "2026-06-18",
       "max_dd_1y_pct": -42.83,
@@ -69,31 +69,31 @@
       "side": "long",
       "entry_zone": {
         "min": 205446.1809,
-        "max": 212684.7826
+        "max": 213102.2727
       },
       "stop": {
-        "price": 197622.1852,
-        "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -5.47
+        "price": 203391.7191,
+        "basis": "below_zone_1pct_below_confluence_support",
+        "distance_pct": -2.81
       },
       "targets": [
         {
           "level": 1,
-          "price": 241983.9286,
+          "price": 241951.7857,
           "basis": "sous résistance (strong) à 2.435e+05 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 2.88
+          "rr": 5.56
         },
         {
           "level": 2,
-          "price": 258934.1224,
+          "price": 259261.3476,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.36
+          "rr": 8.5
         },
         {
           "level": 3,
-          "price": 275884.3163,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
-          "rr": 5.84
+          "price": 276570.9096,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 11.44
         }
       ],
       "preferred_target": 1,
@@ -111,34 +111,34 @@
         "max": 244717.5
       },
       "stop": {
-        "price": 234235.4375,
+        "price": 234397.125,
         "basis": "below_broken_resistance",
-        "distance_pct": -4.09
+        "distance_pct": -4.03
       },
       "targets": [
         {
           "level": 1,
           "price": 260099.3516,
           "basis": "fib_50",
-          "rr": 1.59
+          "rr": 1.61
         },
         {
           "level": 2,
           "price": 260099.3516,
           "basis": "next_confluence_resistance",
-          "rr": 1.59
+          "rr": 1.61
         },
         {
           "level": 3,
-          "price": 271467.3913,
+          "price": 282421.0806,
           "basis": "next_confluence_resistance",
-          "rr": 2.73
+          "rr": 3.88
         }
       ],
       "preferred_target": 1,
       "conditions": [],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance MA20 + FIB_382 + MA200 + S/R_resistance (strength 26.0)."
+      "rationale": "Breakout au-dessus confluence resistance MA20 + FIB_382 + VPVR_POC + MA200 + S/R_resistance (strength 40.0)."
     },
     {
       "id": "C",
@@ -146,32 +146,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 188389.7521,
+        "min": 188728.9194,
         "max": 189200.0
       },
       "stop": {
-        "price": 180854.162,
+        "price": 181179.7626,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -4.21
+        "distance_pct": -4.12
       },
       "targets": [
         {
           "level": 1,
-          "price": 241983.9286,
+          "price": 241951.7857,
           "basis": "sous résistance (strong) à 2.435e+05 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 6.7
+          "rr": 6.81
         },
         {
           "level": 2,
-          "price": 258934.1224,
+          "price": 259261.3476,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 8.83
+          "rr": 9.03
         },
         {
           "level": 3,
-          "price": 275884.3163,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
-          "rr": 10.97
+          "price": 276570.9096,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 11.25
         }
       ],
       "preferred_target": 1,
@@ -184,7 +184,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 179045.6204,
+    "price": 179367.965,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

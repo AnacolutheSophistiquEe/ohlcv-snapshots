@@ -1,0 +1,179 @@
+{
+ "available": true,
+ "methode": "echelle v4 — plages continues (09/10/2026)",
+ "date": "2026-10-30",
+ "close": 130.51,
+ "atr_wilder": 9.49,
+ "atr_pct": 7.27,
+ "swing": {
+  "haut": 119.12,
+  "bas": 110.88,
+  "milieu": 115.0,
+  "niveau": 119.12,
+  "haut_pct": -8.73,
+  "bas_pct": -15.04,
+  "decote_pct": -8.73,
+  "largeur_atr": 0.87,
+  "p_haut": 0.5,
+  "p_bas": 0.3,
+  "fenetre_seances": 10,
+  "supports_dans_la_plage": [
+   {
+    "bas": 118.4,
+    "haut": 123.01,
+    "note": "A"
+   },
+   {
+    "bas": 113.2,
+    "haut": 117.85,
+    "note": "B"
+   }
+  ],
+  "stop_indicatif": 95.31,
+  "stop_base": "sous le support 100.05-104.78 (- 0,5 ATR)",
+  "stop_pct": -14.05
+ },
+ "deep": {
+  "haut": 110.88,
+  "bas": 89.32,
+  "milieu": 100.1,
+  "niveau": 110.88,
+  "haut_pct": -15.04,
+  "bas_pct": -31.56,
+  "decote_pct": -15.04,
+  "largeur_atr": 2.27,
+  "p_haut": 0.459,
+  "p_bas": 0.151,
+  "fenetre_seances": 20,
+  "supports_dans_la_plage": [
+   {
+    "bas": 100.05,
+    "haut": 104.78,
+    "note": "B"
+   },
+   {
+    "bas": 89.21,
+    "haut": 91.67,
+    "note": "A"
+   }
+  ],
+  "stop_indicatif": 75.93,
+  "stop_base": "sous le support 80.68-81.81 (- 0,5 ATR)",
+  "stop_pct": -14.99
+ },
+ "supports": [
+  {
+   "bas": 118.4,
+   "haut": 123.01,
+   "note": "A",
+   "contacts": 5,
+   "gap": false,
+   "congestion": false,
+   "distance_atr": 0.79,
+   "distance_pct": -5.75
+  },
+  {
+   "bas": 113.2,
+   "haut": 117.85,
+   "note": "B",
+   "contacts": 5,
+   "gap": true,
+   "congestion": false,
+   "distance_atr": 1.33,
+   "distance_pct": -9.7
+  },
+  {
+   "bas": 100.05,
+   "haut": 104.78,
+   "note": "B",
+   "contacts": 6,
+   "gap": false,
+   "congestion": false,
+   "distance_atr": 2.71,
+   "distance_pct": -19.71
+  },
+  {
+   "bas": 89.21,
+   "haut": 91.67,
+   "note": "A",
+   "contacts": 4,
+   "gap": false,
+   "congestion": true,
+   "distance_atr": 4.09,
+   "distance_pct": -29.76
+  },
+  {
+   "bas": 80.68,
+   "haut": 81.81,
+   "note": "A",
+   "contacts": 2,
+   "gap": false,
+   "congestion": false,
+   "distance_atr": 5.13,
+   "distance_pct": -37.32
+  },
+  {
+   "bas": 58.85,
+   "haut": 61.41,
+   "note": "C",
+   "contacts": 1,
+   "gap": true,
+   "congestion": false,
+   "distance_atr": 7.28,
+   "distance_pct": -52.94
+  }
+ ],
+ "resistances": [
+  {
+   "bas": 133.38,
+   "haut": 137.26,
+   "note": "A",
+   "contacts": 6,
+   "gap": false,
+   "congestion": false,
+   "distance_atr": 0.3,
+   "distance_pct": 2.2
+  },
+  {
+   "bas": 139.45,
+   "haut": 143.85,
+   "note": "A",
+   "contacts": 5,
+   "gap": false,
+   "congestion": false,
+   "distance_atr": 0.94,
+   "distance_pct": 6.85
+  },
+  {
+   "bas": 144.2,
+   "haut": 147.37,
+   "note": "A",
+   "contacts": 3,
+   "gap": false,
+   "congestion": false,
+   "distance_atr": 1.44,
+   "distance_pct": 10.49
+  },
+  {
+   "bas": 149.54,
+   "haut": 153.9,
+   "note": "A",
+   "contacts": 8,
+   "gap": false,
+   "congestion": true,
+   "distance_atr": 2.01,
+   "distance_pct": 14.58
+  }
+ ],
+ "achat_pas_cher": {
+  "actif": true,
+  "type": "COMBO",
+  "dd20_atr": 4.03,
+  "rsi2": 8.6,
+  "limite": 125.77,
+  "stop_catastrophe": 87.81,
+  "mm5": 139.7,
+  "regle_sortie": "vente a l'ouverture qui suit la 1re cloture au-dessus de la MM5, au plus tard 21 seances"
+ },
+ "lecture": "Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard."
+}
