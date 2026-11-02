@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-11-02T01:06:10.287316+00:00",
+  "generated_at": "2026-11-02T21:41:05.013031+00:00",
   "prediction_id": "SRT3_B_20261102",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SRT3",
@@ -16,30 +16,30 @@
     "targets_source": "stops_targets_by_horizon.swing.targets.t1..t3",
     "stop_basis": "plancher anti-bruit (R/R<2)",
     "entry_zone_raw": [
-      258.3766,
-      261.2105
+      260.9055,
+      263.7732
     ],
-    "entry_mid_raw": 259.7935,
-    "spot": 291.79998779296875,
-    "entry_vs_spot_pct": -10.98
+    "entry_mid_raw": 262.3393,
+    "spot": 296.8999938964844,
+    "entry_vs_spot_pct": -11.65
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 259.75,
+    "limit_price": 262.3,
     "limit_price_range": [
-      258.35,
-      261.2
+      260.9,
+      263.75
     ],
     "quantity": 2,
     "tif": "GTD",
-    "gtd": "2026-11-06T16:30:00+00:00"
+    "gtd": "2026-11-09T16:30:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 270.4,
+      "limit_price": 273.35,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
@@ -50,7 +50,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 250.3,
+      "stop_price": 252.45,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -61,7 +61,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 281.0,
+      "limit_price": 284.35,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2",
@@ -72,7 +72,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 250.3,
+      "stop_price": 252.45,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -92,15 +92,15 @@
         "oca_group": "SRT3_B_swing_20261102_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 270.4,
-        "stop_price": 250.3
+        "target_price": 273.35,
+        "stop_price": 252.45
       },
       {
         "oca_group": "SRT3_B_swing_20261102_T2",
         "tranche": "T2",
         "quantity": 1,
-        "target_price": 281.0,
-        "stop_price": 250.3
+        "target_price": 284.35,
+        "stop_price": 252.45
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -127,21 +127,21 @@
       "offset_sessions": 5,
       "sessions_counted": 5,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-11-02T01:06:09.001070+00:00",
+      "anchor_utc": "2026-11-02T21:41:02.957480+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "XETRA",
-      "good_till_date": "2026-11-06T16:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261106-16:30:00",
-      "reference_session": "2026-11-02",
-      "expiry_session": "2026-11-06",
+      "good_till_date": "2026-11-09T16:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261109-16:30:00",
+      "reference_session": "2026-11-03",
+      "expiry_session": "2026-11-09",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-11-02",
         "2026-11-03",
         "2026-11-04",
         "2026-11-05",
-        "2026-11-06"
+        "2026-11-06",
+        "2026-11-09"
       ]
     },
     "venue_calendar": {
@@ -200,16 +200,16 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 10.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.1454,
+    "ev_pct_risk": 0.1474,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 259.7935,
+    "ev_pct_risk_basis_price": 262.3393,
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.4677,
-      "T2": 0.156,
-      "T3": 0.0264
+      "T1": 0.464,
+      "T2": 0.1397,
+      "T3": 0.0194
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": 0.0158,
@@ -220,8 +220,8 @@
     "rating_note": "ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 2/121 fenêtres (p_fill pondéré 2 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 583.6,
-    "hold_tolerance_breach_price": 218.85,
+    "notional_eur": 593.8,
+    "hold_tolerance_breach_price": 222.675,
     "hold_fallback_active": true,
     "prediction_id": "SRT3_B_20261102"
   },
@@ -236,11 +236,11 @@
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 1.13,
-      "T2": 2.25,
-      "T3": 3.37
+      "T1": 1.12,
+      "T2": 2.24,
+      "T3": 3.36
     },
-    "rr_blended_on_posted_entry": 1.69,
+    "rr_blended_on_posted_entry": 1.68,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,
