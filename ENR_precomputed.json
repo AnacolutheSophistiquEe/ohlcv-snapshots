@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE000ENER6Y0",
-    "generated_at": "2026-10-30T21:44:51.430568+00:00",
+    "generated_at": "2026-11-02T01:08:26.114931+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -429,7 +429,7 @@
           131.18,
           125.72,
           126.92,
-          2814577
+          2831144
         ]
       ],
       "h4": [
@@ -1256,8 +1256,8 @@
       "macd_hist": -0.016043728196449614,
       "macd_signal_cross": null,
       "obv_trend": "rising",
-      "mfi_14": 40.52531393284549,
-      "cmf_20": 0.13294560648660897,
+      "mfi_14": 40.50743984986448,
+      "cmf_20": 0.13269550459510795,
       "adl_trend": "rising",
       "adx_14": 19.648408871874476,
       "plus_di_14": 24.177185631219096,
@@ -1265,7 +1265,7 @@
       "di_spread_14": -11.0016949340297,
       "choppiness_14": 44.67771985313029,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 1.2260215241585408,
+      "volume_ratio_ma20": 1.2327932361020573,
       "distance_ma20_pct": -6.0895317715831965,
       "distance_ma50_pct": -9.611442126134794,
       "distance_ma200_pct": -17.737246873856964
@@ -1857,7 +1857,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.2866,
+          "p_touch": 0.2865,
           "p_touch_ref": "entry_mid",
           "distance_pct": 5.44
         },
@@ -1985,7 +1985,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.2494,
+          "p_touch": 0.2493,
           "p_touch_ref": "entry_mid",
           "distance_pct": 17.53
         },
@@ -2579,7 +2579,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-10-30T21:44:17.656051+00:00",
+    "generated_at": "2026-11-02T01:08:01.683432+00:00",
     "n_sessions": 125,
     "sessions_distinct": 125,
     "regime_window": "recent",
@@ -8550,7 +8550,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-10-30T21:43:57.400692+00:00",
+    "generated_at": "2026-11-02T01:07:47.640446+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8819,19 +8819,19 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-10-30T21:44:27.560570+00:00",
+    "generated_at": "2026-11-02T01:08:09.037586+00:00",
     "ticker": "ENR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 21,
+    "n_events": 24,
     "events": [
       {
-        "date": "2026-10-30",
+        "date": "2026-11-02",
         "type": "macro",
-        "label": "Inovio (INO) PDUFA FDA — INO-3107 RRP — 30/10/2026",
+        "label": "US ISM Manufacturing PMI",
         "importance": "medium",
         "sessions_to_event": 0,
         "calendar_days": 0,
@@ -8845,10 +8845,10 @@
         "recommendation": null
       },
       {
-        "date": "2026-10-30",
+        "date": "2026-11-02",
         "type": "macro",
-        "label": "US Employment Cost Index (ECI) — Q3 2026",
-        "importance": "low",
+        "label": "Palantir Technologies (PLTR) Q3 2026 Earnings",
+        "importance": "high",
         "sessions_to_event": 0,
         "calendar_days": 0,
         "in_plan_horizon": [
@@ -8861,9 +8861,25 @@
         "recommendation": null
       },
       {
-        "date": "2026-10-31",
+        "date": "2026-11-03",
         "type": "macro",
-        "label": "Surrozen (SRZN) — IND clearance Wnt pathway liver fibrosis — 31/10/2026",
+        "label": "US JOLTS (Job Openings and Labor Turnover)",
+        "importance": "medium",
+        "sessions_to_event": 1,
+        "calendar_days": 1,
+        "in_plan_horizon": [
+          "intraday",
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-03",
+        "type": "macro",
+        "label": "Super Micro Computer (SMCI) Q1 FY2027 Earnings",
         "importance": "low",
         "sessions_to_event": 1,
         "calendar_days": 1,
@@ -8877,105 +8893,14 @@
         "recommendation": null
       },
       {
-        "date": "2026-11-01",
-        "type": "macro",
-        "label": "Agios (AGIO) FDA PDUFA — mitapivat drépanocytose",
-        "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 2,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-01",
-        "type": "macro",
-        "label": "Evotec (EVT) — prise de fonction de la nouvelle CSO",
-        "importance": "low",
-        "sessions_to_event": 1,
-        "calendar_days": 2,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-02",
-        "type": "macro",
-        "label": "US ISM Manufacturing PMI",
-        "importance": "medium",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
-        "in_plan_horizon": [
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-02",
-        "type": "macro",
-        "label": "Palantir Technologies (PLTR) Q3 2026 Earnings",
-        "importance": "high",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
-        "in_plan_horizon": [
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-03",
-        "type": "macro",
-        "label": "US JOLTS (Job Openings and Labor Turnover)",
-        "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
-        "in_plan_horizon": [
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-03",
-        "type": "macro",
-        "label": "Super Micro Computer (SMCI) Q1 FY2027 Earnings",
-        "importance": "low",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
-        "in_plan_horizon": [
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
         "date": "2026-11-04",
         "type": "macro",
         "label": "US ISM Services PMI",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8988,9 +8913,10 @@
         "type": "macro",
         "label": "US ADP National Employment Report",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -9003,8 +8929,8 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -9018,8 +8944,8 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -9033,8 +8959,8 @@
         "type": "macro",
         "label": "Rheinmetall (RHM) Q3 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -9048,8 +8974,8 @@
         "type": "macro",
         "label": "Evotec (EVT) Q3/9M 2026 Results",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -9061,10 +8987,25 @@
       {
         "date": "2026-11-06",
         "type": "macro",
+        "label": "US Employment Situation (NFP / unemployment / earnings)",
+        "importance": "high",
+        "sessions_to_event": 3,
+        "calendar_days": 4,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-06",
+        "type": "macro",
         "label": "US University of Michigan Consumer Sentiment (prelim + final)",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -9078,8 +9019,8 @@
         "type": "macro",
         "label": "Constellation Energy (CEG) Q3 2026 Earnings",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -9093,8 +9034,8 @@
         "type": "macro",
         "label": "US CPI (headline)",
         "importance": "high",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9107,8 +9048,8 @@
         "type": "macro",
         "label": "US Core CPI (ex food & energy)",
         "importance": "high",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9121,8 +9062,8 @@
         "type": "macro",
         "label": "Rigetti Computing (RGTI) Q3 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9135,14 +9076,112 @@
         "type": "macro",
         "label": "Siemens Energy (ENR) Q3 2026 Earnings",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
         "impact": "idiosyncratic",
         "ticker_specific": true,
         "recommendation": "idiosyncratic_event_flag"
+      },
+      {
+        "date": "2026-11-12",
+        "type": "macro",
+        "label": "US Initial Jobless Claims (weekly)",
+        "importance": "medium",
+        "sessions_to_event": 7,
+        "calendar_days": 10,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-12",
+        "type": "macro",
+        "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
+        "importance": "low",
+        "sessions_to_event": 7,
+        "calendar_days": 10,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-12",
+        "type": "macro",
+        "label": "US Existing Home Sales",
+        "importance": "low",
+        "sessions_to_event": 7,
+        "calendar_days": 10,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-13",
+        "type": "macro",
+        "label": "US PPI Final Demand (headline)",
+        "importance": "medium",
+        "sessions_to_event": 8,
+        "calendar_days": 11,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-13",
+        "type": "macro",
+        "label": "US Core PPI (ex food, energy & trade)",
+        "importance": "medium",
+        "sessions_to_event": 8,
+        "calendar_days": 11,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-14",
+        "type": "macro",
+        "label": "Summit Therapeutics (SMMT) FDA BLA — ivonescimab NSCLC",
+        "importance": "high",
+        "sessions_to_event": 9,
+        "calendar_days": 12,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-15",
+        "type": "macro",
+        "label": "Super Micro Computer (SMCI) Q1 FY2027 Earnings",
+        "importance": "high",
+        "sessions_to_event": 9,
+        "calendar_days": 13,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
       }
     ],
     "earnings_in_swing": false,
@@ -9562,7 +9601,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-10-30T21:44:25.988541+00:00",
+    "generated_at": "2026-11-02T01:08:07.948233+00:00",
     "ticker": "ENR",
     "window_sessions": 60,
     "n_observations_aligned": 59,
@@ -9788,7 +9827,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-10-30T21:44:22.874291+00:00",
+    "generated_at": "2026-11-02T01:08:05.561959+00:00",
     "ticker": "ENR",
     "yahoo": "ENR.DE",
     "source": "yfinance.Ticker.info",
@@ -9812,13 +9851,13 @@
       "market_cap": 107989696512.0,
       "market_cap_musd": 107989.7,
       "market_cap_str": "107.99 Md EUR",
-      "enterprise_value": 100232970240.0,
+      "enterprise_value": 100046282752.0,
       "shares_outstanding": 850848567.0,
       "float_shares": 777430232.0,
       "free_float_pct": 91.4,
-      "avg_volume_3m": 1950502.0,
+      "avg_volume_3m": 1956813.0,
       "adv_str": "2.0 M titres",
-      "avg_volume_10d": 2555174.0,
+      "avg_volume_10d": 2594741.0,
       "archetype_suggested": null,
       "archetype_basis": "aucune regle ne tranche — a l'appreciation du /full_brief",
       "business_summary_raw": "Siemens Energy AG operates as an energy technology company worldwide. It operates through Gas Services, Grid Technologies, Transformation of Industry, and Siemens Gamesa segments. The company provides gas and steam turbines, generators, and heat pumps, as well as performance enhancement, maintenance, digitalization, and consulting services for central and distributed power generation; and high voltage direct current transmission systems, offshore wind farm grid connections, transformers, flexible alternating current transmission systems, high voltage substations, air and gas-insulated switchgears, circuit breakers, capacitor, digital grid solutions and components, components and cyber security, and transformers and storage solutions. It also offers electrolyzers, industrial steam turbines, industrial generators, turbo and reciprocating compressors, drive systems and solutions, batteries and fuel cells, and other systems and solutions, as well as service and digital offerings; onshore and onshore wind turbines; design, engineering, manufacturing, and installation solutions for onshore markets; offshore wind turbine equipment design, manufacturing, and installation solutions; and management, operation and maintenance services for wind farms. The company serves utilities, independent power producers, project developers, municipal energy producers, engineering, procurement, and construction companies, oil and gas, transmission and distribution system operators, and industrial and infrastructure customers. Siemens Energy AG was founded in 1866 and is based in Munich, Germany."
@@ -9842,7 +9881,7 @@
       "net_debt": -8128999936.0,
       "net_debt_str": "-8.13 Md EUR",
       "net_debt_ebitda": -1.76,
-      "ebitda_implied": 4606082911.630899,
+      "ebitda_implied": 4605970385.893835,
       "debt_to_equity": 26.5,
       "current_ratio": 0.9,
       "quick_ratio": 0.57,
@@ -9850,7 +9889,7 @@
       "eps_str": "3.1 EUR",
       "eps_forward": 6.25,
       "eps_growth_pct": 80.0,
-      "dividend_yield_pct": 0.53,
+      "dividend_yield_pct": 0.55,
       "dividend_yield_note": null,
       "dividend_rate": 0.7,
       "payout_ratio_pct": 22.65,
@@ -9868,15 +9907,15 @@
       "statements_note": "3 champs repris des etats financiers (exercice clos 2025-09-30), `.info` ne les publiant pas pour cette place"
     },
     "valuation": {
-      "ev_ebitda_ttm": 21.76,
+      "ev_ebitda_ttm": 21.72,
       "ev_definition": "enterpriseValue du fournisseur : capitalisation + dette totale Y COMPRIS obligations locatives - tresorerie et placements court terme",
       "earnings_metric": "EBITDA TTM du fournisseur (apres loyers)",
       "leases_treatment": "loyers dans l'EV mais PAS reintegres a l'EBITDA : le multiple est sureleve pour un gros locataire ; apparier EV ajuste <-> EBITDAR, ou EV hors loyers <-> EBITDA",
-      "ev_revenue_ttm": 2.4,
+      "ev_revenue_ttm": 2.39,
       "ps_ttm": 2.58,
       "pe_trailing": 40.94,
       "pe_fwd": 20.29,
-      "peg": 0.37,
+      "peg": 0.34,
       "price_to_book": 10.07,
       "fcf_yield_pct": 5.75,
       "ev_ebitda_fwd": null,
@@ -9894,15 +9933,15 @@
       "note": "consensus sell-side — n'est PAS une valeur d'equilibre calculee"
     },
     "ownership": {
-      "insiders_pct": 8.1,
-      "institutions_pct": 57.8,
+      "insiders_pct": 8.11,
+      "institutions_pct": 57.87,
       "short_pct_float": null,
       "short_ratio_days": null
     },
     "market": {
       "beta": 1.847,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": 27.01,
+      "change_52w_pct": 15.38,
       "low_52w": 100.3,
       "high_52w": 191.66
     },
@@ -10270,7 +10309,7 @@
       },
       {
         "field": "financials.dividend_yield_pct",
-        "value": 0.53,
+        "value": 0.55,
         "from": "fundamentals.financials.dividend_yield_pct"
       },
       {
@@ -10285,7 +10324,7 @@
       },
       {
         "field": "valuation.ev_ebitda_ttm",
-        "value": 21.76,
+        "value": 21.72,
         "from": "fundamentals.valuation.ev_ebitda_ttm"
       },
       {
@@ -10305,7 +10344,7 @@
       },
       {
         "field": "valuation.peg",
-        "value": 0.37,
+        "value": 0.34,
         "from": "fundamentals.valuation.peg"
       },
       {
@@ -10350,12 +10389,12 @@
       },
       {
         "field": "ownership.insiders_pct",
-        "value": 8.1,
+        "value": 8.11,
         "from": "fundamentals.ownership.insiders_pct"
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 57.8,
+        "value": 57.87,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -10419,97 +10458,97 @@
       "scope": "univers suivi par le pipeline",
       "not_market_median": "mediane des titres SUIVIS par ce pipeline dans le meme secteur Yahoo — PAS une mediane de marche, de secteur GICS complet ni d'indice",
       "sector": "Industrials",
-      "aggregate_generated_at": "2026-10-30T21:38:26.446865+00:00",
+      "aggregate_generated_at": "2026-11-02T01:04:07.138323+00:00",
       "aggregate_file": "sector_multiples.json",
       "aggregate_age_days": 0.0,
-      "n_titles": 58,
-      "label": "univers suivi, 58 titres du secteur « Industrials » (titre exclu)",
+      "n_titles": 59,
+      "label": "univers suivi, 59 titres du secteur « Industrials » (titre exclu)",
       "metrics": {
         "pe_trailing": {
           "n": 34,
-          "q1": 22.49,
-          "median": 30.1,
-          "q3": 43.68,
-          "min": 14.32,
-          "max": 625.61,
+          "q1": 22.41,
+          "median": 29.08,
+          "q3": 40.91,
+          "min": 13.92,
+          "max": 585.74,
           "self": 40.94,
-          "self_vs_median_pct": 36.0,
+          "self_vs_median_pct": 40.8,
           "thin": false
         },
         "pe_fwd": {
           "n": 47,
-          "q1": 14.09,
-          "median": 19.07,
-          "q3": 25.38,
-          "min": 8.0,
-          "max": 1028.0,
+          "q1": 13.39,
+          "median": 18.45,
+          "q3": 24.7,
+          "min": 8.12,
+          "max": 951.99,
           "self": 20.29,
-          "self_vs_median_pct": 6.4,
+          "self_vs_median_pct": 10.0,
           "thin": false
         },
         "ev_ebitda_ttm": {
           "n": 44,
-          "q1": 14.28,
-          "median": 18.51,
-          "q3": 25.27,
-          "min": 6.84,
-          "max": 162.2,
-          "self": 21.76,
-          "self_vs_median_pct": 17.6,
+          "q1": 12.77,
+          "median": 18.2,
+          "q3": 24.86,
+          "min": 6.9,
+          "max": 151.59,
+          "self": 21.72,
+          "self_vs_median_pct": 19.3,
           "thin": false
         },
         "ev_revenue_ttm": {
-          "n": 57,
-          "q1": 2.06,
-          "median": 3.9,
-          "q3": 5.78,
-          "min": 0.7,
-          "max": 359.06,
-          "self": 2.4,
-          "self_vs_median_pct": -38.5,
+          "n": 58,
+          "q1": 1.89,
+          "median": 3.65,
+          "q3": 5.33,
+          "min": 0.36,
+          "max": 264.12,
+          "self": 2.39,
+          "self_vs_median_pct": -34.5,
           "thin": false
         },
         "ps_ttm": {
-          "n": 57,
-          "q1": 1.92,
-          "median": 3.44,
-          "q3": 5.34,
-          "min": 0.56,
-          "max": 3063.2,
+          "n": 59,
+          "q1": 1.89,
+          "median": 3.34,
+          "q3": 5.0,
+          "min": 0.42,
+          "max": 2922.71,
           "self": 2.58,
-          "self_vs_median_pct": -25.0,
+          "self_vs_median_pct": -22.8,
           "thin": false
         },
         "price_to_book": {
-          "n": 46,
-          "q1": 3.46,
-          "median": 6.57,
-          "q3": 10.05,
-          "min": 1.06,
-          "max": 33.99,
+          "n": 47,
+          "q1": 3.25,
+          "median": 6.1,
+          "q3": 9.47,
+          "min": 1.02,
+          "max": 31.07,
           "self": 10.07,
-          "self_vs_median_pct": 53.3,
+          "self_vs_median_pct": 65.1,
           "thin": false
         },
         "fcf_yield_pct": {
-          "n": 58,
-          "q1": -2.97,
-          "median": 1.41,
-          "q3": 3.09,
-          "min": -44.95,
-          "max": 13.2,
+          "n": 59,
+          "q1": -3.0,
+          "median": 1.11,
+          "q3": 3.21,
+          "min": -47.09,
+          "max": 13.35,
           "self": 5.75,
-          "self_vs_median_pts": 4.34,
+          "self_vs_median_pts": 4.64,
           "thin": false
         },
         "dividend_yield_pct": {
-          "n": 58,
+          "n": 59,
           "q1": 0.0,
-          "median": 0.37,
-          "q3": 1.12,
+          "median": 0.39,
+          "q3": 1.2,
           "min": 0.0,
-          "max": 6.21,
-          "self": 0.53,
+          "max": 6.06,
+          "self": 0.55,
           "self_vs_median_pts": 0.16,
           "thin": false
         }
@@ -10695,7 +10734,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-10-30T21:43:55.266388+00:00",
+    "generated_at": "2026-11-02T01:07:45.934922+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/ENR_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1274,
@@ -11103,7 +11142,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-10-30T21:43:57.104419+00:00",
+    "generated_at": "2026-11-02T01:07:47.400171+00:00",
     "ticker": "ENR",
     "source_csv": "ENR_daily_long.csv",
     "n_sessions": 1275,
@@ -15220,15 +15259,15 @@
         "anchor_date": "2026-10-29",
         "anchor_event": "swing_high",
         "anchor_price": 137.76,
-        "vwap_today": 131.0729,
-        "distance_from_close_pct": -3.17,
+        "vwap_today": 131.0623,
+        "distance_from_close_pct": -3.16,
         "bars_since_anchor": 1
       },
       {
         "anchor_date": "2026-10-23",
         "anchor_event": "swing_low",
         "anchor_price": 116.84,
-        "vwap_today": 126.9437,
+        "vwap_today": 126.9447,
         "distance_from_close_pct": -0.02,
         "bars_since_anchor": 5
       },
@@ -15236,7 +15275,7 @@
         "anchor_date": "2026-10-06",
         "anchor_event": "swing_high",
         "anchor_price": 151.0,
-        "vwap_today": 132.4593,
+        "vwap_today": 132.4576,
         "distance_from_close_pct": -4.18,
         "bars_since_anchor": 18
       }
@@ -20193,8 +20232,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": 2917193.110103694,
-        "signal_line": -781476.2651607686,
+        "value": 2916680.452055224,
+        "signal_line": -781549.5020248357,
         "signal": "buy"
       }
     },
@@ -21733,7 +21772,7 @@
         -3201766.841358084,
         654782.6481191441,
         3295512.836618907,
-        2917193.110103694
+        2916680.452055224
       ],
       "klinger_signal": [
         0.0,
@@ -21989,7 +22028,7 @@
         -2652650.628775499,
         -2180160.160647693,
         -1397921.161038179,
-        -781476.2651607686
+        -781549.5020248357
       ]
     }
   },
@@ -21997,22 +22036,22 @@
     "available": true,
     "latest": {
       "close": 126.91999816894533,
-      "vwap": 132.76136354174642,
+      "vwap": 132.759624490909,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": -4.3998985977304255,
+        "distance_from_close_pct": -4.398646308587261,
         "position": "below_vwap"
       },
-      "force_index": -3047658.159574128,
+      "force_index": -3069810.6067329417,
       "force_index_meta": {
         "signal": "sell"
       },
-      "chaikin_oscillator": 1588071.3189287684,
+      "chaikin_oscillator": 1585117.0614176264,
       "chaikin_oscillator_meta": {
         "cross_recent": "up",
         "signal": "buy"
       },
-      "vroc_14": 137.08748790166675,
+      "vroc_14": 138.48301853098226,
       "vroc_14_meta": {
         "signal": "high_activity"
       }
@@ -22528,7 +22567,7 @@
         134.34062608371713,
         133.74565033178686,
         133.49147757985318,
-        132.76136354174642
+        132.759624490909
       ],
       "force_index": [
         null,
@@ -22784,7 +22823,7 @@
         -2910174.07486313,
         -52969.6565058697,
         835139.220143755,
-        -3047658.159574128
+        -3069810.6067329417
       ],
       "chaikin_oscillator": [
         0.0,
@@ -23040,7 +23079,7 @@
         402585.79065394355,
         1431600.1515650777,
         2029785.5492507159,
-        1588071.3189287684
+        1585117.0614176264
       ],
       "vroc_14": [
         null,
@@ -23296,7 +23335,7 @@
         32.091897359632014,
         184.22159472989466,
         29.7785295071439,
-        137.08748790166675
+        138.48301853098226
       ]
     }
   },
@@ -23328,7 +23367,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": 0.3848,
+      "value": 0.3989,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -23627,24 +23666,24 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 1925006.3833333333,
+        "mean_volume_60d": 1925282.5,
         "median_volume_60d": 1637806.0,
-        "volume_consistency_score": 0.5744947641042539
+        "volume_consistency_score": 0.5743959733645376
       },
       "liquidity": {
-        "liquidity_score": 276567126.7571134,
+        "liquidity_score": 276637216.2107689,
         "liquidity_classification": "high",
         "liquidity_note": "moyenne de Close × Volume sur les 30 dernières barres, en devise NATIVE du titre, non convertie : seuils 1e6/1e7/1e8/1e9 non comparables entre devises"
       },
       "freshness": {
         "last_bar_date": "2026-10-30T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-30T21:44:47.816766+00:00",
+        "asof_utc": "2026-11-02T01:08:23.676452+00:00",
         "venue": "XETRA",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23660,7 +23699,7 @@
         "supplemented_dates": []
       },
       "overall": {
-        "overall_quality_score": 90.58001988676065,
+        "overall_quality_score": 90.57853802566491,
         "overall_label": "excellent",
         "warnings": []
       }
@@ -23713,13 +23752,13 @@
       },
       "freshness": {
         "last_bar_date": "2026-10-30T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-30T21:44:47.816766+00:00",
+        "asof_utc": "2026-11-02T01:08:23.676452+00:00",
         "venue": "XETRA",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23779,13 +23818,13 @@
       },
       "freshness": {
         "last_bar_date": "2026-10-30T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-10-30T21:44:47.816766+00:00",
+        "asof_utc": "2026-11-02T01:08:23.676452+00:00",
         "venue": "XETRA",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -24066,7 +24105,7 @@
         }
       }
     ],
-    "generated_at": "2026-10-30T21:44:52.079039+00:00",
+    "generated_at": "2026-11-02T01:08:26.655961+00:00",
     "history_file": "data/v3/episodes/ENR_episodes.json"
   },
   "setup": {
@@ -24138,11 +24177,11 @@
       }
     ],
     "counts_by_class": {
-      "252": {
-        "NOISE": 0,
-        "PULLBACK": 1,
-        "CORRECTION": 0,
-        "CAPITULATION": 1
+      "63": {
+        "NOISE": 4,
+        "PULLBACK": 2,
+        "CORRECTION": 1,
+        "CAPITULATION": 2
       },
       "20": {
         "NOISE": 15,
@@ -24150,26 +24189,26 @@
         "CORRECTION": 1,
         "CAPITULATION": 4
       },
-      "63": {
-        "NOISE": 4,
-        "PULLBACK": 2,
-        "CORRECTION": 1,
-        "CAPITULATION": 2
-      },
       "126": {
         "NOISE": 0,
         "PULLBACK": 3,
         "CORRECTION": 0,
         "CAPITULATION": 1
+      },
+      "252": {
+        "NOISE": 0,
+        "PULLBACK": 1,
+        "CORRECTION": 0,
+        "CAPITULATION": 1
       }
     },
-    "generated_at": "2026-10-30T21:44:52.157316+00:00"
+    "generated_at": "2026-11-02T01:08:26.717351+00:00"
   },
   "profiles": {
     "version": "profiles/1.0",
     "provenance": "v3",
     "status": "UNVALIDATED",
-    "generated_at": "2026-10-30T21:37:46.023715+00:00",
+    "generated_at": "2026-11-02T01:03:40.608640+00:00",
     "n_occasions": 413,
     "zones_open_episodes": [
       {
