@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src https://ntfy.sh; base-uri 'none'; form-action 'none'">
+<title>Sentinel — décision</title>
+<style>
+:root{--fond:#0f1115;--carte:#181b22;--texte:#e9ecf1;--doux:#9aa3b2;--ligne:#2a2f3a;--sim:#f5b301;--simtexte:#1a1300;
+--call:#1f9d55;--callfort:#22c55e;--put:#c53030;--putfort:#ef4444;--neutre:#4b5563;--ok:#22c55e;--ko:#ef4444}
+@media (prefers-color-scheme: light){:root{--fond:#f4f5f7;--carte:#fff;--texte:#11141a;--doux:#5b6472;--ligne:#dde1e7}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--fond);color:var(--texte);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{padding:0 16px 24px;min-height:100vh}
+.sim{position:sticky;top:0;margin:0 -16px;padding:8px 16px;background:var(--sim);color:var(--simtexte);font-weight:800;
+letter-spacing:.06em;text-align:center;font-size:14px;z-index:2}
+h1{font-size:20px;margin:16px 0 4px}
+.sous{color:var(--doux);font-size:14px;margin:0 0 12px}
+.reco{font-size:22px;font-weight:800;margin:8px 0 4px}
+.compte{font-variant-numeric:tabular-nums;font-size:15px;color:var(--doux);margin-bottom:12px}
+.compte b{color:var(--texte);font-size:20px}
+.boutons{display:grid;gap:14px;margin:14px 0}
+button{appearance:none;border:0;border-radius:18px;padding:22px 16px;font:inherit;color:#fff;text-align:left;cursor:pointer;
+min-height:104px;display:flex;flex-direction:column;justify-content:center;gap:4px;touch-action:manipulation}
+button .l{font-size:28px;font-weight:900;letter-spacing:.02em}
+button .p{font-size:15px;opacity:.95;font-variant-numeric:tabular-nums}
+.CALL{background:var(--call)} .PUT{background:var(--put)}
+.CALL.sug{background:var(--callfort);outline:4px solid #fff;outline-offset:-8px}
+.PUT.sug{background:var(--putfort);outline:4px solid #fff;outline-offset:-8px}
+.SKIP{background:transparent;color:var(--texte);border:2px solid var(--ligne);min-height:56px;padding:12px 16px}
+.SKIP .l{font-size:18px}
+button:disabled{background:var(--neutre)!important;outline:none;opacity:.55;cursor:not-allowed}
+.etat{background:var(--carte);border:1px solid var(--ligne);border-radius:14px;padding:14px;margin-top:12px;font-size:15px}
+.etat.ok{border-color:var(--ok)} .etat.ko{border-color:var(--ko)}
+.etat b{font-size:18px}
+.meta{color:var(--doux);font-size:13px;margin-top:16px}
+code{font-size:12px;word-break:break-all}
+</style>
+</head>
+<body>
+<div class="sim">SIMULATION — AUCUN ORDRE RÉEL</div>
+<main id="app"><h1>Sentinel</h1><p class="sous">Chargement…</p></main>
+<script>
+"use strict";
+const ENC = new TextEncoder(), DEC = new TextDecoder();
+const $app = document.getElementById("app");
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const hmUTC = ms => new Date(ms).toISOString().slice(11, 19) + " UTC";
+const fx = (x, n = 3) => (x == null ? "—" : Number(x).toFixed(n).replace(".", ","));
+
+function b64uDec(s){ s = s.replace(/-/g,"+").replace(/_/g,"/"); while (s.length % 4) s += "=";
+  const b = atob(s), u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
+function hex(buf){ return [...new Uint8Array(buf)].map(x => x.toString(16).padStart(2, "0")).join(""); }
+function lire(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } }
+function ecrire(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch(e){ return false; } }
+
+async function hmacCle(raw){ return crypto.subtle.importKey("raw", raw, {name:"HMAC", hash:"SHA-256"}, false, ["sign"]); }
+async function hmac(raw, data){ return new Uint8Array(await crypto.subtle.sign("HMAC", await hmacCle(raw), data)); }
+async function sousCle(k, usage){ return hmac(k, ENC.encode("sentinel:" + usage)); }
+function concat(...a){ const n = a.reduce((s, x) => s + x.length, 0), o = new Uint8Array(n); let i = 0; for (const x of a){ o.set(x, i); i += x.length; } return o; }
+
+async function ouvrirScelle(k, s){
+  const brut = b64uDec(s), nonce = brut.slice(0, 16), tag = brut.slice(16, 32), ct = brut.slice(32);
+  const attendu = (await hmac(await sousCle(k, "etiquette"), concat(nonce, ct))).slice(0, 16);
+  let diff = 0; for (let i = 0; i < 16; i++) diff |= attendu[i] ^ tag[i];
+  if (diff) throw new Error("lien altéré ou clé d'un autre appareil");
+  const kc = await sousCle(k, "chiffre"), clair = new Uint8Array(ct.length);
+  for (let i = 0, bloc = 0; i < ct.length; bloc++){
+    const ctr = new Uint8Array(4); new DataView(ctr.buffer).setUint32(0, bloc);
+    const ks = await hmac(kc, concat(nonce, ctr));
+    for (let j = 0; j < 32 && i < ct.length; j++, i++) clair[i] = ct[i] ^ ks[j];
+  }
+  return JSON.parse(DEC.decode(clair));
+}
+async function signer(k, ...champs){ return hex(await hmac(await sousCle(k, "signe"), ENC.encode(champs.join("|")))); }
+
+async function poster(base, topic, corps){
+  const r = await fetch(base + "/" + topic, {method:"POST", body: JSON.stringify(corps), cache:"no-store",
+                                             referrerPolicy:"no-referrer"});
+  if (!r.ok) throw new Error("ntfy HTTP " + r.status);
+}
+
+function frag(){ const p = new URLSearchParams(location.hash.slice(1)); history.replaceState(null, "", location.pathname); return p; }
+
+// ── appairage ────────────────────────────────────────────────────────────────
+async function appairer(p){
+  const app = {k: p.get("p"), b: decodeURIComponent(p.get("b") || "https://ntfy.sh"), r: p.get("r")};
+  if (!/^[A-Za-z0-9_-]{40,}$/.test(app.k) || !app.r) { erreur("Lien d'appairage incomplet."); return; }
+  if (!ecrire("sentinel_appareil", app)) { erreur("Ce navigateur refuse de garder la clé (navigation privée ?)."); return; }
+  const tc = Date.now();
+  try { await poster(app.b, app.r, {a:"PAIR", k:"page", sim:true, tc, s: await signer(b64uDec(app.k), "pair", tc)}); } catch(e) {}
+  $app.innerHTML = `<h1>Téléphone appairé ✓</h1><p class="sous">La clé reste dans ce navigateur. Les offres ouvertes depuis
+    la notification ntfy s'afficheront ici, déchiffrées. Tu peux fermer cette page et effacer le message Telegram.</p>
+    <div class="etat">Ouvre toujours les offres avec <b>ce</b> navigateur. Si tu vides ses données, il faudra appairer à nouveau.</div>`;
+}
+
+function erreur(t){ $app.innerHTML = `<h1>Sentinel</h1><div class="etat ko"><b>${esc(t)}</b><br>Rien n'a été envoyé. Les petits boutons de la notification restent utilisables.</div>`; }
+
+// ── offre ────────────────────────────────────────────────────────────────────
+let OFFRE = null, CLE = null, ENVOYE = false;
+
+async function offre(p){
+  const app = lire("sentinel_appareil");
+  if (!app || !app.k) { erreur("Téléphone non appairé (ou données du navigateur effacées)."); return; }
+  CLE = b64uDec(app.k);
+  try { OFFRE = await ouvrirScelle(CLE, p.get("o")); } catch(e) { erreur(e.message); return; }
+  const deja = lire("sentinel_envoye_" + OFFRE.o);
+  rendre();
+  if (deja) { ENVOYE = true; etat(`Choix <b>${esc(deja.a)}</b> déjà envoyé depuis cette page à ${hmUTC(deja.tc)}.`, ""); attendreAck(); }
+  const tc = Date.now();
+  poster(OFFRE.base, OFFRE.r, {o:OFFRE.o, v:OFFRE.v, a:"OPEN", k:"page", sim:true, tc,
+                               s: await signer(CLE, "open", OFFRE.o, OFFRE.v, tc)}).catch(() => {});
+  setInterval(tic, 250); tic();
+}
+
+function bouton(d){
+  const j = OFFRE.j[d], sug = OFFRE.reco === d;
+  if (!j.ok) return `<button class="${d}" disabled><span class="l">${d}</span><span class="p">indisponible : ${esc(j.motif)}</span></button>`;
+  return `<button class="${d}${sug ? " sug" : ""}" data-a="${d}"><span class="l">${d}${sug ? " ✓ suggéré" : ""}</span>
+    <span class="p">${j.qte} × ask ${fx(j.ask)} € · bid ${fx(j.bid)}</span></button>`;
+}
+
+function rendre(){
+  const o = OFFRE, ordre = o.reco === "CALL" ? ["CALL","PUT"] : ["PUT","CALL"];
+  const tradable = o.reco === "CALL" || o.reco === "PUT";
+  $app.innerHTML = `<h1>${esc(o.e)}</h1>
+    <p class="sous">${o.fictif ? "Événement FICTIF · cotations synthétiques · " : ""}cotes ${hmUTC(o.qt)}</p>
+    <div class="reco">${tradable ? (o.reco === "CALL" ? "🟢 " : "🔴 ") + o.reco + " suggéré" : "⚪ Aucune direction fiable"}</div>
+    <div class="sous">Sous-jacent ${o.var > 0 ? "+" : ""}${fx(o.var, 2)} % depuis T0 · orientation non contraignante</div>
+    <div class="compte" id="compte"></div>
+    <div class="boutons">${tradable ? ordre.map(bouton).join("") : ""}
+      <button class="SKIP" data-a="SKIP"><span class="l">Ignorer</span></button></div>
+    <div id="etat"></div>
+    <p class="meta">Le serveur fait foi : un clic arrivé après l'expiration est refusé, même si ce compteur dit le contraire.
+      Offre <code>${esc(o.o.slice(0, 8))}</code> v${o.v}.</p>`;
+  $app.querySelectorAll("button[data-a]").forEach(b => b.addEventListener("click", () => choisir(b.dataset.a)));
+}
+
+function tic(){
+  const reste = OFFRE.exp - Date.now(), c = document.getElementById("compte");
+  if (!c) return;
+  if (reste <= 0) {
+    c.innerHTML = `<b>Expirée</b> à ${hmUTC(OFFRE.exp)}`;
+    if (!ENVOYE) document.querySelectorAll("button[data-a]").forEach(b => b.disabled = true);
+  } else c.innerHTML = `Expire dans <b>${Math.ceil(reste / 1000)} s</b> (${hmUTC(OFFRE.exp)})`;
+}
+
+function etat(html, cls){ const e = document.getElementById("etat"); if (e) e.innerHTML = `<div class="etat ${cls}">${html}</div>`; }
+
+async function choisir(a){
+  if (ENVOYE) return;
+  const c = OFFRE.tok[a];
+  if (!c) return;
+  ENVOYE = true;
+  document.querySelectorAll("button[data-a]").forEach(b => b.disabled = true);
+  const tc = Date.now();
+  etat(`Envoi du choix <b>${esc(a)}</b>…`, "");
+  try {
+    await poster(OFFRE.base, OFFRE.r, {o:OFFRE.o, v:OFFRE.v, a, c, k:"page", sim:true, tc,
+                                       s: await signer(CLE, "dec", OFFRE.o, OFFRE.v, a, c, tc)});
+    ecrire("sentinel_envoye_" + OFFRE.o, {a, tc});
+    etat(`Choix <b>${esc(a)}</b> envoyé à ${hmUTC(tc)}. En attente de l'accusé du serveur…`, "");
+    attendreAck();
+  } catch(e) {
+    ENVOYE = false;
+    document.querySelectorAll("button[data-a]").forEach(b => b.disabled = false);
+    etat(`<b>Envoi impossible</b> (${esc(e.message)}). Réseau ? Réessaie, ou utilise les boutons de la notification.`, "ko");
+  }
+}
+
+const TEXTES = {
+  accepted: r => r.selection === "SKIP" ? ["Ignoré ✓ — aucune simulation ouverte.", "ok"] : [`Choix <b>${esc(r.selection)}</b> reçu ✓ — simulation en attente de cotation.`, "ok"],
+  duplicate: r => [`Déjà décidé : <b>${esc(r.retenu || r.selection)}</b>. Ce clic est ignoré.`, ""],
+  conflict: r => [`Déjà décidé : <b>${esc(r.retenu)}</b>. Ton clic ${esc(r.selection)} est ignoré.`, "ko"],
+  expired: () => ["<b>Offre expirée</b> — rien n'est simulé.", "ko"],
+  cancelled: () => ["<b>Offre annulée</b> — rien n'est simulé.", "ko"],
+  rejected: r => [`<b>Refusé</b> : ${esc(r.reason)}. Aucune position.`, "ko"],
+  unavailable: r => [`<b>Indisponible</b> : ${esc(r.reason)}.`, "ko"],
+  filled: r => [`<b>Exécution SIMULÉE ✓</b><br>${esc(r.selection)} : ${r.qte} × ask ${fx(r.prix)} € (spread ${r.spread_bps} pb) à ${hmUTC(r.fill_at)}.<br>Le détail et le bilan arrivent sur Telegram.`, "ok"],
+  fill_rejected: r => [`<b>Simulation refusée</b> : ${esc(r.reason)}. Aucune position.`, "ko"],
+};
+
+let attente = null;
+function attendreAck(){
+  if (attente) return;
+  const depuis = Math.floor(OFFRE.qt / 1000) - 5, fin = Date.now() + 120000, vus = new Set();
+  attente = setInterval(async () => {
+    if (Date.now() > fin) { clearInterval(attente); etat("Pas d'accusé en 2 min : le résultat n'est PAS connu. Regarde Telegram.", "ko"); return; }
+    try {
+      const r = await fetch(`${OFFRE.base}/${OFFRE.ack}/json?poll=1&since=${depuis}`, {cache:"no-store", referrerPolicy:"no-referrer"});
+      for (const ligne of (await r.text()).split("\n")) {
+        if (!ligne.trim()) continue;
+        const m = JSON.parse(ligne); if (m.event !== "message" || vus.has(m.id)) continue; vus.add(m.id);
+        const x = JSON.parse(m.message), f = TEXTES[x.status];
+        if (!f) continue;
+        const [html, cls] = f(x); etat(html, cls);
+        if (["filled","fill_rejected","expired","cancelled","rejected","unavailable","conflict","duplicate"].includes(x.status)
+            || (x.status === "accepted" && x.selection === "SKIP")) clearInterval(attente);
+      }
+    } catch(e) {}
+  }, 1000);
+}
+
+(async () => {
+  if (!window.crypto || !crypto.subtle) { erreur("Navigateur sans WebCrypto (il faut HTTPS et un navigateur récent)."); return; }
+  const p = frag();
+  if (p.get("p")) return appairer(p);
+  if (p.get("o")) return offre(p);
+  const app = lire("sentinel_appareil");
+  $app.innerHTML = `<h1>Sentinel</h1><p class="sous">${app ? "Téléphone appairé ✓. Les offres s'ouvrent depuis la notification ntfy." : "Ce téléphone n'est pas appairé."}</p>`;
+})();
+</script>
+</body>
+</html>
