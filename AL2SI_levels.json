@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "AL2SI",
-    "generated_at": "2026-11-03T22:05:26Z",
+    "generated_at": "2026-11-04T01:33:40Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-04T08:00:00Z",
-    "valid_until": "2026-11-04T21:00:00Z",
+    "valid_from": "2026-11-05T08:00:00Z",
+    "valid_until": "2026-11-05T21:00:00Z",
     "source_precomputed": "AL2SI_precomputed.json"
   },
   "context": {
-    "last_price": 16.59,
+    "last_price": 16.57,
     "ta_score": {
       "value": 1,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 2.8629,
     "atr_pct_daily": null,
-    "beta_60d": 0.368,
+    "beta_60d": 0.5169,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.0359,
+    "beta_corr_60d": 0.0548,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -71.62,
+      "current_dd_pct": -71.65,
       "ath_price": 58.45,
       "ath_date": "2026-06-02",
       "max_dd_1y_pct": -76.78,
@@ -76,20 +76,20 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 16.2312,
-        "max": 16.3288
+        "min": 16.2112,
+        "max": 16.3088
       },
       "stop": {
-        "price": 12.2957,
+        "price": 12.2757,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -24.47
+        "distance_pct": -24.5
       },
       "targets": [
         {
           "level": 1,
           "price": 20.2804,
           "basis": "sous résistance (medium) à 20.57 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 1.0
+          "rr": 1.01
         },
         {
           "level": 2,
@@ -101,7 +101,7 @@
           "level": 3,
           "price": 26.682,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.61
+          "rr": 2.62
         }
       ],
       "preferred_target": 1,
@@ -128,15 +128,15 @@
       "targets": [
         {
           "level": 1,
-          "price": 25.463,
+          "price": 25.462,
           "basis": "next_confluence_resistance",
           "rr": 5.51
         },
         {
           "level": 2,
-          "price": 26.469,
+          "price": 26.4537,
           "basis": "fib_236",
-          "rr": 6.24
+          "rr": 6.23
         },
         {
           "level": 3,
@@ -207,7 +207,7 @@
     }
   ],
   "invalidation": {
-    "price": 12.1727,
+    "price": 12.1529,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
