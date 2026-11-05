@@ -5,228 +5,416 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src https://ntfy.sh; base-uri 'none'; form-action 'none'">
 <title>Sentinel — décision</title>
 <style>
-:root{--fond:#0f1115;--carte:#181b22;--texte:#e9ecf1;--doux:#9aa3b2;--ligne:#2a2f3a;--sim:#f5b301;--simtexte:#1a1300;
---call:#1f9d55;--callfort:#22c55e;--put:#c53030;--putfort:#ef4444;--neutre:#4b5563;--ok:#22c55e;--ko:#ef4444}
-@media (prefers-color-scheme: light){:root{--fond:#f4f5f7;--carte:#fff;--texte:#11141a;--doux:#5b6472;--ligne:#dde1e7}}
+:root{--bg:#f2f2f3;--ink:#1d1f20;--mut:#5d5d60;--line:rgba(29,31,32,.16);--head:#1d2d3d;--hm:#b5d9fd;--pri:#5980a6;--prk:#f2f2f3;--sec:#416180;--stx:#2c455d;--tint:#eef6ff;--lnk:#416180;--ab:#6b3a5c;--abg:#f4ecf1;--atx:#5a2d4c;--fz:#5980a6;--fzb:#d6ebff;--cd:sans-serif-condensed,"Roboto Condensed","Arial Narrow",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#16212d;--ink:#eef1f4;--mut:#a9b8c7;--line:rgba(238,241,244,.2);--head:#2c455d;--hm:#d6ebff;--pri:#94bce3;--prk:#1d2d3d;--sec:#94bce3;--stx:#eef6ff;--tint:rgba(148,188,227,.12);--lnk:#b5d9fd;--ab:#a06e91;--abg:rgba(160,110,145,.2);--atx:#ecc9e0;--fz:#94bce3;--fzb:#1d2d3d}}
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--fond);color:var(--texte);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-body{padding:0 16px 24px;min-height:100vh}
-.sim{position:sticky;top:0;margin:0 -16px;padding:8px 16px;background:var(--sim);color:var(--simtexte);font-weight:800;
-letter-spacing:.06em;text-align:center;font-size:14px;z-index:2}
-h1{font-size:20px;margin:16px 0 4px}
-.sous{color:var(--doux);font-size:14px;margin:0 0 12px}
-.reco{font-size:22px;font-weight:800;margin:8px 0 4px}
-.compte{font-variant-numeric:tabular-nums;font-size:15px;color:var(--doux);margin-bottom:12px}
-.compte b{color:var(--texte);font-size:20px}
-.boutons{display:grid;gap:14px;margin:14px 0}
-button{appearance:none;border:0;border-radius:18px;padding:22px 16px;font:inherit;color:#fff;text-align:left;cursor:pointer;
-min-height:104px;display:flex;flex-direction:column;justify-content:center;gap:4px;touch-action:manipulation}
-button .l{font-size:28px;font-weight:900;letter-spacing:.02em}
-button .p{font-size:15px;opacity:.95;font-variant-numeric:tabular-nums}
-.CALL{background:var(--call)} .PUT{background:var(--put)}
-.CALL.sug{background:var(--callfort);outline:4px solid #fff;outline-offset:-8px}
-.PUT.sug{background:var(--putfort);outline:4px solid #fff;outline-offset:-8px}
-.SKIP{background:transparent;color:var(--texte);border:2px solid var(--ligne);min-height:56px;padding:12px 16px}
-.SKIP .l{font-size:18px}
-button:disabled{background:var(--neutre)!important;outline:none;opacity:.55;cursor:not-allowed}
-.etat{background:var(--carte);border:1px solid var(--ligne);border-radius:14px;padding:14px;margin-top:12px;font-size:15px}
-.etat.ok{border-color:var(--ok)} .etat.ko{border-color:var(--ko)}
-.etat b{font-size:18px}
-.meta{color:var(--doux);font-size:13px;margin-top:16px}
-code{font-size:12px;word-break:break-all}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.35 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-tap-highlight-color:transparent}
+.n{font-variant-numeric:tabular-nums}.m{color:var(--mut)}
+button{appearance:none;font:inherit;color:inherit;background:none;border:0;padding:0;text-align:left;cursor:pointer;touch-action:manipulation;border-radius:0}
+:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
+.c{position:absolute;width:11px;height:11px;color:var(--mut);pointer-events:none}
+.c::before,.c::after{content:"";position:absolute;background:currentColor}
+.c::before{left:5px;top:0;width:1px;height:100%}.c::after{top:5px;left:0;width:100%;height:1px}
+.tl{top:-6px;left:-6px}.tr{top:-6px;right:-6px}.bl{bottom:-6px;left:-6px}.br{bottom:-6px;right:-6px}
+.bx{position:relative;border:1px solid var(--line)}
+.hz{position:sticky;top:0;z-index:5;height:26px;background:repeating-linear-gradient(-45deg,#1d2d3d 0 10px,#2c455d 10px 20px);color:#f2f2f3;font-size:11px;letter-spacing:.24em;font-weight:700;display:grid;place-items:center}
+.hd{position:sticky;top:26px;z-index:4;background:var(--head);color:#f2f2f3;padding:12px max(16px,calc(50% - 264px)) 14px;display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+.k{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--hm)}
+.ev,.num,.dir,.arr,.h{font-family:var(--cd);font-stretch:condensed;font-weight:700}
+.ev{font-size:28px;line-height:1;margin-top:4px;text-transform:uppercase}
+.hs{font-size:12px;color:var(--hm);margin-top:4px}.r{text-align:right}
+.num{font-size:54px;line-height:.85;text-align:right;white-space:nowrap}.num small{font-size:22px;color:var(--hm)}.num.sm{font-size:30px;line-height:1}
+.fz{position:absolute;left:0;right:0;bottom:-4px;height:4px;background:var(--fzb)}.fz i{display:block;height:100%;background:var(--fz)}
+.bd{padding:16px 16px 28px;max-width:560px;margin:0 auto}
+.dbts{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.dbts:empty{display:none}
+.dbt{white-space:nowrap;font-size:12px;color:var(--atx);border:1px solid var(--ab);background:var(--abg);padding:1px 7px}
+.dbt.ok{color:var(--mut);border-color:var(--line);background:none}.dbt.dead{color:#f2f2f3;background:var(--ab)}
+.sum{padding:10px 12px}.s1{font-size:14.5px;font-weight:600}.s1 em{font-style:normal;color:var(--lnk)}
+.s2{font-size:13.5px;margin-top:4px}.s3{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:6px;font-size:12.5px;color:var(--mut)}
+.lk{color:var(--lnk);white-space:nowrap;font-size:inherit;padding:4px 0}
+.rule{position:relative;height:22px;margin:8px 0 2px}.rule i{position:absolute}
+.ax{left:0;right:0;top:11px;height:1px;background:var(--line)}.rg{top:5px;height:13px;background:var(--fzb);border:1.5px solid var(--sec)}
+.tk{top:1px;width:3px;height:21px;margin-left:-1.5px;background:var(--ink)}.pb{top:4px;width:14px;height:14px;margin-left:-7px;background:var(--pri)}
+.rl{display:flex;justify-content:space-between;gap:6px;font-size:11px;color:var(--mut)}
+.btns{display:grid;gap:12px;margin-top:14px}
+.bp{width:100%;min-height:92px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;border:1.5px solid var(--sec)}
+.bp:active{background:var(--tint)}
+.dt{display:flex;gap:10px;align-items:baseline}.dir{font-size:38px;line-height:1;color:var(--stx);white-space:nowrap}
+.tg{font-size:11px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.bpl{font-size:13px;margin-top:3px;color:var(--mut)}.arr{font-size:40px;line-height:1;color:var(--sec)}
+.pri{background:var(--pri);border-color:var(--pri);color:var(--prk)}.pri:active{background:var(--sec)}.pri .dir,.pri .bpl,.pri .arr{color:var(--prk)}
+.un{border-style:dashed;opacity:.5}
+.conf{border-width:3px;border-color:var(--pri);background:var(--bg);color:var(--ink)}.conf .dir,.conf .bpl,.conf .arr{color:var(--stx)}
+.conf .tg{color:var(--lnk);border:1px solid var(--lnk);padding:0 6px;letter-spacing:.02em;text-transform:none;font-size:12px}
+.dim{opacity:.4}button:disabled{opacity:.45;cursor:default}
+.ign{display:block;width:100%;text-align:center;padding:12px;min-height:48px;border:1px solid var(--line);color:var(--stx)}.ign.fort{border:1.5px solid var(--sec);font-weight:600}
+.st{border:1px solid var(--line);padding:11px 13px;font-size:14px;margin-bottom:12px}.st.a{border:1.5px solid var(--pri);background:var(--tint)}.st.x{border:1.5px solid var(--ab);background:var(--abg)}
+.reg{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:40px;font-size:12.5px;margin-top:12px;padding:9px 10px;background:var(--tint);color:var(--mut)}
+.reg b{color:var(--ink)}.mk{font-size:11px;border:1px solid var(--lnk);color:var(--lnk);padding:0 5px;margin-left:6px}
+.foot{font-size:11.5px;color:var(--mut);margin:16px 0 0}
+.sh{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--bg);border-top:1px solid var(--line);box-shadow:0 -12px 32px rgba(0,0,0,.25);padding:0 max(16px,calc(50% - 264px)) 24px;overflow:auto}
+.sh.off #shb{opacity:.45;pointer-events:none}
+.shh{position:sticky;top:0;z-index:1;background:var(--bg);display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}.h{font-size:19px}
+.lab{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin:14px 0 6px;display:flex;justify-content:space-between;gap:8px}.lab span{text-transform:none;letter-spacing:0}
+.seg{display:flex;gap:6px}.seg button{flex:1;text-align:center;min-height:44px;border:1px solid var(--line);color:var(--mut);font-size:14px}.seg button:active{background:var(--tint)}.seg .on{border:1.5px solid var(--pri);background:var(--tint);color:var(--ink);font-weight:600}
+.seg .up{color:var(--atx)}.seg .on.up{border-color:var(--ab);background:var(--abg);color:var(--atx)}.tot.up b{color:var(--atx)}.tot.up{border-top-color:var(--ab)}.ab{color:var(--atx)}
+.grp{padding:4px 14px 14px;margin-top:14px}.grp .lab:first-child{margin-top:10px}
+.in{display:flex;align-items:baseline;border:1px solid var(--line);background:var(--tint);padding:0 12px}.in input{border:0;background:none;padding:10px 0;font-size:20px;font-variant-numeric:tabular-nums;min-width:0}.in span{color:var(--mut);font-size:13px;white-space:nowrap}
+.tot{display:flex;justify-content:space-between;gap:10px;margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}.tot b{color:var(--ink);font-size:15px}
+input,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--tint);border:1px solid var(--line);padding:9px 10px;width:100%;border-radius:0}
+input[type=range]{padding:0;background:none;border:0;accent-color:var(--pri);height:30px;margin-top:4px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:13.5px}.kv .m{color:var(--mut)}
+.vd{padding:8px 10px;font-size:13.5px;margin-bottom:10px}.vd.abs{border-style:dashed;opacity:.65}
+.ln{display:flex;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.lks{display:flex;justify-content:center;gap:24px;margin-top:18px}.lks button{min-height:44px;color:var(--lnk);font-size:13.5px}
+.ld{display:inline-block;width:54px;height:5px;background:var(--fzb);position:relative;overflow:hidden;vertical-align:middle;margin-left:6px}.ld::after{content:"";position:absolute;top:0;bottom:0;width:40%;background:var(--fz);animation:ld 1.2s linear infinite}
+@keyframes ld{from{left:-40%}to{left:100%}}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:10px}.why button{min-height:56px;text-align:center;border:1px solid var(--line);padding:8px}
 </style>
 </head>
 <body>
-<div class="sim">SIMULATION — AUCUN ORDRE RÉEL</div>
-<main id="app"><h1>Sentinel</h1><p class="sous">Chargement…</p></main>
+<div class="hz">SIMULATION · AUCUN ORDRE RÉEL</div>
+<main id="app"><div class="bd m">Chargement…</div></main>
 <script>
 "use strict";
-const ENC = new TextEncoder(), DEC = new TextDecoder();
-const $app = document.getElementById("app");
-const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const hmUTC = ms => new Date(ms).toISOString().slice(11, 19) + " UTC";
-const fx = (x, n = 3) => (x == null ? "—" : Number(x).toFixed(n).replace(".", ","));
+const ENC=new TextEncoder(),DEC=new TextDecoder(),$=i=>document.getElementById(i),$app=$("app");
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const hm=ms=>new Date(ms).toISOString().slice(11,19),hmUTC=ms=>hm(ms)+" UTC";
+const fx=(x,n=3)=>x==null||isNaN(x)?"—":Number(x).toFixed(n).replace(".",",");
+const e0=x=>Math.round(x).toLocaleString("fr-FR")+"\u00a0€",i0=x=>Math.round(x).toLocaleString("fr-FR");
+const sg=(x,n=2)=>(x>0?"+":x<0?"−":"")+fx(Math.abs(x),n);
+const C='<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>';
+const AR={CALL:"▲",PUT:"▼"},vib=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
+const VIB={ok:[40,60,40],fill:[180],ko:[40,50,40,50,40]};
 
-function b64uDec(s){ s = s.replace(/-/g,"+").replace(/_/g,"/"); while (s.length % 4) s += "=";
-  const b = atob(s), u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
-function hex(buf){ return [...new Uint8Array(buf)].map(x => x.toString(16).padStart(2, "0")).join(""); }
-function lire(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } }
-function ecrire(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch(e){ return false; } }
-
-async function hmacCle(raw){ return crypto.subtle.importKey("raw", raw, {name:"HMAC", hash:"SHA-256"}, false, ["sign"]); }
-async function hmac(raw, data){ return new Uint8Array(await crypto.subtle.sign("HMAC", await hmacCle(raw), data)); }
-async function sousCle(k, usage){ return hmac(k, ENC.encode("sentinel:" + usage)); }
-function concat(...a){ const n = a.reduce((s, x) => s + x.length, 0), o = new Uint8Array(n); let i = 0; for (const x of a){ o.set(x, i); i += x.length; } return o; }
-
-async function ouvrirScelle(k, s){
-  const brut = b64uDec(s), nonce = brut.slice(0, 16), tag = brut.slice(16, 32), ct = brut.slice(32);
-  const attendu = (await hmac(await sousCle(k, "etiquette"), concat(nonce, ct))).slice(0, 16);
-  let diff = 0; for (let i = 0; i < 16; i++) diff |= attendu[i] ^ tag[i];
-  if (diff) throw new Error("lien altéré ou clé d'un autre appareil");
-  const kc = await sousCle(k, "chiffre"), clair = new Uint8Array(ct.length);
-  for (let i = 0, bloc = 0; i < ct.length; bloc++){
-    const ctr = new Uint8Array(4); new DataView(ctr.buffer).setUint32(0, bloc);
-    const ks = await hmac(kc, concat(nonce, ctr));
-    for (let j = 0; j < 32 && i < ct.length; j++, i++) clair[i] = ct[i] ^ ks[j];
-  }
+function b64uDec(s){s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";const b=atob(s),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u}
+function hex(buf){return[...new Uint8Array(buf)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+function lire(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}
+function ecrire(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
+async function hmacCle(raw){return crypto.subtle.importKey("raw",raw,{name:"HMAC",hash:"SHA-256"},false,["sign"])}
+async function hmac(raw,data){return new Uint8Array(await crypto.subtle.sign("HMAC",await hmacCle(raw),data))}
+async function sousCle(k,u){return hmac(k,ENC.encode("sentinel:"+u))}
+function concat(...a){const n=a.reduce((s,x)=>s+x.length,0),o=new Uint8Array(n);let i=0;for(const x of a){o.set(x,i);i+=x.length}return o}
+async function ouvrirScelle(k,s){
+  const brut=b64uDec(s),nonce=brut.slice(0,16),tag=brut.slice(16,32),ct=brut.slice(32);
+  const att=(await hmac(await sousCle(k,"etiquette"),concat(nonce,ct))).slice(0,16);
+  let d=0;for(let i=0;i<16;i++)d|=att[i]^tag[i];
+  if(d)throw new Error("lien altéré ou clé d'un autre appareil");
+  const kc=await sousCle(k,"chiffre"),clair=new Uint8Array(ct.length);
+  for(let i=0,bloc=0;i<ct.length;bloc++){const ctr=new Uint8Array(4);new DataView(ctr.buffer).setUint32(0,bloc);
+    const ks=await hmac(kc,concat(nonce,ctr));for(let j=0;j<32&&i<ct.length;j++,i++)clair[i]=ct[i]^ks[j]}
   return JSON.parse(DEC.decode(clair));
 }
-async function signer(k, ...champs){ return hex(await hmac(await sousCle(k, "signe"), ENC.encode(champs.join("|")))); }
+async function signer(k,...ch){return hex(await hmac(await sousCle(k,"signe"),ENC.encode(ch.join("|"))))}
+async function poster(base,topic,corps){const t=performance.now();
+  const r=await fetch(base+"/"+topic,{method:"POST",body:JSON.stringify(corps),cache:"no-store",referrerPolicy:"no-referrer"});
+  if(!r.ok)throw new Error("ntfy HTTP "+r.status);return performance.now()-t}
+async function lireTopic(base,topic,since){const r=await fetch(`${base}/${topic}/json?poll=1&since=${since}`,{cache:"no-store",referrerPolicy:"no-referrer"});
+  return(await r.text()).split("\n").filter(l=>l.trim()).map(l=>{try{return JSON.parse(l)}catch(e){return null}}).filter(m=>m&&m.event==="message")}
+function frag(){const p=new URLSearchParams(location.hash.slice(1));history.replaceState(null,"",location.pathname);return p}
 
-async function poster(base, topic, corps){
-  const r = await fetch(base + "/" + topic, {method:"POST", body: JSON.stringify(corps), cache:"no-store",
-                                             referrerPolicy:"no-referrer"});
-  if (!r.ok) throw new Error("ntfy HTTP " + r.status);
-}
+function ecran(k,titre,corps,droite=""){$app.innerHTML=`<div class="hd"><div><div class="k">${k}</div><div class="ev">${titre}</div></div>${droite}</div><div class="bd">${corps}</div>`}
+function erreur(t){ecran("Sentinel","Rien n'a été envoyé",`<div class="st x"><b>${esc(t)}</b><br>Les petits boutons de la notification restent utilisables.</div>`)}
 
-function frag(){ const p = new URLSearchParams(location.hash.slice(1)); history.replaceState(null, "", location.pathname); return p; }
-
-// ── appairage ────────────────────────────────────────────────────────────────
+// ── appairage ──
 async function appairer(p){
-  const app = {k: p.get("p"), b: decodeURIComponent(p.get("b") || "https://ntfy.sh"), r: p.get("r")};
-  if (!/^[A-Za-z0-9_-]{40,}$/.test(app.k) || !app.r) { erreur("Lien d'appairage incomplet."); return; }
-  if (!ecrire("sentinel_appareil", app)) { erreur("Ce navigateur refuse de garder la clé (navigation privée ?)."); return; }
-  const tc = Date.now();
-  try { await poster(app.b, app.r, {a:"PAIR", k:"page", sim:true, tc, s: await signer(b64uDec(app.k), "pair", tc)}); } catch(e) {}
-  $app.innerHTML = `<h1>Téléphone appairé ✓</h1><p class="sous">La clé reste dans ce navigateur. Les offres ouvertes depuis
-    la notification ntfy s'afficheront ici, déchiffrées. Tu peux fermer cette page et effacer le message Telegram.</p>
-    <div class="etat">Ouvre toujours les offres avec <b>ce</b> navigateur. Si tu vides ses données, il faudra appairer à nouveau.</div>`;
+  const app={k:p.get("p"),b:decodeURIComponent(p.get("b")||"https://ntfy.sh"),r:p.get("r"),t:Date.now()};
+  if(!/^[A-Za-z0-9_-]{40,}$/.test(app.k)||!app.r){erreur("Lien d'appairage incomplet.");return}
+  if(!ecrire("sentinel_appareil",app)){erreur("Ce navigateur refuse de garder la clé (navigation privée ?).");return}
+  const tc=Date.now();
+  try{await poster(app.b,app.r,{a:"PAIR",k:"page",sim:true,tc,s:await signer(b64uDec(app.k),"pair",tc)})}catch(e){}
+  ecran("Sentinel","Téléphone appairé ✓",`<p class="m" style="margin:0">La clé reste dans ce navigateur. Les offres ouvertes depuis la notification ntfy s'afficheront ici, déchiffrées. Tu peux fermer cette page et effacer le message Telegram.</p>
+    <div class="st" style="margin-top:12px">Ouvre toujours les offres avec <b>ce</b> navigateur. Si tu vides ses données, il faudra appairer à nouveau.</div>`);
+}
+function coller(pO){
+  ecran("Sentinel","Appairer ce navigateur",`<div class="st x"><b>Ce navigateur n'a pas la clé.</b><br>C'est celui qu'ouvre ntfy : colle ici le lien d'appairage reçu sur Telegram (appui long → Copier).</div>
+    <textarea id="lien" rows="4" placeholder="https://…/#p=…&amp;r=…"></textarea>
+    <div class="btns"><button class="bx bp pri" id="okLien" style="min-height:56px;justify-content:center">${C}<span class="dir" style="font-size:22px">Appairer et afficher l'offre</span></button></div>`);
+  $("okLien").onclick=async()=>{const t=$("lien").value.trim(),i=t.indexOf("#"),p=new URLSearchParams(i>=0?t.slice(i+1):t);
+    if(!p.get("p")){alert("Ce n'est pas un lien d'appairage (il doit contenir #p=…).");return}
+    await appairer(p);if(lire("sentinel_appareil")&&pO)offre(pO)};
 }
 
-// Cle absente de CE navigateur (l'appairage a ete ouvert ailleurs, ex. navigateur interne de Telegram) :
-// on colle le lien d'appairage ICI, dans le navigateur qu'ouvre ntfy, puis l'offre en cours s'affiche.
-function coller(pOffre){
-  $app.innerHTML = `<h1>Appairer ce navigateur</h1><div class="etat ko"><b>Ce navigateur n'a pas la clé.</b><br>
-    C'est celui qu'ouvre ntfy : colle ici le lien d'appairage reçu sur Telegram (appui long → Copier).</div>
-    <textarea id="lien" rows="4" style="width:100%;font-size:16px;margin:12px 0"></textarea>
-    <button class="SKIP" id="okLien"><span class="l">Appairer et afficher l'offre</span></button>`;
-  document.getElementById("okLien").addEventListener("click", async () => {
-    const t = document.getElementById("lien").value.trim(), i = t.indexOf("#");
-    const p = new URLSearchParams(i >= 0 ? t.slice(i + 1) : t);
-    if (!p.get("p")) { alert("Ce n'est pas un lien d'appairage (il doit contenir #p=…)."); return; }
-    await appairer(p);
-    if (lire("sentinel_appareil") && pOffre) offre(pOffre);
-  });
-}
-
-function erreur(t){ $app.innerHTML = `<h1>Sentinel</h1><div class="etat ko"><b>${esc(t)}</b><br>Rien n'a été envoyé. Les petits boutons de la notification restent utilisables.</div>`; }
-
-// ── offre ────────────────────────────────────────────────────────────────────
-let OFFRE = null, CLE = null, ENVOYE = false;
+// ── offre ──
+let O=null,K=null,APP=null,ENV=false,DET=null,P=null,DEF=null,ARM=null,ARMT=0,SKEW=null,FILL=null,MARKS=[],EXP=false,TCD=0;
+const ratio=()=>{const r=P.cap/DEF.cap;return({.25:"¼",.5:"½",1:"1×",2:"2×"})[Math.round(r*100)/100]||fx(r,1)+"×"};
+const qty=d=>{const j=O.j[d];if(!j||!j.ask)return 0;if(P.qd&&P.qd.d===d)return P.qd.q;return P.cap===DEF.cap&&!P.qd?j.qte:Math.floor(P.cap/j.ask)};
+const am=d=>Math.floor(O.j[d].ask*(1+P.tol/100)*1000+1e-6);
+const modif=()=>P.cap!==DEF.cap||P.tol!==DEF.tol||P.tmax!==DEF.tmax;
 
 async function offre(p){
-  const app = lire("sentinel_appareil");
-  if (!app || !app.k) { coller(p); return; }
-  CLE = b64uDec(app.k);
-  try { OFFRE = await ouvrirScelle(CLE, p.get("o")); } catch(e) { erreur(e.message); return; }
-  const deja = lire("sentinel_envoye_" + OFFRE.o);
+  APP=lire("sentinel_appareil");if(!APP||!APP.k){coller(p);return}
+  K=b64uDec(APP.k);
+  try{O=await ouvrirScelle(K,p.get("o"))}catch(e){erreur(e.message);return}
+  const j0=O.j[O.reco]||O.j.CALL||O.j.PUT||{};
+  DEF={cap:O.cap||Math.round((j0.qte||0)*(j0.ask||0))||500,tol:O.tol??1,tmax:O.tmax??5};
+  const pr=lire("sentinel_pref")||{},L=O.lim||{};
+  P={cap:pr.f?clamp(Math.round(DEF.cap*pr.f),L.cap_min,L.cap_max):DEF.cap,tol:pr.tol??DEF.tol,tmax:pr.tmax??DEF.tmax,mem:false,qd:null};
+  if(!O.lim)P={...DEF,mem:false,qd:null};
   rendre();
-  if (deja) { ENVOYE = true; etat(`Choix <b>${esc(deja.a)}</b> déjà envoyé depuis cette page à ${hmUTC(deja.tc)}.`, ""); attendreAck(); }
-  const tc = Date.now();
-  poster(OFFRE.base, OFFRE.r, {o:OFFRE.o, v:OFFRE.v, a:"OPEN", k:"page", sim:true, tc,
-                               s: await signer(CLE, "open", OFFRE.o, OFFRE.v, tc)}).catch(() => {});
-  setInterval(tic, 250); tic();
+  const deja=lire("sentinel_envoye_"+O.o);
+  if(deja){ENV=true;TCD=deja.tc;etat(`Choix <b>${esc(deja.a)}</b> déjà envoyé depuis cette page à ${hmUTC(deja.tc)}.`,"");bloquer();attendreAck()}
+  const tc=Date.now();
+  poster(O.base,O.r,{o:O.o,v:O.v,a:"OPEN",k:"page",sim:true,tc,s:await signer(K,"open",O.o,O.v,tc)}).catch(()=>{});
+  if(O.dx)chercherDetail();
+  setInterval(tic,250);tic();
 }
+const clamp=(x,a,b)=>Math.min(b??Infinity,Math.max(a??-Infinity,x));
 
 function bouton(d){
-  const j = OFFRE.j[d], sug = OFFRE.reco === d;
-  if (!j.ok) return `<button class="${d}" disabled><span class="l">${d}</span><span class="p">indisponible : ${esc(j.motif)}</span></button>`;
-  return `<button class="${d}${sug ? " sug" : ""}" data-a="${d}"><span class="l">${d}${sug ? " ✓ suggéré" : ""}</span>
-    <span class="p">${j.qte} × ask ${fx(j.ask)} € · bid ${fx(j.bid)}</span></button>`;
+  const j=O.j[d];if(!j)return"";
+  if(!j.ok)return`<div class="bx bp un">${C}<div><div class="dir">${d}</div><div class="bpl">Indisponible : ${esc(j.motif)}</div></div><span class="arr">${AR[d]}</span></div>`;
+  if(!O.tok[d])return"";
+  const sug=O.reco===d;
+  return`<button class="bx bp${sug?" pri":""}" data-a="${d}" id="b${d}">${C}<div><div class="dt"><span class="dir" id="l${d}">${d}</span><span class="tg" id="t${d}">${sug?"suggéré":""}</span></div><div class="bpl n" id="p${d}"></div></div><span class="arr">${AR[d]}</span></button>`;
 }
 
 function rendre(){
-  const o = OFFRE, ordre = o.reco === "CALL" ? ["CALL","PUT"] : ["PUT","CALL"];
-  const tradable = o.reco === "CALL" || o.reco === "PUT";
-  $app.innerHTML = `<h1>${esc(o.e)}</h1>
-    <p class="sous">${o.fictif ? "Événement FICTIF · cotations synthétiques · " : ""}cotes ${hmUTC(o.qt)}</p>
-    <div class="reco">${tradable ? (o.reco === "CALL" ? "🟢 " : "🔴 ") + o.reco + " suggéré" : "⚪ Aucune direction fiable"}</div>
-    <div class="sous">Sous-jacent ${o.var > 0 ? "+" : ""}${fx(o.var, 2)} % depuis T0 · orientation non contraignante</div>
-    <div class="compte" id="compte"></div>
-    <div class="boutons">${tradable ? ordre.map(bouton).join("") : ""}
-      <button class="SKIP" data-a="SKIP"><span class="l">Ignorer</span></button></div>
-    <div id="etat"></div>
-    <p class="meta">Le serveur fait foi : un clic arrivé après l'expiration est refusé, même si ce compteur dit le contraire.
-      Offre <code>${esc(o.o.slice(0, 8))}</code> v${o.v}.</p>`;
-  $app.querySelectorAll("button[data-a]").forEach(b => b.addEventListener("click", () => choisir(b.dataset.a)));
+  const o=O,tr=o.reco==="CALL"||o.reco==="PUT",ord=o.reco==="PUT"?["PUT","CALL"]:["CALL","PUT"];
+  $app.innerHTML=`<div class="hd" id="hd"><div><div class="k n">Offre · cotes ${hmUTC(o.qt)}</div><div class="ev">${esc(o.e)}</div><div class="hs">${o.fictif?"Fictif · cotations synthétiques":"&nbsp;"}</div></div>
+    <div><div class="num n" id="cd"></div><div class="hs r n" id="cds">→ ${hm(o.exp)}</div></div><div class="fz"><i id="fz"></i></div></div>
+    <div class="bd"><div id="etat"></div><div class="dbts" id="db"></div><div class="bx sum" id="sum"></div>
+    <div class="btns" id="btns">${ord.map(bouton).join("")}<button class="ign${tr?"":" fort"}" data-a="SKIP" id="bSKIP">Ignorer</button></div>
+    <button class="reg n" id="reg"></button>
+    <p class="foot">Le serveur fait foi : un clic arrivé après l'expiration est refusé, même si ce compteur dit le contraire. Offre <span class="n">${esc(o.o.slice(0,8))}</span> v${o.v}.</p></div><div id="sh"></div>`;
+  $app.querySelectorAll("button[data-a]").forEach(b=>b.onclick=()=>choisir(b.dataset.a));
+  $("reg").onclick=()=>feuille("reg");
+  majSum();majBtns();
+}
+
+function doutes(){
+  const L=[...(O.dt||[]),...((DET&&DET.dt)||[])],j=O.j[O.reco],sw=O.sw??1;
+  if(j&&j.ok&&j.ask){const s=(j.ask-j.bid)/j.ask*100;if(s>=sw)L.unshift(`spread ${fx(s,1)} %`)}
+  if(DET&&DET.llm&&accord()===false)L.unshift("désaccord des modèles");
+  return L;
+}
+function accord(){const d=(DET&&DET.llm||[]).map(x=>x.d).filter(x=>x==="CALL"||x==="PUT");if(!d.length)return null;return d.every(x=>x===d[0])}
+const ageS=()=>(Date.now()-(SKEW||0)-O.qt)/1000;
+function majDb(){
+  const a=ageS(),per=O.qmax??8,cl=a<3?"ok":a>per?"dead":"",t=(a<3?"":"▲ ")+`cote ${Math.max(0,Math.floor(a))} s`+(a>per?" · périmée":"");
+  const db=$("db");if(!db)return;if(ENV||EXP){db.innerHTML="";return}
+  db.innerHTML=(ENV||EXP?"":`<span class="dbt ${cl}">${t}</span>`)+doutes().map(x=>`<span class="dbt">▲ ${esc(x)}</span>`).join("");
+}
+function courbe(cv){if(!cv||cv.length<2)return"";const mn=Math.min(0,...cv),mx=Math.max(0,...cv),h=mx-mn||1,y=v=>(2+(mx-v)/h*16).toFixed(1);
+  return`<svg width="64" height="20" viewBox="0 0 64 20" aria-hidden="true"><line x1="0" y1="${y(0)}" x2="64" y2="${y(0)}" stroke="currentColor" stroke-dasharray="2 2" opacity=".5"/><polyline fill="none" stroke="var(--pri)" stroke-width="1.5" points="${cv.map((v,i)=>(i*64/(cv.length-1)).toFixed(1)+","+y(v)).join(" ")}"/></svg>`}
+function regle(ev){const r=ev.r;if(!r||r.lo==null||r.hi==null||r.cons==null||r.pub==null)return"";
+  const d=ev.d??1,mn=Math.min(r.lo,r.pub,r.cons),mx=Math.max(r.hi,r.pub,r.cons),pad=(mx-mn)*.15||.1,pos=x=>((x-mn+pad)/(mx-mn+2*pad)*100).toFixed(1)+"%";
+  const dans=r.pub>=r.lo&&r.pub<=r.hi;
+  return`<div class="rule"><i class="ax"></i><i class="rg" style="left:${pos(r.lo)};width:calc(${pos(r.hi)} - ${pos(r.lo)})"></i><i class="tk" style="left:${pos(r.cons)}"></i><i class="pb" style="left:${pos(r.pub)}"></i></div>
+    <div class="rl n"><span>prévisions ${fx(r.lo,d)}–${fx(r.hi,d)}</span><span>cons. ${fx(r.cons,d)}</span><span style="color:var(--ink)"><b>publié ${fx(r.pub,d)}</b> · ${dans?"dans":"hors"} fourchette</span></div>`}
+function verdicts(){
+  if(DET&&DET.llm){const a=accord(),tr=O.reco==="CALL"||O.reco==="PUT";
+    return`<div class="s2">${DET.llm.map(x=>`${esc(x.m)} <b>${x.d==="CALL"||x.d==="PUT"?x.d:"—"}</b>`).join(" · ")} · ${a===null?"aucun avis":a?"accord":"désaccord"} → code : <b>${tr?O.reco:"rien"}</b></div>`}
+  if(O.dx)return`<div class="s2 m">Verdicts en cours de chargement…<span class="ld"></span></div>`;
+  return"";
+}
+function majSum(){
+  const ev={...(O.ev||{}),...((DET&&DET.ev)||{})},tr=O.reco==="CALL"||O.reco==="PUT";
+  const s1=ev.pub?`${esc(ev.pub)} publié${ev.sur?` · <em>${esc(ev.sur)}</em> vs consensus`:""}`:(tr?`${O.reco} suggéré`:"Aucune direction fiable");
+  $("sum").innerHTML=C+`<div class="s1">${s1}</div>${regle(ev)}${verdicts()}
+    <div class="s3 n"><span style="display:flex;align-items:center;gap:8px">${courbe(O.cv)}${esc(O.sj||"Sous-jacent")} ${sg(O.var)} % depuis T0</span><button class="lk" id="det">Détail ▾</button></div>`;
+  $("det").onclick=()=>feuille("ctx");majDb();
+}
+function majBtns(){
+  for(const d of["CALL","PUT"]){const p=$("p"+d);if(!p)continue;const j=O.j[d],q=qty(d);
+    p.innerHTML=`${i0(q)} × ask ${fx(j.ask)} € · bid ${fx(j.bid)} · perte max ${ARM===d?"<b>"+e0(q*j.ask)+"</b> (défaut "+i0(DEF.cap)+")":e0(q*j.ask)}`;
+    const b=$("b"+d);b.classList.toggle("conf",ARM===d);b.classList.toggle("dim",!!ARM&&ARM!==d);
+    $("l"+d).textContent=ARM===d?d+" "+ratio():d;$("t"+d).textContent=ARM===d?"confirmer ?":O.reco===d?"suggéré":""}
+  const s=$("bSKIP");if(s)s.textContent=ARM?`Annuler · revenir à ${e0(DEF.cap)}`:"Ignorer";
+  const m=modif(),B=(x,y)=>x?`<b>${y}</b>`:y;
+  $("reg").innerHTML=`<span>${B(P.cap!==DEF.cap,e0(P.cap)+" · "+ratio())} · ${B(P.tol!==DEF.tol,"ask max +"+fx(P.tol,P.tol%1?1:0)+" %")} · ${B(P.tmax!==DEF.tmax,"sortie "+P.tmax+" min")}${m?'<span class="mk">modifié</span>':""}</span><span class="lk">${O.lim?"Régler ›":"Détails ›"}</span>`;
 }
 
 function tic(){
-  const reste = OFFRE.exp - Date.now(), c = document.getElementById("compte");
-  if (!c) return;
-  if (reste <= 0) {
-    c.innerHTML = `<b>Expirée</b> à ${hmUTC(OFFRE.exp)}`;
-    if (!ENVOYE) document.querySelectorAll("button[data-a]").forEach(b => b.disabled = true);
-  } else c.innerHTML = `Expire dans <b>${Math.ceil(reste / 1000)} s</b> (${hmUTC(OFFRE.exp)})`;
+  const reste=O.exp-Date.now(),cd=$("cd");if(!cd)return;
+  if(ENV||FILL){$("fz").style.width="100%";$("db").innerHTML="";if(FILL)return;cd.className="num n sm";cd.textContent=hm(TCD);$("cds").textContent="décidé";return}
+  const tot=O.exp-(O.t0||O.qt);
+  $("fz").style.width=Math.max(0,Math.min(100,reste/tot*100))+"%";
+  if(reste<=0){if(!EXP){EXP=true;cd.innerHTML="0<small> s</small>";$("cds").textContent="expirée "+hm(O.exp);bloquer();
+      const s=$("shp");if(s){if(s.dataset.v==="reg")fermer();else s.classList.add("off")}etat("<b>Offre expirée</b> — rien n'est simulé.","x");pourquoi(["late","doubt","risk","quote"]);hist({a:"expirée"})}}
+  else cd.innerHTML=Math.ceil(reste/1000)+"<small> s</small>";
+  majDb();
 }
-
-function etat(html, cls){ const e = document.getElementById("etat"); if (e) e.innerHTML = `<div class="etat ${cls}">${html}</div>`; }
+function etat(h,c){const e=$("etat");if(e)e.innerHTML=`<div class="st ${c}">${h}</div>`}
+function bloquer(){document.querySelectorAll("button[data-a]").forEach(b=>b.disabled=true);$("btns")&&($("btns").style.opacity=".45")}
+function debloquer(){document.querySelectorAll("button[data-a]").forEach(b=>b.disabled=false);$("btns").style.opacity=""}
+function desarmer(){ARM=null;clearTimeout(ARMT);majBtns()}
 
 async function choisir(a){
-  if (ENVOYE) return;
-  const c = OFFRE.tok[a];
-  if (!c) return;
-  ENVOYE = true;
-  document.querySelectorAll("button[data-a]").forEach(b => b.disabled = true);
-  const tc = Date.now();
-  etat(`Envoi du choix <b>${esc(a)}</b>…`, "");
-  try {
-    await poster(OFFRE.base, OFFRE.r, {o:OFFRE.o, v:OFFRE.v, a, c, k:"page", sim:true, tc,
-                                       s: await signer(CLE, "dec", OFFRE.o, OFFRE.v, a, c, tc)});
-    ecrire("sentinel_envoye_" + OFFRE.o, {a, tc});
-    etat(`Choix <b>${esc(a)}</b> envoyé à ${hmUTC(tc)}. En attente de l'accusé du serveur…`, "");
-    attendreAck();
-  } catch(e) {
-    ENVOYE = false;
-    document.querySelectorAll("button[data-a]").forEach(b => b.disabled = false);
-    etat(`<b>Envoi impossible</b> (${esc(e.message)}). Réseau ? Réessaie, ou utilise les boutons de la notification.`, "ko");
-  }
+  if(ENV||EXP)return;
+  if(a==="SKIP"&&ARM){P.cap=DEF.cap;P.qd=null;desarmer();return}
+  const c=O.tok[a];if(!c)return;
+  const ext=!!O.lim&&a!=="SKIP",gros=ext&&P.cap>DEF.cap;
+  if(gros&&ARM!==a){ARM=a;majBtns();clearTimeout(ARMT);ARMT=setTimeout(desarmer,3000);return}
+  ARM=null;clearTimeout(ARMT);majBtns();
+  ENV=true;fermer();bloquer();
+  const tc=Date.now();TCD=tc;etat(`Envoi du choix <b>${esc(a)}</b>…`,"");
+  const co={o:O.o,v:O.v,a,c,k:"page",sim:true,tc};
+  if(ext){Object.assign(co,{p:2,cap:P.cap,qty:qty(a),am:am(a),tmax:P.tmax,cfm:gros?1:0});
+    co.s=await signer(K,"dec2",O.o,O.v,a,c,tc,co.cap,co.qty,co.am,co.tmax,co.cfm)}
+  else co.s=await signer(K,"dec",O.o,O.v,a,c,tc);
+  try{const lat=await poster(O.base,O.r,co);ecrire("sentinel_lat",{ms:Math.round(lat),t:tc});
+    ecrire("sentinel_envoye_"+O.o,{a,tc});
+    if(P.mem&&ext)ecrire("sentinel_pref",{f:P.cap/DEF.cap,tol:P.tol,tmax:P.tmax});
+    hist({a,q:a==="SKIP"?0:co.qty||O.j[a].qte});
+    etat(`Choix <b>${esc(a)}</b> envoyé à ${hmUTC(tc)}. En attente de l'accusé du serveur…`,"");attendreAck();
+  }catch(e){ENV=false;debloquer();etat(`<b>Envoi impossible</b> (${esc(e.message)}). Réseau ? Réessaie, ou utilise les boutons de la notification.`,"x")}
 }
 
-const TEXTES = {
-  accepted: r => r.selection === "SKIP" ? ["Ignoré ✓ — aucune simulation ouverte.", "ok"] : [`Choix <b>${esc(r.selection)}</b> reçu ✓ — simulation en attente de cotation.`, "ok"],
-  duplicate: r => [`Déjà décidé : <b>${esc(r.retenu || r.selection)}</b>. Ce clic est ignoré.`, ""],
-  conflict: r => [`Déjà décidé : <b>${esc(r.retenu)}</b>. Ton clic ${esc(r.selection)} est ignoré.`, "ko"],
-  expired: () => ["<b>Offre expirée</b> — rien n'est simulé.", "ko"],
-  cancelled: () => ["<b>Offre annulée</b> — rien n'est simulé.", "ko"],
-  rejected: r => [`<b>Refusé</b> : ${esc(r.reason)}. Aucune position.`, "ko"],
-  unavailable: r => [`<b>Indisponible</b> : ${esc(r.reason)}.`, "ko"],
-  filled: r => [`<b>Exécution SIMULÉE ✓</b><br>${esc(r.selection)} : ${r.qte} × ask ${fx(r.prix)} € (spread ${r.spread_bps} pb) à ${hmUTC(r.fill_at)}.<br>Le détail et le bilan arrivent sur Telegram.`, "ok"],
-  fill_rejected: r => [`<b>Simulation refusée</b> : ${esc(r.reason)}. Aucune position.`, "ko"],
+const TX={
+  accepted:r=>r.selection==="SKIP"?["<b>Ignoré ✓</b> — aucune simulation ouverte.","a","ok"]:[`<b>Choix ${esc(r.selection)} reçu ✓</b><br>Simulation en attente de cotation.`,"a","ok"],
+  duplicate:r=>[`<b>Déjà décidé : ${esc(r.retenu||r.selection)}.</b> Ce clic est ignoré.`,"","ko"],
+  conflict:r=>[`<b>Déjà décidé : ${esc(r.retenu)}.</b> Ton clic ${esc(r.selection)} est ignoré.`,"x","ko"],
+  expired:()=>["<b>Offre expirée</b> — rien n'est simulé.","x","ko"],
+  cancelled:()=>["<b>Offre annulée</b> — rien n'est simulé.","x","ko"],
+  rejected:r=>[`<b>Refusé</b> : ${esc(r.reason)}. Aucune position.${O.lim?" Réglages revenus au défaut.":""}`,"x","ko"],
+  unavailable:r=>[`<b>Indisponible</b> : ${esc(r.reason)}.`,"x","ko"],
+  fill_rejected:r=>[`<b>Simulation refusée</b> : ${esc(r.reason)}. Aucune position.`,"x","ko"],
 };
-
-let attente = null;
+let att=null;const VUS=new Set();const stop=()=>{clearInterval(att);att=null};
 function attendreAck(){
-  if (attente) return;
-  const depuis = Math.floor(OFFRE.qt / 1000) - 5, fin = Date.now() + 120000, vus = new Set();
-  attente = setInterval(async () => {
-    if (Date.now() > fin) { clearInterval(attente); etat("Pas d'accusé en 2 min : le résultat n'est PAS connu. Regarde Telegram.", "ko"); return; }
-    try {
-      const r = await fetch(`${OFFRE.base}/${OFFRE.ack}/json?poll=1&since=${depuis}`, {cache:"no-store", referrerPolicy:"no-referrer"});
-      for (const ligne of (await r.text()).split("\n")) {
-        if (!ligne.trim()) continue;
-        const m = JSON.parse(ligne); if (m.event !== "message" || vus.has(m.id)) continue; vus.add(m.id);
-        const x = JSON.parse(m.message), f = TEXTES[x.status];
-        if (!f) continue;
-        const [html, cls] = f(x); etat(html, cls);
-        if (["filled","fill_rejected","expired","cancelled","rejected","unavailable","conflict","duplicate"].includes(x.status)
-            || (x.status === "accepted" && x.selection === "SKIP")) clearInterval(attente);
-      }
-    } catch(e) {}
-  }, 1000);
+  if(att)return;
+  const dep=Math.floor(O.qt/1000)-5,t0=TCD;let fin=Date.now()+120000;
+  att=setInterval(async()=>{
+    if(Date.now()>fin){stop();if(!FILL)etat("<b>Pas d'accusé en 2 min</b> : le résultat n'est PAS connu. Regarde Telegram.","x");return}
+    try{for(const m of await lireTopic(O.base,O.ack,dep)){
+      if(VUS.has(m.id))continue;VUS.add(m.id);if(t0&&m.time&&m.time*1000<t0-1000)continue;let x;try{x=JSON.parse(m.message)}catch(e){continue}
+      if(x.o&&x.o!==O.o)continue;
+      if(x.status==="filled"){FILL=x;fin=Math.max(fin,(x.fill_at||Date.now())+(Math.max(P.tmax,15)+2)*60000);vib(VIB.fill);pnl();continue}
+      if(x.status==="mark"){MARKS=MARKS.filter(k=>k.t!==x.t).concat([x]).sort((a,b)=>a.t-b.t);hist({pnl:x.pnl},true);pnl();if(x.t>=15)stop();continue}
+      const f=TX[x.status];if(!f)continue;
+      const[h,c,v]=f(x);etat(h,c);vib(VIB[v]);
+      if(x.status==="accepted"&&x.selection==="SKIP"){stop();pourquoi(["doubt","risk","quote","away"])}
+      else if(x.status!=="accepted")stop();
+      if(x.status==="rejected"&&O.lim){ENV=false;localStorage.removeItem("sentinel_envoye_"+O.o);P={...DEF,mem:false,qd:null};debloquer();majBtns();return}
+    }}catch(e){}
+  },1000);
+}
+function pnl(){
+  const f=FILL,last=MARKS.length?MARKS[MARKS.length-1]:null,cd=$("cd");
+  cd.className="num n sm";cd.innerHTML=last?sg(last.pnl)+"<small> €</small>":"✓";$("cds").textContent=last?"au bid, simulé":"exécuté";
+  const fa=f.fill_at||Date.now(),sortie=fa+P.tmax*60000;
+  const pts=[{t:0,pnl:0},...MARKS.map(k=>({t:k.s??k.t*60,pnl:k.pnl}))],mx=Math.max(1,...pts.map(p=>Math.abs(p.pnl)));
+  const svg=pts.length>1?`<svg width="100%" height="90" viewBox="0 0 300 90" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="45" x2="300" y2="45" stroke="var(--mut)" stroke-dasharray="3 3"/>${[1,5,15].map(t=>`<line x1="${t*20}" y1="0" x2="${t*20}" y2="90" stroke="var(--line)"/>`).join("")}<polyline fill="none" stroke="var(--pri)" stroke-width="2" points="${pts.map(p=>(Math.min(900,p.t)/3).toFixed(1)+","+(45-p.pnl/mx*40).toFixed(1)).join(" ")}"/></svg>`:"";
+  const row=t=>{const k=MARKS.find(m=>m.t===t),at=fa+t*60000;return`<div class="ln n"><span>+${t} min · ${hm(at)}</span><span>${k?`<b>${sg(k.pnl)} €</b> <span class="m">marqué</span>`:Date.now()<at?'<span class="m">à venir</span>':'<span class="m">en attente</span>'}</span></div>`};
+  $("etat").innerHTML=`<div class="st a"><b>Exécution SIMULÉE ✓</b><br>${esc(f.selection)} : ${i0(f.qte)} × ask ${fx(f.prix)} € (spread ${f.spread_bps} pb) à ${hmUTC(fa)}. Sortie au temps ${hm(sortie)}.</div>
+    ${svg?`<div class="bx" style="padding:8px 8px 2px;margin-bottom:10px">${C}${svg}</div>`:""}${[1,5,15].map(row).join("")}
+    <p class="foot">Valeur au bid courant, sans frais. Bilan détaillé sur Telegram.</p>`;
 }
 
-(async () => {
-  if (!window.crypto || !crypto.subtle) { erreur("Navigateur sans WebCrypto (il faut HTTPS et un navigateur récent)."); return; }
-  const p = frag();
-  if (p.get("p")) return appairer(p);
-  if (p.get("o")) return offre(p);
-  const app = lire("sentinel_appareil");
-  if (!app) return coller(null);
-  $app.innerHTML = `<h1>Sentinel</h1><p class="sous">${app ? "Téléphone appairé ✓. Les offres s'ouvrent depuis la notification ntfy." : "Ce téléphone n'est pas appairé."}</p>`;
+const WHY={doubt:"Pas convaincu",risk:"Trop risqué",quote:"Cote / spread douteux",away:"Pas disponible",late:"Pas vu à temps"};
+function pourquoi(l){
+  const e=$("etat");if(!e)return;const d=document.createElement("div");
+  d.innerHTML=`<div class="lab">Pourquoi ? <span>facultatif · un geste</span></div><div class="why">${l.map(k=>`<button data-w="${k}">${WHY[k]}</button>`).join("")}</div>`;
+  e.appendChild(d);const t=setTimeout(()=>d.remove(),30000);
+  d.querySelectorAll("button").forEach(b=>b.onclick=async()=>{clearTimeout(t);const w=b.dataset.w,tc=Date.now();
+    d.innerHTML=`<div class="st">Motif noté : ${WHY[w].toLowerCase()} ✓</div>`;setTimeout(()=>d.remove(),4000);
+    try{await poster(O.base,O.r,{o:O.o,v:O.v,a:"WHY",why:w,k:"page",sim:true,tc,s:await signer(K,"why",O.o,O.v,w,tc)})}catch(e){}});
+}
+
+function hist(x,maj){const h=lire("sentinel_hist")||[];
+  if(maj){const i=h.findIndex(y=>y.o===O.o);if(i>=0)Object.assign(h[i],x)}
+  else h.unshift({o:O.o,e:O.e,tc:Date.now(),...x});
+  ecrire("sentinel_hist",h.slice(0,20))}
+
+async function chercherDetail(){
+  const dep=Math.floor(O.qt/1000)-5,fin=Date.now()+45000;
+  while(!DET&&Date.now()<fin){
+    try{for(const m of await lireTopic(O.base,O.dx,dep)){try{const x=await ouvrirScelle(K,m.message);if(x.o===O.o){DET=x;break}}catch(e){}}}catch(e){}
+    if(!DET)await new Promise(r=>setTimeout(r,1500));
+  }
+  if(!DET){O.dx=null}
+  majSum();
+}
+
+// ── feuilles ──
+function fermer(){$("sh")&&($("sh").innerHTML="")}
+function feuille(v){
+  const top=$("hd").getBoundingClientRect().bottom+4,tt={ctx:"Contexte",reg:O.lim?"Réglages de l'offre":"Paramètres de l'offre",cot:"Cotation",lia:"Liaison",his:"Historique"}[v];
+  $("sh").innerHTML=`<div class="sh${EXP?" off":""}" id="shp" data-v="${v}" style="top:${top}px"><div class="shh"><span class="h">${tt}</span><button class="lk" id="shx">${v==="ctx"||v==="reg"?"Fermer ✕":"‹ Retour"}</button></div><div id="shb">${({ctx:vCtx,reg:vReg,cot:vCot,lia:vLia,his:vHis})[v]()}</div></div>`;
+  $("shx").onclick=()=>v==="ctx"||v==="reg"?fermer():feuille("reg");
+  if(v==="reg")lierReg();
+  if(v==="lia")$("tst").onclick=tester;
+  document.querySelectorAll("[data-v]").forEach(b=>b.onclick=()=>feuille(b.dataset.v));
+}
+function vCtx(){
+  const ev={...(O.ev||{}),...((DET&&DET.ev)||{})},d=doutes(),kv=(k,v)=>v?`<span class="m">${k}</span><span>${v}</span>`:"";
+  let h=`<div class="lab">Ce qui fait douter</div><div class="st ${d.length?"x":""}" style="margin:0;font-size:13.5px">${d.length?d.map(esc).join(" · "):"Rien de signalé."} · cote de ${Math.floor(ageS())} s</div>`;
+  h+=`<div class="lab">Événement</div><div class="kv n">${kv("Publié",esc(ev.pub))}${kv("Consensus",esc(ev.cons))}${kv("Précédent",esc(ev.prev))}${kv("Surprise",ev.sur&&`<b>${esc(ev.sur)}</b>${ev.sens?", "+esc(ev.sens):""}`)}${kv("Source",esc([ev.src,ev.det&&"détecté "+hm(ev.det)].filter(Boolean).join(" · ")))}${kv("Sous-jacent",`${esc(O.sj||"")} ${sg(O.var)} % depuis T0`)}</div>`;
+  h+=`<div class="lab">Verdicts</div>`;
+  if(DET&&DET.llm)h+=DET.llm.map(x=>{const ok=x.d==="CALL"||x.d==="PUT"||x.d==="NONE";
+    return ok?`<div class="bx vd">${C}<div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(x.m)} · ${x.d==="NONE"?"rien":x.d}</b><span class="m n">${x.dt!=null?"T0 + "+fx(x.dt,1)+" s":""}</span></div><div>${esc(x.j)}</div>${x.cite?`<div class="m" style="font-size:12px">Cite : ${esc(x.cite)}</div>`:""}</div>`
+      :`<div class="bx vd abs">${C}<div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(x.m)} · —</b><span>${esc(x.j||"pas de réponse")}</span></div></div>`}).join("");
+  else h+=`<div class="m" style="font-size:13.5px">${O.dx?'Chargement…<span class="ld"></span>':"Aucun verdict joint à cette offre."}</div>`;
+  const a=accord(),tr=O.reco==="CALL"||O.reco==="PUT";
+  h+=`<div class="lab">Conclusion du code</div><div style="font-size:13.5px"><b>${a===null?"":a?"Accord → ":"Désaccord → "}${tr?O.reco:"aucune direction"}.</b> ${esc((DET&&DET.regle)||O.regle||"")}</div>`;
+  return h;
+}
+function vReg(){
+  const L=O.lim;
+  if(!L)return`<p class="m" style="font-size:13.5px">Cette offre n'accepte pas encore de réglages : le serveur appliquera les paramètres ci-dessous.</p><div class="kv n"><span class="m">Capital</span><span>${e0(DEF.cap)}</span><span class="m">Ask max</span><span>+${DEF.tol} %</span><span class="m">Sortie</span><span>${DEF.tmax} min</span></div><div class="lks"><button data-v="cot">Cotation ›</button><button data-v="lia">Liaison ›</button><button data-v="his">Historique ›</button></div>`;
+  const sz=[.25,.5,1].concat(L.cap_max>=DEF.cap*2?[2]:[]),dirs=["PUT","CALL"].filter(d=>O.j[d]&&O.j[d].ok&&O.tok[d]);
+  const tols=[0,.5,1,2].filter(t=>t<=(L.tol_max??5));
+  return`<div class="bx grp">${C}<div class="lab">Taille</div><div class="seg" id="sz">${sz.map(f=>`<button data-f="${f}" class="n${f>1?" up":""}">${({.25:"¼",.5:"½",1:"1×",2:"2×"})[f]}</button>`).join("")}</div>
+  <div class="lab">Capital engagé <span class="n">${i0(L.cap_min??0)} – ${i0(L.cap_max)} €</span></div>
+  <label class="in"><input id="cap" type="number" inputmode="numeric" min="${L.cap_min??0}" max="${L.cap_max}" step="1" aria-label="Capital engagé"><span>€</span></label>
+  <input id="capr" type="range" min="${L.cap_min??0}" max="${L.cap_max}" step="5" aria-label="Capital">
+  <div class="lab">Unités <span class="n">max ${i0(L.qty_max)} · recalcul croisé</span></div>
+  <div class="g2">${dirs.map(d=>`<label class="in"><input id="q${d}" type="number" inputmode="numeric" min="1" max="${L.qty_max}" step="1" aria-label="Unités ${d}"><span>u ${d}</span></label>`).join("")}</div>
+  <div class="tot n" id="cout"></div></div>
+  <div class="bx grp">${C}<div class="lab">Ask maximal accepté</div><div class="seg" id="tol">${tols.map(t=>`<button data-t="${t}">${t?"+"+fx(t,t%1?1:0)+" %":"affiché"}</button>`).join("")}</div>
+  <div class="ab n" id="amx" style="font-size:12px;margin-top:6px"></div>
+  <div class="lab">Sortie au temps (simulée)</div><div class="seg" id="tm">${[1,5,15].map(t=>`<button data-m="${t}">${t} min</button>`).join("")}</div></div>
+  <div class="lab" style="margin-top:18px">Ces réglages valent pour</div><div class="seg" id="mem"><button data-p="0">Cette offre</button><button data-p="1">Toutes (ce navigateur)</button></div>
+  <div class="lks"><button data-v="cot">Cotation ›</button><button data-v="lia">Liaison ›</button><button data-v="his">Historique ›</button></div>`;
+}
+function lierReg(){
+  if(!O.lim)return;const L=O.lim;
+  const maj=src=>{const c=$("cap");if(src!=="cap")c.value=P.cap;if(src!=="capr")$("capr").value=P.cap;
+    ["PUT","CALL"].forEach(d=>{const q=$("q"+d);if(q&&src!=="q"+d)q.value=qty(d)});
+    const ds=["PUT","CALL"].filter(d=>$("q"+d));$("cout").classList.toggle("up",P.cap>DEF.cap);$("cout").innerHTML=`<span>Coût à l'ask<br>${ds.map(d=>`${d} ${fx(qty(d)*O.j[d].ask,2)} €`).join(" · ")}</span><span style="text-align:right">Perte max${P.cap>DEF.cap?" · au-dessus du défaut":""}<br><b>${e0(Math.max(...ds.map(d=>qty(d)*O.j[d].ask)))}</b></span>`;
+    $("amx").textContent="Au-delà, refus : "+["PUT","CALL"].filter(d=>$("q"+d)).map(d=>`${d} ≤ ${fx(am(d)/1000)} €`).join(" · ");
+    document.querySelectorAll("#sz button").forEach(b=>b.classList.toggle("on",Math.round(DEF.cap*b.dataset.f)===P.cap));$("capr").style.accentColor=P.cap>DEF.cap?"var(--ab)":"";
+    document.querySelectorAll("#tol button").forEach(b=>b.classList.toggle("on",+b.dataset.t===P.tol));
+    document.querySelectorAll("#tm button").forEach(b=>b.classList.toggle("on",+b.dataset.m===P.tmax));
+    document.querySelectorAll("#mem button").forEach(b=>b.classList.toggle("on",!!+b.dataset.p===P.mem));
+    majBtns()};
+  const setCap=(v,src)=>{P.cap=clamp(Math.round(v)||L.cap_min||1,L.cap_min,L.cap_max);P.qd=null;maj(src)};
+  document.querySelectorAll("#sz button").forEach(b=>b.onclick=()=>setCap(DEF.cap*b.dataset.f));
+  $("cap").oninput=e=>{const v=+e.target.value;if(v)setCap(v,"cap")};$("cap").onchange=()=>maj();
+  $("capr").oninput=e=>setCap(+e.target.value,"capr");
+  ["PUT","CALL"].forEach(d=>{const q=$("q"+d);if(!q)return;q.oninput=e=>{let v=Math.floor(+e.target.value);if(!v)return;
+    v=clamp(v,1,L.qty_max);const cap=Math.ceil(v*O.j[d].ask);if(cap>L.cap_max){v=Math.floor(L.cap_max/O.j[d].ask)}
+    P.qd={d,q:v};P.cap=clamp(Math.ceil(v*O.j[d].ask),L.cap_min,L.cap_max);maj("q"+d)};q.onchange=()=>maj()});
+  document.querySelectorAll("#tol button").forEach(b=>b.onclick=()=>{P.tol=+b.dataset.t;maj()});
+  document.querySelectorAll("#tm button").forEach(b=>b.onclick=()=>{P.tmax=+b.dataset.m;maj()});
+  document.querySelectorAll("#mem button").forEach(b=>b.onclick=()=>{P.mem=!!+b.dataset.p;maj()});
+  maj();
+}
+function vCot(){return`<div class="kv n" style="margin-top:12px">${["CALL","PUT"].filter(d=>O.j[d]).map(d=>{const j=O.j[d];return j.ok?`<span class="m">${d}</span><span>bid ${fx(j.bid)} · ask ${fx(j.ask)} · spread ${fx((j.ask-j.bid)/j.ask*100,2)} %</span>`:`<span class="m">${d}</span><span>indisponible : ${esc(j.motif)}</span>`}).join("")}
+  <span class="m">Âge</span><span>${Math.floor(ageS())} s (cotes ${hmUTC(O.qt)})</span><span class="m">Expiration</span><span>${hmUTC(O.exp)}</span><span class="m">Offre</span><span>${esc(O.o)} v${O.v}</span>${O.prod?`<span class="m">Produit</span><span>${esc(O.prod)}</span>`:""}</div>`}
+function vLia(){const l=lire("sentinel_lat"),pr=lire("sentinel_pref");
+  return`<div class="kv n" style="margin-top:12px"><span class="m">Appareil</span><span>${APP.t?"appairé depuis le "+new Date(APP.t).toLocaleString("fr-FR",{timeZone:"UTC"})+" UTC":"appairé"}</span><span class="m">Relais</span><span>${esc(O.base)}</span>
+  <span class="m">Dernier envoi</span><span>${l?fx(l.ms/1000,2)+" s ("+hm(l.t)+")":"—"}</span><span class="m">Préférences</span><span>${pr?`${fx(pr.f,2)}× · +${pr.tol} % · ${pr.tmax} min`:"aucune (défauts de l'offre)"}</span><span class="m">Test</span><span id="tsr">—</span></div>
+  <button class="ign" id="tst" style="margin-top:16px">Tester la connexion</button>${pr?`<button class="ign" style="margin-top:10px;color:var(--atx)" onclick="localStorage.removeItem('sentinel_pref');feuille('lia')">Oublier les préférences de ce navigateur</button>`:""}`}
+async function tester(){const r=$("tsr");r.textContent="…";const t=performance.now();
+  try{await lireTopic(O.base,O.ack,"1s");r.textContent=`relais joignable · ${fx((performance.now()-t)/1000,2)} s aller-retour`}catch(e){r.textContent="injoignable ("+e.message+")"}}
+function vHis(){const h=(lire("sentinel_hist")||[]).slice(0,5);
+  return h.length?`<p class="m" style="font-size:12.5px">P&amp;L simulé au dernier point marqué · bilan sur Telegram</p>`+h.map(x=>`<div class="ln n"><span>${new Date(x.tc).toLocaleDateString("fr-FR",{day:"2-digit",month:"2-digit"})} · ${esc(x.e)} · <b>${esc(x.a==="SKIP"?"Ignoré":x.a)}</b>${x.q?" "+i0(x.q)+" u":""}</span><span>${x.pnl!=null?`<b>${sg(x.pnl)} €</b>`:'<span class="m">—</span>'}</span></div>`).join(""):`<p class="m">Aucune décision enregistrée dans ce navigateur.</p>`}
+
+(async()=>{
+  if(!window.crypto||!crypto.subtle){erreur("Navigateur sans WebCrypto (il faut HTTPS et un navigateur récent).");return}
+  const p=frag();
+  if(p.get("p"))return appairer(p);
+  if(p.get("o"))return offre(p);
+  const app=lire("sentinel_appareil");
+  if(!app)return coller(null);
+  ecran("Sentinel","Téléphone appairé ✓",`<p class="m" style="margin:0">Les offres s'ouvrent depuis la notification ntfy.</p>`);
 })();
 </script>
 </body>
