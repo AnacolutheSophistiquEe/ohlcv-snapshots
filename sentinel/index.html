@@ -340,7 +340,7 @@ function feuille(v){
   $("shx").onclick=()=>v==="ctx"||v==="reg"?fermer():feuille("reg");
   if(v==="reg")lierReg();
   if(v==="lia")$("tst").onclick=tester;
-  document.querySelectorAll("[data-v]").forEach(b=>b.onclick=()=>feuille(b.dataset.v));
+  document.querySelectorAll("#shb button[data-v]").forEach(b=>b.onclick=()=>feuille(b.dataset.v));
 }
 function vCtx(){
   const ev={...(O.ev||{}),...((DET&&DET.ev)||{})},d=doutes(),kv=(k,v)=>v?`<span class="m">${k}</span><span>${v}</span>`:"";
