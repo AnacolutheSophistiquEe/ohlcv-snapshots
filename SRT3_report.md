@@ -1,12 +1,12 @@
 # SRT3
 
-**Generated** : 2026-11-04T21:40:59.927349+00:00  
+**Generated** : 2026-11-05T01:06:19.556417+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 10/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · €288.50  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-05 — Bank of England — décision de taux (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)  
 > ↳ spot €288.50 (+11.6% vs entrée) · entrée €258.56 · stop €248.65 · T1 €269.64 · R/R 1.12  
 > ↳ ¼-Kelly 0.034 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
@@ -50,7 +50,7 @@ _Cloture 2026-11-04 : 288.5 · ATR Wilder 9.33 (3.23 %)_
    - _fenêtre arrêtée : historique epuise — le regime est homogene sur toute la profondeur_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -9.98 % vs -9.16 % si l'on extrapolait par √5 _(rapport 1.089 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0744** (β de hausse 1.1613, asymétrie 0.9252) vs GDAXI — 600 séances de repli, historique complet
+- **β de baisse : 1.0744** (β de hausse 1.1775, asymétrie 0.9125) vs GDAXI — 600 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 1.372× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
@@ -65,11 +65,11 @@ _Cloture 2026-11-04 : 288.5 · ATR Wilder 9.33 (3.23 %)_
 - Candidats (la structure propose, la statistique elimine) :
    - ⚪ atr_based a 1.5 ATR (stop 5.151 %) — p(stop avant cible) 0.1647 [0.13 ; 0.21], R/R 0.218, perte reelle 5.239 % (gap inclus), EV 0.0827 % — **REFUSE**
       - refuse : R/R 0.22 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ swing_based a 3.52 ATR (stop 14.395 %) — p(stop avant cible) 0.0199 [0.01 ; 0.04], R/R 0.079, perte reelle 14.399 % (gap inclus), EV 0.2877 % — **REFUSE**
+   - ⚪ swing_based a 3.52 ATR (stop 14.347 %) — p(stop avant cible) 0.0204 [0.01 ; 0.04], R/R 0.079, perte reelle 14.351 % (gap inclus), EV 0.2887 % — **REFUSE**
       - refuse : R/R 0.08 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ sr_based a 5.59 ATR (stop 21.517 %) — p(stop avant cible) 0.0021 [0.00 ; 0.01], R/R 0.046, perte reelle 24.566 % (gap inclus), EV 0.3183 % — **REFUSE**
+   - ⚪ sr_based a 5.59 ATR (stop 21.469 %) — p(stop avant cible) 0.003 [0.00 ; 0.01], R/R 0.048, perte reelle 23.648 % (gap inclus), EV 0.3116 % — **REFUSE**
       - refuse : R/R 0.05 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - 🟢 support a 9.15 ATR (stop 33.736 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.034, perte reelle 33.736 % (gap inclus), EV 0.3271 % — **REFUSE**
+   - 🟢 support a 9.15 ATR (stop 33.688 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.034, perte reelle 33.688 % (gap inclus), EV 0.3271 % — **REFUSE**
       - refuse : R/R 0.03 < plancher 3.00 (mesure vs SPOT, gap inclus)
    - ⚪ atr_grid a 0.25 ATR (stop 0.859 %) — p(stop avant cible) 0.5153 [0.46 ; 0.57], R/R 1.312, perte reelle 0.869 % (gap inclus), EV 0.1049 % — **REFUSE**
       - refuse : p_stop_first 0.515, borne haute 0.568 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
@@ -263,7 +263,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.18 · part idiosyncratique 0.82
+**Factor** : R² 0.17 · part idiosyncratique 0.83
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -271,9 +271,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-11-05 — Bank of England — décision de taux (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-05 — Bank of England — décision de taux (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-05 — Bank of England — décision de taux (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -283,8 +283,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 1.322  _(pas de croisement recent)_
 - **BB** : %B 0.71 · largeur 26.1%
 - **ATR** : 9.91 (78.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV rising · CMF 0.162  _(accumulation)_
-- **Vol ratio** : 0.74  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.189  _(accumulation)_
+- **Vol ratio** : 0.26  _(volume atone)_
 - **Choppiness** : 43.8  _(transition)_
 - **MA** : MA20 273.38 · MA50 258.15 · MA200 235.51  _(prix > MA20)_
 - **Dist MA** : MA20 +5.5% · MA50 +11.8% · MA200 +22.5%
@@ -292,5 +292,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (753269 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (735558 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

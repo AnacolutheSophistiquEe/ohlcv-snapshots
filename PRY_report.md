@@ -1,12 +1,12 @@
 # PRY
 
-**Generated** : 2026-11-04T21:52:16.153142+00:00  
+**Generated** : 2026-11-05T01:14:21.263738+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 3/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €104.40  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-05 — Bank of England — décision de taux (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)  
 > ↳ spot €104.40 (+9.6% vs entrée) · entrée €95.24 · stop €89.50 · T1 €106.10 · R/R 1.89  
 > ↳ ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
@@ -52,7 +52,7 @@ _Cloture 2026-11-04 : 104.4 · ATR Wilder 5.69 (5.45 %)_
    - _fenêtre arrêtée : rupture de regime a 660 seances en arriere (volatilite 1.60 % contre 2.80 % aujourd'hui, rapport 0.57)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -6.66 % vs -7.81 % si l'on extrapolait par √5 _(rapport 0.852 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0426** (β de hausse 1.1948, asymétrie 0.8727) vs FTSEMIB — 566 séances de repli, historique complet
+- **β de baisse : 1.0426** (β de hausse 1.19, asymétrie 0.8761) vs FTSEMIB — 566 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 1.45× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
@@ -295,7 +295,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.78 · part idiosyncratique 0.22
+**Factor** : R² 0.76 · part idiosyncratique 0.24
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -303,9 +303,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-11-05 — Bank of England — décision de taux (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-05 — Bank of England — décision de taux (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-05 — Bank of England — décision de taux (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -315,8 +315,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.56  _(pas de croisement recent)_
 - **BB** : %B 0.29 · largeur 25.9%
 - **ATR** : 5.74 (72.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF 0.061  _(accumulation)_
-- **Vol ratio** : 1.5  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV rising · CMF 0.097  _(accumulation)_
+- **Vol ratio** : 0.83  _(volume normal)_
 - **Choppiness** : 56.3  _(transition)_
 - **MA** : MA20 110.45 · MA50 118.48 · MA200 121.86  _(prix < MA20)_
 - **Dist MA** : MA20 -5.5% · MA50 -11.9% · MA200 -14.3%
@@ -324,5 +324,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (737766 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (737890 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
