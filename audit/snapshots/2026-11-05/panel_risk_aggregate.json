@@ -1,0 +1,327 @@
+{
+  "available": true,
+  "generated_at": "2026-11-05T01:34:35.404303+00:00",
+  "window_sessions": 54,
+  "tickers_used": [
+    "000660",
+    "005930",
+    "012450",
+    "042660",
+    "196170",
+    "AL2SI",
+    "ALCPB",
+    "CEG",
+    "FFAI",
+    "IFX",
+    "MSTR",
+    "NOK",
+    "NVTS",
+    "PRY",
+    "SMCI",
+    "STLAP"
+  ],
+  "tickers_skipped": [
+    "ALHC",
+    "AMKR",
+    "ANAU",
+    "BABA",
+    "CLVT",
+    "FATE",
+    "OJ1NH",
+    "IOVA",
+    "KOD",
+    "LPTH",
+    "LQQ",
+    "NUCL",
+    "OKLO",
+    "DW56S",
+    "PSQL",
+    "E0LZB",
+    "SMH",
+    "SPCX",
+    "VICI"
+  ],
+  "weights_eur": {
+    "000660": 942.61,
+    "005930": 881.46,
+    "012450": 492.34,
+    "042660": 177.46,
+    "196170": 136.29,
+    "AL2SI": 89.2,
+    "ALCPB": 62.5,
+    "CEG": 439.7,
+    "FFAI": 662.41,
+    "IFX": 101.82,
+    "MSTR": 1534.67,
+    "NOK": 95.43,
+    "NVTS": 40.54,
+    "PRY": 105.8,
+    "SMCI": 211.2,
+    "STLAP": 53.47
+  },
+  "weights_source": {
+    "source": "tws_live_state",
+    "status": "ok",
+    "age_days": 0.17,
+    "n_positions": 35,
+    "total_notional_eur": 14172.72,
+    "account": {
+      "nlv_eur": 6178.74,
+      "gross_position_value_eur": 14174.1,
+      "maint_margin_eur": 4242.18,
+      "excess_liquidity_eur": 1936.57,
+      "leverage": 2.29,
+      "excess_over_maint_pct": 45.7
+    },
+    "skipped": []
+  },
+  "total_notional_eur": 6026.91,
+  "capital_total_eur": 6178.74,
+  "var_95_historical": {
+    "method": "historical_empirical",
+    "basket": "portefeuille complet",
+    "n_lines": 16,
+    "notional_eur": 6026.91,
+    "n_sessions": 1245,
+    "window_start": "2022-01-20",
+    "window_end": "2026-11-05",
+    "var_eur": 233.78,
+    "cvar_eur": 327.33,
+    "var_pct_notional": 3.88,
+    "cvar_pct_notional": 5.43,
+    "worst_session_eur": 621.05,
+    "window_binding_ticker": "CEG",
+    "window_binding_first_date": "2022-01-19",
+    "caveat": "fenetre TRONQUEE au debut commun a toutes les lignes : c'est l'historique le plus court (CEG) qui la fixe. Panier complet, fenetre courte.",
+    "per_line_observed_pct": {
+      "000660": 93.8,
+      "005930": 93.8,
+      "012450": 93.8,
+      "042660": 93.8,
+      "196170": 93.8,
+      "AL2SI": 98.5,
+      "ALCPB": 98.5,
+      "CEG": 96.6,
+      "FFAI": 96.6,
+      "IFX": 98.2,
+      "MSTR": 96.6,
+      "NOK": 96.6,
+      "NVTS": 96.6,
+      "PRY": 97.8,
+      "SMCI": 96.6,
+      "STLAP": 98.5
+    },
+    "long_window_restricted_basket": {
+      "method": "historical_empirical",
+      "basket": "lignes a historique profond",
+      "n_lines": 16,
+      "notional_eur": 6026.91,
+      "n_sessions": 1245,
+      "window_start": "2022-01-20",
+      "window_end": "2026-11-05",
+      "var_eur": 233.78,
+      "cvar_eur": 327.33,
+      "var_pct_notional": 3.88,
+      "cvar_pct_notional": 5.43,
+      "worst_session_eur": 621.05,
+      "min_sessions_required": 750,
+      "notional_share_pct": 100.0,
+      "lines_excluded": [],
+      "caveat": "fenetre LONGUE mais panier INCOMPLET : les lignes trop recentes sont exclues, leur risque n'est pas compte ici."
+    },
+    "note": "quantile empirique de la serie du panier pondere ; aucune hypothese de distribution — a preferer a la version gaussienne sur des titres a queues epaisses. Les jours de fermeture d'une place recoivent un rendement 0 par report du dernier cours (correct) ; les periodes ANTERIEURES a l'historique d'une ligne sont exclues par troncature (un 0 y serait une sous-estimation)."
+  },
+  "var_95": {
+    "method": "gaussian_1d",
+    "method_caveat": "VaR 95 % seule : ne dit rien de la QUEUE. Le CVaR de `var_95_historical` est 28-36 % au-dessus, et la pire seance 1,7-2,4x au-dessus. Sensible a la fenetre.",
+    "z_95": 1.6448536269514722,
+    "sigma_portfolio_daily_eur": 166.06,
+    "value_eur": 273.15,
+    "pct_total_notional": 4.53,
+    "pct_capital": 4.42
+  },
+  "panel_beta_weighted": {},
+  "panel_beta_partial": {
+    "FCHI": 0.368,
+    "IWM": 2.8998,
+    "FTSEMIB": 1.3949,
+    "SPY": 1.8752,
+    "KS11": 1.2755
+  },
+  "panel_beta_status": "aucun beta ne couvre >= 50 % du portefeuille — le livre s'etale sur 5 places et aucun indice unique ne le decrit ; les valeurs sont dans `panel_beta_partial` AVEC leur couverture. Un beta net SYNCHRONE par place, pondere par le poids de chaque place, est le livrable du chantier B1.",
+  "panel_beta_coverage": {
+    "FCHI": {
+      "notional_covered_eur": 89.2,
+      "notional_total_eur": 6026.91,
+      "coverage_pct": 1.5,
+      "lines_missing_beta": [
+        "000660",
+        "005930",
+        "012450",
+        "042660",
+        "196170",
+        "ALCPB",
+        "CEG",
+        "FFAI",
+        "IFX",
+        "MSTR",
+        "NOK",
+        "NVTS",
+        "PRY",
+        "SMCI",
+        "STLAP"
+      ]
+    },
+    "IWM": {
+      "notional_covered_eur": 1745.87,
+      "notional_total_eur": 6026.91,
+      "coverage_pct": 29.0,
+      "lines_missing_beta": [
+        "000660",
+        "005930",
+        "012450",
+        "042660",
+        "196170",
+        "AL2SI",
+        "ALCPB",
+        "CEG",
+        "FFAI",
+        "IFX",
+        "NOK",
+        "NVTS",
+        "PRY",
+        "STLAP"
+      ]
+    },
+    "FTSEMIB": {
+      "notional_covered_eur": 105.8,
+      "notional_total_eur": 6026.91,
+      "coverage_pct": 1.8,
+      "lines_missing_beta": [
+        "000660",
+        "005930",
+        "012450",
+        "042660",
+        "196170",
+        "AL2SI",
+        "ALCPB",
+        "CEG",
+        "FFAI",
+        "IFX",
+        "MSTR",
+        "NOK",
+        "NVTS",
+        "SMCI",
+        "STLAP"
+      ]
+    },
+    "SPY": {
+      "notional_covered_eur": 793.47,
+      "notional_total_eur": 6026.91,
+      "coverage_pct": 13.2,
+      "lines_missing_beta": [
+        "000660",
+        "005930",
+        "012450",
+        "042660",
+        "196170",
+        "AL2SI",
+        "FFAI",
+        "MSTR",
+        "PRY",
+        "SMCI"
+      ]
+    },
+    "KS11": {
+      "notional_covered_eur": 2316.41,
+      "notional_total_eur": 6026.91,
+      "coverage_pct": 38.4,
+      "lines_missing_beta": [
+        "042660",
+        "196170",
+        "AL2SI",
+        "ALCPB",
+        "CEG",
+        "FFAI",
+        "IFX",
+        "MSTR",
+        "NOK",
+        "NVTS",
+        "PRY",
+        "SMCI",
+        "STLAP"
+      ]
+    }
+  },
+  "concentration_flags": [],
+  "high_corr_pairs_in_panel": [
+    {
+      "pair": "000660_005930",
+      "rho": 0.8831,
+      "share_pct": 30.3,
+      "flag": "red"
+    },
+    {
+      "pair": "IFX_PRY",
+      "rho": 0.7901,
+      "share_pct": 3.4,
+      "flag": "red"
+    },
+    {
+      "pair": "NOK_PRY",
+      "rho": 0.7226,
+      "share_pct": 3.3,
+      "flag": "red"
+    },
+    {
+      "pair": "NVTS_SMCI",
+      "rho": 0.6567,
+      "share_pct": 4.2,
+      "flag": "red"
+    },
+    {
+      "pair": "NOK_SMCI",
+      "rho": 0.6411,
+      "share_pct": 5.1,
+      "flag": "red"
+    },
+    {
+      "pair": "CEG_NOK",
+      "rho": 0.6298,
+      "share_pct": 8.9,
+      "flag": "red"
+    },
+    {
+      "pair": "ALCPB_MSTR",
+      "rho": 0.6288,
+      "share_pct": 26.5,
+      "flag": "red"
+    },
+    {
+      "pair": "012450_042660",
+      "rho": 0.6251,
+      "share_pct": 11.1,
+      "flag": "red"
+    },
+    {
+      "pair": "CEG_PRY",
+      "rho": 0.6205,
+      "share_pct": 9.1,
+      "flag": "red"
+    },
+    {
+      "pair": "IFX_NOK",
+      "rho": 0.606,
+      "share_pct": 3.3,
+      "flag": "red"
+    }
+  ],
+  "scaling": {
+    "var_threshold_pct": 8.0,
+    "var_ref_metric": "var_95_pct_capital",
+    "scale_factor": 1.0,
+    "scaling_applied": false,
+    "note": "VaR sous le seuil, pas de scaling nécessaire."
+  },
+  "note": "Modèle Gaussien — ne capte pas les queues épaisses. Pour stress, utiliser compute_stress_test.py. Net beta = combinaison linéaire pondérée des betas par ticker × benchmark."
+}
