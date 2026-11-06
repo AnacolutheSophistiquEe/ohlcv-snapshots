@@ -1,19 +1,19 @@
 # SOI
 
-**Generated** : 2026-11-05T21:49:26.645616+00:00  
+**Generated** : 2026-11-06T01:11:08.737159+00:00  
 **Couverture** : bulletin complet  
 > ⚠️ **Données suspectes** : volatilité réalisée 6.7 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
 **Santé technique** : 3/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
-**Subtitle** : indeterminate · volatilite normal · €91.64  
+**Subtitle** : indeterminate · volatilite normal · €91.62  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)  
-> ↳ spot €91.64 (+6.4% vs entrée) · entrée €86.15 · stop €75.81 · T1 €106.42 · R/R 1.96  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)  
+> ↳ spot €91.62 (+6.4% vs entrée) · entrée €86.14 · stop €75.81 · T1 €106.42 · R/R 1.96  
 > ↳ ¼-Kelly 0.045 · _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_  
 
 > ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -204 % hors [0,100] (R² max 0.47). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
+>   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -205 % hors [0,100] (R² max 0.47). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
 ## Régime & alignement multi-TF
@@ -25,7 +25,7 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 
 ## ⚠ Contradictions techniques
 
-- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.230 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
+- 🟠 **Divergence volume (OBV / CMF)** — OBV rising (accumulation) mais CMF -0.200 < 0 (distribution) — flux acheteur/vendeur en désaccord ; prudence avec une lecture purement haussière.
   - _Le plus parlant — DISTRIBUTION dans la hausse : clôtures en hausse jour après jour (OBV) mais dans le BAS du range intraday (CMF<0) → on achète la force mais il y a vente en séance ; signal baissier de fond._
   - _Gaps d'ouverture : le titre ouvre en gap puis dérive — l'OBV (close-to-close) monte tandis que le CMF (position dans le range) capte la pression vendeuse intra-séance._
   - _Effet de fenêtre : l'OBV est cumulatif (mémoire longue), le CMF sur 20 séances ; un OBV « rising » hérité d'une vieille accumulation peut coexister avec un CMF récemment négatif (divergence temporelle, pas forcément distribution active)._
@@ -39,21 +39,21 @@ Plan privilegie B (swing), composite 3/10, conviction 'Unknown'.
 
 ## Plans d'achat — Swing / Deep (methode v4)
 
-_Cloture 2026-11-05 : 91.64 · ATR Wilder 10.75 (11.73 %)_
-- **Swing** : plage **75.62 → 67.14** (-17.49 % a -26.74 % sous la cloture, 0.79 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 68.5-72.9 (B). stop INDICATIF 55.53 (-17.29 % sous le bas ; sous le support 60.9-65.16 (- 0,5 ATR)).
-- **Deep** : plage **67.14 → 32.03** (-26.74 % a -65.05 % sous la cloture, 3.27 ATR) — touchee 50 % → 15 % du temps en 20 seances ; supports reels dans la plage : 60.9-65.16 (B) ; 54.8-59.3 (B) ; 48.55-53.65 (A) ; 43.14-47.59 (A) ; 36.01-41.03 (A). stop INDICATIF 22.67 (-29.23 % sous le bas ; sous le support 28.04-30.89 (- 0,5 ATR)).
-- 🟢 **ACHAT PAS CHER actif** (DD20) : 7.01 ATR sous le plus haut 20 s., RSI(2) 3.6. Limite **86.27** (seance suivante), stop catastrophe 43.27, sortie : vente a l'ouverture qui suit la 1re cloture au-dessus de la MM5, au plus tard 21 seances.
-- Supports reels sous le cours (pour le Warden) : 77.85-82.4 (A, -10.08 %) ; 68.5-72.9 (B, -20.45 %) ; 60.9-65.16 (B, -28.9 %) ; 54.8-59.3 (B, -35.29 %) ; 48.55-53.65 (A, -41.46 %) ; 43.14-47.59 (A, -48.07 %)
-- Resistances reelles au-dessus : 97.95-102.4 (A, 6.89 %) ; 104.8-109.55 (A, 14.36 %) ; 110.4-114.9 (A, 20.47 %) ; 116.8-121.8 (A, 27.46 %)
+_Cloture 2026-11-05 : 91.62 · ATR Wilder 10.75 (11.73 %)_
+- **Swing** : plage **75.6 → 67.12** (-17.49 % a -26.74 % sous la cloture, 0.79 ATR) — touchee 50 % → 30 % du temps en 10 seances ; supports reels dans la plage : 68.5-72.9 (B). stop INDICATIF 55.53 (-17.27 % sous le bas ; sous le support 60.9-65.16 (- 0,5 ATR)).
+- **Deep** : plage **67.12 → 32.01** (-26.74 % a -65.07 % sous la cloture, 3.27 ATR) — touchee 50 % → 15 % du temps en 20 seances ; supports reels dans la plage : 60.9-65.16 (B) ; 54.8-59.3 (B) ; 48.55-53.65 (A) ; 43.14-47.59 (A) ; 36.01-41.03 (A). stop INDICATIF 22.67 (-29.18 % sous le bas ; sous le support 28.04-30.89 (- 0,5 ATR)).
+- 🟢 **ACHAT PAS CHER actif** (DD20) : 7.01 ATR sous le plus haut 20 s., RSI(2) 3.6. Limite **86.25** (seance suivante), stop catastrophe 43.25, sortie : vente a l'ouverture qui suit la 1re cloture au-dessus de la MM5, au plus tard 21 seances.
+- Supports reels sous le cours (pour le Warden) : 77.85-82.4 (A, -10.06 %) ; 68.5-72.9 (B, -20.43 %) ; 60.9-65.16 (B, -28.88 %) ; 54.8-59.3 (B, -35.28 %) ; 48.55-53.65 (A, -41.44 %) ; 43.14-47.59 (A, -48.06 %)
+- Resistances reelles au-dessus : 97.95-102.4 (A, 6.91 %) ; 104.8-109.55 (A, 14.39 %) ; 110.4-114.9 (A, 20.5 %) ; 116.8-121.8 (A, 27.48 %)
 - _Swing et Deep sont des PLAGES d'achat contigues (decote croissante) : il n'y a pas de point optimal, la profondeur fait l'avantage (rejeu 2001-2026), pas l'emplacement exact d'un niveau ; le stop est INDICATIF, le Warden decide ; le signal ACHAT PAS CHER est le seul avantage prouve contre un achat au hasard._
 
 
 ## Risque mesuré — ce qui borne (et ce qui ne borne pas) la perte
 
 - 🔴 **Régime de gap : gap_prone** — p_breach(-3 %)=4.30 % >= 3 % — franchissements FREQUENTS ; la reponse est une TAILLE plus faible, pas un stop plus large
-- **Au stop du plan (17.27 %)** : le gap seul le franchit 0.156 % des séances (2 fois sur 1280).
-   - exécution **6.736 pt plus bas** dans le cas TYPIQUE (médiane), 10.966 au p90, **12.024 au pire**
-   - perte réelle **24.006 %** en moyenne _(tirée par la queue)_, jusqu'à **29.294 %** — au lieu des 17.27 % annoncés par la distance
+- **Au stop du plan (17.26 %)** : le gap seul le franchit 0.156 % des séances (2 fois sur 1280).
+   - exécution **6.746 pt plus bas** dans le cas TYPIQUE (médiane), 10.976 au p90, **12.034 au pire**
+   - perte réelle **24.006 %** en moyenne _(tirée par la queue)_, jusqu'à **29.294 %** — au lieu des 17.26 % annoncés par la distance
    - coût AMORTI sur toutes les séances : 0.0105 % _(ce que le gap coûte en moyenne, pas ce qu'il coûte le jour où il frappe)_
    - ⚠ seulement 2 franchissement(s) observé(s) : montants indicatifs, pas des espérances fiables. La médiane résiste mieux que la moyenne à un si petit nombre.
   - ⚠ **Sur un titre gap-prone, la réponse est une TAILLE plus faible, PAS un stop plus large** : élargir échange de la fréquence contre de la sévérité (T1). Ne jamais proposer d'élargir un stop en invoquant le gap.
@@ -67,90 +67,90 @@ _Cloture 2026-11-05 : 91.64 · ATR Wilder 10.75 (11.73 %)_
    - _fenêtre arrêtée : rupture de regime a 360 seances en arriere (volatilite 2.85 % contre 6.87 % aujourd'hui, rapport 0.42)_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -13.08 % vs -12.04 % si l'on extrapolait par √5 _(rapport 1.086 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.0605** (β de hausse 1.5539, asymétrie 0.6825) vs FCHI — 622 séances de repli, historique complet
+- **β de baisse : 1.0605** (β de hausse 1.5311, asymétrie 0.6927) vs FCHI — 622 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 0.03× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
 ## Echelle Warden — OU poser le stop
 
 - **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — rien n'y coupe la baisse avant la perte du notionnel investi ; un stop ne borne pas la perte (un gap l'execute sous son seuil), il la limite en esperance.**
-- **Couple retenu** : stop 86.465 sur atr_grid (0.5 ATR, 5.647 %) — p(stop avant cible) 0.6372 [0.59 ; 0.69], R/R 6.755, perte reelle 6.126 % (gap inclus), CVaR 10.742 %, EV 2.3258 % — **NON CONFORME (best_effort — proposition de derniere main)**
+- **Couple retenu** : stop 86.445 sur atr_grid (0.5 ATR, 5.648 %) — p(stop avant cible) 0.6372 [0.59 ; 0.69], R/R 6.76, perte reelle 6.127 % (gap inclus), CVaR 10.742 %, EV 2.3272 % — **NON CONFORME (best_effort — proposition de derniere main)**
    - severite des violations : 0.8317 (somme des depassements RELATIFS a chaque seuil ; c'est elle qui a departage, l'esperance ne tranchant qu'a severites egales)
    - viole : cible atteinte seulement 6.2 % du temps (< 15 %) meme a 10 seances : le R/R de 6.76 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
    - viole : p_stop_first 0.637, borne haute 0.687 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
 - Budget de queue : **12.0 %** du notionnel — ⚠ VALEUR FIGEE (valeur de repli (ligne absente de l'allocation)), PAS une mesure. L'allocation derivee de la contrainte du compte n'etait pas disponible.
 - Candidats (la structure propose, la statistique elimine) :
-   - 🟢 support a 0.96 ATR (stop 14.425 %) — p(stop avant cible) 0.3246 [0.28 ; 0.38], R/R 2.772, perte reelle 14.93 % (gap inclus), EV 2.3788 % — **REFUSE**
-      - refuse : cible atteinte seulement 9.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.77 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 2.77 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - 🟢 support a 0.96 ATR (stop 14.407 %) — p(stop avant cible) 0.3246 [0.28 ; 0.38], R/R 2.777, perte reelle 14.915 % (gap inclus), EV 2.3863 % — **REFUSE**
+      - refuse : cible atteinte seulement 9.1 % du temps (< 15 %) meme a 10 seances : le R/R de 2.78 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 2.78 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 17.55 % > budget 12.00 %
-   - 🟢 support a 2.56 ATR (stop 32.431 %) — p(stop avant cible) 0.0249 [0.01 ; 0.05], R/R 1.273, perte reelle 32.508 % (gap inclus), EV 3.2146 % — **REFUSE**
+   - 🟢 support a 2.56 ATR (stop 32.416 %) — p(stop avant cible) 0.0249 [0.01 ; 0.05], R/R 1.274, perte reelle 32.495 % (gap inclus), EV 3.2179 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 1.27 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.27 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 29.71 % > budget 12.00 %
-   - 🟢 support a 5.0 ATR (stop 60.05 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.689, perte reelle 60.05 % (gap inclus), EV 3.2728 % — **REFUSE**
+   - 🟢 support a 5.0 ATR (stop 60.041 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.69, perte reelle 60.041 % (gap inclus), EV 3.2758 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 0.69 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.69 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 28.60 % > budget 12.00 %
-   - ⚪ atr_grid a 0.25 ATR (stop 2.824 %) — p(stop avant cible) 0.7943 [0.75 ; 0.83], R/R 13.802, perte reelle 2.998 % (gap inclus), EV 1.8563 % — **REFUSE**
-      - refuse : cible atteinte seulement 4.4 % du temps (< 15 %) meme a 10 seances : le R/R de 13.80 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+   - ⚪ atr_grid a 0.25 ATR (stop 2.824 %) — p(stop avant cible) 0.7943 [0.75 ; 0.83], R/R 13.813, perte reelle 2.998 % (gap inclus), EV 1.8577 % — **REFUSE**
+      - refuse : cible atteinte seulement 4.4 % du temps (< 15 %) meme a 10 seances : le R/R de 13.81 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.794, borne haute 0.834 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-   - ⚪ atr_grid a 0.5 ATR (stop 5.647 %) — p(stop avant cible) 0.6372 [0.59 ; 0.69], R/R 6.755, perte reelle 6.126 % (gap inclus), EV 2.3258 % — **REFUSE**
+   - ⚪ atr_grid a 0.5 ATR (stop 5.648 %) — p(stop avant cible) 0.6372 [0.59 ; 0.69], R/R 6.76, perte reelle 6.127 % (gap inclus), EV 2.3272 % — **REFUSE**
       - refuse : cible atteinte seulement 6.2 % du temps (< 15 %) meme a 10 seances : le R/R de 6.76 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.637, borne haute 0.687 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-   - ⚪ atr_grid a 1.5 ATR (stop 16.941 %) — p(stop avant cible) 0.2467 [0.20 ; 0.29], R/R 2.376, perte reelle 17.416 % (gap inclus), EV 2.8446 % — **REFUSE**
+   - ⚪ atr_grid a 1.5 ATR (stop 16.945 %) — p(stop avant cible) 0.2411 [0.20 ; 0.29], R/R 2.376, perte reelle 17.43 % (gap inclus), EV 2.9462 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 2.38 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 2.38 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 19.28 % > budget 12.00 %
-   - ⚪ atr_grid a 1.75 ATR (stop 19.765 %) — p(stop avant cible) 0.1829 [0.14 ; 0.23], R/R 2.048, perte reelle 20.206 % (gap inclus), EV 3.2072 % — **REFUSE**
+      - refuse : CVaR 95 % 19.29 % > budget 12.00 %
+   - ⚪ atr_grid a 1.75 ATR (stop 19.769 %) — p(stop avant cible) 0.1829 [0.14 ; 0.23], R/R 2.049, perte reelle 20.209 % (gap inclus), EV 3.2095 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 2.05 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 2.05 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 21.38 % > budget 12.00 %
-   - ⚪ atr_grid a 2.0 ATR (stop 22.588 %) — p(stop avant cible) 0.1242 [0.09 ; 0.16], R/R 1.804, perte reelle 22.938 % (gap inclus), EV 3.2801 % — **REFUSE**
-      - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 1.80 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 1.80 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - ⚪ atr_grid a 2.0 ATR (stop 22.593 %) — p(stop avant cible) 0.1242 [0.09 ; 0.16], R/R 1.805, perte reelle 22.942 % (gap inclus), EV 3.2825 % — **REFUSE**
+      - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 1.81 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 1.81 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 23.46 % > budget 12.00 %
-   - ⚪ atr_grid a 2.25 ATR (stop 25.412 %) — p(stop avant cible) 0.084 [0.06 ; 0.12], R/R 1.607, perte reelle 25.752 % (gap inclus), EV 3.262 % — **REFUSE**
+   - ⚪ atr_grid a 2.25 ATR (stop 25.417 %) — p(stop avant cible) 0.084 [0.06 ; 0.12], R/R 1.608, perte reelle 25.757 % (gap inclus), EV 3.2646 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 1.61 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.61 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 25.98 % > budget 12.00 %
-   - ⚪ atr_grid a 3.0 ATR (stop 33.883 %) — p(stop avant cible) 0.0213 [0.01 ; 0.04], R/R 1.221, perte reelle 33.883 % (gap inclus), EV 3.2147 % — **REFUSE**
+      - refuse : CVaR 95 % 25.99 % > budget 12.00 %
+   - ⚪ atr_grid a 3.0 ATR (stop 33.89 %) — p(stop avant cible) 0.0213 [0.01 ; 0.04], R/R 1.222, perte reelle 33.89 % (gap inclus), EV 3.2175 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 1.22 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.22 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 29.75 % > budget 12.00 %
-   - ⚪ atr_grid a 3.5 ATR (stop 39.53 %) — p(stop avant cible) 0.0058 [0.00 ; 0.02], R/R 1.047, perte reelle 39.53 % (gap inclus), EV 3.2291 % — **REFUSE**
+   - ⚪ atr_grid a 3.5 ATR (stop 39.538 %) — p(stop avant cible) 0.0058 [0.00 ; 0.02], R/R 1.047, perte reelle 39.538 % (gap inclus), EV 3.232 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 1.05 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.05 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 29.47 % > budget 12.00 %
-   - ⚪ atr_grid a 4.0 ATR (stop 45.177 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.916, perte reelle 45.177 % (gap inclus), EV 3.2728 % — **REFUSE**
+   - ⚪ atr_grid a 4.0 ATR (stop 45.187 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.916, perte reelle 45.187 % (gap inclus), EV 3.2758 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 0.92 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.92 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 28.60 % > budget 12.00 %
-   - ⚪ atr_grid a 4.5 ATR (stop 50.824 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.814, perte reelle 50.824 % (gap inclus), EV 3.2728 % — **REFUSE**
+   - ⚪ atr_grid a 4.5 ATR (stop 50.835 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.815, perte reelle 50.835 % (gap inclus), EV 3.2758 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 0.81 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.81 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 28.60 % > budget 12.00 %
-   - ⚪ atr_grid a 5.5 ATR (stop 62.118 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.666, perte reelle 62.118 % (gap inclus), EV 3.2728 % — **REFUSE**
+   - ⚪ atr_grid a 5.5 ATR (stop 62.132 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.667, perte reelle 62.132 % (gap inclus), EV 3.2758 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 0.67 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.67 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 28.60 % > budget 12.00 %
-   - ⚪ atr_grid a 6.0 ATR (stop 67.765 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.611, perte reelle 67.765 % (gap inclus), EV 3.2728 % — **REFUSE**
+   - ⚪ atr_grid a 6.0 ATR (stop 67.78 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.611, perte reelle 67.78 % (gap inclus), EV 3.2758 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 0.61 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.61 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 28.60 % > budget 12.00 %
-   - ⚪ atr_grid a 6.5 ATR (stop 73.412 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.564, perte reelle 73.412 % (gap inclus), EV 3.2728 % — **REFUSE**
+   - ⚪ atr_grid a 6.5 ATR (stop 73.428 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.564, perte reelle 73.428 % (gap inclus), EV 3.2758 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 0.56 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.56 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 28.60 % > budget 12.00 %
-   - ⚪ atr_grid a 7.0 ATR (stop 79.059 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.523, perte reelle 79.059 % (gap inclus), EV 3.2728 % — **REFUSE**
+   - ⚪ atr_grid a 7.0 ATR (stop 79.077 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.524, perte reelle 79.077 % (gap inclus), EV 3.2758 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 0.52 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.52 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 28.60 % > budget 12.00 %
-   - ⚪ atr_grid a 7.5 ATR (stop 84.706 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.489, perte reelle 84.706 % (gap inclus), EV 3.2728 % — **REFUSE**
+   - ⚪ atr_grid a 7.5 ATR (stop 84.725 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.489, perte reelle 84.725 % (gap inclus), EV 3.2758 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 0.49 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.49 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 28.60 % > budget 12.00 %
-   - ⚪ atr_grid a 8.0 ATR (stop 90.354 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.458, perte reelle 90.354 % (gap inclus), EV 3.2728 % — **REFUSE**
+   - ⚪ atr_grid a 8.0 ATR (stop 90.373 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.458, perte reelle 90.373 % (gap inclus), EV 3.2758 % — **REFUSE**
       - refuse : cible atteinte seulement 9.6 % du temps (< 15 %) meme a 10 seances : le R/R de 0.46 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.46 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 28.60 % > budget 12.00 %
@@ -160,28 +160,28 @@ _Cloture 2026-11-05 : 91.64 · ATR Wilder 10.75 (11.73 %)_
 
 ## Distances ATR x horizon — p(touche) a 1 / 5 / 20 seances
 
-- Reference : spot 91.64, ATR14 10.35 (11.294 % du cours). **Les prix ci-dessous sont ancres sur ce spot de cloture : les REANCRER sur le prix vivant avant de poser.**
+- Reference : spot 91.62, ATR14 10.35 (11.297 % du cours). **Les prix ci-dessous sont ancres sur ce spot de cloture : les REANCRER sur le prix vivant avant de poser.**
 - **Horizon = consigne operateur.** intraday -> 1 seance ; SANS PRECISION -> swing, 5 seances ; positionnel/long -> 20.
-- **Bornes appliquees d'office par le calculateur** : aucune tranche touchee plus de **45.0 %** du temps a l'horizon retenu ; aucune sous le **bruit journalier** du titre (0.358 ATR = 4.043 % du cours, soit l'excursion adverse mediane d'une seance) ; deux tranches jamais separees par moins que ce bruit. Ce sont des DEFAUTS DU MODULE : ils cedent avant toute consigne, et le rapport le dit.
+- **Bornes appliquees d'office par le calculateur** : aucune tranche touchee plus de **45.0 %** du temps a l'horizon retenu ; aucune sous le **bruit journalier** du titre (0.358 ATR = 4.044 % du cours, soit l'excursion adverse mediane d'une seance) ; deux tranches jamais separees par moins que ce bruit. Ce sont des DEFAUTS DU MODULE : ils cedent avant toute consigne, et le rapport le dit.
 
 | distance | % du cours | prix (spot ref) | p(touche) 1s | p(touche) 2s | p(touche) 3s | p(touche) 5s | p(touche) 10s | p(touche) 20s |
 |---|---|---|---|---|---|---|---|---|
-| 0.05 ATR | 0.565 % | 91.1225 | 91.18 % | 94.21 % | 95.48 % | 96.56 % | 97.73 % | 98.7 % |
-| 0.1 ATR | 1.129 % | 90.605 | 84.61 % | 89.89 % | 91.75 % | 94.29 % | 96.04 % | 97.2 % |
-| 0.15 ATR | 1.694 % | 90.0875 | 77.65 % | 84.89 % | 87.52 % | 90.75 % | 93.57 % | 95.1 % |
-| 0.2 ATR | 2.259 % | 89.57 | 68.82 % | 79.69 % | 83.5 % | 87.7 % | 91.3 % | 93.21 % |
-| 0.25 ATR | 2.824 % | 89.0525 | 62.45 % | 75.86 % | 80.06 % | 86.02 % | 90.01 % | 92.71 % |
-| 0.35 ATR | 3.953 % | 88.0175 | 50.78 % | 67.42 % | 73.08 % | 80.81 % | 85.76 % | 90.11 % |
-| 0.5 ATR | 5.647 % | 86.465 | 36.18 % | 55.64 % | 62.87 % | 73.13 % | 81.01 % | 87.31 % |
-| 0.75 ATR | 8.471 % | 83.8775 | 16.96 % | 35.23 % | 46.56 % | 58.17 % | 72.5 % | 80.52 % |
-| 1.0 ATR | 11.294 % | 81.29 | 8.14 % | 23.55 % | 33.99 % | 47.24 % | 64.39 % | 75.12 % |
-| 1.25 ATR | 14.118 % | 78.7025 | 4.12 % | 15.7 % | 25.34 % | 37.6 % | 56.78 % | 70.13 % |
-| 1.5 ATR | 16.941 % | 76.115 | 2.25 % | 10.6 % | 18.47 % | 30.02 % | 48.96 % | 63.94 % |
-| 2.0 ATR | 22.588 % | 70.94 | 0.59 % | 4.51 % | 9.14 % | 18.21 % | 35.21 % | 53.35 % |
-| 2.5 ATR | 28.235 % | 65.765 | 0.29 % | 2.45 % | 5.01 % | 11.91 % | 24.43 % | 45.55 % |
-| 3.0 ATR | 33.883 % | 60.59 | 0.2 % | 0.79 % | 2.55 % | 7.28 % | 17.21 % | 37.46 % |
-| 4.0 ATR | 45.177 % | 50.24 | 0.1 % | 0.59 % | 1.38 % | 3.54 % | 10.19 % | 23.88 % |
-| 6.0 ATR | 67.765 % | 29.54 | 0.0 % | 0.29 % | 0.79 % | 1.57 % | 4.45 % | 12.29 % |
+| 0.05 ATR | 0.565 % | 91.1025 | 91.18 % | 94.21 % | 95.48 % | 96.56 % | 97.73 % | 98.7 % |
+| 0.1 ATR | 1.13 % | 90.585 | 84.61 % | 89.89 % | 91.75 % | 94.29 % | 96.04 % | 97.2 % |
+| 0.15 ATR | 1.694 % | 90.0675 | 77.65 % | 84.89 % | 87.52 % | 90.75 % | 93.57 % | 95.1 % |
+| 0.2 ATR | 2.259 % | 89.55 | 68.82 % | 79.69 % | 83.5 % | 87.7 % | 91.3 % | 93.21 % |
+| 0.25 ATR | 2.824 % | 89.0325 | 62.45 % | 75.86 % | 80.06 % | 86.02 % | 90.01 % | 92.71 % |
+| 0.35 ATR | 3.954 % | 87.9975 | 50.78 % | 67.42 % | 73.08 % | 80.81 % | 85.76 % | 90.11 % |
+| 0.5 ATR | 5.648 % | 86.445 | 36.18 % | 55.64 % | 62.87 % | 73.13 % | 81.01 % | 87.31 % |
+| 0.75 ATR | 8.472 % | 83.8575 | 16.96 % | 35.23 % | 46.56 % | 58.17 % | 72.5 % | 80.52 % |
+| 1.0 ATR | 11.297 % | 81.27 | 8.14 % | 23.55 % | 33.99 % | 47.24 % | 64.39 % | 75.12 % |
+| 1.25 ATR | 14.121 % | 78.6825 | 4.12 % | 15.7 % | 25.34 % | 37.6 % | 56.78 % | 70.13 % |
+| 1.5 ATR | 16.945 % | 76.095 | 2.25 % | 10.6 % | 18.47 % | 30.02 % | 48.96 % | 63.94 % |
+| 2.0 ATR | 22.593 % | 70.92 | 0.59 % | 4.51 % | 9.14 % | 18.21 % | 35.21 % | 53.35 % |
+| 2.5 ATR | 28.242 % | 65.745 | 0.29 % | 2.45 % | 5.01 % | 11.91 % | 24.43 % | 45.55 % |
+| 3.0 ATR | 33.89 % | 60.57 | 0.2 % | 0.79 % | 2.55 % | 7.28 % | 17.21 % | 37.46 % |
+| 4.0 ATR | 45.187 % | 50.22 | 0.1 % | 0.59 % | 1.38 % | 3.54 % | 10.19 % | 23.88 % |
+| 6.0 ATR | 67.78 % | 29.52 | 0.0 % | 0.29 % | 0.79 % | 1.57 % | 4.45 % | 12.29 % |
 
 **A quelle distance poser pour n'etre sorti que p % du temps** (lecture INVERSE — c'est elle qui sert a arbitrer) :
 
@@ -210,7 +210,7 @@ _Cloture 2026-11-05 : 91.64 · ATR Wilder 10.75 (11.73 %)_
 
 ## Edge, scénarios & sizing
 
-- EV/risk : 0.168 | EV/share : €1.738 | p_fill : —
+- EV/risk : 0.168 | EV/share : €1.739 | p_fill : —
 - P(cible avant stop) _(first-passage MC, la proba OCO)_ : T1 15 % | T2 6 % | T3 2 %
 - Kelly (position) : f* 0.179 | ¼-Kelly 0.045 _(fraction du capital ; ¼-Kelly recommandé ; Kelly ≤ 0 ⇒ mise optimale nulle ⇒ Pass, même si l'EV blended scale-out reste marginalement positive)_
 - Calibration des probas : _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_
@@ -221,9 +221,9 @@ _Cloture 2026-11-05 : 91.64 · ATR Wilder 10.75 (11.73 %)_
 ## Microstructure intraday (5 s réel · 125 séances)
 
 - **First-passage & EV RÉELS par horizon** _(vérité terrain 5 s, **pondérés par récence** demi-vie ≈120.0 séances → régime des ~2-3 dernières semaines dominant ; entrée au DIP ; n_eff = échantillon effectif ; à comparer à l'EV GBM — le GBM tend à sur-estimer)_ :
-  - **intraday** (entrée dip −2.722% → cible +5.805% / stop −3.483%, p_fill 57%, n_eff≈59.6) : P(cible|rempli) **4%** · **EV/risk -0.092** (×p_fill ; si rempli -0.57% du capital)
-  - **swing** (entrée dip −5.989% → cible +23.527% / stop −12.0%, p_fill 39%, n_eff≈46.8) : P(cible|rempli) **8%** · **EV/risk -0.077** (×p_fill ; si rempli -2.36% du capital)
-  - **deep** (entrée dip −9.256% → cible +27.974% / stop −18.0%, p_fill 41%, n_eff≈47.9) : P(cible|rempli) **14%** · **EV/risk -0.018** (×p_fill ; si rempli -0.81% du capital)
+  - **intraday** (entrée dip −2.721% → cible +5.806% / stop −3.484%, p_fill 57%, n_eff≈59.6) : P(cible|rempli) **4%** · **EV/risk -0.092** (×p_fill ; si rempli -0.57% du capital)
+  - **swing** (entrée dip −5.977% → cible +23.54% / stop −12.0%, p_fill 39%, n_eff≈46.8) : P(cible|rempli) **8%** · **EV/risk -0.077** (×p_fill ; si rempli -2.37% du capital)
+  - **deep** (entrée dip −9.244% → cible +27.979% / stop −18.0%, p_fill 41%, n_eff≈47.9) : P(cible|rempli) **14%** · **EV/risk -0.019** (×p_fill ; si rempli -0.82% du capital)
 - Courbe de touche réelle (high atteint, en séance) : +0.5%→83% · +1.0%→74% · +2.0%→62% · +3.0%→46% · +5.0%→29% · +8.0%→10%
 - Range intraday médian 7.0% (p90 13.76%) · excursion haute méd. +2.7% / basse méd. −3.24%
 - Profil de vol intra : ouverture 4.423% vs midi 1.287% vs clôture 1.954% _(ouverture ~3.4× plus volatile → privilégier/éviter selon le setup)_
@@ -314,7 +314,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.49 · part idiosyncratique 0.51
+**Factor** : R² 0.5 · part idiosyncratique 0.5
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -322,20 +322,20 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)
 
 
 ## Indicateurs (résumé)
 
 - **RSI** : 30.7  _(momentum baissier)_
 - **ADX** : 23.7  _(pas de tendance nette)_
-- **MACD** : hist -2.599  _(pas de croisement recent)_
-- **BB** : %B -0.06 · largeur 48.8%
+- **MACD** : hist -2.601  _(pas de croisement recent)_
+- **BB** : %B -0.06 · largeur 48.9%
 - **ATR** : 10.35 (70.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF -0.227  _(distribution)_
-- **Vol ratio** : 2.87  _(volume au-dessus de la moyenne)_
+- **OBV/CMF** : OBV rising · CMF -0.2  _(distribution)_
+- **Vol ratio** : 1.88  _(volume au-dessus de la moyenne)_
 - **Choppiness** : 43.3  _(transition)_
 - **MA** : MA20 126.54 · MA50 135.67 · MA200 105.61  _(prix < MA20)_
 - **Dist MA** : MA20 -27.6% · MA50 -32.5% · MA200 -13.2%
@@ -343,5 +343,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (743210 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (742849 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
