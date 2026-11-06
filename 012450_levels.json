@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "012450",
-    "generated_at": "2026-11-06T01:33:06Z",
+    "generated_at": "2026-11-06T22:05:20Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-11-09T08:00:00Z",
@@ -10,24 +10,24 @@
     "source_precomputed": "012450_precomputed.json"
   },
   "context": {
-    "last_price": 629000.0,
+    "last_price": 664000.0,
     "ta_score": {
       "value": 0,
       "max": 10,
       "label": "very_bearish"
     },
-    "alignment_flag": "mixed",
+    "alignment_flag": "triple_bearish",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.6631,
+      "probability": 0.655,
       "expected_duration_days": 4.04
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 3,
-      "sell": 6,
+      "buy": 2,
+      "sell": 8,
       "neutral": 6,
-      "total": 15,
+      "total": 16,
       "verdict": "strong_sell"
     },
     "mean_reversion_score": {
@@ -37,14 +37,14 @@
       "median_bounce_pct": 8.85,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 0/10 (very_bearish), alignment mixed, HMM bull (0.66), vol normal, signals strong_sell (3b/6s/6n)."
+    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bull (0.66), vol normal, signals strong_sell (2b/8s/6n)."
   },
   "notes": {
-    "atr_daily": 57107.1429,
+    "atr_daily": 58035.7143,
     "atr_pct_daily": null,
-    "beta_60d": 0.6195,
+    "beta_60d": 0.4978,
     "beta_benchmark": "KS11",
-    "beta_corr_60d": 0.4563,
+    "beta_corr_60d": 0.3564,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -53,10 +53,10 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -59.08,
+      "current_dd_pct": -56.8,
       "ath_price": 1537000.0,
       "ath_date": "2026-04-07",
-      "max_dd_1y_pct": -59.08,
+      "max_dd_1y_pct": -56.8,
       "days_in_dd": 213,
       "median_recovery_days": null
     }
@@ -68,26 +68,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 624554.03,
-        "max": 628312.63
+        "min": 655976.15,
+        "max": 659923.85
       },
       "stop": {
-        "price": 543339.2857,
+        "price": 576946.4286,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -13.26
+        "distance_pct": -12.31
       },
       "targets": [
         {
           "level": 2,
-          "price": 642481.1677,
+          "price": 677700.3737,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.19
+          "rr": 0.24
         },
         {
           "level": 3,
-          "price": 706328.8944,
+          "price": 742586.2748,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.96
+          "rr": 1.04
         }
       ],
       "preferred_target": 1,
@@ -101,26 +101,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 632198.2367,
-        "max": 634724.5034
+        "min": 670720.05,
+        "max": 673400.25
       },
       "stop": {
-        "price": 603013.0986,
+        "price": 641032.1429,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -4.81
+        "distance_pct": -4.62
       },
       "targets": [
         {
           "level": 2,
-          "price": 642481.1677,
+          "price": 677700.3737,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.3
+          "rr": 0.18
         },
         {
           "level": 3,
-          "price": 706328.8944,
+          "price": 742586.2748,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.39
+          "rr": 2.27
         }
       ],
       "preferred_target": 1,
@@ -134,26 +134,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 579180.0,
-        "max": 590940.0
+        "min": 547988.33,
+        "max": 559114.9966
       },
       "stop": {
-        "price": 502339.2857,
+        "price": 469279.7586,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -14.14
+        "distance_pct": -15.22
       },
       "targets": [
         {
+          "level": 1,
+          "price": 612814.4726,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
+          "rr": 0.7
+        },
+        {
           "level": 2,
-          "price": 642481.1677,
+          "price": 677700.3737,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.69
+          "rr": 1.47
         },
         {
           "level": 3,
-          "price": 706328.8944,
+          "price": 742586.2748,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.47
+          "rr": 2.24
         }
       ],
       "preferred_target": 1,
@@ -163,10 +169,10 @@
     }
   ],
   "bot_actionable": false,
-  "bot_actionable_reason": "ta_score=0<4",
+  "bot_actionable_reason": "triple_bearish (long-only anti-knife-catch)",
   "global_conditions": [],
   "invalidation": {
-    "price": 497315.8928,
+    "price": 464586.961,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

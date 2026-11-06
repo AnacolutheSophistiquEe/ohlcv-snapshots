@@ -1,0 +1,2558 @@
+{
+ "available": true,
+ "version": "episodes/1.0",
+ "provenance": "v3",
+ "ticker": "PLTR",
+ "registry": {
+  "registry_version": "plan_registry/1.0",
+  "strategy_version": "v3.0-draft",
+  "spec": "SPEC_07 v3.1 + errata 2026-09-30",
+  "price_basis": "executable_split_adjusted",
+  "calendar_version": "venue_calendar/1.0",
+  "execution_policy_version": "exec/1.0",
+  "commission_model_version": "fixed_per_order/1.0",
+  "quantity_policy": "q_ref = floor(3000 EUR / prix d'entrée converti), minimum 1"
+ },
+ "params": {
+  "lookbacks": [
+   20,
+   63,
+   126,
+   252
+  ],
+  "plan_lookbacks": [
+   20,
+   63,
+   126
+  ],
+  "k_watch": 2.5,
+  "r_reset": 0.5,
+  "tau_expire": 2.0,
+  "anchor_basis": "close",
+  "atr": "Wilder 14, init moyenne",
+  "price_basis": "executable_split_adjusted"
+ },
+ "data": {
+  "first": "2020-09-30",
+  "last": "2026-11-06",
+  "n_sessions": 1534,
+  "n_dividends": 0,
+  "universe_label": "univers actuel (biais de selection et de survie)"
+ },
+ "chronology": "signal apres la cloture de s -> executable a partir de s+1 ; contrat construit a la cloture de t-1 : ancre Close(t-1), ATR(t-1)",
+ "stats_by_lookback": {
+  "20": {
+   "n_episodes": 31,
+   "n_events": 31,
+   "share_sessions_in_episode": 0.467,
+   "n_censored": 1,
+   "by_end_reason": {
+    "NEW_HIGH": 3,
+    "RECOVERED": 17,
+    "EXPIRED": 10,
+    "CENSORED": 1
+   }
+  },
+  "63": {
+   "n_episodes": 13,
+   "n_events": 13,
+   "share_sessions_in_episode": 0.4589,
+   "n_censored": 1,
+   "by_end_reason": {
+    "NEW_HIGH": 2,
+    "RECOVERED": 8,
+    "EXPIRED": 2,
+    "CENSORED": 1
+   }
+  },
+  "126": {
+   "n_episodes": 4,
+   "n_events": 4,
+   "share_sessions_in_episode": 0.3722,
+   "n_censored": 0,
+   "by_end_reason": {
+    "NEW_HIGH": 0,
+    "RECOVERED": 3,
+    "EXPIRED": 1,
+    "CENSORED": 0
+   }
+  },
+  "252": {
+   "n_episodes": 2,
+   "n_events": 2,
+   "share_sessions_in_episode": 0.4321,
+   "n_censored": 0,
+   "by_end_reason": {
+    "NEW_HIGH": 0,
+    "RECOVERED": 1,
+    "EXPIRED": 1,
+    "CENSORED": 0
+   }
+  }
+ },
+ "open_episodes": [
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2026-10-09",
+    "price": 209.0500030517578,
+    "age_sessions_at_open": 15
+   },
+   "a_ref": 7.718370112671132,
+   "d_watch": 0.0982380891027245,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-10-30",
+    "close": 184.11000061035156,
+    "depth": 0.11930161242442772
+   },
+   "trough_close": {
+    "date": "2026-11-05",
+    "price": 154.99000549316406,
+    "depth": 0.25859840597662787
+   },
+   "trough_low": {
+    "date": "2026-11-05",
+    "price": 152.60000610351562
+   },
+   "parent_episode_id": "d9a99dedfb7f7cc7",
+   "dependency_group_id": "d9a99dedfb7f7cc7",
+   "speed_at_open": {
+    "ret_1d_sigma": -2.268478302226756,
+    "ret_5d_sigma": -1.0408070174063238,
+    "depth_atr_per_sqrt_n": 0.8343057985896507
+   },
+   "atr_frac_at_open": 0.0392952356410898,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -3.129752239884884,
+   "episode_id": "aa3e29aaf65345b9",
+   "end": {
+    "date": null,
+    "reason": "CENSORED"
+   },
+   "depth_max_final": 0.25859840597662787,
+   "depth_max_final_atr": 7.004069093531063,
+   "low_depth_max_final": 0.27003107449975006,
+   "duration_sessions": 5,
+   "anchor_to_trough_sessions": 19,
+   "speed_final_atr": 1.606843651172549,
+   "event_id": "aa3e29aaf65345b9",
+   "asof_state": {
+    "asof": "2026-11-06",
+    "depth_current": 0.23281510384333892,
+    "depth_current_atr": 6.30573520814252,
+    "depth_max_asof": 0.25859840597662787,
+    "depth_max_asof_atr": 7.004069093531063,
+    "age_sessions": 5
+   }
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2026-10-09",
+    "price": 209.0500030517578,
+    "age_sessions_at_open": 19
+   },
+   "a_ref": 8.995888422009303,
+   "d_watch": 0.23247114692951368,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-11-05",
+    "close": 154.99000549316406,
+    "depth": 0.25859840597662787
+   },
+   "trough_close": {
+    "date": "2026-11-05",
+    "price": 154.99000549316406,
+    "depth": 0.25859840597662787
+   },
+   "trough_low": {
+    "date": "2026-11-05",
+    "price": 152.60000610351562
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "233064f10ec74f77",
+   "speed_at_open": {
+    "ret_1d_sigma": -3.129752239884884,
+    "ret_5d_sigma": -3.2384002917932744,
+    "depth_atr_per_sqrt_n": 1.3786536060854597
+   },
+   "atr_frac_at_open": 0.05239306104775909,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -3.129752239884884,
+   "episode_id": "233064f10ec74f77",
+   "end": {
+    "date": null,
+    "reason": "CENSORED"
+   },
+   "depth_max_final": 0.25859840597662787,
+   "depth_max_final_atr": 6.009411747074451,
+   "low_depth_max_final": 0.27003107449975006,
+   "duration_sessions": 1,
+   "anchor_to_trough_sessions": 19,
+   "speed_final_atr": 1.3786536060854597,
+   "event_id": "aa3e29aaf65345b9",
+   "asof_state": {
+    "asof": "2026-11-06",
+    "depth_current": 0.23281510384333892,
+    "depth_current_atr": 5.410249203388239,
+    "depth_max_asof": 0.25859840597662787,
+    "depth_max_asof_atr": 6.009411747074451,
+    "age_sessions": 1
+   }
+  }
+ ],
+ "episodes": [
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2021-01-27",
+    "price": 39.0,
+    "age_sessions_at_open": 13
+   },
+   "a_ref": 3.4548898040434177,
+   "d_watch": 0.2706745393735569,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2021-02-16",
+    "close": 27.84000015258789,
+    "depth": 0.2861538422413361
+   },
+   "trough_close": {
+    "date": "2021-03-29",
+    "price": 21.729999542236328,
+    "depth": 0.4428205245580429
+   },
+   "trough_low": {
+    "date": "2021-03-05",
+    "price": 20.18000030517578
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "bb7269583b717700",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.7764793635213687,
+    "ret_5d_sigma": -1.50474745825863,
+    "depth_atr_per_sqrt_n": 0.8958974752230953
+   },
+   "atr_frac_at_open": 0.10826981574942277,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -1.895946639246213,
+   "episode_id": "bb7269583b717700",
+   "end": {
+    "date": "2021-04-15",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.4428205245580429,
+   "depth_max_final_atr": 4.998712386586625,
+   "low_depth_max_final": 0.48256409473908257,
+   "duration_sessions": 41,
+   "anchor_to_trough_sessions": 42,
+   "speed_final_atr": 0.7713180667473197,
+   "event_id": "bb7269583b717700"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2021-04-13",
+    "price": 25.420000076293945,
+    "age_sessions_at_open": 15
+   },
+   "a_ref": 1.2479107908713694,
+   "d_watch": 0.13990031766430022,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2021-05-04",
+    "close": 21.639999389648438,
+    "depth": 0.14870183616445543
+   },
+   "trough_close": {
+    "date": "2021-05-13",
+    "price": 18.3700008392334,
+    "depth": 0.2773406457868267
+   },
+   "trough_low": {
+    "date": "2021-05-11",
+    "price": 17.05500030517578
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "a8afed2a382d6cc2",
+   "speed_at_open": {
+    "ret_1d_sigma": -0.8976082879923972,
+    "ret_5d_sigma": -1.3160792681459885,
+    "depth_atr_per_sqrt_n": 0.7821007620696012
+   },
+   "atr_frac_at_open": 0.055960127065720094,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -1.9541293210286401,
+   "episode_id": "a8afed2a382d6cc2",
+   "end": {
+    "date": "2021-05-26",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.2773406457868267,
+   "depth_max_final_atr": 5.649441681754989,
+   "low_depth_max_final": 0.3290715871759242,
+   "duration_sessions": 16,
+   "anchor_to_trough_sessions": 22,
+   "speed_final_atr": 1.2044650135594082,
+   "event_id": "a8afed2a382d6cc2"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2021-06-28",
+    "price": 27.3799991607666,
+    "age_sessions_at_open": 3
+   },
+   "a_ref": 0.9544762654116207,
+   "d_watch": 0.09052316419871385,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2021-07-01",
+    "close": 24.719999313354492,
+    "depth": 0.09715120266415789
+   },
+   "trough_close": {
+    "date": "2021-07-16",
+    "price": 21.3700008392334,
+    "depth": 0.2195032324962618
+   },
+   "trough_low": {
+    "date": "2021-07-19",
+    "price": 20.549999237060547
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "856e11723867e7f5",
+   "speed_at_open": {
+    "ret_1d_sigma": -3.4990167268536494,
+    "ret_5d_sigma": -1.7214091834584937,
+    "depth_atr_per_sqrt_n": 1.6089992843200218
+   },
+   "atr_frac_at_open": 0.03620926567948554,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -3.4990167268536494,
+   "episode_id": "856e11723867e7f5",
+   "end": {
+    "date": "2021-08-12",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.2195032324962618,
+   "depth_max_final_atr": 6.296645122905569,
+   "low_depth_max_final": 0.2494521597171161,
+   "duration_sessions": 29,
+   "anchor_to_trough_sessions": 13,
+   "speed_final_atr": 1.7463751426181757,
+   "event_id": "856e11723867e7f5"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2021-09-23",
+    "price": 28.770000457763672,
+    "age_sessions_at_open": 3
+   },
+   "a_ref": 1.1937364821451006,
+   "d_watch": 0.10864001747214894,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2021-09-28",
+    "close": 25.34000015258789,
+    "depth": 0.11922141990269541
+   },
+   "trough_close": {
+    "date": "2021-10-04",
+    "price": 23.170000076293945,
+    "depth": 0.19464721210870017
+   },
+   "trough_low": {
+    "date": "2021-10-04",
+    "price": 23.020000457763672
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "cfb2b353d21b98ce",
+   "speed_at_open": {
+    "ret_1d_sigma": -2.6016510890575018,
+    "ret_5d_sigma": -0.7103854229581357,
+    "depth_atr_per_sqrt_n": 1.6589185545834946
+   },
+   "atr_frac_at_open": 0.043456006988859576,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -2.6016510890575018,
+   "episode_id": "cfb2b353d21b98ce",
+   "end": {
+    "date": "2021-11-01",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.19464721210870017,
+   "depth_max_final_atr": 4.6911529179427705,
+   "low_depth_max_final": 0.199860963104307,
+   "duration_sessions": 24,
+   "anchor_to_trough_sessions": 7,
+   "speed_final_atr": 1.7730891404359377,
+   "event_id": "cfb2b353d21b98ce"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2021-11-08",
+    "price": 26.75,
+    "age_sessions_at_open": 1
+   },
+   "a_ref": 0.9406606879071289,
+   "d_watch": 0.08791221382309616,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2021-11-09",
+    "close": 24.25,
+    "depth": 0.09345794392523366
+   },
+   "trough_close": {
+    "date": "2022-01-07",
+    "price": 16.559999465942383,
+    "depth": 0.3809345994040231
+   },
+   "trough_low": {
+    "date": "2022-01-06",
+    "price": 16.05500030517578
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "67340158cc920b77",
+   "speed_at_open": {
+    "ret_1d_sigma": -5.299326679805174,
+    "ret_5d_sigma": -1.6086090371343076,
+    "depth_atr_per_sqrt_n": 2.6577064739063743
+   },
+   "atr_frac_at_open": 0.035164885529238465,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -5.299326679805174,
+   "episode_id": "67340158cc920b77",
+   "end": {
+    "date": "2022-01-07",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.3809345994040231,
+   "depth_max_final_atr": 10.832812155389737,
+   "low_depth_max_final": 0.39981307270370914,
+   "duration_sessions": 41,
+   "anchor_to_trough_sessions": 42,
+   "speed_final_atr": 1.6715392050867057,
+   "event_id": "67340158cc920b77"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2021-12-17",
+    "price": 19.059999465942383,
+    "age_sessions_at_open": 18
+   },
+   "a_ref": 0.9759251550151022,
+   "d_watch": 0.1459218294099476,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2022-01-13",
+    "close": 16.010000228881836,
+    "depth": 0.16002095081432077
+   },
+   "trough_close": {
+    "date": "2022-02-23",
+    "price": 10.430000305175781,
+    "depth": 0.4527806612055384
+   },
+   "trough_low": {
+    "date": "2022-02-24",
+    "price": 9.739999771118164
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "48d6678473c4a01e",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.4645572271451197,
+    "ret_5d_sigma": -0.6730148449978227,
+    "depth_atr_per_sqrt_n": 0.7366258679628408
+   },
+   "atr_frac_at_open": 0.05836873176397905,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -3.9230883375358663,
+   "episode_id": "48d6678473c4a01e",
+   "end": {
+    "date": "2022-03-15",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.4527806612055384,
+   "depth_max_final_atr": 8.842890375781998,
+   "low_depth_max_final": 0.48898215928483035,
+   "duration_sessions": 41,
+   "anchor_to_trough_sessions": 45,
+   "speed_final_atr": 1.318220266521814,
+   "event_id": "48d6678473c4a01e"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2022-04-04",
+    "price": 14.630000114440918,
+    "age_sessions_at_open": 8
+   },
+   "a_ref": 0.7726208504925032,
+   "d_watch": 0.1497327273914543,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2022-04-14",
+    "close": 12.420000076293945,
+    "depth": 0.1510594682747497
+   },
+   "trough_close": {
+    "date": "2022-05-11",
+    "price": 6.710000038146973,
+    "depth": 0.5413533844388905
+   },
+   "trough_low": {
+    "date": "2022-05-12",
+    "price": 6.440000057220459
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "5bb31dc3c141a8aa",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.054976835259353,
+    "ret_5d_sigma": -0.41379458803292907,
+    "depth_atr_per_sqrt_n": 1.0113019939858692
+   },
+   "atr_frac_at_open": 0.05989309095658172,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -5.759923708899135,
+   "episode_id": "5bb31dc3c141a8aa",
+   "end": {
+    "date": "2022-06-14",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.5413533844388905,
+   "depth_max_final_atr": 10.250823636516387,
+   "low_depth_max_final": 0.5598086119723478,
+   "duration_sessions": 41,
+   "anchor_to_trough_sessions": 26,
+   "speed_final_atr": 2.0103519135767387,
+   "event_id": "5bb31dc3c141a8aa"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2022-08-05",
+    "price": 11.449999809265137,
+    "age_sessions_at_open": 1
+   },
+   "a_ref": 0.5790926798771145,
+   "d_watch": 0.1264394518610653,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2022-08-08",
+    "close": 9.819999694824219,
+    "depth": 0.14235809096887064
+   },
+   "trough_close": {
+    "date": "2022-09-06",
+    "price": 7.28000020980835,
+    "depth": 0.3641921108227877
+   },
+   "trough_low": {
+    "date": "2022-09-23",
+    "price": 7.130000114440918
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "88e9ef55790961b1",
+   "speed_at_open": {
+    "ret_1d_sigma": -4.064849667236323,
+    "ret_5d_sigma": -0.7586951743718596,
+    "depth_atr_per_sqrt_n": 2.81474826237971
+   },
+   "atr_frac_at_open": 0.050575780744426126,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -4.064849667236323,
+   "episode_id": "88e9ef55790961b1",
+   "end": {
+    "date": "2022-10-05",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.3641921108227877,
+   "depth_max_final_atr": 7.200919204058451,
+   "low_depth_max_final": 0.3772925560512719,
+   "duration_sessions": 41,
+   "anchor_to_trough_sessions": 21,
+   "speed_final_atr": 1.5713693964694768,
+   "event_id": "88e9ef55790961b1"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2022-10-31",
+    "price": 8.789999961853027,
+    "age_sessions_at_open": 5
+   },
+   "a_ref": 0.44849192476995997,
+   "d_watch": 0.1413908998986452,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2022-11-07",
+    "close": 7.019999980926514,
+    "depth": 0.20136518641729073
+   },
+   "trough_close": {
+    "date": "2022-11-09",
+    "price": 6.980000019073486,
+    "depth": 0.20591580780826002
+   },
+   "trough_low": {
+    "date": "2022-11-07",
+    "price": 6.889999866485596
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "b141fb2ff928d2ee",
+   "speed_at_open": {
+    "ret_1d_sigma": -4.089505465804241,
+    "ret_5d_sigma": -3.3737601551985965,
+    "depth_atr_per_sqrt_n": 1.764954978645409
+   },
+   "atr_frac_at_open": 0.05655635995945808,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -4.089505465804241,
+   "episode_id": "b141fb2ff928d2ee",
+   "end": {
+    "date": "2022-11-11",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.20591580780826002,
+   "depth_max_final_atr": 4.035747006387962,
+   "low_depth_max_final": 0.2161547330617839,
+   "duration_sessions": 4,
+   "anchor_to_trough_sessions": 7,
+   "speed_final_atr": 1.5253689904679923,
+   "event_id": "b141fb2ff928d2ee"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2022-10-31",
+    "price": 8.789999961853027,
+    "age_sessions_at_open": 15
+   },
+   "a_ref": 0.5160708642689279,
+   "d_watch": 0.17458419269036865,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2022-11-21",
+    "close": 7.190000057220459,
+    "depth": 0.18202501838182839
+   },
+   "trough_close": {
+    "date": "2022-12-27",
+    "price": 6.0,
+    "depth": 0.3174061403823789
+   },
+   "trough_low": {
+    "date": "2022-12-27",
+    "price": 5.920000076293945
+   },
+   "parent_episode_id": "b141fb2ff928d2ee",
+   "dependency_group_id": "b141fb2ff928d2ee",
+   "speed_at_open": {
+    "ret_1d_sigma": -0.5520129981483858,
+    "ret_5d_sigma": -1.0722908941972222,
+    "depth_atr_per_sqrt_n": 0.8005067279993049
+   },
+   "atr_frac_at_open": 0.06983367707614746,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -2.721837299550489,
+   "episode_id": "f72b87f338fdb5e4",
+   "end": {
+    "date": "2023-01-23",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.3174061403823789,
+   "depth_max_final_atr": 5.406234211275179,
+   "low_depth_max_final": 0.3265073831643175,
+   "duration_sessions": 41,
+   "anchor_to_trough_sessions": 39,
+   "speed_final_atr": 0.8656903032893958,
+   "event_id": "f72b87f338fdb5e4"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2023-02-02",
+    "price": 8.989999771118164,
+    "age_sessions_at_open": 6
+   },
+   "a_ref": 0.43191683930731833,
+   "d_watch": 0.1358229087011899,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2023-02-10",
+    "close": 7.510000228881836,
+    "depth": 0.16462731700962518
+   },
+   "trough_close": {
+    "date": "2023-02-10",
+    "price": 7.510000228881836,
+    "depth": 0.16462731700962518
+   },
+   "trough_low": {
+    "date": "2023-02-13",
+    "price": 7.449999809265137
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "97408f833c94fe0d",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.4176698388878084,
+    "ret_5d_sigma": -1.2603541235034597,
+    "depth_atr_per_sqrt_n": 1.398897259885193
+   },
+   "atr_frac_at_open": 0.054329163480475964,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -1.4176698388878084,
+   "episode_id": "97408f833c94fe0d",
+   "end": {
+    "date": "2023-02-14",
+    "reason": "NEW_HIGH"
+   },
+   "depth_max_final": 0.16462731700962518,
+   "depth_max_final_atr": 3.426584489296274,
+   "low_depth_max_final": 0.17130144616916765,
+   "duration_sessions": 2,
+   "anchor_to_trough_sessions": 6,
+   "speed_final_atr": 1.398897259885193,
+   "event_id": "97408f833c94fe0d"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2023-02-15",
+    "price": 10.109999656677246,
+    "age_sessions_at_open": 3
+   },
+   "a_ref": 0.5753809262586375,
+   "d_watch": 0.1563535158118109,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2023-02-21",
+    "close": 8.470000267028809,
+    "depth": 0.16221557322855928
+   },
+   "trough_close": {
+    "date": "2023-03-10",
+    "price": 7.349999904632568,
+    "depth": 0.2729970173858324
+   },
+   "trough_low": {
+    "date": "2023-03-13",
+    "price": 7.190000057220459
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "f1ca284d2695b1fd",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.2919191009463442,
+    "ret_5d_sigma": 0.7482454426402128,
+    "depth_atr_per_sqrt_n": 1.64561257746443
+   },
+   "atr_frac_at_open": 0.06254140632472435,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -1.5176675221752616,
+   "episode_id": "f1ca284d2695b1fd",
+   "end": {
+    "date": "2023-04-14",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.2729970173858324,
+   "depth_max_final_atr": 4.79682176813077,
+   "low_depth_max_final": 0.2888229177661985,
+   "duration_sessions": 37,
+   "anchor_to_trough_sessions": 16,
+   "speed_final_atr": 1.1992054420326925,
+   "event_id": "f1ca284d2695b1fd"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2023-04-14",
+    "price": 8.8100004196167,
+    "age_sessions_at_open": 7
+   },
+   "a_ref": 0.3650762261268627,
+   "d_watch": 0.11267784226345322,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2023-04-25",
+    "close": 7.739999771118164,
+    "depth": 0.12145296226275193
+   },
+   "trough_close": {
+    "date": "2023-05-04",
+    "price": 7.380000114440918,
+    "depth": 0.16231557741946134
+   },
+   "trough_low": {
+    "date": "2023-05-04",
+    "price": 7.28000020980835
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "3a23412ba8cd38cc",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.7992191393455244,
+    "ret_5d_sigma": -2.1303040823629367,
+    "depth_atr_per_sqrt_n": 1.1077747667106237
+   },
+   "atr_frac_at_open": 0.04507113690538129,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -1.7992191393455244,
+   "episode_id": "3a23412ba8cd38cc",
+   "end": {
+    "date": "2023-05-09",
+    "reason": "NEW_HIGH"
+   },
+   "depth_max_final": 0.16231557741946134,
+   "depth_max_final_atr": 3.916991035945631,
+   "low_depth_max_final": 0.17366630385188064,
+   "duration_sessions": 10,
+   "anchor_to_trough_sessions": 14,
+   "speed_final_atr": 1.0468598888266631,
+   "event_id": "3a23412ba8cd38cc"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2023-08-01",
+    "price": 19.989999771118164,
+    "age_sessions_at_open": 6
+   },
+   "a_ref": 1.1485905137753782,
+   "d_watch": 0.1685138574037207,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2023-08-09",
+    "close": 15.25,
+    "depth": 0.23711855054478703
+   },
+   "trough_close": {
+    "date": "2023-09-26",
+    "price": 13.960000038146973,
+    "depth": 0.3016508155084334
+   },
+   "trough_low": {
+    "date": "2023-08-18",
+    "price": 13.680000305175781
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "16b3cce5977bd742",
+   "speed_at_open": {
+    "ret_1d_sigma": -2.4628530480724242,
+    "ret_5d_sigma": -2.1662335823972705,
+    "depth_atr_per_sqrt_n": 1.6847577793390396
+   },
+   "atr_frac_at_open": 0.06740554296148829,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -2.4628530480724242,
+   "episode_id": "16b3cce5977bd742",
+   "end": {
+    "date": "2023-10-06",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.3016508155084334,
+   "depth_max_final_atr": 5.249912532492355,
+   "low_depth_max_final": 0.3156578058124423,
+   "duration_sessions": 41,
+   "anchor_to_trough_sessions": 39,
+   "speed_final_atr": 0.8406588014661903,
+   "event_id": "16b3cce5977bd742"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2023-10-12",
+    "price": 17.940000534057617,
+    "age_sessions_at_open": 10
+   },
+   "a_ref": 0.902858329140848,
+   "d_watch": 0.14478164212701697,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2023-10-26",
+    "close": 15.289999961853027,
+    "depth": 0.14771463173447408
+   },
+   "trough_close": {
+    "date": "2023-10-30",
+    "price": 14.6899995803833,
+    "depth": 0.18115946805600458
+   },
+   "trough_low": {
+    "date": "2023-11-01",
+    "price": 14.479999542236328
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "4a763744d9a770db",
+   "speed_at_open": {
+    "ret_1d_sigma": -0.5034229726975328,
+    "ret_5d_sigma": -1.2691791498856213,
+    "depth_atr_per_sqrt_n": 0.9281675029669789
+   },
+   "atr_frac_at_open": 0.057912656850806786,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -0.7039393171175548,
+   "episode_id": "4a763744d9a770db",
+   "end": {
+    "date": "2023-11-02",
+    "reason": "NEW_HIGH"
+   },
+   "depth_max_final": 0.18115946805600458,
+   "depth_max_final_atr": 3.599679870890695,
+   "low_depth_max_final": 0.19286515545263005,
+   "duration_sessions": 5,
+   "anchor_to_trough_sessions": 12,
+   "speed_final_atr": 1.0391380712276101,
+   "event_id": "4a763744d9a770db"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2023-11-20",
+    "price": 21.34000015258789,
+    "age_sessions_at_open": 9
+   },
+   "a_ref": 0.9135849825079193,
+   "d_watch": 0.11267698099113813,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2023-12-04",
+    "close": 18.399999618530273,
+    "depth": 0.13776947108883153
+   },
+   "trough_close": {
+    "date": "2024-01-05",
+    "price": 15.979999542236328,
+    "depth": 0.2511715357088017
+   },
+   "trough_low": {
+    "date": "2024-01-05",
+    "price": 15.663999557495117
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "68b0fcf8713ee266",
+   "speed_at_open": {
+    "ret_1d_sigma": -3.0624643923265134,
+    "ret_5d_sigma": -0.5134956067266291,
+    "depth_atr_per_sqrt_n": 1.0726973371748814
+   },
+   "atr_frac_at_open": 0.04507079239645525,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -3.0624643923265134,
+   "episode_id": "68b0fcf8713ee266",
+   "end": {
+    "date": "2024-02-02",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.2511715357088017,
+   "depth_max_final_atr": 5.86699728320578,
+   "low_depth_max_final": 0.26597940742771964,
+   "duration_sessions": 41,
+   "anchor_to_trough_sessions": 31,
+   "speed_final_atr": 1.053743819040442,
+   "event_id": "68b0fcf8713ee266"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2024-03-07",
+    "price": 26.459999084472656,
+    "age_sessions_at_open": 15
+   },
+   "a_ref": 1.0868935067849297,
+   "d_watch": 0.11086224975879107,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2024-03-28",
+    "close": 23.010000228881836,
+    "depth": 0.13038544878920122
+   },
+   "trough_close": {
+    "date": "2024-04-19",
+    "price": 20.469999313354492,
+    "depth": 0.22637943984787345
+   },
+   "trough_low": {
+    "date": "2024-04-19",
+    "price": 20.329999923706055
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "1e6217113f410407",
+   "speed_at_open": {
+    "ret_1d_sigma": -2.0871754982401756,
+    "ret_5d_sigma": -0.9213473868912633,
+    "depth_atr_per_sqrt_n": 0.8195705177938758
+   },
+   "atr_frac_at_open": 0.04434489990351643,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -2.0871754982401756,
+   "episode_id": "1e6217113f410407",
+   "end": {
+    "date": "2024-05-06",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.22637943984787345,
+   "depth_max_final_atr": 5.511119289723977,
+   "low_depth_max_final": 0.23167042225499657,
+   "duration_sessions": 26,
+   "anchor_to_trough_sessions": 30,
+   "speed_final_atr": 1.0061881173612237,
+   "event_id": "1e6217113f410407"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2024-05-06",
+    "price": 25.209999084472656,
+    "age_sessions_at_open": 1
+   },
+   "a_ref": 1.0200635854113944,
+   "d_watch": 0.10115664641571447,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2024-05-07",
+    "close": 21.399999618530273,
+    "depth": 0.15113048807245055
+   },
+   "trough_close": {
+    "date": "2024-05-10",
+    "price": 20.600000381469727,
+    "depth": 0.1828638980729801
+   },
+   "trough_low": {
+    "date": "2024-05-10",
+    "price": 20.5
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "4949ef2b57a42d0e",
+   "speed_at_open": {
+    "ret_1d_sigma": -5.735394739628215,
+    "ret_5d_sigma": -0.41150262381977454,
+    "depth_atr_per_sqrt_n": 3.735060755458494
+   },
+   "atr_frac_at_open": 0.04046265856628579,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -5.735394739628215,
+   "episode_id": "4949ef2b57a42d0e",
+   "end": {
+    "date": "2024-06-05",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.1828638980729801,
+   "depth_max_final_atr": 4.519324843013296,
+   "low_depth_max_final": 0.1868305932376506,
+   "duration_sessions": 20,
+   "anchor_to_trough_sessions": 4,
+   "speed_final_atr": 2.259662421506648,
+   "event_id": "4949ef2b57a42d0e"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2024-07-23",
+    "price": 28.809999465942383,
+    "age_sessions_at_open": 8
+   },
+   "a_ref": 1.259430801051148,
+   "d_watch": 0.12072764615945775,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2024-08-02",
+    "close": 24.739999771118164,
+    "depth": 0.14127038425098037
+   },
+   "trough_close": {
+    "date": "2024-08-05",
+    "price": 24.09000015258789,
+    "depth": 0.16383198198022253
+   },
+   "trough_low": {
+    "date": "2024-08-05",
+    "price": 21.229999542236328
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "044085b08ab066c8",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.852230724400105,
+    "ret_5d_sigma": -1.4771155843506711,
+    "depth_atr_per_sqrt_n": 1.1425496268772395
+   },
+   "atr_frac_at_open": 0.0482910584637831,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -1.852230724400105,
+   "episode_id": "044085b08ab066c8",
+   "end": {
+    "date": "2024-08-06",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.16383198198022253,
+   "depth_max_final_atr": 3.747724217491806,
+   "low_depth_max_final": 0.263103091434164,
+   "duration_sessions": 2,
+   "anchor_to_trough_sessions": 9,
+   "speed_final_atr": 1.249241405830602,
+   "event_id": "044085b08ab066c8"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2024-12-24",
+    "price": 82.37999725341797,
+    "age_sessions_at_open": 8
+   },
+   "a_ref": 4.439234802272702,
+   "d_watch": 0.14618133921690968,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2025-01-07",
+    "close": 69.98999786376953,
+    "depth": 0.15040058027113334
+   },
+   "trough_close": {
+    "date": "2025-01-13",
+    "price": 64.9800033569336,
+    "depth": 0.21121624759173496
+   },
+   "trough_low": {
+    "date": "2025-01-13",
+    "price": 63.400001525878906
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "af1243a22bc1ae56",
+   "speed_at_open": {
+    "ret_1d_sigma": -2.1199229203373924,
+    "ret_5d_sigma": -1.1399393697980829,
+    "depth_atr_per_sqrt_n": 0.9867750837185163
+   },
+   "atr_frac_at_open": 0.05847253568676387,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -2.1199229203373924,
+   "episode_id": "af1243a22bc1ae56",
+   "end": {
+    "date": "2025-01-22",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.21121624759173496,
+   "depth_max_final_atr": 3.9195930540948876,
+   "low_depth_max_final": 0.2303956829368743,
+   "duration_sessions": 9,
+   "anchor_to_trough_sessions": 11,
+   "speed_final_atr": 1.1818017719378124,
+   "event_id": "af1243a22bc1ae56"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2025-02-18",
+    "price": 124.62000274658203,
+    "age_sessions_at_open": 3
+   },
+   "a_ref": 7.350175160921029,
+   "d_watch": 0.17291275508383558,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2025-02-21",
+    "close": 101.3499984741211,
+    "depth": 0.18672768223076586
+   },
+   "trough_close": {
+    "date": "2025-04-04",
+    "price": 74.01000213623047,
+    "depth": 0.40611458429565517
+   },
+   "trough_low": {
+    "date": "2025-04-07",
+    "price": 66.12000274658203
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "88a834a77156d65b",
+   "speed_at_open": {
+    "ret_1d_sigma": -0.7325388265251399,
+    "ret_5d_sigma": -1.0459175563665164,
+    "depth_atr_per_sqrt_n": 1.8278398727392466
+   },
+   "atr_frac_at_open": 0.06916510203353424,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -2.517767548191978,
+   "episode_id": "88a834a77156d65b",
+   "end": {
+    "date": "2025-04-22",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.40611458429565517,
+   "depth_max_final_atr": 6.8855502763297105,
+   "low_depth_max_final": 0.4694270479110906,
+   "duration_sessions": 41,
+   "anchor_to_trough_sessions": 33,
+   "speed_final_atr": 1.1986204520685835,
+   "event_id": "88a834a77156d65b"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2025-08-12",
+    "price": 186.97000122070312,
+    "age_sessions_at_open": 5
+   },
+   "a_ref": 6.4851706746417666,
+   "d_watch": 0.09316167787351128,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2025-08-19",
+    "close": 157.75,
+    "depth": 0.15628176194004118
+   },
+   "trough_close": {
+    "date": "2025-09-05",
+    "price": 153.11000061035156,
+    "depth": 0.18109857404548302
+   },
+   "trough_low": {
+    "date": "2025-08-20",
+    "price": 142.33999633789062
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "b048aeac257e3458",
+   "speed_at_open": {
+    "ret_1d_sigma": -3.5786751533925374,
+    "ret_5d_sigma": -2.769117133467817,
+    "depth_atr_per_sqrt_n": 2.0149942787967783
+   },
+   "atr_frac_at_open": 0.03726467114940451,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -3.5786751533925374,
+   "episode_id": "b048aeac257e3458",
+   "end": {
+    "date": "2025-09-12",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.18109857404548302,
+   "depth_max_final_atr": 5.22114255878423,
+   "low_depth_max_final": 0.2387014205029092,
+   "duration_sessions": 17,
+   "anchor_to_trough_sessions": 17,
+   "speed_final_atr": 1.266313073898532,
+   "event_id": "b048aeac257e3458"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2025-11-03",
+    "price": 207.17999267578125,
+    "age_sessions_at_open": 3
+   },
+   "a_ref": 8.659232620639443,
+   "d_watch": 0.11521065595949254,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2025-11-06",
+    "close": 175.0500030517578,
+    "depth": 0.1550824923249422
+   },
+   "trough_close": {
+    "date": "2025-11-06",
+    "price": 175.0500030517578,
+    "depth": 0.1550824923249422
+   },
+   "trough_low": {
+    "date": "2025-11-07",
+    "price": 168.91000366210938
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "cafe6d3c3ae9bbc3",
+   "speed_at_open": {
+    "ret_1d_sigma": -2.257427885956496,
+    "ret_5d_sigma": -1.5052110591156618,
+    "depth_atr_per_sqrt_n": 2.142251972106042
+   },
+   "atr_frac_at_open": 0.046084262383797016,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -2.257427885956496,
+   "episode_id": "cafe6d3c3ae9bbc3",
+   "end": {
+    "date": "2025-11-10",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.1550824923249422,
+   "depth_max_final_atr": 3.7104892583022893,
+   "low_depth_max_final": 0.18471855568390283,
+   "duration_sessions": 2,
+   "anchor_to_trough_sessions": 3,
+   "speed_final_atr": 2.142251972106042,
+   "event_id": "cafe6d3c3ae9bbc3"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2025-11-03",
+    "price": 207.17999267578125,
+    "age_sessions_at_open": 8
+   },
+   "a_ref": 9.648396168944306,
+   "d_watch": 0.1309713344311041,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2025-11-13",
+    "close": 172.13999938964844,
+    "depth": 0.16912826780994905
+   },
+   "trough_close": {
+    "date": "2025-11-21",
+    "price": 154.85000610351562,
+    "depth": 0.25258223970573024
+   },
+   "trough_low": {
+    "date": "2025-11-21",
+    "price": 147.55999755859375
+   },
+   "parent_episode_id": "cafe6d3c3ae9bbc3",
+   "dependency_group_id": "cafe6d3c3ae9bbc3",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.725405101931378,
+    "ret_5d_sigma": -0.1914872637211694,
+    "depth_atr_per_sqrt_n": 1.283996657657281
+   },
+   "atr_frac_at_open": 0.05238853377244163,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -1.725405101931378,
+   "episode_id": "4f1bb1b6c5ccbe00",
+   "end": {
+    "date": "2025-12-05",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.25258223970573024,
+   "depth_max_final_atr": 5.42369795517957,
+   "low_depth_max_final": 0.28776907628569925,
+   "duration_sessions": 15,
+   "anchor_to_trough_sessions": 14,
+   "speed_final_atr": 1.4495442512591685,
+   "event_id": "4f1bb1b6c5ccbe00"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2025-12-24",
+    "price": 194.1699981689453,
+    "age_sessions_at_open": 5
+   },
+   "a_ref": 6.874659927502278,
+   "d_watch": 0.09669001304503906,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-01-02",
+    "close": 167.86000061035156,
+    "depth": 0.1354998084498188
+   },
+   "trough_close": {
+    "date": "2026-01-02",
+    "price": 167.86000061035156,
+    "depth": 0.1354998084498188
+   },
+   "trough_low": {
+    "date": "2026-01-02",
+    "price": 166.35000610351562
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "94c510a6d88c7a07",
+   "speed_at_open": {
+    "ret_1d_sigma": -2.213622297968268,
+    "ret_5d_sigma": -2.5178655693193464,
+    "depth_atr_per_sqrt_n": 1.7115302763854319
+   },
+   "atr_frac_at_open": 0.038676005218015626,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -2.213622297968268,
+   "episode_id": "94c510a6d88c7a07",
+   "end": {
+    "date": "2026-01-07",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.1354998084498188,
+   "depth_max_final_atr": 3.8270980435468287,
+   "low_depth_max_final": 0.1432764707615839,
+   "duration_sessions": 3,
+   "anchor_to_trough_sessions": 5,
+   "speed_final_atr": 1.7115302763854319,
+   "event_id": "94c510a6d88c7a07"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2025-12-24",
+    "price": 194.1699981689453,
+    "age_sessions_at_open": 15
+   },
+   "a_ref": 7.0659391923059065,
+   "d_watch": 0.09976194301737433,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-01-16",
+    "close": 170.9600067138672,
+    "depth": 0.11953438571330344
+   },
+   "trough_close": {
+    "date": "2026-02-24",
+    "price": 128.83999633789062,
+    "depth": 0.33645775581772286
+   },
+   "trough_low": {
+    "date": "2026-02-13",
+    "price": 126.23300170898438
+   },
+   "parent_episode_id": "94c510a6d88c7a07",
+   "dependency_group_id": "94c510a6d88c7a07",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.2253071741466857,
+    "ret_5d_sigma": -0.5849439580350514,
+    "depth_atr_per_sqrt_n": 0.8481242000027137
+   },
+   "atr_frac_at_open": 0.03990477720694973,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -4.5809523338364055,
+   "episode_id": "c8c10516eac5c91c",
+   "end": {
+    "date": "2026-03-18",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.33645775581772286,
+   "depth_max_final_atr": 9.24576338021596,
+   "low_depth_max_final": 0.34988410722880914,
+   "duration_sessions": 41,
+   "anchor_to_trough_sessions": 40,
+   "speed_final_atr": 1.4618835494229905,
+   "event_id": "c8c10516eac5c91c"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2026-03-23",
+    "price": 160.83999633789062,
+    "age_sessions_at_open": 5
+   },
+   "a_ref": 6.881573048759284,
+   "d_watch": 0.12025676580101936,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-03-30",
+    "close": 137.5500030517578,
+    "depth": 0.14480224954249243
+   },
+   "trough_close": {
+    "date": "2026-03-30",
+    "price": 137.5500030517578,
+    "depth": 0.14480224954249243
+   },
+   "trough_low": {
+    "date": "2026-03-30",
+    "price": 136.3000030517578
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "d5c2149893c5f65c",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.2589407449122483,
+    "ret_5d_sigma": -2.242259154251668,
+    "depth_atr_per_sqrt_n": 1.5135495275370536
+   },
+   "atr_frac_at_open": 0.048102706320407744,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -1.2589407449122483,
+   "episode_id": "d5c2149893c5f65c",
+   "end": {
+    "date": "2026-04-07",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.14480224954249243,
+   "depth_max_final_atr": 3.3843996308855417,
+   "low_depth_max_final": 0.15257394830188575,
+   "duration_sessions": 5,
+   "anchor_to_trough_sessions": 5,
+   "speed_final_atr": 1.5135495275370536,
+   "event_id": "d5c2149893c5f65c"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2026-04-22",
+    "price": 152.6199951171875,
+    "age_sessions_at_open": 15
+   },
+   "a_ref": 6.286388344868532,
+   "d_watch": 0.11555860928067153,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-05-13",
+    "close": 130.0500030517578,
+    "depth": 0.1478835852936542
+   },
+   "trough_close": {
+    "date": "2026-05-13",
+    "price": 130.0500030517578,
+    "depth": 0.1478835852936542
+   },
+   "trough_low": {
+    "date": "2026-05-13",
+    "price": 128.75
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "decd1763c7b07a19",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.420126881295879,
+    "ret_5d_sigma": -0.402508612461994,
+    "depth_atr_per_sqrt_n": 0.9270103234479787
+   },
+   "atr_frac_at_open": 0.046223443712268615,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -1.420126881295879,
+   "episode_id": "decd1763c7b07a19",
+   "end": {
+    "date": "2026-05-28",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.1478835852936542,
+   "depth_max_final_atr": 3.5902955444763727,
+   "low_depth_max_final": 0.15640149312584628,
+   "duration_sessions": 10,
+   "anchor_to_trough_sessions": 15,
+   "speed_final_atr": 0.9270103234479787,
+   "event_id": "decd1763c7b07a19"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2026-06-01",
+    "price": 160.64999389648438,
+    "age_sessions_at_open": 2
+   },
+   "a_ref": 6.970266245615698,
+   "d_watch": 0.11451446292778793,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-06-03",
+    "close": 142.1999969482422,
+    "depth": 0.11484592374233471
+   },
+   "trough_close": {
+    "date": "2026-06-25",
+    "price": 107.2699966430664,
+    "depth": 0.33227512780245505
+   },
+   "trough_low": {
+    "date": "2026-06-25",
+    "price": 106.37000274658203
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "bc87950cc6845890",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.779303616157287,
+    "ret_5d_sigma": 0.8287563967418926,
+    "depth_atr_per_sqrt_n": 1.871681438736888
+   },
+   "atr_frac_at_open": 0.04580578517111517,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -1.8151404332254963,
+   "episode_id": "bc87950cc6845890",
+   "end": {
+    "date": "2026-07-07",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.33227512780245505,
+   "depth_max_final_atr": 7.658243655612728,
+   "low_depth_max_final": 0.3378773309190284,
+   "duration_sessions": 22,
+   "anchor_to_trough_sessions": 17,
+   "speed_final_atr": 1.8573969116945646,
+   "event_id": "bc87950cc6845890"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2026-10-09",
+    "price": 209.0500030517578,
+    "age_sessions_at_open": 5
+   },
+   "a_ref": 6.88470617570465,
+   "d_watch": 0.08584421665467146,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-10-16",
+    "close": 186.02999877929688,
+    "depth": 0.11011721567285271
+   },
+   "trough_close": {
+    "date": "2026-10-16",
+    "price": 186.02999877929688,
+    "depth": 0.11011721567285271
+   },
+   "trough_low": {
+    "date": "2026-10-16",
+    "price": 184.4499969482422
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "d9a99dedfb7f7cc7",
+   "speed_at_open": {
+    "ret_1d_sigma": -3.8783587164122575,
+    "ret_5d_sigma": -2.7013892354336986,
+    "depth_atr_per_sqrt_n": 1.4953229108659774
+   },
+   "atr_frac_at_open": 0.03433768666186858,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -3.8783587164122575,
+   "episode_id": "d9a99dedfb7f7cc7",
+   "end": {
+    "date": "2026-10-21",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.11011721567285271,
+   "depth_max_final_atr": 3.3436436770091844,
+   "low_depth_max_final": 0.11767522479980552,
+   "duration_sessions": 3,
+   "anchor_to_trough_sessions": 5,
+   "speed_final_atr": 1.4953229108659774,
+   "event_id": "d9a99dedfb7f7cc7"
+  },
+  {
+   "lookback": 20,
+   "anchor": {
+    "date": "2026-10-09",
+    "price": 209.0500030517578,
+    "age_sessions_at_open": 15
+   },
+   "a_ref": 7.718370112671132,
+   "d_watch": 0.0982380891027245,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-10-30",
+    "close": 184.11000061035156,
+    "depth": 0.11930161242442772
+   },
+   "trough_close": {
+    "date": "2026-11-05",
+    "price": 154.99000549316406,
+    "depth": 0.25859840597662787
+   },
+   "trough_low": {
+    "date": "2026-11-05",
+    "price": 152.60000610351562
+   },
+   "parent_episode_id": "d9a99dedfb7f7cc7",
+   "dependency_group_id": "d9a99dedfb7f7cc7",
+   "speed_at_open": {
+    "ret_1d_sigma": -2.268478302226756,
+    "ret_5d_sigma": -1.0408070174063238,
+    "depth_atr_per_sqrt_n": 0.8343057985896507
+   },
+   "atr_frac_at_open": 0.0392952356410898,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -3.129752239884884,
+   "episode_id": "aa3e29aaf65345b9",
+   "end": {
+    "date": null,
+    "reason": "CENSORED"
+   },
+   "depth_max_final": 0.25859840597662787,
+   "depth_max_final_atr": 7.004069093531063,
+   "low_depth_max_final": 0.27003107449975006,
+   "duration_sessions": 5,
+   "anchor_to_trough_sessions": 19,
+   "speed_final_atr": 1.606843651172549,
+   "event_id": "aa3e29aaf65345b9"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2021-01-27",
+    "price": 39.0,
+    "age_sessions_at_open": 39
+   },
+   "a_ref": 2.139386321300059,
+   "d_watch": 0.40810769687678056,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2021-03-24",
+    "close": 21.8799991607666,
+    "depth": 0.43897438049316406
+   },
+   "trough_close": {
+    "date": "2021-05-13",
+    "price": 18.3700008392334,
+    "depth": 0.5289743374555539
+   },
+   "trough_low": {
+    "date": "2021-05-11",
+    "price": 17.05500030517578
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "a3436465eff3621d",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.3840930568841396,
+    "ret_5d_sigma": -1.433732427105263,
+    "depth_atr_per_sqrt_n": 1.2813927527881455
+   },
+   "atr_frac_at_open": 0.09197705504076448,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -3.4990167268536494,
+   "episode_id": "a3436465eff3621d",
+   "end": {
+    "date": "2021-09-17",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.5289743374555539,
+   "depth_max_final_atr": 9.642951792002762,
+   "low_depth_max_final": 0.5626922998672876,
+   "duration_sessions": 123,
+   "anchor_to_trough_sessions": 74,
+   "speed_final_atr": 1.1209703763408019,
+   "event_id": "a8afed2a382d6cc2"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2021-09-23",
+    "price": 28.770000457763672,
+    "age_sessions_at_open": 33
+   },
+   "a_ref": 0.9406606879071289,
+   "d_watch": 0.15602870126590496,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2021-11-09",
+    "close": 24.25,
+    "depth": 0.15710811212531406
+   },
+   "trough_close": {
+    "date": "2022-05-11",
+    "price": 6.710000038146973,
+    "depth": 0.7667709443384364
+   },
+   "trough_low": {
+    "date": "2022-05-12",
+    "price": 6.440000057220459
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "f146f5f5ec85d1f3",
+   "speed_at_open": {
+    "ret_1d_sigma": -5.299326679805174,
+    "ret_5d_sigma": -1.6086090371343076,
+    "depth_atr_per_sqrt_n": 0.8364664269714489
+   },
+   "atr_frac_at_open": 0.035164885529238465,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -5.759923708899135,
+   "episode_id": "f146f5f5ec85d1f3",
+   "end": {
+    "date": "2022-05-12",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.7667709443384364,
+   "depth_max_final_atr": 23.451602371837055,
+   "low_depth_max_final": 0.776155719334283,
+   "duration_sessions": 127,
+   "anchor_to_trough_sessions": 159,
+   "speed_final_atr": 1.8598330448616767,
+   "event_id": "5bb31dc3c141a8aa"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2022-04-04",
+    "price": 14.630000114440918,
+    "age_sessions_at_open": 31
+   },
+   "a_ref": 0.8117291041614237,
+   "d_watch": 0.43082425296339594,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2022-05-18",
+    "close": 8.010000228881836,
+    "depth": 0.4524948621855881
+   },
+   "trough_close": {
+    "date": "2022-05-24",
+    "price": 7.550000190734863,
+    "depth": 0.48393710651564237
+   },
+   "trough_low": {
+    "date": "2022-05-24",
+    "price": 7.369999885559082
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "6ff436e08fbb5fee",
+   "speed_at_open": {
+    "ret_1d_sigma": -0.5547759672482491,
+    "ret_5d_sigma": 1.0273450376769884,
+    "depth_atr_per_sqrt_n": 1.4647584677789347
+   },
+   "atr_frac_at_open": 0.09709678678193301,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -1.492281708983073,
+   "episode_id": "6ff436e08fbb5fee",
+   "end": {
+    "date": "2022-08-03",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.48393710651564237,
+   "depth_max_final_atr": 8.722121564213493,
+   "low_depth_max_final": 0.4962406132666852,
+   "duration_sessions": 52,
+   "anchor_to_trough_sessions": 35,
+   "speed_final_atr": 1.4743076300508755,
+   "event_id": "6ff436e08fbb5fee"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2022-08-05",
+    "price": 11.449999809265137,
+    "age_sessions_at_open": 15
+   },
+   "a_ref": 0.5353966950506595,
+   "d_watch": 0.28213624122569847,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2022-08-26",
+    "close": 7.940000057220459,
+    "depth": 0.30655020179165837
+   },
+   "trough_close": {
+    "date": "2022-12-27",
+    "price": 6.0,
+    "depth": 0.4759825240219736
+   },
+   "trough_low": {
+    "date": "2022-12-27",
+    "price": 5.920000076293945
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "aabecea67dfacf19",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.2073505115639487,
+    "ret_5d_sigma": -0.6377474521664379,
+    "depth_atr_per_sqrt_n": 1.6927225127995873
+   },
+   "atr_frac_at_open": 0.06358630524933603,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -4.089505465804241,
+   "episode_id": "aabecea67dfacf19",
+   "end": {
+    "date": "2023-02-02",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.4759825240219736,
+   "depth_max_final_atr": 10.179367671945482,
+   "low_depth_max_final": 0.48296941703845386,
+   "duration_sessions": 109,
+   "anchor_to_trough_sessions": 99,
+   "speed_final_atr": 1.0230649445732338,
+   "event_id": "f72b87f338fdb5e4"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2023-02-15",
+    "price": 10.109999656677246,
+    "age_sessions_at_open": 34
+   },
+   "a_ref": 0.3776797490174259,
+   "d_watch": 0.20069312205721526,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2023-04-05",
+    "close": 7.980000019073486,
+    "depth": 0.2106824638907857
+   },
+   "trough_close": {
+    "date": "2023-05-04",
+    "price": 7.380000114440918,
+    "depth": 0.270029637482062
+   },
+   "trough_low": {
+    "date": "2023-05-04",
+    "price": 7.28000020980835
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "07f73d6579992e3d",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.5176675221752616,
+    "ret_5d_sigma": -0.44374124094319667,
+    "depth_atr_per_sqrt_n": 0.967200187866697
+   },
+   "atr_frac_at_open": 0.04523110560037466,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -1.7992191393455244,
+   "episode_id": "07f73d6579992e3d",
+   "end": {
+    "date": "2023-05-09",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.270029637482062,
+   "depth_max_final_atr": 7.228345044548226,
+   "low_depth_max_final": 0.2799208252197908,
+   "duration_sessions": 23,
+   "anchor_to_trough_sessions": 54,
+   "speed_final_atr": 0.983653169106583,
+   "event_id": "3a23412ba8cd38cc"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2023-08-01",
+    "price": 19.989999771118164,
+    "age_sessions_at_open": 17
+   },
+   "a_ref": 0.9851652752066243,
+   "d_watch": 0.2857017791668608,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2023-08-24",
+    "close": 14.140000343322754,
+    "depth": 0.2926462978877855
+   },
+   "trough_close": {
+    "date": "2023-09-26",
+    "price": 13.960000038146973,
+    "depth": 0.3016508155084334
+   },
+   "trough_low": {
+    "date": "2023-09-21",
+    "price": 13.680000305175781
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "53bcc2c98ee7b770",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.5153352259551065,
+    "ret_5d_sigma": -0.006075951351111877,
+    "depth_atr_per_sqrt_n": 1.4401982118025527
+   },
+   "atr_frac_at_open": 0.06438988646570118,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -2.246002686663745,
+   "episode_id": "53bcc2c98ee7b770",
+   "end": {
+    "date": "2023-10-09",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.3016508155084334,
+   "depth_max_final_atr": 6.120800118240552,
+   "low_depth_max_final": 0.3156578058124423,
+   "duration_sessions": 31,
+   "anchor_to_trough_sessions": 39,
+   "speed_final_atr": 0.9801124227438185,
+   "event_id": "16b3cce5977bd742"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2023-11-20",
+    "price": 21.34000015258789,
+    "age_sessions_at_open": 27
+   },
+   "a_ref": 0.7135421074908705,
+   "d_watch": 0.1802977860863998,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2023-12-29",
+    "close": 17.170000076293945,
+    "depth": 0.19540768727634017
+   },
+   "trough_close": {
+    "date": "2024-01-05",
+    "price": 15.979999542236328,
+    "depth": 0.2511715357088017
+   },
+   "trough_low": {
+    "date": "2024-01-05",
+    "price": 15.663999557495117
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "c40763bdd50e1e19",
+   "speed_at_open": {
+    "ret_1d_sigma": -0.7256071831984439,
+    "ret_5d_sigma": -0.3491643540570135,
+    "depth_atr_per_sqrt_n": 1.1246945070675092
+   },
+   "atr_frac_at_open": 0.04063451760774739,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -1.5508119402510883,
+   "episode_id": "c40763bdd50e1e19",
+   "end": {
+    "date": "2024-02-06",
+    "reason": "NEW_HIGH"
+   },
+   "depth_max_final": 0.2511715357088017,
+   "depth_max_final_atr": 7.511821032117774,
+   "low_depth_max_final": 0.26597940742771964,
+   "duration_sessions": 25,
+   "anchor_to_trough_sessions": 31,
+   "speed_final_atr": 1.3491628852445927,
+   "event_id": "68b0fcf8713ee266"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2024-03-07",
+    "price": 26.459999084472656,
+    "age_sessions_at_open": 30
+   },
+   "a_ref": 0.9563967772281669,
+   "d_watch": 0.2008324608296828,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2024-04-19",
+    "close": 20.469999313354492,
+    "depth": 0.22637943984787345
+   },
+   "trough_close": {
+    "date": "2024-04-19",
+    "price": 20.469999313354492,
+    "depth": 0.22637943984787345
+   },
+   "trough_low": {
+    "date": "2024-04-19",
+    "price": 20.329999923706055
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "88cc78229b65da20",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.6489841700986672,
+    "ret_5d_sigma": -2.3722700646526045,
+    "depth_atr_per_sqrt_n": 1.1434786873013092
+   },
+   "atr_frac_at_open": 0.045262509002081217,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -1.9383062213610316,
+   "episode_id": "88cc78229b65da20",
+   "end": {
+    "date": "2024-05-06",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.22637943984787345,
+   "depth_max_final_atr": 6.263090710613231,
+   "low_depth_max_final": 0.23167042225499657,
+   "duration_sessions": 11,
+   "anchor_to_trough_sessions": 30,
+   "speed_final_atr": 1.1434786873013092,
+   "event_id": "1e6217113f410407"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2024-03-07",
+    "price": 26.459999084472656,
+    "age_sessions_at_open": 52
+   },
+   "a_ref": 0.9468636329581109,
+   "d_watch": 0.19432425689816815,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2024-05-21",
+    "close": 21.239999771118164,
+    "depth": 0.19727889244023855
+   },
+   "trough_close": {
+    "date": "2024-05-23",
+    "price": 20.719999313354492,
+    "depth": 0.2169312157870228
+   },
+   "trough_low": {
+    "date": "2024-05-23",
+    "price": 20.6299991607666
+   },
+   "parent_episode_id": "88cc78229b65da20",
+   "dependency_group_id": "88cc78229b65da20",
+   "speed_at_open": {
+    "ret_1d_sigma": -0.38395310702349084,
+    "ret_5d_sigma": -0.090752704692862,
+    "depth_atr_per_sqrt_n": 0.764506773369074
+   },
+   "atr_frac_at_open": 0.04379572600385176,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -0.46894335006202614,
+   "episode_id": "6f5386ed7e625d15",
+   "end": {
+    "date": "2024-06-06",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.2169312157870228,
+   "depth_max_final_atr": 6.062118737400173,
+   "low_depth_max_final": 0.22033258221566732,
+   "duration_sessions": 11,
+   "anchor_to_trough_sessions": 54,
+   "speed_final_atr": 0.8249498703775241,
+   "event_id": "6f5386ed7e625d15"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2025-02-18",
+    "price": 124.62000274658203,
+    "age_sessions_at_open": 32
+   },
+   "a_ref": 6.156089352783442,
+   "d_watch": 0.3123492026921877,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2025-04-03",
+    "close": 83.5999984741211,
+    "depth": 0.3291606754003703
+   },
+   "trough_close": {
+    "date": "2025-04-04",
+    "price": 74.01000213623047,
+    "depth": 0.40611458429565517
+   },
+   "trough_low": {
+    "date": "2025-04-07",
+    "price": 66.12000274658203
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "bcecd5c17026f6cf",
+   "speed_at_open": {
+    "ret_1d_sigma": -0.8339697492438971,
+    "ret_5d_sigma": -0.6193361646094622,
+    "depth_atr_per_sqrt_n": 1.1779200042086617
+   },
+   "atr_frac_at_open": 0.07039553536436326,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -2.517767548191978,
+   "episode_id": "bcecd5c17026f6cf",
+   "end": {
+    "date": "2025-04-23",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.40611458429565517,
+   "depth_max_final_atr": 8.221128334901202,
+   "low_depth_max_final": 0.4694270479110906,
+   "duration_sessions": 13,
+   "anchor_to_trough_sessions": 33,
+   "speed_final_atr": 1.4311147498505705,
+   "event_id": "88a834a77156d65b"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2025-11-03",
+    "price": 207.17999267578125,
+    "age_sessions_at_open": 41
+   },
+   "a_ref": 6.874659927502278,
+   "d_watch": 0.1716077494210181,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-01-02",
+    "close": 167.86000061035156,
+    "depth": 0.1897866273552875
+   },
+   "trough_close": {
+    "date": "2026-06-25",
+    "price": 107.2699966430664,
+    "depth": 0.4822376656276136
+   },
+   "trough_low": {
+    "date": "2026-06-25",
+    "price": 106.37000274658203
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "db2abd2036a683a1",
+   "speed_at_open": {
+    "ret_1d_sigma": -2.213622297968268,
+    "ret_5d_sigma": -2.5178655693193464,
+    "depth_atr_per_sqrt_n": 0.8932443412541822
+   },
+   "atr_frac_at_open": 0.038676005218015626,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -4.5809523338364055,
+   "episode_id": "db2abd2036a683a1",
+   "end": {
+    "date": "2026-07-08",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.4822376656276136,
+   "depth_max_final_atr": 14.533081939518489,
+   "low_depth_max_final": 0.4865816849745628,
+   "duration_sessions": 127,
+   "anchor_to_trough_sessions": 160,
+   "speed_final_atr": 1.1489410087683964,
+   "event_id": "bc87950cc6845890"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2026-06-01",
+    "price": 160.64999389648438,
+    "age_sessions_at_open": 35
+   },
+   "a_ref": 6.5427613209147255,
+   "d_watch": 0.21883478577442628,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-07-22",
+    "close": 124.56999969482422,
+    "depth": 0.22458758526258316
+   },
+   "trough_close": {
+    "date": "2026-07-30",
+    "price": 122.26000213623047,
+    "depth": 0.2389666555791511
+   },
+   "trough_low": {
+    "date": "2026-07-28",
+    "price": 117.88999938964844
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "ebc2d206d46494a7",
+   "speed_at_open": {
+    "ret_1d_sigma": -2.0493747522042107,
+    "ret_5d_sigma": -1.0367875073218606,
+    "depth_atr_per_sqrt_n": 0.9321189972997554
+   },
+   "atr_frac_at_open": 0.04931977340796262,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -2.0493747522042107,
+   "episode_id": "ebc2d206d46494a7",
+   "end": {
+    "date": "2026-08-04",
+    "reason": "NEW_HIGH"
+   },
+   "depth_max_final": 0.2389666555791511,
+   "depth_max_final_atr": 5.86755192147017,
+   "low_depth_max_final": 0.26616866561718366,
+   "duration_sessions": 9,
+   "anchor_to_trough_sessions": 41,
+   "speed_final_atr": 0.9163576566527154,
+   "event_id": "ebc2d206d46494a7"
+  },
+  {
+   "lookback": 63,
+   "anchor": {
+    "date": "2026-10-09",
+    "price": 209.0500030517578,
+    "age_sessions_at_open": 19
+   },
+   "a_ref": 8.995888422009303,
+   "d_watch": 0.23247114692951368,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-11-05",
+    "close": 154.99000549316406,
+    "depth": 0.25859840597662787
+   },
+   "trough_close": {
+    "date": "2026-11-05",
+    "price": 154.99000549316406,
+    "depth": 0.25859840597662787
+   },
+   "trough_low": {
+    "date": "2026-11-05",
+    "price": 152.60000610351562
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "233064f10ec74f77",
+   "speed_at_open": {
+    "ret_1d_sigma": -3.129752239884884,
+    "ret_5d_sigma": -3.2384002917932744,
+    "depth_atr_per_sqrt_n": 1.3786536060854597
+   },
+   "atr_frac_at_open": 0.05239306104775909,
+   "vol_regime_at_open": "high",
+   "min_ret_sigma": -3.129752239884884,
+   "episode_id": "233064f10ec74f77",
+   "end": {
+    "date": null,
+    "reason": "CENSORED"
+   },
+   "depth_max_final": 0.25859840597662787,
+   "depth_max_final_atr": 6.009411747074451,
+   "low_depth_max_final": 0.27003107449975006,
+   "duration_sessions": 1,
+   "anchor_to_trough_sessions": 19,
+   "speed_final_atr": 1.3786536060854597,
+   "event_id": "aa3e29aaf65345b9"
+  },
+  {
+   "lookback": 126,
+   "anchor": {
+    "date": "2021-01-27",
+    "price": 39.0,
+    "age_sessions_at_open": 62
+   },
+   "a_ref": 1.4155311597101092,
+   "d_watch": 0.3684109210892306,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2021-04-27",
+    "close": 23.8799991607666,
+    "depth": 0.38769232921111274
+   },
+   "trough_close": {
+    "date": "2021-05-13",
+    "price": 18.3700008392334,
+    "depth": 0.5289743374555539
+   },
+   "trough_low": {
+    "date": "2021-05-11",
+    "price": 17.05500030517578
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "d5d9440616d4834b",
+   "speed_at_open": {
+    "ret_1d_sigma": -0.2670505760196181,
+    "ret_5d_sigma": 1.1468719679629404,
+    "depth_atr_per_sqrt_n": 1.3565522833272567
+   },
+   "atr_frac_at_open": 0.058711369716944545,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -3.4990167268536494,
+   "episode_id": "d5d9440616d4834b",
+   "end": {
+    "date": "2021-09-17",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.5289743374555539,
+   "depth_max_final_atr": 14.574033937191096,
+   "low_depth_max_final": 0.5626922998672876,
+   "duration_sessions": 100,
+   "anchor_to_trough_sessions": 74,
+   "speed_final_atr": 1.6941970321707527,
+   "event_id": "a8afed2a382d6cc2"
+  },
+  {
+   "lookback": 126,
+   "anchor": {
+    "date": "2021-09-23",
+    "price": 28.770000457763672,
+    "age_sessions_at_open": 48
+   },
+   "a_ref": 1.0206354765449517,
+   "d_watch": 0.3101422230008598,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2021-12-01",
+    "close": 19.3799991607666,
+    "depth": 0.32638168743800455
+   },
+   "trough_close": {
+    "date": "2022-05-11",
+    "price": 6.710000038146973,
+    "depth": 0.7667709443384364
+   },
+   "trough_low": {
+    "date": "2022-05-12",
+    "price": 6.440000057220459
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "063a4e8ad659d520",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.9399761921281533,
+    "ret_5d_sigma": -0.8278118263708965,
+    "depth_atr_per_sqrt_n": 1.3279275267954649
+   },
+   "atr_frac_at_open": 0.04942544771909267,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -5.759923708899135,
+   "episode_id": "063a4e8ad659d520",
+   "end": {
+    "date": "2022-12-02",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.7667709443384364,
+   "depth_max_final_atr": 21.61398552820647,
+   "low_depth_max_final": 0.776155719334283,
+   "duration_sessions": 253,
+   "anchor_to_trough_sessions": 159,
+   "speed_final_atr": 1.714100549683316,
+   "event_id": "5bb31dc3c141a8aa"
+  },
+  {
+   "lookback": 126,
+   "anchor": {
+    "date": "2022-08-05",
+    "price": 11.449999809265137,
+    "age_sessions_at_open": 84
+   },
+   "a_ref": 0.42146551240041863,
+   "d_watch": 0.3452578529494984,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2022-12-05",
+    "close": 7.190000057220459,
+    "depth": 0.3720523862889117
+   },
+   "trough_close": {
+    "date": "2022-12-27",
+    "price": 6.0,
+    "depth": 0.4759825240219736
+   },
+   "trough_low": {
+    "date": "2022-12-27",
+    "price": 5.920000076293945
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "ac0e73fbffdead9d",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.2385239073807839,
+    "ret_5d_sigma": 0.03657430901441143,
+    "depth_atr_per_sqrt_n": 1.1028282634592583
+   },
+   "atr_frac_at_open": 0.05502160845901433,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -2.721837299550489,
+   "episode_id": "ac0e73fbffdead9d",
+   "end": {
+    "date": "2023-02-02",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.4759825240219736,
+   "depth_max_final_atr": 12.931069444389783,
+   "low_depth_max_final": 0.48296941703845386,
+   "duration_sessions": 40,
+   "anchor_to_trough_sessions": 99,
+   "speed_final_atr": 1.299621378335466,
+   "event_id": "f72b87f338fdb5e4"
+  },
+  {
+   "lookback": 126,
+   "anchor": {
+    "date": "2025-11-03",
+    "price": 207.17999267578125,
+    "age_sessions_at_open": 60
+   },
+   "a_ref": 7.059134311695709,
+   "d_watch": 0.29168784456703467,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-01-30",
+    "close": 146.58999633789062,
+    "depth": 0.29245100144736813
+   },
+   "trough_close": {
+    "date": "2026-06-25",
+    "price": 107.2699966430664,
+    "depth": 0.4822376656276136
+   },
+   "trough_low": {
+    "date": "2026-06-25",
+    "price": 106.37000274658203
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "e9ec939d2cef89fd",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.4090585340343458,
+    "ret_5d_sigma": -2.601336830148057,
+    "depth_atr_per_sqrt_n": 1.1080869900936856
+   },
+   "atr_frac_at_open": 0.04648448757621381,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -4.5809523338364055,
+   "episode_id": "e9ec939d2cef89fd",
+   "end": {
+    "date": "2026-08-04",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.4822376656276136,
+   "depth_max_final_atr": 14.15329297066668,
+   "low_depth_max_final": 0.4865816849745628,
+   "duration_sessions": 127,
+   "anchor_to_trough_sessions": 160,
+   "speed_final_atr": 1.118916054473935,
+   "event_id": "bc87950cc6845890"
+  },
+  {
+   "lookback": 252,
+   "anchor": {
+    "date": "2021-01-27",
+    "price": 39.0,
+    "age_sessions_at_open": 182
+   },
+   "a_ref": 1.0314044951442627,
+   "d_watch": 0.37588528868553184,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2021-10-15",
+    "close": 24.0,
+    "depth": 0.3846153846153846
+   },
+   "trough_close": {
+    "date": "2022-12-27",
+    "price": 6.0,
+    "depth": 0.8461538461538461
+   },
+   "trough_low": {
+    "date": "2022-12-27",
+    "price": 5.920000076293945
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "c014818844c79932",
+   "speed_at_open": {
+    "ret_1d_sigma": -0.4361449428929837,
+    "ret_5d_sigma": 0.28363423725689935,
+    "depth_atr_per_sqrt_n": 1.0780193224154349
+   },
+   "atr_frac_at_open": 0.04235747346965786,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -5.759923708899135,
+   "episode_id": "c014818844c79932",
+   "end": {
+    "date": "2023-10-19",
+    "reason": "EXPIRED"
+   },
+   "depth_max_final": 0.8461538461538461,
+   "depth_max_final_atr": 31.995206686959694,
+   "low_depth_max_final": 0.8482051262488732,
+   "duration_sessions": 505,
+   "anchor_to_trough_sessions": 483,
+   "speed_final_atr": 1.455832313323237,
+   "event_id": "f72b87f338fdb5e4"
+  },
+  {
+   "lookback": 252,
+   "anchor": {
+    "date": "2025-11-03",
+    "price": 207.17999267578125,
+    "age_sessions_at_open": 140
+   },
+   "a_ref": 5.517515510470139,
+   "d_watch": 0.35844136719541686,
+   "k_watch": 2.5,
+   "open": {
+    "date": "2026-05-27",
+    "close": 132.50999450683594,
+    "depth": 0.36041124050910356
+   },
+   "trough_close": {
+    "date": "2026-06-25",
+    "price": 107.2699966430664,
+    "depth": 0.4822376656276136
+   },
+   "trough_low": {
+    "date": "2026-06-25",
+    "price": 106.37000274658203
+   },
+   "parent_episode_id": null,
+   "dependency_group_id": "2e0b22dfd14b5dc7",
+   "speed_at_open": {
+    "ret_1d_sigma": -1.2489841157156933,
+    "ret_5d_sigma": -0.3774242763940106,
+    "depth_atr_per_sqrt_n": 1.143769628436937
+   },
+   "atr_frac_at_open": 0.040391766207455077,
+   "vol_regime_at_open": "low",
+   "min_ret_sigma": -2.0493747522042107,
+   "episode_id": "2e0b22dfd14b5dc7",
+   "end": {
+    "date": "2026-08-04",
+    "reason": "RECOVERED"
+   },
+   "depth_max_final": 0.4822376656276136,
+   "depth_max_final_atr": 18.107787072482857,
+   "low_depth_max_final": 0.4865816849745628,
+   "duration_sessions": 47,
+   "anchor_to_trough_sessions": 160,
+   "speed_final_atr": 1.4315462633599578,
+   "event_id": "bc87950cc6845890"
+  }
+ ],
+ "generated_at": "2026-11-06T22:05:09.721619+00:00"
+}

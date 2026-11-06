@@ -1,0 +1,393 @@
+{
+  "available": true,
+  "computed_at_generation_price": true,
+  "basis_source": "entry_mid_per_horizon",
+  "basis_used": 158.6965,
+  "s0_used": 160.38,
+  "entry_used": null,
+  "stop_used": 148.7431,
+  "per_horizon_stops": true,
+  "sigma_daily_pct": 3.7083,
+  "sigma_intraday_pct": 2.426,
+  "mu_daily_pct": 0.1,
+  "mu_daily_pct_raw": 0.1257,
+  "mu_cap_pct_daily": 0.1,
+  "mu_was_capped": true,
+  "drift_source": "hmm_mu_effective_capped",
+  "risk_per_share": 9.9534,
+  "cost_per_share": 0.127,
+  "n_paths": 20000,
+  "method": "empirical_first_passage_primary_gbm_fallback",
+  "empirical_halflife_sessions": 126.0,
+  "empirical_min_n_eff": 25.0,
+  "ev_pct_risk_threshold": 0.3,
+  "note": "drift HMM borné à ±0.1 %/j (§A1, cohérent compute_scenarios) — cf. mu_daily_pct_raw pour la valeur HMM brute ; barrière MC horizon fini, monitoring intra-séance (M sous-pas/j, σ/√M par sous-pas) → touch intrabar, pas clôture ; stops & cibles différenciés par horizon ; base = mid de la plage d'entrée PAR HORIZON (le dip de chaque plan, basis_used) — R/R/EV mesurés depuis l'entrée réelle, PAS le spot",
+  "by_horizon": {
+    "intraday": {
+      "horizon_sessions": 1,
+      "basis_used": 159.6148,
+      "stop_used": 155.6244,
+      "risk_per_share": 3.9904,
+      "targets": {
+        "t1": {
+          "price": 164.5914,
+          "p_hit_upper": 0.2306,
+          "p_hit_lower_first": 0.256,
+          "p_no_touch": 0.5134,
+          "ev_per_share_gross": 0.351422,
+          "terminal_mean_no_touch": null,
+          "prob_method": "empirical_5s_intraday_real_path",
+          "n": 125,
+          "gbm_reference": {
+            "p_hit_upper": 0.1631,
+            "p_hit_lower_first": 0.2248,
+            "ev_per_share_gross": 0.151616
+          },
+          "ev_per_share": 0.2237,
+          "ev_pct_risk": 0.0561,
+          "status": "below_threshold",
+          "reward_risk": 1.2471,
+          "no_touch_pnl_r_implied": 0.11,
+          "kelly_fraction": 0.0918,
+          "kelly_quarter": 0.023,
+          "kelly_method": "log-optimal 3 issues sur la MEME loi que l'EV : cible +b−c, stop −1−c, échéance m−c (m = P&L terminal moyen du no-touch implicite de l'EV publiée), en multiples de R ; f = fraction du capital mise en risque, bornée [0 ; 1] ; 0 si EV nette ≤ 0"
+        },
+        "t2": {
+          "price": 169.5681,
+          "p_hit_upper": null,
+          "p_hit_lower_first": null,
+          "p_no_touch": null,
+          "ev_per_share_gross": null,
+          "prob_method": "HORS_DOMAINE",
+          "gbm_reference": {
+            "p_hit_upper": 0.0096,
+            "p_hit_lower_first": 0.2248,
+            "ev_per_share_gross": 0.253746
+          },
+          "grid_5s": {
+            "out_of_domain": true,
+            "p_hit_upper": null,
+            "p_hit_lower_first": null,
+            "p_no_touch": null,
+            "ev_pct_entry": null,
+            "query": {
+              "target_pct": 6.2358,
+              "stop_pct": 2.5
+            },
+            "domain": {
+              "target_pct": [
+                1.0,
+                5.0
+              ],
+              "stop_pct": [
+                1.5,
+                8.0
+              ]
+            },
+            "note": "cible/stop HORS de la grille 5 s mesurée : la probabilité de la borne n'est pas celle de la cible"
+          },
+          "ev_per_share": null,
+          "ev_pct_risk": null,
+          "reward_risk": null,
+          "status": "HORS_DOMAINE",
+          "kelly_fraction": null,
+          "kelly_quarter": null
+        },
+        "t3": {
+          "price": 174.5448,
+          "p_hit_upper": null,
+          "p_hit_lower_first": null,
+          "p_no_touch": null,
+          "ev_per_share_gross": null,
+          "prob_method": "HORS_DOMAINE",
+          "gbm_reference": {
+            "p_hit_upper": 0.0002,
+            "p_hit_lower_first": 0.2248,
+            "ev_per_share_gross": 0.260047
+          },
+          "grid_5s": {
+            "out_of_domain": true,
+            "p_hit_upper": null,
+            "p_hit_lower_first": null,
+            "p_no_touch": null,
+            "ev_pct_entry": null,
+            "query": {
+              "target_pct": 9.3538,
+              "stop_pct": 2.5
+            },
+            "domain": {
+              "target_pct": [
+                1.0,
+                5.0
+              ],
+              "stop_pct": [
+                1.5,
+                8.0
+              ]
+            },
+            "note": "cible/stop HORS de la grille 5 s mesurée : la probabilité de la borne n'est pas celle de la cible"
+          },
+          "ev_per_share": null,
+          "ev_pct_risk": null,
+          "reward_risk": null,
+          "status": "HORS_DOMAINE",
+          "kelly_fraction": null,
+          "kelly_quarter": null
+        }
+      },
+      "blended_scale_out": {
+        "weights": {
+          "t1": 0.5,
+          "t2": 0.3,
+          "t3": 0.2
+        },
+        "weights_applied": {
+          "t1": 1.0
+        },
+        "ev_per_share": 0.1119,
+        "ev_pct_risk": 0.028,
+        "kelly_fraction": 0.0918,
+        "kelly_quarter": 0.023,
+        "kelly_method": "log-optimal sur la loi JOINTE du scale-out (cibles emboîtées sur une même trajectoire, stop commun : issues reconstruites exactement depuis les marginales p/q/n par cible), mêmes probabilités, P&L terminal et coûts que l'EV ; 0 si EV nette agrégée ≤ 0",
+        "ev_pct_risk_interval": {
+          "kind": "aucun",
+          "interval": null,
+          "reason": "probabilités INTERPOLÉES sur la grille 5 s (cellules agrégées, pas de rééchantillonnage possible ici) — l'IC de la mesure 5 s du plan est publié par intraday_5s.first_passage_by_horizon.<h>.ev_pct_risk_ci95",
+          "prob_methods": [
+            "empirical_5s_intraday_real_path"
+          ]
+        }
+      },
+      "noise_aware_stop_5s": {
+        "current_stop_pct": 2.5,
+        "ev_optimal_stop_pct": 2.5,
+        "ev_optimal_ev_pct_risk": 0.0881,
+        "ev_optimal_p_target_first": 0.2306,
+        "current_stop_too_tight": false,
+        "note": "stop EV-optimal d'après first-passage 5 s réel (cible T1) ; un stop plus serré est mangé par le bruit intra-séance"
+      }
+    },
+    "swing": {
+      "horizon_sessions": 5,
+      "basis_used": 158.6965,
+      "stop_used": 148.7431,
+      "risk_per_share": 9.9534,
+      "targets": {
+        "t1": {
+          "price": 169.8246,
+          "ev_per_share_gross": 0.342741,
+          "terminal_mean_no_touch": 159.5005,
+          "p_hit_upper": 0.3071,
+          "p_hit_lower_first": 0.3376,
+          "p_no_touch": 0.3554,
+          "n": 246,
+          "n_eff": 214.3,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.3666,
+            "p_hit_lower_first": 0.3818,
+            "ev_per_share_gross": 0.355574
+          },
+          "ev_per_share": 0.2158,
+          "ev_pct_risk": 0.0217,
+          "status": "below_threshold",
+          "reward_risk": 1.118,
+          "no_touch_pnl_r_implied": 0.0808,
+          "kelly_fraction": 0.03,
+          "kelly_quarter": 0.0075,
+          "kelly_method": "log-optimal 3 issues sur la MEME loi que l'EV : cible +b−c, stop −1−c, échéance m−c (m = P&L terminal moyen du no-touch implicite de l'EV publiée), en multiples de R ; f = fraction du capital mise en risque, bornée [0 ; 1] ; 0 si EV nette ≤ 0"
+        },
+        "t2": {
+          "price": 180.9528,
+          "ev_per_share_gross": 0.447956,
+          "terminal_mean_no_touch": 162.3211,
+          "p_hit_upper": 0.0846,
+          "p_hit_lower_first": 0.35,
+          "p_no_touch": 0.5654,
+          "n": 246,
+          "n_eff": 214.3,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.0992,
+            "p_hit_lower_first": 0.39,
+            "ev_per_share_gross": 0.776651
+          },
+          "ev_per_share": 0.321,
+          "ev_pct_risk": 0.0323,
+          "status": "below_threshold",
+          "reward_risk": 2.236,
+          "no_touch_pnl_r_implied": 0.3641,
+          "kelly_fraction": 0.039,
+          "kelly_quarter": 0.0097,
+          "kelly_method": "log-optimal 3 issues sur la MEME loi que l'EV : cible +b−c, stop −1−c, échéance m−c (m = P&L terminal moyen du no-touch implicite de l'EV publiée), en multiples de R ; f = fraction du capital mise en risque, bornée [0 ; 1] ; 0 si EV nette ≤ 0"
+        },
+        "t3": {
+          "price": 192.081,
+          "ev_per_share_gross": 0.775868,
+          "terminal_mean_no_touch": 163.7482,
+          "p_hit_upper": 0.0345,
+          "p_hit_lower_first": 0.35,
+          "p_no_touch": 0.6155,
+          "n": 246,
+          "n_eff": 214.3,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.0174,
+            "p_hit_lower_first": 0.3901,
+            "ev_per_share_gross": 0.862999
+          },
+          "ev_per_share": 0.6489,
+          "ev_pct_risk": 0.0652,
+          "status": "below_threshold",
+          "reward_risk": 3.3541,
+          "no_touch_pnl_r_implied": 0.5073,
+          "kelly_fraction": 0.0776,
+          "kelly_quarter": 0.0194,
+          "kelly_method": "log-optimal 3 issues sur la MEME loi que l'EV : cible +b−c, stop −1−c, échéance m−c (m = P&L terminal moyen du no-touch implicite de l'EV publiée), en multiples de R ; f = fraction du capital mise en risque, bornée [0 ; 1] ; 0 si EV nette ≤ 0"
+        }
+      },
+      "blended_scale_out": {
+        "weights": {
+          "t1": 0.5,
+          "t2": 0.3,
+          "t3": 0.2
+        },
+        "weights_applied": {
+          "t1": 0.5,
+          "t2": 0.3,
+          "t3": 0.2
+        },
+        "ev_per_share": 0.334,
+        "ev_pct_risk": 0.0336,
+        "kelly_fraction": 0.0423,
+        "kelly_quarter": 0.0106,
+        "kelly_method": "log-optimal sur la loi JOINTE du scale-out (cibles emboîtées sur une même trajectoire, stop commun : issues reconstruites exactement depuis les marginales p/q/n par cible), mêmes probabilités, P&L terminal et coûts que l'EV ; 0 si EV nette agrégée ≤ 0",
+        "ev_pct_risk_interval": {
+          "kind": "ic95_bootstrap_blocs",
+          "interval": [
+            -0.1785,
+            0.2571
+          ],
+          "method": "bootstrap circulaire par blocs de jours d'entrée consécutifs (fenêtres de H séances chevauchantes), percentiles 2,5 / 97,5, poids récence d'origine ; même estimateur que l'EV publiée (premier passage daily, stop si double-touch, no-touch au terminal, coûts)",
+          "conditioning": "fill (entrée supposée au plan)",
+          "block_sessions": 10,
+          "n_days": 246,
+          "n_blocks": 24.6,
+          "n_boot": 1000,
+          "seed": 20260930
+        }
+      }
+    },
+    "deep": {
+      "horizon_sessions": 10,
+      "basis_used": 157.7782,
+      "stop_used": 142.8481,
+      "risk_per_share": 14.9301,
+      "targets": {
+        "t1": {
+          "price": 173.5158,
+          "ev_per_share_gross": 0.124227,
+          "terminal_mean_no_touch": 158.0551,
+          "p_hit_upper": 0.3167,
+          "p_hit_lower_first": 0.332,
+          "p_no_touch": 0.3512,
+          "n": 241,
+          "n_eff": 211.0,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.3905,
+            "p_hit_lower_first": 0.3461,
+            "ev_per_share_gross": 0.928712
+          },
+          "ev_per_share": -0.002,
+          "ev_pct_risk": -0.0001,
+          "status": "negative_ev",
+          "reward_risk": 1.0541,
+          "no_touch_pnl_r_implied": 0.0185,
+          "kelly_fraction": 0.0,
+          "kelly_quarter": 0.0,
+          "kelly_method": "log-optimal 3 issues sur la MEME loi que l'EV : cible +b−c, stop −1−c, échéance m−c (m = P&L terminal moyen du no-touch implicite de l'EV publiée), en multiples de R ; f = fraction du capital mise en risque, bornée [0 ; 1] ; 0 si EV nette ≤ 0"
+        },
+        "t2": {
+          "price": 189.2534,
+          "ev_per_share_gross": 0.545385,
+          "terminal_mean_no_touch": 163.0016,
+          "p_hit_upper": 0.0867,
+          "p_hit_lower_first": 0.3451,
+          "p_no_touch": 0.5681,
+          "n": 241,
+          "n_eff": 211.0,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.1105,
+            "p_hit_lower_first": 0.3549,
+            "ev_per_share_gross": 1.410774
+          },
+          "ev_per_share": 0.4192,
+          "ev_pct_risk": 0.0281,
+          "status": "below_threshold",
+          "reward_risk": 2.1082,
+          "no_touch_pnl_r_implied": 0.35,
+          "kelly_fraction": 0.0358,
+          "kelly_quarter": 0.0089,
+          "kelly_method": "log-optimal 3 issues sur la MEME loi que l'EV : cible +b−c, stop −1−c, échéance m−c (m = P&L terminal moyen du no-touch implicite de l'EV publiée), en multiples de R ; f = fraction du capital mise en risque, bornée [0 ; 1] ; 0 si EV nette ≤ 0"
+        },
+        "t3": {
+          "price": 204.991,
+          "ev_per_share_gross": 0.753061,
+          "terminal_mean_no_touch": 164.1437,
+          "p_hit_upper": 0.0425,
+          "p_hit_lower_first": 0.3451,
+          "p_no_touch": 0.6124,
+          "n": 241,
+          "n_eff": 211.0,
+          "prob_method": "empirical_daily_first_passage",
+          "gbm_reference": {
+            "p_hit_upper": 0.0221,
+            "p_hit_lower_first": 0.355,
+            "ev_per_share_gross": 1.522981
+          },
+          "ev_per_share": 0.6268,
+          "ev_pct_risk": 0.042,
+          "status": "below_threshold",
+          "reward_risk": 3.1623,
+          "no_touch_pnl_r_implied": 0.4264,
+          "kelly_fraction": 0.05,
+          "kelly_quarter": 0.0125,
+          "kelly_method": "log-optimal 3 issues sur la MEME loi que l'EV : cible +b−c, stop −1−c, échéance m−c (m = P&L terminal moyen du no-touch implicite de l'EV publiée), en multiples de R ; f = fraction du capital mise en risque, bornée [0 ; 1] ; 0 si EV nette ≤ 0"
+        }
+      },
+      "blended_scale_out": {
+        "weights": {
+          "t1": 0.5,
+          "t2": 0.3,
+          "t3": 0.2
+        },
+        "weights_applied": {
+          "t1": 0.5,
+          "t2": 0.3,
+          "t3": 0.2
+        },
+        "ev_per_share": 0.2501,
+        "ev_pct_risk": 0.0168,
+        "kelly_fraction": 0.0222,
+        "kelly_quarter": 0.0055,
+        "kelly_method": "log-optimal sur la loi JOINTE du scale-out (cibles emboîtées sur une même trajectoire, stop commun : issues reconstruites exactement depuis les marginales p/q/n par cible), mêmes probabilités, P&L terminal et coûts que l'EV ; 0 si EV nette agrégée ≤ 0",
+        "ev_pct_risk_interval": {
+          "kind": "ic95_bootstrap_blocs",
+          "interval": [
+            -0.2554,
+            0.2839
+          ],
+          "method": "bootstrap circulaire par blocs de jours d'entrée consécutifs (fenêtres de H séances chevauchantes), percentiles 2,5 / 97,5, poids récence d'origine ; même estimateur que l'EV publiée (premier passage daily, stop si double-touch, no-touch au terminal, coûts)",
+          "conditioning": "fill (entrée supposée au plan)",
+          "block_sessions": 20,
+          "n_days": 241,
+          "n_blocks": 12.1,
+          "n_boot": 1000,
+          "seed": 20260930
+        }
+      }
+    }
+  }
+}
