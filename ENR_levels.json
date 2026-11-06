@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "ENR",
-    "generated_at": "2026-11-05T22:05:06Z",
+    "generated_at": "2026-11-06T01:33:06Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-06T08:00:00Z",
-    "valid_until": "2026-11-06T21:00:00Z",
+    "valid_from": "2026-11-09T08:00:00Z",
+    "valid_until": "2026-11-09T21:00:00Z",
     "source_precomputed": "ENR_precomputed.json"
   },
   "context": {
-    "last_price": 113.84,
+    "last_price": 113.36,
     "ta_score": {
       "value": 1,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 7.35,
     "atr_pct_daily": null,
-    "beta_60d": 1.7203,
+    "beta_60d": 1.6825,
     "beta_benchmark": "GDAXI",
-    "beta_corr_60d": 0.4647,
+    "beta_corr_60d": 0.461,
     "btc_corr_high": null,
     "candlestick": {
       "name": "morning_star",
@@ -53,10 +53,10 @@
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -39.32,
+      "current_dd_pct": -39.58,
       "ath_price": 187.62,
       "ath_date": "2026-04-24",
-      "max_dd_1y_pct": -39.32,
+      "max_dd_1y_pct": -39.58,
       "days_in_dd": 195,
       "median_recovery_days": null
     }
@@ -68,32 +68,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 113.1956,
-        "max": 113.8768
+        "min": 111.8634,
+        "max": 112.5366
       },
       "stop": {
-        "price": 102.815,
-        "basis": "fallback_confluence_resist",
-        "distance_pct": -9.44
+        "price": 102.335,
+        "basis": "fallback_pivot_camarilla_s1",
+        "distance_pct": -8.79
       },
       "targets": [
         {
           "level": 1,
           "price": 115.5983,
           "basis": "sous résistance (medium) à 116.3 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 0.19
+          "rr": 0.34
         },
         {
           "level": 2,
           "price": 123.8159,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.96
+          "rr": 1.18
         },
         {
           "level": 3,
           "price": 132.0334,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.73
+          "rr": 2.01
         }
       ],
       "preferred_target": 1,
@@ -101,7 +101,7 @@
         "session_eu_xetra_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel confluence_resist. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_s1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
     },
     {
       "id": "B",
@@ -109,32 +109,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 115.115,
-        "max": 115.575
+        "min": 116.4496,
+        "max": 116.915
       },
       "stop": {
-        "price": 111.325,
-        "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -3.49
+        "price": 112.8448,
+        "basis": "below_broken_resistance",
+        "distance_pct": -3.29
       },
       "targets": [
         {
           "level": 1,
-          "price": 115.5983,
-          "basis": "sous résistance (medium) à 116.3 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 0.06
+          "price": 122.659,
+          "basis": "next_confluence_resistance",
+          "rr": 1.56
         },
         {
           "level": 2,
-          "price": 123.8159,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.11
+          "price": 130.4653,
+          "basis": "fib_236",
+          "rr": 3.59
         },
         {
           "level": 3,
-          "price": 132.0334,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.15
+          "price": 130.4653,
+          "basis": "next_confluence_resistance",
+          "rr": 3.59
         }
       ],
       "preferred_target": 1,
@@ -142,7 +142,7 @@
         "session_eu_xetra_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+      "rationale": "Breakout au-dessus confluence resistance BB_LOWER + S/R_resistance (strength 6.0)."
     },
     {
       "id": "C",
@@ -150,32 +150,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 94.4911,
-        "max": 96.4096
+        "min": 94.1758,
+        "max": 96.088
       },
       "stop": {
-        "price": 84.905,
+        "price": 84.585,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -11.05
+        "distance_pct": -11.09
       },
       "targets": [
         {
           "level": 1,
           "price": 115.5983,
           "basis": "sous résistance (medium) à 116.3 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 1.91
+          "rr": 1.94
         },
         {
           "level": 2,
           "price": 123.8159,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.69
+          "rr": 2.72
         },
         {
           "level": 3,
           "price": 132.0334,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.47
+          "rr": 3.5
         }
       ],
       "preferred_target": 1,
@@ -199,7 +199,7 @@
     }
   ],
   "invalidation": {
-    "price": 84.0559,
+    "price": 83.7391,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
