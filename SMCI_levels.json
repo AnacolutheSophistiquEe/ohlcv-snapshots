@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-11-06T22:05:20Z",
+    "generated_at": "2026-11-09T01:31:44Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-09T08:00:00Z",
-    "valid_until": "2026-11-09T21:00:00Z",
+    "valid_from": "2026-11-10T08:00:00Z",
+    "valid_until": "2026-11-10T21:00:00Z",
     "source_precomputed": "SMCI_precomputed.json"
   },
   "context": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 1/10 (very_bearish), alignment mixed, HMM bull (0.90), vol high, signals neutral (2b/6s/7n)."
   },
   "notes": {
-    "atr_daily": 2.5634,
+    "atr_daily": 2.5636,
     "atr_pct_daily": null,
     "beta_60d": 2.1125,
     "beta_benchmark": "IWM",
@@ -87,26 +87,26 @@
         "max": 28.6958
       },
       "stop": {
-        "price": 24.9149,
+        "price": 24.9146,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -12.92
       },
       "targets": [
         {
           "level": 1,
-          "price": 31.8571,
+          "price": 31.857,
           "basis": "sous résistance (strong) à 32.11 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
           "rr": 0.88
         },
         {
           "level": 2,
-          "price": 34.723,
+          "price": 34.7232,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 1.65
         },
         {
           "level": 3,
-          "price": 37.589,
+          "price": 37.5894,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
           "rr": 2.43
         }
@@ -169,26 +169,26 @@
         "max": 19.5774
       },
       "stop": {
-        "price": 15.6349,
+        "price": 15.6346,
         "basis": "fallback_sr_support",
         "distance_pct": -19.34
       },
       "targets": [
         {
           "level": 1,
-          "price": 31.8571,
+          "price": 31.857,
           "basis": "sous résistance (strong) à 32.11 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
           "rr": 3.33
         },
         {
           "level": 2,
-          "price": 34.723,
+          "price": 34.7232,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 4.09
         },
         {
           "level": 3,
-          "price": 37.589,
+          "price": 37.5894,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
           "rr": 4.86
         }
@@ -214,7 +214,7 @@
     }
   ],
   "invalidation": {
-    "price": 15.4786,
+    "price": 15.4783,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
