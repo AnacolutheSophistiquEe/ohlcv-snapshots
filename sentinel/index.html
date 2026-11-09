@@ -365,7 +365,7 @@ return`<div class="bx pe${lk?" lock":""}${e.ferme?" f":""}">${C}<button class="p
 }
 function candRow(e,d,c,ch,dead){const mh=c.mh,r=mh!=null&&mh<1;
 return`<button class="cand${ch[d]===c.id?" on":""}${dead?" dead":""}"${dead?" disabled":""} data-e="${e.id}" data-x="sel" data-d="${d}" data-c="${c.id}"><span class="cl n"><b>×${fx(c.lev,1)}</b><small>levier</small></span>
-<span class="cm"><span class="ce">${esc(c.emet)}</span><span class="cg n"><span>barrière<b>${fx(c.dist,1)} %</b></span><span>spread<b>${fx(c.spr,1)} %</b></span><span>ask<b>${fx(c.ask)} €</b></span></span>
+<span class="cm"><span class="ce">${esc(c.emet)}</span><span class="cg n"><span>barrière<b>${c.bar!=null?fx(c.bar,c.bar>=1000?0:2)+" · ":""}${fx(c.dist,1)} %</b></span><span>spread<b>${fx(c.spr,1)} %</b></span><span>ask<b>${fx(c.ask)} €</b></span></span>
 ${mh!=null?`<span class="cb${r?" r":""}"><i style="width:${Math.min(100,mh/3*100).toFixed(0)}%"></i></span>`:""}<span class="m n" style="font-size:11.5px">${mh!=null?fx(mh,1)+" mvt hab. jusqu'à la barrière · ":""}${i0(Math.floor(ch.cap/c.ask))} u pour ${i0(ch.cap)} €</span></span><span class="ck">✓</span></button>`}
 function detPrep(e){
 const ch=CH[e.id],D=CA.def||{cap:200},L=CA.lim||{};
