@@ -105,11 +105,28 @@ $app.innerHTML=`<div class="hd" id="hd"><div><div class="k n">Offre · cotes ${h
 <div class="bd"><div id="etat"></div><div class="dbts" id="db"></div><div class="bx sum" id="sum"></div>
 <div class="btns" id="btns">${ord.map(bouton).join("")}<button class="ign${tr?"":" fort"}" data-a="SKIP" id="bSKIP">Ignorer</button></div>
 <button class="reg n" id="reg"></button>
+<button class="reg n" id="rf">↻ Rafraîchir les prix</button>
 <p class="foot">Le serveur fait foi : un clic arrivé après l'expiration est refusé, même si ce compteur dit le contraire. Offre <span class="n">${esc(o.o.slice(0,8))}</span> v${o.v}.${o.pc?" Turbos : "+["CALL","PUT"].filter(d=>o.pc[d]).map(d=>d+" choisi "+(o.pc[d]==="moteur"?"par le moteur":"par toi")).join(", ")+".":""}</p></div><div id="sh"></div>`;
 $app.querySelectorAll("button[data-a]").forEach(b=>b.onclick=()=>choisir(b.dataset.a));
 $("reg").onclick=()=>feuille("reg");
+$("rf").onclick=rafraichir;
 majSum();majBtns();
 }
+let RFX=false;
+async function rafraichir(){
+if(RFX||ENV||EXP||FILL)return;RFX=true;const msg=t=>{const b=$("rf");if(b)b.textContent=t};msg("↻ demande envoyée…");
+const tc=Date.now();
+try{await poster(O.base,O.r,{o:O.o,v:O.v,a:"QUOTE",k:"page",sim:true,tc,s:await signer(K,"quote",O.o,O.v,tc)});
+const fin=Date.now()+15000,dep=Math.floor(tc/1000)-2;
+while(Date.now()<fin){await new Promise(r=>setTimeout(r,700));
+for(const m of await lireTopic(O.base,O.ack,dep)){let x;try{x=JSON.parse(m.message)}catch(e){continue}
+if(x.o!==O.o||x.tc!==tc)continue;
+if(x.status==="quote_refused"){msg("↻ "+(x.reason||"refusé"));RFX=false;return}
+if(x.status!=="quote")continue;
+for(const d of["CALL","PUT"])if(x.j&&x.j[d]&&O.j[d])Object.assign(O.j[d],x.j[d]);
+O.qt=x.qt;if(x.var!=null)O.var=x.var;RFX=false;if(!ENV&&!EXP&&!FILL){rendre();msg("↻ prix du "+hm(x.qt)+" · rafraîchir encore")}vib(VIB.ok);return}}
+msg("↻ pas de réponse — réessayer")}catch(e){msg("↻ échec : "+e.message)}
+RFX=false}
 function doutes(){
 const L=[...(O.dt||[]),...((DET&&DET.dt)||[])],j=O.j[O.reco],sw=O.sw??1;
 if(j&&j.ok&&j.ask){const s=(j.ask-j.bid)/j.ask*100;if(s>=sw)L.unshift(`spread ${fx(s,1)} %`)}
