@@ -260,10 +260,14 @@ if(maj){const i=h.findIndex(y=>y.o===O.o);if(i>=0)Object.assign(h[i],x)}
 else h.unshift({o:O.o,e:O.e,tc:Date.now(),...x});
 ecrire("sentinel_hist",h.slice(0,20))}
 async function chercherDetail(){
-const dep=Math.floor(O.qt/1000)-5,fin=Date.now()+45000;
-while(!DET&&Date.now()<fin){
-try{for(const m of await lireTopic(O.base,O.dx,dep)){try{const x=await ouvrirScelle(K,m.message);if(x.o===O.o){DET=x;break}}catch(e){}}}catch(e){}
-if(!DET)await new Promise(r=>setTimeout(r,1500));
+// 09/11 (lot 4) : le detail arrive en deux temps (« analyse en cours… » puis le verdict de l'IA, `final`) ; on garde
+// le DERNIER message de l'offre et on relit jusqu'au verdict final ou 150 s.
+const dep=Math.floor(O.qt/1000)-5,fin=Date.now()+150000;let vu=0;
+while(!(DET&&DET.final)&&Date.now()<fin){
+try{const ms=await lireTopic(O.base,O.dx,dep);if(ms.length!==vu){vu=ms.length;let dern=null;
+for(const m of ms){try{const x=await ouvrirScelle(K,m.message);if(x.o===O.o)dern=x}catch(e){}}
+if(dern){const neuf=!DET||JSON.stringify(dern)!==JSON.stringify(DET);DET=dern;if(neuf){majSum();if(DET.final)vib(VIB.ok)}}}}catch(e){}
+if(!(DET&&DET.final))await new Promise(r=>setTimeout(r,1500));
 }
 if(!DET){O.dx=null}
 majSum();
