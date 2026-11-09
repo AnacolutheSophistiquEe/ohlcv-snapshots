@@ -1,12 +1,12 @@
 # NEX
 
-**Generated** : 2026-11-06T21:47:05.242499+00:00  
+**Generated** : 2026-11-09T01:09:59.306642+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 5/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite high · €123.50  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot €123.50 (+4.6% vs entrée) · entrée €118.10 · stop €108.65 · T1 €120.80 · R/R 0.29  
 > ↳ ¼-Kelly 0.0 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=125 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −8.0% cohérent avec le bruit 5 s (EV-optimal ≈ −8.0%)  
@@ -194,12 +194,12 @@ _Cloture 2026-11-06 : 123.5 · ATR Wilder 5.11 (4.14 %)_
 | 0.2 ATR | 0.874 % | 122.42 | 68.53 % | 78.31 % | 83.2 % | 88.19 % | 92.88 % | 95.0 % |
 | 0.25 ATR | 1.093 % | 122.15 | 62.06 % | 73.7 % | 79.08 % | 85.14 % | 90.9 % | 93.81 % |
 | 0.35 ATR | 1.53 % | 121.61 | 49.61 % | 64.08 % | 71.71 % | 78.94 % | 86.94 % | 91.71 % |
-| 0.5 ATR | 2.186 % | 120.8 | 34.71 % | 52.6 % | 61.39 % | 71.06 % | 80.61 % | 87.71 % |
+| 0.5 ATR | 2.186 % | 120.8 | 34.8 % | 52.6 % | 61.39 % | 71.06 % | 80.61 % | 87.71 % |
 | 0.75 ATR | 3.279 % | 119.45 | 20.69 % | 36.51 % | 47.35 % | 58.96 % | 70.62 % | 81.32 % |
 | 1.0 ATR | 4.372 % | 118.1 | 10.78 % | 24.44 % | 34.77 % | 48.52 % | 61.92 % | 74.63 % |
-| 1.25 ATR | 5.466 % | 116.75 | 4.71 % | 16.39 % | 25.25 % | 39.67 % | 54.9 % | 68.13 % |
+| 1.25 ATR | 5.466 % | 116.75 | 4.71 % | 16.39 % | 25.25 % | 39.67 % | 54.9 % | 68.23 % |
 | 1.5 ATR | 6.559 % | 115.4 | 2.45 % | 11.38 % | 18.96 % | 30.91 % | 47.48 % | 60.74 % |
-| 2.0 ATR | 8.745 % | 112.7 | 0.78 % | 5.4 % | 10.22 % | 19.69 % | 35.71 % | 50.75 % |
+| 2.0 ATR | 8.745 % | 112.7 | 0.78 % | 5.4 % | 10.22 % | 19.59 % | 35.71 % | 50.75 % |
 | 2.5 ATR | 10.931 % | 110.0 | 0.49 % | 2.45 % | 5.4 % | 11.42 % | 24.73 % | 38.86 % |
 | 3.0 ATR | 13.117 % | 107.3 | 0.2 % | 1.57 % | 3.14 % | 7.19 % | 17.61 % | 30.37 % |
 | 4.0 ATR | 17.49 % | 101.9 | 0.1 % | 0.49 % | 0.88 % | 1.97 % | 7.52 % | 18.38 % |
@@ -212,12 +212,12 @@ _Cloture 2026-11-06 : 123.5 · ATR Wilder 5.11 (4.14 %)_
 | **1 s.** | 0.15 ATR | 0.35 ATR | 0.40 ATR | 0.53 ATR | 0.67 ATR | 0.77 ATR | 1.03 ATR | 1.24 ATR |
 | **2 s.** | 0.24 ATR | 0.54 ATR | 0.62 ATR | 0.82 ATR | 0.99 ATR | 1.14 ATR | 1.61 ATR | 2.07 ATR |
 | **3 s.** | 0.30 ATR | 0.70 ATR | 0.80 ATR | 1.05 ATR | 1.26 ATR | 1.46 ATR | 2.02 ATR | 2.59 ATR |
-| **5 s.** | 0.42 ATR | 0.96 ATR | 1.10 ATR | 1.44 ATR | 1.76 ATR | 1.99 ATR | 2.67 ATR | 3.42 ATR |
+| **5 s.** | 0.42 ATR | 0.96 ATR | 1.10 ATR | 1.44 ATR | 1.76 ATR | 1.98 ATR | 2.67 ATR | 3.42 ATR |
 | **10 s.** | 0.64 ATR | 1.42 ATR | 1.60 ATR | 2.12 ATR | 2.49 ATR | 2.83 ATR | 3.75 ATR | 4.82 ATR |
 | **20 s.** | 0.99 ATR | 2.03 ATR | 2.24 ATR | 2.85 ATR | 3.45 ATR | 3.87 ATR | 5.22 ATR | 5.94 ATR |
 
 **Distance optimale par horizon** (plage utile mesuree, puis meilleur point unique de cette plage) :
-- **1 seance(s)** : plage utile VIDE (borne basse 0.396 ATR au-dessus du haut de la grille, 0.35 ATR) _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ✅ optimum identifie (83.4 % des re-echantillons)
+- **1 seance(s)** : plage utile VIDE (borne basse 0.397 ATR au-dessus du haut de la grille, 0.35 ATR) _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ✅ optimum identifie (83.5 % des re-echantillons)
 - **2 seance(s)** : plage utile 0.618–1.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (3.279 %, prix 119.4504), p(touche) 36.51 % (en stress 90.2 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 55.5 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **3 seance(s)** : plage utile 0.797–1.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (4.372 %, prix 118.1006), p(touche) 34.77 % (en stress 85.29 %)  ⚠ **SOLUTION DE COIN** — l'optimum est sur une borne, l'objectif est monotone : ce n'est PAS un arbitrage. Trancher avec la lecture inverse ci-dessus.  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 47.0 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **5 seance(s)** : plage utile 1.099–1.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.25 ATR (5.466 %, prix 116.7495), p(touche) 39.67 % (en stress 93.14 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 54.2 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
@@ -332,9 +332,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -353,5 +353,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (715169 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (714848 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

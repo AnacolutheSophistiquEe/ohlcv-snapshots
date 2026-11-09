@@ -1,12 +1,12 @@
 # ENR
 
-**Generated** : 2026-11-06T21:44:12.754302+00:00  
+**Generated** : 2026-11-09T01:07:57.735686+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 3/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €118.10  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot €118.10 (+0.4% vs entrée) · entrée €117.61 · stop €114.62 · T1 €123.57 · R/R 1.99  
 > ↳ _probas brutes, non calibrées · n=0_  
 
@@ -56,27 +56,28 @@ _Cloture 2026-11-06 : 118.1 · ATR Wilder 6.93 (5.87 %)_
 ## Echelle Warden — OU poser le stop
 
 - **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — rien n'y coupe la baisse avant la perte du notionnel investi ; un stop ne borne pas la perte (un gap l'execute sous son seuil), il la limite en esperance.**
-- **Couple retenu** : stop 111.1063 sur support (0.48 ATR, 5.922 %) — p(stop avant cible) 0.549 [0.50 ; 0.60], R/R 5.574, perte reelle 6.257 % (gap inclus), CVaR 9.294 %, EV -0.9377 % — **NON CONFORME (best_effort — proposition de derniere main)**
+- **Couple retenu** : stop 111.1288 sur support (0.48 ATR, 5.903 %) — p(stop avant cible) 0.549 [0.50 ; 0.60], R/R 5.588, perte reelle 6.241 % (gap inclus), CVaR 9.294 %, EV -0.9289 % — **NON CONFORME (best_effort — proposition de derniere main)**
    - severite des violations : 1.0832 (somme des depassements RELATIFS a chaque seuil ; c'est elle qui a departage, l'esperance ne tranchant qu'a severites egales)
-   - viole : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 5.57 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+   - viole : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 5.59 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
    - viole : p_stop_first 0.549, borne haute 0.601 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
 - Budget de queue : **12.0 %** du notionnel — ⚠ VALEUR FIGEE (valeur de repli (ligne absente de l'allocation)), PAS une mesure. L'allocation derivee de la contrainte du compte n'etait pas disponible.
 - Candidats (la structure propose, la statistique elimine) :
-   - 🟢 support a 0.48 ATR (stop 5.922 %) — p(stop avant cible) 0.549 [0.50 ; 0.60], R/R 5.574, perte reelle 6.257 % (gap inclus), EV -0.9377 % — **REFUSE**
-      - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 5.57 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+   - 🔴 support a 0.48 ATR (stop 5.903 %) — p(stop avant cible) 0.549 [0.50 ; 0.60], R/R 5.588, perte reelle 6.241 % (gap inclus), EV -0.9289 % — **REFUSE**
+      - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 5.59 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.549, borne haute 0.601 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.94 %) : P(cible) 0.1 % x 34.88 % + P(rien) 45.0 % x 5.45 % ne couvrent pas P(stop) 54.9 % x 6.26 %.
+      - ⚠ support DETECTE a 0.24 ATR du spot — compartiment <1, mesure a 45.0 % de casse (IC clusterise [0.421 ; 0.482] sur 1160 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.93 %) : P(cible) 0.1 % x 34.88 % + P(rien) 45.0 % x 5.45 % ne couvrent pas P(stop) 54.9 % x 6.24 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
    - ⚪ atr_based a 1.5 ATR (stop 9.506 %) — p(stop avant cible) 0.3334 [0.29 ; 0.38], R/R 3.421, perte reelle 10.194 % (gap inclus), EV -1.0192 % — **REFUSE**
       - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.42 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : CVaR 95 % 13.29 % > budget 12.00 %
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.02 %) : P(cible) 0.1 % x 34.88 % + P(rien) 66.5 % x 3.50 % ne couvrent pas P(stop) 33.3 % x 10.19 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
-   - 🟢 support a 2.44 ATR (stop 18.316 %) — p(stop avant cible) 0.0386 [0.02 ; 0.06], R/R 1.836, perte reelle 18.998 % (gap inclus), EV 0.2009 % — **REFUSE**
+   - 🟢 support a 2.44 ATR (stop 18.297 %) — p(stop avant cible) 0.0386 [0.02 ; 0.06], R/R 1.837, perte reelle 18.983 % (gap inclus), EV 0.2015 % — **REFUSE**
       - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 1.84 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.84 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 17.75 % > budget 12.00 %
-   - 🟢 grid_snapped a 0.48 ATR (stop 4.94 %) — p(stop avant cible) 0.6287 [0.58 ; 0.68], R/R 6.805, perte reelle 5.125 % (gap inclus), EV -0.7741 % — **REFUSE**
+      - refuse : CVaR 95 % 17.74 % > budget 12.00 %
+   - 🔴 grid_snapped a 0.48 ATR (stop 4.94 %) — p(stop avant cible) 0.6287 [0.58 ; 0.68], R/R 6.805, perte reelle 5.125 % (gap inclus), EV -0.7741 % — **REFUSE**
       - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 6.81 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.629, borne haute 0.678 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.77 %) : P(cible) 0.1 % x 34.88 % + P(rien) 37.0 % x 6.49 % ne couvrent pas P(stop) 62.9 % x 5.12 %.
@@ -295,9 +296,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -308,7 +309,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.16 · largeur 25.9%
 - **ATR** : 7.48 (63.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
 - **OBV/CMF** : OBV falling · CMF -0.012  _(neutre)_
-- **Vol ratio** : 1.28  _(volume normal)_
+- **Vol ratio** : 1.29  _(volume normal)_
 - **Choppiness** : 51.6  _(transition)_
 - **MA** : MA20 129.49 · MA50 137.59 · MA200 153.88  _(prix < MA20)_
 - **Dist MA** : MA20 -8.8% · MA50 -14.2% · MA200 -23.3%
@@ -316,5 +317,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (714015 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (699345 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

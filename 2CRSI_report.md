@@ -1,6 +1,6 @@
 # AL2SI
 
-**Generated** : 2026-11-06T21:49:53.296148+00:00  
+**Generated** : 2026-11-09T01:12:04.220093+00:00  
 **Couverture** : bulletin complet  
 > ⚠️ **Données suspectes** : volatilité réalisée 13.7 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
@@ -8,7 +8,7 @@
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €15.88  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot €15.88 (+2.7% vs entrée) · entrée €15.46 · stop €14.40 · T1 €17.58 · R/R 2.0  
 > ↳ _probas brutes, non calibrées · n=0_  
 
@@ -137,7 +137,7 @@ _Cloture 2026-11-06 : 15.88 · ATR Wilder 2.79 (17.56 %)_
 | 0.15 ATR | 2.853 % | 15.4269 | 78.33 % | 83.51 % | 87.33 % | 89.07 % | 92.28 % | 95.2 % |
 | 0.2 ATR | 3.804 % | 15.2759 | 72.65 % | 79.29 % | 83.5 % | 86.02 % | 89.91 % | 93.01 % |
 | 0.25 ATR | 4.756 % | 15.1248 | 66.67 % | 74.68 % | 79.37 % | 82.78 % | 87.73 % | 91.41 % |
-| 0.35 ATR | 6.658 % | 14.8228 | 54.8 % | 65.55 % | 71.12 % | 76.08 % | 82.99 % | 87.91 % |
+| 0.35 ATR | 6.658 % | 14.8228 | 54.8 % | 65.65 % | 71.12 % | 76.08 % | 82.99 % | 87.91 % |
 | 0.5 ATR | 9.511 % | 14.3696 | 40.69 % | 53.68 % | 61.98 % | 69.19 % | 78.54 % | 85.51 % |
 | 0.75 ATR | 14.267 % | 13.6145 | 22.65 % | 37.98 % | 47.64 % | 56.1 % | 67.95 % | 77.12 % |
 | 1.0 ATR | 19.022 % | 12.8593 | 12.75 % | 25.12 % | 34.09 % | 44.69 % | 57.86 % | 68.93 % |
@@ -162,7 +162,7 @@ _Cloture 2026-11-06 : 15.88 · ATR Wilder 2.79 (17.56 %)_
 
 **Distance optimale par horizon** (plage utile mesuree, puis meilleur point unique de cette plage) :
 - **1 seance(s)** : plage utile VIDE (borne basse 0.454 ATR au-dessus du haut de la grille, 0.35 ATR) _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ✅ optimum identifie (88.0 % des re-echantillons)
-- **2 seance(s)** : plage utile VIDE (borne basse 0.638 ATR au-dessus du haut de la grille, 0.5 ATR) _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 35.5 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
+- **2 seance(s)** : plage utile VIDE (borne basse 0.638 ATR au-dessus du haut de la grille, 0.5 ATR) _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 35.6 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **3 seance(s)** : plage utile VIDE (borne basse 0.799 ATR au-dessus du haut de la grille, 0.75 ATR) _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 33.8 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **5 seance(s)** : plage utile VIDE (borne basse 0.993 ATR au-dessus du haut de la grille, 0.75 ATR) _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 55.6 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **10 seance(s)** : plage utile VIDE (borne basse 1.459 ATR au-dessus du haut de la grille, 1.0 ATR) _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 36.9 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
@@ -273,9 +273,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -294,5 +294,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (685996 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (685725 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

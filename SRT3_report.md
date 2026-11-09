@@ -1,12 +1,12 @@
 # SRT3
 
-**Generated** : 2026-11-06T21:41:11.352322+00:00  
+**Generated** : 2026-11-09T01:05:49.663354+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 9/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · €290.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)  
 > ↳ spot €290.00 (+11.9% vs entrée) · entrée €259.23 · stop €249.03 · T1 €270.64 · R/R 1.12  
 > ↳ ¼-Kelly 0.037 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
@@ -73,11 +73,11 @@ _Cloture 2026-11-06 : 290.0 · ATR Wilder 9.33 (3.22 %)_
 - Candidats (la structure propose, la statistique elimine) :
    - ⚪ atr_based a 1.5 ATR (stop 5.276 %) — p(stop avant cible) 0.1558 [0.12 ; 0.20], R/R 0.221, perte reelle 5.384 % (gap inclus), EV 0.1573 % — **REFUSE**
       - refuse : R/R 0.22 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ swing_based a 3.57 ATR (stop 14.831 %) — p(stop avant cible) 0.016 [0.01 ; 0.03], R/R 0.08, perte reelle 14.836 % (gap inclus), EV 0.3398 % — **REFUSE**
+   - ⚪ swing_based a 3.57 ATR (stop 14.806 %) — p(stop avant cible) 0.016 [0.01 ; 0.03], R/R 0.08, perte reelle 14.812 % (gap inclus), EV 0.3402 % — **REFUSE**
       - refuse : R/R 0.08 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ sr_based a 5.58 ATR (stop 21.906 %) — p(stop avant cible) 0.0021 [0.00 ; 0.01], R/R 0.048, perte reelle 24.571 % (gap inclus), EV 0.3693 % — **REFUSE**
+   - ⚪ sr_based a 5.58 ATR (stop 21.881 %) — p(stop avant cible) 0.0021 [0.00 ; 0.01], R/R 0.048, perte reelle 24.563 % (gap inclus), EV 0.3694 % — **REFUSE**
       - refuse : R/R 0.05 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - 🟢 support a 9.04 ATR (stop 34.052 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.035, perte reelle 34.052 % (gap inclus), EV 0.3775 % — **REFUSE**
+   - 🟢 support a 9.04 ATR (stop 34.027 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.035, perte reelle 34.027 % (gap inclus), EV 0.3775 % — **REFUSE**
       - refuse : R/R 0.03 < plancher 3.00 (mesure vs SPOT, gap inclus)
    - ⚪ atr_grid a 0.25 ATR (stop 0.879 %) — p(stop avant cible) 0.5133 [0.46 ; 0.57], R/R 1.337, perte reelle 0.888 % (gap inclus), EV 0.1222 % — **REFUSE**
       - refuse : p_stop_first 0.513, borne haute 0.566 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
@@ -276,9 +276,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-11-06 — US Employment Situation (NFP / unemployment / earnings) (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-3 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -297,5 +297,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (720609 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (705058 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
