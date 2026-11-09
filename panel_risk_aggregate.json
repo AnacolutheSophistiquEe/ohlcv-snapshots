@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-11-06T21:45:13.280222+00:00",
+  "generated_at": "2026-11-09T01:31:48.119892+00:00",
   "window_sessions": 54,
   "tickers_used": [
     "326030",
@@ -11,16 +11,18 @@
     "FIG",
     "IS0E",
     "LRCX",
+    "NEX",
     "NNE",
     "NOK",
     "NVTS",
+    "PLTR",
     "R3NK",
     "SOFI",
     "SRT3"
   ],
   "tickers_skipped": [],
   "weights_eur": {
-    "326030": 460.78,
+    "326030": 475.64,
     "ALCPB": 607.58,
     "BESI": 212.8,
     "COIN": 372.98,
@@ -28,65 +30,74 @@
     "FIG": 596.2,
     "IS0E": 612.22,
     "LRCX": 314.0,
+    "NEX": 123.5,
     "NNE": 150.8,
     "NOK": 510.5,
     "NVTS": 505.83,
+    "PLTR": 143.7,
     "R3NK": 143.44,
-    "SOFI": 400.0,
+    "SOFI": 392.15,
     "SRT3": 580.0
   },
   "weights_source": {
-    "source": "manual"
+    "source": "tws_live_state",
+    "status": "stale",
+    "age_days": 3.1,
+    "max_age_days": 3.0,
+    "note": "instantane de positions perime — refuse (un faux reel est pire qu'un theorique assume)",
+    "fallback": "manual"
   },
-  "total_notional_eur": 5755.05,
+  "total_notional_eur": 6029.26,
   "capital_total_eur": 2000.0,
   "var_95_historical": {
     "method": "historical_empirical",
     "basket": "portefeuille complet",
-    "n_lines": 14,
-    "notional_eur": 5755.05,
-    "n_sessions": 329,
+    "n_lines": 16,
+    "notional_eur": 6029.26,
+    "n_sessions": 330,
     "window_start": "2025-08-01",
-    "window_end": "2026-11-06",
-    "var_eur": 184.89,
-    "cvar_eur": 240.12,
-    "var_pct_notional": 3.21,
-    "cvar_pct_notional": 4.17,
-    "worst_session_eur": 396.63,
+    "window_end": "2026-11-09",
+    "var_eur": 191.7,
+    "cvar_eur": 246.37,
+    "var_pct_notional": 3.18,
+    "cvar_pct_notional": 4.09,
+    "worst_session_eur": 404.88,
     "window_binding_ticker": "FIG",
     "window_binding_first_date": "2025-07-31",
     "caveat": "fenetre TRONQUEE au debut commun a toutes les lignes : c'est l'historique le plus court (FIG) qui la fixe. Panier complet, fenetre courte.",
     "per_line_observed_pct": {
-      "326030": 93.3,
-      "ALCPB": 98.8,
-      "BESI": 98.8,
-      "COIN": 97.3,
-      "EVT": 98.2,
-      "FIG": 97.3,
-      "IS0E": 97.9,
-      "LRCX": 97.3,
-      "NNE": 97.3,
-      "NOK": 97.3,
-      "NVTS": 97.3,
-      "R3NK": 98.2,
-      "SOFI": 97.3,
-      "SRT3": 98.2
+      "326030": 93.4,
+      "ALCPB": 98.5,
+      "BESI": 98.5,
+      "COIN": 97.0,
+      "EVT": 97.9,
+      "FIG": 97.0,
+      "IS0E": 97.6,
+      "LRCX": 97.0,
+      "NEX": 98.5,
+      "NNE": 97.0,
+      "NOK": 97.0,
+      "NVTS": 97.0,
+      "PLTR": 97.0,
+      "R3NK": 97.9,
+      "SOFI": 97.0,
+      "SRT3": 97.9
     },
     "long_window_restricted_basket": {
       "method": "historical_empirical",
       "basket": "lignes a historique profond",
-      "n_lines": 11,
-      "notional_eur": 4864.61,
+      "n_lines": 13,
+      "notional_eur": 5138.82,
       "n_sessions": 1298,
-      "window_start": "2021-11-09",
-      "window_end": "2026-11-06",
-      "var_eur": 149.83,
-      "cvar_eur": 198.87,
-      "var_pct_notional": 3.08,
-      "cvar_pct_notional": 4.09,
-      "worst_session_eur": 388.42,
+      "window_start": "2021-11-10",
+      "window_end": "2026-11-09",
+      "var_eur": 157.0,
+      "cvar_eur": 206.45,
+      "var_pct_notional": 3.06,
+      "cvar_pct_notional": 4.02,
+      "worst_session_eur": 395.91,
       "min_sessions_required": 750,
-      "notional_share_pct": 84.5,
+      "notional_share_pct": 85.2,
       "lines_excluded": [
         "FIG",
         "NNE",
@@ -100,26 +111,49 @@
     "method": "gaussian_1d",
     "method_caveat": "VaR 95 % seule : ne dit rien de la QUEUE. Le CVaR de `var_95_historical` est 28-36 % au-dessus, et la pire seance 1,7-2,4x au-dessus. Sensible a la fenetre.",
     "z_95": 1.6448536269514722,
-    "sigma_portfolio_daily_eur": 118.49,
-    "value_eur": 194.9,
-    "pct_total_notional": 3.39,
-    "pct_capital": 9.74
+    "sigma_portfolio_daily_eur": 122.41,
+    "value_eur": 201.34,
+    "pct_total_notional": 3.34,
+    "pct_capital": 10.07
   },
   "panel_beta_weighted": {
     "SPY": 2.1004
   },
   "panel_beta_partial": {
-    "KS11": -0.0693,
-    "GDAXI": 0.3047,
-    "IWM": 2.591
+    "IWM": 2.1824,
+    "FCHI": 1.3551,
+    "KS11": 0.009,
+    "GDAXI": 0.3047
   },
   "panel_beta_status": "ok",
   "panel_beta_coverage": {
-    "KS11": {
-      "notional_covered_eur": 460.78,
-      "notional_total_eur": 5755.05,
-      "coverage_pct": 8.0,
+    "IWM": {
+      "notional_covered_eur": 535.85,
+      "notional_total_eur": 6029.26,
+      "coverage_pct": 8.9,
       "lines_missing_beta": [
+        "326030",
+        "ALCPB",
+        "BESI",
+        "COIN",
+        "EVT",
+        "FIG",
+        "IS0E",
+        "LRCX",
+        "NEX",
+        "NNE",
+        "NOK",
+        "NVTS",
+        "R3NK",
+        "SRT3"
+      ]
+    },
+    "FCHI": {
+      "notional_covered_eur": 123.5,
+      "notional_total_eur": 6029.26,
+      "coverage_pct": 2.0,
+      "lines_missing_beta": [
+        "326030",
         "ALCPB",
         "BESI",
         "COIN",
@@ -130,6 +164,29 @@
         "NNE",
         "NOK",
         "NVTS",
+        "PLTR",
+        "R3NK",
+        "SOFI",
+        "SRT3"
+      ]
+    },
+    "KS11": {
+      "notional_covered_eur": 475.64,
+      "notional_total_eur": 6029.26,
+      "coverage_pct": 7.9,
+      "lines_missing_beta": [
+        "ALCPB",
+        "BESI",
+        "COIN",
+        "EVT",
+        "FIG",
+        "IS0E",
+        "LRCX",
+        "NEX",
+        "NNE",
+        "NOK",
+        "NVTS",
+        "PLTR",
         "R3NK",
         "SOFI",
         "SRT3"
@@ -137,19 +194,21 @@
     },
     "SPY": {
       "notional_covered_eur": 4026.35,
-      "notional_total_eur": 5755.05,
-      "coverage_pct": 70.0,
+      "notional_total_eur": 6029.26,
+      "coverage_pct": 66.8,
       "lines_missing_beta": [
         "326030",
         "EVT",
+        "NEX",
+        "PLTR",
         "SOFI",
         "SRT3"
       ]
     },
     "GDAXI": {
       "notional_covered_eur": 867.92,
-      "notional_total_eur": 5755.05,
-      "coverage_pct": 15.1,
+      "notional_total_eur": 6029.26,
+      "coverage_pct": 14.4,
       "lines_missing_beta": [
         "326030",
         "ALCPB",
@@ -158,31 +217,13 @@
         "FIG",
         "IS0E",
         "LRCX",
+        "NEX",
         "NNE",
         "NOK",
         "NVTS",
+        "PLTR",
         "R3NK",
         "SOFI"
-      ]
-    },
-    "IWM": {
-      "notional_covered_eur": 400.0,
-      "notional_total_eur": 5755.05,
-      "coverage_pct": 7.0,
-      "lines_missing_beta": [
-        "326030",
-        "ALCPB",
-        "BESI",
-        "COIN",
-        "EVT",
-        "FIG",
-        "IS0E",
-        "LRCX",
-        "NNE",
-        "NOK",
-        "NVTS",
-        "R3NK",
-        "SRT3"
       ]
     }
   },
@@ -191,44 +232,50 @@
     {
       "pair": "LRCX_NOK",
       "rho": 0.7432,
-      "share_pct": 14.3,
+      "share_pct": 13.7,
       "flag": "red"
     },
     {
       "pair": "LRCX_NVTS",
       "rho": 0.7181,
-      "share_pct": 14.2,
+      "share_pct": 13.6,
+      "flag": "red"
+    },
+    {
+      "pair": "NEX_NOK",
+      "rho": 0.6748,
+      "share_pct": 10.5,
       "flag": "red"
     },
     {
       "pair": "NNE_NVTS",
       "rho": 0.6655,
-      "share_pct": 11.4,
+      "share_pct": 10.9,
       "flag": "red"
     },
     {
       "pair": "NOK_NVTS",
       "rho": 0.6388,
-      "share_pct": 17.7,
+      "share_pct": 16.9,
       "flag": "red"
     },
     {
       "pair": "NVTS_SOFI",
       "rho": 0.6298,
-      "share_pct": 15.7,
+      "share_pct": 14.9,
       "flag": "red"
     },
     {
       "pair": "COIN_SOFI",
       "rho": 0.6207,
-      "share_pct": 13.4,
+      "share_pct": 12.7,
       "flag": "red"
     }
   ],
   "scaling": {
     "var_threshold_pct": 8.0,
     "var_ref_metric": "var_95_pct_capital",
-    "scale_factor": 0.8209,
+    "scale_factor": 0.7947,
     "scaling_applied": true,
     "note": "Scale factor < 1 → réduire tous les sizings × scale_factor pour ramener la VaR sous le seuil."
   },
