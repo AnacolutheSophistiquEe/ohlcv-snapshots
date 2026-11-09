@@ -17,7 +17,7 @@
 "use strict";
 const ENC=new TextEncoder(),DEC=new TextDecoder(),$=i=>document.getElementById(i),$app=$("app");
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const hm=ms=>new Date(ms).toISOString().slice(11,19),hmUTC=ms=>hm(ms)+" UTC";
+const hm=ms=>new Date(ms).toLocaleTimeString("fr-FR",{timeZone:"Europe/Paris",hour:"2-digit",minute:"2-digit",second:"2-digit"}),hmUTC=hm;
 const fx=(x,n=3)=>x==null||isNaN(x)?"—":Number(x).toFixed(n).replace(".",",");
 const e0=x=>Math.round(x).toLocaleString("fr-FR")+"\u00a0€",i0=x=>Math.round(x).toLocaleString("fr-FR");
 const sg=(x,n=2)=>(x>0?"+":x<0?"−":"")+fx(Math.abs(x),n);
@@ -317,7 +317,7 @@ maj();
 function vCot(){return`<div class="kv n" style="margin-top:12px">${["CALL","PUT"].filter(d=>O.j[d]).map(d=>{const j=O.j[d];return j.ok?`<span class="m">${d}</span><span>bid ${fx(j.bid)} · ask ${fx(j.ask)} · spread ${fx((j.ask-j.bid)/j.ask*100,2)} %</span>`:`<span class="m">${d}</span><span>indisponible : ${esc(j.motif)}</span>`}).join("")}
 <span class="m">Âge</span><span>${Math.floor(ageS())} s (cotes ${hmUTC(O.qt)})</span><span class="m">Expiration</span><span>${hmUTC(O.exp)}</span><span class="m">Offre</span><span>${esc(O.o)} v${O.v}</span>${O.prod?`<span class="m">Produit</span><span>${esc(O.prod)}</span>`:""}</div>`}
 function vLia(){const l=lire("sentinel_lat"),pr=lire("sentinel_pref");
-return`<div class="kv n" style="margin-top:12px"><span class="m">Appareil</span><span>${APP.t?"appairé depuis le "+new Date(APP.t).toLocaleString("fr-FR",{timeZone:"UTC"})+" UTC":"appairé"}</span><span class="m">Relais</span><span>${esc(O.base)}</span>
+return`<div class="kv n" style="margin-top:12px"><span class="m">Appareil</span><span>${APP.t?"appairé depuis le "+new Date(APP.t).toLocaleString("fr-FR",{timeZone:"Europe/Paris"}):"appairé"}</span><span class="m">Relais</span><span>${esc(O.base)}</span>
 <span class="m">Dernier envoi</span><span>${l?fx(l.ms/1000,2)+" s ("+hm(l.t)+")":"—"}</span><span class="m">Préférences</span><span>${pr?`${fx(pr.f,2)}× · +${pr.tol} % · ${pr.tmax} min`:"aucune (défauts de l'offre)"}</span><span class="m">Test</span><span id="tsr">—</span></div>
 <button class="ign" id="tst" style="margin-top:16px">Tester la connexion</button>${pr?`<button class="ign" style="margin-top:10px;color:var(--atx)" onclick="localStorage.removeItem('sentinel_pref');feuille('lia')">Oublier les préférences de ce navigateur</button>`:""}`}
 async function tester(){const r=$("tsr");r.textContent="…";const t=performance.now();
@@ -354,12 +354,12 @@ const ch=CH[e.id],L=[];
 if(e.ferme)L.push(`<span class="dbt">▲ fermé à T0 · offre à l'ouverture${e.ouv?" "+paris(e.ouv):""}</span>`);
 for(const d of["CALL","PUT"])if(e.inv&&e.inv[d]&&ch[d]===e.inv[d].old)L.push(`<span class="dbt">▲ ${d} plus valable</span>`);
 for(const d of["CALL","PUT"]){const a=ch[d]==="auto";L.push(`<span class="chp${a?"":" on"}">${AR[d]} ${d} · ${a?"moteur":cdesc(trouve(e,d,ch[d]))}</span>`)}
-L.push(`<span class="m" id="pt${e.id}" style="margin-left:auto">${verrou(e)?"verrouillé "+hm5(e.arm)+" UTC":PT[e.id]||(ch.ok?"enregistré ✓":"non enregistré")}</span>`);
+L.push(`<span class="m" id="pt${e.id}" style="margin-left:auto">${verrou(e)?"verrouillé "+hm5(e.arm):PT[e.id]||(ch.ok?"enregistré ✓":"non enregistré")}</span>`);
 return L.join("");
 }
 function cartePrep(e,i){
 const o=OUV===e.id,lk=verrou(e),imp=[1,2,3].map(k=>`<i class="${k<=(e.imp||1)?"":"o"}" style="height:${4+k*3}px"></i>`).join("");
-return`<div class="bx pe${lk?" lock":""}${e.ferme?" f":""}">${C}<button class="peh" data-e="${e.id}" data-x="tog"><span class="pq"><span class="pqh n">${paris(e.t0)}</span><span class="pqs n">Paris<br>${hm5(e.t0)} UTC</span></span>
+return`<div class="bx pe${lk?" lock":""}${e.ferme?" f":""}">${C}<button class="peh" data-e="${e.id}" data-x="tog"><span class="pq"><span class="pqh n">${paris(e.t0)}</span><span class="pqs n">Paris</span></span>
 <span class="pm"><span class="pt"><span class="pk">${i+1} · ${e.k==="res"?"Résultats":"Macro"}</span><span class="imp" aria-label="importance ${e.imp||1} sur 3">${imp}</span></span><span class="pn">${esc(e.e)}</span><span class="sjl"><span class="sjk">Sous-jacent</span><b>${esc(e.sj)}</b></span><span class="m n" style="font-size:12px;display:block;margin-top:4px">${e.cons?"Consensus "+esc(e.cons):""}${e.prev?" · précédent "+esc(e.prev):""}</span><span class="lk" style="display:block;margin-top:2px">${o?"Replier ▴":lk?"Voir ▾":"Choisir ▾"}</span></span></button>
 <div class="ps">${statutPrep(e)}</div>${o?detPrep(e):""}</div>`;
 }
