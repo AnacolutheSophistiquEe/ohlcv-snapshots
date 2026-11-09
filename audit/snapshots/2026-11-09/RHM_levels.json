@@ -1,0 +1,193 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "RHM",
+    "generated_at": "2026-11-09T01:31:44Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-11-10T08:00:00Z",
+    "valid_until": "2026-11-10T21:00:00Z",
+    "source_precomputed": "RHM_precomputed.json"
+  },
+  "context": {
+    "last_price": 812.7,
+    "ta_score": {
+      "value": 0,
+      "max": 10,
+      "label": "very_bearish"
+    },
+    "alignment_flag": "triple_bearish",
+    "hmm_regime": {
+      "state": "bull",
+      "probability": 0.5153,
+      "expected_duration_days": 26.54
+    },
+    "volatility_regime": "normal",
+    "signals_counter": {
+      "buy": 4,
+      "sell": 9,
+      "neutral": 3,
+      "total": 16,
+      "verdict": "sell"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_<30_dist_ma20_<-10",
+      "win_rate": 1.0,
+      "sample_size": 16,
+      "median_bounce_pct": 10.93,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bull (0.52), vol normal, signals sell (4b/9s/3n)."
+  },
+  "notes": {
+    "atr_daily": 45.8214,
+    "atr_pct_daily": null,
+    "beta_60d": 0.8273,
+    "beta_benchmark": "GDAXI",
+    "beta_corr_60d": 0.2334,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "",
+      "date": "",
+      "confidence": null
+    },
+    "divergences": [],
+    "drawdown": {
+      "current_dd_pct": -58.72,
+      "ath_price": 1968.8203,
+      "ath_date": "2025-09-29",
+      "max_dd_1y_pct": -57.25,
+      "days_in_dd": 403,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 807.1812,
+        "max": 812.0388
+      },
+      "stop": {
+        "price": 743.9679,
+        "basis": "fallback_pivot_camarilla_s1",
+        "distance_pct": -8.11
+      },
+      "targets": [
+        {
+          "level": 2,
+          "price": 823.517,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 0.21
+        },
+        {
+          "level": 3,
+          "price": 874.7469,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 0.99
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_s1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 816.6058,
+        "max": 819.8689
+      },
+      "stop": {
+        "price": 792.8793,
+        "basis": "fallback_pivot_camarilla_r1",
+        "distance_pct": -3.1
+      },
+      "targets": [
+        {
+          "level": 2,
+          "price": 823.517,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 0.21
+        },
+        {
+          "level": 3,
+          "price": 874.7469,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 2.23
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 751.427,
+        "max": 766.6843
+      },
+      "stop": {
+        "price": 694.1379,
+        "basis": "fallback_pivot_classical_s3",
+        "distance_pct": -8.55
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 772.2871,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
+          "rr": 0.2
+        },
+        {
+          "level": 2,
+          "price": 823.517,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 0.99
+        },
+        {
+          "level": 3,
+          "price": 874.7469,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 1.78
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_xetra_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_classical_s3. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "triple_bearish (long-only anti-knife-catch)",
+  "global_conditions": [
+    {
+      "id": "session_eu_xetra_open",
+      "type": "session_window",
+      "params": {
+        "session": "eu_xetra_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 687.1965,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
