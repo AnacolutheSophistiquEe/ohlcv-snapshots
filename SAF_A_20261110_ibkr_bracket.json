@@ -1,11 +1,11 @@
 {
   "available": true,
-  "generated_at": "2026-10-30T01:25:55.226161+00:00",
-  "prediction_id": "PLTR_A_20261030",
+  "generated_at": "2026-11-10T01:09:24.117747+00:00",
+  "prediction_id": "SAF_A_20261110",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "PLTR",
-  "exchange": "SMART",
-  "currency": "USD",
+  "symbol": "SAF",
+  "exchange": "SBF",
+  "currency": "EUR",
   "selected_execution_plan_id": "A",
   "execution_plan": {
     "plan_id": "A",
@@ -14,22 +14,22 @@
     "entry_source": "stops_targets_by_horizon.intraday.entry_mid (zone entry_low..entry_high)",
     "stop_source": "stops_targets_by_horizon.intraday.stop_price",
     "targets_source": "stops_targets_by_horizon.intraday.targets.t1..t3",
-    "stop_basis": "plancher anti-bruit 5 s — stop EV-optimal −2.5% (first-passage 5 s réel)",
+    "stop_basis": "plancher anti-bruit 5 s — stop EV-optimal −8% (first-passage 5 s réel)",
     "entry_zone_raw": [
-      193.8784,
-      195.0991
+      303.7432,
+      305.7
     ],
-    "entry_mid_raw": 194.4887,
-    "spot": 196.43499755859372,
-    "entry_vs_spot_pct": -1.0
+    "entry_mid_raw": 304.7216,
+    "spot": 305.70001220703125,
+    "entry_vs_spot_pct": -0.33
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 194.48,
+    "limit_price": 304.7,
     "limit_price_range": [
-      193.87,
-      195.09
+      303.7,
+      305.7
     ],
     "quantity": 1,
     "tif": "DAY"
@@ -38,27 +38,27 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 198.78,
+      "limit_price": 310.7,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
       "tranche": "T1",
-      "oca_group": "PLTR_A_intraday_20261030_T1",
+      "oca_group": "SAF_A_intraday_20261110_T1",
       "oca_type": 1
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 189.62,
+      "stop_price": 280.3,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
       "tranche": "T1",
-      "oca_group": "PLTR_A_intraday_20261030_T1",
+      "oca_group": "SAF_A_intraday_20261110_T1",
       "oca_type": 1
     }
   ],
-  "oca_group": "PLTR_A_intraday_20261030",
+  "oca_group": "SAF_A_intraday_20261110",
   "oca_type": 1,
   "oca_structure": {
     "mode": "per_tranche",
@@ -66,11 +66,11 @@
     "oca_type_per_group": 1,
     "groups": [
       {
-        "oca_group": "PLTR_A_intraday_20261030_T1",
+        "oca_group": "SAF_A_intraday_20261110_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 198.78,
-        "stop_price": 189.62
+        "target_price": 310.7,
+        "stop_price": 280.3
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -97,29 +97,29 @@
       "offset_sessions": 0,
       "sessions_counted": 1,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-10-30T01:25:54.521989+00:00",
+      "anchor_utc": "2026-11-10T01:09:23.021860+00:00",
       "anchor_source": "meta.generated_at",
-      "calendar": "NYSE",
-      "good_till_date": "2026-10-30T20:00:00+00:00",
-      "good_till_date_ibkr_utc": "20261030-20:00:00",
-      "reference_session": "2026-10-30",
-      "expiry_session": "2026-10-30",
+      "calendar": "EURONEXT",
+      "good_till_date": "2026-11-10T16:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261110-16:30:00",
+      "reference_session": "2026-11-10",
+      "expiry_session": "2026-11-10",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-10-30"
+        "2026-11-10"
       ]
     },
     "venue_calendar": {
-      "venue": "NYSE",
+      "venue": "EURONEXT",
       "known": true,
-      "timezone": "America/New_York",
-      "regular_open": "09:30",
-      "regular_close": "16:00",
+      "timezone": "Europe/Paris",
+      "regular_open": "09:00",
+      "regular_close": "17:30",
       "holidays_complete": true,
       "version": "venue_calendar/1.0",
       "note": null,
-      "source": "meta.exchange (NASDAQ)"
+      "source": "meta.exchange (Euronext Paris)"
     },
     "scale_out_weights": [
       0.5,
@@ -156,7 +156,7 @@
       "entry": "down",
       "stop": "down",
       "targets": "up",
-      "tick": 0.01,
+      "tick": 0.1,
       "tick_source": "TICKER_VENUE"
     }
   },
@@ -164,17 +164,17 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 5.0,
+    "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": 0.0449,
+    "ev_pct_risk": -0.0267,
     "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 194.4887,
+    "ev_pct_risk_basis_price": 304.7216,
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "below_threshold",
+    "ev_status": "negative_ev",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.3733,
-      "T2": 0.1257
+      "T1": 0.2231,
+      "T2": 0.0259
     },
     "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": null,
@@ -182,30 +182,30 @@
     "p_fill_note": "conviction_rating.by_horizon.intraday absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
     "rating": "Unknown",
     "rating_source": "conviction_rating.by_horizon.intraday",
-    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (4 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
+    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (11 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 175.8,
-    "hold_tolerance_breach_price": 147.3262,
+    "notional_eur": 305.7,
+    "hold_tolerance_breach_price": 229.275,
     "hold_fallback_active": true,
-    "prediction_id": "PLTR_A_20261030"
+    "prediction_id": "SAF_A_20261110"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.01,
+    "tick_size_used": 0.1,
     "qty_total_positive": true,
     "targets_non_decreasing": true,
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 0.88,
-      "T2": 1.77,
-      "T3": 2.65
+      "T1": 0.25,
+      "T2": 0.49,
+      "T3": 0.73
     },
-    "rr_blended_on_posted_entry": 0.88,
+    "rr_blended_on_posted_entry": 0.25,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,

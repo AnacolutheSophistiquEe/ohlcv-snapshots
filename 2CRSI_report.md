@@ -1,6 +1,6 @@
 # AL2SI
 
-**Generated** : 2026-11-09T21:50:03.613620+00:00  
+**Generated** : 2026-11-10T01:12:37.133209+00:00  
 **Couverture** : bulletin complet  
 > ⚠️ **Données suspectes** : volatilité réalisée 13.3 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
@@ -8,7 +8,7 @@
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €17.19  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-11 — MSCI — décision d’exclusion potentielle de Strategy (MSTR) (J-1 sess · macro taux)  
 > ↳ spot €17.19 (+1.0% vs entrée) · entrée €17.02 · stop €15.65 · T1 €20.26 · R/R 2.36  
 > ↳ _probas brutes, non calibrées · n=0_  
 
@@ -54,7 +54,7 @@ _Cloture 2026-11-09 : 17.19 · ATR Wilder 2.74 (15.93 %)_
    - ⚠ le regime n'est homogene que sur 180 seances, sous le plancher de 250 necessaire a un 5e percentile. La fenetre a ete ETENDUE au plancher : elle inclut donc un regime anterieur different. A lire comme une borne, pas comme une mesure du regime courant.
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -15.54 % vs -14.4 % si l'on extrapolait par √5 _(rapport 1.079 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.1882** (β de hausse 0.9726, asymétrie 1.2217) vs FCHI — 622 séances de repli, historique complet
+- **β de baisse : 1.1882** (β de hausse 0.9632, asymétrie 1.2336) vs FCHI — 622 séances de repli, historique complet
    - ⚠ le β de baisse récent vaut 1.998× celui de l'historique complet : la sensibilité du titre au marché a changé.
 
 
@@ -137,7 +137,7 @@ _Cloture 2026-11-09 : 17.19 · ATR Wilder 2.74 (15.93 %)_
 | 0.15 ATR | 2.691 % | 16.7274 | 78.24 % | 83.51 % | 87.33 % | 88.98 % | 92.28 % | 95.2 % |
 | 0.2 ATR | 3.588 % | 16.5731 | 72.55 % | 79.29 % | 83.5 % | 85.93 % | 89.91 % | 93.01 % |
 | 0.25 ATR | 4.486 % | 16.4189 | 66.67 % | 74.78 % | 79.47 % | 82.78 % | 87.83 % | 91.41 % |
-| 0.35 ATR | 6.28 % | 16.1105 | 54.8 % | 65.65 % | 71.22 % | 76.08 % | 83.09 % | 87.91 % |
+| 0.35 ATR | 6.28 % | 16.1105 | 54.8 % | 65.75 % | 71.22 % | 76.08 % | 83.09 % | 87.91 % |
 | 0.5 ATR | 8.971 % | 15.6479 | 40.69 % | 53.78 % | 62.08 % | 69.19 % | 78.64 % | 85.51 % |
 | 0.75 ATR | 13.457 % | 14.8768 | 22.65 % | 37.98 % | 47.64 % | 56.1 % | 68.05 % | 77.12 % |
 | 1.0 ATR | 17.942 % | 14.1057 | 12.75 % | 25.12 % | 34.09 % | 44.69 % | 57.96 % | 68.93 % |
@@ -265,7 +265,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.18 · part idiosyncratique 0.82
+**Factor** : R² 0.17 · part idiosyncratique 0.83
 **Short/Insider** : SI —% | insider — | verdict neutral
 **Options** : indisponible
 
@@ -273,9 +273,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-10 — US CPI (headline) (J-1 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-11-11 — MSCI — décision d’exclusion potentielle de Strategy (MSTR) (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-11 — MSCI — décision d’exclusion potentielle de Strategy (MSTR) (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-11 — MSCI — décision d’exclusion potentielle de Strategy (MSTR) (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -285,8 +285,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -0.985  _(pas de croisement recent)_
 - **BB** : %B 0.19 · largeur 88.6%
 - **ATR** : 3.08 (73.0e pct 1a)  _(volatilite au-dessus de la moyenne (tiers haut))_
-- **OBV/CMF** : OBV rising · CMF 0.193  _(accumulation)_
-- **Vol ratio** : 0.69  _(volume normal)_
+- **OBV/CMF** : OBV rising · CMF 0.182  _(accumulation)_
+- **Vol ratio** : 0.43  _(volume atone)_
 - **Choppiness** : 31.0  _(marche directionnel)_
 - **MA** : MA20 23.7 · MA50 26.26 · MA200 29.85  _(prix < MA20)_
 - **Dist MA** : MA20 -27.5% · MA50 -34.5% · MA200 -42.4%
@@ -294,5 +294,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (500454 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (501084 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
