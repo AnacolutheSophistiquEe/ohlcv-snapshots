@@ -2,33 +2,33 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-11-10T22:05:07Z",
+    "generated_at": "2026-11-11T01:30:56Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-11T08:00:00Z",
-    "valid_until": "2026-11-11T21:00:00Z",
+    "valid_from": "2026-11-12T08:00:00Z",
+    "valid_until": "2026-11-12T21:00:00Z",
     "source_precomputed": "IONQ_precomputed.json"
   },
   "context": {
-    "last_price": 35.35,
+    "last_price": 34.98,
     "ta_score": {
       "value": 3,
       "max": 10,
       "label": "bearish"
     },
-    "alignment_flag": "triple_bullish",
+    "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.7671,
-      "expected_duration_days": 3.25
+      "probability": 0.7215,
+      "expected_duration_days": 3.48
     },
     "volatility_regime": "low",
     "signals_counter": {
-      "buy": 6,
-      "sell": 5,
-      "neutral": 5,
-      "total": 16,
-      "verdict": "neutral_to_bullish"
+      "buy": 5,
+      "sell": 6,
+      "neutral": 4,
+      "total": 15,
+      "verdict": "sell"
     },
     "mean_reversion_score": {
       "setup": "rsi_50-60_dist_ma20_>+10",
@@ -37,14 +37,14 @@
       "median_bounce_pct": -0.08,
       "confidence": "low"
     },
-    "narrative_short": "TA score 3/10 (bearish), alignment triple_bullish, HMM bull (0.77), vol low, signals neutral_to_bullish (6b/5s/5n)."
+    "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM bull (0.72), vol low, signals sell (5b/6s/4n)."
   },
   "notes": {
-    "atr_daily": 2.6361,
+    "atr_daily": 2.676,
     "atr_pct_daily": null,
-    "beta_60d": 3.0009,
+    "beta_60d": 2.9967,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.5935,
+    "beta_corr_60d": 0.5944,
     "btc_corr_high": null,
     "candlestick": {
       "name": "hammer",
@@ -53,26 +53,26 @@
     },
     "divergences": [
       {
-        "indicator": "rsi",
+        "indicator": "macd_hist",
         "type": "bullish",
-        "confidence": 0.28,
-        "bars_ago": 10,
+        "confidence": 0.52,
+        "bars_ago": 3,
         "at_price": null
       },
       {
         "indicator": "obv",
         "type": "bearish",
         "confidence": 0.14,
-        "bars_ago": 9,
+        "bars_ago": 10,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": -56.94,
+      "current_dd_pct": -57.39,
       "ath_price": 82.09,
       "ath_date": "2025-10-13",
       "max_dd_1y_pct": -63.33,
-      "days_in_dd": 392,
+      "days_in_dd": 393,
       "median_recovery_days": null
     }
   },
@@ -83,32 +83,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 34.8551,
-        "max": 35.0649
+        "min": 34.7056,
+        "max": 34.9144
       },
       "stop": {
-        "price": 31.3959,
+        "price": 30.966,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -10.19
+        "distance_pct": -11.04
       },
       "targets": [
         {
           "level": 1,
-          "price": 37.9197,
-          "basis": "sous résistance (medium) à 38.18 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 0.83
+          "price": 37.1249,
+          "basis": "sous résistance (medium) à 37.39 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
+          "rr": 0.6
         },
         {
           "level": 2,
-          "price": 41.6364,
+          "price": 41.6324,
           "basis": "sous résistance (weak) à 41.9 (−0,1 ATR) · atteinte hist. 12% (sans stop)",
-          "rr": 1.87
+          "rr": 1.77
         },
         {
           "level": 3,
-          "price": 44.5836,
+          "price": 44.6243,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
-          "rr": 2.7
+          "rr": 2.55
         }
       ],
       "preferred_target": 1,
@@ -124,32 +124,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 38.2215,
-        "max": 38.3742
+        "min": 39.8048,
+        "max": 39.9638
       },
       "stop": {
-        "price": 35.4671,
+        "price": 35.5194,
         "basis": "below_broken_resistance",
-        "distance_pct": -7.39
+        "distance_pct": -10.94
       },
       "targets": [
         {
           "level": 1,
-          "price": 41.4803,
+          "price": 41.4383,
           "basis": "next_confluence_resistance",
-          "rr": 1.12
+          "rr": 0.36
         },
         {
           "level": 2,
-          "price": 43.7074,
+          "price": 44.8842,
           "basis": "fib_382",
-          "rr": 1.91
+          "rr": 1.15
         },
         {
           "level": 3,
-          "price": 43.7074,
+          "price": 44.8842,
           "basis": "next_confluence_resistance",
-          "rr": 1.91
+          "rr": 1.15
         }
       ],
       "preferred_target": 1,
@@ -157,7 +157,7 @@
         "session_us_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance BB_UPPER + MA50 + FIB_236 + S/R_resistance (strength 22.0)."
+      "rationale": "Breakout au-dessus confluence resistance BB_UPPER + MA50 + S/R_resistance + FIB_236 + S/R_resistance (strength 32.5)."
     },
     {
       "id": "C",
@@ -176,21 +176,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 37.9197,
-          "basis": "sous résistance (medium) à 38.18 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 3.02
+          "price": 37.1249,
+          "basis": "sous résistance (medium) à 37.39 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
+          "rr": 2.67
         },
         {
           "level": 2,
-          "price": 41.6364,
+          "price": 41.6324,
           "basis": "sous résistance (weak) à 41.9 (−0,1 ATR) · atteinte hist. 12% (sans stop)",
           "rr": 4.63
         },
         {
           "level": 3,
-          "price": 44.5836,
+          "price": 44.6243,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
-          "rr": 5.91
+          "rr": 5.92
         }
       ],
       "preferred_target": 1,

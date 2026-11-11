@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-11-10T22:05:07Z",
+    "generated_at": "2026-11-11T01:30:56Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-11T08:00:00Z",
-    "valid_until": "2026-11-11T21:00:00Z",
+    "valid_from": "2026-11-12T08:00:00Z",
+    "valid_until": "2026-11-12T21:00:00Z",
     "source_precomputed": "SMCI_precomputed.json"
   },
   "context": {
-    "last_price": 27.79,
+    "last_price": 27.8,
     "ta_score": {
       "value": 1,
       "max": 10,
@@ -42,7 +42,7 @@
   "notes": {
     "atr_daily": 2.354,
     "atr_pct_daily": null,
-    "beta_60d": 1.7796,
+    "beta_60d": 1.7793,
     "beta_benchmark": "IWM",
     "beta_corr_60d": 0.4416,
     "btc_corr_high": null,
@@ -82,7 +82,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -76.61,
+      "current_dd_pct": -76.6,
       "ath_price": 118.807,
       "ath_date": "2024-03-13",
       "max_dd_1y_pct": -52.5,
@@ -97,32 +97,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 25.5167,
+        "min": 26.6942,
         "max": 28.4518
       },
       "stop": {
-        "price": 24.1857,
+        "price": 24.1902,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -10.37
+        "distance_pct": -12.27
       },
       "targets": [
         {
           "level": 1,
-          "price": 29.1715,
+          "price": 29.176,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 0.78
+          "rr": 0.47
         },
         {
           "level": 2,
-          "price": 31.8034,
+          "price": 31.8079,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.72
+          "rr": 1.25
         },
         {
           "level": 3,
-          "price": 34.4352,
+          "price": 34.4397,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.66
+          "rr": 2.03
         }
       ],
       "preferred_target": 1,
@@ -130,7 +130,7 @@
         "session_us_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support S/R_support + BB_LOWER + FIB_236 + VPVR_VAL (strength 24.0). Bounce mecanique."
+      "rationale": "Confluence support BB_LOWER + FIB_236 + VPVR_VAL (strength 12.0). Bounce mecanique."
     },
     {
       "id": "B",
@@ -138,32 +138,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 27.9779,
-        "max": 28.0897
+        "min": 27.988,
+        "max": 28.0998
       },
       "stop": {
-        "price": 26.773,
+        "price": 26.783,
         "basis": "fallback_pivot_camarilla_r1",
         "distance_pct": -4.5
       },
       "targets": [
         {
           "level": 1,
-          "price": 29.1715,
+          "price": 29.176,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
           "rr": 0.9
         },
         {
           "level": 2,
-          "price": 31.8034,
+          "price": 31.8079,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 2.99
         },
         {
           "level": 3,
-          "price": 34.4352,
+          "price": 34.4397,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 5.08
+          "rr": 5.07
         }
       ],
       "preferred_target": 1,
@@ -190,21 +190,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 29.1715,
+          "price": 29.176,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
           "rr": 2.85
         },
         {
           "level": 2,
-          "price": 31.8034,
+          "price": 31.8079,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 3.62
         },
         {
           "level": 3,
-          "price": 34.4352,
+          "price": 34.4397,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.38
+          "rr": 4.39
         }
       ],
       "preferred_target": 1,
