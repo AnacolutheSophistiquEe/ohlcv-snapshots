@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-11-11T01:09:22.155350+00:00",
+  "generated_at": "2026-11-11T21:46:01.570798+00:00",
   "prediction_id": "NEX_A_20261111",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "NEX",
@@ -16,20 +16,20 @@
     "targets_source": "stops_targets_by_horizon.intraday.targets.t1..t3",
     "stop_basis": "plancher anti-bruit 5 s — stop EV-optimal −8% (first-passage 5 s réel)",
     "entry_zone_raw": [
-      122.2136,
-      123.115
+      131.3552,
+      132.3547
     ],
-    "entry_mid_raw": 122.6643,
-    "spot": 128.0,
-    "entry_vs_spot_pct": -4.22
+    "entry_mid_raw": 131.855,
+    "spot": 132.89999389648438,
+    "entry_vs_spot_pct": -0.83
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 122.6,
+    "limit_price": 131.8,
     "limit_price_range": [
-      122.2,
-      123.1
+      131.3,
+      132.3
     ],
     "quantity": 2,
     "tif": "DAY"
@@ -38,7 +38,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 128.2,
+      "limit_price": 134.4,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
@@ -49,7 +49,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 112.8,
+      "stop_price": 121.3,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -60,7 +60,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 130.9,
+      "limit_price": 137.0,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2",
@@ -71,7 +71,7 @@
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 112.8,
+      "stop_price": 121.3,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
@@ -91,15 +91,15 @@
         "oca_group": "NEX_A_intraday_20261111_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 128.2,
-        "stop_price": 112.8
+        "target_price": 134.4,
+        "stop_price": 121.3
       },
       {
         "oca_group": "NEX_A_intraday_20261111_T2",
         "tranche": "T2",
         "quantity": 1,
-        "target_price": 130.9,
-        "stop_price": 112.8
+        "target_price": 137.0,
+        "stop_price": 121.3
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -126,17 +126,17 @@
       "offset_sessions": 0,
       "sessions_counted": 1,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-11-11T01:09:20.916275+00:00",
+      "anchor_utc": "2026-11-11T21:46:00.015395+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "EURONEXT",
-      "good_till_date": "2026-11-11T16:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261111-16:30:00",
-      "reference_session": "2026-11-11",
-      "expiry_session": "2026-11-11",
+      "good_till_date": "2026-11-12T16:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261112-16:30:00",
+      "reference_session": "2026-11-12",
+      "expiry_session": "2026-11-12",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-11-11"
+        "2026-11-12"
       ]
     },
     "venue_calendar": {
@@ -193,26 +193,29 @@
     "plan_id": "A",
     "horizon": "intraday",
     "horizon_label_long": "intraday",
-    "composite_score": 5.0,
+    "composite_score": 7.0,
     "composite_score_source": "horizon_ta_score.plan_a.score",
-    "ev_pct_risk": null,
-    "ev_pct_risk_source": "absent",
-    "ev_pct_risk_basis_price": 122.6643,
+    "ev_pct_risk": -0.0656,
+    "ev_pct_risk_source": "edge_metrics.by_horizon.intraday.blended_scale_out.ev_pct_risk",
+    "ev_pct_risk_basis_price": 131.855,
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": null,
+    "ev_status": "negative_ev",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
-    "p_hit_upper": null,
-    "p_hit_source": "absent",
-    "p_fill": 0.091,
-    "p_fill_source": "conviction_rating.by_horizon.intraday.inputs.p_fill (empirical_5s)",
-    "p_fill_note": "p_fill telle qu'utilisée par le rating, reprise sans recalcul",
-    "rating": "Pass",
+    "p_hit_upper": {
+      "T1": 0.2454,
+      "T2": 0.0367
+    },
+    "p_hit_source": "edge_metrics.by_horizon.intraday.targets.{t1,t2,t3}.p_hit_upper",
+    "p_fill": null,
+    "p_fill_source": "absent",
+    "p_fill_note": "conviction_rating.by_horizon.intraday absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
+    "rating": "Unknown",
     "rating_source": "conviction_rating.by_horizon.intraday",
-    "rating_note": "ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 11/125 fenêtres (p_fill pondéré 9 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable",
+    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (13 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 256.0,
-    "hold_tolerance_breach_price": 96.0,
+    "notional_eur": 265.8,
+    "hold_tolerance_breach_price": 99.675,
     "hold_fallback_active": true,
     "prediction_id": "NEX_A_20261111"
   },
@@ -227,11 +230,11 @@
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 0.57,
-      "T2": 0.85,
-      "T3": 1.12
+      "T1": 0.25,
+      "T2": 0.5,
+      "T3": 0.73
     },
-    "rr_blended_on_posted_entry": 0.71,
+    "rr_blended_on_posted_entry": 0.38,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,
