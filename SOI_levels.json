@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SOI",
-    "generated_at": "2026-11-11T22:05:24Z",
+    "generated_at": "2026-11-12T01:32:40Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-12T08:00:00Z",
-    "valid_until": "2026-11-12T21:00:00Z",
+    "valid_from": "2026-11-13T08:00:00Z",
+    "valid_until": "2026-11-13T21:00:00Z",
     "source_precomputed": "SOI_precomputed.json"
   },
   "context": {
-    "last_price": 108.35,
+    "last_price": 108.6,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -19,7 +19,7 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.8295,
+      "probability": 0.8298,
       "expected_duration_days": 8.15
     },
     "volatility_regime": "normal",
@@ -40,11 +40,11 @@
     "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM bull (0.83), vol normal, signals neutral (0b/5s/10n)."
   },
   "notes": {
-    "atr_daily": 10.5764,
+    "atr_daily": 10.5871,
     "atr_pct_daily": null,
-    "beta_60d": 1.4604,
+    "beta_60d": 1.2666,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.1964,
+    "beta_corr_60d": 0.1745,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -68,7 +68,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -55.08,
+      "current_dd_pct": -54.98,
       "ath_price": 241.2,
       "ath_date": "2021-12-01",
       "max_dd_1y_pct": -55.05,
@@ -83,32 +83,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 107.4965,
-        "max": 108.1435
+        "min": 107.7358,
+        "max": 108.3842
       },
       "stop": {
-        "price": 92.4854,
+        "price": 92.7193,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -14.22
+        "distance_pct": -14.2
       },
       "targets": [
         {
           "level": 1,
-          "price": 126.9424,
+          "price": 126.9413,
           "basis": "sous résistance (weak) à 128 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 1.25
+          "rr": 1.23
         },
         {
           "level": 2,
-          "price": 138.7672,
+          "price": 138.7781,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.02
+          "rr": 2.0
         },
         {
           "level": 3,
-          "price": 150.592,
+          "price": 150.6149,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
-          "rr": 2.79
+          "rr": 2.77
         }
       ],
       "preferred_target": 1,
@@ -128,28 +128,28 @@
         "max": 119.1762
       },
       "stop": {
-        "price": 115.9056,
+        "price": 115.918,
         "basis": "below_broken_resistance",
-        "distance_pct": -2.55
+        "distance_pct": -2.54
       },
       "targets": [
         {
           "level": 1,
           "price": 124.5906,
           "basis": "next_confluence_resistance",
-          "rr": 1.86
+          "rr": 1.87
         },
         {
           "level": 2,
           "price": 125.2834,
           "basis": "fib_618",
-          "rr": 2.09
+          "rr": 2.1
         },
         {
           "level": 3,
-          "price": 134.7522,
+          "price": 134.7572,
           "basis": "next_confluence_resistance",
-          "rr": 5.21
+          "rr": 5.24
         }
       ],
       "preferred_target": 1,
@@ -165,32 +165,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 91.235,
+        "min": 91.2642,
         "max": 95.5094
       },
       "stop": {
-        "price": 87.5856,
+        "price": 87.6136,
         "basis": "deep_below_confluence_support_4pct",
-        "distance_pct": -6.2
+        "distance_pct": -6.18
       },
       "targets": [
         {
           "level": 1,
-          "price": 126.9424,
+          "price": 126.9413,
           "basis": "sous résistance (weak) à 128 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 5.8
+          "rr": 5.81
         },
         {
           "level": 2,
-          "price": 138.7672,
+          "price": 138.7781,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 7.84
+          "rr": 7.86
         },
         {
           "level": 3,
-          "price": 150.592,
+          "price": 150.6149,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
-          "rr": 9.89
+          "rr": 9.91
         }
       ],
       "preferred_target": 1,
@@ -214,7 +214,7 @@
     }
   ],
   "invalidation": {
-    "price": 86.7097,
+    "price": 86.7375,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
