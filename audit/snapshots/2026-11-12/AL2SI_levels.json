@@ -1,0 +1,213 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "AL2SI",
+    "generated_at": "2026-11-12T01:32:40Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-11-13T08:00:00Z",
+    "valid_until": "2026-11-13T21:00:00Z",
+    "source_precomputed": "AL2SI_precomputed.json"
+  },
+  "context": {
+    "last_price": 18.58,
+    "ta_score": {
+      "value": 1,
+      "max": 10,
+      "label": "very_bearish"
+    },
+    "alignment_flag": "mixed",
+    "hmm_regime": {
+      "state": "bull",
+      "probability": 0.9,
+      "expected_duration_days": 4.08
+    },
+    "volatility_regime": "normal",
+    "signals_counter": {
+      "buy": 2,
+      "sell": 4,
+      "neutral": 9,
+      "total": 15,
+      "verdict": "neutral"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_30-40_dist_ma20_<-10",
+      "win_rate": 1.0,
+      "sample_size": 4,
+      "median_bounce_pct": 17.05,
+      "confidence": "very_low"
+    },
+    "narrative_short": "TA score 1/10 (very_bearish), alignment mixed, HMM bull (0.90), vol normal, signals neutral (2b/4s/9n)."
+  },
+  "notes": {
+    "atr_daily": 3.0079,
+    "atr_pct_daily": null,
+    "beta_60d": 0.8457,
+    "beta_benchmark": "FCHI",
+    "beta_corr_60d": 0.0871,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "morning_star",
+      "date": "2026-11-09",
+      "confidence": 0.655
+    },
+    "divergences": [
+      {
+        "indicator": "rsi",
+        "type": "hidden_bearish",
+        "confidence": 0.36,
+        "bars_ago": 11,
+        "at_price": null
+      }
+    ],
+    "drawdown": {
+      "current_dd_pct": -68.21,
+      "ath_price": 58.45,
+      "ath_date": "2026-06-02",
+      "max_dd_1y_pct": -76.78,
+      "days_in_dd": 162,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 16.3134,
+        "max": 17.88
+      },
+      "stop": {
+        "price": 15.9572,
+        "basis": "swing_plan_below_confluence_support",
+        "distance_pct": -6.67
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 22.6983,
+          "basis": "sous résistance (medium) à 23 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
+          "rr": 4.92
+        },
+        {
+          "level": 2,
+          "price": 26.0612,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 7.87
+        },
+        {
+          "level": 3,
+          "price": 29.4241,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 10.82
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support VPVR_VAL + S/R_support + S/R_support (strength 10.5). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 18.7087,
+        "max": 18.7834
+      },
+      "stop": {
+        "price": 17.1861,
+        "basis": "fallback_pivot_camarilla_r1",
+        "distance_pct": -8.32
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 22.6983,
+          "basis": "sous résistance (medium) à 23 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
+          "rr": 2.53
+        },
+        {
+          "level": 2,
+          "price": 26.0612,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 4.69
+        },
+        {
+          "level": 3,
+          "price": 29.4241,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 6.84
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 12.0614,
+        "max": 13.2
+      },
+      "stop": {
+        "price": 11.5789,
+        "basis": "deep_below_confluence_support_4pct",
+        "distance_pct": -8.33
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 22.6983,
+          "basis": "sous résistance (medium) à 23 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
+          "rr": 9.57
+        },
+        {
+          "level": 2,
+          "price": 26.0612,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 12.77
+        },
+        {
+          "level": 3,
+          "price": 29.4241,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 15.97
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_eu_paris_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Deep value mecanique : entree sur confluence support basse BB_LOWER + S/R_support (strength 4.0). Dip-buy contrarian, taille reduite, activation sur correction supplementaire uniquement."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=1<4",
+  "global_conditions": [
+    {
+      "id": "session_eu_paris_open",
+      "type": "session_window",
+      "params": {
+        "session": "eu_paris_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 11.4631,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}
