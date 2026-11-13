@@ -1,0 +1,47 @@
+{
+  "n_candidates_evaluated": 60,
+  "n_passing_threshold": 3,
+  "patterns": [
+    {
+      "name": "rounded_top",
+      "confidence": 0.9,
+      "stage": "forming",
+      "key_levels": {
+        "window_bars": 50,
+        "quadratic_a": -0.06032654,
+        "r2": 0.716,
+        "apex_bars_ago": 25.35,
+        "apex_price": 197.3537,
+        "amplitude_pct": 29.25
+      }
+    },
+    {
+      "name": "flag_bull",
+      "confidence": 0.727,
+      "stage": "forming",
+      "key_levels": {
+        "impulse_start_idx": 204,
+        "impulse_end_idx": 214,
+        "impulse_move_pct": 16.12,
+        "consolidation_end_idx": 219,
+        "consolidation_slope_pct_per_bar": -0.3193,
+        "consolidation_high": 194.68,
+        "consolidation_low": 184.81
+      }
+    },
+    {
+      "name": "flag_bear",
+      "confidence": 0.639,
+      "stage": "completed",
+      "key_levels": {
+        "impulse_start_idx": 236,
+        "impulse_end_idx": 245,
+        "impulse_move_pct": -19.34,
+        "consolidation_end_idx": 250,
+        "consolidation_slope_pct_per_bar": 0.8275,
+        "consolidation_high": 175.41,
+        "consolidation_low": 157.24
+      }
+    }
+  ]
+}
