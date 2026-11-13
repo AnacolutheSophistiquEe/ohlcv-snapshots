@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "NEX",
-    "generated_at": "2026-11-12T22:05:11Z",
+    "generated_at": "2026-11-13T01:31:36Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-13T08:00:00Z",
-    "valid_until": "2026-11-13T21:00:00Z",
+    "valid_from": "2026-11-16T08:00:00Z",
+    "valid_until": "2026-11-16T21:00:00Z",
     "source_precomputed": "NEX_precomputed.json"
   },
   "context": {
-    "last_price": 130.6,
+    "last_price": 131.2,
     "ta_score": {
       "value": 5,
       "max": 10,
@@ -19,8 +19,8 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "sideways",
-      "probability": 0.5596,
-      "expected_duration_days": 3.91
+      "probability": 0.5533,
+      "expected_duration_days": 3.92
     },
     "volatility_regime": "high",
     "signals_counter": {
@@ -37,19 +37,19 @@
       "median_bounce_pct": 0.14,
       "confidence": "low"
     },
-    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM sideways (0.56), vol high, signals neutral (3b/4s/8n)."
+    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM sideways (0.55), vol high, signals neutral (3b/4s/8n)."
   },
   "notes": {
     "atr_daily": 5.0286,
     "atr_pct_daily": null,
-    "beta_60d": 1.4391,
+    "beta_60d": 1.4439,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.4366,
+    "beta_corr_60d": 0.4405,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "shooting_star",
+      "name": "doji",
       "date": "2026-11-12",
-      "confidence": 0.9
+      "confidence": 0.737
     },
     "divergences": [
       {
@@ -68,7 +68,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -20.79,
+      "current_dd_pct": -20.43,
       "ath_price": 164.8832,
       "ath_date": "2026-05-14",
       "max_dd_1y_pct": -31.1,
@@ -128,7 +128,7 @@
         "max": 137.9622
       },
       "stop": {
-        "price": 134.8535,
+        "price": 134.8565,
         "basis": "below_broken_resistance",
         "distance_pct": -2.06
       },
@@ -143,7 +143,7 @@
           "level": 2,
           "price": 143.2523,
           "basis": "fib_618",
-          "rr": 1.96
+          "rr": 1.97
         },
         {
           "level": 3,
@@ -165,32 +165,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 115.7769,
-        "max": 118.1277
+        "min": 116.3088,
+        "max": 118.6704
       },
       "stop": {
-        "price": 109.9971,
+        "price": 110.5371,
         "basis": "fallback_psych_-10pct",
-        "distance_pct": -5.95
+        "distance_pct": -5.92
       },
       "targets": [
         {
           "level": 1,
           "price": 141.0346,
           "basis": "sous VPVR VAH à 141.5 (−0,1 ATR) · atteinte hist. 12% (sans stop)",
-          "rr": 3.46
+          "rr": 3.39
         },
         {
           "level": 2,
           "price": 146.6568,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.27
+          "rr": 4.2
         },
         {
           "level": 3,
           "price": 152.2789,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 2% (sans stop)",
-          "rr": 5.08
+          "rr": 5.0
         }
       ],
       "preferred_target": 1,
@@ -214,7 +214,7 @@
     }
   ],
   "invalidation": {
-    "price": 108.8971,
+    "price": 109.4317,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
