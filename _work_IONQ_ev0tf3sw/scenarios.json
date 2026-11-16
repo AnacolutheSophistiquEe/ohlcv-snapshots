@@ -1,0 +1,137 @@
+{
+  "available": true,
+  "probabilities": {
+    "bull": 0.3177,
+    "bear": 0.6071,
+    "sideways": 0.0752
+  },
+  "probabilities_raw_hmm": {
+    "bull": 0.3177,
+    "bear": 0.6071,
+    "sideways": 0.0752
+  },
+  "probabilities_source": "hmm_regime CLAMP [0.05, 0.85] + renormalisation (fix audit 2026-05-23)",
+  "probabilities_clamp_range": [
+    0.05,
+    0.85
+  ],
+  "probabilities_mode": "markov_horizon_projection",
+  "projection_p0": "hmm_regime.probabilities (posterior publié, NON clampé)",
+  "stationary_distribution": {
+    "bull": 0.2306,
+    "bear": 0.3887,
+    "sideways": 0.3806
+  },
+  "transition_matrix_available": true,
+  "drift_source": "hmm_drift_by_state",
+  "sigma_daily_pct": 7.4025,
+  "move_band_z": 1.959964,
+  "mu_cap_pct_daily": 3.7013,
+  "regime_duration_sessions": 13.4,
+  "long_run_drift_pct_daily": -0.1,
+  "by_horizon": {
+    "intraday": {
+      "horizon_sessions": 1,
+      "move_band_95_pct": 14.51,
+      "sessions_in_regime": 1.0,
+      "sessions_post_regime": 0.0,
+      "long_run_drift_pct_daily": -0.1,
+      "probabilities_horizon": {
+        "bull": 0.2774,
+        "bear": 0.6017,
+        "sideways": 0.1209
+      },
+      "probabilities_horizon_unclamped": {
+        "bull": 0.2774,
+        "bear": 0.6017,
+        "sideways": 0.1209
+      },
+      "scenarios": {
+        "bull": {
+          "probability": 0.2774,
+          "expected_return_pct": 1.38,
+          "drift_regime_pct_daily": 1.383
+        },
+        "bear": {
+          "probability": 0.6017,
+          "expected_return_pct": -2.39,
+          "drift_regime_pct_daily": -2.3888
+        },
+        "sideways": {
+          "probability": 0.1209,
+          "expected_return_pct": -0.39,
+          "drift_regime_pct_daily": -0.3908
+        }
+      }
+    },
+    "swing": {
+      "horizon_sessions": 5,
+      "move_band_95_pct": 32.44,
+      "sessions_in_regime": 5.0,
+      "sessions_post_regime": 0.0,
+      "long_run_drift_pct_daily": -0.1,
+      "probabilities_horizon": {
+        "bull": 0.2451,
+        "bear": 0.5784,
+        "sideways": 0.1765
+      },
+      "probabilities_horizon_unclamped": {
+        "bull": 0.2451,
+        "bear": 0.5784,
+        "sideways": 0.1765
+      },
+      "scenarios": {
+        "bull": {
+          "probability": 0.2451,
+          "expected_return_pct": 7.11,
+          "drift_regime_pct_daily": 1.383
+        },
+        "bear": {
+          "probability": 0.5784,
+          "expected_return_pct": -11.39,
+          "drift_regime_pct_daily": -2.3888
+        },
+        "sideways": {
+          "probability": 0.1765,
+          "expected_return_pct": -1.94,
+          "drift_regime_pct_daily": -0.3908
+        }
+      }
+    },
+    "deep": {
+      "horizon_sessions": 10,
+      "move_band_95_pct": 45.88,
+      "sessions_in_regime": 10.0,
+      "sessions_post_regime": 0.0,
+      "long_run_drift_pct_daily": -0.1,
+      "probabilities_horizon": {
+        "bull": 0.2337,
+        "bear": 0.5477,
+        "sideways": 0.2186
+      },
+      "probabilities_horizon_unclamped": {
+        "bull": 0.2337,
+        "bear": 0.5478,
+        "sideways": 0.2186
+      },
+      "scenarios": {
+        "bull": {
+          "probability": 0.2337,
+          "expected_return_pct": 14.72,
+          "drift_regime_pct_daily": 1.383
+        },
+        "bear": {
+          "probability": 0.5477,
+          "expected_return_pct": -21.48,
+          "drift_regime_pct_daily": -2.3888
+        },
+        "sideways": {
+          "probability": 0.2186,
+          "expected_return_pct": -3.84,
+          "drift_regime_pct_daily": -0.3908
+        }
+      }
+    }
+  },
+  "note": "squelette probabiliste observe-only : proba PAR HORIZON = projection Markov moyennée p0·Pᵗ (tend vers la stationnaire sur horizon long ; fallback posterior clampé si pas de matrice — audit §B1) ; expected_return = drift à 2 phases (drift d'état capé sur ~regime_duration sessions, puis drift long-terme mu_effective capé au-delà) composé en log puis CLIPPÉ au cône ±band95 (audit §B2 — deep s'écarte de swing dans le sens du drift long-terme, sans +120 %). band95 = 1.959964·σ·√H (bande CENTRALE 95 %, loi normale). trigger/path/assumption = narratif SKILL. sanity-check vs edge_metrics.p_hit = skill (§9.3)."
+}

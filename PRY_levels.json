@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PRY",
-    "generated_at": "2026-11-16T01:32:58Z",
+    "generated_at": "2026-11-16T22:05:05Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-11-17T08:00:00Z",
@@ -14,13 +14,13 @@
     "ta_score": {
       "value": 4,
       "max": 10,
-      "label": "neutral"
+      "label": "bearish"
     },
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bull",
       "probability": 0.9,
-      "expected_duration_days": 8.0
+      "expected_duration_days": 7.0
     },
     "volatility_regime": "normal",
     "signals_counter": {
@@ -32,32 +32,47 @@
     },
     "mean_reversion_score": {
       "setup": "rsi_50-60_dist_ma20_-2_+2",
-      "win_rate": 0.82,
-      "sample_size": 33,
-      "median_bounce_pct": 3.56,
+      "win_rate": 0.81,
+      "sample_size": 32,
+      "median_bounce_pct": 3.57,
       "confidence": "high"
     },
-    "narrative_short": "TA score 4/10 (neutral), alignment mixed, HMM bull (0.90), vol normal, signals neutral (2b/4s/9n)."
+    "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM bull (0.90), vol normal, signals neutral (2b/4s/9n)."
   },
   "notes": {
-    "atr_daily": 5.6404,
+    "atr_daily": 5.5546,
     "atr_pct_daily": null,
-    "beta_60d": 1.4955,
+    "beta_60d": 1.4697,
     "beta_benchmark": "FTSEMIB",
-    "beta_corr_60d": 0.5048,
+    "beta_corr_60d": 0.5088,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
       "date": "",
       "confidence": null
     },
-    "divergences": [],
+    "divergences": [
+      {
+        "indicator": "rsi",
+        "type": "hidden_bearish",
+        "confidence": 0.47,
+        "bars_ago": 3,
+        "at_price": null
+      },
+      {
+        "indicator": "obv",
+        "type": "hidden_bearish",
+        "confidence": 0.29,
+        "bars_ago": 3,
+        "at_price": null
+      }
+    ],
     "drawdown": {
       "current_dd_pct": -31.39,
       "ath_price": 156.9,
       "ath_date": "2026-05-11",
       "max_dd_1y_pct": -36.85,
-      "days_in_dd": 186,
+      "days_in_dd": 189,
       "median_recovery_days": null
     }
   },
@@ -68,26 +83,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 106.7165,
-        "max": 107.7181
+        "min": 107.0878,
+        "max": 107.7322
       },
       "stop": {
-        "price": 91.4749,
-        "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -14.68
+        "price": 99.318,
+        "basis": "fallback_pivot_camarilla_s1",
+        "distance_pct": -7.53
       },
       "targets": [
         {
           "level": 2,
-          "price": 109.7275,
+          "price": 110.0614,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.16
+          "rr": 0.33
         },
         {
           "level": 3,
-          "price": 116.0336,
+          "price": 116.2717,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.56
+          "rr": 1.1
         }
       ],
       "preferred_target": 1,
@@ -95,7 +110,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 50,
-      "rationale": "Confluence support MA20 + FIB_236 (strength 5.0). Bounce mecanique."
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_s1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
     },
     {
       "id": "B",
@@ -103,32 +118,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 116.813,
-        "max": 117.2798
+        "min": 118.2683,
+        "max": 118.7409
       },
       "stop": {
-        "price": 115.071,
+        "price": 115.1067,
         "basis": "below_broken_resistance",
-        "distance_pct": -1.69
+        "distance_pct": -2.87
       },
       "targets": [
         {
           "level": 1,
           "price": 121.6669,
           "basis": "next_confluence_resistance",
-          "rr": 2.34
+          "rr": 0.93
         },
         {
           "level": 2,
-          "price": 123.9527,
+          "price": 125.549,
           "basis": "fib_50",
-          "rr": 3.5
+          "rr": 2.07
         },
         {
           "level": 3,
-          "price": 131.209,
-          "basis": "fib_618",
-          "rr": 7.17
+          "price": 125.549,
+          "basis": "next_confluence_resistance",
+          "rr": 2.07
         }
       ],
       "preferred_target": 1,
@@ -144,32 +159,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 87.1686,
-        "max": 88.9385
+        "min": 88.1097,
+        "max": 89.8988
       },
       "stop": {
-        "price": 80.0355,
+        "price": 81.1195,
         "basis": "fallback_sr_support",
-        "distance_pct": -9.11
+        "distance_pct": -8.86
       },
       "targets": [
         {
           "level": 1,
-          "price": 103.4214,
+          "price": 103.8511,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 1.92
+          "rr": 1.88
         },
         {
           "level": 2,
-          "price": 109.7275,
+          "price": 110.0614,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.7
+          "rr": 2.67
         },
         {
           "level": 3,
-          "price": 116.0336,
+          "price": 116.2717,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.49
+          "rr": 3.46
         }
       ],
       "preferred_target": 1,
@@ -193,7 +208,7 @@
     }
   ],
   "invalidation": {
-    "price": 79.2351,
+    "price": 80.3083,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
