@@ -2,11 +2,11 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-11-13T22:05:21Z",
+    "generated_at": "2026-11-16T01:32:58Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-16T08:00:00Z",
-    "valid_until": "2026-11-16T21:00:00Z",
+    "valid_from": "2026-11-17T08:00:00Z",
+    "valid_until": "2026-11-17T21:00:00Z",
     "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
@@ -40,7 +40,7 @@
     "narrative_short": "TA score 3/10 (bearish), alignment mixed, HMM sideways (0.90), vol low, signals neutral (4b/5s/6n)."
   },
   "notes": {
-    "atr_daily": 8.464,
+    "atr_daily": 8.4643,
     "atr_pct_daily": null,
     "beta_60d": 2.3264,
     "beta_benchmark": "IWM",
@@ -101,7 +101,7 @@
         "max": 111.6771
       },
       "stop": {
-        "price": 99.3844,
+        "price": 99.3841,
         "basis": "swing_plan_below_confluence_support",
         "distance_pct": -10.12
       },
@@ -114,13 +114,13 @@
         },
         {
           "level": 2,
-          "price": 127.9933,
+          "price": 127.9936,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 1.56
         },
         {
           "level": 3,
-          "price": 137.4564,
+          "price": 137.457,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 2.4
         }
@@ -138,8 +138,8 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 119.9121,
-        "max": 120.3913
+        "min": 119.9088,
+        "max": 120.3879
       },
       "stop": {
         "price": 118.7798,
@@ -151,19 +151,19 @@
           "level": 1,
           "price": 124.3933,
           "basis": "fib_382",
-          "rr": 3.09
+          "rr": 3.1
         },
         {
           "level": 2,
-          "price": 130.2816,
+          "price": 130.279,
           "basis": "next_confluence_resistance",
-          "rr": 7.38
+          "rr": 7.4
         },
         {
           "level": 3,
           "price": 136.46,
           "basis": "fib_50",
-          "rr": 11.89
+          "rr": 11.92
         }
       ],
       "preferred_target": 1,
@@ -183,7 +183,7 @@
         "max": 82.219
       },
       "stop": {
-        "price": 69.114,
+        "price": 69.1136,
         "basis": "fallback_sr_support",
         "distance_pct": -15.09
       },
@@ -196,13 +196,13 @@
         },
         {
           "level": 2,
-          "price": 127.9933,
+          "price": 127.9936,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 3.79
         },
         {
           "level": 3,
-          "price": 137.4564,
+          "price": 137.457,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 4.56
         }
@@ -228,7 +228,7 @@
     }
   ],
   "invalidation": {
-    "price": 68.4229,
+    "price": 68.4225,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
