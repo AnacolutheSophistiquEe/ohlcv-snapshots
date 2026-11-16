@@ -1,6 +1,6 @@
 # EVT
 
-**Generated** : 2026-11-13T21:42:28.737141+00:00  
+**Generated** : 2026-11-16T01:07:16.954775+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 5/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -70,17 +70,17 @@ _Cloture 2026-11-13 : 2.97 · ATR Wilder 0.1475 (4.97 %)_
       - refuse : CVaR 95 % 17.69 % > budget 12.00 %
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.88 %) : P(cible) 1.0 % x 32.14 % + P(rien) 53.5 % x 4.83 % ne couvrent pas P(stop) 45.5 % x 8.35 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
-   - 🟢 support a 1.81 ATR (stop 10.941 %) — p(stop avant cible) 0.3092 [0.26 ; 0.36], R/R 2.604, perte reelle 12.342 % (gap inclus), EV -1.4128 % — **REFUSE**
+   - 🟢 support a 1.81 ATR (stop 10.947 %) — p(stop avant cible) 0.3092 [0.26 ; 0.36], R/R 2.603, perte reelle 12.347 % (gap inclus), EV -1.4143 % — **REFUSE**
       - refuse : cible atteinte seulement 1.0 % du temps (< 15 %) meme a 10 seances : le R/R de 2.60 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 2.60 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 19.59 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.41 %) : P(cible) 1.0 % x 32.14 % + P(rien) 68.0 % x 3.05 % ne couvrent pas P(stop) 30.9 % x 12.34 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.41 %) : P(cible) 1.0 % x 32.14 % + P(rien) 68.0 % x 3.05 % ne couvrent pas P(stop) 30.9 % x 12.35 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
-   - 🟢 support a 3.96 ATR (stop 21.19 %) — p(stop avant cible) 0.0812 [0.06 ; 0.11], R/R 1.439, perte reelle 22.342 % (gap inclus), EV -1.448 % — **REFUSE**
+   - 🟢 support a 3.96 ATR (stop 21.197 %) — p(stop avant cible) 0.0812 [0.06 ; 0.11], R/R 1.438, perte reelle 22.346 % (gap inclus), EV -1.4483 % — **REFUSE**
       - refuse : cible atteinte seulement 1.0 % du temps (< 15 %) meme a 10 seances : le R/R de 1.44 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.44 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 23.06 % > budget 12.00 %
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.45 %) : P(cible) 1.0 % x 32.14 % + P(rien) 90.8 % x 0.04 % ne couvrent pas P(stop) 8.1 % x 22.34 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.45 %) : P(cible) 1.0 % x 32.14 % + P(rien) 90.8 % x 0.04 % ne couvrent pas P(stop) 8.1 % x 22.35 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
    - ⚪ atr_grid a 0.25 ATR (stop 1.191 %) — p(stop avant cible) 0.9003 [0.87 ; 0.93], R/R 23.652, perte reelle 1.359 % (gap inclus), EV -0.2914 % — **REFUSE**
       - refuse : cible atteinte seulement 0.5 % du temps (< 15 %) meme a 10 seances : le R/R de 23.65 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
@@ -364,5 +364,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (728608 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (724211 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

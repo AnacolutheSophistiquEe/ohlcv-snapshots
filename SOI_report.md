@@ -1,6 +1,6 @@
 # SOI
 
-**Generated** : 2026-11-13T21:48:25.357444+00:00  
+**Generated** : 2026-11-16T01:11:39.161438+00:00  
 **Couverture** : bulletin complet  
 > ⚠️ **Données suspectes** : volatilité réalisée 7.3 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
@@ -304,5 +304,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (693954 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (693849 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

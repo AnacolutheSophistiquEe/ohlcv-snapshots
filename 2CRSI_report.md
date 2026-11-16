@@ -1,6 +1,6 @@
 # AL2SI
 
-**Generated** : 2026-11-13T21:49:47.505349+00:00  
+**Generated** : 2026-11-16T01:12:42.096000+00:00  
 **Couverture** : bulletin complet  
 > ⚠️ **Données suspectes** : volatilité réalisée 13.5 %/j très élevée — vérifier la qualité des barres avant de se fier au bulletin.  
 
@@ -140,7 +140,7 @@ _Cloture 2026-11-13 : 18.31 · ATR Wilder 2.45 (13.4 %)_
 | 0.15 ATR | 2.529 % | 17.8469 | 78.24 % | 83.51 % | 87.43 % | 89.07 % | 92.38 % | 95.2 % |
 | 0.2 ATR | 3.372 % | 17.6926 | 72.45 % | 79.2 % | 83.5 % | 86.02 % | 90.01 % | 93.01 % |
 | 0.25 ATR | 4.215 % | 17.5382 | 66.47 % | 74.58 % | 79.37 % | 82.78 % | 87.93 % | 91.41 % |
-| 0.35 ATR | 5.901 % | 17.2295 | 54.61 % | 65.46 % | 71.02 % | 75.98 % | 83.18 % | 87.91 % |
+| 0.35 ATR | 5.901 % | 17.2295 | 54.61 % | 65.36 % | 71.02 % | 75.98 % | 83.18 % | 87.91 % |
 | 0.5 ATR | 8.43 % | 16.7664 | 40.59 % | 53.68 % | 61.98 % | 69.19 % | 78.83 % | 85.51 % |
 | 0.75 ATR | 12.645 % | 15.9946 | 22.65 % | 37.88 % | 47.54 % | 56.0 % | 68.25 % | 77.12 % |
 | 1.0 ATR | 16.86 % | 15.2229 | 12.75 % | 25.02 % | 33.99 % | 44.59 % | 58.16 % | 68.93 % |
@@ -297,5 +297,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (689511 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (689376 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

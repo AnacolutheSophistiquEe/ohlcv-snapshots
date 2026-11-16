@@ -6,7 +6,7 @@
     "exchange": "NASDAQ",
     "currency": "USD",
     "isin": "US69608A1088",
-    "generated_at": "2026-11-13T22:05:18.208727+00:00",
+    "generated_at": "2026-11-16T01:24:46.104417+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -425,11 +425,11 @@
         ],
         [
           "2026-11-13T00:00:00",
-          171.98,
+          171.74,
           172.28,
           164.75,
           167.99,
-          15017274
+          15169600
         ]
       ],
       "h4": [
@@ -1256,8 +1256,8 @@
       "macd_hist": -1.7019969062133873,
       "macd_signal_cross": null,
       "obv_trend": "falling",
-      "mfi_14": 27.390268026450286,
-      "cmf_20": 0.0803159971771313,
+      "mfi_14": 27.379539529535734,
+      "cmf_20": 0.08024797936129219,
       "adl_trend": "rising",
       "adx_14": 27.682848502349504,
       "plus_di_14": 16.039356154921002,
@@ -1265,7 +1265,7 @@
       "di_spread_14": -13.638050928470058,
       "choppiness_14": 37.71719983393498,
       "regime_label": "strong_trend",
-      "volume_ratio_ma20": 0.6104670104496248,
+      "volume_ratio_ma20": 0.6164683478639337,
       "distance_ma20_pct": -7.877993749549621,
       "distance_ma50_pct": -9.09110261420115,
       "distance_ma200_pct": 9.28110774815694
@@ -1782,7 +1782,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.2867,
+          "p_touch": 0.2868,
           "p_touch_ref": "entry_mid",
           "distance_pct": 2.88
         },
@@ -1795,7 +1795,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.0757,
+          "p_touch": 0.0758,
           "p_touch_ref": "entry_mid",
           "distance_pct": 5.76
         },
@@ -1808,7 +1808,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.0757,
+          "p_touch": 0.0758,
           "p_touch_ref": "entry_mid",
           "distance_pct": 8.64
         }
@@ -1846,7 +1846,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.3735,
+          "p_touch": 0.3734,
           "p_touch_ref": "entry_mid",
           "distance_pct": 6.57
         },
@@ -1910,7 +1910,7 @@
           "placement": "sous_niveau",
           "level_price": 188.65,
           "beyond_band95": false,
-          "p_touch": 0.2497,
+          "p_touch": 0.2498,
           "p_touch_ref": "entry_mid",
           "distance_pct": 18.38
         },
@@ -1923,7 +1923,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.0521,
+          "p_touch": 0.052,
           "p_touch_ref": "entry_mid",
           "distance_pct": 27.87
         },
@@ -2532,7 +2532,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-11-13T22:04:35.047181+00:00",
+    "generated_at": "2026-11-16T01:24:15.091937+00:00",
     "n_sessions": 125,
     "sessions_distinct": 125,
     "regime_window": "recent",
@@ -8248,7 +8248,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-11-13T22:04:18.972650+00:00",
+    "generated_at": "2026-11-16T01:24:01.133140+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8506,10 +8506,10 @@
     "note": "ADVISORY observe-only : aucun ordre piloté. Grille = hypothèse jusqu'à recalibration M7. Capital 2000 € (réel). Le skill peut re-dériver avec un capital utilisateur.",
     "currency": "USD",
     "currency_source": "TICKER_METADATA (run_local.py)",
-    "fx_rate": 1.10235389,
+    "fx_rate": 1.10226312,
     "fx_rate_definition": "unites de devise du titre pour 1 EUR",
     "fx_source": "tws_live_state.account.exchange_rates (inverse)",
-    "fx_as_of": "2026-11-13T22:29:47+0100",
+    "fx_as_of": "2026-11-13T23:17:12+0100",
     "fx_stale": false,
     "status": "skip_low_score",
     "notional_target_eur": 0.0,
@@ -8517,151 +8517,24 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-11-13T22:04:57.354143+00:00",
+    "generated_at": "2026-11-16T01:24:31.134177+00:00",
     "ticker": "PLTR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 30,
+    "n_events": 24,
     "events": [
-      {
-        "date": "2026-11-13",
-        "type": "macro",
-        "label": "US PPI Final Demand (headline)",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
-      },
-      {
-        "date": "2026-11-13",
-        "type": "macro",
-        "label": "US Core PPI (ex food, energy & trade)",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "rates_sensitive",
-        "ticker_specific": false,
-        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
-      },
-      {
-        "date": "2026-11-13",
-        "type": "macro",
-        "label": "Federal Reserve — interventions Williams, Barr et Goolsbee",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-14",
-        "type": "macro",
-        "label": "Summit Therapeutics (SMMT) FDA BLA — ivonescimab NSCLC",
-        "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-14",
-        "type": "macro",
-        "label": "Cytokinetics (CYTK) FDA PDUFA — aficamten (non-obstructive HCM)",
-        "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-14",
-        "type": "macro",
-        "label": "IonQ (IONQ) — expiration du lock-up",
-        "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 1,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-15",
-        "type": "macro",
-        "label": "Super Micro Computer (SMCI) Q1 FY2027 Earnings",
-        "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 2,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-15",
-        "type": "macro",
-        "label": "AIEA — réunion sur la menace iranienne de retrait du TNP",
-        "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 2,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-11-16",
         "type": "macro",
         "label": "GXO Logistics (GXO) — Investor Day",
         "importance": "medium",
-        "sessions_to_event": 2,
-        "calendar_days": 3,
+        "sessions_to_event": 0,
+        "calendar_days": 0,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8674,9 +8547,10 @@
         "type": "macro",
         "label": "US Retail Sales (headline + control group)",
         "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8689,9 +8563,10 @@
         "type": "macro",
         "label": "US Industrial Production & Capacity Utilization",
         "importance": "low",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8704,9 +8579,10 @@
         "type": "macro",
         "label": "German ZEW Economic Sentiment",
         "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8719,9 +8595,10 @@
         "type": "macro",
         "label": "Nexans (NEX) — Capital Markets Day",
         "importance": "high",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8734,9 +8611,10 @@
         "type": "macro",
         "label": "US Housing Starts",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8749,9 +8627,10 @@
         "type": "macro",
         "label": "US FOMC Meeting Minutes",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8764,9 +8643,10 @@
         "type": "macro",
         "label": "Soitec (SOI) H1 FY2027 Results",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8779,9 +8659,10 @@
         "type": "macro",
         "label": "Soitec (SOI) H1 FY2027 Earnings",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8794,8 +8675,8 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8809,8 +8690,8 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 6,
+        "sessions_to_event": 2,
+        "calendar_days": 3,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8824,8 +8705,8 @@
         "type": "macro",
         "label": "US University of Michigan Consumer Sentiment (prelim + final)",
         "importance": "medium",
-        "sessions_to_event": 5,
-        "calendar_days": 7,
+        "sessions_to_event": 3,
+        "calendar_days": 4,
         "in_plan_horizon": [
           "swing",
           "deep"
@@ -8839,9 +8720,10 @@
         "type": "macro",
         "label": "Capricor (CAPR) FDA PDUFA — deramiocel DMD",
         "importance": "medium",
-        "sessions_to_event": 6,
-        "calendar_days": 9,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -8853,9 +8735,10 @@
         "type": "macro",
         "label": "Savara (SVRA) FDA PDUFA — molgramostim (MOLBREEVI)",
         "importance": "high",
-        "sessions_to_event": 6,
-        "calendar_days": 9,
+        "sessions_to_event": 4,
+        "calendar_days": 6,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -8867,8 +8750,8 @@
         "type": "macro",
         "label": "US Conference Board Consumer Confidence",
         "importance": "medium",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8881,8 +8764,8 @@
         "type": "macro",
         "label": "German Ifo Business Climate Index",
         "importance": "medium",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8895,8 +8778,8 @@
         "type": "macro",
         "label": "US PCE Price Index (headline) — Personal Income & Outlays",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8909,8 +8792,8 @@
         "type": "macro",
         "label": "US GDP (advance / second / third estimate)",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8923,8 +8806,8 @@
         "type": "macro",
         "label": "US Durable Goods Orders",
         "importance": "low",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8937,8 +8820,8 @@
         "type": "macro",
         "label": "US New Home Sales",
         "importance": "low",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8951,8 +8834,8 @@
         "type": "macro",
         "label": "Rheinmetall (RHM) Capital Markets Day — 25–27 novembre 2026",
         "importance": "high",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -8965,6 +8848,20 @@
         "type": "macro",
         "label": "Nuvalent (NUVL) FDA PDUFA — neladalkib ALK+ NSCLC",
         "importance": "high",
+        "sessions_to_event": 8,
+        "calendar_days": 11,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-30",
+        "type": "macro",
+        "label": "Vertex (VRTX) FDA PDUFA — povetacicept (IgAN)",
+        "importance": "high",
         "sessions_to_event": 10,
         "calendar_days": 14,
         "in_plan_horizon": [
@@ -8973,6 +8870,20 @@
         "impact": "macro_broad",
         "ticker_specific": false,
         "recommendation": null
+      },
+      {
+        "date": "2026-11-30",
+        "type": "macro",
+        "label": "MSCI — suppression de Strategy (MSTR) signalée au 30 novembre",
+        "importance": "high",
+        "sessions_to_event": 10,
+        "calendar_days": 14,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": "flag_rate_sensitive_reduce_size_if_in_horizon"
       }
     ],
     "earnings_in_swing": false,
@@ -9404,7 +9315,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-11-13T22:04:44.647741+00:00",
+    "generated_at": "2026-11-16T01:24:23.260104+00:00",
     "ticker": "PLTR",
     "window_sessions": 60,
     "n_observations_aligned": 60,
@@ -9587,85 +9498,84 @@
   },
   "options_metrics": {
     "available": true,
-    "generated_at": "2026-11-13T22:04:39.630779+00:00",
+    "generated_at": "2026-11-16T01:24:19.110406+00:00",
     "ticker": "PLTR",
     "spot_price": 167.99,
     "expiries_available": [
       {
-        "date": "2026-11-13",
-        "days_to_exp": 1
-      },
-      {
         "date": "2026-11-20",
-        "days_to_exp": 7
+        "days_to_exp": 4
       },
       {
         "date": "2026-11-27",
-        "days_to_exp": 14
+        "days_to_exp": 11
       },
       {
         "date": "2026-12-04",
-        "days_to_exp": 21
+        "days_to_exp": 18
       },
       {
         "date": "2026-12-11",
-        "days_to_exp": 28
+        "days_to_exp": 25
+      },
+      {
+        "date": "2026-12-18",
+        "days_to_exp": 32
       }
     ],
     "iv_metrics": {
-      "iv_atm_30d": 0.5177,
-      "iv_atm_90d": 0.5177,
+      "iv_atm_30d": 0.5259,
+      "iv_atm_90d": 0.5176,
       "rv_20d_annualized": 0.5857,
-      "iv_rv_ratio": 0.884,
+      "iv_rv_ratio": 0.898,
       "iv_rank_1y": null,
       "iv_percentile_1y": null,
       "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
     },
     "skew": {
-      "skew_25_delta_vol_pts": -0.452,
-      "label": "low"
+      "skew_25_delta_vol_pts": 2.881,
+      "label": "normal"
     },
     "term_structure": {
-      "m1_expiry": "2026-11-13",
-      "m1_days_to_exp": 1,
-      "m1_iv_atm": 0.3003,
-      "m3_expiry": "2026-12-11",
-      "m3_days_to_exp": 28,
-      "m3_iv_atm": 0.5177,
-      "ratio_m1_m3": 0.5801,
-      "label": "contango_fort"
+      "m1_expiry": "2026-11-20",
+      "m1_days_to_exp": 4,
+      "m1_iv_atm": 0.6668,
+      "m3_expiry": "2026-12-18",
+      "m3_days_to_exp": 32,
+      "m3_iv_atm": 0.5176,
+      "ratio_m1_m3": 1.2882,
+      "label": "backwardation"
     },
     "open_interest_m1": {
-      "expiry": "2026-11-13",
-      "days_to_exp": 1,
-      "put_call_ratio": 0.664,
-      "total_oi_m1": 223935,
+      "expiry": "2026-11-20",
+      "days_to_exp": 4,
+      "put_call_ratio": 0.991,
+      "total_oi_m1": 388051,
       "largest_call_strike_oi": {
-        "strike": 165.0,
-        "oi": 12667
+        "strike": 200.0,
+        "oi": 12535
       },
       "largest_put_strike_oi": {
-        "strike": 90.0,
-        "oi": 12606
+        "strike": 130.0,
+        "oi": 11333
       }
     },
     "gex": {
-      "gex_total_usd_per_point": 6277234052.0,
-      "gex_label": "positive_stabilizing",
+      "gex_total_usd_per_point": -228315938.0,
+      "gex_label": "negative_destabilizing",
       "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
     },
     "max_pain": {
-      "strike": 165.0,
-      "expiry": "2026-11-13",
-      "gap_vs_spot_pct": -1.78
+      "strike": 175.0,
+      "expiry": "2026-11-20",
+      "gap_vs_spot_pct": 4.17
     },
     "verdict": {
-      "label": "bullish",
-      "bullish_signals": 2,
-      "bearish_signals": 0,
+      "label": "neutral_cautious",
+      "bullish_signals": 0,
+      "bearish_signals": 1,
       "notes": [
-        "skew faible (-0.5 pts) — peu de demande de protection",
-        "GEX positif (6277.2M$/pt) = MM long gamma stabilisateur"
+        "GEX négatif (-228.3M$/pt) = MM short gamma déstabilisateur"
       ]
     },
     "liquidity_stats": {
@@ -9673,20 +9583,15 @@
       "max_iv_threshold": 5.0,
       "max_bidask_spread_pct": 0.3,
       "per_expiry": {
-        "2026-11-13": {
-          "total_strikes": 213,
-          "liquid_strikes": 22,
-          "filter_ratio_pct": 10.3
-        },
         "2026-11-20": {
-          "total_strikes": 144,
-          "liquid_strikes": 66,
-          "filter_ratio_pct": 45.8
+          "total_strikes": 154,
+          "liquid_strikes": 70,
+          "filter_ratio_pct": 45.5
         },
         "2026-11-27": {
-          "total_strikes": 130,
-          "liquid_strikes": 37,
-          "filter_ratio_pct": 28.5
+          "total_strikes": 152,
+          "liquid_strikes": 46,
+          "filter_ratio_pct": 30.3
         },
         "2026-12-04": {
           "total_strikes": 125,
@@ -9694,9 +9599,14 @@
           "filter_ratio_pct": 26.4
         },
         "2026-12-11": {
-          "total_strikes": 115,
+          "total_strikes": 117,
           "liquid_strikes": 28,
-          "filter_ratio_pct": 24.3
+          "filter_ratio_pct": 23.9
+        },
+        "2026-12-18": {
+          "total_strikes": 154,
+          "liquid_strikes": 82,
+          "filter_ratio_pct": 53.2
         }
       }
     },
@@ -9704,7 +9614,7 @@
   },
   "short_insider": {
     "available": true,
-    "generated_at": "2026-11-13T22:04:56.310543+00:00",
+    "generated_at": "2026-11-16T01:24:30.087368+00:00",
     "ticker": "PLTR",
     "short_interest": {
       "status": "ok",
@@ -9714,11 +9624,11 @@
       "short_pct_float": 0.026,
       "short_pct_outstanding": 0.0232,
       "days_to_cover": 2.5,
-      "avg_daily_volume": 25879196,
+      "avg_daily_volume": 25741014,
       "float_shares": 2115249642,
       "delta_shares_short_mom_pct": 0.57,
       "squeeze_potential": "low",
-      "fetched_at": "2026-11-13T22:04:44.904298+00:00"
+      "fetched_at": "2026-11-16T01:24:23.452042+00:00"
     },
     "insider_transactions_90d": {
       "status": "ok",
@@ -9727,15 +9637,15 @@
       "cik": "0001321655",
       "lookback_days": 90,
       "n_filings_total": 30,
-      "n_filings_in_window": 17,
+      "n_filings_in_window": 18,
       "n_fetch_errors": 0,
       "summary": {
         "total_buy_count": 0,
         "total_buy_value_usd": 0,
-        "total_sell_count": 41,
-        "total_sell_value_usd": 100930962.03,
+        "total_sell_count": 48,
+        "total_sell_value_usd": 165864161.32,
         "vesting_exercise_count": 0,
-        "net_flow_usd": -100930962.03,
+        "net_flow_usd": -165864161.32,
         "net_flow_label": "sell_bias_strong"
       },
       "top_buys": [],
@@ -9754,30 +9664,30 @@
           "notional_usd": 53597838.95
         },
         {
-          "date": "2026-08-20",
-          "insider_name": "Karp Alexander C.",
+          "date": "2026-11-10",
+          "insider_name": "Sankar Shyam",
           "role": "See Remarks",
           "is_officer": true,
-          "is_director": true,
+          "is_director": false,
           "action": "sell",
           "transaction_code": "S",
           "tag": "open_market_sale",
-          "shares": 63629,
-          "price": 175.4185,
-          "notional_usd": 11161703.74
+          "shares": 92847,
+          "price": 167.5265,
+          "notional_usd": 15554332.95
         },
         {
-          "date": "2026-08-20",
-          "insider_name": "Karp Alexander C.",
+          "date": "2026-11-11",
+          "insider_name": "Sankar Shyam",
           "role": "See Remarks",
           "is_officer": true,
-          "is_director": true,
+          "is_director": false,
           "action": "sell",
           "transaction_code": "S",
           "tag": "open_market_sale",
-          "shares": 62498,
-          "price": 174.7299,
-          "notional_usd": 10920269.29
+          "shares": 84680,
+          "price": 175.0701,
+          "notional_usd": 14824936.07
         }
       ],
       "flags": {
@@ -9786,17 +9696,44 @@
         "insider_selling_no_buys": true,
         "vesting_exercises_dominant": false
       },
-      "all_transactions_count": 43,
+      "all_transactions_count": 52,
       "derivative_summary": {
-        "count": 7,
-        "sold_or_disposed": 4,
+        "count": 9,
+        "sold_or_disposed": 6,
         "granted_or_acquired": 3,
         "by_insider": {
           "Buckley Jeffrey": 1,
-          "Karp Alexander C.": 6
+          "Karp Alexander C.": 6,
+          "Sankar Shyam": 2
         }
       },
       "derivative_transactions": [
+        {
+          "date": "2026-11-10",
+          "insider_name": "Sankar Shyam",
+          "role": "See Remarks",
+          "security": "Class B Common Stock",
+          "transaction_code": "C",
+          "acquired_disposed": "D",
+          "contracts_or_units": 300000.0,
+          "price": 0.0,
+          "exercise_price": null,
+          "expiration": null,
+          "underlying_shares": 300000.0
+        },
+        {
+          "date": "2026-11-11",
+          "insider_name": "Sankar Shyam",
+          "role": "See Remarks",
+          "security": "Class B Common Stock",
+          "transaction_code": "C",
+          "acquired_disposed": "D",
+          "contracts_or_units": 84680.0,
+          "price": 0.0,
+          "exercise_price": null,
+          "expiration": null,
+          "underlying_shares": 84680.0
+        },
         {
           "date": "2026-09-29",
           "insider_name": "Buckley Jeffrey",
@@ -9889,17 +9826,17 @@
           "underlying_shares": 90000.0
         }
       ],
-      "fetched_at": "2026-11-13T22:04:56.308110+00:00"
+      "fetched_at": "2026-11-16T01:24:30.085114+00:00"
     },
     "data_quality": {
       "short_data_available": true,
       "insider_data_available": true,
-      "insider_n_transactions": 43
+      "insider_n_transactions": 52
     }
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-11-13T22:04:41.564849+00:00",
+    "generated_at": "2026-11-16T01:24:20.679165+00:00",
     "ticker": "PLTR",
     "yahoo": "PLTR",
     "source": "yfinance.Ticker.info",
@@ -9923,13 +9860,13 @@
       "market_cap": 404771504128.0,
       "market_cap_musd": 404771.5,
       "market_cap_str": "404.77 Md USD",
-      "enterprise_value": 403202441216.0,
+      "enterprise_value": 394552344576.0,
       "shares_outstanding": 2306705341.0,
       "float_shares": 2115249642.0,
       "free_float_pct": 91.7,
-      "avg_volume_3m": 25879196.0,
-      "adv_str": "25.9 M titres",
-      "avg_volume_10d": 29868090.0,
+      "avg_volume_3m": 25741014.0,
+      "adv_str": "25.7 M titres",
+      "avg_volume_10d": 28683300.0,
       "archetype_suggested": "compounder",
       "archetype_basis": "marge nette 50.3 % > 15 % et croissance 96 % > 10 %",
       "business_summary_raw": "Palantir Technologies Inc. builds and deploys software platforms for the intelligence community to assist in counterterrorism investigations and operations in the United States, the United Kingdom, and internationally. It provides Palantir Gotham integrates with other platforms for defense offerings which enables users to see, understand, and act in the modern battlespace; operations centers to the tactical edge; integrating data from domains and sensors in near real-time; and situational awareness and accelerating operational decision-making, as well as facilitates the hand-off between analysts and operational users, helping operators plan and execute real-world responses to threats that have been identified within the platform. It also offers Palantir Foundry, a platform that helps organizations operate by creating a central operating system for their data; and allows individual users to integrate and analyze the data they need in one place. In addition, it provides Palantir Apollo, a software that delivers software and updates across the business, as well as enables customers to deploy their software virtually in any environment; and Palantir Artificial Intelligence Platform that provides unified access to open-source, self-hosted, and commercial large language models (LLMs) that can transform structured and unstructured data into LLM-understandable objects and can turn organizations' actions and processes into tools for humans and LLM-driven agents. The company also has a strategic partnership with Ondas Inc. to develop and deploy AI-enabled operational capabilities to scale stratospheric, aerial, and land-based ISR missions. The company has a strategic collaboration with NVIDIA to deliver an intelligent engine for running NVIDIA AI and Nemotron open models in sovereign environments and with PwC to transform critical business operations and deliver measurable enterprise value. The company was incorporated in 2003 and is headquartered in Aventura, Florida."
@@ -9953,7 +9890,7 @@
       "net_debt": -10336263872.0,
       "net_debt_str": "-10.34 Md USD",
       "net_debt_ebitda": -3.08,
-      "ebitda_implied": 3355294969.7176476,
+      "ebitda_implied": 3355293726.356609,
       "debt_to_equity": 2.0,
       "current_ratio": 7.1,
       "quick_ratio": 6.92,
@@ -9979,15 +9916,15 @@
       "statements_note": "3 champs repris des etats financiers (exercice clos 2025-12-31), `.info` ne les publiant pas pour cette place"
     },
     "valuation": {
-      "ev_ebitda_ttm": 120.17,
+      "ev_ebitda_ttm": 117.59,
       "ev_definition": "enterpriseValue du fournisseur : capitalisation + dette totale Y COMPRIS obligations locatives - tresorerie et placements court terme",
       "earnings_metric": "EBITDA TTM du fournisseur (apres loyers)",
       "leases_treatment": "loyers dans l'EV mais PAS reintegres a l'EBITDA : le multiple est sureleve pour un gros locataire ; apparier EV ajuste <-> EBITDAR, ou EV hors loyers <-> EBITDA",
-      "ev_revenue_ttm": 55.32,
+      "ev_revenue_ttm": 54.13,
       "ps_ttm": 55.54,
       "pe_trailing": 118.3,
       "pe_fwd": 66.26,
-      "peg": 1.41,
+      "peg": 1.33,
       "price_to_book": 36.04,
       "fcf_yield_pct": 0.66,
       "ev_ebitda_fwd": null,
@@ -10005,8 +9942,8 @@
       "note": "consensus sell-side — n'est PAS une valeur d'equilibre calculee"
     },
     "ownership": {
-      "insiders_pct": 3.49,
-      "institutions_pct": 66.08,
+      "insiders_pct": 3.65,
+      "institutions_pct": 66.02,
       "short_pct_float": 2.6,
       "short_ratio_days": 2.5,
       "notable_holders": "Blackrock Inc. 8.7 %, Vanguard Capital Management LLC 6.7 %, State Street Corporation 4.8 %, Invesco Ltd. 3.2 % (declarations 13F)"
@@ -10014,7 +9951,7 @@
     "market": {
       "beta": 1.61,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": -1.4,
+      "change_52w_pct": -1.9,
       "low_52w": 106.37,
       "high_52w": 212.94
     },
@@ -10290,7 +10227,7 @@
       },
       {
         "field": "identity.adv_str",
-        "value": "25.9 M titres",
+        "value": "25.7 M titres",
         "from": "fundamentals.identity.adv_str"
       },
       {
@@ -10380,7 +10317,7 @@
       },
       {
         "field": "valuation.ev_ebitda_ttm",
-        "value": 120.17,
+        "value": 117.59,
         "from": "fundamentals.valuation.ev_ebitda_ttm"
       },
       {
@@ -10400,7 +10337,7 @@
       },
       {
         "field": "valuation.peg",
-        "value": 1.41,
+        "value": 1.33,
         "from": "fundamentals.valuation.peg"
       },
       {
@@ -10445,12 +10382,12 @@
       },
       {
         "field": "ownership.insiders_pct",
-        "value": 3.49,
+        "value": 3.65,
         "from": "fundamentals.ownership.insiders_pct"
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 66.08,
+        "value": 66.02,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -10529,7 +10466,7 @@
       "scope": "univers suivi par le pipeline",
       "not_market_median": "mediane des titres SUIVIS par ce pipeline dans le meme secteur Yahoo — PAS une mediane de marche, de secteur GICS complet ni d'indice",
       "sector": "Technology",
-      "aggregate_generated_at": "2026-11-13T21:38:22.578398+00:00",
+      "aggregate_generated_at": "2026-11-16T01:04:11.932615+00:00",
       "aggregate_file": "sector_multiples.json",
       "aggregate_age_days": 0.0,
       "n_titles": 142,
@@ -10537,88 +10474,88 @@
       "metrics": {
         "pe_trailing": {
           "n": 100,
-          "q1": 24.08,
-          "median": 41.44,
-          "q3": 66.57,
-          "min": 2.99,
-          "max": 4597.4,
+          "q1": 24.05,
+          "median": 39.91,
+          "q3": 64.93,
+          "min": 3.05,
+          "max": 3776.83,
           "self": 118.3,
-          "self_vs_median_pct": 185.5,
+          "self_vs_median_pct": 196.4,
           "thin": false
         },
         "pe_fwd": {
           "n": 126,
-          "q1": 13.31,
-          "median": 18.18,
-          "q3": 26.67,
-          "min": 2.41,
-          "max": 172.22,
+          "q1": 12.89,
+          "median": 17.56,
+          "q3": 25.51,
+          "min": 2.27,
+          "max": 165.36,
           "self": 66.26,
-          "self_vs_median_pct": 264.5,
+          "self_vs_median_pct": 277.3,
           "thin": false
         },
         "ev_ebitda_ttm": {
           "n": 121,
-          "q1": 15.15,
-          "median": 23.17,
-          "q3": 36.58,
-          "min": 1.35,
-          "max": 2163.71,
-          "self": 120.17,
-          "self_vs_median_pct": 418.6,
+          "q1": 15.0,
+          "median": 23.84,
+          "q3": 34.79,
+          "min": 1.37,
+          "max": 2132.47,
+          "self": 117.59,
+          "self_vs_median_pct": 393.2,
           "thin": false
         },
         "ev_revenue_ttm": {
           "n": 141,
-          "q1": 3.43,
-          "median": 6.47,
-          "q3": 14.01,
+          "q1": 3.4,
+          "median": 6.29,
+          "q3": 13.67,
           "min": 0.36,
-          "max": 279.14,
-          "self": 55.32,
-          "self_vs_median_pct": 755.0,
+          "max": 237.14,
+          "self": 54.13,
+          "self_vs_median_pct": 760.6,
           "thin": false
         },
         "ps_ttm": {
           "n": 142,
-          "q1": 3.7,
-          "median": 6.7,
-          "q3": 14.13,
+          "q1": 3.63,
+          "median": 6.54,
+          "q3": 13.75,
           "min": 0.26,
-          "max": 526.36,
+          "max": 518.28,
           "self": 55.54,
-          "self_vs_median_pct": 729.0,
+          "self_vs_median_pct": 749.2,
           "thin": false
         },
         "price_to_book": {
-          "n": 127,
-          "q1": 2.84,
-          "median": 5.57,
-          "q3": 11.12,
+          "n": 128,
+          "q1": 2.76,
+          "median": 5.46,
+          "q3": 10.48,
           "min": 0.33,
-          "max": 1285.5,
+          "max": 1283.82,
           "self": 36.04,
-          "self_vs_median_pct": 547.0,
+          "self_vs_median_pct": 560.1,
           "thin": false
         },
         "fcf_yield_pct": {
           "n": 142,
           "q1": 0.09,
-          "median": 1.52,
-          "q3": 2.6,
-          "min": -105.04,
-          "max": 70.45,
+          "median": 1.54,
+          "q3": 2.74,
+          "min": -109.48,
+          "max": 60.84,
           "self": 0.66,
-          "self_vs_median_pts": -0.86,
+          "self_vs_median_pts": -0.88,
           "thin": false
         },
         "dividend_yield_pct": {
           "n": 142,
           "q1": 0.0,
           "median": 0.0,
-          "q3": 0.76,
+          "q3": 0.78,
           "min": 0.0,
-          "max": 14.32,
+          "max": 14.04,
           "self": 0.0,
           "self_vs_median_pts": 0.0,
           "thin": false
@@ -10805,7 +10742,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-11-13T22:04:16.940831+00:00",
+    "generated_at": "2026-11-16T01:23:59.552541+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/PLTR_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1254,
@@ -11213,7 +11150,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-11-13T22:04:18.626410+00:00",
+    "generated_at": "2026-11-16T01:24:00.910422+00:00",
     "ticker": "PLTR",
     "source_csv": "PLTR_daily_long.csv",
     "n_sessions": 1255,
@@ -15343,7 +15280,7 @@
         "anchor_date": "2026-11-05",
         "anchor_event": "swing_low",
         "anchor_price": 152.6,
-        "vwap_today": 164.4141,
+        "vwap_today": 164.4178,
         "distance_from_close_pct": 2.17,
         "bars_since_anchor": 6
       },
@@ -15351,7 +15288,7 @@
         "anchor_date": "2026-10-12",
         "anchor_event": "swing_high",
         "anchor_price": 212.94,
-        "vwap_today": 184.0152,
+        "vwap_today": 184.0113,
         "distance_from_close_pct": -8.71,
         "bars_since_anchor": 24
       },
@@ -15359,7 +15296,7 @@
         "anchor_date": "2026-09-10",
         "anchor_event": "swing_low",
         "anchor_price": 164.55,
-        "vwap_today": 184.5295,
+        "vwap_today": 184.5273,
         "distance_from_close_pct": -8.96,
         "bars_since_anchor": 46
       }
@@ -15423,7 +15360,7 @@
         "name": "bearish_engulfing",
         "date": "2026-11-13",
         "bars_ago": 0,
-        "confidence": 0.685
+        "confidence": 0.677
       },
       {
         "name": "morning_star",
@@ -20271,8 +20208,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": -73385341.14637586,
-        "signal_line": -90178130.95246805,
+        "value": -73421600.74876395,
+        "signal_line": -90183310.89566635,
         "signal": "buy"
       }
     },
@@ -21793,7 +21730,7 @@
         -114824768.13299371,
         -79568133.7444624,
         -74822551.1461647,
-        -73385341.14637586
+        -73421600.74876395
       ],
       "klinger_signal": [
         0.0,
@@ -22046,7 +21983,7 @@
         -98741746.47029887,
         -96002658.93803652,
         -92976929.25348341,
-        -90178130.95246805
+        -90183310.89566635
       ]
     }
   },
@@ -22054,22 +21991,22 @@
     "available": true,
     "latest": {
       "close": 167.99000549316406,
-      "vwap": 179.6875546169269,
+      "vwap": 179.68404238712878,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": -6.50993840319139,
+        "distance_from_close_pct": -6.508110981146534,
         "position": "below_vwap"
       },
-      "force_index": -57415818.17169349,
+      "force_index": -57493939.5691457,
       "force_index_meta": {
         "signal": "neutral"
       },
-      "chaikin_oscillator": 4357467.939056337,
+      "chaikin_oscillator": 4350709.619212329,
       "chaikin_oscillator_meta": {
         "cross_recent": "up",
         "signal": "buy"
       },
-      "vroc_14": -8.32168933603575,
+      "vroc_14": -7.391760884960075,
       "vroc_14_meta": {
         "signal": "normal"
       }
@@ -22579,7 +22516,7 @@
         183.08891760464053,
         181.83391731590936,
         180.7832887066741,
-        179.6875546169269
+        179.68404238712878
       ],
       "force_index": [
         null,
@@ -22832,7 +22769,7 @@
         -86575662.00931771,
         -65963768.35775294,
         -57999794.75612571,
-        -57415818.17169349
+        -57493939.5691457
       ],
       "chaikin_oscillator": [
         0.0,
@@ -23085,7 +23022,7 @@
         3039846.787852764,
         3493514.299743414,
         4895312.091663539,
-        4357467.939056337
+        4350709.619212329
       ],
       "vroc_14": [
         null,
@@ -23338,7 +23275,7 @@
         -8.460445640795573,
         -29.712299856978408,
         -29.486540943152743,
-        -8.32168933603575
+        -7.391760884960075
       ]
     }
   },
@@ -23349,9 +23286,9 @@
       "20d": 58.57,
       "60d": 50.57
     },
-    "garman_klass_20d_annualized_pct": 47.48,
+    "garman_klass_20d_annualized_pct": 47.52,
     "parkinson_20d_annualized_pct": 48.64,
-    "yang_zhang_20d_annualized_pct": 59.82,
+    "yang_zhang_20d_annualized_pct": 59.79,
     "volatility_cone": {
       "current_rv_5d": 45.95017811056464,
       "p10": 21.557229357886914,
@@ -23370,7 +23307,7 @@
       "classification": "normal"
     },
     "volume_zscore": {
-      "value": -1.2806,
+      "value": -1.273,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -23405,7 +23342,7 @@
     "window_days": 1254,
     "window_mode": "historique complet",
     "recent_252d": {
-      "beta_up_days": 0.7333,
+      "beta_up_days": 0.7334,
       "beta_down_days": 1.3358,
       "beta_asymmetry": 1.8215,
       "n_up_days": 137,
@@ -23418,14 +23355,14 @@
   },
   "anomaly_detection": {
     "available": true,
-    "anomaly_score": -0.0812,
+    "anomaly_score": -0.0909,
     "is_anomaly": false,
-    "anomaly_percentile": 59.9,
+    "anomaly_percentile": 50.4,
     "recent_anomalies": [
       {
         "date": "2026-11-05T00:00:00",
         "bars_ago": 6,
-        "score": 0.1587,
+        "score": 0.1582,
         "context": "high volume + large return + wide range + strong body"
       },
       {
@@ -23437,19 +23374,19 @@
       {
         "date": "2026-11-03T00:00:00",
         "bars_ago": 8,
-        "score": 0.0649,
+        "score": 0.0658,
         "context": "high volume + wide range + strong body"
       },
       {
         "date": "2026-11-02T00:00:00",
         "bars_ago": 9,
-        "score": -0.0239,
+        "score": -0.0247,
         "context": "wide range + strong body"
       },
       {
         "date": "2026-10-30T00:00:00",
         "bars_ago": 10,
-        "score": -0.033,
+        "score": -0.0329,
         "context": "large return + wide range + strong body"
       }
     ],
@@ -23584,7 +23521,7 @@
         "ha_open": 170.201248,
         "ha_high": 172.279999,
         "ha_low": 164.75,
-        "ha_close": 169.25,
+        "ha_close": 169.190002,
         "body_color": "red",
         "doji": false,
         "long_upper_shadow": true,
@@ -23677,24 +23614,24 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 25524142.9,
+        "mean_volume_60d": 25526681.666666668,
         "median_volume_60d": 23816500.0,
-        "volume_consistency_score": 0.6400549141705099
+        "volume_consistency_score": 0.6402055745860437
       },
       "liquidity": {
-        "liquidity_score": 4648878109.215638,
+        "liquidity_score": 4649731084.068196,
         "liquidity_classification": "very_high",
         "liquidity_note": "moyenne de Close × Volume sur les 30 dernières barres, en devise NATIVE du titre, non convertie : seuils 1e6/1e7/1e8/1e9 non comparables entre devises"
       },
       "freshness": {
         "last_bar_date": "2026-11-13T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-11-13T22:05:15.242876+00:00",
+        "asof_utc": "2026-11-16T01:24:43.903030+00:00",
         "venue": "NYSE",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23710,7 +23647,7 @@
         "supplemented_dates": []
       },
       "overall": {
-        "overall_quality_score": 93.00719821454967,
+        "overall_quality_score": 93.00945812078268,
         "overall_label": "excellent",
         "warnings": []
       }
@@ -23758,13 +23695,13 @@
       },
       "freshness": {
         "last_bar_date": "2026-11-13T20:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-11-13T22:05:15.242876+00:00",
+        "asof_utc": "2026-11-16T01:24:43.903030+00:00",
         "venue": "NYSE",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23811,13 +23748,13 @@
       },
       "freshness": {
         "last_bar_date": "2026-11-13T20:30:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-11-13T22:05:15.242876+00:00",
+        "asof_utc": "2026-11-16T01:24:43.903030+00:00",
         "venue": "NYSE",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -24041,7 +23978,7 @@
         }
       }
     ],
-    "generated_at": "2026-11-13T22:05:18.833051+00:00",
+    "generated_at": "2026-11-16T01:24:46.530825+00:00",
     "history_file": "data/v3/episodes/PLTR_episodes.json"
   },
   "setup": {
@@ -24101,17 +24038,17 @@
         "CORRECTION": 0,
         "CAPITULATION": 1
       },
-      "252": {
-        "NOISE": 0,
-        "PULLBACK": 2,
-        "CORRECTION": 0,
-        "CAPITULATION": 0
-      },
       "63": {
         "NOISE": 7,
         "PULLBACK": 5,
         "CORRECTION": 0,
         "CAPITULATION": 1
+      },
+      "252": {
+        "NOISE": 0,
+        "PULLBACK": 2,
+        "CORRECTION": 0,
+        "CAPITULATION": 0
       },
       "20": {
         "NOISE": 11,
@@ -24120,13 +24057,13 @@
         "CAPITULATION": 3
       }
     },
-    "generated_at": "2026-11-13T22:05:18.899047+00:00"
+    "generated_at": "2026-11-16T01:24:46.579542+00:00"
   },
   "profiles": {
     "version": "profiles/1.0",
     "provenance": "v3",
     "status": "UNVALIDATED",
-    "generated_at": "2026-11-13T21:37:46.209306+00:00",
+    "generated_at": "2026-11-16T01:03:43.853341+00:00",
     "n_occasions": 475,
     "zones_open_episodes": [
       {

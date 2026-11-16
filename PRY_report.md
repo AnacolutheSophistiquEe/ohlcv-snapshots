@@ -1,6 +1,6 @@
 # PRY
 
-**Generated** : 2026-11-13T21:51:13.649068+00:00  
+**Generated** : 2026-11-16T01:13:46.651189+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 4/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -325,5 +325,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (708772 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (708677 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

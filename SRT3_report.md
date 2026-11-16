@@ -1,6 +1,6 @@
 # SRT3
 
-**Generated** : 2026-11-13T21:40:55.724479+00:00  
+**Generated** : 2026-11-16T01:06:10.901213+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 8/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -66,12 +66,12 @@ _Cloture 2026-11-13 : 290.5 · ATR Wilder 8.8 (3.03 %)_
 - Candidats (la structure propose, la statistique elimine) :
    - ⚪ atr_based a 1.5 ATR (stop 4.238 %) — p(stop avant cible) 0.4282 [0.38 ; 0.48], R/R 0.923, perte reelle 4.334 % (gap inclus), EV 0.2693 % — **REFUSE**
       - refuse : R/R 0.92 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ swing_based a 1.48 ATR (stop 6.064 %) — p(stop avant cible) 0.2907 [0.24 ; 0.34], R/R 0.649, perte reelle 6.168 % (gap inclus), EV 0.605 % — **REFUSE**
+   - ⚪ swing_based a 1.48 ATR (stop 6.03 %) — p(stop avant cible) 0.2913 [0.25 ; 0.34], R/R 0.652, perte reelle 6.138 % (gap inclus), EV 0.6077 % — **REFUSE**
       - refuse : R/R 0.65 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ sr_based a 6.79 ATR (stop 21.054 %) — p(stop avant cible) 0.0064 [0.00 ; 0.02], R/R 0.179, perte reelle 22.319 % (gap inclus), EV 0.8076 % — **REFUSE**
+   - ⚪ sr_based a 6.79 ATR (stop 21.02 %) — p(stop avant cible) 0.0065 [0.00 ; 0.02], R/R 0.179, perte reelle 22.286 % (gap inclus), EV 0.8068 % — **REFUSE**
       - refuse : R/R 0.18 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 13.04 % > budget 12.00 %
-   - 🟢 support a 11.29 ATR (stop 33.789 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.118, perte reelle 33.789 % (gap inclus), EV 0.8525 % — **REFUSE**
+      - refuse : CVaR 95 % 13.05 % > budget 12.00 %
+   - 🟢 support a 11.29 ATR (stop 33.755 %) — p(stop avant cible) 0.0 [0.00 ; 0.01], R/R 0.119, perte reelle 33.755 % (gap inclus), EV 0.8525 % — **REFUSE**
       - refuse : R/R 0.12 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 12.29 % > budget 12.00 %
    - ⚪ atr_grid a 0.25 ATR (stop 0.706 %) — p(stop avant cible) 0.803 [0.76 ; 0.84], R/R 5.575, perte reelle 0.717 % (gap inclus), EV 0.2119 % — **REFUSE**
@@ -297,5 +297,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (702873 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (698494 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

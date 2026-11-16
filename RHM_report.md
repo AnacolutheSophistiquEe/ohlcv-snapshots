@@ -1,6 +1,6 @@
 # RHM
 
-**Generated** : 2026-11-13T21:39:30.672910+00:00  
+**Generated** : 2026-11-16T01:05:03.361498+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 1/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -361,7 +361,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.07 · largeur 45.2%
 - **ATR** : 50.78 (43.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV falling · CMF -0.187  _(distribution)_
-- **Vol ratio** : 1.24  _(volume normal)_
+- **Vol ratio** : 1.25  _(volume normal)_
 - **Choppiness** : 30.5  _(marche directionnel)_
 - **MA** : MA20 950.91 · MA50 974.21 · MA200 1216.74  _(prix < MA20)_
 - **Dist MA** : MA20 -19.5% · MA50 -21.4% · MA200 -37.1%
@@ -369,5 +369,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (719157 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (714790 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

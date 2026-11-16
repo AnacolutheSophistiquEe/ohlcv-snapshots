@@ -1,6 +1,6 @@
 # NEX
 
-**Generated** : 2026-11-13T21:46:55.956809+00:00  
+**Generated** : 2026-11-16T01:10:32.197944+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 5/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -187,16 +187,16 @@ _Cloture 2026-11-13 : 129.3 · ATR Wilder 4.76 (3.68 %)_
 | 0.2 ATR | 0.767 % | 128.3086 | 68.33 % | 78.02 % | 82.91 % | 88.09 % | 92.78 % | 95.0 % |
 | 0.25 ATR | 0.958 % | 128.0607 | 61.76 % | 73.31 % | 78.78 % | 85.04 % | 90.8 % | 93.81 % |
 | 0.35 ATR | 1.342 % | 127.565 | 49.51 % | 63.98 % | 71.61 % | 79.04 % | 87.04 % | 91.71 % |
-| 0.5 ATR | 1.917 % | 126.8214 | 34.71 % | 52.4 % | 61.2 % | 70.96 % | 80.61 % | 87.71 % |
+| 0.5 ATR | 1.917 % | 126.8214 | 34.61 % | 52.4 % | 61.2 % | 70.96 % | 80.61 % | 87.71 % |
 | 0.75 ATR | 2.875 % | 125.5821 | 20.69 % | 36.41 % | 47.25 % | 58.76 % | 70.62 % | 81.32 % |
 | 1.0 ATR | 3.834 % | 124.3429 | 10.78 % | 24.44 % | 34.68 % | 48.23 % | 61.92 % | 74.63 % |
 | 1.25 ATR | 4.792 % | 123.1036 | 4.71 % | 16.39 % | 25.25 % | 39.57 % | 55.09 % | 68.23 % |
 | 1.5 ATR | 5.751 % | 121.8643 | 2.45 % | 11.38 % | 18.96 % | 30.91 % | 47.58 % | 60.94 % |
-| 2.0 ATR | 7.668 % | 119.3857 | 0.78 % | 5.4 % | 10.22 % | 19.59 % | 35.71 % | 50.95 % |
+| 2.0 ATR | 7.668 % | 119.3857 | 0.78 % | 5.4 % | 10.12 % | 19.59 % | 35.61 % | 50.95 % |
 | 2.5 ATR | 9.585 % | 116.9071 | 0.49 % | 2.45 % | 5.4 % | 11.42 % | 24.73 % | 39.36 % |
 | 3.0 ATR | 11.501 % | 114.4286 | 0.2 % | 1.57 % | 3.14 % | 7.19 % | 17.61 % | 30.87 % |
 | 4.0 ATR | 15.335 % | 109.4714 | 0.1 % | 0.49 % | 0.88 % | 1.97 % | 7.52 % | 18.78 % |
-| 6.0 ATR | 23.003 % | 99.5571 | 0.0 % | 0.0 % | 0.0 % | 0.2 % | 1.38 % | 4.6 % |
+| 6.0 ATR | 23.003 % | 99.5571 | 0.0 % | 0.0 % | 0.0 % | 0.2 % | 1.29 % | 4.5 % |
 
 **A quelle distance poser pour n'etre sorti que p % du temps** (lecture INVERSE — c'est elle qui sert a arbitrer) :
 
@@ -204,18 +204,18 @@ _Cloture 2026-11-13 : 129.3 · ATR Wilder 4.76 (3.68 %)_
 |---|---|---|---|---|---|---|---|---|
 | **1 s.** | 0.15 ATR | 0.35 ATR | 0.40 ATR | 0.53 ATR | 0.67 ATR | 0.77 ATR | 1.03 ATR | 1.24 ATR |
 | **2 s.** | 0.23 ATR | 0.54 ATR | 0.62 ATR | 0.82 ATR | 0.99 ATR | 1.14 ATR | 1.61 ATR | 2.07 ATR |
-| **3 s.** | 0.30 ATR | 0.70 ATR | 0.80 ATR | 1.04 ATR | 1.26 ATR | 1.46 ATR | 2.02 ATR | 2.59 ATR |
+| **3 s.** | 0.30 ATR | 0.70 ATR | 0.80 ATR | 1.04 ATR | 1.26 ATR | 1.46 ATR | 2.01 ATR | 2.59 ATR |
 | **5 s.** | 0.42 ATR | 0.96 ATR | 1.09 ATR | 1.44 ATR | 1.76 ATR | 1.98 ATR | 2.67 ATR | 3.42 ATR |
-| **10 s.** | 0.64 ATR | 1.42 ATR | 1.61 ATR | 2.12 ATR | 2.49 ATR | 2.83 ATR | 3.75 ATR | 4.82 ATR |
-| **20 s.** | 0.99 ATR | 2.04 ATR | 2.26 ATR | 2.88 ATR | 3.49 ATR | 3.90 ATR | 5.24 ATR | 5.94 ATR |
+| **10 s.** | 0.64 ATR | 1.42 ATR | 1.61 ATR | 2.12 ATR | 2.49 ATR | 2.83 ATR | 3.75 ATR | 4.81 ATR |
+| **20 s.** | 0.99 ATR | 2.04 ATR | 2.26 ATR | 2.88 ATR | 3.49 ATR | 3.90 ATR | 5.23 ATR | 5.93 ATR |
 
 **Distance optimale par horizon** (plage utile mesuree, puis meilleur point unique de cette plage) :
-- **1 seance(s)** : plage utile VIDE (borne basse 0.396 ATR au-dessus du haut de la grille, 0.35 ATR) _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ✅ optimum identifie (83.4 % des re-echantillons)
+- **1 seance(s)** : plage utile VIDE (borne basse 0.395 ATR au-dessus du haut de la grille, 0.35 ATR) _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum — ATR (— %, prix —), p(touche) — % (en stress — %)  ✅ optimum identifie (83.2 % des re-echantillons)
 - **2 seance(s)** : plage utile 0.616–1.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 0.75 ATR (2.875 %, prix 125.5826), p(touche) 36.41 % (en stress 90.2 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 54.1 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **3 seance(s)** : plage utile 0.795–1.25 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.0 ATR (3.834 %, prix 124.3426), p(touche) 34.68 % (en stress 85.29 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 45.8 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
 - **5 seance(s)** : plage utile 1.093–1.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 1.25 ATR (4.792 %, prix 123.1039), p(touche) 39.57 % (en stress 93.14 %)  ⚠ **OPTIMUM NON IDENTIFIE** — au bootstrap par blocs, le vainqueur ne gagne que 55.0 % des re-echantillons : le rendement ne distingue pas les distances de cette zone. Trancher par la tolerance de sortie ou par un niveau structurel ne coute donc rien.
-- **10 seance(s)** : plage utile 1.609–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (7.668 %, prix 119.3853), p(touche) 35.71 % (en stress 99.02 %)  ✅ optimum identifie (66.5 % des re-echantillons)
-- **20 seance(s)** : plage utile 2.257–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (9.585 %, prix 116.9066), p(touche) 39.36 % (en stress 98.02 %)  ✅ optimum identifie (64.5 % des re-echantillons)
+- **10 seance(s)** : plage utile 1.608–2.5 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.0 ATR (7.668 %, prix 119.3853), p(touche) 35.61 % (en stress 98.04 %)  ✅ optimum identifie (66.8 % des re-echantillons)
+- **20 seance(s)** : plage utile 2.257–3.0 ATR _(borne basse : tolerance de sortie par defaut (45 %))_ — optimum 2.5 ATR (9.585 %, prix 116.9066), p(touche) 39.36 % (en stress 98.02 %)  ✅ optimum identifie (64.9 % des re-echantillons)
 
 - p(touche) = part des fenetres de N seances ou le prix est venu chercher un stop pose a cette distance SOUS le prix d'entree de la fenetre. Mesure sur les barres reelles du titre, pas modelisee.
 
@@ -346,5 +346,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (718323 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (718173 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
