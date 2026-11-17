@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "PRY",
-    "generated_at": "2026-11-16T22:05:05Z",
+    "generated_at": "2026-11-17T01:33:10Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-17T08:00:00Z",
-    "valid_until": "2026-11-17T21:00:00Z",
+    "valid_from": "2026-11-18T08:00:00Z",
+    "valid_until": "2026-11-18T21:00:00Z",
     "source_precomputed": "PRY_precomputed.json"
   },
   "context": {
-    "last_price": 107.65,
+    "last_price": 107.85,
     "ta_score": {
       "value": 4,
       "max": 10,
@@ -24,9 +24,9 @@
     },
     "volatility_regime": "normal",
     "signals_counter": {
-      "buy": 2,
+      "buy": 3,
       "sell": 4,
-      "neutral": 9,
+      "neutral": 8,
       "total": 15,
       "verdict": "neutral"
     },
@@ -37,14 +37,14 @@
       "median_bounce_pct": 3.57,
       "confidence": "high"
     },
-    "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM bull (0.90), vol normal, signals neutral (2b/4s/9n)."
+    "narrative_short": "TA score 4/10 (bearish), alignment mixed, HMM bull (0.90), vol normal, signals neutral (3b/4s/8n)."
   },
   "notes": {
     "atr_daily": 5.5546,
     "atr_pct_daily": null,
-    "beta_60d": 1.4697,
+    "beta_60d": 1.4718,
     "beta_benchmark": "FTSEMIB",
-    "beta_corr_60d": 0.5088,
+    "beta_corr_60d": 0.5089,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -68,7 +68,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -31.39,
+      "current_dd_pct": -31.26,
       "ath_price": 156.9,
       "ath_date": "2026-05-11",
       "max_dd_1y_pct": -36.85,
@@ -83,26 +83,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 107.0878,
-        "max": 107.7322
+        "min": 107.2872,
+        "max": 107.9328
       },
       "stop": {
-        "price": 99.318,
+        "price": 99.518,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -7.53
+        "distance_pct": -7.52
       },
       "targets": [
         {
           "level": 2,
-          "price": 110.0614,
+          "price": 110.1514,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.33
+          "rr": 0.31
         },
         {
           "level": 3,
-          "price": 116.2717,
+          "price": 116.3617,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.1
+          "rr": 1.08
         }
       ],
       "preferred_target": 1,
@@ -122,9 +122,9 @@
         "max": 118.7409
       },
       "stop": {
-        "price": 115.1067,
+        "price": 115.1213,
         "basis": "below_broken_resistance",
-        "distance_pct": -2.87
+        "distance_pct": -2.85
       },
       "targets": [
         {
@@ -137,13 +137,13 @@
           "level": 2,
           "price": 125.549,
           "basis": "fib_50",
-          "rr": 2.07
+          "rr": 2.08
         },
         {
           "level": 3,
           "price": 125.549,
           "basis": "next_confluence_resistance",
-          "rr": 2.07
+          "rr": 2.08
         }
       ],
       "preferred_target": 1,
@@ -170,21 +170,21 @@
       "targets": [
         {
           "level": 1,
-          "price": 103.8511,
+          "price": 103.9411,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 1.88
+          "rr": 1.89
         },
         {
           "level": 2,
-          "price": 110.0614,
+          "price": 110.1514,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.67
+          "rr": 2.68
         },
         {
           "level": 3,
-          "price": 116.2717,
+          "price": 116.3617,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.46
+          "rr": 3.47
         }
       ],
       "preferred_target": 1,
