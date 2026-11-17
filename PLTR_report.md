@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-11-16T22:04:01.793271+00:00  
+**Generated** : 2026-11-17T01:24:44.120478+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 3/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -11,7 +11,8 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 > ↳ ¼-Kelly 0.023 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=125 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.5% cohérent avec le bruit 5 s (EV-optimal ≈ −2.5%)  
 
-> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+> ⚠ **QA flags (2, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+>   - **[MEDIUM]** §12 Options — Max-pain gap affiché +1.2 % ≠ (strike 170.0 − spot 160.39)/spot = +6.0 %. Probable spot d'options périmé vs spot courant.
 >   - **[MEDIUM]** §04 Pitchfork — Position dans le canal -30 % hors [0,100] (R² max 0.97). Canal dégénéré (bornes possiblement sous le prix) — à ne pas interpréter.
 
 
@@ -56,7 +57,7 @@ _Cloture 2026-11-16 : 160.39 · ATR Wilder 8.87 (5.53 %)_
    - _fenêtre arrêtée : historique epuise — le regime est homogene sur toute la profondeur_
    - _C'est CETTE fenêtre qu'il faut utiliser pour dimensionner : ni l'année civile (arbitraire) ni l'historique complet (qui mélange des régimes sans rapport)._
 - 5 jours **mesuré** : VaR -13.31 % vs -13.77 % si l'on extrapolait par √5 _(rapport 0.966 ; < 1 = le √5 surestime)_
-- **β de baisse : 1.7089** (β de hausse 1.4201, asymétrie 1.2034) vs IWM — 605 séances de repli, historique complet
+- **β de baisse : 1.7089** (β de hausse 1.42, asymétrie 1.2034) vs IWM — 605 séances de repli, historique complet
 
 
 ## Echelle Warden — OU poser le stop
@@ -304,9 +305,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ## Positioning & factor
 
-**Factor** : R² 0.72 · part idiosyncratique 0.28
+**Factor** : R² 0.71 · part idiosyncratique 0.29
 **Short/Insider** : SI —% | insider — | verdict sell_bias_strong
-**Options** : neutral_cautious
+**Options** : favorable
 
 
 ## Event risk & invalidation
@@ -324,8 +325,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist -1.845  _(pas de croisement recent)_
 - **BB** : %B 0.17 · largeur 33.9%
 - **ATR** : 9.82 (97.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF 0.038  _(neutre)_
-- **Vol ratio** : 0.72  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF 0.042  _(neutre)_
+- **Vol ratio** : 0.59  _(volume atone)_
 - **Choppiness** : 41.4  _(transition)_
 - **MA** : MA20 180.67 · MA50 184.51 · MA200 153.79  _(prix < MA20)_
 - **Dist MA** : MA20 -11.2% · MA50 -13.1% · MA200 +4.3%
@@ -333,5 +334,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (693723 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (694008 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
