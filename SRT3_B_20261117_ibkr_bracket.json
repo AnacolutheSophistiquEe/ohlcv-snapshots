@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at": "2026-11-17T01:05:53.180402+00:00",
+  "generated_at": "2026-11-17T21:41:09.857389+00:00",
   "prediction_id": "SRT3_B_20261117",
   "account": "${IBKR_ACCOUNT_ID}",
   "symbol": "SRT3",
@@ -16,30 +16,30 @@
     "targets_source": "stops_targets_by_horizon.swing.targets.t1..t3",
     "stop_basis": "plancher anti-bruit (R/R<2)",
     "entry_zone_raw": [
-      260.133,
-      262.5237
+      259.9628,
+      262.3339
     ],
-    "entry_mid_raw": 261.3284,
-    "spot": 291.8999938964844,
-    "entry_vs_spot_pct": -10.48
+    "entry_mid_raw": 261.1484,
+    "spot": 291.5,
+    "entry_vs_spot_pct": -10.43
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 261.3,
+    "limit_price": 261.1,
     "limit_price_range": [
-      260.1,
-      262.5
+      259.95,
+      262.3
     ],
     "quantity": 2,
     "tif": "GTD",
-    "gtd": "2026-11-23T16:30:00+00:00"
+    "gtd": "2026-11-24T16:30:00+00:00"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 270.25,
+      "limit_price": 269.85,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
@@ -61,7 +61,7 @@
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 279.15,
+      "limit_price": 278.55,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T2",
@@ -92,14 +92,14 @@
         "oca_group": "SRT3_B_swing_20261117_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 270.25,
+        "target_price": 269.85,
         "stop_price": 253.35
       },
       {
         "oca_group": "SRT3_B_swing_20261117_T2",
         "tranche": "T2",
         "quantity": 1,
-        "target_price": 279.15,
+        "target_price": 278.55,
         "stop_price": 253.35
       }
     ],
@@ -127,21 +127,21 @@
       "offset_sessions": 5,
       "sessions_counted": 5,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-11-17T01:05:52.134105+00:00",
+      "anchor_utc": "2026-11-17T21:41:07.985805+00:00",
       "anchor_source": "meta.generated_at",
       "calendar": "XETRA",
-      "good_till_date": "2026-11-23T16:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261123-16:30:00",
-      "reference_session": "2026-11-17",
-      "expiry_session": "2026-11-23",
+      "good_till_date": "2026-11-24T16:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261124-16:30:00",
+      "reference_session": "2026-11-18",
+      "expiry_session": "2026-11-24",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-11-17",
         "2026-11-18",
         "2026-11-19",
         "2026-11-20",
-        "2026-11-23"
+        "2026-11-23",
+        "2026-11-24"
       ]
     },
     "venue_calendar": {
@@ -200,16 +200,16 @@
     "horizon_label_long": "swing_court_~1_semaine",
     "composite_score": 8.0,
     "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": 0.0928,
+    "ev_pct_risk": 0.0985,
     "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 261.3284,
+    "ev_pct_risk_basis_price": 261.1484,
     "ev_pct_risk_threshold": 0.3,
     "ev_status": "below_threshold",
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
     "p_hit_upper": {
-      "T1": 0.4674,
-      "T2": 0.2231,
-      "T3": 0.0603
+      "T1": 0.4689,
+      "T2": 0.2422,
+      "T3": 0.0651
     },
     "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
     "p_fill": 0.0158,
@@ -220,8 +220,8 @@
     "rating_note": "ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 2/121 fenêtres (p_fill pondéré 2 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 583.8,
-    "hold_tolerance_breach_price": 218.925,
+    "notional_eur": 583.0,
+    "hold_tolerance_breach_price": 218.625,
     "hold_fallback_active": true,
     "prediction_id": "SRT3_B_20261117"
   },
@@ -238,7 +238,7 @@
     "rr_on_posted_entry": {
       "T1": 1.13,
       "T2": 2.25,
-      "T3": 3.36
+      "T3": 3.37
     },
     "rr_blended_on_posted_entry": 1.69,
     "oca_per_tranche": true,
