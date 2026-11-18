@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SOI",
-    "generated_at": "2026-11-17T22:05:30Z",
+    "generated_at": "2026-11-18T01:34:01Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-18T08:00:00Z",
-    "valid_until": "2026-11-18T21:00:00Z",
+    "valid_from": "2026-11-19T08:00:00Z",
+    "valid_until": "2026-11-19T21:00:00Z",
     "source_precomputed": "SOI_precomputed.json"
   },
   "context": {
-    "last_price": 95.94,
+    "last_price": 96.2,
     "ta_score": {
       "value": 1,
       "max": 10,
@@ -19,7 +19,7 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bear",
-      "probability": 0.8887,
+      "probability": 0.889,
       "expected_duration_days": 7.17
     },
     "volatility_regime": "normal",
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 10.2021,
     "atr_pct_daily": null,
-    "beta_60d": 1.5002,
+    "beta_60d": 1.4495,
     "beta_benchmark": "FCHI",
-    "beta_corr_60d": 0.2056,
+    "beta_corr_60d": 0.1929,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -75,7 +75,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -60.22,
+      "current_dd_pct": -60.12,
       "ath_price": 241.2,
       "ath_date": "2021-12-01",
       "max_dd_1y_pct": -55.05,
@@ -90,32 +90,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 95.1736,
-        "max": 95.7464
+        "min": 95.4328,
+        "max": 96.0072
       },
       "stop": {
-        "price": 80.6368,
+        "price": 80.8968,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -15.53
+        "distance_pct": -15.49
       },
       "targets": [
         {
           "level": 1,
           "price": 106.4343,
           "basis": "sous résistance (medium) à 107.5 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 0.74
+          "rr": 0.72
         },
         {
           "level": 2,
           "price": 117.8406,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.51
+          "rr": 1.49
         },
         {
           "level": 3,
           "price": 129.247,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.28
+          "rr": 2.26
         }
       ],
       "preferred_target": 1,
@@ -131,32 +131,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 96.5164,
-        "max": 96.9021
+        "min": 111.2867,
+        "max": 111.7314
       },
       "stop": {
-        "price": 91.3189,
-        "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -5.57
+        "price": 106.9172,
+        "basis": "below_broken_resistance",
+        "distance_pct": -4.12
       },
       "targets": [
         {
           "level": 1,
-          "price": 106.4343,
-          "basis": "sous résistance (medium) à 107.5 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 1.8
+          "price": 116.95,
+          "basis": "fib_50",
+          "rr": 1.18
         },
         {
           "level": 2,
-          "price": 117.8406,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.92
+          "price": 116.95,
+          "basis": "next_confluence_resistance",
+          "rr": 1.18
         },
         {
           "level": 3,
-          "price": 129.247,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 6.04
+          "price": 128.0,
+          "basis": "next_confluence_resistance",
+          "rr": 3.59
         }
       ],
       "preferred_target": 1,
@@ -164,7 +164,7 @@
         "session_eu_paris_open"
       ],
       "max_budget_pct": 25,
-      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel pivot_camarilla_r1. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+      "rationale": "Breakout au-dessus confluence resistance S/R_resistance + MA200 + MA20 (strength 12.0)."
     },
     {
       "id": "C",
