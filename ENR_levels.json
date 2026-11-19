@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "ENR",
-    "generated_at": "2026-11-18T22:05:31Z",
+    "generated_at": "2026-11-19T01:34:01Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-19T08:00:00Z",
-    "valid_until": "2026-11-19T21:00:00Z",
+    "valid_from": "2026-11-20T08:00:00Z",
+    "valid_until": "2026-11-20T21:00:00Z",
     "source_precomputed": "ENR_precomputed.json"
   },
   "context": {
-    "last_price": 126.66,
+    "last_price": 126.78,
     "ta_score": {
       "value": 3,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 7.5229,
     "atr_pct_daily": null,
-    "beta_60d": 1.551,
+    "beta_60d": 1.6263,
     "beta_benchmark": "GDAXI",
-    "beta_corr_60d": 0.4252,
+    "beta_corr_60d": 0.4407,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
@@ -82,7 +82,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -32.49,
+      "current_dd_pct": -32.43,
       "ath_price": 187.62,
       "ath_date": "2026-04-24",
       "max_dd_1y_pct": -39.32,
@@ -98,31 +98,31 @@
       "side": "long",
       "entry_zone": {
         "min": 124.3199,
-        "max": 126.07
+        "max": 126.076
       },
       "stop": {
-        "price": 117.7381,
+        "price": 117.8245,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -5.96
+        "distance_pct": -5.89
       },
       "targets": [
         {
           "level": 1,
           "price": 135.7647,
           "basis": "sous résistance (strong) à 136.5 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 1.42
+          "rr": 1.43
         },
         {
           "level": 2,
           "price": 144.0893,
           "basis": "sous VPVR VAH à 144.8 (−0,1 ATR) · atteinte hist. 12% (sans stop)",
-          "rr": 2.53
+          "rr": 2.56
         },
         {
           "level": 3,
           "price": 152.5001,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.66
+          "rr": 3.7
         }
       ],
       "preferred_target": 1,
@@ -142,9 +142,9 @@
         "max": 145.5658
       },
       "stop": {
-        "price": 134.1395,
+        "price": 134.1419,
         "basis": "below_broken_resistance",
-        "distance_pct": -7.67
+        "distance_pct": -7.66
       },
       "targets": [
         {
@@ -179,11 +179,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 113.9898,
+        "min": 113.9945,
         "max": 115.504
       },
       "stop": {
-        "price": 109.4302,
+        "price": 109.4347,
         "basis": "deep_below_confluence_support_4pct",
         "distance_pct": -4.63
       },
@@ -228,7 +228,7 @@
     }
   ],
   "invalidation": {
-    "price": 108.3359,
+    "price": 108.3404,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "000660",
-    "generated_at": "2026-11-18T22:05:31Z",
+    "generated_at": "2026-11-19T01:34:01Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-19T08:00:00Z",
-    "valid_until": "2026-11-19T21:00:00Z",
+    "valid_from": "2026-11-20T08:00:00Z",
+    "valid_until": "2026-11-20T21:00:00Z",
     "source_precomputed": "000660_precomputed.json"
   },
   "context": {
-    "last_price": 1148000.0,
+    "last_price": 1144000.0,
     "ta_score": {
       "value": 1,
       "max": 10,
@@ -19,7 +19,7 @@
     "alignment_flag": "mixed",
     "hmm_regime": {
       "state": "bear",
-      "probability": 0.8609,
+      "probability": 0.865,
       "expected_duration_days": 2.43
     },
     "volatility_regime": "normal",
@@ -68,7 +68,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -60.66,
+      "current_dd_pct": -60.8,
       "ath_price": 2918367.25,
       "ath_date": "2026-06-22",
       "max_dd_1y_pct": -62.38,
@@ -83,32 +83,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 1138615.545,
-        "max": 1145467.795
+        "min": 1134627.545,
+        "max": 1141455.795
       },
       "stop": {
-        "price": 982571.4286,
+        "price": 978571.4286,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -13.96
+        "distance_pct": -14.01
       },
       "targets": [
         {
           "level": 1,
           "price": 1234701.2841,
           "basis": "sous résistance (weak) à 1.246e+06 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 0.58
+          "rr": 0.61
         },
         {
           "level": 2,
           "price": 1358004.4611,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.35
+          "rr": 1.38
         },
         {
           "level": 3,
           "price": 1481307.6382,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.13
+          "rr": 2.15
         }
       ],
       "preferred_target": 1,
@@ -145,7 +145,7 @@
         },
         {
           "level": 3,
-          "price": 1513740.0,
+          "price": 1513660.0,
           "basis": "next_confluence_resistance",
           "rr": 14.7
         }
@@ -161,11 +161,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 780233.917,
-        "max": 796076.2301
+        "min": 780233.9416,
+        "max": 796076.2552
       },
       "stop": {
-        "price": 626687.0804,
+        "price": 626687.1054,
         "basis": "fallback_sr_support",
         "distance_pct": -20.49
       },
@@ -199,7 +199,7 @@
   "bot_actionable_reason": "ta_score=1<4",
   "global_conditions": [],
   "invalidation": {
-    "price": 620420.2096,
+    "price": 620420.2343,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
