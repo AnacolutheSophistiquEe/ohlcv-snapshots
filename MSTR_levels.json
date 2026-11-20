@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-11-19T22:05:20Z",
+    "generated_at": "2026-11-20T01:36:11Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-20T08:00:00Z",
-    "valid_until": "2026-11-20T21:00:00Z",
+    "valid_from": "2026-11-23T08:00:00Z",
+    "valid_until": "2026-11-23T21:00:00Z",
     "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
-    "last_price": 86.13,
+    "last_price": 86.15,
     "ta_score": {
       "value": 0,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 8.2964,
     "atr_pct_daily": null,
-    "beta_60d": 2.36,
+    "beta_60d": 2.359,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.4982,
+    "beta_corr_60d": 0.4981,
     "btc_corr_high": null,
     "candlestick": {
       "name": "three_black_crows",
@@ -97,30 +97,30 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 85.1538,
-        "max": 85.6662
+        "min": 85.1837,
+        "max": 85.6963
       },
       "stop": {
-        "price": 73.6854,
+        "price": 73.7054,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -13.73
       },
       "targets": [
         {
           "level": 1,
-          "price": 93.0297,
+          "price": 93.0387,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
           "rr": 0.65
         },
         {
           "level": 2,
-          "price": 102.3054,
+          "price": 102.3144,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 1.44
         },
         {
           "level": 3,
-          "price": 111.5811,
+          "price": 111.5901,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 2.23
         }
@@ -142,7 +142,7 @@
         "max": 90.7515
       },
       "stop": {
-        "price": 86.8822,
+        "price": 86.8875,
         "basis": "below_broken_resistance",
         "distance_pct": -4.07
       },
@@ -151,19 +151,19 @@
           "level": 1,
           "price": 109.1267,
           "basis": "fib_236",
-          "rr": 5.03
+          "rr": 5.04
         },
         {
           "level": 2,
-          "price": 124.135,
+          "price": 124.136,
           "basis": "next_confluence_resistance",
-          "rr": 9.1
+          "rr": 9.11
         },
         {
           "level": 3,
           "price": 125.7167,
           "basis": "fib_382",
-          "rr": 9.53
+          "rr": 9.54
         }
       ],
       "preferred_target": 1,
@@ -179,30 +179,30 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 74.5546,
-        "max": 76.0684
+        "min": 74.5743,
+        "max": 76.0885
       },
       "stop": {
-        "price": 63.2454,
+        "price": 63.2654,
         "basis": "fallback_pivot_classical_s3",
         "distance_pct": -16.02
       },
       "targets": [
         {
           "level": 1,
-          "price": 93.0297,
+          "price": 93.0387,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
           "rr": 1.47
         },
         {
           "level": 2,
-          "price": 102.3054,
+          "price": 102.3144,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 2.24
         },
         {
           "level": 3,
-          "price": 111.5811,
+          "price": 111.5901,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 3.01
         }
@@ -228,7 +228,7 @@
     }
   ],
   "invalidation": {
-    "price": 62.6129,
+    "price": 62.6327,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
