@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "IONQ",
-    "generated_at": "2026-11-23T01:32:53Z",
+    "generated_at": "2026-11-23T22:05:07Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-11-24T08:00:00Z",
@@ -10,24 +10,24 @@
     "source_precomputed": "IONQ_precomputed.json"
   },
   "context": {
-    "last_price": 20.72,
+    "last_price": 23.34,
     "ta_score": {
       "value": 0,
       "max": 10,
       "label": "very_bearish"
     },
-    "alignment_flag": "triple_bearish",
+    "alignment_flag": "divergent_short_long",
     "hmm_regime": {
-      "state": "bear",
-      "probability": 0.9,
-      "expected_duration_days": 8.74
+      "state": "sideways",
+      "probability": 0.7601,
+      "expected_duration_days": 4.35
     },
     "volatility_regime": "normal",
     "signals_counter": {
       "buy": 3,
-      "sell": 10,
-      "neutral": 3,
-      "total": 16,
+      "sell": 7,
+      "neutral": 5,
+      "total": 15,
       "verdict": "strong_sell"
     },
     "mean_reversion_score": {
@@ -37,14 +37,14 @@
       "median_bounce_pct": 7.52,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (0.90), vol normal, signals strong_sell (3b/10s/3n)."
+    "narrative_short": "TA score 0/10 (very_bearish), alignment divergent_short_long, HMM sideways (0.76), vol normal, signals strong_sell (3b/7s/5n)."
   },
   "notes": {
-    "atr_daily": 3.0505,
+    "atr_daily": 3.2019,
     "atr_pct_daily": null,
-    "beta_60d": 2.8418,
+    "beta_60d": 2.9057,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.6062,
+    "beta_corr_60d": 0.6412,
     "btc_corr_high": null,
     "candlestick": {
       "name": "three_black_crows",
@@ -55,24 +55,24 @@
       {
         "indicator": "macd_hist",
         "type": "bullish",
-        "confidence": 0.53,
-        "bars_ago": 11,
+        "confidence": 0.54,
+        "bars_ago": 12,
         "at_price": null
       },
       {
         "indicator": "obv",
         "type": "bearish",
-        "confidence": 0.31,
-        "bars_ago": 9,
+        "confidence": 0.33,
+        "bars_ago": 10,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": -74.76,
+      "current_dd_pct": -71.57,
       "ath_price": 82.09,
       "ath_date": "2025-10-13",
       "max_dd_1y_pct": -71.25,
-      "days_in_dd": 403,
+      "days_in_dd": 406,
       "median_recovery_days": null
     }
   },
@@ -83,26 +83,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 20.4485,
-        "max": 20.5715
+        "min": 23.1105,
+        "max": 23.2495
       },
       "stop": {
-        "price": 16.1443,
+        "price": 18.5371,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -21.29
+        "distance_pct": -20.03
       },
       "targets": [
         {
           "level": 2,
-          "price": 21.4401,
+          "price": 24.0959,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.21
+          "rr": 0.2
         },
         {
           "level": 3,
-          "price": 24.8507,
+          "price": 27.6757,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.99
+          "rr": 0.97
         }
       ],
       "preferred_target": 1,
@@ -118,26 +118,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 20.9509,
-        "max": 21.0346
+        "min": 23.5235,
+        "max": 23.6175
       },
       "stop": {
-        "price": 19.4048,
+        "price": 21.899,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -7.56
+        "distance_pct": -7.09
       },
       "targets": [
         {
           "level": 2,
-          "price": 21.4401,
+          "price": 24.0959,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.28
+          "rr": 0.31
         },
         {
           "level": 3,
-          "price": 24.8507,
+          "price": 27.6757,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.43
+          "rr": 2.46
         }
       ],
       "preferred_target": 1,
@@ -153,32 +153,26 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 17.405,
-        "max": 17.7584
+        "min": 20.6653,
+        "max": 21.0849
       },
       "stop": {
-        "price": 13.0943,
+        "price": 16.1771,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -25.52
+        "distance_pct": -22.51
       },
       "targets": [
         {
-          "level": 1,
-          "price": 18.0296,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 0.1
-        },
-        {
           "level": 2,
-          "price": 21.4401,
+          "price": 24.0959,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.86
+          "rr": 0.69
         },
         {
           "level": 3,
-          "price": 24.8507,
+          "price": 27.6757,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.62
+          "rr": 1.45
         }
       ],
       "preferred_target": 1,
@@ -190,7 +184,7 @@
     }
   ],
   "bot_actionable": false,
-  "bot_actionable_reason": "triple_bearish (long-only anti-knife-catch)",
+  "bot_actionable_reason": "ta_score=0<4",
   "global_conditions": [
     {
       "id": "session_us_open",
@@ -202,7 +196,7 @@
     }
   ],
   "invalidation": {
-    "price": 12.9634,
+    "price": 16.0153,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
