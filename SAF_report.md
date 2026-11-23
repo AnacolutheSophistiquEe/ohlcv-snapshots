@@ -1,12 +1,12 @@
 # SAF
 
-**Generated** : 2026-11-20T21:46:40.063096+00:00  
+**Generated** : 2026-11-23T01:09:28.928317+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 3/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €292.70  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)  
 > ↳ spot €292.70 (+7.1% vs entrée) · entrée €273.23 · stop €263.49 · T1 €284.11 · R/R 1.12  
 > ↳ ¼-Kelly 0.007 · _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_  
 
@@ -68,9 +68,9 @@ _Cloture 2026-11-20 : 292.7 · ATR Wilder 9.2 (3.14 %)_
 - Candidats (la structure propose, la statistique elimine) :
    - ⚪ atr_based a 1.5 ATR (stop 4.989 %) — p(stop avant cible) 0.3205 [0.27 ; 0.37], R/R 0.864, perte reelle 5.211 % (gap inclus), EV 0.0641 % — **REFUSE**
       - refuse : R/R 0.86 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - ⚪ swing_based a 2.54 ATR (stop 10.351 %) — p(stop avant cible) 0.0993 [0.07 ; 0.13], R/R 0.429, perte reelle 10.494 % (gap inclus), EV -0.2832 % — **REFUSE**
+   - ⚪ swing_based a 2.54 ATR (stop 10.284 %) — p(stop avant cible) 0.0993 [0.07 ; 0.13], R/R 0.434, perte reelle 10.388 % (gap inclus), EV -0.2726 % — **REFUSE**
       - refuse : R/R 0.43 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.28 %) : P(cible) 42.0 % x 4.50 % + P(rien) 48.1 % x -2.35 % ne couvrent pas P(stop) 9.9 % x 10.49 %.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-0.27 %) : P(cible) 42.0 % x 4.50 % + P(rien) 48.1 % x -2.35 % ne couvrent pas P(stop) 9.9 % x 10.39 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
    - ⚪ atr_grid a 0.25 ATR (stop 0.832 %) — p(stop avant cible) 0.831 [0.79 ; 0.87], R/R 5.154, perte reelle 0.874 % (gap inclus), EV -0.0086 % — **REFUSE**
       - refuse : p_stop_first 0.831, borne haute 0.868 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
@@ -308,9 +308,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -329,5 +329,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (689944 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (680754 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

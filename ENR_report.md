@@ -1,12 +1,12 @@
 # ENR
 
-**Generated** : 2026-11-20T21:44:53.129016+00:00  
+**Generated** : 2026-11-23T01:08:23.863949+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 2/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €118.32  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)  
 > ↳ spot €118.32 (+2.0% vs entrée) · entrée €115.99 · stop €108.65 · T1 €123.59 · R/R 1.04  
 > ↳ ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈216) · non recalibrée track-record (n=0)_  
 
@@ -56,24 +56,24 @@ _Cloture 2026-11-20 : 118.32 · ATR Wilder 6.64 (5.61 %)_
 ## Echelle Warden — OU poser le stop
 
 - **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — rien n'y coupe la baisse avant la perte du notionnel investi ; un stop ne borne pas la perte (un gap l'execute sous son seuil), il la limite en esperance.**
-- **Couple retenu** : stop 109.8888 sur sr_based (0.68 ATR, 7.126 %) — p(stop avant cible) 0.4988 [0.45 ; 0.55], R/R 4.472, perte reelle 7.751 % (gap inclus), CVaR 12.706 %, EV -1.3588 % — **NON CONFORME (best_effort — proposition de derniere main)**
+- **Couple retenu** : stop 109.8962 sur sr_based (0.68 ATR, 7.12 %) — p(stop avant cible) 0.4988 [0.45 ; 0.55], R/R 4.475, perte reelle 7.746 % (gap inclus), CVaR 12.706 %, EV -1.3563 % — **NON CONFORME (best_effort — proposition de derniere main)**
    - severite des violations : 1.0513 (somme des depassements RELATIFS a chaque seuil ; c'est elle qui a departage, l'esperance ne tranchant qu'a severites egales)
    - viole : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 4.47 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
    - viole : p_stop_first 0.499, borne haute 0.551 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
    - viole : CVaR 95 % 12.71 % > budget 12.00 %
 - Budget de queue : **12.0 %** du notionnel — ⚠ VALEUR FIGEE (valeur de repli (ligne absente de l'allocation)), PAS une mesure. L'allocation derivee de la contrainte du compte n'etait pas disponible.
 - Candidats (la structure propose, la statistique elimine) :
-   - ⚪ sr_based a 0.68 ATR (stop 7.126 %) — p(stop avant cible) 0.4988 [0.45 ; 0.55], R/R 4.472, perte reelle 7.751 % (gap inclus), EV -1.3588 % — **REFUSE**
+   - ⚪ sr_based a 0.68 ATR (stop 7.12 %) — p(stop avant cible) 0.4988 [0.45 ; 0.55], R/R 4.475, perte reelle 7.746 % (gap inclus), EV -1.3563 % — **REFUSE**
       - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 4.47 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : p_stop_first 0.499, borne haute 0.551 > plafond 0.55 (le veto porte sur la BORNE, pas sur le point : un seuil applique a l'estimation serait aleatoire pres de la frontiere)
       - refuse : CVaR 95 % 12.71 % > budget 12.00 %
       - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.36 %) : P(cible) 0.1 % x 34.66 % + P(rien) 50.0 % x 4.91 % ne couvrent pas P(stop) 49.9 % x 7.75 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
-   - 🔴 support a 1.01 ATR (stop 9.185 %) — p(stop avant cible) 0.371 [0.32 ; 0.42], R/R 3.527, perte reelle 9.826 % (gap inclus), EV -1.2429 % — **REFUSE**
+   - 🔴 support a 1.01 ATR (stop 9.178 %) — p(stop avant cible) 0.371 [0.32 ; 0.42], R/R 3.529, perte reelle 9.82 % (gap inclus), EV -1.241 % — **REFUSE**
       - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 3.53 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : CVaR 95 % 13.21 % > budget 12.00 %
-      - ⚠ support DETECTE a 0.58 ATR du spot — compartiment <1, mesure a 47.4 % de casse (IC clusterise [0.441 ; 0.504] sur 1230 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
-      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.24 %) : P(cible) 0.1 % x 34.66 % + P(rien) 62.7 % x 3.75 % ne couvrent pas P(stop) 37.1 % x 9.83 %.
+      - ⚠ support DETECTE a 0.58 ATR du spot — compartiment <1, mesure a 48.0 % de casse (IC clusterise [0.450 ; 0.511] sur 1225 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
+      - 🚩 **LIGNE_EV_NEGATIVE** — le meilleur bracket disponible perd de l'argent en esperance (-1.24 %) : P(cible) 0.1 % x 34.66 % + P(rien) 62.7 % x 3.75 % ne couvrent pas P(stop) 37.1 % x 9.82 %.
         -> ligne DETENUE : l'alternative dominante n'est pas un autre stop mais la REDUCTION ou la CLOTURE de la ligne, a remonter a l'etage portefeuille, pas a traiter en assouplissant les contraintes. Ligne NON detenue : ne pas l'ouvrir sur ce couple stop / cible a cet horizon.
    - ⚪ atr_grid a 0.25 ATR (stop 1.552 %) — p(stop avant cible) 0.8837 [0.85 ; 0.91], R/R 21.47, perte reelle 1.614 % (gap inclus), EV -0.3509 % — **REFUSE**
       - refuse : cible atteinte seulement 0.1 % du temps (< 15 %) meme a 10 seances : le R/R de 21.47 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
@@ -315,9 +315,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -328,7 +328,7 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **BB** : %B 0.17 · largeur 19.0%
 - **ATR** : 7.35 (51.0e pct 1a)  _(volatilite normale)_
 - **OBV/CMF** : OBV falling · CMF -0.088  _(distribution)_
-- **Vol ratio** : 1.12  _(volume normal)_
+- **Vol ratio** : 1.13  _(volume normal)_
 - **Choppiness** : 54.9  _(transition)_
 - **MA** : MA20 126.28 · MA50 134.01 · MA200 152.8  _(prix < MA20)_
 - **Dist MA** : MA20 -6.3% · MA50 -11.7% · MA200 -22.6%
@@ -336,5 +336,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (695725 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (686804 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

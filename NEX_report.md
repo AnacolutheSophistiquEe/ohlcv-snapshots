@@ -1,12 +1,12 @@
 # NEX
 
-**Generated** : 2026-11-20T21:48:24.299731+00:00  
+**Generated** : 2026-11-23T01:10:36.256901+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 3/10 — **Rating** : Pass  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : indeterminate · volatilite normal · €120.00  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)  
+> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)  
 > ↳ spot €120.00 (+8.5% vs entrée) · entrée €110.61 · stop €105.91 · T1 €115.86 · R/R 1.12  
 > ↳ ¼-Kelly 0.0 · _first-passage empirique daily (historique réel, n≈217) · non recalibrée track-record (n=0)_  
 
@@ -164,7 +164,7 @@ _Cloture 2026-11-20 : 120.0 · ATR Wilder 4.75 (3.95 %)_
 | 1.0 ATR | 3.914 % | 115.3036 | 10.88 % | 24.34 % | 34.58 % | 48.13 % | 61.42 % | 74.53 % |
 | 1.25 ATR | 4.892 % | 114.1295 | 4.71 % | 16.39 % | 25.25 % | 39.57 % | 54.7 % | 68.13 % |
 | 1.5 ATR | 5.871 % | 112.9554 | 2.45 % | 11.38 % | 18.96 % | 30.91 % | 47.38 % | 60.84 % |
-| 2.0 ATR | 7.827 % | 110.6071 | 0.78 % | 5.4 % | 10.22 % | 19.69 % | 35.61 % | 50.85 % |
+| 2.0 ATR | 7.827 % | 110.6071 | 0.78 % | 5.4 % | 10.22 % | 19.59 % | 35.61 % | 50.85 % |
 | 2.5 ATR | 9.784 % | 108.2589 | 0.49 % | 2.45 % | 5.4 % | 11.42 % | 24.73 % | 39.26 % |
 | 3.0 ATR | 11.741 % | 105.9107 | 0.2 % | 1.57 % | 3.14 % | 7.19 % | 17.61 % | 30.97 % |
 | 4.0 ATR | 15.655 % | 101.2143 | 0.1 % | 0.49 % | 0.88 % | 1.97 % | 7.52 % | 18.78 % |
@@ -177,7 +177,7 @@ _Cloture 2026-11-20 : 120.0 · ATR Wilder 4.75 (3.95 %)_
 | **1 s.** | 0.15 ATR | 0.35 ATR | 0.40 ATR | 0.53 ATR | 0.67 ATR | 0.77 ATR | 1.04 ATR | 1.24 ATR |
 | **2 s.** | 0.23 ATR | 0.54 ATR | 0.62 ATR | 0.82 ATR | 0.99 ATR | 1.14 ATR | 1.61 ATR | 2.07 ATR |
 | **3 s.** | 0.30 ATR | 0.70 ATR | 0.80 ATR | 1.04 ATR | 1.26 ATR | 1.46 ATR | 2.02 ATR | 2.59 ATR |
-| **5 s.** | 0.43 ATR | 0.96 ATR | 1.09 ATR | 1.44 ATR | 1.76 ATR | 1.99 ATR | 2.67 ATR | 3.42 ATR |
+| **5 s.** | 0.43 ATR | 0.96 ATR | 1.09 ATR | 1.44 ATR | 1.76 ATR | 1.98 ATR | 2.67 ATR | 3.42 ATR |
 | **10 s.** | 0.63 ATR | 1.41 ATR | 1.60 ATR | 2.12 ATR | 2.49 ATR | 2.83 ATR | 3.75 ATR | 4.82 ATR |
 | **20 s.** | 0.98 ATR | 2.04 ATR | 2.25 ATR | 2.88 ATR | 3.49 ATR | 3.90 ATR | 5.24 ATR | 5.94 ATR |
 
@@ -297,9 +297,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : 🟢 LIVE
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-4 sess · macro taux)
+- **intraday** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-25 — US PCE Price Index (headline) — Personal Income & Outlays (J-1 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -318,5 +318,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (679434 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (679634 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._

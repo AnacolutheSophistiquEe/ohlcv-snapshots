@@ -6,7 +6,7 @@
     "exchange": "XETRA",
     "currency": "EUR",
     "isin": "DE000ENER6Y0",
-    "generated_at": "2026-11-20T21:44:53.129016+00:00",
+    "generated_at": "2026-11-23T01:08:23.863949+00:00",
     "schema_version": "2.1",
     "pipeline_version": "2.1",
     "source": "yfinance via fetch_local",
@@ -429,7 +429,7 @@
           122.06,
           118.32,
           118.32,
-          3511170
+          3520464
         ]
       ],
       "h4": [
@@ -1256,8 +1256,8 @@
       "macd_hist": 0.2359136006376219,
       "macd_signal_cross": null,
       "obv_trend": "falling",
-      "mfi_14": 40.61094264256057,
-      "cmf_20": -0.08813865904445486,
+      "mfi_14": 40.60327425816523,
+      "cmf_20": -0.08827435230313624,
       "adl_trend": "falling",
       "adx_14": 17.17857383266008,
       "plus_di_14": 19.410339826726634,
@@ -1265,7 +1265,7 @@
       "di_spread_14": -12.871983616483234,
       "choppiness_14": 54.85474518533356,
       "regime_label": "indeterminate",
-      "volume_ratio_ma20": 1.1245357971399772,
+      "volume_ratio_ma20": 1.1273446378395136,
       "distance_ma20_pct": -6.301226094831451,
       "distance_ma50_pct": -11.709663152899163,
       "distance_ma200_pct": -22.567424032893783
@@ -1907,7 +1907,7 @@
           "placement": "sous_niveau",
           "level_price": 124.3199,
           "beyond_band95": false,
-          "p_touch": 0.2868,
+          "p_touch": 0.2869,
           "p_touch_ref": "entry_mid",
           "distance_pct": 5.39
         },
@@ -1971,7 +1971,7 @@
           "placement": "sous_niveau",
           "level_price": 124.3199,
           "beyond_band95": false,
-          "p_touch": 0.3736,
+          "p_touch": 0.3738,
           "p_touch_ref": "entry_mid",
           "distance_pct": 6.54
         },
@@ -1984,7 +1984,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": false,
-          "p_touch": 0.1174,
+          "p_touch": 0.1175,
           "p_touch_ref": "entry_mid",
           "distance_pct": 13.63
         },
@@ -1997,7 +1997,7 @@
           "placement": "ecart_minimal",
           "level_price": null,
           "beyond_band95": true,
-          "p_touch": 0.1174,
+          "p_touch": 0.1175,
           "p_touch_ref": "entry_mid",
           "distance_pct": 20.71
         }
@@ -2035,7 +2035,7 @@
           "placement": "sous_niveau",
           "level_price": 136.3949,
           "beyond_band95": false,
-          "p_touch": 0.2498,
+          "p_touch": 0.2499,
           "p_touch_ref": "entry_mid",
           "distance_pct": 18.25
         },
@@ -2643,7 +2643,7 @@
   },
   "intraday_5s": {
     "available": true,
-    "generated_at": "2026-11-20T21:44:18.554742+00:00",
+    "generated_at": "2026-11-23T01:07:59.345891+00:00",
     "n_sessions": 125,
     "sessions_distinct": 125,
     "regime_window": "recent",
@@ -8606,7 +8606,7 @@
   },
   "empirical_fp_daily": {
     "available": true,
-    "generated_at": "2026-11-20T21:43:57.341265+00:00",
+    "generated_at": "2026-11-23T01:07:45.274730+00:00",
     "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
     "min_neff": 30.0,
     "halflife_sessions": 500.0,
@@ -8875,71 +8875,24 @@
   },
   "upcoming_events": {
     "available": true,
-    "generated_at": "2026-11-20T21:44:28.438984+00:00",
+    "generated_at": "2026-11-23T01:08:06.987306+00:00",
     "ticker": "ENR",
     "horizons_days": {
       "intraday": 2,
       "swing": 7,
       "deep": 14
     },
-    "n_events": 23,
+    "n_events": 22,
     "events": [
-      {
-        "date": "2026-11-20",
-        "type": "macro",
-        "label": "US University of Michigan Consumer Sentiment (prelim + final)",
-        "importance": "medium",
-        "sessions_to_event": 0,
-        "calendar_days": 0,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-22",
-        "type": "macro",
-        "label": "Capricor (CAPR) FDA PDUFA — deramiocel DMD",
-        "importance": "medium",
-        "sessions_to_event": 1,
-        "calendar_days": 2,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-22",
-        "type": "macro",
-        "label": "Savara (SVRA) FDA PDUFA — molgramostim (MOLBREEVI)",
-        "importance": "high",
-        "sessions_to_event": 1,
-        "calendar_days": 2,
-        "in_plan_horizon": [
-          "intraday",
-          "swing",
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
       {
         "date": "2026-11-24",
         "type": "macro",
         "label": "US Conference Board Consumer Confidence",
         "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8952,9 +8905,10 @@
         "type": "macro",
         "label": "German Ifo Business Climate Index",
         "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8967,9 +8921,10 @@
         "type": "ex_dividend",
         "label": "ENR ex-dividend",
         "importance": "medium",
-        "sessions_to_event": 3,
-        "calendar_days": 4,
+        "sessions_to_event": 1,
+        "calendar_days": 1,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8982,9 +8937,10 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -8997,9 +8953,10 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -9012,9 +8969,10 @@
         "type": "macro",
         "label": "US PCE Price Index (headline) — Personal Income & Outlays",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -9027,9 +8985,10 @@
         "type": "macro",
         "label": "US GDP (advance / second / third estimate)",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -9042,9 +9001,10 @@
         "type": "macro",
         "label": "US Durable Goods Orders",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -9057,9 +9017,10 @@
         "type": "macro",
         "label": "US New Home Sales",
         "importance": "low",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -9072,9 +9033,10 @@
         "type": "macro",
         "label": "Rheinmetall (RHM) Capital Markets Day — 25–27 novembre 2026",
         "importance": "high",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -9087,9 +9049,10 @@
         "type": "macro",
         "label": "Sartorius Stedim Biotech (SRT3) — Sartorius Day, Lausanne",
         "importance": "medium",
-        "sessions_to_event": 4,
-        "calendar_days": 5,
+        "sessions_to_event": 1,
+        "calendar_days": 2,
         "in_plan_horizon": [
+          "intraday",
           "swing",
           "deep"
         ],
@@ -9101,6 +9064,21 @@
         "date": "2026-11-27",
         "type": "macro",
         "label": "Nuvalent (NUVL) FDA PDUFA — neladalkib ALK+ NSCLC",
+        "importance": "high",
+        "sessions_to_event": 3,
+        "calendar_days": 4,
+        "in_plan_horizon": [
+          "swing",
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-11-30",
+        "type": "macro",
+        "label": "Vertex (VRTX) FDA PDUFA — povetacicept (IgAN)",
         "importance": "high",
         "sessions_to_event": 5,
         "calendar_days": 7,
@@ -9115,25 +9093,12 @@
       {
         "date": "2026-11-30",
         "type": "macro",
-        "label": "Vertex (VRTX) FDA PDUFA — povetacicept (IgAN)",
-        "importance": "high",
-        "sessions_to_event": 7,
-        "calendar_days": 10,
-        "in_plan_horizon": [
-          "deep"
-        ],
-        "impact": "macro_broad",
-        "ticker_specific": false,
-        "recommendation": null
-      },
-      {
-        "date": "2026-11-30",
-        "type": "macro",
         "label": "MSCI — suppression de Strategy (MSTR) signalée au 30 novembre",
         "importance": "high",
-        "sessions_to_event": 7,
-        "calendar_days": 10,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "rates_sensitive",
@@ -9145,9 +9110,10 @@
         "type": "macro",
         "label": "Cogent Biosciences (COGT) FDA PDUFA — bezuclastinib",
         "importance": "high",
-        "sessions_to_event": 7,
-        "calendar_days": 10,
+        "sessions_to_event": 5,
+        "calendar_days": 7,
         "in_plan_horizon": [
+          "swing",
           "deep"
         ],
         "impact": "macro_broad",
@@ -9159,8 +9125,8 @@
         "type": "macro",
         "label": "US ISM Manufacturing PMI",
         "importance": "medium",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9173,8 +9139,8 @@
         "type": "macro",
         "label": "US JOLTS (Job Openings and Labor Turnover)",
         "importance": "medium",
-        "sessions_to_event": 8,
-        "calendar_days": 11,
+        "sessions_to_event": 6,
+        "calendar_days": 8,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9187,8 +9153,8 @@
         "type": "macro",
         "label": "US ADP National Employment Report",
         "importance": "medium",
-        "sessions_to_event": 9,
-        "calendar_days": 12,
+        "sessions_to_event": 6,
+        "calendar_days": 9,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9201,8 +9167,8 @@
         "type": "macro",
         "label": "US Initial Jobless Claims (weekly)",
         "importance": "medium",
-        "sessions_to_event": 9,
-        "calendar_days": 13,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9215,8 +9181,36 @@
         "type": "macro",
         "label": "US Continuing Jobless Claims (weekly, insured unemployment)",
         "importance": "low",
-        "sessions_to_event": 9,
-        "calendar_days": 13,
+        "sessions_to_event": 7,
+        "calendar_days": 10,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "rates_sensitive",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-12-03",
+        "type": "macro",
+        "label": "US ISM Services PMI",
+        "importance": "medium",
+        "sessions_to_event": 7,
+        "calendar_days": 10,
+        "in_plan_horizon": [
+          "deep"
+        ],
+        "impact": "macro_broad",
+        "ticker_specific": false,
+        "recommendation": null
+      },
+      {
+        "date": "2026-12-04",
+        "type": "macro",
+        "label": "US Employment Situation (NFP / unemployment / earnings)",
+        "importance": "high",
+        "sessions_to_event": 8,
+        "calendar_days": 11,
         "in_plan_horizon": [
           "deep"
         ],
@@ -9635,7 +9629,7 @@
   },
   "factor_attribution": {
     "available": true,
-    "generated_at": "2026-11-20T21:44:26.875025+00:00",
+    "generated_at": "2026-11-23T01:08:05.894910+00:00",
     "ticker": "ENR",
     "window_sessions": 60,
     "n_observations_aligned": 59,
@@ -9841,7 +9835,7 @@
   },
   "fundamentals": {
     "available": true,
-    "generated_at": "2026-11-20T21:44:23.625544+00:00",
+    "generated_at": "2026-11-23T01:08:03.464431+00:00",
     "ticker": "ENR",
     "yahoo": "ENR.DE",
     "source": "yfinance.Ticker.info",
@@ -9865,13 +9859,13 @@
       "market_cap": 100672405504.0,
       "market_cap_musd": 100672.41,
       "market_cap_str": "100.67 Md EUR",
-      "enterprise_value": 91434762240.0,
+      "enterprise_value": 91939889152.0,
       "shares_outstanding": 850848567.0,
       "float_shares": 771285614.0,
       "free_float_pct": 90.6,
-      "avg_volume_3m": 2254011.0,
+      "avg_volume_3m": 2286946.0,
       "adv_str": "2.3 M titres",
-      "avg_volume_10d": 3332090.0,
+      "avg_volume_10d": 2931932.0,
       "archetype_suggested": null,
       "archetype_basis": "aucune regle ne tranche — a l'appreciation du /full_brief",
       "business_summary_raw": "Siemens Energy AG operates as an energy technology company worldwide. It operates through Gas Services, Grid Technologies, Transformation of Industry, and Siemens Gamesa segments. The company provides gas and steam turbines, generators, and heat pumps, as well as performance enhancement, maintenance, digitalization, and consulting services for central and distributed power generation; and high voltage direct current transmission systems, offshore wind farm grid connections, transformers, flexible alternating current transmission systems, high voltage substations, air and gas-insulated switchgears, circuit breakers, capacitor, digital grid solutions and components, components and cyber security, and transformers and storage solutions. It also offers electrolyzers, industrial steam turbines, industrial generators, turbo and reciprocating compressors, drive systems and solutions, batteries and fuel cells, and other systems and solutions, as well as service and digital offerings; onshore and onshore wind turbines; design, engineering, manufacturing, and installation solutions for onshore markets; offshore wind turbine equipment design, manufacturing, and installation solutions; and management, operation and maintenance services for wind farms. The company serves utilities, independent power producers, project developers, municipal energy producers, engineering, procurement, and construction companies, oil and gas, transmission and distribution system operators, and industrial and infrastructure customers. Siemens Energy AG was founded in 1866 and is based in Munich, Germany."
@@ -9895,7 +9889,7 @@
       "net_debt": -8180999680.0,
       "net_debt_str": "-8.18 Md EUR",
       "net_debt_ebitda": -1.26,
-      "ebitda_implied": 6482895791.26489,
+      "ebitda_implied": 6482857788.182202,
       "debt_to_equity": 25.4,
       "current_ratio": 0.89,
       "quick_ratio": 0.56,
@@ -9904,7 +9898,7 @@
       "eps_forward": 8.87,
       "eps_growth_pct": 673.8,
       "dividend_yield_pct": 1.815,
-      "dividend_yield_note": "dividendYield=0.55 incoherent avec trailingAnnualDividendYield=0.018153118 — valeur derivee du controle",
+      "dividend_yield_note": "dividendYield=0.59 incoherent avec trailingAnnualDividendYield=0.018153118 — valeur derivee du controle",
       "dividend_rate": 0.7,
       "payout_ratio_pct": 16.02,
       "return_on_equity_pct": 36.88,
@@ -9921,15 +9915,15 @@
       "statements_note": "3 champs repris des etats financiers (exercice clos 2026-09-30), `.info` ne les publiant pas pour cette place"
     },
     "valuation": {
-      "ev_ebitda_ttm": 14.1,
+      "ev_ebitda_ttm": 14.18,
       "ev_definition": "enterpriseValue du fournisseur : capitalisation + dette totale Y COMPRIS obligations locatives - tresorerie et placements court terme",
       "earnings_metric": "EBITDA TTM du fournisseur (apres loyers)",
       "leases_treatment": "loyers dans l'EV mais PAS reintegres a l'EBITDA : le multiple est sureleve pour un gros locataire ; apparier EV ajuste <-> EBITDAR, ou EV hors loyers <-> EBITDA",
-      "ev_revenue_ttm": 2.07,
+      "ev_revenue_ttm": 2.08,
       "ps_ttm": 2.28,
       "pe_trailing": 27.08,
       "pe_fwd": 13.34,
-      "peg": 0.31,
+      "peg": 0.29,
       "price_to_book": 8.89,
       "fcf_yield_pct": 6.33,
       "ev_ebitda_fwd": null,
@@ -9948,15 +9942,15 @@
     },
     "ownership": {
       "insiders_pct": 8.1,
-      "institutions_pct": 57.63,
+      "institutions_pct": 57.6,
       "short_pct_float": null,
       "short_ratio_days": null
     },
     "market": {
       "beta": 1.865,
       "beta_note": "beta statique de la source — `beta_dynamic` du precompute est mesure et prime",
-      "change_52w_pct": 25.65,
-      "low_52w": 100.35,
+      "change_52w_pct": 11.15,
+      "low_52w": 102.9,
       "high_52w": 191.66
     },
     "price_behaviour": {
@@ -10336,7 +10330,7 @@
       },
       {
         "field": "valuation.ev_ebitda_ttm",
-        "value": 14.1,
+        "value": 14.18,
         "from": "fundamentals.valuation.ev_ebitda_ttm"
       },
       {
@@ -10356,7 +10350,7 @@
       },
       {
         "field": "valuation.peg",
-        "value": 0.31,
+        "value": 0.29,
         "from": "fundamentals.valuation.peg"
       },
       {
@@ -10406,7 +10400,7 @@
       },
       {
         "field": "ownership.institutions_pct",
-        "value": 57.63,
+        "value": 57.6,
         "from": "fundamentals.ownership.institutions_pct"
       },
       {
@@ -10470,7 +10464,7 @@
       "scope": "univers suivi par le pipeline",
       "not_market_median": "mediane des titres SUIVIS par ce pipeline dans le meme secteur Yahoo — PAS une mediane de marche, de secteur GICS complet ni d'indice",
       "sector": "Industrials",
-      "aggregate_generated_at": "2026-11-20T21:38:34.293113+00:00",
+      "aggregate_generated_at": "2026-11-23T01:04:07.984898+00:00",
       "aggregate_file": "sector_multiples.json",
       "aggregate_age_days": 0.0,
       "n_titles": 59,
@@ -10478,90 +10472,90 @@
       "metrics": {
         "pe_trailing": {
           "n": 34,
-          "q1": 21.04,
-          "median": 26.26,
-          "q3": 34.42,
-          "min": 9.42,
-          "max": 601.87,
+          "q1": 20.09,
+          "median": 25.34,
+          "q3": 32.03,
+          "min": 8.42,
+          "max": 555.61,
           "self": 27.08,
-          "self_vs_median_pct": 3.1,
+          "self_vs_median_pct": 6.9,
           "thin": false
         },
         "pe_fwd": {
           "n": 46,
-          "q1": 12.88,
-          "median": 16.4,
-          "q3": 22.15,
+          "q1": 12.76,
+          "median": 15.84,
+          "q3": 21.48,
           "min": 5.46,
-          "max": 712.35,
+          "max": 634.53,
           "self": 13.34,
-          "self_vs_median_pct": -18.7,
+          "self_vs_median_pct": -15.8,
           "thin": false
         },
         "ev_ebitda_ttm": {
           "n": 45,
-          "q1": 11.51,
-          "median": 16.48,
-          "q3": 20.23,
-          "min": 2.35,
-          "max": 155.88,
-          "self": 14.1,
-          "self_vs_median_pct": -14.4,
+          "q1": 10.65,
+          "median": 16.03,
+          "q3": 19.66,
+          "min": 1.61,
+          "max": 143.57,
+          "self": 14.18,
+          "self_vs_median_pct": -11.5,
           "thin": false
         },
         "ev_revenue_ttm": {
           "n": 57,
-          "q1": 1.74,
-          "median": 3.06,
-          "q3": 4.33,
-          "min": 0.26,
-          "max": 215.4,
-          "self": 2.07,
-          "self_vs_median_pct": -32.4,
+          "q1": 1.69,
+          "median": 2.94,
+          "q3": 4.26,
+          "min": 0.24,
+          "max": 147.7,
+          "self": 2.08,
+          "self_vs_median_pct": -29.3,
           "thin": false
         },
         "ps_ttm": {
           "n": 59,
-          "q1": 1.52,
-          "median": 2.72,
-          "q3": 4.3,
-          "min": 0.28,
-          "max": 2501.24,
+          "q1": 1.42,
+          "median": 2.64,
+          "q3": 4.1,
+          "min": 0.26,
+          "max": 2282.98,
           "self": 2.28,
-          "self_vs_median_pct": -16.2,
+          "self_vs_median_pct": -13.6,
           "thin": false
         },
         "price_to_book": {
           "n": 48,
-          "q1": 2.51,
-          "median": 5.38,
-          "q3": 7.5,
-          "min": 0.77,
-          "max": 25.7,
+          "q1": 2.5,
+          "median": 4.89,
+          "q3": 6.78,
+          "min": 0.68,
+          "max": 21.77,
           "self": 8.89,
-          "self_vs_median_pct": 65.2,
+          "self_vs_median_pct": 81.8,
           "thin": false
         },
         "fcf_yield_pct": {
           "n": 59,
-          "q1": -2.45,
-          "median": 1.22,
-          "q3": 3.21,
-          "min": -74.38,
-          "max": 12.6,
+          "q1": -2.69,
+          "median": 1.35,
+          "q3": 3.24,
+          "min": -85.0,
+          "max": 12.82,
           "self": 6.33,
-          "self_vs_median_pts": 5.11,
+          "self_vs_median_pts": 4.98,
           "thin": false
         },
         "dividend_yield_pct": {
           "n": 59,
           "q1": 0.0,
-          "median": 0.52,
-          "q3": 1.35,
+          "median": 0.55,
+          "q3": 1.4,
           "min": 0.0,
-          "max": 5.91,
+          "max": 6.18,
           "self": 1.815,
-          "self_vs_median_pts": 1.29,
+          "self_vs_median_pts": 1.26,
           "thin": false
         }
       },
@@ -10746,7 +10740,7 @@
   },
   "gap_risk": {
     "available": true,
-    "generated_at": "2026-11-20T21:43:54.919974+00:00",
+    "generated_at": "2026-11-23T01:07:43.597541+00:00",
     "source_csv": "/home/ibkr/ohlcv-snapshots/ENR_daily_long.csv",
     "input_window": "daily_long (5 ans)",
     "n_sessions": 1274,
@@ -11154,7 +11148,7 @@
   },
   "first_passage_daily": {
     "available": true,
-    "generated_at": "2026-11-20T21:43:56.997992+00:00",
+    "generated_at": "2026-11-23T01:07:45.068349+00:00",
     "ticker": "ENR",
     "source_csv": "ENR_daily_long.csv",
     "n_sessions": 1275,
@@ -15257,7 +15251,7 @@
         "anchor_date": "2026-11-05",
         "anchor_event": "swing_low",
         "anchor_price": 110.92,
-        "vwap_today": 124.1282,
+        "vwap_today": 124.1271,
         "distance_from_close_pct": -4.68,
         "bars_since_anchor": 11
       },
@@ -15265,7 +15259,7 @@
         "anchor_date": "2026-10-29",
         "anchor_event": "swing_high",
         "anchor_price": 137.76,
-        "vwap_today": 124.9784,
+        "vwap_today": 124.9774,
         "distance_from_close_pct": -5.33,
         "bars_since_anchor": 16
       },
@@ -15273,7 +15267,7 @@
         "anchor_date": "2026-10-06",
         "anchor_event": "swing_high",
         "anchor_price": 151.0,
-        "vwap_today": 128.2318,
+        "vwap_today": 128.2309,
         "distance_from_close_pct": -7.73,
         "bars_since_anchor": 33
       }
@@ -20217,8 +20211,8 @@
         "signal": "neutral"
       },
       "klinger": {
-        "value": 1123552.6173058534,
-        "signal_line": 1455555.0961279578,
+        "value": 1121671.9416691745,
+        "signal_line": 1455286.4281798608,
         "signal": "sell"
       }
     },
@@ -21757,7 +21751,7 @@
         -360540.8671765034,
         640315.3557557194,
         2068646.4658868462,
-        1123552.6173058534
+        1121671.9416691745
       ],
       "klinger_signal": [
         0.0,
@@ -22013,7 +22007,7 @@
         1547531.5525437463,
         1417929.2387168854,
         1510888.8425983083,
-        1455555.0961279578
+        1455286.4281798608
       ]
     }
   },
@@ -22021,22 +22015,22 @@
     "available": true,
     "latest": {
       "close": 118.31999969482422,
-      "vwap": 125.3451352755207,
+      "vwap": 125.3442753866993,
       "vwap_meta": {
         "window": 20,
-        "distance_from_close_pct": -5.604633610434549,
+        "distance_from_close_pct": -5.603986037818242,
         "position": "below_vwap"
       },
-      "force_index": -4647324.387215898,
+      "force_index": -4658450.629283507,
       "force_index_meta": {
         "signal": "sell"
       },
-      "chaikin_oscillator": -3385963.2122015394,
+      "chaikin_oscillator": -3388920.394019721,
       "chaikin_oscillator_meta": {
         "cross_recent": "down",
         "signal": "sell"
       },
-      "vroc_14": 106.19215990951709,
+      "vroc_14": 106.7379466228346,
       "vroc_14_meta": {
         "signal": "high_activity"
       }
@@ -22552,7 +22546,7 @@
         125.33233012442423,
         125.19849171781557,
         125.34277950279784,
-        125.3451352755207
+        125.3442753866993
       ],
       "force_index": [
         null,
@@ -22808,7 +22802,7 @@
         -1385245.6153043283,
         -618709.881499169,
         -517945.9590379448,
-        -4647324.387215898
+        -4658450.629283507
       ],
       "chaikin_oscillator": [
         0.0,
@@ -23064,7 +23058,7 @@
         -75689.27257522382,
         -1054558.9515515994,
         -2048414.8700826988,
-        -3385963.2122015394
+        -3388920.394019721
       ],
       "vroc_14": [
         null,
@@ -23320,7 +23314,7 @@
         -32.47444389980749,
         17.486678020644902,
         -23.483122017106865,
-        106.19215990951709
+        106.7379466228346
       ]
     }
   },
@@ -23352,7 +23346,7 @@
       "classification": "low"
     },
     "volume_zscore": {
-      "value": 0.9262,
+      "value": 0.9339,
       "classification": "normal"
     },
     "rsi_zscore": {
@@ -23657,24 +23651,24 @@
       },
       "volume": {
         "n_zero_volume_bars": 0,
-        "mean_volume_60d": 2346957.25,
+        "mean_volume_60d": 2347112.15,
         "median_volume_60d": 1961353.0,
-        "volume_consistency_score": 0.49891167953026827
+        "volume_consistency_score": 0.4988780530006026
       },
       "liquidity": {
-        "liquidity_score": 368394795.17013806,
+        "liquidity_score": 368431450.7060435,
         "liquidity_classification": "high",
         "liquidity_note": "moyenne de Close × Volume sur les 30 dernières barres, en devise NATIVE du titre, non convertie : seuils 1e6/1e7/1e8/1e9 non comparables entre devises"
       },
       "freshness": {
         "last_bar_date": "2026-11-20T00:00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-11-20T21:44:49.226295+00:00",
+        "asof_utc": "2026-11-23T01:08:21.370818+00:00",
         "venue": "XETRA",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23690,7 +23684,7 @@
         "supplemented_dates": []
       },
       "overall": {
-        "overall_quality_score": 88.65887204334773,
+        "overall_quality_score": 88.65836764540275,
         "overall_label": "excellent",
         "warnings": []
       }
@@ -23738,13 +23732,13 @@
       },
       "freshness": {
         "last_bar_date": "2026-11-20T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-11-20T21:44:49.226295+00:00",
+        "asof_utc": "2026-11-23T01:08:21.370818+00:00",
         "venue": "XETRA",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -23799,13 +23793,13 @@
       },
       "freshness": {
         "last_bar_date": "2026-11-20T16:00:00+00:00",
-        "days_since_last_bar": 0,
+        "days_since_last_bar": 3,
         "freshness_status": "fresh",
         "sessions_since_last_bar": 0,
         "last_bar_synthetic": false,
         "last_bar_in_progress": false,
         "freshness_reserve": null,
-        "asof_utc": "2026-11-20T21:44:49.226295+00:00",
+        "asof_utc": "2026-11-23T01:08:21.370818+00:00",
         "venue": "XETRA",
         "method": "statut en SÉANCES de la place closes depuis la dernière barre (venue_calendar, clôture réelle) : 0 = fresh, 1-5 = stale, > 5 = outdated ; 0 séance mais dernière barre synthétique = fresh_synthetic, séance non close = fresh_partial. days_since_last_bar = jours CALENDAIRES (information)"
       },
@@ -24086,7 +24080,7 @@
         }
       }
     ],
-    "generated_at": "2026-11-20T21:44:53.938950+00:00",
+    "generated_at": "2026-11-23T01:08:24.404670+00:00",
     "history_file": "data/v3/episodes/ENR_episodes.json"
   },
   "setup": {
@@ -24158,38 +24152,38 @@
       }
     ],
     "counts_by_class": {
-      "20": {
-        "NOISE": 15,
-        "PULLBACK": 14,
-        "CORRECTION": 1,
-        "CAPITULATION": 4
-      },
-      "126": {
-        "NOISE": 0,
-        "PULLBACK": 3,
-        "CORRECTION": 0,
-        "CAPITULATION": 1
-      },
       "252": {
         "NOISE": 0,
         "PULLBACK": 1,
         "CORRECTION": 0,
         "CAPITULATION": 1
       },
+      "20": {
+        "NOISE": 15,
+        "PULLBACK": 14,
+        "CORRECTION": 1,
+        "CAPITULATION": 4
+      },
       "63": {
         "NOISE": 4,
         "PULLBACK": 2,
         "CORRECTION": 1,
         "CAPITULATION": 2
+      },
+      "126": {
+        "NOISE": 0,
+        "PULLBACK": 3,
+        "CORRECTION": 0,
+        "CAPITULATION": 1
       }
     },
-    "generated_at": "2026-11-20T21:44:54.023133+00:00"
+    "generated_at": "2026-11-23T01:08:24.466347+00:00"
   },
   "profiles": {
     "version": "profiles/1.0",
     "provenance": "v3",
     "status": "UNVALIDATED",
-    "generated_at": "2026-11-20T21:37:56.076484+00:00",
+    "generated_at": "2026-11-23T01:03:40.085476+00:00",
     "n_occasions": 423,
     "zones_open_episodes": [
       {
