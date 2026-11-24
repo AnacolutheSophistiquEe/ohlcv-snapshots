@@ -1,0 +1,227 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "ticker": "HOOD",
+    "generated_at": "2026-11-24T01:33:40Z",
+    "generated_by": "vps_precompute@1.2",
+    "trust_phase": 1,
+    "valid_from": "2026-11-25T08:00:00Z",
+    "valid_until": "2026-11-25T21:00:00Z",
+    "source_precomputed": "HOOD_precomputed.json"
+  },
+  "context": {
+    "last_price": 67.37,
+    "ta_score": {
+      "value": 1,
+      "max": 10,
+      "label": "very_bearish"
+    },
+    "alignment_flag": "divergent_short_long",
+    "hmm_regime": {
+      "state": "bear",
+      "probability": 0.9,
+      "expected_duration_days": 9.75
+    },
+    "volatility_regime": "normal",
+    "signals_counter": {
+      "buy": 1,
+      "sell": 7,
+      "neutral": 7,
+      "total": 15,
+      "verdict": "strong_sell"
+    },
+    "mean_reversion_score": {
+      "setup": "rsi_30-40_dist_ma20_<-10",
+      "win_rate": 0.7,
+      "sample_size": 10,
+      "median_bounce_pct": 2.9,
+      "confidence": "medium"
+    },
+    "narrative_short": "TA score 1/10 (very_bearish), alignment divergent_short_long, HMM bear (0.90), vol normal, signals strong_sell (1b/7s/7n)."
+  },
+  "notes": {
+    "atr_daily": 5.5359,
+    "atr_pct_daily": null,
+    "beta_60d": 2.2043,
+    "beta_benchmark": "IWM",
+    "beta_corr_60d": 0.655,
+    "btc_corr_high": null,
+    "candlestick": {
+      "name": "bearish_engulfing",
+      "date": "2026-11-19",
+      "confidence": 0.867
+    },
+    "divergences": [
+      {
+        "indicator": "macd_hist",
+        "type": "hidden_bearish",
+        "confidence": 0.51,
+        "bars_ago": 8,
+        "at_price": null
+      },
+      {
+        "indicator": "macd_hist",
+        "type": "bullish",
+        "confidence": 0.46,
+        "bars_ago": 12,
+        "at_price": null
+      },
+      {
+        "indicator": "obv",
+        "type": "hidden_bearish",
+        "confidence": 0.16,
+        "bars_ago": 8,
+        "at_price": null
+      }
+    ],
+    "drawdown": {
+      "current_dd_pct": -55.81,
+      "ath_price": 152.46,
+      "ath_date": "2025-10-09",
+      "max_dd_1y_pct": -54.65,
+      "days_in_dd": 410,
+      "median_recovery_days": null
+    }
+  },
+  "entry_plans": [
+    {
+      "id": "A",
+      "type": "bounce_support",
+      "priority": 1,
+      "side": "long",
+      "entry_zone": {
+        "min": 61.7286,
+        "max": 63.515
+      },
+      "stop": {
+        "price": 59.7139,
+        "basis": "swing_plan_below_confluence_support",
+        "distance_pct": -4.64
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 71.3811,
+          "basis": "sous résistance (strong) à 71.93 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
+          "rr": 3.01
+        },
+        {
+          "level": 2,
+          "price": 77.5704,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 5.14
+        },
+        {
+          "level": 3,
+          "price": 83.7597,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 7.27
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 50,
+      "rationale": "Confluence support BB_LOWER + S/R_support (strength 4.0). Bounce mecanique."
+    },
+    {
+      "id": "B",
+      "type": "breakout",
+      "priority": 2,
+      "side": "long",
+      "entry_zone": {
+        "min": 72.0066,
+        "max": 72.2944
+      },
+      "stop": {
+        "price": 69.0084,
+        "basis": "below_broken_resistance",
+        "distance_pct": -4.35
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 79.7925,
+          "basis": "next_confluence_resistance",
+          "rr": 2.43
+        },
+        {
+          "level": 2,
+          "price": 80.9046,
+          "basis": "fib_236",
+          "rr": 2.79
+        },
+        {
+          "level": 3,
+          "price": 89.2777,
+          "basis": "fib_382",
+          "rr": 5.45
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 25,
+      "rationale": "Breakout au-dessus confluence resistance VPVR_VAL + S/R_resistance (strength 9.0)."
+    },
+    {
+      "id": "C",
+      "type": "deep_retracement",
+      "priority": 3,
+      "side": "long",
+      "entry_zone": {
+        "min": 59.7235,
+        "max": 60.9362
+      },
+      "stop": {
+        "price": 52.3292,
+        "basis": "fallback_psych_-10pct",
+        "distance_pct": -13.26
+      },
+      "targets": [
+        {
+          "level": 1,
+          "price": 71.3811,
+          "basis": "sous résistance (strong) à 71.93 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
+          "rr": 1.38
+        },
+        {
+          "level": 2,
+          "price": 77.5704,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 2.15
+        },
+        {
+          "level": 3,
+          "price": 83.7597,
+          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
+          "rr": 2.93
+        }
+      ],
+      "preferred_target": 1,
+      "conditions": [
+        "session_us_open"
+      ],
+      "max_budget_pct": 35,
+      "rationale": "Fallback (aucune confluence qualifiante) — niveau reel psych_-10pct. Prix d'entree/sortie indicatifs pour analyse ; setup mecanique degrade (cf. bot_actionable)."
+    }
+  ],
+  "bot_actionable": false,
+  "bot_actionable_reason": "ta_score=1<4",
+  "global_conditions": [
+    {
+      "id": "session_us_open",
+      "type": "session_window",
+      "params": {
+        "session": "us_regular"
+      },
+      "verifiable_by": "compare_clock_to_session_def"
+    }
+  ],
+  "invalidation": {
+    "price": 51.8059,
+    "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "available": true,
+  "generated_at": "2026-11-24T01:33:54.226666+00:00",
+  "window_sessions": 55,
+  "tickers_used": [
+    "326030",
+    "ALCPB",
+    "BESI",
+    "COIN",
+    "FIG",
+    "IS0E",
+    "LRCX",
+    "NEX",
+    "NNE",
+    "NOK",
+    "NVTS",
+    "R3NK",
+    "SRT3"
+  ],
+  "tickers_skipped": [],
+  "weights_eur": {
+    "326030": 274.35,
+    "ALCPB": 607.58,
+    "BESI": 212.8,
+    "COIN": 372.98,
+    "FIG": 596.2,
+    "IS0E": 612.22,
+    "LRCX": 314.0,
+    "NEX": 125.3,
+    "NNE": 150.8,
+    "NOK": 510.5,
+    "NVTS": 505.83,
+    "R3NK": 143.44,
+    "SRT3": 590.6
+  },
+  "weights_source": {
+    "source": "tws_live_state",
+    "status": "stale",
+    "age_days": 3.7,
+    "max_age_days": 3.0,
+    "note": "instantane de positions perime — refuse (un faux reel est pire qu'un theorique assume)",
+    "fallback": "manual"
+  },
+  "total_notional_eur": 5016.6,
+  "capital_total_eur": 2000.0,
+  "var_95_historical": {
+    "method": "historical_empirical",
+    "basket": "portefeuille complet",
+    "n_lines": 13,
+    "notional_eur": 5016.6,
+    "n_sessions": 341,
+    "window_start": "2025-08-01",
+    "window_end": "2026-11-24",
+    "var_eur": 169.76,
+    "cvar_eur": 228.22,
+    "var_pct_notional": 3.38,
+    "cvar_pct_notional": 4.55,
+    "worst_session_eur": 357.96,
+    "window_binding_ticker": "FIG",
+    "window_binding_first_date": "2025-07-31",
+    "caveat": "fenetre TRONQUEE au debut commun a toutes les lignes : c'est l'historique le plus court (FIG) qui la fixe. Panier complet, fenetre courte.",
+    "per_line_observed_pct": {
+      "326030": 93.6,
+      "ALCPB": 98.5,
+      "BESI": 98.5,
+      "COIN": 97.1,
+      "FIG": 97.1,
+      "IS0E": 97.7,
+      "LRCX": 97.1,
+      "NEX": 98.5,
+      "NNE": 97.1,
+      "NOK": 97.1,
+      "NVTS": 97.1,
+      "R3NK": 98.0,
+      "SRT3": 98.0
+    },
+    "long_window_restricted_basket": {
+      "method": "historical_empirical",
+      "basket": "lignes a historique profond",
+      "n_lines": 10,
+      "notional_eur": 4126.16,
+      "n_sessions": 1298,
+      "window_start": "2021-11-25",
+      "window_end": "2026-11-24",
+      "var_eur": 133.08,
+      "cvar_eur": 178.35,
+      "var_pct_notional": 3.23,
+      "cvar_pct_notional": 4.32,
+      "worst_session_eur": 347.46,
+      "min_sessions_required": 750,
+      "notional_share_pct": 82.3,
+      "lines_excluded": [
+        "FIG",
+        "NNE",
+        "R3NK"
+      ],
+      "caveat": "fenetre LONGUE mais panier INCOMPLET : les lignes trop recentes sont exclues, leur risque n'est pas compte ici."
+    },
+    "note": "quantile empirique de la serie du panier pondere ; aucune hypothese de distribution — a preferer a la version gaussienne sur des titres a queues epaisses. Les jours de fermeture d'une place recoivent un rendement 0 par report du dernier cours (correct) ; les periodes ANTERIEURES a l'historique d'une ligne sont exclues par troncature (un 0 y serait une sous-estimation)."
+  },
+  "var_95": {
+    "method": "gaussian_1d",
+    "method_caveat": "VaR 95 % seule : ne dit rien de la QUEUE. Le CVaR de `var_95_historical` est 28-36 % au-dessus, et la pire seance 1,7-2,4x au-dessus. Sensible a la fenetre.",
+    "z_95": 1.6448536269514722,
+    "sigma_portfolio_daily_eur": 127.01,
+    "value_eur": 208.91,
+    "pct_total_notional": 4.16,
+    "pct_capital": 10.45
+  },
+  "panel_beta_weighted": {
+    "SPY": 2.1004
+  },
+  "panel_beta_partial": {
+    "KS11": -0.0068,
+    "GDAXI": 0.4541,
+    "FCHI": 1.5796
+  },
+  "panel_beta_status": "ok",
+  "panel_beta_coverage": {
+    "KS11": {
+      "notional_covered_eur": 274.35,
+      "notional_total_eur": 5016.6,
+      "coverage_pct": 5.5,
+      "lines_missing_beta": [
+        "ALCPB",
+        "BESI",
+        "COIN",
+        "FIG",
+        "IS0E",
+        "LRCX",
+        "NEX",
+        "NNE",
+        "NOK",
+        "NVTS",
+        "R3NK",
+        "SRT3"
+      ]
+    },
+    "GDAXI": {
+      "notional_covered_eur": 590.6,
+      "notional_total_eur": 5016.6,
+      "coverage_pct": 11.8,
+      "lines_missing_beta": [
+        "326030",
+        "ALCPB",
+        "BESI",
+        "COIN",
+        "FIG",
+        "IS0E",
+        "LRCX",
+        "NEX",
+        "NNE",
+        "NOK",
+        "NVTS",
+        "R3NK"
+      ]
+    },
+    "FCHI": {
+      "notional_covered_eur": 125.3,
+      "notional_total_eur": 5016.6,
+      "coverage_pct": 2.5,
+      "lines_missing_beta": [
+        "326030",
+        "ALCPB",
+        "BESI",
+        "COIN",
+        "FIG",
+        "IS0E",
+        "LRCX",
+        "NNE",
+        "NOK",
+        "NVTS",
+        "R3NK",
+        "SRT3"
+      ]
+    },
+    "SPY": {
+      "notional_covered_eur": 4026.35,
+      "notional_total_eur": 5016.6,
+      "coverage_pct": 80.3,
+      "lines_missing_beta": [
+        "326030",
+        "NEX",
+        "SRT3"
+      ]
+    }
+  },
+  "concentration_flags": [],
+  "high_corr_pairs_in_panel": [
+    {
+      "pair": "LRCX_NVTS",
+      "rho": 0.8015,
+      "share_pct": 16.3,
+      "flag": "red"
+    },
+    {
+      "pair": "LRCX_NOK",
+      "rho": 0.789,
+      "share_pct": 16.4,
+      "flag": "red"
+    },
+    {
+      "pair": "NEX_NOK",
+      "rho": 0.7127,
+      "share_pct": 12.7,
+      "flag": "red"
+    },
+    {
+      "pair": "NOK_NVTS",
+      "rho": 0.708,
+      "share_pct": 20.3,
+      "flag": "red"
+    },
+    {
+      "pair": "NNE_NVTS",
+      "rho": 0.6912,
+      "share_pct": 13.1,
+      "flag": "red"
+    },
+    {
+      "pair": "BESI_NVTS",
+      "rho": 0.6586,
+      "share_pct": 14.3,
+      "flag": "red"
+    },
+    {
+      "pair": "ALCPB_COIN",
+      "rho": 0.645,
+      "share_pct": 19.5,
+      "flag": "red"
+    },
+    {
+      "pair": "BESI_NEX",
+      "rho": 0.6355,
+      "share_pct": 6.7,
+      "flag": "red"
+    },
+    {
+      "pair": "BESI_LRCX",
+      "rho": 0.6316,
+      "share_pct": 10.5,
+      "flag": "red"
+    },
+    {
+      "pair": "LRCX_NNE",
+      "rho": 0.6197,
+      "share_pct": 9.3,
+      "flag": "red"
+    },
+    {
+      "pair": "NNE_NOK",
+      "rho": 0.6138,
+      "share_pct": 13.2,
+      "flag": "red"
+    }
+  ],
+  "scaling": {
+    "var_threshold_pct": 8.0,
+    "var_ref_metric": "var_95_pct_capital",
+    "scale_factor": 0.7659,
+    "scaling_applied": true,
+    "note": "Scale factor < 1 → réduire tous les sizings × scale_factor pour ramener la VaR sous le seuil."
+  },
+  "note": "Modèle Gaussien — ne capte pas les queues épaisses. Pour stress, utiliser compute_stress_test.py. Net beta = combinaison linéaire pondérée des betas par ticker × benchmark."
+}
