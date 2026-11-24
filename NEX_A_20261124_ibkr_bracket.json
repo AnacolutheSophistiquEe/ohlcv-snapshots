@@ -1,65 +1,64 @@
 {
   "available": true,
-  "generated_at": "2026-11-13T21:43:54.716560+00:00",
-  "prediction_id": "ENR_B_20261113",
+  "generated_at": "2026-11-24T01:10:38.600897+00:00",
+  "prediction_id": "NEX_A_20261124",
   "account": "${IBKR_ACCOUNT_ID}",
-  "symbol": "ENR",
-  "exchange": "IBIS",
+  "symbol": "NEX",
+  "exchange": "SBF",
   "currency": "EUR",
-  "selected_execution_plan_id": "B",
+  "selected_execution_plan_id": "A",
   "execution_plan": {
-    "plan_id": "B",
-    "horizon": "swing",
-    "source": "stops_targets_by_horizon.swing",
-    "entry_source": "stops_targets_by_horizon.swing.entry_mid (zone entry_low..entry_high)",
-    "stop_source": "stops_targets_by_horizon.swing.stop_price",
-    "targets_source": "stops_targets_by_horizon.swing.targets.t1..t3",
-    "stop_basis": "plancher anti-bruit (R/R<2)",
+    "plan_id": "A",
+    "horizon": "intraday",
+    "source": "stops_targets_by_horizon.intraday",
+    "entry_source": "stops_targets_by_horizon.intraday.entry_mid (zone entry_low..entry_high)",
+    "stop_source": "stops_targets_by_horizon.intraday.stop_price",
+    "targets_source": "stops_targets_by_horizon.intraday.targets.t1..t3",
+    "stop_basis": "plancher anti-bruit 5 s — stop EV-optimal −8% (first-passage 5 s réel)",
     "entry_zone_raw": [
-      125.9172,
-      128.9867
+      120.0437,
+      120.892
     ],
-    "entry_mid_raw": 127.4519,
-    "spot": 131.27999877929688,
-    "entry_vs_spot_pct": -2.92
+    "entry_mid_raw": 120.4679,
+    "spot": 125.3000030517578,
+    "entry_vs_spot_pct": -3.91
   },
   "parent": {
     "action": "BUY",
     "order_type": "LMT",
-    "limit_price": 127.45,
+    "limit_price": 120.4,
     "limit_price_range": [
-      125.91,
-      128.98
+      120.0,
+      120.8
     ],
     "quantity": 1,
-    "tif": "GTD",
-    "gtd": "2026-11-20T16:30:00+00:00"
+    "tif": "DAY"
   },
   "children": [
     {
       "action": "SELL",
       "order_type": "LMT",
-      "limit_price": 135.74,
+      "limit_price": 122.9,
       "quantity": 1,
       "tif": "GTC",
       "tag": "T1",
       "tranche": "T1",
-      "oca_group": "ENR_B_swing_20261113_T1",
+      "oca_group": "NEX_A_intraday_20261124_T1",
       "oca_type": 1
     },
     {
       "action": "SELL",
       "order_type": "STP",
-      "stop_price": 119.62,
+      "stop_price": 110.8,
       "quantity": 1,
       "tif": "GTC",
       "tag": "SL",
       "tranche": "T1",
-      "oca_group": "ENR_B_swing_20261113_T1",
+      "oca_group": "NEX_A_intraday_20261124_T1",
       "oca_type": 1
     }
   ],
-  "oca_group": "ENR_B_swing_20261113",
+  "oca_group": "NEX_A_intraday_20261124",
   "oca_type": 1,
   "oca_structure": {
     "mode": "per_tranche",
@@ -67,11 +66,11 @@
     "oca_type_per_group": 1,
     "groups": [
       {
-        "oca_group": "ENR_B_swing_20261113_T1",
+        "oca_group": "NEX_A_intraday_20261124_T1",
         "tranche": "T1",
         "quantity": 1,
-        "target_price": 135.74,
-        "stop_price": 119.62
+        "target_price": 122.9,
+        "stop_price": 110.8
       }
     ],
     "legacy_oca_group_role": "préfixe des groupes de tranche : NE PAS l'appliquer à tous les enfants (un groupe unique SL(q) + LMT partiels annulerait le stop au premier fill — audit B04)",
@@ -85,46 +84,42 @@
     "commission_note": "un stop touché = jusqu'à 1 ordre(s) STP exécuté(s) (un par tranche encore ouverte), donc autant de commissions"
   },
   "execution_rules": {
-    "stop_mode": "breakeven_after_T1",
-    "stop_mode_description": "SL → prix d'entrée après hit T1",
+    "stop_mode": "fixed",
+    "stop_mode_description": "SL hard statique, pas de trailing",
     "trail_distance_atr": null,
     "time_stop": {
       "enabled": true,
-      "max_holding_sessions": 5,
-      "exit_mode": "market_close_at_breakeven"
+      "max_holding_sessions": 1,
+      "exit_mode": "market_close_unconditional"
     },
     "order_validity": {
-      "type": "GTD",
-      "offset_sessions": 5,
-      "sessions_counted": 5,
+      "type": "DAY",
+      "offset_sessions": 0,
+      "sessions_counted": 1,
       "convention": "N séances DE LA PLACE, séance de référence incluse ; séance de référence = première séance dont la clôture réelle est postérieure à l'ancre (la séance en cours si elle n'est pas close, sinon la suivante) ; expiration à la clôture RÉELLE de la N-ième séance (demi-séances et heure d'été incluses) ; DAY = 1 séance",
-      "anchor_utc": "2026-11-13T21:43:53.774030+00:00",
+      "anchor_utc": "2026-11-24T01:10:37.495768+00:00",
       "anchor_source": "meta.generated_at",
-      "calendar": "XETRA",
-      "good_till_date": "2026-11-20T16:30:00+00:00",
-      "good_till_date_ibkr_utc": "20261120-16:30:00",
-      "reference_session": "2026-11-16",
-      "expiry_session": "2026-11-20",
+      "calendar": "EURONEXT",
+      "good_till_date": "2026-11-24T16:30:00+00:00",
+      "good_till_date_ibkr_utc": "20261124-16:30:00",
+      "reference_session": "2026-11-24",
+      "expiry_session": "2026-11-24",
       "expiry_is_early_close": false,
       "status": "ok",
       "sessions": [
-        "2026-11-16",
-        "2026-11-17",
-        "2026-11-18",
-        "2026-11-19",
-        "2026-11-20"
+        "2026-11-24"
       ]
     },
     "venue_calendar": {
-      "venue": "XETRA",
+      "venue": "EURONEXT",
       "known": true,
-      "timezone": "Europe/Berlin",
+      "timezone": "Europe/Paris",
       "regular_open": "09:00",
       "regular_close": "17:30",
       "holidays_complete": true,
       "version": "venue_calendar/1.0",
       "note": null,
-      "source": "meta.exchange (XETRA)"
+      "source": "meta.exchange (Euronext Paris)"
     },
     "scale_out_weights": [
       0.5,
@@ -161,57 +156,53 @@
       "entry": "down",
       "stop": "down",
       "targets": "up",
-      "tick": 0.01,
+      "tick": 0.1,
       "tick_source": "TICKER_VENUE"
     }
   },
   "bracket_metadata": {
-    "plan_id": "B",
-    "horizon": "swing",
-    "horizon_label_long": "swing_court_~1_semaine",
-    "composite_score": 4.0,
-    "composite_score_source": "horizon_ta_score.plan_b.score",
-    "ev_pct_risk": -0.075,
-    "ev_pct_risk_source": "edge_metrics.by_horizon.swing.blended_scale_out.ev_pct_risk",
-    "ev_pct_risk_basis_price": 127.4519,
+    "plan_id": "A",
+    "horizon": "intraday",
+    "horizon_label_long": "intraday",
+    "composite_score": 8.0,
+    "composite_score_source": "horizon_ta_score.plan_a.score",
+    "ev_pct_risk": null,
+    "ev_pct_risk_source": "absent",
+    "ev_pct_risk_basis_price": 120.4679,
     "ev_pct_risk_threshold": 0.3,
-    "ev_status": "negative_ev",
+    "ev_status": null,
     "ev_status_basis": "ev_pct_risk d'edge_metrics (ci-dessus) — PAS l'EV du rating (rating_ev_pct_risk)",
-    "p_hit_upper": {
-      "T1": 0.3065,
-      "T2": 0.0635,
-      "T3": 0.0
-    },
-    "p_hit_source": "edge_metrics.by_horizon.swing.targets.{t1,t2,t3}.p_hit_upper",
-    "p_fill": null,
-    "p_fill_source": "absent",
-    "p_fill_note": "conviction_rating.by_horizon.swing absent : p_fill non disponible (moteur de trajectoires, SPEC_07 Lot 3)",
-    "rating": "Unknown",
-    "rating_source": "conviction_rating.by_horizon.swing",
-    "rating_note": "NON_ESTIMABLE : source empirical_5s inéligible — source périmée (15 séance(s) de retard, drapeau lu sur first_passage_by_horizon) (aucun repli sur un autre moteur, R09)",
+    "p_hit_upper": null,
+    "p_hit_source": "absent",
+    "p_fill": 0.0976,
+    "p_fill_source": "conviction_rating.by_horizon.intraday.inputs.p_fill (empirical_5s)",
+    "p_fill_note": "p_fill telle qu'utilisée par le rating, reprise sans recalcul",
+    "rating": "Pass",
+    "rating_source": "conviction_rating.by_horizon.intraday",
+    "rating_note": "ENTRÉE RAREMENT ATTEINTE : l'entrée du plan est touchée dans 12/125 fenêtres (p_fill pondéré 10 %) — plan quasi jamais exécutable tel que construit ; EV conditionnelle non estimable",
     "rating_ev_pct_risk": null,
     "rating_ev_source": "empirical_5s",
-    "notional_eur": 131.28,
-    "hold_tolerance_breach_price": 98.46,
+    "notional_eur": 125.3,
+    "hold_tolerance_breach_price": 93.975,
     "hold_fallback_active": true,
-    "prediction_id": "ENR_B_20261113"
+    "prediction_id": "NEX_A_20261124"
   },
   "sanity_checks": {
     "all_targets_above_entry": true,
     "stop_below_entry": true,
     "stop_above_zero": true,
     "qty_split_sum_equals_total": true,
-    "tick_size_used": 0.01,
+    "tick_size_used": 0.1,
     "qty_total_positive": true,
     "targets_non_decreasing": true,
     "geometry_ok": true,
     "rr_basis": "parent.limit_price (entrée posée, après arrondi)",
     "rr_on_posted_entry": {
-      "T1": 1.06,
-      "T2": 2.18,
-      "T3": 3.29
+      "T1": 0.26,
+      "T2": 0.51,
+      "T3": 0.77
     },
-    "rr_blended_on_posted_entry": 1.06,
+    "rr_blended_on_posted_entry": 0.26,
     "oca_per_tranche": true,
     "stop_qty_equals_total": true,
     "max_joint_sales_le_held": true,
