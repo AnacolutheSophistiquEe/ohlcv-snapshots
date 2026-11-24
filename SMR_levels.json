@@ -2,32 +2,32 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMR",
-    "generated_at": "2026-11-23T22:05:07Z",
+    "generated_at": "2026-11-24T01:33:40Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-24T08:00:00Z",
-    "valid_until": "2026-11-24T21:00:00Z",
+    "valid_from": "2026-11-25T08:00:00Z",
+    "valid_until": "2026-11-25T21:00:00Z",
     "source_precomputed": "SMR_precomputed.json"
   },
   "context": {
-    "last_price": 3.36,
+    "last_price": 3.53,
     "ta_score": {
       "value": 0,
       "max": 10,
       "label": "very_bearish"
     },
-    "alignment_flag": "triple_bearish",
+    "alignment_flag": "mixed",
     "hmm_regime": {
-      "state": "sideways",
+      "state": "bear",
       "probability": 0.9,
-      "expected_duration_days": 5.87
+      "expected_duration_days": 13.84
     },
     "volatility_regime": "low",
     "signals_counter": {
-      "buy": 4,
-      "sell": 10,
-      "neutral": 2,
-      "total": 16,
+      "buy": 5,
+      "sell": 7,
+      "neutral": 3,
+      "total": 15,
       "verdict": "sell"
     },
     "mean_reversion_score": {
@@ -37,14 +37,14 @@
       "median_bounce_pct": 5.5,
       "confidence": "high"
     },
-    "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM sideways (0.90), vol low, signals sell (4b/10s/2n)."
+    "narrative_short": "TA score 0/10 (very_bearish), alignment mixed, HMM bear (0.90), vol low, signals sell (5b/7s/3n)."
   },
   "notes": {
-    "atr_daily": 0.4921,
+    "atr_daily": 0.5024,
     "atr_pct_daily": null,
-    "beta_60d": 2.708,
+    "beta_60d": 2.5737,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.5708,
+    "beta_corr_60d": 0.5756,
     "btc_corr_high": null,
     "candlestick": {
       "name": "three_black_crows",
@@ -55,24 +55,24 @@
       {
         "indicator": "rsi",
         "type": "bullish",
-        "confidence": 0.56,
-        "bars_ago": 11,
+        "confidence": 0.57,
+        "bars_ago": 12,
         "at_price": null
       },
       {
         "indicator": "macd_hist",
         "type": "hidden_bearish",
-        "confidence": 0.31,
-        "bars_ago": 9,
+        "confidence": 0.32,
+        "bars_ago": 10,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": -93.71,
+      "current_dd_pct": -93.39,
       "ath_price": 53.43,
       "ath_date": "2025-10-15",
       "max_dd_1y_pct": -85.3,
-      "days_in_dd": 401,
+      "days_in_dd": 404,
       "median_recovery_days": null
     }
   },
@@ -83,26 +83,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 3.31,
-        "max": 3.33
+        "min": 3.4895,
+        "max": 3.5105
       },
       "stop": {
-        "price": 2.6219,
+        "price": 2.7764,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -21.03
+        "distance_pct": -20.67
       },
       "targets": [
         {
           "level": 2,
-          "price": 3.4762,
+          "price": 3.6486,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.22
+          "rr": 0.21
         },
         {
           "level": 3,
-          "price": 4.0263,
+          "price": 4.2103,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.01
+          "rr": 0.98
         }
       ],
       "preferred_target": 1,
@@ -118,26 +118,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 3.4034,
-        "max": 3.417
+        "min": 3.5636,
+        "max": 3.5778
       },
       "stop": {
-        "price": 3.154,
+        "price": 3.3088,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -7.51
+        "distance_pct": -7.33
       },
       "targets": [
         {
           "level": 2,
-          "price": 3.4762,
+          "price": 3.6486,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.26
+          "rr": 0.3
         },
         {
           "level": 3,
-          "price": 4.0263,
+          "price": 4.2103,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.4
+          "rr": 2.44
         }
       ],
       "preferred_target": 1,
@@ -153,32 +153,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 2.6595,
-        "max": 2.7135
+        "min": 3.0239,
+        "max": 3.0853
       },
       "stop": {
-        "price": 1.9619,
+        "price": 2.3164,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -26.97
+        "distance_pct": -24.17
       },
       "targets": [
         {
           "level": 1,
-          "price": 2.926,
+          "price": 3.0869,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 0.33
+          "rr": 0.04
         },
         {
           "level": 2,
-          "price": 3.4762,
+          "price": 3.6486,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.09
+          "rr": 0.8
         },
         {
           "level": 3,
-          "price": 4.0263,
+          "price": 4.2103,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.85
+          "rr": 1.57
         }
       ],
       "preferred_target": 1,
@@ -190,7 +190,7 @@
     }
   ],
   "bot_actionable": false,
-  "bot_actionable_reason": "triple_bearish (long-only anti-knife-catch)",
+  "bot_actionable_reason": "ta_score=0<4",
   "global_conditions": [
     {
       "id": "session_us_open",
@@ -202,7 +202,7 @@
     }
   ],
   "invalidation": {
-    "price": 1.9423,
+    "price": 2.2932,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
