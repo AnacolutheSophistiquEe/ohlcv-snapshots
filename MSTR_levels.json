@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "MSTR",
-    "generated_at": "2026-11-24T01:33:40Z",
+    "generated_at": "2026-11-24T22:05:03Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-11-25T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "MSTR_precomputed.json"
   },
   "context": {
-    "last_price": 84.42,
+    "last_price": 77.55,
     "ta_score": {
       "value": 0,
       "max": 10,
@@ -20,7 +20,7 @@
     "hmm_regime": {
       "state": "bear",
       "probability": 0.9,
-      "expected_duration_days": 12.0
+      "expected_duration_days": 11.68
     },
     "volatility_regime": "normal",
     "signals_counter": {
@@ -40,11 +40,11 @@
     "narrative_short": "TA score 0/10 (very_bearish), alignment triple_bearish, HMM bear (0.90), vol normal, signals sell (5b/9s/2n)."
   },
   "notes": {
-    "atr_daily": 8.8834,
+    "atr_daily": 8.645,
     "atr_pct_daily": null,
-    "beta_60d": 2.3431,
+    "beta_60d": 2.309,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.5548,
+    "beta_corr_60d": 0.5429,
     "btc_corr_high": null,
     "candlestick": {
       "name": "three_black_crows",
@@ -56,37 +56,37 @@
         "indicator": "rsi",
         "type": "hidden_bearish",
         "confidence": 0.19,
-        "bars_ago": 13,
+        "bars_ago": 14,
         "at_price": null
       },
       {
         "indicator": "rsi",
         "type": "bullish",
-        "confidence": 0.42,
-        "bars_ago": 16,
+        "confidence": 0.4,
+        "bars_ago": 17,
         "at_price": null
       },
       {
         "indicator": "macd_hist",
         "type": "hidden_bearish",
-        "confidence": 0.3,
-        "bars_ago": 13,
+        "confidence": 0.29,
+        "bars_ago": 14,
         "at_price": null
       },
       {
         "indicator": "macd_hist",
         "type": "bullish",
         "confidence": 0.53,
-        "bars_ago": 16,
+        "bars_ago": 17,
         "at_price": null
       }
     ],
     "drawdown": {
-      "current_dd_pct": -82.18,
+      "current_dd_pct": -83.63,
       "ath_price": 473.83,
       "ath_date": "2024-11-20",
-      "max_dd_1y_pct": -60.29,
-      "days_in_dd": 733,
+      "max_dd_1y_pct": -60.42,
+      "days_in_dd": 734,
       "median_recovery_days": null
     }
   },
@@ -97,32 +97,26 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 83.4888,
-        "max": 83.9912
+        "min": 76.8089,
+        "max": 77.2711
       },
       "stop": {
-        "price": 71.0949,
+        "price": 64.5825,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -15.1
+        "distance_pct": -16.17
       },
       "targets": [
         {
-          "level": 1,
-          "price": 92.9165,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 0.73
-        },
-        {
           "level": 2,
-          "price": 102.8484,
+          "price": 79.5908,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 1.51
+          "rr": 0.2
         },
         {
           "level": 3,
-          "price": 112.7804,
+          "price": 89.2562,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.3
+          "rr": 0.98
         }
       ],
       "preferred_target": 1,
@@ -138,32 +132,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 85.1851,
-        "max": 85.5255
+        "min": 78.1381,
+        "max": 78.4503
       },
       "stop": {
-        "price": 80.6583,
+        "price": 73.7375,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -5.5
+        "distance_pct": -5.82
       },
       "targets": [
         {
-          "level": 1,
-          "price": 92.9165,
-          "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 1.61
-        },
-        {
           "level": 2,
-          "price": 102.8484,
+          "price": 79.5908,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.72
+          "rr": 0.28
         },
         {
           "level": 3,
-          "price": 112.7804,
+          "price": 89.2562,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 5.84
+          "rr": 2.41
         }
       ],
       "preferred_target": 1,
@@ -179,32 +167,32 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 73.2643,
-        "max": 74.7519
+        "min": 68.9599,
+        "max": 70.3601
       },
       "stop": {
-        "price": 61.0549,
+        "price": 57.0425,
         "basis": "fallback_pivot_classical_s3",
-        "distance_pct": -17.5
+        "distance_pct": -18.11
       },
       "targets": [
         {
           "level": 1,
-          "price": 92.9165,
+          "price": 69.9254,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 37% (sans stop)",
-          "rr": 1.46
+          "rr": 0.02
         },
         {
           "level": 2,
-          "price": 102.8484,
+          "price": 79.5908,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.23
+          "rr": 0.79
         },
         {
           "level": 3,
-          "price": 112.7804,
+          "price": 89.2562,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 2.99
+          "rr": 1.55
         }
       ],
       "preferred_target": 1,
@@ -228,7 +216,7 @@
     }
   ],
   "invalidation": {
-    "price": 60.4444,
+    "price": 56.4721,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "326030",
-    "generated_at": "2026-11-24T01:33:40Z",
+    "generated_at": "2026-11-24T22:05:03Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-11-25T08:00:00Z",
@@ -10,41 +10,41 @@
     "source_precomputed": "326030_precomputed.json"
   },
   "context": {
-    "last_price": 80600.0,
+    "last_price": 84100.0,
     "ta_score": {
-      "value": 5,
+      "value": 6,
       "max": 10,
       "label": "neutral"
     },
-    "alignment_flag": "mixed",
+    "alignment_flag": "divergent_short_long",
     "hmm_regime": {
       "state": "bull",
-      "probability": 0.7157,
-      "expected_duration_days": 6.81
+      "probability": 0.6617,
+      "expected_duration_days": 6.84
     },
     "volatility_regime": "high",
     "signals_counter": {
       "buy": 2,
-      "sell": 5,
-      "neutral": 8,
+      "sell": 3,
+      "neutral": 10,
       "total": 15,
       "verdict": "neutral"
     },
     "mean_reversion_score": {
-      "setup": "rsi_40-50_dist_ma20_-5_-2",
-      "win_rate": 0.66,
-      "sample_size": 29,
-      "median_bounce_pct": 2.71,
+      "setup": "rsi_50-60_dist_ma20_-2_+2",
+      "win_rate": 0.92,
+      "sample_size": 13,
+      "median_bounce_pct": 6.77,
       "confidence": "medium"
     },
-    "narrative_short": "TA score 5/10 (neutral), alignment mixed, HMM bull (0.72), vol high, signals neutral (2b/5s/8n)."
+    "narrative_short": "TA score 6/10 (neutral), alignment divergent_short_long, HMM bull (0.66), vol high, signals neutral (2b/3s/10n)."
   },
   "notes": {
-    "atr_daily": 5135.7143,
+    "atr_daily": 5335.7143,
     "atr_pct_daily": null,
-    "beta_60d": -0.0068,
+    "beta_60d": 0.0727,
     "beta_benchmark": "KS11",
-    "beta_corr_60d": -0.0066,
+    "beta_corr_60d": 0.0711,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -42.71,
+      "current_dd_pct": -40.23,
       "ath_price": 140700.0,
       "ath_date": "2025-11-26",
       "max_dd_1y_pct": -50.68,
@@ -76,32 +76,32 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 74547.089,
-        "max": 79092.0
+        "min": 74867.7154,
+        "max": 79162.0
       },
       "stop": {
-        "price": 74077.0635,
-        "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -3.57
+        "price": 74119.0382,
+        "basis": "below_zone_1pct_below_confluence_support",
+        "distance_pct": -3.76
       },
       "targets": [
         {
           "level": 1,
-          "price": 88241.4286,
+          "price": 88221.4286,
           "basis": "sous VPVR VAH à 8.876e+04 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 4.16
+          "rr": 3.87
         },
         {
           "level": 2,
-          "price": 93983.3317,
+          "price": 94186.9385,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 6.26
+          "rr": 5.93
         },
         {
           "level": 3,
-          "price": 99725.2348,
+          "price": 100152.4484,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 8.35
+          "rr": 7.99
         }
       ],
       "preferred_target": 1,
@@ -115,38 +115,26 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 84229.145,
-        "max": 84565.725
+        "min": 93866.0569,
+        "max": 94241.146
       },
       "stop": {
-        "price": 83649.65,
+        "price": 87759.0,
         "basis": "below_broken_resistance",
-        "distance_pct": -0.89
+        "distance_pct": -6.69
       },
       "targets": [
         {
           "level": 1,
-          "price": 88200.0,
-          "basis": "fib_50",
-          "rr": 5.09
-        },
-        {
-          "level": 2,
-          "price": 88200.0,
-          "basis": "next_confluence_resistance",
-          "rr": 5.09
-        },
-        {
-          "level": 3,
-          "price": 92330.0,
-          "basis": "fib_618",
-          "rr": 10.61
+          "price": 98210.0,
+          "basis": "fib_786",
+          "rr": 0.66
         }
       ],
       "preferred_target": 1,
       "conditions": [],
       "max_budget_pct": 25,
-      "rationale": "Breakout au-dessus confluence resistance FIB_382 + MA20 (strength 5.0)."
+      "rationale": "Breakout au-dessus confluence resistance FIB_50 + VPVR_POC + VPVR_VAH + MA200 + FIB_618 + S/R_resistance + BB_UPPER (strength 77.0)."
     },
     {
       "id": "C",
@@ -158,28 +146,28 @@
         "max": 68139.0
       },
       "stop": {
-        "price": 60096.4286,
+        "price": 59796.4286,
         "basis": "fallback_sr_support",
-        "distance_pct": -10.92
+        "distance_pct": -11.36
       },
       "targets": [
         {
           "level": 1,
-          "price": 88241.4286,
+          "price": 88221.4286,
           "basis": "sous VPVR VAH à 8.876e+04 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 2.82
+          "rr": 2.71
         },
         {
           "level": 2,
-          "price": 93983.3317,
+          "price": 94186.9385,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.6
+          "rr": 3.49
         },
         {
           "level": 3,
-          "price": 99725.2348,
+          "price": 100152.4484,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.38
+          "rr": 4.27
         }
       ],
       "preferred_target": 1,
@@ -192,7 +180,7 @@
   "bot_actionable_reason": "ok",
   "global_conditions": [],
   "invalidation": {
-    "price": 59495.4643,
+    "price": 59198.4643,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
