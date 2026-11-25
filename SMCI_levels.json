@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "SMCI",
-    "generated_at": "2026-11-24T22:05:03Z",
+    "generated_at": "2026-11-25T01:32:53Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-25T08:00:00Z",
-    "valid_until": "2026-11-25T21:00:00Z",
+    "valid_from": "2026-11-26T08:00:00Z",
+    "valid_until": "2026-11-26T21:00:00Z",
     "source_precomputed": "SMCI_precomputed.json"
   },
   "context": {
-    "last_price": 22.62,
+    "last_price": 22.615,
     "ta_score": {
       "value": 1,
       "max": 10,
@@ -42,9 +42,9 @@
   "notes": {
     "atr_daily": 2.6279,
     "atr_pct_daily": null,
-    "beta_60d": 2.2763,
+    "beta_60d": 2.2757,
     "beta_benchmark": "IWM",
-    "beta_corr_60d": 0.567,
+    "beta_corr_60d": 0.5669,
     "btc_corr_high": null,
     "candlestick": {
       "name": "",
@@ -94,9 +94,9 @@
         "max": 22.5374
       },
       "stop": {
-        "price": 18.6782,
+        "price": 18.6732,
         "basis": "fallback_pivot_camarilla_s1",
-        "distance_pct": -16.87
+        "distance_pct": -16.9
       },
       "targets": [
         {
@@ -142,13 +142,13 @@
       "targets": [
         {
           "level": 1,
-          "price": 27.866,
+          "price": 27.8658,
           "basis": "next_confluence_resistance",
           "rr": 0.98
         },
         {
           "level": 2,
-          "price": 29.1218,
+          "price": 29.118,
           "basis": "fib_236",
           "rr": 1.51
         },
@@ -173,7 +173,7 @@
       "side": "long",
       "entry_zone": {
         "min": 19.48,
-        "max": 20.0251
+        "max": 20.0241
       },
       "stop": {
         "price": 18.7008,
@@ -191,7 +191,7 @@
           "level": 2,
           "price": 28.1919,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 8.02
+          "rr": 8.03
         },
         {
           "level": 3,
@@ -221,7 +221,7 @@
     }
   ],
   "invalidation": {
-    "price": 18.4914,
+    "price": 18.4865,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

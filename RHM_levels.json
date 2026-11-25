@@ -2,15 +2,15 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "RHM",
-    "generated_at": "2026-11-24T22:05:03Z",
+    "generated_at": "2026-11-25T01:32:53Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
-    "valid_from": "2026-11-25T08:00:00Z",
-    "valid_until": "2026-11-25T21:00:00Z",
+    "valid_from": "2026-11-26T08:00:00Z",
+    "valid_until": "2026-11-26T21:00:00Z",
     "source_precomputed": "RHM_precomputed.json"
   },
   "context": {
-    "last_price": 734.5,
+    "last_price": 734.1,
     "ta_score": {
       "value": 0,
       "max": 10,
@@ -42,18 +42,18 @@
   "notes": {
     "atr_daily": 48.1643,
     "atr_pct_daily": null,
-    "beta_60d": 0.8339,
+    "beta_60d": 0.911,
     "beta_benchmark": "GDAXI",
-    "beta_corr_60d": 0.2662,
+    "beta_corr_60d": 0.2897,
     "btc_corr_high": null,
     "candlestick": {
-      "name": "",
-      "date": "",
-      "confidence": null
+      "name": "shooting_star",
+      "date": "2026-11-24",
+      "confidence": 0.544
     },
     "divergences": [],
     "drawdown": {
-      "current_dd_pct": -62.69,
+      "current_dd_pct": -62.71,
       "ath_price": 1968.8203,
       "ath_date": "2025-09-29",
       "max_dd_1y_pct": -63.52,
@@ -68,24 +68,24 @@
       "priority": 1,
       "side": "long",
       "entry_zone": {
-        "min": 730.6714,
-        "max": 735.0686
+        "min": 730.2726,
+        "max": 734.6674
       },
       "stop": {
-        "price": 662.2536,
+        "price": 661.8535,
         "basis": "fallback_pivot_camarilla_s1",
         "distance_pct": -9.64
       },
       "targets": [
         {
           "level": 2,
-          "price": 745.87,
+          "price": 745.47,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 0.18
         },
         {
           "level": 3,
-          "price": 799.7194,
+          "price": 799.3193,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 0.95
         }
@@ -103,24 +103,24 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 736.8661,
-        "max": 739.8106
+        "min": 736.4657,
+        "max": 739.4086
       },
       "stop": {
-        "price": 712.0479,
+        "price": 711.6479,
         "basis": "fallback_pivot_camarilla_r1",
         "distance_pct": -3.56
       },
       "targets": [
         {
           "level": 2,
-          "price": 745.87,
+          "price": 745.47,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 0.29
         },
         {
           "level": 3,
-          "price": 799.7194,
+          "price": 799.3193,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 2.33
         }
@@ -138,24 +138,24 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 697.183,
-        "max": 711.339
+        "min": 696.9171,
+        "max": 711.0676
       },
       "stop": {
-        "price": 635.5536,
+        "price": 635.2836,
         "basis": "fallback_pivot_classical_s3",
         "distance_pct": -9.76
       },
       "targets": [
         {
           "level": 2,
-          "price": 745.87,
+          "price": 745.47,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 0.61
+          "rr": 0.6
         },
         {
           "level": 3,
-          "price": 799.7194,
+          "price": 799.3193,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
           "rr": 1.39
         }
@@ -181,7 +181,7 @@
     }
   ],
   "invalidation": {
-    "price": 629.1981,
+    "price": 628.9308,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }
