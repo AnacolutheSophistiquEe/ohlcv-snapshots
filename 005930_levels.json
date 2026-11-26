@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "meta": {
     "ticker": "005930",
-    "generated_at": "2026-11-26T01:33:09Z",
+    "generated_at": "2026-11-26T22:05:31Z",
     "generated_by": "vps_precompute@1.2",
     "trust_phase": 1,
     "valid_from": "2026-11-27T08:00:00Z",
@@ -10,7 +10,7 @@
     "source_precomputed": "005930_precomputed.json"
   },
   "context": {
-    "last_price": 174800.0,
+    "last_price": 172900.0,
     "ta_score": {
       "value": 2,
       "max": 10,
@@ -42,14 +42,14 @@
   "notes": {
     "atr_daily": 11132.1429,
     "atr_pct_daily": null,
-    "beta_60d": 1.2494,
+    "beta_60d": 1.2566,
     "beta_benchmark": "KS11",
-    "beta_corr_60d": 0.9569,
+    "beta_corr_60d": 0.9587,
     "btc_corr_high": null,
     "candlestick": {
       "name": "doji",
-      "date": "2026-11-23",
-      "confidence": 0.877
+      "date": "2026-11-26",
+      "confidence": 1.0
     },
     "divergences": [
       {
@@ -61,7 +61,7 @@
       }
     ],
     "drawdown": {
-      "current_dd_pct": -50.89,
+      "current_dd_pct": -51.42,
       "ath_price": 355930.1875,
       "ath_date": "2026-06-18",
       "max_dd_1y_pct": -52.04,
@@ -77,31 +77,31 @@
       "side": "long",
       "entry_zone": {
         "min": 164842.7223,
-        "max": 165735.9782
+        "max": 165342.7986
       },
       "stop": {
-        "price": 158191.3544,
+        "price": 157336.3544,
         "basis": "swing_plan_below_confluence_support",
-        "distance_pct": -4.29
+        "distance_pct": -4.7
       },
       "targets": [
         {
           "level": 1,
           "price": 183299.0172,
           "basis": "sous résistance (weak) à 1.844e+05 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 2.54
+          "rr": 2.35
         },
         {
           "level": 2,
           "price": 195745.1313,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 4.29
+          "rr": 3.95
         },
         {
           "level": 3,
           "price": 208191.2454,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 6.04
+          "rr": 5.56
         }
       ],
       "preferred_target": 1,
@@ -115,32 +115,32 @@
       "priority": 2,
       "side": "long",
       "entry_zone": {
-        "min": 175525.35,
-        "max": 176226.75
+        "min": 173623.45,
+        "max": 174317.25
       },
       "stop": {
-        "price": 169783.9286,
+        "price": 167883.9286,
         "basis": "fallback_pivot_camarilla_r1",
-        "distance_pct": -3.46
+        "distance_pct": -3.5
       },
       "targets": [
         {
           "level": 1,
           "price": 183299.0172,
           "basis": "sous résistance (weak) à 1.844e+05 (−0,1 ATR) · atteinte hist. 37% (sans stop)",
-          "rr": 1.22
+          "rr": 1.53
         },
         {
           "level": 2,
           "price": 195745.1313,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 3.26
+          "rr": 3.58
         },
         {
           "level": 3,
           "price": 208191.2454,
           "basis": "écart minimal 0.5·ATR·√5 (aucun niveau réel à portée) · atteinte hist. 12% (sans stop)",
-          "rr": 5.3
+          "rr": 5.62
         }
       ],
       "preferred_target": 1,
@@ -154,11 +154,11 @@
       "priority": 3,
       "side": "long",
       "entry_zone": {
-        "min": 139464.2675,
-        "max": 142296.0292
+        "min": 139464.2514,
+        "max": 142296.0129
       },
       "stop": {
-        "price": 124889.8745,
+        "price": 124889.8582,
         "basis": "fallback_sr_support",
         "distance_pct": -11.35
       },
@@ -192,7 +192,7 @@
   "bot_actionable_reason": "ta_score=2<4",
   "global_conditions": [],
   "invalidation": {
-    "price": 123640.9758,
+    "price": 123640.9596,
     "rule": "if daily_close <= invalidation.price -> cancel all pending orders + flag ticker invalidated (stop le plus bas, ie le plan le plus profond, casse -> these abandonnee)"
   }
 }

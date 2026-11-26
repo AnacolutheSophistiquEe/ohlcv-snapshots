@@ -1,6 +1,6 @@
 # PLTR
 
-**Generated** : 2026-11-26T01:24:55.289700+00:00  
+**Generated** : 2026-11-26T22:04:18.092006+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 6/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
@@ -10,10 +10,6 @@ _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entr�
 > ↳ spot $163.59 (+0.9% vs entrée) · entrée $162.15 · stop $158.09 · T1 $166.75 · R/R 1.13  
 > ↳ ¼-Kelly 0.023 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=125 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.5% cohérent avec le bruit 5 s (EV-optimal ≈ −2.5%)  
-
-> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
->   - **[MEDIUM]** §12 Options — Max-pain gap affiché -5.4 % ≠ (strike 152.5 − spot 163.59)/spot = -6.8 %. Probable spot d'options périmé vs spot courant.
-
 
 ## Régime & alignement multi-TF
 
@@ -62,32 +58,32 @@ _Cloture 2026-11-25 : 163.59 · ATR Wilder 9.7 (5.93 %)_
 ## Echelle Warden — OU poser le stop
 
 - **Verdict : AUCUN couple (stop, cible) ne tient les contraintes. Ce n'est pas un defaut du calcul : la structure est trop loin sous le spot pour qu'un stop structurel soit rentable a ces cibles. Le levier de fond n'est PAS la distance du stop mais la TAILLE de la ligne — voir `min_target_for_rr` pour savoir a partir de quelle cible chaque stop redeviendrait defendable. **MAIS ON POSE QUAND MEME** : `best_effort` porte le moins mauvais couple, non conforme et marque comme tel. Laisser la ligne NUE est pire — rien n'y coupe la baisse avant la perte du notionnel investi ; un stop ne borne pas la perte (un gap l'execute sous son seuil), il la limite en esperance.**
-- **Couple retenu** : stop 152.9043 sur sr_based (0.73 ATR, 6.532 %) — p(stop avant cible) 0.4883 [0.44 ; 0.54], R/R 2.559, perte reelle 6.623 % (gap inclus), CVaR 7.423 %, EV 0.7493 % — **NON CONFORME (best_effort — proposition de derniere main)**
-   - severite des violations : 0.2798 (somme des depassements RELATIFS a chaque seuil ; c'est elle qui a departage, l'esperance ne tranchant qu'a severites egales)
-   - viole : cible atteinte seulement 13.0 % du temps (< 15 %) meme a 10 seances : le R/R de 2.56 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-   - viole : R/R 2.56 < plancher 3.00 (mesure vs SPOT, gap inclus)
+- **Couple retenu** : stop 152.7846 sur sr_based (0.73 ATR, 6.605 %) — p(stop avant cible) 0.4775 [0.43 ; 0.53], R/R 2.53, perte reelle 6.699 % (gap inclus), CVaR 7.502 %, EV 0.8526 % — **NON CONFORME (best_effort — proposition de derniere main)**
+   - severite des violations : 0.26 (somme des depassements RELATIFS a chaque seuil ; c'est elle qui a departage, l'esperance ne tranchant qu'a severites egales)
+   - viole : cible atteinte seulement 13.5 % du temps (< 15 %) meme a 10 seances : le R/R de 2.53 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+   - viole : R/R 2.53 < plancher 3.00 (mesure vs SPOT, gap inclus)
 - Budget de queue : **12.0 %** du notionnel — ⚠ VALEUR FIGEE (valeur de repli (ligne absente de l'allocation)), PAS une mesure. L'allocation derivee de la contrainte du compte n'etait pas disponible.
 - Candidats (la structure propose, la statistique elimine) :
-   - ⚪ sr_based a 0.73 ATR (stop 6.532 %) — p(stop avant cible) 0.4883 [0.44 ; 0.54], R/R 2.559, perte reelle 6.623 % (gap inclus), EV 0.7493 % — **REFUSE**
-      - refuse : cible atteinte seulement 13.0 % du temps (< 15 %) meme a 10 seances : le R/R de 2.56 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 2.56 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - ⚪ sr_based a 0.73 ATR (stop 6.605 %) — p(stop avant cible) 0.4775 [0.43 ; 0.53], R/R 2.53, perte reelle 6.699 % (gap inclus), EV 0.8526 % — **REFUSE**
+      - refuse : cible atteinte seulement 13.5 % du temps (< 15 %) meme a 10 seances : le R/R de 2.53 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 2.53 < plancher 3.00 (mesure vs SPOT, gap inclus)
    - ⚪ atr_based a 1.5 ATR (stop 8.446 %) — p(stop avant cible) 0.3783 [0.33 ; 0.43], R/R 1.956, perte reelle 8.664 % (gap inclus), EV 0.7174 % — **REFUSE**
       - refuse : cible atteinte seulement 14.0 % du temps (< 15 %) meme a 10 seances : le R/R de 1.96 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.96 < plancher 3.00 (mesure vs SPOT, gap inclus)
-   - 🔴 support a 1.63 ATR (stop 11.619 %) — p(stop avant cible) 0.2546 [0.21 ; 0.30], R/R 1.387, perte reelle 12.217 % (gap inclus), EV 0.4621 % — **REFUSE**
-      - refuse : cible atteinte seulement 14.5 % du temps (< 15 %) meme a 10 seances : le R/R de 1.39 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 1.39 < plancher 3.00 (mesure vs SPOT, gap inclus)
+   - 🔴 support a 1.63 ATR (stop 11.692 %) — p(stop avant cible) 0.253 [0.21 ; 0.30], R/R 1.381, perte reelle 12.274 % (gap inclus), EV 0.4667 % — **REFUSE**
+      - refuse : cible atteinte seulement 14.5 % du temps (< 15 %) meme a 10 seances : le R/R de 1.38 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 1.38 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 14.47 % > budget 12.00 %
-      - ⚠ support DETECTE a 0.63 ATR du spot — compartiment <1, mesure a 49.5 % de casse (IC clusterise [0.462 ; 0.527] sur 1154 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
-   - ⚪ swing_based a 2.51 ATR (stop 16.596 %) — p(stop avant cible) 0.1292 [0.10 ; 0.17], R/R 1.013, perte reelle 16.733 % (gap inclus), EV 0.5201 % — **REFUSE**
+      - ⚠ support DETECTE a 0.63 ATR du spot — compartiment <1, mesure a 48.1 % de casse (IC clusterise [0.449 ; 0.511] sur 1150 touches, registre point-in-time). C'est un pile ou face : l'ancrage n'apporte rien de plus qu'une distance arbitraire et rapproche le stop du bruit. Si c'est le seul disponible, la ligne n'est pas ancrable et le levier redevient la TAILLE.
+   - ⚪ swing_based a 2.51 ATR (stop 16.669 %) — p(stop avant cible) 0.1291 [0.10 ; 0.17], R/R 1.008, perte reelle 16.81 % (gap inclus), EV 0.5109 % — **REFUSE**
       - refuse : cible atteinte seulement 14.6 % du temps (< 15 %) meme a 10 seances : le R/R de 1.01 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 1.01 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 16.95 % > budget 12.00 %
-   - 🟢 support a 4.96 ATR (stop 30.379 %) — p(stop avant cible) 0.0025 [0.00 ; 0.01], R/R 0.546, perte reelle 31.026 % (gap inclus), EV 1.0107 % — **REFUSE**
-      - refuse : cible atteinte seulement 14.7 % du temps (< 15 %) meme a 10 seances : le R/R de 0.55 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
-      - refuse : R/R 0.55 < plancher 3.00 (mesure vs SPOT, gap inclus)
-      - refuse : CVaR 95 % 18.60 % > budget 12.00 %
-   - 🟢 support a 6.21 ATR (stop 37.421 %) — p(stop avant cible) 0.0001 [0.00 ; 0.01], R/R 0.452, perte reelle 37.475 % (gap inclus), EV 1.0204 % — **REFUSE**
+      - refuse : CVaR 95 % 17.03 % > budget 12.00 %
+   - 🟢 support a 4.96 ATR (stop 30.453 %) — p(stop avant cible) 0.0025 [0.00 ; 0.01], R/R 0.535, perte reelle 31.678 % (gap inclus), EV 1.0091 % — **REFUSE**
+      - refuse : cible atteinte seulement 14.7 % du temps (< 15 %) meme a 10 seances : le R/R de 0.53 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
+      - refuse : R/R 0.53 < plancher 3.00 (mesure vs SPOT, gap inclus)
+      - refuse : CVaR 95 % 18.63 % > budget 12.00 %
+   - 🟢 support a 6.21 ATR (stop 37.495 %) — p(stop avant cible) 0.0001 [0.00 ; 0.01], R/R 0.451, perte reelle 37.539 % (gap inclus), EV 1.0204 % — **REFUSE**
       - refuse : cible atteinte seulement 14.7 % du temps (< 15 %) meme a 10 seances : le R/R de 0.45 est un rapport de distances, pas une esperance — viser si loin revient a n'avoir pas de cible
       - refuse : R/R 0.45 < plancher 3.00 (mesure vs SPOT, gap inclus)
       - refuse : CVaR 95 % 18.34 % > budget 12.00 %
@@ -320,8 +316,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.036  _(bullish_recent)_
 - **BB** : %B 0.44 · largeur 28.7%
 - **ATR** : 9.21 (87.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.055  _(distribution)_
-- **Vol ratio** : 0.66  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.047  _(neutre)_
+- **Vol ratio** : 0.83  _(volume normal)_
 - **Choppiness** : 51.5  _(transition)_
 - **MA** : MA20 166.31 · MA50 182.54 · MA200 154.3  _(prix < MA20)_
 - **Dist MA** : MA20 -1.6% · MA50 -10.4% · MA200 +6.0%
@@ -329,5 +325,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (685443 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (686180 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
