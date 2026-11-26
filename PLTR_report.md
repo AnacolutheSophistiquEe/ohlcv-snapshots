@@ -1,15 +1,19 @@
 # PLTR
 
-**Generated** : 2026-11-25T22:04:04.262682+00:00  
+**Generated** : 2026-11-26T01:24:55.289700+00:00  
 **Couverture** : bulletin complet  
 **Santé technique** : 6/10 — **Rating** : Unknown  
 _(score = santé technique durable ; le rating = tradabilité/EV. Timing d'entrée distinct ci-dessous — audit §A3.)_  
 **Subtitle** : trending · volatilite high · $163.59  
 
-> ❄️ **EVENT-FROZEN** — horizon gelé jusqu'au 2026-11-25 — US Core PCE Price Index — octobre 2026 (J-0 sess · macro taux)  
+> ⛔ **STAND-DOWN** — NON ESTIMABLE — la source du rating est inéligible (source périmée (23 séance(s) de retard, drapeau lu sur first_passage_by_horizon)) ; aucun repli sur un autre moteur (R09)  
 > ↳ spot $163.59 (+0.9% vs entrée) · entrée $162.15 · stop $158.09 · T1 $166.75 · R/R 1.13  
 > ↳ ¼-Kelly 0.023 · _first-passage 5 s RÉEL intra-séance (vrai ordre intrabar, n=125 séances) · non recalibrée track-record (n=0)_  
 > ↳ stop −2.5% cohérent avec le bruit 5 s (EV-optimal ≈ −2.5%)  
+
+> ⚠ **QA flags (1, dont 0 high)** — champs SUSPECTS (la section data fraîche prime) :
+>   - **[MEDIUM]** §12 Options — Max-pain gap affiché -5.4 % ≠ (strike 152.5 − spot 163.59)/spot = -6.8 %. Probable spot d'options périmé vs spot courant.
+
 
 ## Régime & alignement multi-TF
 
@@ -304,9 +308,9 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 ## Event risk & invalidation
 
 **Gate event par horizon** _(gel = ne pas ouvrir un plan qui couvrirait l'event)_ :
-- **intraday** : ❄️ GELÉ jusqu'au 2026-11-25 — US Core PCE Price Index — octobre 2026 (J-0 sess · macro taux)
-- **swing** : ❄️ GELÉ jusqu'au 2026-11-30 — MSCI — suppression de Strategy (MSTR) signalée au 30 novembre (J-4 sess · macro taux)
-- **deep** : ❄️ GELÉ jusqu'au 2026-11-30 — MSCI — suppression de Strategy (MSTR) signalée au 30 novembre (J-4 sess · macro taux)
+- **intraday** : 🟢 LIVE
+- **swing** : ❄️ GELÉ jusqu'au 2026-11-30 — MSCI — suppression de Strategy (MSTR) signalée au 30 novembre (J-3 sess · macro taux)
+- **deep** : ❄️ GELÉ jusqu'au 2026-11-30 — MSCI — suppression de Strategy (MSTR) signalée au 30 novembre (J-3 sess · macro taux)
 
 
 ## Indicateurs (résumé)
@@ -316,8 +320,8 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 - **MACD** : hist 0.036  _(bullish_recent)_
 - **BB** : %B 0.44 · largeur 28.7%
 - **ATR** : 9.21 (87.0e pct 1a)  _(volatilite elevee)_
-- **OBV/CMF** : OBV falling · CMF -0.049  _(neutre)_
-- **Vol ratio** : 0.79  _(volume normal)_
+- **OBV/CMF** : OBV falling · CMF -0.055  _(distribution)_
+- **Vol ratio** : 0.66  _(volume normal)_
 - **Choppiness** : 51.5  _(transition)_
 - **MA** : MA20 166.31 · MA50 182.54 · MA200 154.3  _(prix < MA20)_
 - **Dist MA** : MA20 -1.6% · MA50 -10.4% · MA200 +6.0%
@@ -325,5 +329,5 @@ _Le timing n'entre PAS dans le score de santé : un actif sain peut afficher un 
 
 ---
 
-_Bulletin compact généré depuis `<TICKER>_report_data.json` (685215 bytes source)._  
+_Bulletin compact généré depuis `<TICKER>_report_data.json` (685443 bytes source)._  
 _Sans overlay Claude — fallback narratif pipeline baseline (à reviser pour enrichissement)._
