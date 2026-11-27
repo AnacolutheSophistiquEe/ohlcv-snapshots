@@ -1,0 +1,118 @@
+{
+  "available": true,
+  "generated_at": "2026-11-27T22:05:09.695514+00:00",
+  "ticker": "IONQ",
+  "spot_price": 24.97,
+  "expiries_available": [
+    {
+      "date": "2026-11-27",
+      "days_to_exp": 1
+    },
+    {
+      "date": "2026-12-04",
+      "days_to_exp": 7
+    },
+    {
+      "date": "2026-12-11",
+      "days_to_exp": 14
+    },
+    {
+      "date": "2026-12-18",
+      "days_to_exp": 21
+    },
+    {
+      "date": "2026-12-24",
+      "days_to_exp": 27
+    }
+  ],
+  "iv_metrics": {
+    "iv_atm_30d": 0.8953,
+    "iv_atm_90d": 0.8953,
+    "rv_20d_annualized": 1.326,
+    "iv_rv_ratio": 0.675,
+    "iv_rank_1y": null,
+    "iv_percentile_1y": null,
+    "iv_history_note": "IV rank/percentile nécessitent un historique IV ≥1 an (pas trivial via yfinance). Non émis ici."
+  },
+  "skew": {
+    "skew_25_delta_vol_pts": 5.566,
+    "label": "elevated"
+  },
+  "term_structure": {
+    "m1_expiry": "2026-11-27",
+    "m1_days_to_exp": 1,
+    "m1_iv_atm": 0.0,
+    "m3_expiry": "2026-12-24",
+    "m3_days_to_exp": 27,
+    "m3_iv_atm": 0.8953,
+    "ratio_m1_m3": 0.0,
+    "label": "contango_fort"
+  },
+  "open_interest_m1": {
+    "expiry": "2026-11-27",
+    "days_to_exp": 1,
+    "put_call_ratio": 0.251,
+    "total_oi_m1": 21031,
+    "largest_call_strike_oi": {
+      "strike": 38.0,
+      "oi": 3239
+    },
+    "largest_put_strike_oi": {
+      "strike": 26.0,
+      "oi": 793
+    }
+  },
+  "gex": {
+    "gex_total_usd_per_point": 102567420.0,
+    "gex_label": "positive_stabilizing",
+    "note": "Convention SqueezeMetrics-style (+calls, −puts). Convention de signe varie entre fournisseurs."
+  },
+  "max_pain": {
+    "strike": 25.0,
+    "expiry": "2026-11-27",
+    "gap_vs_spot_pct": 0.12
+  },
+  "verdict": {
+    "label": "favorable",
+    "bullish_signals": 2,
+    "bearish_signals": 1,
+    "notes": [
+      "skew put-call élevé (5.6 pts)",
+      "GEX positif (102.6M$/pt) = MM long gamma stabilisateur",
+      "P/C ratio bas (0.25) — biais call dominant"
+    ]
+  },
+  "liquidity_stats": {
+    "min_oi_threshold": 50,
+    "max_iv_threshold": 5.0,
+    "max_bidask_spread_pct": 0.3,
+    "per_expiry": {
+      "2026-11-27": {
+        "total_strikes": 118,
+        "liquid_strikes": 4,
+        "filter_ratio_pct": 3.4
+      },
+      "2026-12-04": {
+        "total_strikes": 112,
+        "liquid_strikes": 22,
+        "filter_ratio_pct": 19.6
+      },
+      "2026-12-11": {
+        "total_strikes": 87,
+        "liquid_strikes": 18,
+        "filter_ratio_pct": 20.7
+      },
+      "2026-12-18": {
+        "total_strikes": 89,
+        "liquid_strikes": 15,
+        "filter_ratio_pct": 16.9
+      },
+      "2026-12-24": {
+        "total_strikes": 59,
+        "liquid_strikes": 16,
+        "filter_ratio_pct": 27.1
+      }
+    }
+  },
+  "filters_note": "IV metrics et skew utilisent UNIQUEMENT les options liquides (OI>=50, IV<=500%, spread bid-ask<=30% mid). OI/GEX/max_pain utilisent toutes les options (l'OI compte même si l'option est illiquide). Évite les artefacts d'IV de cotations déconnectées sur les expiries longues."
+}

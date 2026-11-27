@@ -1,0 +1,105 @@
+{
+ "available": false,
+ "generated_at": "2026-11-27T22:04:48.586608+00:00",
+ "method": "premier passage empirique sur barres journalieres, echelle de sortie 1/3-1/3-1/3, ambiguite intra-barre resolue au STOP (conservateur)",
+ "min_neff": 30.0,
+ "halflife_sessions": 500.0,
+ "cost_pct_per_leg": 0.08,
+ "by_horizon": {
+  "intraday": {
+   "available": false,
+   "ev_pct_risk": 0.002,
+   "p_target_first": 0.4105,
+   "n_episodes": 7,
+   "n_eff_weighted": 6.9,
+   "fill_rate": 0.0282,
+   "ci95_block_bootstrap": [
+    -0.7169,
+    1.1341
+   ],
+   "ci95_block_bootstrap_meta": {
+    "method": "bootstrap circulaire par blocs d'episodes consecutifs (episodes chevauchants), percentiles 2,5 / 97,5 ; poids recence d'origine conserves",
+    "conditioning": "fill (episodes remplis seulement), comme ev_pct_risk",
+    "block_episodes": 2,
+    "n_episodes": 7,
+    "n_blocks": 3.5,
+    "n_boot": 800,
+    "seed": 7
+   },
+   "plan_pct": {
+    "dip": 11.04,
+    "stop": 3.723,
+    "targets": [
+     6.205,
+     12.41,
+     18.614
+    ]
+   },
+   "horizon_sessions": 1,
+   "n_bars": 251,
+   "reason": "n_eff 7 < 30 — non publie, repli GBM"
+  },
+  "swing": {
+   "available": false,
+   "ev_pct_risk": -0.2601,
+   "p_target_first": 0.0,
+   "n_episodes": 14,
+   "n_eff_weighted": 13.8,
+   "fill_rate": 0.0583,
+   "ci95_block_bootstrap": null,
+   "ci95_block_bootstrap_meta": {
+    "method": "bootstrap circulaire par blocs d'episodes consecutifs (episodes chevauchants), percentiles 2,5 / 97,5 ; poids recence d'origine conserves",
+    "conditioning": "fill (episodes remplis seulement), comme ev_pct_risk",
+    "block_episodes": 10,
+    "n_episodes": 14,
+    "n_blocks": 1.4,
+    "n_boot": 800,
+    "seed": 7,
+    "reason": "moins de deux blocs (14 episodes < 2 x 10)"
+   },
+   "plan_pct": {
+    "dip": 22.079,
+    "stop": 12.0,
+    "targets": [
+     29.141,
+     44.981,
+     60.821
+    ]
+   },
+   "horizon_sessions": 5,
+   "n_bars": 251,
+   "reason": "n_eff 14 < 30 — non publie, repli GBM"
+  },
+  "deep": {
+   "available": false,
+   "ev_pct_risk": 0.0835,
+   "p_target_first": 0.0,
+   "n_episodes": 4,
+   "n_eff_weighted": 4.0,
+   "fill_rate": 0.0174,
+   "ci95_block_bootstrap": null,
+   "ci95_block_bootstrap_meta": {
+    "method": "bootstrap circulaire par blocs d'episodes consecutifs (episodes chevauchants), percentiles 2,5 / 97,5 ; poids recence d'origine conserves",
+    "conditioning": "fill (episodes remplis seulement), comme ev_pct_risk",
+    "block_episodes": 20,
+    "n_episodes": 4,
+    "n_blocks": 0.2,
+    "n_boot": 800,
+    "seed": 7,
+    "reason": "moins de deux blocs (4 episodes < 2 x 20)"
+   },
+   "plan_pct": {
+    "dip": 33.119,
+    "stop": 18.0,
+    "targets": [
+     26.098,
+     52.197,
+     78.296
+    ]
+   },
+   "horizon_sessions": 10,
+   "n_bars": 251,
+   "reason": "n_eff 4 < 30 — non publie, repli GBM"
+  }
+ }
+}
